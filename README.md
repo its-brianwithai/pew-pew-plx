@@ -77,15 +77,7 @@ We believe AI agents perform at their best when three key elements align:
 
 ## 🚀 Getting Started
 
-1. **Quick Start**
-   To quickly use this framework in your repository:
-   ```bash
-   git fetch https://github.com/ultrawideturbodev/ultra_wide_turbo_agent_workspace.git main
-   git checkout FETCH_HEAD -- . ':!.gitignore' ':!CHANGELOG.md' ':!LICENSE' ':!README.md'
-   ```
-   This will copy the framework files into your workspace without requiring any git setup.
-
-2. **Setup**
+1. **Setup**
    1. Choose your workspace folder
    2. Ensure your AI agent has access to all files
    3. Verify files are properly indexed in your IDE/editor
