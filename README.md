@@ -8,6 +8,7 @@
 3. [Getting Started](#-getting-started)
 4. [Available Protocols](#-available-protocols)
 5. [Best Practices](#-best-practices)
+6. [Core Documents](#-core-documents)
 
 ## 🔍 Framework Overview
 
@@ -90,41 +91,14 @@ This framework is specifically designed to optimize elements 2 and 3, providing 
 
 ## 📋 Available Protocols
 
-1. **plx-start**
-   - Initializes new tasks
-   - Sets up documentation
-   - Creates structured plan
-   - Ensures proper setup
-
-2. **plx-document**
-   - Creates clear documentation
-   - Follows standard patterns
-   - Ensures completeness
-   - Maintains consistency
-
-3. **plx-pause**
-   - Preserves current state
-   - Documents progress
-   - Ensures continuity
-   - Enables smooth resumption
-
-4. **plx-resume**
-   - Restores context
-   - Continues work seamlessly
-   - Maintains progress
-   - Ensures alignment
-
-5. **plx-focus**
-   - Gets work back on track
-   - Evaluates progress
-   - Adjusts approach
-   - Maintains momentum
-
-6. **plx-sync**
-   - Verifies alignment
-   - Checks completeness
-   - Ensures consistency
-   - Maintains quality
+| Protocol | Purpose | Key Features |
+|----------|---------|--------------|
+| `plx-start` | Initialize new tasks | - Sets up documentation<br>- Creates structured plan<br>- Ensures proper setup<br>- Verifies readiness |
+| `plx-document` | Create documentation | - Follows standard patterns<br>- Ensures completeness<br>- Maintains consistency<br>- Verifies quality |
+| `plx-pause` | Preserve current state | - Documents progress<br>- Ensures continuity<br>- Creates handoff notes<br>- Enables smooth resumption |
+| `plx-resume` | Continue work | - Restores context<br>- Continues seamlessly<br>- Maintains progress<br>- Ensures alignment |
+| `plx-focus` | Get back on track | - Evaluates progress<br>- Adjusts approach<br>- Maintains momentum<br>- Solves blockers |
+| `plx-sync` | Verify alignment | - Checks completeness<br>- Ensures consistency<br>- Validates progress<br>- Maintains quality |
 
 ## ⚡ Best Practices
 
@@ -145,3 +119,15 @@ This framework is specifically designed to optimize elements 2 and 3, providing 
    - Provide timely feedback
    - Verify requirements
    - Monitor progress
+
+## 📚 Core Documents
+
+| Document | Purpose | Key Features |
+|----------|---------|--------------|
+| `your-memory.md` | Persistent memory bank | - Append-only log of decisions and context<br>- Timestamped entries<br>- Links to requirements and tasks<br>- Historical context preservation |
+| `your-todo-list.md` | Task and progress tracking | - Milestone organization<br>- Numbered tasks<br>- Status tracking<br>- Requirement links |
+| `your-requirements.md` | Requirements management | - Structured templates<br>- Links to todos and tests<br>- Status tracking<br>- Clear organization |
+| `the-refinement-process.md` | Requirements breakdown | - How to break down requirements<br>- How to link items<br>- How to track relationships<br>- Clear structure |
+| `the-development-process.md` | Implementation guidance | - Development workflow<br>- Quality guidelines<br>- Testing approach<br>- Best practices |
+| `the-testing-process.md` | Testing standards | - Test organization<br>- Test patterns<br>- Coverage guidelines<br>- Quality assurance |
+| `the-communication-process.md` | Interaction guidelines | - Response formats<br>- Status updates<br>- Error handling<br>- Clear communication |
