@@ -1,16 +1,26 @@
----
-document_type: documentation
-goal: guide agents on using the workspace and following protocols
-gpt_action: follow these guidelines and protocols for all operations
----
+# 🤖 Ultra Wide Turbo Agent Workspace
 
-# 🤖 Agent Workspace Guide
+> A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
-## 🧠 Agent Effectiveness
+## 📑 Table of Contents
+1. [Framework Overview](#-framework-overview)
+2. [Key Features](#-key-features)
+3. [Getting Started](#-getting-started)
+4. [Available Protocols](#-available-protocols)
+5. [Best Practices](#-best-practices)
 
-We believe an AI agent performs at its best when three key elements align:
+## 🔍 Framework Overview
 
-1. **Quality Training** (out of our hands)
+This framework enhances your AI agent's capabilities by providing:
+1. Persistent memory across sessions
+2. Structured task management
+3. Clear requirements tracking
+4. Standardized processes
+5. Consistent documentation
+
+We believe AI agents perform at their best when three key elements align:
+
+1. **Quality Training** (base capability)
    - Trained on relevant data
    - Proper model capabilities
    - Good base understanding
@@ -30,167 +40,108 @@ We believe an AI agent performs at its best when three key elements align:
    - Active context awareness
    - Proper state management
 
-This workspace is designed to optimize elements 2 and 3, providing you with the structure and tools to excel in your tasks.
+This framework is specifically designed to optimize elements 2 and 3, providing the structure and tools needed for peak agent performance. Your agent will automatically maintain context, follow processes, and deliver more consistent results without requiring constant guidance.
 
-## 📚 Table of Contents
-1. [Core Documents](#-core-documents)
-2. [Workflow](#-workflow)
-3. [Document Usage](#-document-usage)
-4. [Best Practices](#-best-practices)
-5. [Common Pitfalls](#-common-pitfalls)
-6. [PLX Protocols](#-plx-protocols)
-7. [Quick Reference](#-quick-reference)
+## 💡 Key Features
 
-## 📚 Core Documents
+1. **Persistent Memory**
+   - Automatic context preservation
+   - Decision history tracking
+   - Progress documentation
+   - Relationship mapping
 
-1. **Personal Documents**
-   1. `your-memory.md`
-      - Your persistent memory bank
-      - Append-only log of decisions and context
-      - Always timestamp entries
-      - Link to requirements and tasks
+2. **Task Management**
+   - Milestone tracking
+   - Task breakdown
+   - Progress monitoring
+   - Status updates
 
-   2. `your-todo-list.md`
-      - Track tasks and progress
-      - Organize by milestones
-      - Number all items
-      - Include status and links
+3. **Requirements Management**
+   - Structured documentation
+   - Relationship tracking
+   - Status monitoring
+   - Test coverage
 
-   3. `your-requirements.md`
-      - Define and track requirements
-      - Use structured templates
-      - Link to todos and tests
-      - Track status with [ ], [~], [x]
+4. **Process Automation**
+   - Development workflow
+   - Requirements refinement
+   - Testing procedures
+   - Communication standards
 
-2. **Process Documents**
-   1. `the-refinement-process.md`
-      - How to break down requirements
-      - How to link items
-      - How to track relationships
+## 🚀 Getting Started
 
-   2. `the-development-process.md`
-      - Implementation workflow
-      - Quality guidelines
-      - Testing approach
+1. **Setup**
+   1. Clone this repository
+   2. Ensure your AI agent has access to all files
+   3. Verify files are properly indexed in your IDE/editor
+   4. Start with a clear task or goal
 
-   3. `the-testing-process.md`
-      - Test organization
-      - Test patterns
-      - Coverage guidelines
+2. **Using Protocols**
+   Simply ask your agent to follow any protocol:
+   - "Please follow plx-start for this new feature"
+   - "Follow plx-pause, I'll be back later"
+   - "Use plx-resume to continue our work"
 
-   4. `the-communication-process.md`
-      - How to interact
-      - Response formats
-      - Status updates
+3. **During Development**
+   - Provide clear requirements
+   - Review agent's documentation
+   - Give feedback when needed
+   - Let the agent handle the rest
 
-## 🔄 Workflow
+## 📋 Available Protocols
 
-1. **Starting a Task**
-   1. Read and understand requirements
-   2. Follow refinement process
-   3. Create memory entries
-   4. Set up milestones
+1. **plx-start**
+   - Initializes new tasks
+   - Sets up documentation
+   - Creates structured plan
+   - Ensures proper setup
 
-2. **During Development**
-   1. Follow development process
-   2. Keep memory updated
-   3. Track progress
-   4. Maintain documentation
+2. **plx-document**
+   - Creates clear documentation
+   - Follows standard patterns
+   - Ensures completeness
+   - Maintains consistency
 
-3. **Completing Work**
-   1. Verify requirements
-   2. Run tests
-   3. Update status
-   4. Document completion
+3. **plx-pause**
+   - Preserves current state
+   - Documents progress
+   - Ensures continuity
+   - Enables smooth resumption
 
-## 📝 Document Usage
+4. **plx-resume**
+   - Restores context
+   - Continues work seamlessly
+   - Maintains progress
+   - Ensures alignment
 
-1. **Memory Management**
-   1. Always append, never overwrite
-   2. Include timestamps
-   3. Link related items
-   4. Use consistent categories
+5. **plx-focus**
+   - Gets work back on track
+   - Evaluates progress
+   - Adjusts approach
+   - Maintains momentum
 
-2. **Task Tracking**
-   1. Number all items
-   2. Track status clearly
-   3. Link requirements
-   4. Update regularly
-
-3. **Requirements**
-   1. Follow templates
-   2. Break down properly
-   3. Link related items
-   4. Track status
+6. **plx-sync**
+   - Verifies alignment
+   - Checks completeness
+   - Ensures consistency
+   - Maintains quality
 
 ## ⚡ Best Practices
 
-1. **Stay Organized**
-   1. Use consistent formatting
-   2. Number all lists
-   3. Maintain links
-   4. Update status
+1. **Clear Communication**
+   - State requirements clearly
+   - Provide specific feedback
+   - Ask for clarification if needed
+   - Review documentation regularly
 
-2. **Be Thorough**
-   1. Document decisions
-   2. Track changes
-   3. Link related items
-   4. Follow processes
+2. **Effective Usage**
+   - Let the agent manage documentation
+   - Use protocols for transitions
+   - Review progress regularly
+   - Trust the process
 
-3. **Communicate Clearly**
-   1. Be concise
-   2. Use markdown
-   3. Number options
-   4. Provide context
-
-## 🚫 Common Pitfalls
-
-1. **Avoid These Mistakes**
-   1. Overwriting memory
-   2. Skipping documentation
-   3. Breaking links
-   4. Losing context
-
-2. **Instead, Always**
-   1. Append to memory
-   2. Document thoroughly
-   3. Maintain links
-   4. Preserve context
-
-## 🎯 PLX (Please) Protocols
-
-| Protocol | Purpose | Primary Actions |
-|----------|---------|----------------|
-| `plx-start.md` | Initialize new task or project | Create memory entry, analyze requirements, create plan, verify readiness |
-| `plx-document.md` | Create topic documentation | Analyze topic, structure content, write clearly, verify quality |
-| `plx-pause.md` | Document current state for handoff | Update all documentation, summarize state, create continuation notes |
-| `plx-resume.md` | Continue work with full context | Load context, assess state, verify understanding, plan next steps |
-| `plx-focus.md` | Reevaluate and get back on track | Document state, review requirements, identify issues, plan next steps |
-| `plx-sync.md` | Verify system alignment | Check requirements, verify test coverage, validate progress, ensure documentation consistency |
-
-**How to Follow**
-1. Protocols are invoked by tagging
-2. Follow instructions precisely
-3. Document outcomes in memory
-4. Update relevant files
-
-## 🎯 Quick Reference
-
-1. **Status Indicators**
-   - [ ] Not Started/Draft
-   - [~] In Progress
-   - [x] Complete
-
-2. **Link Format**
-   - Requirements: `[[Requirement Name]]`
-   - Files: `[file-name](file-name.md)`
-   - Tasks: `[[T1: Task Name]]`
-   - Milestones: `[[M1: Milestone Name]]`
-
-3. **Memory Entries**
-   - Always include timestamp
-   - Use categories
-   - Link related items
-   - Be detailed
-
-Remember: You are part of a system designed to maintain context and deliver high-quality results. Follow these guidelines to ensure consistent and effective operation. # ultra_wide_turbo_agent_workspace
+3. **Quality Assurance**
+   - Review agent's work
+   - Provide timely feedback
+   - Verify requirements
+   - Monitor progress
