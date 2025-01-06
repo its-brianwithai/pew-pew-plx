@@ -17,23 +17,50 @@ Use this document to track tasks, plans and progress. This helps maintain organi
 5. Link requirements using [[square brackets]]
 6. Only mark milestone complete when all tasks are done
 
-## 🎯 Milestones
+## 🎯 Current Tasks
 
-1. **[Example Milestone Name]**
+1. [ ] First active task
    - Status: In Progress
-   - Requirements: [[Requirement Name]]
-   
-   Tasks:
-   1. First task
-      1. Sub-task if needed
-      2. Another sub-task
-   2. Second task
-   3. Third task
+   - Progress: 60%
+   - Blocked by: None
+   - Notes: Working on X part
+   - Links: [[Requirement A]]
 
-2. **[Another Milestone]**
+2. [ ] Second task in sequence
    - Status: Not Started
-   - Requirements: [[Another Requirement]]
-   
-   Tasks:
-   1. First task
-   2. Second task 
+   - Dependencies: Task 1
+   - Links: [[Requirement B]]
+
+3. [x] Completed task example
+   - Status: Complete
+   - Completed: 2024-01-06
+   - Links: [[Requirement C]]
+   - Notes: Solution implemented using Y approach
+
+## 📊 Progress Overview
+
+1. **Current Milestone: [Example Milestone]**
+   - Overall Progress: 45%
+   - Active Tasks: 2
+   - Completed Tasks: 1
+   - Blocked Tasks: 0
+
+2. **Next Up**
+   1. [ ] Upcoming task 1
+   2. [ ] Upcoming task 2
+
+3. **Blocked**
+   1. [ ] Blocked task (waiting for X)
+   2. [ ] Another blocked task (needs Y)
+
+## 📝 Task Template
+
+```markdown
+N. [ ] Task name
+   - Status: [Not Started|In Progress|Complete|Blocked]
+   - Progress: X%
+   - Blocked by: [if any]
+   - Dependencies: [if any]
+   - Links: [[Requirements]]
+   - Notes: Current state/approach
+``` 

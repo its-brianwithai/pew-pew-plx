@@ -9,18 +9,32 @@ gpt_action: follow these steps when tagged with this protocol
 When you receive this protocol, perform a comprehensive check to ensure all components are properly synchronized and aligned with requirements.
 
 ## 📑 Table of Contents
-1. [Requirements Sync](#1️⃣-requirements-sync)
-2. [Test Coverage](#2️⃣-test-coverage)
+1. [Memory Sync](#1️⃣-memory-sync)
+2. [Requirements Sync](#2️⃣-requirements-sync)
 3. [Progress Alignment](#3️⃣-progress-alignment)
 4. [Documentation Sync](#4️⃣-documentation-sync)
 5. [Action Items](#-action-items)
 
-## 1️⃣ Requirements Sync
+## 1️⃣ Memory Sync
 
-1. Check Requirements vs Implementation
-   1. Review [your-requirements](your-requirements.md)
-   2. Compare against current state
-   3. Identify missing implementations
+1. Check Memory Structure
+   1. Review main [your-memory](your-memory.md)
+   2. Verify memory.context.md organization
+   3. Check memory.history.md completeness
+   4. Ensure proper linking
+
+2. Verify Memory Health
+   1. Main file size optimal
+   2. Context properly distributed
+   3. History well-organized
+   4. Links maintained
+
+## 2️⃣ Requirements Sync
+
+1. Check Requirements Structure
+   1. Review main [your-requirements](your-requirements.md)
+   2. Verify requirements.context.md
+   3. Compare against implementation
    4. Note requirement drift
 
 2. Verify Relationships
@@ -29,27 +43,13 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
    3. Confirm dependencies
    4. Verify status accuracy
 
-## 2️⃣ Test Coverage
-
-1. Review Test Status
-   1. Check test existence for requirements
-   2. Verify test completeness
-   3. Validate test relevance
-   4. Note missing coverage
-
-2. Test Alignment
-   1. Compare tests to requirements
-   2. Check test assumptions
-   3. Verify edge cases
-   4. Confirm test status
-
 ## 3️⃣ Progress Alignment
 
-1. Check Todo List
-   1. Review [your-todo-list](your-todo-list.md)
-   2. Compare against requirements
-   3. Verify milestone alignment
-   4. Check task dependencies
+1. Check Todo Structure
+   1. Review main [your-todo-list](your-todo-list.md)
+   2. Verify todo.context.md
+   3. Compare against requirements
+   4. Check milestone alignment
 
 2. Verify Progress
    1. Validate status indicators
@@ -59,11 +59,11 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
 
 ## 4️⃣ Documentation Sync
 
-1. Memory Consistency
-   1. Review [your-memory](your-memory.md)
-   2. Check decision alignment
-   3. Verify context preservation
-   4. Note missing entries
+1. Check File Health
+   1. Main files optimized
+   2. Context files organized
+   3. History files maintained
+   4. Links preserved
 
 2. Cross-Reference Check
    1. Verify document links
@@ -74,13 +74,13 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
 ## ✅ Action Items
 
 1. Document Findings
-   - [ ] List synchronization issues
+   - [ ] List optimization needs
    - [ ] Note missing components
    - [ ] Document inconsistencies
    - [ ] Highlight drift areas
 
 2. Create Sync Plan
-   - [ ] Prioritize fixes
+   - [ ] Prioritize optimizations
    - [ ] List required updates
    - [ ] Note blocked items
    - [ ] Plan realignment steps
@@ -91,4 +91,4 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
    - [ ] Propose solutions
    - [ ] Request guidance if needed
 
-Remember: The goal is to catch and correct any drift or misalignment early. Be thorough in your checks and clear in your findings. 
+Remember: Focus on maintaining optimal file sizes while preserving all necessary context and relationships. 

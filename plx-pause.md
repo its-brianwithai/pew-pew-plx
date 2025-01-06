@@ -8,27 +8,27 @@ gpt_action: follow these steps when tagged with this protocol
 
 When you receive this protocol, document everything needed for another agent (or yourself) to resume work effectively.
 
-## 📝 Current State Documentation
+## 📝 Memory Management
 
-1. Update [your-memory](your-memory.md)
-   1. Create timestamp entry "Pause State"
+1. Update Main Memory
+   1. Create timestamp entry "Pause State" in [your-memory](your-memory.md)
    2. Document current task/goal
-   3. List active decisions/discussions
+   3. Keep only latest context
    4. Note immediate next steps
 
-2. Document Progress
-   1. What has been completed
-   2. What is in progress
-   3. What is blocked/waiting
-   4. Recent key decisions
+2. Optimize Memory Files
+   1. Move supporting context to memory.context.md
+   2. Archive old entries to memory.history.md
+   3. Keep main file focused on current state
+   4. Ensure all links are maintained
 
 ## 🎯 Requirements State
 
-1. Review [your-requirements](your-requirements.md)
-   1. Update all status indicators
-   2. Note any pending changes
-   3. Mark unclear items
-   4. List validation needs
+1. Manage Requirements
+   1. Keep core in [your-requirements](your-requirements.md)
+   2. Move details to requirements.context.md
+   3. Update all status indicators
+   4. Note any pending changes
 
 2. Validate Links
    1. Check requirement relationships
@@ -36,13 +36,13 @@ When you receive this protocol, document everything needed for another agent (or
    3. Confirm test coverage
    4. Update documentation links
 
-## 📋 Task State
+## 📋 Task Management
 
-1. Update [your-todo-list](your-todo-list.md)
-   1. Update all task statuses
-   2. Note current milestone progress
-   3. Document blockers
-   4. List dependencies
+1. Optimize Todo List
+   1. Keep active in [your-todo-list](your-todo-list.md)
+   2. Move context to todo.context.md
+   3. Update all task statuses
+   4. Note current milestone progress
 
 2. Process Review
    1. Note current phase in [the-development-process](the-development-process.md)
@@ -67,9 +67,9 @@ When you receive this protocol, document everything needed for another agent (or
 ## ✅ Pause Checklist
 
 1. Documentation Complete
-   - [ ] Memory updated with pause state
-   - [ ] Requirements status current
-   - [ ] Todo list updated
+   - [ ] Memory files optimized
+   - [ ] Requirements organized
+   - [ ] Todo list streamlined
    - [ ] Context summarized
 
 2. Verify Clarity
@@ -78,4 +78,4 @@ When you receive this protocol, document everything needed for another agent (or
    - [ ] Dependencies listed
    - [ ] Status accurate
 
-Remember: The goal is to make resumption as smooth as possible, whether for yourself or another agent. 
+Remember: Focus on keeping main files clear and current while preserving all context in supporting files. 

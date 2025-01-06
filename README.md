@@ -9,65 +9,62 @@
 4. [Available Protocols](#-available-protocols)
 5. [Best Practices](#-best-practices)
 6. [Core Documents](#-core-documents)
+7. [System Prompt](#-system-prompt)
 
 ## 🔍 Framework Overview
 
 This framework enhances your AI agent's capabilities by providing:
-1. Persistent memory across sessions
-2. Structured task management
-3. Clear requirements tracking
-4. Standardized processes
-5. Consistent documentation
+1. Test-driven development with implementation verification
+2. Autonomous task execution with test validation
+3. Persistent memory with optimized structure
+4. Clear requirements and progress tracking
+5. Consistent documentation patterns
 
 We believe AI agents perform at their best when three key elements align:
 
-1. **Quality Training** (base capability)
-   - Trained on relevant data
-   - Proper model capabilities
-   - Good base understanding
+1. **Test-Driven Development** (core principle)
+   - Write tests first
+   - Implement features
+   - Verify implementations
+   - Maintain coverage
 
 2. **Clear Direction**
-   - Well-defined requirements
-   - Structured processes
+   - Well-defined milestones
+   - Test requirements
    - Clear documentation
    - Proper templates
 
-3. **Maintained Focus**
-   - Regular progress tracking
-   - Consistent documentation
-   - Clear communication
-   - Process adherence
-   - Preserved context across sessions
-   - Active context awareness
-   - Proper state management
+3. **Efficient State Management**
+   - Main files (current state)
+   - Context files (supporting info)
+   - History files (past decisions)
+   - Test results and coverage
 
-This framework is specifically designed to optimize elements 2 and 3, providing the structure and tools needed for peak agent performance. Your agent will automatically maintain context, follow processes, and deliver more consistent results without requiring constant guidance.
+## 🌟 Key Features
 
-## 💡 Key Features
+1. **Smart Memory Management**
+   - Current state in main files
+   - Supporting context in .context.md
+   - Historical data in .history.md
+   - Test history and results
 
-1. **Persistent Memory**
-   - Automatic context preservation
-   - Decision history tracking
-   - Progress documentation
-   - Relationship mapping
+2. **Structured Documentation**
+   - Consistent formatting
+   - Clear relationships
+   - Version management
+   - Test documentation
 
-2. **Task Management**
-   - Milestone tracking
-   - Task breakdown
-   - Progress monitoring
-   - Status updates
+3. **Process Clarity**
+   - Well-defined steps
+   - Test requirements
+   - Status tracking
+   - Progress verification
 
-3. **Requirements Management**
-   - Structured documentation
-   - Relationship tracking
-   - Status monitoring
-   - Test coverage
-
-4. **Process Automation**
-   - Development workflow
-   - Requirements refinement
-   - Testing procedures
-   - Communication standards
+4. **Test-Driven Workflow**
+   - Write tests first
+   - Track pending tests
+   - Implement features
+   - Verify completeness
 
 ## 🚀 Getting Started
 
@@ -75,60 +72,112 @@ This framework is specifically designed to optimize elements 2 and 3, providing 
    1. Clone this repository
    2. Ensure your AI agent has access to all files
    3. Verify files are properly indexed in your IDE/editor
-   4. Start with a clear task or goal
+   4. Define tests and milestones
 
 2. **Using Protocols**
-   Simply ask your agent to follow any protocol:
-   - "Please follow plx-start for this new feature"
-   - "Follow plx-pause, I'll be back later"
-   - "Use plx-resume to continue our work"
+   The agent will work autonomously, following TDD:
+   - "Please follow plx-start to write initial tests"
+   - "Use plx-test to implement pending tests"
+   - "Follow plx-next to continue development"
 
 3. **During Development**
-   - Provide clear requirements
-   - Review agent's documentation
-   - Give feedback when needed
-   - Let the agent handle the rest
+   - Write tests first
+   - Let agent implement
+   - Verify completeness
+   - Review at milestones
 
 ## 📋 Available Protocols
 
 | Protocol | Purpose | Key Features |
 |----------|---------|--------------|
-| `plx-start` | Initialize new tasks | - Sets up documentation<br>- Creates structured plan<br>- Ensures proper setup<br>- Verifies readiness |
-| `plx-document` | Create documentation | - Follows standard patterns<br>- Ensures completeness<br>- Maintains consistency<br>- Verifies quality |
-| `plx-pause` | Preserve current state | - Documents progress<br>- Ensures continuity<br>- Creates handoff notes<br>- Enables smooth resumption |
-| `plx-resume` | Continue work | - Restores context<br>- Continues seamlessly<br>- Maintains progress<br>- Ensures alignment |
-| `plx-focus` | Get back on track | - Evaluates progress<br>- Adjusts approach<br>- Maintains momentum<br>- Solves blockers |
-| `plx-sync` | Verify alignment | - Checks completeness<br>- Ensures consistency<br>- Validates progress<br>- Maintains quality |
-| `plx-add` | Add new content | - Processes additions<br>- Updates relationships<br>- Maintains consistency<br>- Syncs system state |
+| `plx-start` | Initialize new tasks | - Sets up documentation<br>- Writes initial tests<br>- Creates test plan<br>- Verifies readiness |
+| `plx-document` | Create documentation | - Follows standard patterns<br>- Includes test docs<br>- Maintains consistency<br>- Verifies quality |
+| `plx-pause` | Preserve current state | - Optimizes file sizes<br>- Records test status<br>- Creates handoff notes<br>- Enables smooth resumption |
+| `plx-resume` | Continue work | - Loads all versions<br>- Checks test state<br>- Maintains progress<br>- Ensures alignment |
+| `plx-focus` | Get back on track | - Evaluates progress<br>- Verifies tests<br>- Maintains momentum<br>- Solves blockers |
+| `plx-sync` | Verify alignment | - Checks file health<br>- Runs test suite<br>- Validates progress<br>- Maintains quality |
+| `plx-add` | Add new content | - Processes additions<br>- Updates tests<br>- Maintains consistency<br>- Verifies changes |
+| `plx-next` | Execute next task | - Autonomous execution<br>- Test verification<br>- Progress validation<br>- Efficient workflow |
+| `plx-test` | Verify tests | - Finds pending tests<br>- Implements placeholders<br>- Validates coverage<br>- Reports results |
+| `plx-optimise` | Optimize content | - Manages file sizes<br>- Preserves context<br>- Maintains relationships<br>- Improves structure |
 
 ## ⚡ Best Practices
 
-1. **Clear Communication**
-   - State requirements clearly
-   - Provide specific feedback
-   - Ask for clarification if needed
-   - Review documentation regularly
+1. **Test-First Development**
+   - Write tests before code
+   - Track pending tests
+   - Implement thoroughly
+   - Verify completeness
 
 2. **Effective Usage**
-   - Let the agent manage documentation
-   - Use protocols for transitions
-   - Review progress regularly
-   - Trust the process
+   - Let agent implement
+   - Trust test results
+   - Monitor coverage
+   - Review completeness
 
 3. **Quality Assurance**
-   - Review agent's work
-   - Provide timely feedback
-   - Verify requirements
-   - Monitor progress
+   - Run tests frequently
+   - Verify implementations
+   - Maintain coverage
+   - Guide direction
 
 ## 📚 Core Documents
 
 | Document | Purpose | Key Features |
 |----------|---------|--------------|
-| `your-memory.md` | Persistent memory bank | - Append-only log of decisions and context<br>- Timestamped entries<br>- Links to requirements and tasks<br>- Historical context preservation |
-| `your-todo-list.md` | Task and progress tracking | - Milestone organization<br>- Numbered tasks<br>- Status tracking<br>- Requirement links |
-| `your-requirements.md` | Requirements management | - Structured templates<br>- Links to todos and tests<br>- Status tracking<br>- Clear organization |
-| `the-refinement-process.md` | Requirements breakdown | - How to break down requirements<br>- How to link items<br>- How to track relationships<br>- Clear structure |
-| `the-development-process.md` | Implementation guidance | - Development workflow<br>- Quality guidelines<br>- Testing approach<br>- Best practices |
+| `your-memory.md` | Persistent memory bank | - Append-only log of decisions<br>- Timestamped entries<br>- Links to requirements<br>- Historical context |
+| `your-todo-list.md` | Task tracking | - Milestone organization<br>- Numbered tasks<br>- Status tracking<br>- Requirement links |
+| `your-requirements.md` | Requirements management | - Structured templates<br>- Links to todos/tests<br>- Status tracking<br>- Clear organization |
+| `the-refinement-process.md` | Requirements breakdown | - Breakdown guidelines<br>- Link management<br>- Relationship tracking<br>- Clear structure |
+| `the-development-process.md` | Implementation guidance | - TDD workflow<br>- Quality guidelines<br>- Testing approach<br>- Best practices |
 | `the-testing-process.md` | Testing standards | - Test organization<br>- Test patterns<br>- Coverage guidelines<br>- Quality assurance |
 | `the-communication-process.md` | Interaction guidelines | - Response formats<br>- Status updates<br>- Error handling<br>- Clear communication |
+
+## 🤖 System Prompt
+
+The framework includes a comprehensive system prompt (`system-prompt.md`) that guides agent behavior:
+
+1. **Core Principles**
+   - Test-Driven Development
+   - Autonomous Operation
+   - Context Management
+
+2. **Operating Guidelines**
+   - Task Execution
+   - Progress Management
+   - Communication Style
+
+3. **Default Workflows**
+   ```
+   New Features:
+   plx-start -> write tests -> plx-next -> implement -> plx-test -> verify -> plx-sync
+
+   Ongoing Work:
+   plx-resume -> check context -> plx-next -> continue -> plx-test -> verify
+
+   Milestones:
+   plx-test -> verify all -> plx-sync -> check -> plx-pause -> await
+   ```
+
+4. **Response Formats**
+   ```
+   Task Updates:
+   Status: [Phase]
+   Progress: [%]
+   Next: [Action]
+   Blockers: [Any]
+
+   Test Results:
+   Tests: [Pass/Fail]
+   Coverage: [%]
+   Pending: [Count]
+   Action: [Next]
+
+   Milestone Completion:
+   Milestone: [Name]
+   Achievements: [List]
+   Test Status: [Summary]
+   Next: [Awaiting]
+   ```
+
+The system prompt ensures consistent, high-quality operation across all agents using this framework.

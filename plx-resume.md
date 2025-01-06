@@ -10,25 +10,25 @@ When you receive this protocol, follow these steps to resume work with full cont
 
 ## 📖 Context Loading
 
-1. Check [your-memory](your-memory.md)
-   1. Find latest state entry
-   2. Review recent decisions
-   3. Note active discussions
-   4. Identify current context
+1. Check Memory Files
+   1. Review main [your-memory](your-memory.md)
+   2. Check memory.context.md if exists
+   3. Scan memory.history.md if needed
+   4. Build complete context picture
 
 2. Load Requirements
-   1. Review [your-requirements](your-requirements.md)
-   2. Note current status
-   3. Check pending validations
+   1. Review main [your-requirements](your-requirements.md)
+   2. Check requirements.context.md if exists
+   3. Note current status
    4. Understand dependencies
 
 ## 🔄 State Assessment
 
-1. Review [your-todo-list](your-todo-list.md)
-   1. Identify current milestone
-   2. Note active tasks
-   3. Check blockers
-   4. Verify dependencies
+1. Review Todo Structure
+   1. Check main [your-todo-list](your-todo-list.md)
+   2. Review todo.context.md if exists
+   3. Identify current milestone
+   4. Note active tasks
 
 2. Process Position
    1. Locate phase in [the-development-process](the-development-process.md)
@@ -53,7 +53,7 @@ When you receive this protocol, follow these steps to resume work with full cont
 ## ✅ Resume Checklist
 
 1. Context Loaded
-   - [ ] Memory reviewed
+   - [ ] All memory versions reviewed
    - [ ] Requirements understood
    - [ ] Current state clear
    - [ ] Process phase identified
