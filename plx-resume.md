@@ -6,68 +6,63 @@ gpt_action: follow these steps when tagged with this protocol
 
 # ▶️ Resume Work
 
-When you receive this protocol, follow these steps to resume work with full context, whether from a pause state or ongoing work.
+When you receive this protocol, read your workspace files to restore context and continue work. Only read and modify files prefixed with "your-".
 
-## 📖 Context Loading
+## 1️⃣ Load State
 
-1. Check Memory Files
-   1. Review main [your-memory](your-memory.md)
-   2. Check memory.context.md if exists
-   3. Scan memory.history.md if needed
-   4. Build complete context picture
+1. Read [your-memory.md](your-memory.md)
+   1. Find latest "Pause State" entry
+   2. Load current task/goal
+   3. Note next steps
+   4. Review active decisions
 
-2. Load Requirements
-   1. Review main [your-requirements](your-requirements.md)
-   2. Check requirements.context.md if exists
-   3. Note current status
-   4. Understand dependencies
+2. Read [your-todo-list.md](your-todo-list.md)
+   1. Find current milestone
+   2. Load active tasks
+   3. Check progress status
+   4. Note any blockers
 
-## 🔄 State Assessment
+3. Read [your-requirements.md](your-requirements.md)
+   1. Check current status
+   2. Review pending changes
+   3. Note validations needed
+   4. List any blockers
 
-1. Review Todo Structure
-   1. Check main [your-todo-list](your-todo-list.md)
-   2. Review todo.context.md if exists
-   3. Identify current milestone
-   4. Note active tasks
+## 2️⃣ Resume Action
 
-2. Process Position
-   1. Locate phase in [the-development-process](the-development-process.md)
-   2. Check refinement status
-   3. Review test state
-   4. Note communication needs
+1. Update Memory
+   1. Add to [your-memory.md](your-memory.md):
+      ```markdown
+      [TIMESTAMP] Resume State:
+      - Continuing Task: [task]
+      - Next Steps: [steps]
+      - Active Decisions: [decisions]
+      - Blockers: [if any]
+      ```
+   2. Link to todo items
+   3. Reference requirements
 
-## 🎯 Continuation Plan
+2. Begin Next Task
+   1. Follow plx-next protocol
+   2. Continue from pause point
+   3. Update progress
+   4. Maintain documentation
 
-1. Verify Understanding
-   1. Current objective clear
-   2. Active challenges identified
-   3. Context fully loaded
-   4. Dependencies understood
-
-2. Plan Next Steps
-   1. Immediate actions
-   2. Blocked items to address
-   3. Communications needed
-   4. Validations required
-
-## ✅ Resume Checklist
+## ✅ Completion Check
 
 1. Context Loaded
-   - [ ] All memory versions reviewed
-   - [ ] Requirements understood
-   - [ ] Current state clear
-   - [ ] Process phase identified
+   - [ ] Memory state clear (your-memory.md)
+   - [ ] Todo status known (your-todo-list.md)
+   - [ ] Requirements understood (your-requirements.md)
 
-2. Ready to Proceed
+2. Ready State
+   - [ ] Resume entry added
    - [ ] Next steps clear
    - [ ] Blockers identified
-   - [ ] Dependencies checked
-   - [ ] Communication plan ready
+   - [ ] Links verified
 
-3. First Actions
-   - [ ] Update memory with resume timestamp
-   - [ ] Verify todo list
-   - [ ] Check requirements
-   - [ ] Communicate status
-
-Remember: Take time to fully understand the context before proceeding. If anything is unclear, ask for clarification. 
+Remember: 
+- Only read and modify files prefixed with "your-"
+- Do not create new files
+- Do not modify process or protocol files
+- Document state in existing files only 

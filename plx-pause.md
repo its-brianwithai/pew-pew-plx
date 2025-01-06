@@ -6,76 +6,63 @@ gpt_action: follow these steps when tagged with this protocol
 
 # ⏸️ Pause Work
 
-When you receive this protocol, document everything needed for another agent (or yourself) to resume work effectively.
+When you receive this protocol, update your workspace files to preserve the current state for later resumption. Only modify files prefixed with "your-".
 
-## 📝 Memory Management
+## 1️⃣ Memory Update
 
-1. Update Main Memory
-   1. Create timestamp entry "Pause State" in [your-memory](your-memory.md)
+1. Update [your-memory.md](your-memory.md)
+   1. Add timestamp entry "Pause State"
    2. Document current task/goal
-   3. Keep only latest context
-   4. Note immediate next steps
+   3. Note immediate next steps
+   4. Record active decisions
 
-2. Optimize Memory Files
-   1. Move supporting context to memory.context.md
-   2. Archive old entries to memory.history.md
-   3. Keep main file focused on current state
-   4. Ensure all links are maintained
+2. Update [your-todo-list.md](your-todo-list.md)
+   1. Mark current progress
+   2. Note active tasks
+   3. Update milestone status
+   4. List pending items
 
-## 🎯 Requirements State
+3. Update [your-requirements.md](your-requirements.md)
+   1. Update status indicators
+   2. Note pending changes
+   3. Mark validations needed
+   4. Record blockers
 
-1. Manage Requirements
-   1. Keep core in [your-requirements](your-requirements.md)
-   2. Move details to requirements.context.md
-   3. Update all status indicators
-   4. Note any pending changes
+## 2️⃣ Final Update
 
-2. Validate Links
-   1. Check requirement relationships
-   2. Verify milestone connections
-   3. Confirm test coverage
-   4. Update documentation links
+1. Create Pause Entry
+   1. Add to [your-memory.md](your-memory.md):
+      ```markdown
+      [TIMESTAMP] Pause State:
+      - Current Task: [task]
+      - Next Steps: [steps]
+      - Active Decisions: [decisions]
+      - Blockers: [if any]
+      ```
+   2. Link to todo items
+   3. Reference requirements
 
-## 📋 Task Management
+2. Verify Updates
+   1. Check memory entry
+   2. Verify todo status
+   3. Confirm requirements
+   4. Test links work
 
-1. Optimize Todo List
-   1. Keep active in [your-todo-list](your-todo-list.md)
-   2. Move context to todo.context.md
-   3. Update all task statuses
-   4. Note current milestone progress
+## ✅ Completion Check
 
-2. Process Review
-   1. Note current phase in [the-development-process](the-development-process.md)
-   2. Document refinement status
-   3. List pending tests
-   4. Note communication needs
+1. File Updates
+   - [ ] Memory updated (your-memory.md)
+   - [ ] Todo list current (your-todo-list.md)
+   - [ ] Requirements status clear (your-requirements.md)
 
-## 🔍 Context Summary
+2. Documentation
+   - [ ] Pause entry complete
+   - [ ] Links verified
+   - [ ] Status clear
+   - [ ] Next steps documented
 
-1. Create Summary Entry
-   1. Current objective
-   2. Key challenges
-   3. Important context
-   4. Critical dependencies
-
-2. Document Environment
-   1. Current workspace state
-   2. Active branches/changes
-   3. Configuration details
-   4. External dependencies
-
-## ✅ Pause Checklist
-
-1. Documentation Complete
-   - [ ] Memory files optimized
-   - [ ] Requirements organized
-   - [ ] Todo list streamlined
-   - [ ] Context summarized
-
-2. Verify Clarity
-   - [ ] Next steps are clear
-   - [ ] Blockers documented
-   - [ ] Dependencies listed
-   - [ ] Status accurate
-
-Remember: Focus on keeping main files clear and current while preserving all context in supporting files. 
+Remember: 
+- Only modify files prefixed with "your-"
+- Do not create new files
+- Do not modify process or protocol files
+- Document state in existing files only 
