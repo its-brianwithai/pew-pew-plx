@@ -99,6 +99,7 @@ This framework is specifically designed to optimize elements 2 and 3, providing 
 | `plx-resume` | Continue work | - Restores context<br>- Continues seamlessly<br>- Maintains progress<br>- Ensures alignment |
 | `plx-focus` | Get back on track | - Evaluates progress<br>- Adjusts approach<br>- Maintains momentum<br>- Solves blockers |
 | `plx-sync` | Verify alignment | - Checks completeness<br>- Ensures consistency<br>- Validates progress<br>- Maintains quality |
+| `plx-add` | Add new content | - Processes additions<br>- Updates relationships<br>- Maintains consistency<br>- Syncs system state |
 
 ## ⚡ Best Practices
 

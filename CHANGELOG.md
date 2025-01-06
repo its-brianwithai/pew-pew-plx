@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `plx-resume.md` for work continuation
   - `plx-focus.md` for getting back on track
   - `plx-sync.md` for system alignment
+  - `plx-add.md` for content addition and sync
 - Comprehensive README with:
   - Table of contents
   - Agent effectiveness guidelines
