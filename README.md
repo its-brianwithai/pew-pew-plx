@@ -19,6 +19,7 @@ This framework enhances your AI agent's capabilities by providing:
 3. Persistent memory with optimized structure
 4. Clear requirements and progress tracking
 5. Consistent documentation patterns
+6. Comprehensive project finalization
 
 We believe AI agents perform at their best when three key elements align:
 
@@ -79,6 +80,7 @@ We believe AI agents perform at their best when three key elements align:
    - "Please follow plx-start to write initial tests"
    - "Use plx-test to implement pending tests"
    - "Follow plx-next to continue development"
+   - "Run plx-finish when complete"
 
 3. **During Development**
    - Write tests first
@@ -100,6 +102,7 @@ We believe AI agents perform at their best when three key elements align:
 | `plx-next` | Execute next task | - Autonomous execution<br>- Test verification<br>- Progress validation<br>- Efficient workflow |
 | `plx-test` | Verify tests | - Finds pending tests<br>- Implements placeholders<br>- Validates coverage<br>- Reports results |
 | `plx-optimise` | Optimize content | - Manages file sizes<br>- Preserves context<br>- Maintains relationships<br>- Improves structure |
+| `plx-finish` | Finalize project | - Comprehensive checks<br>- Documentation updates<br>- Quality assurance<br>- Project completion |
 
 ## ⚡ Best Practices
 
