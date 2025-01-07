@@ -83,3 +83,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Archive all files, not just personal ones
   - Preserve file frontmatter on reset
   - Maintain full workspace history 
+
+## [1.0.8] - 2024-01-17
+
+### Added
+- Framework copy script:
+  - Added copy-framework.sh
+  - Copy all framework files to target
+  - Default to parent directory
+  - Preserve file structure 
