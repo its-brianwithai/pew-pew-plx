@@ -188,6 +188,7 @@ We believe AI agents perform at their best when three key elements align:
 | `your-todo-list.md` | Task tracking | - Milestone organization<br>- Numbered tasks<br>- Status tracking<br>- Requirement links |
 | `your-requirements.md` | Requirements management | - Structured templates<br>- Links to todos/tests<br>- Status tracking<br>- Clear organization |
 | `your-resources.md` | Resource management | - Categorized resources<br>- External references<br>- Tool documentation<br>- Learning materials |
+| `our-content.md` | Content collection | - Social media content<br>- Educational focus<br>- Multi-platform structure<br>- Visual requirements |
 | `our-hours.md` | Work time tracking | - Session logging<br>- Progress tracking<br>- Time monitoring<br>- Milestone updates |
 | `the-refinement-process.md` | Requirements breakdown | - Breakdown guidelines<br>- Link management<br>- Relationship tracking<br>- Clear structure |
 | `the-development-process.md` | Implementation guidance | - TDD workflow<br>- Quality guidelines<br>- Testing approach<br>- Best practices |
@@ -218,6 +219,12 @@ The framework includes a comprehensive system prompt (`system-prompt.md`) that g
    Milestone Development:
    work -> complete milestone -> run tests -> present results
 
+   Content Creation:
+   plx-content -> process input -> create package -> add to our-content.md
+
+   Resource Collection:
+   plx-collect -> process input -> document resources -> update your-resources.md
+
    Completion:
    verify all -> run tests -> present results
    ```
@@ -237,6 +244,12 @@ The framework includes a comprehensive system prompt (`system-prompt.md`) that g
    Blocker: [Description]
    Attempted: [Solutions Tried]
    Need: [What's Required]
+
+   Content Creation:
+   Content: [Topic]
+   Type: [Platform]
+   Source: [References]
+   Status: [Draft/Ready]
    ```
 
 The system prompt ensures consistent operation with clear milestone boundaries.
