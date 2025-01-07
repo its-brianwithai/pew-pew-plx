@@ -1,39 +1,37 @@
 #!/bin/bash
 
 # Default target is one folder up
-default_dir="../"
-echo "Default target directory: $default_dir (one folder up)"
-read -p "Enter target directory (press Enter for default): " target_dir
-target_dir="${target_dir:-$default_dir}"
+DEFAULT_TARGET="../"
 
-# Show files to be copied
-echo -e "\nFiles to be copied:"
-for pattern in "your-*.md" "our-*.md" "plx-*.md" "the-*.md" "system-prompt.md"; do
-    for file in $pattern; do
-        if [ -f "$file" ]; then
-            echo "- $file"
-        fi
-    done
-done
+# Ask for target directory
+echo "Enter target directory (press Enter for default: $DEFAULT_TARGET):"
+read TARGET_DIR
 
-# Ask for final confirmation
-read -p "Proceed with copy to $target_dir? (y/N) " proceed
-if [[ ! $proceed =~ ^[Yy]$ ]]; then
-    echo "Operation cancelled."
+# Use default if no input
+TARGET_DIR=${TARGET_DIR:-$DEFAULT_TARGET}
+
+# Ensure target directory exists
+mkdir -p "$TARGET_DIR"
+
+# Show files that will be copied
+echo "The following files will be copied to $TARGET_DIR:"
+ls _*.md
+
+# Ask for confirmation
+echo "Proceed with copy? (y/n)"
+read CONFIRM
+
+if [ "$CONFIRM" != "y" ]; then
+    echo "Operation cancelled"
     exit 1
 fi
 
-# Create target directory if it doesn't exist
-mkdir -p "$target_dir"
-
-# Copy our specific files to target
-for pattern in "your-*.md" "our-*.md" "plx-*.md" "the-*.md" "system-prompt.md"; do
-    for file in $pattern; do
-        if [ -f "$file" ]; then
-            cp "$file" "$target_dir/"
-            echo "Copied $file to $target_dir"
-        fi
-    done
+# Copy files and remove underscore prefix
+for file in _*.md; do
+    # Extract filename without underscore
+    newname=${file#_}
+    echo "Copying $file to $TARGET_DIR/$newname"
+    cp "$file" "$TARGET_DIR/$newname"
 done
 
-echo "Framework files copied to: $target_dir" 
+echo "Framework files copied successfully to $TARGET_DIR" 

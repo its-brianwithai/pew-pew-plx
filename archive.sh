@@ -1,46 +1,53 @@
 #!/bin/bash
 
-# Default source directory is one folder up
-default_source="../"
-echo "Default source directory: $default_source (one folder up)"
-read -p "Enter source directory (press Enter for default): " source_dir
-source_dir="${source_dir:-$default_source}"
+# Default source is one folder up
+DEFAULT_SOURCE="../"
 
 # Default target is turbo-archive in current directory
-default_target="turbo-archive"
-echo "Default target directory: $default_target"
-read -p "Enter target directory (press Enter for default): " target_dir
-target_dir="${target_dir:-$default_target}"
+DEFAULT_TARGET="./turbo-archive"
 
-# Show files to be archived
-echo -e "\nFiles to be archived from $source_dir:"
-cd "$source_dir" || exit 1
-for pattern in "your-*.md" "our-*.md" "plx-*.md" "the-*.md" "system-prompt.md"; do
-    for file in $pattern; do
-        if [ -f "$file" ]; then
-            echo "- $file"
-        fi
-    done
-done
+# Show default configuration
+echo "Default source directory: $DEFAULT_SOURCE (parent directory)"
+echo "Default target directory: $DEFAULT_TARGET (in current directory)"
 
-# Ask for final confirmation
-read -p "Proceed with archiving to $target_dir? (y/N) " proceed
-if [[ ! $proceed =~ ^[Yy]$ ]]; then
-    echo "Operation cancelled."
+# Ask for source directory (optional)
+echo "Enter source directory (press Enter for default):"
+read SOURCE_DIR
+
+# Ask for target directory (optional)
+echo "Enter target directory (press Enter for default):"
+read TARGET_DIR
+
+# Use defaults if no input
+SOURCE_DIR=${SOURCE_DIR:-$DEFAULT_SOURCE}
+TARGET_DIR=${TARGET_DIR:-$DEFAULT_TARGET}
+
+# Create timestamp for archive folder
+TIMESTAMP=$(date +"%Y-%m-%d-%H-%M")
+ARCHIVE_DIR="$TARGET_DIR/$TIMESTAMP"
+
+# Show files that will be archived
+echo "The following files will be archived from $SOURCE_DIR to $ARCHIVE_DIR:"
+ls "$SOURCE_DIR"/*.md 2>/dev/null
+
+# Ask for confirmation
+echo "Proceed with archive? (y/n)"
+read CONFIRM
+
+if [ "$CONFIRM" != "y" ]; then
+    echo "Operation cancelled"
     exit 1
 fi
 
-# Create target directory if it doesn't exist
-mkdir -p "$target_dir"
+# Create archive directory
+mkdir -p "$ARCHIVE_DIR"
 
-# Move our specific files to target
-for pattern in "your-*.md" "our-*.md" "plx-*.md" "the-*.md" "system-prompt.md"; do
-    for file in $pattern; do
-        if [ -f "$file" ]; then
-            mv "$file" "$target_dir/"
-            echo "Archived $file to $target_dir"
-        fi
-    done
+# Copy files to archive
+for file in "$SOURCE_DIR"/*.md; do
+    if [ -f "$file" ]; then
+        cp "$file" "$ARCHIVE_DIR/"
+        echo "Archived: $file"
+    fi
 done
 
-echo "Files have been archived to: $target_dir" 
+echo "Workspace archived successfully to: $ARCHIVE_DIR" 

@@ -12,11 +12,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Simplified protocol usage section in README
 - Updated response formats to focus on milestone completion and blockers
 - Clarified interaction points at milestone boundaries
+- Improved framework file organization:
+  - Added underscore prefix to framework files
+  - Updated copy-framework.sh to handle underscore transformation
+  - Enhanced archive.sh to use parent directory as default
+  - Improved archive organization with timestamps
 
 ### Added
 - New milestone-based development flow in system prompt
 - Clear milestone completion format
 - Structured blocker reporting format
+- Better framework file handling:
+  - Easier @tag completion in IDEs
+  - Cleaner framework file copying
+  - Improved archive structure
+  - Better default paths
 
 ## [1.0.0] - 2024-01-17
 
