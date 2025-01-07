@@ -92,3 +92,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Copy all framework files to target
   - Default to parent directory
   - Preserve file structure 
+
+## [Unreleased]
+
+### Changed
+- Enhanced `archive.sh` script to support custom source and target directories
+- Default source directory is now one folder up (`../`)
+- Default target directory is `turbo-archive` in current directory
+- Added confirmation step before archiving files 

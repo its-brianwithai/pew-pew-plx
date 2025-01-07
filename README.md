@@ -3,13 +3,35 @@
 > A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
 ## 📑 Table of Contents
-1. [Framework Overview](#-framework-overview)
-2. [Key Features](#-key-features)
-3. [Getting Started](#-getting-started)
-4. [Available Protocols](#-available-protocols)
-5. [Best Practices](#-best-practices)
-6. [Core Documents](#-core-documents)
-7. [System Prompt](#-system-prompt)
+1. [Quick Start](#-quick-start)
+2. [Framework Overview](#-framework-overview)
+3. [Key Features](#-key-features)
+4. [Getting Started](#-getting-started)
+5. [Available Protocols](#-available-protocols)
+6. [Best Practices](#-best-practices)
+7. [Core Documents](#-core-documents)
+8. [System Prompt](#-system-prompt)
+9. [Utility Scripts](#-utility-scripts)
+
+## 🚀 Quick Start
+
+1. Copy the framework files to your workspace:
+```bash
+./copy-framework.sh
+```
+- Default target is one folder up (`../`)
+- Enter custom target directory or press Enter for default
+- Review files to be copied
+- Confirm to proceed
+
+2. Archive workspace files when needed:
+```bash
+./archive.sh
+```
+- Default source is one folder up (`../`)
+- Default target is `turbo-archive` in current directory
+- Review files to be archived
+- Confirm to proceed
 
 ## 🔍 Framework Overview
 
@@ -207,3 +229,21 @@ The framework includes a comprehensive system prompt (`system-prompt.md`) that g
    ```
 
 The system prompt ensures consistent, high-quality operation across all agents using this framework.
+
+## 🛠 Utility Scripts
+
+### Copy Framework (`copy-framework.sh`)
+
+Copies all framework files to a target directory:
+- Source files: `your-*.md`, `our-*.md`, `plx-*.md`, `the-*.md`, `system-prompt.md`
+- Default target: `../` (one folder up)
+- Shows files to be copied before proceeding
+- Asks for confirmation before copying
+
+### Archive Workspace (`archive.sh`)
+
+Archives your workspace files to preserve state:
+- Source directory defaults to `../` (one folder up)
+- Target directory defaults to `turbo-archive` in current directory
+- Shows files to be archived before proceeding
+- Asks for confirmation before moving files
