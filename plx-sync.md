@@ -11,9 +11,10 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
 ## 📑 Table of Contents
 1. [Memory Sync](#1️⃣-memory-sync)
 2. [Requirements Sync](#2️⃣-requirements-sync)
-3. [Progress Alignment](#3️⃣-progress-alignment)
-4. [Documentation Sync](#4️⃣-documentation-sync)
-5. [Action Items](#-action-items)
+3. [Resources Sync](#3️⃣-resources-sync)
+4. [Progress Alignment](#4️⃣-progress-alignment)
+5. [Documentation Sync](#5️⃣-documentation-sync)
+6. [Action Items](#-action-items)
 
 ## 1️⃣ Memory Sync
 
@@ -37,13 +38,21 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
    3. Compare against implementation
    4. Note requirement drift
 
-2. Verify Relationships
-   1. Check component links
-   2. Validate activity flows
-   3. Confirm dependencies
-   4. Verify status accuracy
+## 3️⃣ Resources Sync
 
-## 3️⃣ Progress Alignment
+1. Check Resources Structure
+   1. Review [your-resources](your-resources.md)
+   2. Verify resource categorization
+   3. Update external links
+   4. Check tool availability
+
+2. Verify Resource Health
+   1. Remove outdated resources
+   2. Add new references
+   3. Update documentation
+   4. Maintain organization
+
+## 4️⃣ Progress Alignment
 
 1. Check Todo Structure
    1. Review main [your-todo-list](your-todo-list.md)
@@ -57,7 +66,7 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
    3. Review dependencies
    4. Confirm priorities
 
-## 4️⃣ Documentation Sync
+## 5️⃣ Documentation Sync
 
 1. Check File Health
    1. Main files optimized

@@ -5,6 +5,19 @@ All notable changes to this workspace will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- Updated system prompt to focus on milestone-based workflow
+- Simplified protocol usage section in README
+- Updated response formats to focus on milestone completion and blockers
+- Clarified interaction points at milestone boundaries
+
+### Added
+- New milestone-based development flow in system prompt
+- Clear milestone completion format
+- Structured blocker reporting format
+
 ## [1.0.0] - 2024-01-17
 
 ### Added
@@ -92,11 +105,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Copy all framework files to target
   - Default to parent directory
   - Preserve file structure 
-
-## [Unreleased]
-
-### Changed
-- Enhanced `archive.sh` script to support custom source and target directories
-- Default source directory is now one folder up (`../`)
-- Default target directory is `turbo-archive` in current directory
-- Added confirmation step before archiving files 

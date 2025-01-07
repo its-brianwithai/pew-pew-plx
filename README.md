@@ -47,23 +47,26 @@ This framework enhances your AI agent's capabilities by providing:
 
 We believe AI agents perform at their best when three key elements align:
 
-1. **Test-Driven Development** (core principle)
-   - Write tests first
-   - Implement features
-   - Verify implementations
-   - Maintain coverage
+1. **Quality Training** (out of our hands)
+   - Trained on relevant data
+   - Proper model capabilities
+   - Good base understanding
 
 2. **Clear Direction**
-   - Well-defined milestones
-   - Test requirements
+   - Well-defined requirements
+   - Structured processes
    - Clear documentation
    - Proper templates
+   - Small, clear task scope
 
-3. **Efficient State Management**
-   - Main files (current state)
-   - Context files (supporting info)
-   - History files (past decisions)
-   - Test results and coverage
+3. **Maintained Focus**
+   - Regular progress tracking
+   - Consistent documentation
+   - Clear communication
+   - Process adherence
+   - Preserved context across sessions
+   - Active context awareness
+   - Proper state management
 
 ## 🌟 Key Features
 
@@ -106,21 +109,28 @@ We believe AI agents perform at their best when three key elements align:
    4. Define tests and milestones
 
 3. **Using Protocols**
-   The agent will work autonomously, following TDD:
-   - "Please follow plx-start to write initial tests"
-   - "Use plx-test to implement pending tests"
-   - "Follow plx-next to continue development"
-   - "Run plx-finish when complete"
+   The agent follows a milestone-based workflow:
+   ```
+   Requirements:
+   - "Use plx-start for new projects"
+   - "Use plx-refine to analyze requirements"
+   
+   Development:
+   - Complete milestone tasks
+   - Run tests at completion
+   - Fix any issues
+   - Present results
+   
+   Completion:
+   - "Use plx-finish when done"
    - "Use plx-archive to preserve state"
-   - "Run plx-reset to start fresh"
-   - "Use plx-log to record hours"
+   ```
 
 4. **During Development**
    - Write tests first
-   - Let agent implement
-   - Verify completeness
-   - Review at milestones
-   - Log work sessions
+   - Complete milestone tasks
+   - Run tests at completion
+   - Present results for review
 
 ## 📋 Available Protocols
 
@@ -128,6 +138,8 @@ We believe AI agents perform at their best when three key elements align:
 |----------|---------|--------------|
 | `plx-start` | Initialize new tasks | - Sets up documentation<br>- Writes initial tests<br>- Creates test plan<br>- Verifies readiness |
 | `plx-document` | Create documentation | - Follows standard patterns<br>- Includes test docs<br>- Maintains consistency<br>- Verifies quality |
+| `plx-refine` | Analyze requirements | - Maps relationships<br>- Defines properties<br>- Plans implementation<br>- Validates completeness |
+| `plx-collect` | Gather resources | - Processes user input<br>- Organizes resources<br>- Links relationships<br>- Maintains categories |
 | `plx-pause` | Preserve current state | - Optimizes file sizes<br>- Records test status<br>- Creates handoff notes<br>- Enables smooth resumption |
 | `plx-resume` | Continue work | - Loads all versions<br>- Checks test state<br>- Maintains progress<br>- Ensures alignment |
 | `plx-focus` | Get back on track | - Evaluates progress<br>- Verifies tests<br>- Maintains momentum<br>- Solves blockers |
@@ -174,6 +186,7 @@ We believe AI agents perform at their best when three key elements align:
 | `your-memory.md` | Persistent memory bank | - Append-only log of decisions<br>- Timestamped entries<br>- Links to requirements<br>- Historical context |
 | `your-todo-list.md` | Task tracking | - Milestone organization<br>- Numbered tasks<br>- Status tracking<br>- Requirement links |
 | `your-requirements.md` | Requirements management | - Structured templates<br>- Links to todos/tests<br>- Status tracking<br>- Clear organization |
+| `your-resources.md` | Resource management | - Categorized resources<br>- External references<br>- Tool documentation<br>- Learning materials |
 | `our-hours.md` | Work time tracking | - Session logging<br>- Progress tracking<br>- Time monitoring<br>- Milestone updates |
 | `the-refinement-process.md` | Requirements breakdown | - Breakdown guidelines<br>- Link management<br>- Relationship tracking<br>- Clear structure |
 | `the-development-process.md` | Implementation guidance | - TDD workflow<br>- Quality guidelines<br>- Testing approach<br>- Best practices |
@@ -184,51 +197,48 @@ We believe AI agents perform at their best when three key elements align:
 
 The framework includes a comprehensive system prompt (`system-prompt.md`) that guides agent behavior:
 
-1. **Core Principles**
-   - Test-Driven Development
-   - Autonomous Operation
-   - Context Management
+1. **Core Development Flow**
+   - Ensure proper requirements (plx-start/plx-refine)
+   - Work through milestones
+   - Only interact at milestone completion
+   - Present results and get confirmation
 
 2. **Operating Guidelines**
-   - Task Execution
-   - Progress Management
-   - Communication Style
-   - Work Tracking
+   - Complete full milestones
+   - Run tests before check-in
+   - Fix issues when found
+   - Document progress
 
 3. **Default Workflows**
    ```
-   New Features:
-   plx-start -> write tests -> plx-next -> implement -> plx-test -> verify -> plx-sync
+   New Projects:
+   plx-start/plx-refine -> establish requirements -> begin development
 
-   Ongoing Work:
-   plx-resume -> check context -> plx-next -> continue -> plx-test -> verify
+   Milestone Development:
+   work -> complete milestone -> run tests -> present results
 
-   Milestones:
-   plx-test -> verify all -> plx-sync -> check -> plx-pause -> await
+   Completion:
+   verify all -> run tests -> present results
    ```
 
 4. **Response Formats**
    ```
-   Task Updates:
-   Status: [Phase]
-   Progress: [%]
-   Next: [Action]
-   Blockers: [Any]
-
-   Test Results:
-   Tests: [Pass/Fail]
-   Coverage: [%]
-   Pending: [Count]
-   Action: [Next]
-
    Milestone Completion:
    Milestone: [Name]
-   Achievements: [List]
-   Test Status: [Summary]
-   Next: [Awaiting]
+   Completed:
+   - [Achievement 1]
+   - [Achievement 2]
+   Tests: [Status]
+   Next Milestone: [Name]
+
+   Blockers:
+   Milestone: [Current]
+   Blocker: [Description]
+   Attempted: [Solutions Tried]
+   Need: [What's Required]
    ```
 
-The system prompt ensures consistent, high-quality operation across all agents using this framework.
+The system prompt ensures consistent operation with clear milestone boundaries.
 
 ## 🛠 Utility Scripts
 

@@ -28,6 +28,12 @@ When you receive this protocol, read your workspace files to restore context and
    3. Note validations needed
    4. List any blockers
 
+4. Review [your-resources.md](your-resources.md)
+   1. Check required resources
+   2. Verify tool availability
+   3. Update documentation links
+   4. Note new references
+
 ## 2️⃣ Resume Action
 
 1. Update Memory

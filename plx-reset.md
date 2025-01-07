@@ -11,14 +11,19 @@ When you receive this protocol, archive current state and reset to original file
 ## 1️⃣ Archive Current State
 
 1. Follow plx-archive protocol
-   1. Create archive folder
-   2. Move current files:
-      - your-memory.md
-      - your-todo-list.md
-      - your-requirements.md
-      - your-initial-input.md
-      - our-hours.md
-   3. Verify archive complete
+   1. Run archive script:
+      ```bash
+      ./archive.sh
+      ```
+      - Default source: `../` (one folder up)
+      - Default target: `turbo-archive` in current directory
+      - Review files before proceeding
+      - Confirm archive operation
+
+2. Verify Archive
+   - Check archived files
+   - Verify file structure
+   - Ensure completeness
 
 ## 2️⃣ Reset Process
 
@@ -29,11 +34,13 @@ When you receive this protocol, archive current state and reset to original file
    4. Keep LICENSE if exists
 
 2. Restore Core Files
-   1. Fetch original files:
+   1. Run copy framework script:
       ```bash
-      git fetch ultra_wide_turbo_agent_workspace
-      git checkout ultra_wide_turbo_agent_workspace/main -- core/ protocols/ processes/
+      ./copy-framework.sh
       ```
+      - Default target: `../` (one folder up)
+      - Review files to be copied
+      - Confirm copy operation
    2. Initialize new our-hours.md
    3. Verify file structure
    4. Check file integrity

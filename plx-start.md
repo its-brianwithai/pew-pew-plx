@@ -18,7 +18,14 @@ When you receive this protocol, follow these steps to properly initiate and stru
    5. Note any constraints or requirements
    6. Link to relevant context
 
-2. Understand Scope
+2. Document Resources
+   1. Review [your-resources](your-resources.md)
+   2. Add relevant documentation
+   3. Link external references
+   4. Note required tools
+   5. List learning materials
+
+3. Understand Scope
    1. Identify core requirements
    2. List assumptions
    3. Note uncertainties
