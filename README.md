@@ -1,4 +1,4 @@
-# 🤖 Ultra Wide Turbo Agent Workspace
+# 🤖 Ultra Wide Turbo Workspace
 
 > A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
@@ -117,19 +117,22 @@ We believe AI agents perform at their best when three key elements align:
 3. **Using Protocols**
    The agent follows a milestone-based workflow:
    ```
-   Requirements:
+   Setup:
    - "Use plx-start for new projects"
    - "Use plx-refine to analyze requirements"
+   - "Use plx-config to customize behavior"
    
    Development:
    - Complete milestone tasks
    - Run tests at completion
    - Fix any issues
    - Present results
+   - "Use plx-commit for version control"
    
    Completion:
    - "Use plx-finish when done"
    - "Use plx-archive to preserve state"
+   - "Use plx-release for releases"
    ```
 
 4. **During Development**
@@ -137,6 +140,8 @@ We believe AI agents perform at their best when three key elements align:
    - Complete milestone tasks
    - Run tests at completion
    - Present results for review
+   - Stage and document changes
+   - Follow release process
 
 ## 📋 Available Protocols
 
@@ -149,7 +154,8 @@ We believe AI agents perform at their best when three key elements align:
 | `plx-collect` | Gather resources | - Processes user input<br>- Organizes resources<br>- Links relationships<br>- Maintains categories |
 | `plx-pause` | Preserve current state | - Optimizes file sizes<br>- Records test status<br>- Creates handoff notes<br>- Enables smooth resumption |
 | `plx-resume` | Continue work | - Loads all versions<br>- Checks test state<br>- Maintains progress<br>- Ensures alignment |
-| `plx-focus` | Get back on track | - Evaluates progress<br>- Verifies tests<br>- Maintains momentum<br>- Solves blockers |
+| `plx-focus` | Evaluate current task | - Reviews current milestone<br>- Questions approach<br>- Finds improvements<br>- Suggests optimizations |
+| `plx-ask` | Self-check information needs | - Reviews current task<br>- Identifies unclear points<br>- Improves understanding<br>- Enhances approach |
 | `plx-sync` | Verify alignment | - Checks file health<br>- Runs test suite<br>- Validates progress<br>- Maintains quality |
 | `plx-add` | Add new content | - Processes additions<br>- Updates tests<br>- Maintains consistency<br>- Verifies changes |
 | `plx-next` | Execute next task | - Autonomous execution<br>- Test verification<br>- Progress validation<br>- Efficient workflow |
@@ -159,6 +165,9 @@ We believe AI agents perform at their best when three key elements align:
 | `plx-archive` | Archive workspace | - Structured archiving<br>- State preservation<br>- Relationship maintenance<br>- Clear organization |
 | `plx-reset` | Reset workspace | - State preservation<br>- Clean workspace<br>- Original restoration<br>- History maintenance |
 | `plx-log` | Record work hours | - Session tracking<br>- Progress monitoring<br>- Time logging<br>- Milestone tracking |
+| `plx-release` | Prepare and execute release | - Stages all changes<br>- Updates documentation<br>- Ensures consistency<br>- Manages version control |
+| `plx-commit` | Handle git commits | - Reviews changes<br>- Formats messages<br>- Executes commit<br>- Pushes changes |
+| `plx-config` | Configure agent behavior | - Customizes framework<br>- Adapts to project needs<br>- Updates workspace files<br>- Maintains consistency |
 
 ## ⚡ Best Practices
 
@@ -222,6 +231,10 @@ The framework includes a comprehensive system prompt (`system-prompt.md`) that g
    - Run tests before check-in
    - Fix issues when found
    - Document progress
+   - Follow agreed approach strictly
+   - Never change approach without approval
+   - Evaluate current task regularly
+   - Document suggested improvements
 
 3. **Default Workflows**
    ```
@@ -230,6 +243,10 @@ The framework includes a comprehensive system prompt (`system-prompt.md`) that g
 
    Milestone Development:
    work -> complete milestone -> run tests -> present results
+
+   Task Evaluation:
+   plx-focus -> evaluate approach -> suggest improvements -> await approval
+   plx-ask -> identify needs -> gather input -> improve understanding
 
    Content Creation:
    plx-content -> process input -> create package -> add to our-content.md
@@ -250,18 +267,6 @@ The framework includes a comprehensive system prompt (`system-prompt.md`) that g
    - [Achievement 2]
    Tests: [Status]
    Next Milestone: [Name]
-
-   Blockers:
-   Milestone: [Current]
-   Blocker: [Description]
-   Attempted: [Solutions Tried]
-   Need: [What's Required]
-
-   Content Creation:
-   Content: [Topic]
-   Type: [Platform]
-   Source: [References]
-   Status: [Draft/Ready]
    ```
 
 The system prompt ensures consistent operation with clear milestone boundaries.
