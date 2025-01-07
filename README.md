@@ -121,6 +121,11 @@ We believe AI agents perform at their best when three key elements align:
    - Fix any issues
    - Present results
    
+   Content:
+   - "Use plx-content to prepare social content"
+   - Document learnings and insights
+   - Structure for different platforms
+   
    Completion:
    - "Use plx-finish when done"
    - "Use plx-archive to preserve state"
@@ -139,6 +144,7 @@ We believe AI agents perform at their best when three key elements align:
 | `plx-start` | Initialize new tasks | - Sets up documentation<br>- Writes initial tests<br>- Creates test plan<br>- Verifies readiness |
 | `plx-document` | Create documentation | - Follows standard patterns<br>- Includes test docs<br>- Maintains consistency<br>- Verifies quality |
 | `plx-refine` | Analyze requirements | - Maps relationships<br>- Defines properties<br>- Plans implementation<br>- Validates completeness |
+| `plx-content` | Prepare social content | - Educational focus<br>- Technical accuracy<br>- Multi-platform structure<br>- Visual requirements |
 | `plx-collect` | Gather resources | - Processes user input<br>- Organizes resources<br>- Links relationships<br>- Maintains categories |
 | `plx-pause` | Preserve current state | - Optimizes file sizes<br>- Records test status<br>- Creates handoff notes<br>- Enables smooth resumption |
 | `plx-resume` | Continue work | - Loads all versions<br>- Checks test state<br>- Maintains progress<br>- Ensures alignment |

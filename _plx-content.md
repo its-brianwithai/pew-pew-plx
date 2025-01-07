@@ -6,84 +6,89 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 📱 Content Collection
 
-When you receive this protocol, collect and structure content for social media processing.
+When you receive this protocol, collect and structure content for social media processing. Review [our-content](our-content.md) for content types and templates.
 
-## 🎯 Content Principles
+## 1️⃣ Input Analysis
 
-1. **Educational Value**
-   - Focus on teaching and sharing
-   - Explain the reasoning
-   - Document learnings
-   - Share practical tips
+1. Process User Input
+   1. Extract key topics
+   2. Identify content types
+   3. Note special requirements
+   4. List specific requests
 
-2. **Technical Accuracy**
-   - Verify implementation details
-   - Include code context
-   - Document dependencies
-   - Note requirements
+2. Review Personal Files
+   1. Check [your-memory](your-memory.md) for:
+      - Technical decisions
+      - Learning moments
+      - Problem solutions
+      - Implementation details
+   2. Review [your-requirements](your-requirements.md) for:
+      - Feature context
+      - Technical constraints
+      - Design decisions
+      - Implementation goals
+   3. Check [your-todo-list](your-todo-list.md) for:
+      - Milestone achievements
+      - Technical progress
+      - Key completions
+      - Learning points
 
-3. **Community Focus**
-   - Address common issues
-   - Share solutions
-   - Encourage discussion
-   - Welcome questions
+## 2️⃣ Content Collection
 
-## 1️⃣ Input Collection
+1. Gather Technical Details
+   1. Implementation specifics
+   2. Code examples
+   3. Technical decisions
+   4. Learning insights
 
-1. Gather Source Material
-   1. Review [your-memory](your-memory.md)
-   2. Check [your-requirements](your-requirements.md)
-   3. Note implementation details
-   4. List technical achievements
+2. Document Visual Needs
+   1. Required screenshots
+   2. Code snippets
+   3. Process diagrams
+   4. Demo recordings
 
-2. Identify Teaching Points
+3. Identify Teaching Points
    1. Technical insights
    2. Process improvements
    3. Problem solutions
-   4. Learning moments
+   4. Best practices
 
-3. Document Context
-   1. Technical prerequisites
-   2. Implementation steps
-   3. Key decisions
-   4. Learnings gained
+## 3️⃣ Content Package
 
-## 2️⃣ Content Structure
-
-1. Create Content Entry
+1. Create Entry in [our-content](our-content.md)
    ```markdown
    # Content Package: [Topic]
 
-   ## Source
-   - Memory Entry: [[reference]]
-   - Requirements: [[reference]]
-   - Implementation: [[reference]]
-   - Resources: [[reference]]
+   ## Source Material
+   - User Input: [description]
+   - Memory Entries: [[references]]
+   - Requirements: [[references]]
+   - Todo Items: [[references]]
 
-   ## Technical Context
-   - Prerequisites: [list]
-   - Dependencies: [list]
-   - Environment: [details]
-   - Tools: [list]
+   ## Technical Details
+   - Implementation: [details]
+   - Decisions: [list]
+   - Learnings: [insights]
+   - Context: [background]
 
-   ## Learning Points
-   - Technical: [insights]
-   - Process: [improvements]
-   - Solutions: [approaches]
-   - Insights: [learnings]
-
-   ## Visual Needs
+   ## Visual Requirements
    - Screenshots: [list]
-   - Code snippets: [list]
+   - Code Examples: [list]
    - Diagrams: [list]
    - Demos: [list]
 
-   ## Content Types
+   ## Educational Points
+   - Technical: [insights]
+   - Process: [improvements]
+   - Solutions: [approaches]
+   - Practices: [recommendations]
+
+   ## Platform Content
    ### Twitter Thread
    - Hook: [problem/solution]
-   - Key points: [list]
-   - Code example: [snippet]
-   - Learning focus: [takeaway]
+   - Key Points: [list]
+   - Code Example: [snippet]
+   - Learning Focus: [takeaway]
 
    ### LinkedIn Post
    - Problem: [description]
@@ -95,16 +100,16 @@ When you receive this protocol, collect and structure content for social media p
    - Title: [learning-focused]
    - Objectives: [list]
    - Structure: [outline]
-   - Code examples: [list]
+   - Code Examples: [list]
 
-   ## Additional Notes
-   - Questions to address
-   - Points to emphasize
-   - Areas to clarify
-   - Follow-up topics
+   ## Additional Context
+   - Questions: [list]
+   - Emphasis: [points]
+   - Clarifications: [needed]
+   - Follow-ups: [topics]
    ```
 
-2. Add to [your-memory](your-memory.md)
+2. Add Reference to [your-memory](your-memory.md)
    1. Link content package
    2. Note key points
    3. Add context
@@ -112,22 +117,28 @@ When you receive this protocol, collect and structure content for social media p
 
 ## ✅ Verification
 
-1. Content Package
-   - [ ] Source material linked
-   - [ ] Technical context clear
-   - [ ] Learning points identified
+1. Input Coverage
+   - [ ] User input processed
+   - [ ] Personal files reviewed
+   - [ ] Technical details gathered
    - [ ] Visual needs listed
 
-2. Documentation
+2. Content Structure
+   - [ ] Package created
+   - [ ] Sources linked
+   - [ ] Context preserved
+   - [ ] Teaching points clear
+
+3. Documentation
    - [ ] Memory updated
    - [ ] References linked
-   - [ ] Context preserved
-   - [ ] Notes complete
+   - [ ] Context complete
+   - [ ] Notes added
 
 Remember:
-- Focus on educational value
+- Process all user input thoroughly
+- Review all relevant personal files
 - Include all technical context
 - Document visual requirements
-- Maintain clear structure
 - Link all references
 - Preserve implementation details 
