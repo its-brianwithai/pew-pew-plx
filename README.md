@@ -91,8 +91,14 @@ We believe AI agents perform at their best when three key elements align:
 4. **Test-Driven Workflow**
    - Write tests first
    - Track pending tests
-   - Implement features
+   - Implement thoroughly
+   - Run tests autonomously
    - Verify completeness
+   - Only ask user when:
+     - Told not to run tests
+     - Missing permissions
+     - Need specific setup/input
+     - Can't access resources
 
 5. **Work Tracking**
    - Session logging
@@ -160,6 +166,12 @@ We believe AI agents perform at their best when three key elements align:
    - Write tests before code
    - Track pending tests
    - Implement thoroughly
+   - Run tests autonomously
+   - Only ask user when:
+     - Told not to run tests
+     - Missing permissions
+     - Need specific setup
+     - Can't access resources
    - Verify completeness
 
 2. **Effective Usage**
