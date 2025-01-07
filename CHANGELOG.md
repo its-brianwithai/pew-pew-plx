@@ -28,23 +28,61 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Improved archive structure
   - Better default paths
 
-## [1.0.0] - 2024-01-17
+## [0.8.0] - 2024-01-17
 
 ### Added
-- Framework finalization:
-  - Updated system prompt with all capabilities
-  - Enhanced workflow documentation
-  - Added workspace management flows
-  - Completed documentation
+- Framework copy script:
+  - Added copy-framework.sh
+  - Copy all framework files to target
+  - Default to parent directory
+  - Preserve file structure
+
+## [0.7.0] - 2024-01-17
+
+### Added
+- Complete archival system:
+  - Added archive.sh script
+  - Archive all files, not just personal ones
+  - Preserve file frontmatter on reset
+  - Maintain full workspace history
+
+## [0.6.0] - 2024-01-17
+
+### Added
+- Initial input tracking:
+  - Added your-initial-input.md
+  - Store project starting point
+  - Track original requirements
+  - Document initial analysis
+
+## [0.5.0] - 2024-01-17
 
 ### Changed
-- Streamlined documentation:
-  - Simplified context management
-  - Enhanced workflow clarity
-  - Updated protocol relationships
-  - Improved getting started guide 
+- Integrated hours logging:
+  - Added our-hours.md to archive process
+  - Updated reset protocol for hours
+  - Streamlined file management
+  - Enhanced workspace structure
 
-## [1.0.1] - 2024-01-17
+## [0.4.0] - 2024-01-17
+
+### Added
+- Work hours logging system:
+  - Added plx-log protocol
+  - Created our-hours.md template
+  - Structured time tracking
+  - Progress monitoring
+
+## [0.3.0] - 2024-01-17
+
+### Changed
+- Restricted file access in protocols:
+  - Limited to "your-" prefixed files only
+  - Removed process file modifications
+  - Prevented new file creation
+  - Clarified file access rules
+
+## [0.2.0] - 2024-01-17
 
 ### Changed
 - Enhanced state management:
@@ -53,17 +91,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Removed redundant context handling
   - Improved workflow clarity 
 
-## [1.0.2] - 2024-01-17
-
-### Changed
-- Restricted file access in protocols:
-  - Limited to "your-" prefixed files only
-  - Removed process file modifications
-  - Prevented new file creation
-  - Clarified file access rules 
-
-## [1.0.3] - 2024-01-17
-
 ### Added
 - Automatic optimization triggers:
   - Added file size monitoring
@@ -71,47 +98,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added pre/post milestone triggers
   - Integrated with core workflows 
 
-## [1.0.4] - 2024-01-17
+## [0.1.0] - 2024-01-17
 
 ### Added
+- Initial framework setup:
+  - Core documentation structure
+  - Basic workflow protocols
+  - File templates
+  - Utility scripts
 - Work hours logging system:
   - Added plx-log protocol
   - Created our-hours.md template
   - Structured time tracking
-  - Progress monitoring 
-
-## [1.0.5] - 2024-01-17
-
-### Changed
-- Integrated hours logging:
-  - Added our-hours.md to archive process
-  - Updated reset protocol for hours
-  - Streamlined file management
-  - Enhanced workspace structure 
-
-## [1.0.6] - 2024-01-17
-
-### Added
-- Initial input tracking:
-  - Added your-initial-input.md
-  - Store project starting point
-  - Track original requirements
-  - Document initial analysis 
-
-## [1.0.7] - 2024-01-17
-
-### Added
-- Complete archival system:
-  - Added archive.sh script
-  - Archive all files, not just personal ones
-  - Preserve file frontmatter on reset
-  - Maintain full workspace history 
-
-## [1.0.8] - 2024-01-17
-
-### Added
+  - Progress monitoring
 - Framework copy script:
   - Added copy-framework.sh
   - Copy all framework files to target
   - Default to parent directory
-  - Preserve file structure 
+  - Preserve file structure
+- Complete archival system:
+  - Added archive.sh script
+  - Archive all files
+  - Preserve file frontmatter
+  - Maintain workspace history
+
+### Changed
+- First implementation:
+  - Basic system prompt
+  - Simple workflow
+  - Core protocols
+  - Essential documentation 
