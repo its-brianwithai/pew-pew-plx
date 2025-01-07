@@ -121,11 +121,6 @@ We believe AI agents perform at their best when three key elements align:
    - Fix any issues
    - Present results
    
-   Content:
-   - "Use plx-content to prepare social content"
-   - Document learnings and insights
-   - Structure for different platforms
-   
    Completion:
    - "Use plx-finish when done"
    - "Use plx-archive to preserve state"
