@@ -11,10 +11,12 @@ When you receive this protocol, follow these steps to properly initiate and stru
 ## 1️⃣ Initial Setup
 
 1. Create Memory Entry
-   1. Create timestamp entry in [your-memory](your-memory.md)
-   2. Document initial task description
-   3. Note any constraints or requirements
-   4. Link to relevant context
+   1. Review [your-initial-input](your-initial-input.md) if available
+   2. Analyze user's current input/request
+   3. Create timestamp entry in [your-memory](your-memory.md)
+   4. Document initial task description
+   5. Note any constraints or requirements
+   6. Link to relevant context
 
 2. Understand Scope
    1. Identify core requirements
@@ -25,13 +27,14 @@ When you receive this protocol, follow these steps to properly initiate and stru
 ## 2️⃣ Requirements Analysis
 
 1. Document in [your-requirements](your-requirements.md)
-   1. List actors and components
-   2. Define activities
-   3. Specify properties
-   4. Document behaviors
+   1. Review requirements from [your-initial-input](your-initial-input.md) if available
+   2. List actors and components
+   3. Define activities
+   4. Specify properties
+   5. Document behaviors
 
 2. Validate Requirements
-   1. Check completeness
+   1. Check completeness against initial input
    2. Verify clarity
    3. Identify dependencies
    4. Note potential risks

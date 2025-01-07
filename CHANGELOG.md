@@ -65,3 +65,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Updated reset protocol for hours
   - Streamlined file management
   - Enhanced workspace structure 
+
+## [1.0.6] - 2024-01-17
+
+### Added
+- Initial input tracking:
+  - Added your-initial-input.md
+  - Store project starting point
+  - Track original requirements
+  - Document initial analysis 
+
+## [1.0.7] - 2024-01-17
+
+### Added
+- Complete archival system:
+  - Added archive.sh script
+  - Archive all files, not just personal ones
+  - Preserve file frontmatter on reset
+  - Maintain full workspace history 

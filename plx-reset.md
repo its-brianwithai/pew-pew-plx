@@ -16,6 +16,7 @@ When you receive this protocol, archive current state and reset to original file
       - your-memory.md
       - your-todo-list.md
       - your-requirements.md
+      - your-initial-input.md
       - our-hours.md
    3. Verify archive complete
 
