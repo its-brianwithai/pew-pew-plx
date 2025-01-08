@@ -101,10 +101,20 @@ read -r USER_INPUT
 # Use default if no input
 if [ -z "$USER_INPUT" ]; then
     BASE_NAME="turbo-workspace"
+    FOLDER_PATH=""
     echo "Using default base name: $BASE_NAME"
 else
-    BASE_NAME=$(to_kebab_case "$USER_INPUT")
-    echo "Using kebab case name: $BASE_NAME"
+    # Split input into folder path and base name if "/" is present
+    if [[ "$USER_INPUT" == *"/"* ]]; then
+        FOLDER_PATH="${USER_INPUT%/*}"
+        BASE_NAME=$(to_kebab_case "${USER_INPUT##*/}")
+        echo "Using folder path: $FOLDER_PATH"
+        echo "Using kebab case name: $BASE_NAME"
+    else
+        FOLDER_PATH=""
+        BASE_NAME=$(to_kebab_case "$USER_INPUT")
+        echo "Using kebab case name: $BASE_NAME"
+    fi
 fi
 
 # Generate workspace name
@@ -114,8 +124,12 @@ echo "Using workspace name: $WORKSPACE_NAME"
 # Ensure workspaces directory exists
 mkdir -p "$WORKSPACES_DIR"
 
-# Create main workspace directory
-WORKSPACE_DIR="$WORKSPACES_DIR/$WORKSPACE_NAME"
+# Create main workspace directory with folder path if specified
+if [ -n "$FOLDER_PATH" ]; then
+    WORKSPACE_DIR="$WORKSPACES_DIR/$FOLDER_PATH/$WORKSPACE_NAME"
+else
+    WORKSPACE_DIR="$WORKSPACES_DIR/$WORKSPACE_NAME"
+fi
 mkdir -p "$WORKSPACE_DIR"
 echo -e "\nCreated workspace directory: $WORKSPACE_DIR"
 
