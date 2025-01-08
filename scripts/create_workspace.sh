@@ -30,10 +30,9 @@ get_default_name() {
     local day=$(date "+%d")
     local weekday=$(date "+%a" | tr '[:upper:]' '[:lower:]')
     local date_suffix="${month}${day}-${weekday}"
-    local full_base="$base_name-$date_suffix"
-    local number=$(get_next_number "$full_base")
+    local number=$(get_next_number "$date_suffix")
     
-    echo "$full_base-$number"
+    echo "$date_suffix-$number-$base_name"
 }
 
 # Show welcome message
@@ -92,9 +91,10 @@ fi
 month=$(date "+%m")
 day=$(date "+%d")
 weekday=$(date "+%a" | tr '[:upper:]' '[:lower:]')
-base_suggestion="turbo-workspace-${month}${day}-${weekday}"
-next_number=$(get_next_number "$base_suggestion")
-default_name="${base_suggestion}-${next_number}"
+date_part="${month}${day}-${weekday}"
+next_number=$(get_next_number "$date_part")
+base_suggestion="${date_part}-${next_number}-turbo-workspace"
+default_name="$base_suggestion"
 echo -e "\nEnter workspace base name (press ENTER for: $default_name):"
 read -r USER_INPUT
 
@@ -145,7 +145,7 @@ for component in "${selected[@]}"; do
     esac
 done
 
+echo -e "\nFiles in new workspace:"
+ls -la "$WORKSPACE_DIR"
 echo -e "\n🎉 Ultra Wide Turbo workspace '$WORKSPACE_NAME' created successfully!"
 echo "Location: $WORKSPACE_DIR"
-echo -e "\nFiles in new workspace:"
-ls -la "$WORKSPACE_DIR" 
