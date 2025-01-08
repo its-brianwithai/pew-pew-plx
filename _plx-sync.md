@@ -55,14 +55,20 @@ When you receive this protocol, perform a comprehensive check to ensure all comp
 ## 4️⃣ Progress Alignment
 
 1. Check Todo Structure
-   1. Review main [your-todo-list](your-todo-list.md)
-   2. Verify todo.context.md
-   3. Compare against requirements
-   4. Check milestone alignment
+   1. Review [your-todo-list](your-todo-list.md)
+   2. Verify each milestone:
+      ```markdown
+      - [ ] 🎯 Milestone Name
+          - [ ] Task one
+          - [ ] Task two
+          - [ ] Run milestone tests
+      ```
+   3. Check for user-added tasks (highest priority)
+   4. Verify test status for each milestone
 
 2. Verify Progress
-   1. Validate status indicators
-   2. Check blocked items
+   1. Check completed tasks [x]
+   2. Note blocked tasks
    3. Review dependencies
    4. Confirm priorities
 

@@ -109,39 +109,31 @@ We believe AI agents perform at their best when three key elements align:
 ## 🚀 Getting Started
 
 1. **Setup**
-   1. Choose your workspace folder
-   2. Ensure your AI agent has access to all files
-   3. Verify files are properly indexed in your IDE/editor
-   4. Define tests and milestones
+   1. Choose a workspace folder for your project
+   2. Copy the framework files into your workspace
+   3. Make sure your AI agent can access the files
+   4. The agent will use these files to maintain context
 
-3. **Using Protocols**
-   The agent follows a milestone-based workflow:
-   ```
-   Setup:
-   - "Use plx-start for new projects"
-   - "Use plx-refine to analyze requirements"
-   - "Use plx-config to customize behavior"
-   
-   Development:
-   - Complete milestone tasks
-   - Run tests at completion
-   - Fix any issues
-   - Present results
-   - "Use plx-commit for version control"
-   
-   Completion:
-   - "Use plx-finish when done"
-   - "Use plx-archive to preserve state"
-   - "Use plx-release for releases"
-   ```
+2. **Using The Framework**
+   - Start by telling the agent what you want to build
+   - The agent will use `plx-` commands to:
+     - Analyze requirements
+     - Create test plans
+     - Track progress
+     - Maintain documentation
+     - Keep everything in sync
+   - All work is documented in the `your-` files:
+     - Requirements in `your-requirements.md`
+     - Tasks in `your-todo-list.md`
+     - Context in `your-memory.md`
+     - Resources in `your-resources.md`
 
-4. **During Development**
-   - Write tests first
-   - Complete milestone tasks
-   - Run tests at completion
-   - Present results for review
-   - Stage and document changes
-   - Follow release process
+3. **Best Practices**
+   - Let the agent use its protocols
+   - Trust the test-driven workflow
+   - Review the `your-` files to track progress
+   - Use `plx-` commands when needed
+   - Keep the workspace files organized
 
 ## 📋 Available Protocols
 
@@ -152,6 +144,8 @@ We believe AI agents perform at their best when three key elements align:
 | `plx-refine` | Analyze requirements | - Maps relationships<br>- Defines properties<br>- Plans implementation<br>- Validates completeness |
 | `plx-content` | Prepare social content | - Educational focus<br>- Technical accuracy<br>- Multi-platform structure<br>- Visual requirements |
 | `plx-collect` | Gather resources | - Processes user input<br>- Organizes resources<br>- Links relationships<br>- Maintains categories |
+| `plx-ask-smarter-agent` | Get help from smarter agent | - Details current issue<br>- Provides full context<br>- Lists all attempts<br>- Shares understanding |
+| `plx-stick-to-the-process` | Realign with task process | - Checks current state<br>- Returns to last good step<br>- Enforces order<br>- Prevents shortcuts |
 | `plx-pause` | Preserve current state | - Optimizes file sizes<br>- Records test status<br>- Creates handoff notes<br>- Enables smooth resumption |
 | `plx-resume` | Continue work | - Loads all versions<br>- Checks test state<br>- Maintains progress<br>- Ensures alignment |
 | `plx-focus` | Evaluate current task | - Reviews current milestone<br>- Questions approach<br>- Finds improvements<br>- Suggests optimizations |
@@ -218,58 +212,26 @@ We believe AI agents perform at their best when three key elements align:
 
 ## 🤖 System Prompt
 
-The framework includes a comprehensive system prompt (`system-prompt.md`) that guides agent behavior:
+The framework includes a system prompt (`_system-prompt.md`) that tells the agent:
 
-1. **Core Development Flow**
-   - Ensure proper requirements (plx-start/plx-refine)
-   - Work through milestones
-   - Only interact at milestone completion
-   - Present results and get confirmation
+1. **Core Documents**
+   - Which files to maintain (`your-` files)
+   - Which processes to follow (`the-` files)
 
-2. **Operating Guidelines**
-   - Complete full milestones
-   - Run tests before check-in
-   - Fix issues when found
-   - Document progress
-   - Follow agreed approach strictly
-   - Never change approach without approval
-   - Evaluate current task regularly
-   - Document suggested improvements
+2. **Core Workflow**
+   - Follow the task process
+   - Get feedback before changes
+   - Keep todos updated
 
-3. **Default Workflows**
-   ```
-   New Projects:
-   plx-start/plx-refine -> establish requirements -> begin development
+3. **PLX Commands**
+   - Sacred protocols in `_plx-*.md` files
+   - Each defines exact steps to take
+   - Follow them precisely when user invokes
 
-   Milestone Development:
-   work -> complete milestone -> run tests -> present results
-
-   Task Evaluation:
-   plx-focus -> evaluate approach -> suggest improvements -> await approval
-   plx-ask -> identify needs -> gather input -> improve understanding
-
-   Content Creation:
-   plx-content -> process input -> create package -> add to our-content.md
-
-   Resource Collection:
-   plx-collect -> process input -> document resources -> update your-resources.md
-
-   Completion:
-   verify all -> run tests -> present results
-   ```
-
-4. **Response Formats**
-   ```
-   Milestone Completion:
-   Milestone: [Name]
-   Completed:
-   - [Achievement 1]
-   - [Achievement 2]
-   Tests: [Status]
-   Next Milestone: [Name]
-   ```
-
-The system prompt ensures consistent operation with clear milestone boundaries.
+4. **Rules**
+   - What to always do
+   - What to never do
+   - How to handle files
 
 ## 🛠 Utility Scripts
 

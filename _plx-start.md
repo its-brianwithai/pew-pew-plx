@@ -49,10 +49,22 @@ When you receive this protocol, follow these steps to properly initiate and stru
 ## 3️⃣ Plan Creation
 
 1. Create in [your-todo-list](your-todo-list.md)
-   1. Define milestones
-   2. Break down tasks
-   3. Set initial status
-   4. Link to requirements
+   ```markdown
+   - [ ] 🎯 First Milestone
+       - [ ] Task one
+       - [ ] Task two
+       - [ ] Run milestone tests
+
+   - [ ] 🚀 Second Milestone
+       - [ ] Task one
+       - [ ] Task two
+       - [ ] Run milestone tests
+   ```
+   Remember:
+   - Each milestone ends with tests
+   - Keep tasks clear and specific
+   - Check for user-added tasks first
+   - Mark completed tasks with [x]
 
 2. Review Process Documents
    1. Check [the-refinement-process](the-refinement-process.md)
