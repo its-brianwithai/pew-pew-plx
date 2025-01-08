@@ -146,3 +146,50 @@ gpt_action: use as foundation for your requirements document
     - [ ] 
 - [ ] Marketeer
     - [ ] 
+
+<!--
+# 🎯 Strategy Guide
+> How to use this template.
+---
+Start anywhere that makes sense: user-focused (Actors), feature-focused (Activities), data-focused (Properties), or rules-focused (Behaviours). For each item you add, link it to related items using double [[square brackets]], add its properties and behaviours, and create todos for implementation.
+
+Every item in this template has a checkbox. Checking off an item means:
+- The item itself is fully implemented
+- All its children (sub-items) are fully implemented 
+- All its relationships are properly connected
+- All its required tests are passing
+
+Only check off a parent item when ALL its children are complete.
+
+# 🔗 Relationship Guide (How to connect items)
+> Every item in the requirements should be connected to other items and/or a todo. This creates a complete, traceable network of requirements. Creating a task for a parent and completing it automatically covers its children unless children have open tasks themselves.
+---
+
+## Common Relationships
+- [[Actor]]
+	- [[Activities]]
+		- [[Activity Flows]]
+			- [[Atomic Actions]]
+		- [[Behaviours]]
+- [[Component]]
+	- [[Activities]]
+		- [[Activity Flows]]
+			- [[Atomic Actions]]
+		- [[Behaviours]]
+- [[Properties]]
+	- [[Behaviours]]
+
+## How to Map
+Start with any item and ask:
+- What uses this?
+- What does this use?
+- What properties does it have?
+- What behaviours does it follow?
+- What activities is it involved in?
+
+## Validation
+After completing each section, verify:
+1. All items use [[square brackets]] to indicate relationships (if applicable)
+2. All items have relationships (if applicable)
+3. All items have todos
+-->
