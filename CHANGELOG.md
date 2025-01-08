@@ -5,7 +5,46 @@ All notable changes to this workspace will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.0] - 2024-01-17
+## [0.12.0] - 2023-12-20
+
+### Changed
+- Simplified all PLX protocol files to be more concise and task-focused
+- Removed redundant sections and complex status indicators
+- Updated protocol formats to use clear task lists with checkboxes
+- Improved protocol readability and maintainability
+
+### Removed
+- Removed complex file structure references (*.context.md, *.history.md)
+- Removed redundant verification sections
+- Removed `_plx-ask-other-agent.md` protocol
+- Removed `simple-todo-todo.md`
+
+## [0.11.0] - 2023-12-20
+
+### Added
+- Added creation date to README.md
+- Fixed historical dates in CHANGELOG.md to reflect actual project creation
+
+### Changed
+- Updated documentation to reflect correct project timeline
+- Improved version history accuracy
+
+### Added
+- New `plx-stick-to-the-process` protocol to help agent stay focused
+- New task process workflow in system prompt
+- Updated README to reflect new workflow
+
+### Changed
+- Simplified system prompt to focus on core workflow
+- Updated README's system prompt section
+- Made PLX commands clearer in documentation
+
+### Fixed
+- Clarified that PLX commands are user tools
+- Improved process adherence guidance
+- Made task workflow more explicit
+
+## [0.10.0] - 2023-12-19
 
 ### Added
 - Content collection protocol:
@@ -15,7 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Educational content focus
   - Technical documentation integration
 
-## [0.9.0] - 2024-01-17
+## [0.9.0] - 2023-12-19
 
 ### Changed
 - Updated system prompt to focus on milestone-based workflow
@@ -38,7 +77,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Improved archive structure
   - Better default paths
 
-## [0.8.0] - 2024-01-17
+## [0.8.0] - 2023-12-19
 
 ### Added
 - Framework copy script:
@@ -47,7 +86,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Default to parent directory
   - Preserve file structure
 
-## [0.7.0] - 2024-01-17
+## [0.7.0] - 2023-12-19
 
 ### Added
 - Complete archival system:
@@ -56,7 +95,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Preserve file frontmatter on reset
   - Maintain full workspace history
 
-## [0.6.0] - 2024-01-17
+## [0.6.0] - 2023-12-19
 
 ### Added
 - Initial input tracking:
@@ -65,7 +104,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Track original requirements
   - Document initial analysis
 
-## [0.5.0] - 2024-01-17
+## [0.5.0] - 2023-12-19
 
 ### Changed
 - Integrated hours logging:
@@ -74,7 +113,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Streamlined file management
   - Enhanced workspace structure
 
-## [0.4.0] - 2024-01-17
+## [0.4.0] - 2023-12-19
 
 ### Added
 - Work hours logging system:
@@ -83,7 +122,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Structured time tracking
   - Progress monitoring
 
-## [0.3.0] - 2024-01-17
+## [0.3.0] - 2023-12-19
 
 ### Changed
 - Restricted file access in protocols:
@@ -92,7 +131,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Prevented new file creation
   - Clarified file access rules
 
-## [0.2.0] - 2024-01-17
+## [0.2.0] - 2023-12-19
 
 ### Changed
 - Enhanced state management:
@@ -108,7 +147,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added pre/post milestone triggers
   - Integrated with core workflows 
 
-## [0.1.0] - 2024-01-17
+## [0.1.0] - 2023-12-19
 
 ### Added
 - Initial framework setup:

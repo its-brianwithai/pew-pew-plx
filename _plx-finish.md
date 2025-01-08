@@ -6,102 +6,26 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 🏁 Project Finalization
 
-When you receive this protocol, perform comprehensive checks and finalize the project according to best practices.
+When you receive this protocol, it means you need to perform final quality checks and documentation updates to prepare the project for completion or release.
 
-## 1️⃣ Initial Assessment
+## 1. Review Documentation
+[ ] Verify all documentation is complete and accurate.
 
-1. Project Type Check
-   1. Identify project type/language
-   2. Note documentation standards
-   3. List required checks
-   4. Ask user for preferences:
-      ```
-      Please confirm your preferences:
-      - Documentation style (e.g., JSDoc, docstring format)
-      - Linting requirements
-      - Test coverage expectations
-      - README/CHANGELOG requirements
-      - Any specific cleanup needs
-      ```
+Check that README.md contains current features and setup steps, CHANGELOG.md follows semantic versioning, and all code has proper documentation according to project standards. Update any outdated or missing documentation.
 
-2. File Structure Analysis
-   1. Check for README
-   2. Look for CHANGELOG
-   3. Identify source files
-   4. Note configuration files
+## 2. Run Quality Checks
+[ ] Execute all tests and quality verification tools.
 
-## 2️⃣ Documentation Review
+Run the full test suite, check code coverage meets requirements, run linters, and verify all best practices are followed. Document any exceptions and fix critical issues.
 
-1. README Check
-   1. Verify up-to-date features
-   2. Check installation steps
-   3. Validate examples
-   4. Update if needed
+## 3. Validate Dependencies
+[ ] Check all project dependencies and configurations.
 
-2. CHANGELOG Review
-   1. Check latest version
-   2. Verify all changes logged
-   3. Follow semantic versioning
-   4. Update if needed
+Review dependencies for updates and compatibility issues, verify configuration files are correct, and ensure build scripts work properly. Test the full deployment process if applicable.
 
-3. Code Documentation
-   1. Check class documentation
-   2. Verify method docs
-   3. Review type definitions
-   4. Add missing docs
+## 4. Complete Final Checklist
+[ ] Verify all completion requirements are met.
 
-## 3️⃣ Code Quality
+Go through the final checklist including documentation completeness, test status, code quality standards, and project state requirements. Get explicit user approval on any remaining items needing attention.
 
-1. Linting
-   1. Run linter if available
-   2. Fix reported issues
-   3. Document exceptions
-   4. Verify fixes
-
-2. Tests
-   1. Run test suite
-   2. Check coverage
-   3. Fix failing tests
-   4. Document results
-
-3. Best Practices
-   1. Check naming conventions
-   2. Verify file organization
-   3. Review code structure
-   4. Address issues
-
-## 4️⃣ Final Checks
-
-1. Dependencies
-   1. Check for updates
-   2. Verify compatibility
-   3. Update if needed
-   4. Test after updates
-
-2. Configuration
-   1. Review config files
-   2. Check environment setup
-   3. Verify build scripts
-   4. Test deployment
-
-## ✅ Completion Checklist
-
-1. Documentation
-   - [ ] README complete and current
-   - [ ] CHANGELOG updated
-   - [ ] Code documentation complete
-   - [ ] Examples up to date
-
-2. Quality
-   - [ ] All tests passing
-   - [ ] Linting issues resolved
-   - [ ] Best practices followed
-   - [ ] Coverage goals met
-
-3. Project State
-   - [ ] Dependencies current
-   - [ ] Configuration valid
-   - [ ] Build successful
-   - [ ] Deployment tested
-
-Remember: Always check with the user about specific requirements or preferences before making significant changes. Different projects may have different standards and needs. 
+Remember: Always check with the user about specific requirements or preferences before making significant changes. Different projects may have different standards and needs.

@@ -6,60 +6,30 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 🎯 Focus
 
-When you receive this protocol, pause and reevaluate your current milestone and task to ensure you're taking the best approach.
+When you receive this protocol, it means you need to pause and critically evaluate your current approach to ensure you're solving the right problem in the most effective way.
 
-## 1️⃣ Current Task Review
+## 1. Review Current Task
+[ ] Document your current milestone, task, and progress.
 
-1. What Am I Doing?
-   1. Current milestone goal
-   2. Current task objective
-   3. Progress so far
-   4. Next planned steps
+Review and document your current milestone goal, specific task objective, progress made so far, and planned next steps. This establishes a clear picture of where you are in the development process.
 
-2. Approach Analysis
-   1. Current implementation plan
-   2. Technical decisions made
-   3. Tools/methods chosen
-   4. Dependencies involved
+## 2. Analyze Approach
+[ ] Evaluate your technical decisions and implementation plan.
 
-## 2️⃣ Critical Evaluation
+Examine your current implementation approach, including technical decisions made, tools and methods chosen, and any dependencies involved. This validates your technical direction.
 
-1. Requirements Check
-   1. Does my approach fulfill the requirements?
-   2. Am I adding unnecessary complexity?
-   3. Have I missed simpler solutions?
-   4. Are my assumptions valid?
+## 3. Check Requirements
+[ ] Verify your approach meets requirements without unnecessary complexity.
 
-2. Direction Check
-   1. Is this the best path forward?
-   2. Are there better alternatives?
-   3. Will this scale/maintain well?
-   4. Am I solving the right problem?
+Review requirements fulfillment, checking for unnecessary complexity, simpler alternative solutions, and validity of core assumptions. This ensures you're taking the optimal path forward.
 
-## 3️⃣ Course Correction
+## 4. Adjust Course
+[ ] Update your plan based on evaluation findings.
 
-1. Identify Improvements
-   1. List potential optimizations
-   2. Note simpler approaches
-   3. Highlight better methods
-   4. Flag unnecessary work
-
-2. Adjust Plan
-   1. Update current task approach
-   2. Revise next steps
-   3. Document in [your-memory](your-memory.md)
-   4. Update [your-todo-list](your-todo-list.md)
-
-## ✅ Before Continuing
-
-1. Verify:
-   - [ ] Is my current approach optimal?
-   - [ ] Have I considered simpler solutions?
-   - [ ] Am I focused on the right things?
-   - [ ] Is this the best use of effort?
+Document improvements and revise your approach in [your-memory.md](your-memory.md), then update [your-todo-list.md](your-todo-list.md) with any changes to next steps. This sets you up for successful continuation.
 
 Remember:
 - Stay focused on current milestone/task
 - Prefer simpler solutions
 - Question your assumptions
-- Keep the end goal in mind 
+- Keep the end goal in mind

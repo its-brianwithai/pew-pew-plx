@@ -6,61 +6,30 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 🔄 Reset Workspace
 
-When you receive this protocol, archive current state and reset to original files.
+When you receive this protocol, it means you need to archive the current workspace state and reset to original framework files while preserving history.
 
-## 1️⃣ Archive Current State
+## 1. Archive Current State
+[ ] Run the archive script to preserve current workspace.
 
-1. Follow plx-archive protocol
-   1. Run archive script:
-      ```bash
-      ./archive.sh
-      ```
-      - Default source: `../` (one folder up)
-      - Default target: `turbo-archive` in current directory
-      - Review files before proceeding
-      - Confirm archive operation
+Execute `./archive.sh` to archive files from `../` to `turbo-archive`, reviewing files and confirming the operation to ensure all current work is safely preserved.
 
-2. Verify Archive
-   - Check archived files
-   - Verify file structure
-   - Ensure completeness
+## 2. Clean Workspace
+[ ] Remove working files while preserving core documentation.
 
-## 2️⃣ Reset Process
+Remove all your-*.md and our-*.md files from the workspace, keeping only CHANGELOG.md and LICENSE files to maintain project history and compliance.
 
-1. Clean Workspace
-   1. Remove current your-*.md files
-   2. Remove current our-*.md files
-   3. Keep CHANGELOG.md
-   4. Keep LICENSE if exists
+## 3. Restore Framework
+[ ] Copy fresh framework files to workspace.
 
-2. Restore Core Files
-   1. Run copy framework script:
-      ```bash
-      ./copy-framework.sh
-      ```
-      - Default target: `../` (one folder up)
-      - Review files to be copied
-      - Confirm copy operation
-   2. Initialize new our-hours.md
-   3. Verify file structure
-   4. Check file integrity
+Execute `./copy-framework.sh` to restore core framework files to `../`, then initialize a new our-hours.md file and verify the integrity of all restored files.
 
-## ✅ Completion Check
+## 4. Verify Reset
+[ ] Confirm workspace is properly reset and ready for use.
 
-1. Archive Verified
-   - [ ] Current state archived
-   - [ ] Files preserved
-   - [ ] Structure maintained
-   - [ ] Links intact
+Check that the archive is complete, original files are restored correctly, new logs are initialized, and the workspace structure matches framework requirements.
 
-2. Reset Complete
-   - [ ] Original files restored
-   - [ ] New hours log created
-   - [ ] Structure verified
-   - [ ] Ready for use
-
-Remember: 
+Remember:
 - Always archive before reset
 - Preserve work history
 - Maintain file structure
-- Initialize fresh logs 
+- Initialize fresh logs

@@ -1,60 +1,30 @@
 ---
 document_type: protocol
 goal: archive workspace files to preserve state
-gpt_action: follow these steps when tagged with this protocol
+gpt_action: follow these steps to create a backup of the workspace
 ---
 
 # 📦 Archive Workspace
 
-When you receive this protocol, archive the current workspace files to preserve state.
+When you receive this protocol, it means you need to create a complete backup of the current workspace files to preserve their state and relationships.
 
-## 1️⃣ Preparation
+## 1. Prepare Archive Location
+[ ] Identify source and target directories for the archive.
 
-1. Default Source
-   - Parent directory (`../`)
-   - Contains active workspace files
-   - Includes all framework files
-   - Preserves file structure
+The source is typically the parent directory (`../`) containing workspace files, while the target is a new `turbo-archive` directory in the current location. The target will be created if it doesn't exist.
 
-2. Default Target
-   - `turbo-archive` in current directory
-   - Creates if doesn't exist
-   - Maintains file organization
-   - Preserves relationships
+## 2. Run Archive Process
+[ ] Execute the archive script to copy all workspace files.
 
-## 2️⃣ Archive Process
+Run `./archive.sh` to start the archiving process. The script will show you the files to be archived and ask for confirmation before proceeding with the copy operation.
 
-1. Run Archive Script
-   ```bash
-   ./archive.sh
-   ```
-   - Uses parent directory as source
-   - Creates archive in current directory
-   - Shows files before archiving
-   - Asks for confirmation
+## 3. Verify Archive Contents
+[ ] Validate that all files were archived correctly.
 
-2. Verify Archive
-   - Check archived files
-   - Verify file structure
-   - Ensure completeness
-   - Validate relationships
-
-## ✅ Completion Check
-
-1. Archive Created
-   - [ ] Source files identified
-   - [ ] Target directory exists
-   - [ ] Files copied correctly
-   - [ ] Structure preserved
-
-2. Verification
-   - [ ] All files present
-   - [ ] Relationships maintained
-   - [ ] No corruption
-   - [ ] Archive accessible
+Check that all files are present in the archive, the directory structure is preserved, and no files show signs of corruption. This ensures you have a reliable backup for future reference.
 
 Remember:
 - Archive preserves complete workspace state
 - Includes all framework and project files
 - Maintains file relationships
-- Creates clean backup for reference 
+- Creates clean backup for reference

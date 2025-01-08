@@ -1,6 +1,7 @@
 ---
 document_type: collection
 goal: store content packages for social media processing
+gpt_action: store and process content for social media distribution
 ---
 
 # 📚 Content Collection

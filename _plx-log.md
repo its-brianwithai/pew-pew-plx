@@ -6,60 +6,24 @@ gpt_action: follow these steps when tagged with this protocol
 
 # ⏱️ Log Work Hours
 
-When you receive this protocol, update the our-hours.md file with your work activity.
+When you receive this protocol, it means you need to record your work activities and time spent in a structured format in our-hours.md.
 
-## 1️⃣ Create Entry
+## 1. Create Work Entry
+[ ] Create a new timestamped entry in [our-hours.md](our-hours.md).
 
-1. Open/Create [our-hours.md](our-hours.md)
-   ```markdown
-   [YYYY-MM-DD HH:MM] Work Session:
-   - Duration: [time spent]
-   - Tasks Completed:
-     1. [task description]
-     2. [task description]
-   - Files Modified:
-     - [file name]: [changes made]
-   - Progress:
-     - Milestone: [current milestone]
-     - Status: [% complete]
-   ```
+Add an entry using the format [YYYY-MM-DD HH:MM] with duration, completed tasks, modified files, and current milestone progress. This establishes a clear record of work completed.
 
-## 2️⃣ Record Details
+## 2. Document Details
+[ ] Record all work details including time, tasks, and files.
 
-1. Document Time
-   1. Add timestamp (24h format)
-   2. Calculate duration
-   3. Note breaks if any
-   4. Mark session type
+Document the session duration, list all completed tasks, note modified files with their changes, and update the milestone progress percentage. This ensures comprehensive activity tracking.
 
-2. List Accomplishments
-   1. Tasks completed
-   2. Files modified
-   3. Tests written/passed
-   4. Milestones reached
+## 3. Verify Entry
+[ ] Review the entry for completeness and accuracy.
 
-3. Track Progress
-   1. Current milestone
-   2. Completion percentage
-   3. Blockers resolved
-   4. Next steps planned
+Check that the timestamp, duration, tasks, files, and progress are all properly documented and formatted. This final verification ensures the work log remains consistent and reliable.
 
-## ✅ Completion Check
-
-1. Entry Complete
-   - [ ] Timestamp added
-   - [ ] Duration calculated
-   - [ ] Tasks listed
-   - [ ] Progress noted
-
-2. Details Verified
-   - [ ] All tasks included
-   - [ ] Files documented
-   - [ ] Progress accurate
-   - [ ] Format correct
-
-Remember: 
-- Always log hours immediately after work
+Remember:
 - Be specific about tasks completed
 - Include all modified files
-- Keep entries consistent 
+- Keep entries consistent

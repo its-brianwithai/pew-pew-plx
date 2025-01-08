@@ -6,62 +6,26 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 🔄 Optimize Content
 
-When you receive this protocol, help optimize file sizes while ensuring critical context is preserved.
+When you receive this protocol, it means you need to optimize file sizes by splitting content while preserving critical context and relationships.
 
-## 1️⃣ Analysis Phase
+## 1. Analyze Content
+[ ] Review current file content and identify optimization opportunities.
 
-1. Evaluate Current State
-   1. Check file sizes and content density
-   2. Identify redundant information
-   3. Map critical context and relationships
-   4. Note key decision points
+Examine file sizes, content density, redundant information, and critical context that must be preserved. This establishes what content can be safely reorganized or moved to supporting files.
 
-2. Optimization Targets
-   1. Long conversation summaries
-   2. Completed tasks and milestones
-   3. Detailed implementation notes
-   4. Historical context
+## 2. Create Structure
+[ ] Set up main file and supporting context files.
 
-## 2️⃣ Optimization Strategy
+Create a main file for current state and active items, a context file for supporting information, and a history file for past decisions. This provides an organized structure for content distribution.
 
-1. Create Versions
-   1. Main file (latest + critical context)
-   2. Context file (supporting information)
-   3. History file (past decisions)
+## 3. Distribute Content
+[ ] Move content to appropriate files while maintaining relationships.
 
-2. Structure Format
-   ```markdown
-   file.md           # Main file with current state
-   file.context.md   # Supporting context and relationships
-   file.history.md   # Historical decisions and changes
-   ```
+Carefully split content between main and supporting files, ensuring critical context is preserved through clear links and references. Keep the main file focused while making all information easily accessible.
 
-## 3️⃣ Content Management
+## 4. Verify Organization
+[ ] Confirm all content is properly distributed and linked.
 
-1. Optimize Main File
-   1. Keep latest state
-   2. Maintain active items
-   3. Include critical context
-   4. Link to supporting files
+Check that content is appropriately split between files, context is preserved, links are maintained, and navigation remains clear. This ensures the optimization maintains usability while reducing file sizes.
 
-2. Preserve Context
-   1. Map relationships
-   2. Track dependencies
-   3. Link decision points
-   4. Reference history
-
-## ✅ Verification
-
-1. Before Completing
-   - [ ] Content distributed
-   - [ ] Context preserved
-   - [ ] Links maintained
-   - [ ] Navigation clear
-
-2. File Health
-   - [ ] Main file focused
-   - [ ] Context accessible
-   - [ ] History traceable
-   - [ ] Relationships clear
-
-Remember: Focus on making the current state clear while ensuring all context is easily accessible through well-structured supporting files. 
+Remember: Focus on making the current state clear while ensuring all context is easily accessible through well-structured supporting files.

@@ -6,70 +6,26 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 📝 Document Topic
 
-When you receive this protocol, create clear and structured documentation for the specified topic.
+When you receive this protocol, it means you need to create clear and structured documentation that effectively explains a specific topic to its target audience.
 
-## 📑 Table of Contents
-1. [Topic Analysis](#1️⃣-topic-analysis)
-2. [Documentation Structure](#2️⃣-documentation-structure)
-3. [Documentation Creation](#3️⃣-documentation-creation)
-4. [Quality Check](#-quality-check)
+## 1. Analyze Topic
+[ ] Review the topic and identify key elements that must be documented.
 
-## 1️⃣ Topic Analysis
+Examine core concepts, components, relationships and scope to determine what should be included or excluded. Consider the target audience and required level of detail to ensure appropriate coverage.
 
-1. Identify Key Elements
-   1. Core concepts
-   2. Main components
-   3. Important relationships
-   4. Key considerations
+## 2. Create Structure
+[ ] Design a clear documentation outline with logical sections.
 
-2. Determine Scope
-   1. What to include
-   2. What to exclude
-   3. Level of detail needed
-   4. Target audience
+Develop a structured outline with a table of contents, main sections, and appropriate formatting including headings, lists, code examples and visual aids where helpful. This provides the framework for organized content.
 
-## 2️⃣ Documentation Structure
+## 3. Write Content
+[ ] Document the topic with clear explanations and examples.
 
-1. Create Outline
-   1. Main sections
-   2. Logical flow
-   3. Key examples
-   4. Reference points
+Create the content following the outline, including step-by-step guides, practical examples, prerequisites, best practices and common pitfalls. Focus on making the information clear and actionable.
 
-2. Format Content
-   1. Clear headings
-   2. Numbered lists
-   3. Code examples (if relevant)
-   4. Visual aids (if helpful)
+## 4. Verify Quality
+[ ] Review the documentation for completeness and clarity.
 
-## 3️⃣ Documentation Creation
+Check that all key concepts are covered, the structure is logical, examples are included, formatting is consistent, and navigation elements like the table of contents work properly. This ensures the documentation is ready for use.
 
-1. Write Content
-   1. Clear explanations
-   2. Step-by-step guides
-   3. Practical examples
-   4. Common scenarios
-
-2. Add Context
-   1. Prerequisites
-   2. Related topics
-   3. Best practices
-   4. Common pitfalls
-
-## ✅ Quality Check
-
-1. Verify Content
-   - [ ] Table of contents included
-   - [ ] All key concepts covered
-   - [ ] Clear and concise
-   - [ ] Well-structured
-   - [ ] Examples included
-
-2. Review Format
-   - [ ] Consistent style
-   - [ ] Proper headings
-   - [ ] Numbered lists
-   - [ ] Clean layout
-   - [ ] ToC links work
-
-Remember: Focus on making the documentation clear, practical, and easy to understand. Always start with a table of contents to help readers navigate the document. 
+Remember: Focus on making the documentation clear, practical, and easy to understand. Always start with a table of contents to help readers navigate the document.

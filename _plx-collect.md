@@ -6,66 +6,30 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 📚 Collect Resources
 
-When you receive this protocol, gather and organize resources based on user input, maintaining clear categorization and relationships.
+When you receive this protocol, it means you need to gather and organize resources provided by the user while maintaining clear categorization and relationships.
 
-## 1️⃣ Initial Analysis
+## 1. Process User Input
+[ ] Extract and categorize all resource mentions from user input.
 
-1. Process User Input
-   1. Extract resource mentions
-   2. Identify resource types
-   3. Note relationships
-   4. List dependencies
+Review the user's input carefully to identify resources, their types, relationships, and any dependencies. This creates a clear map of what needs to be collected and organized.
 
-2. Check Existing Resources
-   1. Review [your-resources](your-resources.md)
-   2. Identify duplicates
-   3. Note updates needed
-   4. List missing items
+## 2. Check Existing Collection
+[ ] Review [your-resources.md](your-resources.md) to identify duplicates and needed updates.
 
-## 2️⃣ Resource Collection
+Compare new resources against existing ones to avoid duplication, identify what needs updating, and determine what's missing. This ensures the resource collection stays clean and current.
 
-1. Document New Resources
-   1. Follow template in [your-resources](your-resources.md)
-   2. Categorize properly
-   3. Add clear descriptions
-   4. Link to requirements
+## 3. Document Resources
+[ ] Add new resources and update existing ones following the template.
 
-2. Update Existing Resources
-   1. Refresh outdated information
-   2. Update relationships
-   3. Add new references
-   4. Remove obsolete items
+Add new resources with proper categorization and clear descriptions, while updating any existing resources with refreshed information and relationships. Remove any obsolete items to maintain collection quality.
 
-## 3️⃣ Integration
+## 4. Integrate Changes
+[ ] Update related files with new resource information.
 
-1. Link Resources
-   1. Connect to requirements
-   2. Link to todo items
-   3. Reference in memory
-   4. Note in documentation
-
-2. Update Related Files
-   1. Add to [your-memory](your-memory.md)
-   2. Update [your-todo-list](your-todo-list.md)
-   3. Link in [your-requirements](your-requirements.md)
-   4. Document relationships
-
-## ✅ Verification
-
-1. Check Resources
-   - [ ] All resources documented
-   - [ ] Properly categorized
-   - [ ] Links established
-   - [ ] Descriptions clear
-
-2. Verify Integration
-   - [ ] Memory updated
-   - [ ] Todos linked
-   - [ ] Requirements connected
-   - [ ] Documentation complete
+Connect resources to requirements in [your-requirements.md](your-requirements.md), add relevant tasks to [your-todo-list.md](your-todo-list.md), and document decisions in [your-memory.md](your-memory.md). This ensures all changes are properly tracked and linked.
 
 Remember:
 - Keep resources organized by category
 - Maintain clear relationships
 - Remove outdated resources
-- Document all changes in memory 
+- Document all changes in memory

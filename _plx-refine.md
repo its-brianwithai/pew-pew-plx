@@ -1,86 +1,35 @@
 ---
 document_type: protocol
-goal: refine requirements based on user input following the refinement process
+goal: refine requirements based on user input
 gpt_action: follow these steps when tagged with this protocol
 ---
 
 # 🔄 Refine Requirements
 
-When you receive this protocol, analyze user input and refine requirements following [the-refinement-process](the-refinement-process.md).
+When you receive this protocol, it means you need to analyze user input and refine requirements by mapping relationships, defining properties, and planning implementation.
 
-## 1️⃣ Input Analysis
+## 1. Analyze Input
+[ ] Extract key concepts and identify the primary focus area.
 
-1. Process User Input
-   1. Extract key concepts
-   2. Identify starting point:
-      - User-focused (Actors)
-      - Feature-focused (Activities)
-      - Data-focused (Properties)
-      - Rules-focused (Behaviors)
-   3. List initial relationships
-   4. Note constraints
+Review user input to determine if it's user-focused (Actors), feature-focused (Activities), data-focused (Properties), or rules-focused (Behaviors). Map initial relationships and constraints while checking [your-requirements.md](your-requirements.md) for affected items.
 
-2. Review Current State
-   1. Check [your-requirements](your-requirements.md)
-   2. Identify affected items
-   3. Note existing relationships
-   4. List impacted areas
+## 2. Map Relationships
+[ ] Document all relationships using the relationship framework.
 
-## 2️⃣ Refinement Process
+Follow the relationship guide (Actor → performs → Activity, Component → supports → Activity, etc.) using [[square brackets]] for links. Define properties, constraints, validations and behaviors for each component.
 
-1. Map Relationships
-   1. Follow relationship guide:
-      - Actor → performs → Activity
-      - Component → supports → Activity
-      - Activity → uses → Component
-      - Activity → has → Properties
-      - Activity → follows → Behaviour
-   2. Use [[square brackets]] for links
-   3. Document connections
-   4. Verify completeness
+## 3. Plan Implementation
+[ ] Create linked todo items and document context.
 
-2. Define Properties
-   1. List characteristics
-   2. Set constraints
-   3. Define validations
-   4. Document behaviors
+Add tasks to [your-todo-list.md](your-todo-list.md) with requirement links and dependencies. Update [your-memory.md](your-memory.md) with key decisions, assumptions and open questions.
 
-## 3️⃣ Implementation Planning
+## 4. Validate Changes
+[ ] Verify all requirements are properly defined and linked.
 
-1. Create Todo Items
-   1. Add to [your-todo-list](your-todo-list.md)
-   2. Link to requirements
-   3. Set dependencies
-   4. Define milestones
-
-2. Document Context
-   1. Update [your-memory](your-memory.md)
-   2. Note key decisions
-   3. Record assumptions
-   4. List open questions
-
-## ✅ Validation
-
-1. Check Requirements
-   - [ ] All items properly linked
-   - [ ] Properties defined
-   - [ ] Behaviors documented
-   - [ ] Relationships mapped
-
-2. Verify Process
-   - [ ] Starting point clear
-   - [ ] Sub-items complete
-   - [ ] Todos created
-   - [ ] Tests identified
-
-3. Review Completeness
-   - [ ] No orphaned items
-   - [ ] All relationships defined
-   - [ ] Implementation path clear
-   - [ ] Documentation updated
+Check that all items are linked, properties are defined, behaviors are documented, relationships are mapped, and implementation todos are created. Ensure there are no orphaned items and all documentation is current.
 
 Remember:
 - Only check off parent items when ALL children are complete
 - Always use [[square brackets]] for relationships
 - Create implementation todos for each item
-- Document all decisions and assumptions 
+- Document all decisions and assumptions

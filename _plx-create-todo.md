@@ -1,52 +1,29 @@
 ---
 document_type: protocol
-goal: create todos following test-driven workflow
+goal: create structured todo lists with milestones and tests
 gpt_action: follow these steps when tagged with this protocol
 ---
 
 # ✅ Create Todo
 
-When starting a new project or task, create a structured todo list in [your-todo-list](your-todo-list.md). Break down work into milestones, and milestones into tasks. Always end milestones with tests.
+When you receive this protocol, it means you need to create and organize a structured todo list in [your-todo-list.md](your-todo-list.md) that breaks work into testable milestones and tasks.
 
-## 1️⃣ Check User Tasks in [your-todo-list](your-todo-list.md)
-- Always handle user-added tasks immediately
-- Clear the user tasks section before continuing
+## 1. Process User Tasks
+[ ] Review and handle any existing user tasks in the todo list.
 
-## 2️⃣ Structure Your Todos
+Check [your-todo-list.md](your-todo-list.md) for any user-added tasks, handle them immediately, and clear the user tasks section before continuing with new task creation.
 
-1. Break Down Into Milestones
-   ```markdown
-   - [ ] 🎯 Setup Project
-       - [ ] Create basic structure
-       - [ ] Add dependencies
-       - [ ] Run setup tests
+## 2. Create Milestone Structure 
+[ ] Break down work into clear milestones with specific tasks.
 
-   - [ ] 🚀 Core Features
-       - [ ] Implement X
-       - [ ] Implement Y
-       - [ ] Run feature tests
-   ```
+Create milestone sections (like "🎯 Setup" or "🚀 Features") and add focused tasks under each one. Every milestone must end with a test task to verify completion.
 
-2. Add Tasks Under Milestones
-   ```markdown
-   - [ ] 🎯 Milestone Name
-       - [ ] Small, specific task
-       - [ ] Another clear task
-       - [ ] Run milestone tests
-   ```
+## 3. Document Blocked Items
+[ ] Track any blocked tasks with clear blocking reasons.
 
-3. Track Blocked Tasks
-   ```markdown
-   - [ ] ⏸️ Blocked
-       - [ ] Task (reason for block)
-   ```
+Create a "⏸️ Blocked" section and list blocked tasks with their blocking reasons in parentheses. This ensures blockers are visible and can be addressed systematically.
 
-## 3️⃣ Follow Test-Driven Workflow
-1. Run tests
-2. Find first fail
-3. Research solution
-4. Present plan
-5. Get feedback
-6. Update todo
-7. Fix
-8. Repeat 
+## 4. Implement Test Workflow
+[ ] Follow the test-driven development cycle for each task.
+
+Execute tasks using test-driven development: run tests, find first failure, research solution, present plan, get feedback, update todo list, implement fix, and repeat until all tests pass.

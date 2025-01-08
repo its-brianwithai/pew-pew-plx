@@ -6,59 +6,19 @@ gpt_action: follow these steps when tagged with this protocol
 
 # ⏭️ Next Task
 
-When you receive this protocol, follow [the-task-process](the-task-process.md):
-1. Research solution
-2. Present plan
-3. Wait for feedback
-4. Implement
-5. Run tests
-6. Find first fail
-7. Research solution
-8. Present fix
-9. Wait for feedback
-10. Fix
-11. Update todo
-12. Repeat
+When you receive this protocol, it means you need to find and complete the next highest priority task in your todo list.
 
-## 1️⃣ Progress Check
+## 1. Find Priority Task
+[ ] Check todo list for the next highest priority task.
 
-1. Review [your-todo-list](your-todo-list.md)
-   1. Look for user-added tasks first (these take priority)
-   2. Find next task in sequence
-   3. Note any blockers
+Review [your-todo-list.md](your-todo-list.md) for any user-added tasks as these take priority. If none exist, take the first unchecked task from your current milestone to ensure you're working on the most important item.
 
-2. Research Solution
-   1. Review task requirements
-   2. Research approaches
-   3. Prepare plan
-   4. Wait for feedback
+## 2. Execute Task Process
+[ ] Complete the task following the standard process.
 
-## 2️⃣ Task Execution
+Follow the steps in [the-task-process.md](the-task-process.md) exactly - research thoroughly, present your plan, wait for approval, implement with tests, and verify everything works as expected.
 
-1. After Feedback
-   1. Follow approved plan
-   2. Implement solution
-   3. Run tests
-   4. Find first fail
+## 3. Record Progress
+[ ] Update the todo list with completed task.
 
-2. Fix Issues
-   1. Research solution
-   2. Present fix plan
-   3. Wait for feedback
-   4. Apply fix
-
-## ✅ Ready Check
-
-1. Before Starting
-   - [ ] Next task clear
-   - [ ] Solution researched
-   - [ ] Plan presented
-   - [ ] Feedback received
-
-2. After Task
-   - [ ] Tests run
-   - [ ] Issues fixed
-   - [ ] Todo updated
-   - [ ] Ready to repeat
-
-Remember: Always get feedback before making changes. 
+Mark the task as complete in [your-todo-list.md](your-todo-list.md) to maintain an accurate record of progress. This keeps everyone informed of the current project state.

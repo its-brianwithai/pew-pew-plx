@@ -6,93 +6,31 @@ gpt_action: follow these steps when tagged with this protocol
 
 # ⚙️ Configure Framework
 
-When you receive this protocol, gather user requirements for system-wide behavior changes and apply them consistently across all framework files.
+When you receive this protocol, it means you need to gather and apply system-wide configuration changes that will affect the entire framework's behavior.
 
-## 1️⃣ Gather Requirements
+## 1. Gather Requirements
+[ ] Ask user what configuration changes they want to make.
 
-1. Request Configuration Intent
-   1. "What behavior/configuration would you like to change?"
-   2. Examples to suggest:
-      - Test running behavior
-      - Communication style
-      - Documentation patterns
-      - Development workflow
-      - File organization
-      - Version control practices
+Discuss with user their desired changes to framework behavior, such as test running, communication style, documentation patterns, development workflow, file organization, or version control practices. Get specific details about their motivation and expectations.
 
-2. Clarify Scope
-   1. Get specific details
-   2. Understand motivation
-   3. Confirm expectations
-   4. Note constraints
+## 2. Analyze Impact
+[ ] Review all framework files to map required changes.
 
-## 2️⃣ Analyze Impact
+Scan through all plx-*.md protocols, your-*.md personal files, our-*.md shared files, the-*.md processes, and system-prompt.md to identify affected sections, dependencies, and relationships. Create a clear plan for implementing changes consistently.
 
-1. Scan Repository
-   1. Find affected files:
-      - plx-*.md (protocols)
-      - your-*.md (personal files)
-      - our-*.md (shared files)
-      - the-*.md (processes)
-      - system-prompt.md
-   2. Note relevant sections
-   3. Identify dependencies
-   4. Map relationships
+## 3. Present Plan
+[ ] Share detailed analysis and get approval before making changes.
 
-2. Plan Changes
-   1. List required modifications
-   2. Note cascading effects
-   3. Identify potential conflicts
-   4. Prepare update strategy
+Show the user exactly what files and behaviors will be affected, what specific modifications are needed, and what implications the changes will have. Wait for explicit approval before proceeding with any updates.
 
-## 3️⃣ Present Plan
+## 4. Apply Changes
+[ ] Update all affected files consistently.
 
-1. Show Analysis
-   1. "Here's what will change:"
-      - Affected files
-      - Specific modifications
-      - Impact on behavior
-      - Required updates
-
-2. Get Confirmation
-   1. Present detailed plan
-   2. Note critical changes
-   3. Highlight implications
-   4. Request approval
-
-## 4️⃣ Apply Changes
-
-1. Update Files
-   1. Modify system prompt
-   2. Update protocols
-   3. Adjust processes
-   4. Revise documentation
-
-2. Ensure Consistency
-   1. Cross-reference changes
-   2. Verify alignment
-   3. Check dependencies
-   4. Validate updates
-
-3. Document Configuration
-   1. Record in [your-memory](your-memory.md)
-   2. Note affected files
-   3. Document rationale
-   4. Track configuration state
-
-## ✅ Configuration Checklist
-
-1. Verify:
-   - [ ] User intent clear
-   - [ ] Impact analyzed
-   - [ ] Changes approved
-   - [ ] Updates consistent
-   - [ ] Configuration documented
-   - [ ] Framework aligned
+Modify the system prompt, protocols, processes and documentation while maintaining cross-file alignment. Document all changes and rationale in [your-memory.md](your-memory.md) to maintain a clear record of the framework's configuration state.
 
 Remember:
 - Get clear understanding before changes
-- Ensure system-wide consistency
+- Ensure system-wide consistency 
 - Document in your-memory
 - Verify cross-file alignment
-- Keep framework coherent 
+- Keep framework coherent

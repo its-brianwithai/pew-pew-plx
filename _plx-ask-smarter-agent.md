@@ -6,66 +6,24 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 🤝 Ask Smarter Agent
 
-When you receive this protocol, take a step back and create a detailed request for a smarter agent who can help solve your problem. Give them everything they need to understand the issue.
+When you receive this protocol, it means you need to create a detailed request for a more capable agent to help solve a complex problem.
 
-## 1️⃣ Current Issue
+## 1. Document Current Issue
+[ ] Write a clear problem statement with all relevant details.
 
-1. Problem Statement
-   ```markdown
-   # Issue (For Smarter Agent)
-   - What: [exactly what you're trying to achieve]
-   - Problem: [where you're stuck, be specific]
-   - Current: [everything about current state]
-   - Needed: [clear desired outcome]
-   ```
+Explain the exact issue you're facing, including what you're trying to achieve, where you're stuck, your current state, and the desired outcome. This gives the agent the full picture of what needs to be solved.
 
-2. Context
-   ```markdown
-   # Full Context
-   - Files: [all relevant files]
-   - Code: [all important snippets]
-   - Setup: [complete environment details]
-   - Related: [everything that might matter]
-   ```
+## 2. Provide Complete Context
+[ ] Gather and share all context that could help solve the problem.
 
-## 2️⃣ Previous Work
+Include all relevant files, code snippets, environment details, and related information that might impact the solution. The more context you provide, the better equipped the agent will be to help.
 
-1. Attempts Made
-   ```markdown
-   # Everything Tried
-   1. Approach: [detail everything you tried]
-      - Did: [all steps taken]
-      - Got: [all results/errors]
-      - Issue: [why you think it failed]
-   ```
+## 3. Share Previous Work
+[ ] Document all previous attempts and research.
 
-2. Research Done
-   ```markdown
-   # All Research
-   - Looked at: [all resources checked]
-   - Found: [everything relevant]
-   - Gaps: [what you don't understand]
-   - Unclear: [what confuses you]
-   ```
+Detail everything you've already tried, including approaches taken, results received, and your understanding of why they didn't work. Also include any research done, resources checked, and areas where you're unclear.
 
-## 3️⃣ Specific Need
+## 4. Specify Your Request
+[ ] Clearly state exactly what help you need from the agent.
 
-1. Request Focus
-   ```markdown
-   # Need From Smarter Agent
-   - Help with: [exactly where you're stuck]
-   - Must: [critical requirements]
-   - Cannot: [hard constraints]
-   - Confused about: [what you don't get]
-   - Think might help: [your thoughts/ideas]
-   ```
-
-## ✅ Ready Check
-
-1. Request Quality
-   - [ ] Explained everything you know
-   - [ ] Included all context
-   - [ ] Listed all attempts
-   - [ ] Shared your thoughts
-
-Remember: The smarter agent can help better if you share everything you know and think. 
+Outline the specific areas where you need help, any critical requirements or constraints, points of confusion, and your own thoughts or ideas about potential solutions. Be explicit about what kind of assistance would be most valuable.

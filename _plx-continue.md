@@ -6,68 +6,26 @@ gpt_action: follow these steps when tagged with this protocol
 
 # ▶️ Continue Plan
 
-When you receive this protocol, realign with your original plan and continue with the established todo list.
+When you receive this protocol, it means you need to realign with your original plan and continue executing the established todo list.
 
-## 1️⃣ Plan Review
+## 1. Review Original Plan
+[ ] Review your todo list and requirements to confirm current position.
 
-1. Check Original Plan
-   1. Review [your-todo-list](your-todo-list.md)
-      - Current milestone
-      - Active tasks
-      - Original priorities
-      - Planned sequence
-   2. Review [your-requirements](your-requirements.md)
-      - Original scope
-      - Core objectives
-      - Success criteria
-      - Expected outcomes
+Examine [your-todo-list.md](your-todo-list.md) for active tasks and priorities, then check [your-requirements.md](your-requirements.md) to verify alignment with core objectives and success criteria. This establishes a clear picture of progress and next steps.
 
-2. Progress Assessment
-   1. What's completed
-   2. What's in progress
-   3. What's next in sequence
-   4. Any blocked items
+## 2. Verify Context
+[ ] Check memory file and validate alignment with original plan.
 
-## 2️⃣ Context Verification
+Review [your-memory.md](your-memory.md) to understand latest decisions and current state, comparing against the original plan to identify any drift or needed adjustments. This ensures you stay on track with intended direction.
 
-1. Check Memory Context
-   1. Review [your-memory](your-memory.md)
-   2. Verify latest decisions
-   3. Note any deviations
-   4. Understand current state
+## 3. Confirm Next Steps
+[ ] Identify and validate the next task in sequence.
 
-2. Validate Alignment
-   1. Compare current state to plan
-   2. Identify any drift
-   3. Note necessary adjustments
-   4. Confirm priorities
+Check that all prerequisites and dependencies are met for the next planned task, reviewing [the-development-process.md](the-development-process.md) to confirm proper methodology. This prepares you for successful continuation.
 
-## 3️⃣ Continuation
+## 4. Execute Ready Check
+[ ] Verify all requirements are met before proceeding.
 
-1. Next Steps
-   1. Identify next task in sequence
-   2. Verify prerequisites met
-   3. Check dependencies
-   4. Confirm approach
+Confirm that requirements are aligned, processes are clear, necessary resources are available, and the path forward is unblocked. This final check ensures you're fully prepared to continue execution.
 
-2. Process Check
-   1. Review [the-development-process](the-development-process.md)
-   2. Verify process adherence
-   3. Note any adjustments
-   4. Confirm methodology
-
-## 4️⃣ Execution
-
-1. Before Proceeding
-   - [ ] Original plan clear
-   - [ ] Current position identified
-   - [ ] Next steps confirmed
-   - [ ] Dependencies checked
-
-2. Ready Check
-   - [ ] Requirements aligned
-   - [ ] Process confirmed
-   - [ ] Resources available
-   - [ ] Path clear
-
-Remember: Stay focused on the original plan. If significant changes are needed, use `plx-focus` instead to reevaluate. 
+Remember: Stay focused on the original plan. If significant changes are needed, use `plx-focus` instead to reevaluate.

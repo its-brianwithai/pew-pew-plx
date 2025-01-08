@@ -6,89 +6,30 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 💾 Commit Changes
 
-When you receive this protocol, prepare and execute a git commit with proper documentation and push the changes.
+When you receive this protocol, it means you need to prepare and execute a git commit with proper documentation and push the changes to the remote repository.
 
-## 1️⃣ Review Changes
+## 1. Review Changes
+[ ] Review all modified files and their changes in detail.
 
-1. Check Status
-   1. Run git status to check changes
-   2. Show detailed diff:
-      ```bash
-      git diff --cached | cat
-      ```
-   3. Note modified files
-   4. List significant changes
+Run git status and examine diffs to verify all changes are intentional, no unrelated or sensitive files are included, and all modifications align with the intended updates. This creates a clear picture of what will be committed.
 
-2. Verify Changes
-   1. All changes intended
-   2. No unrelated files
-   3. No sensitive data
-   4. No temporary files
+## 2. Prepare Commit Message
+[ ] Create a properly formatted commit message following the standard template.
 
-## 2️⃣ Prepare Commit
+Write a commit message using the format "type(scope): summary" with detailed bullet points below. Types include feat, fix, docs, style, refactor, test, and chore. Keep the summary clear and concise while capturing the key changes.
 
-1. Create Message
-   1. Follow format:
-      ```
-      type(scope): summary
+## 3. Stage and Commit
+[ ] Stage all files and create the commit with the prepared message.
 
-      - Detail 1
-      - Detail 2
-      - Detail 3
+Add all intended files using git add, verify the staged changes with git status, and create the commit with your prepared message. This ensures all changes are properly documented in the repository.
 
-      Related: #issue (if applicable)
-      ```
-   2. Types:
-      - feat: new feature
-      - fix: bug fix
-      - docs: documentation
-      - style: formatting
-      - refactor: code restructure
-      - test: test addition/modification
-      - chore: maintenance
-   3. Keep summary clear and concise
-   4. List important details
+## 4. Push Changes
+[ ] Push the committed changes to the remote repository.
 
-2. Stage Changes
-   1. Add files:
-      ```bash
-      git add .
-      ```
-   2. Verify staged files
-   3. Check status again
-   4. Confirm completeness
-
-## 3️⃣ Execute Changes
-
-1. Commit
-   1. Run commit:
-      ```bash
-      git commit -m "message"
-      ```
-   2. Verify commit success
-   3. Check commit log
-   4. Confirm changes recorded
-
-2. Push
-   1. Push to remote:
-      ```bash
-      git push
-      ```
-   2. Verify push success
-   3. Check remote state
-   4. Confirm synchronization
-
-## ✅ Commit Checklist
-
-1. Verify:
-   - [ ] Changes reviewed
-   - [ ] Message clear and formatted
-   - [ ] All files staged
-   - [ ] Commit successful
-   - [ ] Push completed
+Execute git push to synchronize your changes with the remote repository, then verify the push was successful and the remote state matches your local changes. This completes the commit process.
 
 Remember:
 - Always review changes before committing
 - Use clear, descriptive commit messages
 - Follow commit message format
-- Verify push success 
+- Verify push success

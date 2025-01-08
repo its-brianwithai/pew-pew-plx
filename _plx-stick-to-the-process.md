@@ -6,25 +6,21 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 🎯 Stick To The Process
 
-When you receive this protocol:
+When you receive this protocol, it means you need to pause, realign with the proper task process, and continue methodically.
 
-You're drifting off track. The user wants you to:
-1. Take a step back
-2. Focus on one thing at a time
-3. Follow the process properly
+## 1. Reset Focus
+[ ] Stop current work and review the task process document.
 
-Follow [the-task-process](the-task-process.md):
-1. Research solution
-2. Present plan
-3. Wait for feedback
-4. Implement
-5. Run tests
-6. Find first fail
-7. Research solution
-8. Present fix
-9. Wait for feedback
-10. Fix
-11. Update todo
-12. Repeat
+Review [the-task-process.md](the-task-process.md) to understand the proper sequence: research, plan, get feedback, implement, test, fix, and update todos. This ensures methodical progress.
 
-Remember: Slow down. One step at a time. Get confirmation before moving forward. 
+## 2. Identify Current Phase
+[ ] Determine which process step you are currently on.
+
+Map your current work to a specific step in the process (research, planning, implementation, testing, or fixing) to understand where you deviated and how to get back on track.
+
+## 3. Resume Properly
+[ ] Continue work following the process steps exactly.
+
+Pick up from your identified phase, following each step in order: research solutions, present plans, wait for feedback, implement changes, run tests, fix issues, and maintain documentation.
+
+Remember: Take one step at a time and always get confirmation before moving forward.

@@ -6,76 +6,26 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 🧪 Test Verification
 
-When you receive this protocol, verify test coverage and ensure all tests have proper implementations.
+When you receive this protocol, it means you need to verify test coverage and ensure all tests have proper implementations before proceeding with development.
 
-## 1️⃣ Test Analysis
+## 1. Analyze Test Status
+[ ] Review all test files to identify pending and incomplete tests.
 
-1. Scan Test Files
-   1. Find all test files
-   2. Identify pending tests
-   3. Note placeholder implementations
-   4. List skipped tests
+Scan through test files to find placeholder implementations, skipped tests, and missing assertions. Document the current state of test coverage and note any gaps between test descriptions and actual code implementations.
 
-2. Implementation Status
-   1. Check test descriptions vs code
-   2. Find missing implementations
-   3. Note incomplete features
-   4. List test dependencies
+## 2. Validate Test Quality
+[ ] Verify that existing tests properly cover requirements and edge cases.
 
-## 2️⃣ Test Validation
+Review test structure, assertions, and behavior coverage against project requirements. Check for proper test-code alignment and document any missing scenarios or incomplete feature coverage.
 
-1. Check Test Quality
-   1. Review test structure
-   2. Verify assertions
-   3. Check edge cases
-   4. Note test gaps
+## 3. Implement Missing Tests
+[ ] Complete all pending test implementations in dependency order.
 
-2. Implementation Review
-   1. Compare against requirements
-   2. Check test-code alignment
-   3. Verify behavior coverage
-   4. Note missing scenarios
+Work through the list of pending tests, implementing proper assertions and filling in placeholder code. Prioritize tests based on dependencies and blocking issues to ensure efficient completion.
 
-## 3️⃣ Implementation
+## 4. Verify and Document
+[ ] Execute full test suite and record results.
 
-1. Prioritize Tests
-   1. List pending implementations
-   2. Order by dependencies
-   3. Note blocking issues
-   4. Plan test sequence
+Run the complete test suite to verify all tests are passing and coverage metrics meet requirements. Update documentation with current test status, coverage information, and links to relevant requirements.
 
-2. Complete Tests
-   1. Implement pending tests
-   2. Add missing assertions
-   3. Fill placeholder code
-   4. Run test suite
-
-## 4️⃣ Verification
-
-1. Run Tests
-   1. Execute full suite
-   2. Check coverage metrics
-   3. Verify all passing
-   4. Document results
-
-2. Update Documentation
-   1. Record test status
-   2. Update coverage info
-   3. Note improvements
-   4. Link to requirements
-
-## ✅ Completion Check
-
-1. Test Status
-   - [ ] All tests implemented
-   - [ ] No pending tests
-   - [ ] No placeholders
-   - [ ] Suite passing
-
-2. Coverage
-   - [ ] Requirements met
-   - [ ] Edge cases covered
-   - [ ] Documentation updated
-   - [ ] Results recorded
-
-Remember: Focus on finding and implementing any tests that were written as placeholders during initial development. Ensure all tests have proper implementations before proceeding. 
+Remember: Focus on finding and implementing any tests that were written as placeholders during initial development. Ensure all tests have proper implementations before proceeding.

@@ -1,87 +1,39 @@
 ---
 document_type: protocol
-goal: process and sync new additions across the system state
-gpt_action: follow these steps when tagged with this protocol
+goal: add new content to the system
+gpt_action: process and integrate new content across framework documents
 ---
 
 # ➕ Add to System
 
-When you receive this protocol, follow these steps to properly add and sync new content across the system.
+When you receive this protocol, it means you need to add new content and ensure it is properly integrated across all framework documents.
 
-## 1️⃣ Content Analysis
+## 1. Identify Content Type
+[ ] Determine what type of content is being added and where it belongs.
 
-1. Identify Content Type
-   - [ ] Task or Milestone
-   - [ ] Requirement
-   - [ ] Test Case
-   - [ ] Documentation
-   - [ ] Decision or Context
-   - [ ] Other (specify)
+Review the content to classify it as a task, requirement, test case, documentation, or decision. This determines which framework document will serve as its primary location:
 
-2. Determine Impact
-   1. Which documents need updates
-   2. Related items to link
-   3. Dependencies to consider
-   4. Status indicators to update
+- Tasks -> [your-todo-list.md](your-todo-list.md)
+- Requirements -> [your-requirements.md](your-requirements.md) 
+- Decisions -> [your-memory.md](your-memory.md)
+- Resources -> [your-resources.md](your-resources.md)
 
-## 2️⃣ Content Addition
+## 2. Add Primary Content
+[ ] Add the content to its primary framework document with proper formatting.
 
-1. Add to Primary Location
-   1. Choose correct document:
-      - Tasks/Milestones → [your-todo-list](your-todo-list.md)
-      - Requirements → [your-requirements](your-requirements.md)
-      - Tests → [the-testing-process](the-testing-process.md)
-      - Decisions → [your-memory](your-memory.md)
-   2. Follow document structure
-   3. Add proper numbering
-   4. Set initial status
+Place the content in the correct document following that document's structure and formatting rules. See [the-development-process.md](the-development-process.md) for guidance.
 
-2. Create Memory Entry
-   1. Timestamp the addition
-   2. Document reasoning
-   3. Note relationships
-   4. Link to primary location
+## 3. Create Memory Entry
+[ ] Document this addition in [your-memory.md](your-memory.md) with full context.
 
-## 3️⃣ Relationship Updates
+Add a timestamped entry that explains what was added, why it was added, and how it relates to other framework elements.
 
-1. Link Related Items
-   1. Use [[square brackets]] for links
-   2. Connect to requirements
-   3. Link to milestones
-   4. Reference tests
+## 4. Update Related Documents
+[ ] Update all related documents to maintain system consistency.
 
-2. Update Dependencies
-   1. Check affected items
-   2. Update status if needed
-   3. Adjust priorities
-   4. Note blockers
+Review and update any documents affected by this addition, ensuring all cross-references are correct and statuses are consistent across the framework. Key documents to check:
 
-## 4️⃣ System Sync
-
-1. Follow [plx-sync](plx-sync.md) to verify:
-   1. All links are correct
-   2. Status is consistent
-   3. Dependencies aligned
-   4. Documentation complete
-
-2. Update Affected Documents
-   1. Adjust requirements
-   2. Update task lists
-   3. Modify test cases
-   4. Enhance documentation
-
-## ✅ Verification
-
-1. Content Check
-   - [ ] Properly formatted
-   - [ ] Correctly numbered
-   - [ ] Status set
-   - [ ] Links established
-
-2. System Check
-   - [ ] All documents synced
-   - [ ] Dependencies updated
-   - [ ] Status consistent
-   - [ ] Memory entry complete
-
-Remember: The goal is to maintain system consistency. Any addition should be properly integrated and linked across all relevant documents. 
+- [your-todo-list.md](your-todo-list.md)
+- [your-requirements.md](your-requirements.md)
+- [your-memory.md](your-memory.md)
+- [your-resources.md](your-resources.md)

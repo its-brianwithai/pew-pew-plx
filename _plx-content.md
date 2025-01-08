@@ -6,139 +6,31 @@ gpt_action: follow these steps when tagged with this protocol
 
 # 📱 Content Collection
 
-When you receive this protocol, collect and structure content for social media processing. Review [our-content](our-content.md) for content types and templates.
+When you receive this protocol, it means you need to gather, organize and structure content for social media posts while preserving technical context and learning insights.
 
-## 1️⃣ Input Analysis
+## 1. Analyze Input Sources
+[ ] Review user input and personal documentation files for content material.
 
-1. Process User Input
-   1. Extract key topics
-   2. Identify content types
-   3. Note special requirements
-   4. List specific requests
+Process user input to identify key topics and requirements, then review your-memory.md, your-requirements.md, and your-todo-list.md to gather technical decisions, implementation details, and milestone achievements that should be included in the content.
 
-2. Review Personal Files
-   1. Check [your-memory](your-memory.md) for:
-      - Technical decisions
-      - Learning moments
-      - Problem solutions
-      - Implementation details
-   2. Review [your-requirements](your-requirements.md) for:
-      - Feature context
-      - Technical constraints
-      - Design decisions
-      - Implementation goals
-   3. Check [your-todo-list](your-todo-list.md) for:
-      - Milestone achievements
-      - Technical progress
-      - Key completions
-      - Learning points
+## 2. Gather Technical Content
+[ ] Document implementation details, code examples, and learning insights.
 
-## 2️⃣ Content Collection
+Collect specific technical information including code snippets, architectural decisions, problem solutions, and key learnings. Note any visual assets needed like screenshots, diagrams or demos to support the technical content.
 
-1. Gather Technical Details
-   1. Implementation specifics
-   2. Code examples
-   3. Technical decisions
-   4. Learning insights
+## 3. Create Content Package
+[ ] Add a structured content entry to our-content.md.
 
-2. Document Visual Needs
-   1. Required screenshots
-   2. Code snippets
-   3. Process diagrams
-   4. Demo recordings
+Create a new content package in our-content.md using the standard template, including source material, technical details, visual requirements, educational points, and platform-specific content structures for Twitter, LinkedIn and blog posts.
 
-3. Identify Teaching Points
-   1. Technical insights
-   2. Process improvements
-   3. Problem solutions
-   4. Best practices
+## 4. Document References
+[ ] Update your-memory.md with content package details.
 
-## 3️⃣ Content Package
-
-1. Create Entry in [our-content](our-content.md)
-   ```markdown
-   # Content Package: [Topic]
-
-   ## Source Material
-   - User Input: [description]
-   - Memory Entries: [[references]]
-   - Requirements: [[references]]
-   - Todo Items: [[references]]
-
-   ## Technical Details
-   - Implementation: [details]
-   - Decisions: [list]
-   - Learnings: [insights]
-   - Context: [background]
-
-   ## Visual Requirements
-   - Screenshots: [list]
-   - Code Examples: [list]
-   - Diagrams: [list]
-   - Demos: [list]
-
-   ## Educational Points
-   - Technical: [insights]
-   - Process: [improvements]
-   - Solutions: [approaches]
-   - Practices: [recommendations]
-
-   ## Platform Content
-   ### Twitter Thread
-   - Hook: [problem/solution]
-   - Key Points: [list]
-   - Code Example: [snippet]
-   - Learning Focus: [takeaway]
-
-   ### LinkedIn Post
-   - Problem: [description]
-   - Approach: [solution]
-   - Technical: [details]
-   - Learnings: [insights]
-
-   ### Blog Post
-   - Title: [learning-focused]
-   - Objectives: [list]
-   - Structure: [outline]
-   - Code Examples: [list]
-
-   ## Additional Context
-   - Questions: [list]
-   - Emphasis: [points]
-   - Clarifications: [needed]
-   - Follow-ups: [topics]
-   ```
-
-2. Add Reference to [your-memory](your-memory.md)
-   1. Link content package
-   2. Note key points
-   3. Add context
-   4. Track decisions
-
-## ✅ Verification
-
-1. Input Coverage
-   - [ ] User input processed
-   - [ ] Personal files reviewed
-   - [ ] Technical details gathered
-   - [ ] Visual needs listed
-
-2. Content Structure
-   - [ ] Package created
-   - [ ] Sources linked
-   - [ ] Context preserved
-   - [ ] Teaching points clear
-
-3. Documentation
-   - [ ] Memory updated
-   - [ ] References linked
-   - [ ] Context complete
-   - [ ] Notes added
+Add a reference to the content package in your-memory.md, including links to the content, key technical points covered, relevant context, and any important decisions made during content creation.
 
 Remember:
 - Process all user input thoroughly
-- Review all relevant personal files
-- Include all technical context
+- Include complete technical context
 - Document visual requirements
 - Link all references
-- Preserve implementation details 
+- Preserve implementation details
