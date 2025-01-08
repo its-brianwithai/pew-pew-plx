@@ -133,19 +133,12 @@ gpt_action: use as foundation for your requirements document
 ---
 
 - [ ] UI/UX Designer
-    - [ ] 
 - [ ] Frontend Developer
-    - [ ] 
 - [ ] Backend Developer
-    - [ ] 
 - [ ] Data Engineer
-    - [ ] 
 - [ ] DevOps Engineer
-    - [ ] 
 - [ ] Project Manager
-    - [ ] 
 - [ ] Marketeer
-    - [ ] 
 
 <!--
 # 🎯 Strategy Guide
