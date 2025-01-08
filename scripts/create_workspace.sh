@@ -25,10 +25,11 @@ get_default_name() {
 
 # Get script location
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 
 # Show welcome message
-echo "Welcome to Ultra Wide Turbo Agent Workspace creation!"
-echo "-----------------------------------------------------"
+echo "Welcome to Ultra Wide Turbo workspace creation!"
+echo "----------------------------------------"
 
 # Available components
 components=(
@@ -52,14 +53,12 @@ read -r include_nums
 # Process selection
 selected=()
 if [ -z "$include_nums" ]; then
-    # Include all components if no input
     selected=("${components[@]}")
     echo -e "\nIncluding all components:"
     for component in "${components[@]}"; do
         echo "✓ $component"
     done
 else
-    # Check for each number in the input
     for i in {1..6}; do
         if [[ "$include_nums" == *"$i"* ]]; then
             selected+=("${components[$((i-1))]}")
@@ -114,50 +113,27 @@ echo -e "\nCreating workspace with selected components..."
 for component in "${selected[@]}"; do
     case "$component" in
         "Agent Work Documents")
-            for file in "your-requirements.md" "your-ticket.md" "your-todo-list.md" "your-initial-input.md"; do
-                touch "$WORKSPACE_DIR/$file"
-            done
-            echo "✓ Created: Agent Work Documents"
+            cp "$REPO_ROOT"/your-*.md "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No agent work documents found to copy"
             ;;
         "Protocols")
-            mkdir -p "$WORKSPACE_DIR/protocols"
-            if [ -d "$SCRIPT_DIR/protocols" ]; then
-                cp -r "$SCRIPT_DIR/protocols"/* "$WORKSPACE_DIR/protocols"/ 2>/dev/null || true
-            fi
-            echo "✓ Created: Protocols"
+            cp -r "$REPO_ROOT/protocols" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No protocols found to copy"
             ;;
         "Workflows")
-            mkdir -p "$WORKSPACE_DIR/workflows"
-            if [ -d "$SCRIPT_DIR/workflows" ]; then
-                cp -r "$SCRIPT_DIR/workflows"/* "$WORKSPACE_DIR/workflows"/ 2>/dev/null || true
-            fi
-            echo "✓ Created: Workflows"
+            cp -r "$REPO_ROOT/workflows" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No workflows found to copy"
             ;;
         "Templates")
-            mkdir -p "$WORKSPACE_DIR/templates"
-            if [ -d "$SCRIPT_DIR/templates" ]; then
-                cp -r "$SCRIPT_DIR/templates"/* "$WORKSPACE_DIR/templates"/ 2>/dev/null || true
-            fi
-            echo "✓ Created: Templates"
+            cp -r "$REPO_ROOT/templates" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No templates found to copy"
             ;;
         "Knowledge")
-            mkdir -p "$WORKSPACE_DIR/knowledge"
-            if [ -d "$SCRIPT_DIR/knowledge" ]; then
-                cp -r "$SCRIPT_DIR/knowledge"/* "$WORKSPACE_DIR/knowledge"/ 2>/dev/null || true
-            fi
-            echo "✓ Created: Knowledge"
+            cp -r "$REPO_ROOT/knowledge" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No knowledge found to copy"
             ;;
         "Prompts")
-            mkdir -p "$WORKSPACE_DIR/prompts"
-            if [ -d "$SCRIPT_DIR/prompts" ]; then
-                cp -r "$SCRIPT_DIR/prompts"/* "$WORKSPACE_DIR/prompts"/ 2>/dev/null || true
-            fi
-            echo "✓ Created: Prompts"
+            cp -r "$REPO_ROOT/prompts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No prompts found to copy"
             ;;
     esac
 done
 
-echo -e "\n🎉 Ultra Wide Turbo Agent Workspace '$WORKSPACE_NAME' created successfully!"
+echo -e "\n🎉 Ultra Wide Turbo workspace '$WORKSPACE_NAME' created successfully!"
 echo "Location: $WORKSPACE_DIR"
 echo -e "\nFiles in new workspace:"
 ls -la "$WORKSPACE_DIR" 
