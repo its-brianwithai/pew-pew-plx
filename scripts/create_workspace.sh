@@ -114,6 +114,7 @@ for component in "${selected[@]}"; do
     case "$component" in
         "Agent Work Documents")
             cp "$REPO_ROOT"/your-*.md "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No agent work documents found to copy"
+            cp "$REPO_ROOT"/our-*.md "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No template documents found to copy"
             ;;
         "Protocols")
             cp -r "$REPO_ROOT/protocols" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No protocols found to copy"
