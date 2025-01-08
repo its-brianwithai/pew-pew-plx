@@ -38,7 +38,7 @@ The script will:
    - Empty CHANGELOG.md
    - Empty README.md
 
-You can also provide a custom name when prompted.
+You can also provide a custom name when prompted. You can find your workspaces in the `workspaces` folder.
 
 ## 🔍 Framework Overview
 

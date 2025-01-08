@@ -14,8 +14,8 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 > - Possible Parents: Actors, Components
 > - Link actors and components to their (optional) parent by starting with the parent in [[double square brackets]] and the actor(s)/component(s) beneath it. Example:
 > 	- [[parent]]
-> 		- [[actor]]
-> 		- [[component]]
+> 		- [[Actor]]
+> 		- [[Component]]
 ---
 
 - [ ] 
@@ -28,7 +28,7 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 > - GPT Instructions: Take each Actor and Component and list everything they can do, must do, or should do automatically. Start each activity with a verb (create, update, delete, etc.) and make it specific. Think about: user interactions, system automations, periodic tasks, and data operations. Don't worry about the "how" yet - focus on what needs to happen.
 
 > - Possible Parents: Actors, Components
-> - Link activities to their parent by starting with the parent in [[double square brackets]] and the activitity beneath it. Example:
+> - Link activities to their parent by starting with the parent in [[double square brackets]] and the activity beneath it. Example:
 > 	- [[parent]]
 > 		- [[Create item]]
 > 		- [[Delete item]]
@@ -41,13 +41,16 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 
 > - What's the ideal path? · What could fail? · What needs validation? · What needs confirmation? · What's time sensitive? · What needs recovery steps? · What should be cached? · What should be retried? · What needs rollback?
 
-> - GPT Instructions: For each Activity think of the perfect scenario (Happy Flow) - what happens when everything works? Then optionally add Error Flows by asking "what could go wrong?" at each step. Finally, consider edge cases like no connection, empty states, or loading states. Break each flow into atomic (indivisible) actions that can be clearly implemented and tested.
+> - GPT Instructions: For each Activity think of the perfect scenario (Happy Flow) - what happens when everything works? Then optionally add Error Flows by asking "what could go wrong?" at each step. Finally, consider edge cases like no connection, empty states, or loading states. Break each flow into atomic (indivisible) actions that can be clearly implemented and tested. Prefix each atomic action with BDD Gherkin keywords: GIVEN, WHEN, THEN, AND, BUT.
 
 > - Possible Parents: Activities
 > - Link activity flows to their parent by starting with the parent in [[double square brackets]] and the activity flow(s) beneath it. Example:
 > 	- [[parent]]
-> 		- [[User tap button]]
-> 		- [[System show feedback]]
+> 		- GIVEN [[User]] is at [[Home Screen]]
+> 		- WHEN [[User]] [[taps create item button]]
+> 		- THEN [[System]] [[shows create item feedback]]
+> 		- AND [[System]] [[creates database item]]
+> 		- BUT [[System]] [[does not navigate]]
 ---
 
 - [ ] 
