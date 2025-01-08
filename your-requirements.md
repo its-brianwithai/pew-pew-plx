@@ -9,48 +9,48 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 > - Possible Parents: Actors, Components
 ---
 
-- [ ] 
+- [ ]
 
 # 🎬 Activities (Who or what does what?)
 > - Actions that an Actor or Component performs (examples include Create List, Delete Item, Sync Data, and they must always contain a verb + action).
 > - Possible Parents: Actors, Components
 ---
 
-- [ ] 
+- [ ]
 
 ## 🌊 Activity Flows & Scenarios (What in which order?)
 > - Sequences of Atomic Actions (like "Tap button") that map out the steps to complete an Activity. May have optional paths for both successful completion (Happy Flow), errors (Error Flow), and scenarios like no connection, empty states, loading states, etc.
 > - Possible Parents: Activities
 ---
 
-- [ ] 
+- [ ]
 
 # 📝 Properties (Which values?)
 > - Describes a value or configuration that belongs to an object (examples include width, color, id, name).
 > - Possible Parents: Actors, Components, Activities, Activity Flows, Scenarios, Atomic Actions, Scenarios, Behaviours
 ---
 
-- [ ] 
+- [ ]
 
 # 🛠️ Behaviours (How does it act when.. in terms of.. ?)
 > - Possible Parents: Anything
 ---
 
-- [ ] 
+- [ ]
 
 # 💡 Ideas & 🪵 Backlog
 > - Anything that could be added later, too complex now, needs more research, would be nice to have, or alternative approaches.
 > - Possible Parents: Anything (optional)
 ---
 
-- [ ] 
+- [ ]
 
 # ❓ Questions
 > - Questions that need to be answered to clarify requirements.
 > - Possible Parents: Anything (optional)
 ---
 
-- [ ] 
+- [ ]
 
 # 🧪 Unit & Integration Tests  
 > - Tests that verify the implementation and verifies an item as completed.

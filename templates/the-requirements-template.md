@@ -18,7 +18,7 @@ gpt_action: use as foundation for your requirements document
 > 		- [[Component]]
 ---
 
-- [ ] 
+- [ ]
 
 # 🎬 Activities (Who or what does what?)
 > - Actions that an Actor or Component performs (examples include Create List, Delete Item, Sync Data, and they must always contain a verb + action).
@@ -34,7 +34,7 @@ gpt_action: use as foundation for your requirements document
 > 		- [[Delete item]]
 ---
 
-- [ ] 
+- [ ]
 
 ## 🌊 Activity Flows & Scenarios (What in which order?)
 > - Sequences of Atomic Actions (like "Tap button") that map out the steps to complete an Activity. May have optional paths for both successful completion (Happy Flow), errors (Error Flow), and scenarios like no connection, empty states, loading states, etc.
@@ -53,7 +53,7 @@ gpt_action: use as foundation for your requirements document
 > 		- BUT [[System]] [[does not navigate]]
 ---
 
-- [ ] 
+- [ ]
 
 # 📝 Properties (Which values?)
 > - Describes a value or configuration that belongs to an object (examples include width, color, id, name).
@@ -68,7 +68,7 @@ gpt_action: use as foundation for your requirements document
 > 		- [[name : string]]
 ---
 
-- [ ] 
+- [ ]
 
 # 🛠️ Behaviours (How does it act when.. in terms of.. ?)
 > - Defines how something looks, works and performs Examples include ui/ux, rules & limits, data & analytics, security, performance and scalability.
@@ -84,7 +84,7 @@ gpt_action: use as foundation for your requirements document
 > 		- [ ] [[Should not show when list is empty]]
 ---
 
-- [ ] 
+- [ ]
 
 # 💡 Ideas & 🪵 Backlog
 > - Anything that could be added later, too complex now, needs more research, would be nice to have, or alternative approaches.
@@ -100,7 +100,7 @@ gpt_action: use as foundation for your requirements document
 > 		- [ ] [[Is this safe?]]
 ---
 
-- [ ] 
+- [ ]
 
 # ❓ Questions
 > - Questions that need to be answered to clarify requirements.
@@ -116,7 +116,7 @@ gpt_action: use as foundation for your requirements document
 > 		- [ ] [[Is this safe?]]
 ---
 
-- [ ] 
+- [ ]
 
 # 🎯 Roles & 📝 Tasks
 > - Each behaviour, property, activity (flow), scenario, atomic action, actor, component must directly or indirectly (by parents) cascade down to a todo with assigned role. Creating a task for a parent and completing it automatically covers its children unless children have open tasks themselves.
