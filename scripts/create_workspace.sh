@@ -1,31 +1,40 @@
 #!/bin/bash
 
+# Get script location and set up global paths
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+TARGET_DIR="$(dirname "$SCRIPT_DIR")"
+WORKSPACES_DIR="$TARGET_DIR/workspaces"
+
 # Function to convert title to kebab case
 to_kebab_case() {
     echo "$1" | tr '[:upper:]' '[:lower:]' | sed -e 's/[^a-zA-Z0-9]/-/g' -e 's/--*/-/g' -e 's/^-//' -e 's/-$//'
 }
 
+# Function to get next available number for a base name
+get_next_number() {
+    local base_name="$1"
+    local counter=1
+    
+    while [ -d "$WORKSPACES_DIR/$base_name-$(printf "%02d" $counter)" ]; do
+        counter=$((counter + 1))
+    done
+    
+    echo $(printf "%02d" $counter)
+}
+
 # Function to get default workspace name
 get_default_name() {
+    local base_name="$1"
     local month=$(date "+%m")
     local day=$(date "+%d")
     local weekday=$(date "+%a" | tr '[:upper:]' '[:lower:]')
-    local base_name="$1"
     local date_suffix="${month}${day}-${weekday}"
-    local counter=1
-    local name="$base_name-$date_suffix-$(printf "%02d" $counter)"
+    local full_base="$base_name-$date_suffix"
+    local number=$(get_next_number "$full_base")
     
-    while [ -d "$TARGET_DIR/$name" ]; do
-        counter=$((counter + 1))
-        name="$base_name-$date_suffix-$(printf "%02d" $counter)"
-    done
-    
-    echo "$name"
+    echo "$full_base-$number"
 }
-
-# Get script location
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 
 # Show welcome message
 echo "Welcome to Ultra Wide Turbo workspace creation!"
@@ -83,7 +92,9 @@ fi
 month=$(date "+%m")
 day=$(date "+%d")
 weekday=$(date "+%a" | tr '[:upper:]' '[:lower:]')
-default_name="turbo-workspace-${month}${day}-${weekday}-01"
+base_suggestion="turbo-workspace-${month}${day}-${weekday}"
+next_number=$(get_next_number "$base_suggestion")
+default_name="${base_suggestion}-${next_number}"
 echo -e "\nEnter workspace base name (press ENTER for: $default_name):"
 read -r USER_INPUT
 
@@ -100,11 +111,11 @@ fi
 WORKSPACE_NAME=$(get_default_name "$BASE_NAME")
 echo "Using workspace name: $WORKSPACE_NAME"
 
-# Set target directory
-TARGET_DIR="$(dirname "$SCRIPT_DIR")"
+# Ensure workspaces directory exists
+mkdir -p "$WORKSPACES_DIR"
 
 # Create main workspace directory
-WORKSPACE_DIR="$TARGET_DIR/$WORKSPACE_NAME"
+WORKSPACE_DIR="$WORKSPACES_DIR/$WORKSPACE_NAME"
 mkdir -p "$WORKSPACE_DIR"
 echo -e "\nCreated workspace directory: $WORKSPACE_DIR"
 
