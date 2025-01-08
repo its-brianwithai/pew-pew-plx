@@ -1,4 +1,4 @@
-# 🤖 Ultra Wide Turbo Workspace
+# 🤖 Ultra Wide Turbo Agent Workspace
 
 > A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
@@ -11,7 +11,7 @@
 
 ## 🔍 Quick Start
 
-Create a new Ultra Wide Turbo workspace using the provided script:
+Create a new Ultra Wide Turbo Agent Workspace using the provided script:
 
 ```bash
 ./scripts/create_workspace.sh

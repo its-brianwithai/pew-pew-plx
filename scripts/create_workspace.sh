@@ -27,8 +27,8 @@ get_default_name() {
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Show welcome message
-echo "Welcome to Ultra Wide Turbo workspace creation!"
-echo "----------------------------------------"
+echo "Welcome to Ultra Wide Turbo Agent Workspace creation!"
+echo "-----------------------------------------------------"
 
 # Available components
 components=(
@@ -157,7 +157,7 @@ for component in "${selected[@]}"; do
     esac
 done
 
-echo -e "\n🎉 Ultra Wide Turbo workspace '$WORKSPACE_NAME' created successfully!"
+echo -e "\n🎉 Ultra Wide Turbo Agent Workspace '$WORKSPACE_NAME' created successfully!"
 echo "Location: $WORKSPACE_DIR"
 echo -e "\nFiles in new workspace:"
 ls -la "$WORKSPACE_DIR" 
