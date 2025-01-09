@@ -11,7 +11,7 @@ gpt_action: use as foundation for your requirements document
 
 > - GPT Instructions: Start by listing all nouns from your feature description - these are your potential actors and components. Then expand this list by asking: who uses it, what do they interact with, what shows information, what stores data, and what processes data? For each item, decide if it's an Actor (can perform actions) or Component (is acted upon). Finally, break down any complex components into smaller, more manageable pieces.
 
-> - Possible Parents: Actor, Component
+> - Possible Parents: Itself
 > - Link actors and components to their (optional) parent by starting with the parent in [[double square brackets]] and the actor(s)/component(s) beneath it. Example:
 > 	- [[parent]]
 > 		- [[Actor]]
@@ -43,7 +43,7 @@ gpt_action: use as foundation for your requirements document
 
 > - GPT Instructions: For each Activity think of the perfect scenario (Happy Flow) - what happens when everything works? Then optionally add Error Flows by asking "what could go wrong?" at each step. Finally, consider edge cases like no connection, empty states, or loading states. Break each flow into atomic (indivisible) actions that can be clearly implemented and tested. Prefix each atomic action with BDD Gherkin keywords: GIVEN, WHEN, THEN, AND, BUT.
 
-> - Possible Parents: Activities
+> - Possible Parents: Activities, Itself
 > - Link activity flows to their parent by starting with the parent in [[double square brackets]] and the activity flow(s) beneath it. Example:
 > 	- [[parent]]
 > 		- GIVEN [[User]] is at [[Home Screen]]
@@ -118,7 +118,7 @@ gpt_action: use as foundation for your requirements document
 
 - [ ]
 
-# 🎯 Roles & 📝 Tasks
+# 🎯 Roles, 📝 Tasks & 🎓 Suggested Approach
 > - Each behaviour, property, activity (flow), scenario, atomic action, actor, component must directly or indirectly (by parents) cascade down to a todo with assigned role. Creating a task for a parent and completing it automatically covers its children unless children have open tasks themselves.
 
 > - Who's responsible for what?

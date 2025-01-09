@@ -1,93 +1,49 @@
 ---
 document_type: protocol
-goal: reevaluate current milestone/task approach and direction
-gpt_action: follow these steps when evaluating current approach
+goal: evaluate current task and improve approach by taking a step back and refocusing
+gpt_action: follow these steps when needing to focus or improve current approach
 ---
 
-# 🔍 Task Review
+CONTEXT: The [[User]] notices you are drifting off track and wants you to help realign the original task and goals.
 
-1. [[GPT Agent]] starts [[analyze current state]]
-   1. [[analyze current state]]
-      1. Document milestone goal
-      2. Review task objective
-      3. Assess progress made
-      4. List planned steps
-      5. IF [[state unclear]]
-         1. [[GPT Agent]] asks [[User]] for clarification
+1. GIVEN [[User]] RUNS plx-focus command
+   1. THEN [[GPT Agent]] PAUSE current work
+      1. AND [[GPT Agent]] CHECK [[your-todo-list]]
+      2. AND [[GPT Agent]] CHECK [[your-milestones]]
+   2. AND [[GPT Agent]] ANALYSE current state
+      1. AND [[GPT Agent]] IDENTIFY original goal
+      2. AND [[GPT Agent]] IDENTIFY current progress
+      3. AND [[GPT Agent]] IDENTIFY any deviations
 
-2. [[GPT Agent]] starts [[map context]]
-   1. [[map context]]
-      1. Current progress:
-```markdown
-# Progress Status
-- Milestone completion
-- Task achievements
-- Pending items
-- Blockers encountered
-```
-      2. Development context:
-```markdown
-# Context Analysis
-- Technical decisions
-- Implementation choices
-- Dependencies involved
-- Resources utilized
-```
+2. WHEN [[GPT Agent]] EVALUATES alignment
+   1. THEN [[GPT Agent]] COMPARE current vs intended
+      1. AND [[GPT Agent]] CHECK task relevance
+      2. AND [[GPT Agent]] CHECK progress direction
+      3. AND [[GPT Agent]] CHECK resource usage
+   2. IF [[misalignment]] IS found
+      1. THEN [[GPT Agent]] DOCUMENT issues
+      2. AND [[GPT Agent]] IDENTIFY root causes
 
-# 🎯 Approach Evaluation
+3. GIVEN [[evaluation]] IS complete
+   1. THEN [[GPT Agent]] DETERMINE next steps
+      1. AND [[GPT Agent]] CHECK if plan adjustment needed
+      2. AND [[GPT Agent]] CHECK if focus correction needed
+   2. IF [[adjustments]] ARE needed
+      1. THEN [[GPT Agent]] PROPOSE changes to [[User]]
+      2. AND [[GPT Agent]] EXPLAIN reasoning
 
-1. [[GPT Agent]] starts [[evaluate decisions]]
-   1. [[evaluate decisions]]
-      1. Review implementation:
-```markdown
-# Technical Review
-- Architecture choices
-- Tool selections
-- Method implementations
-- Performance considerations
-```
-      2. Analyze alternatives:
-```markdown
-# Alternative Analysis
-- Simpler solutions
-- Better approaches
-- Optimization opportunities
-- Risk mitigations
-```
+4. WHEN [[User]] REVIEWS assessment
+   1. IF [[User]] APPROVES changes
+      1. THEN [[GPT Agent]] UPDATE [[your-todo-list]]
+      2. AND [[GPT Agent]] ADJUST priorities if needed
+   2. IF [[User]] REJECTS changes
+      1. THEN [[GPT Agent]] MAINTAIN current plan
+      2. AND [[GPT Agent]] NOTE [[User]] feedback
 
-2. [[GPT Agent]] starts [[verify alignment]]
-   1. [[verify alignment]]
-      1. Check requirements
-      2. Validate assumptions
-      3. Assess complexity
-      4. IF [[misalignment found]]
-         1. [[GPT Agent]] documents issues
-
-# 🔄 Course Correction
-
-1. [[GPT Agent]] starts [[optimize approach]]
-   1. [[optimize approach]]
-      1. Document improvements:
-```markdown
-# Improvement Areas
-- Simplification options
-- Performance enhancements
-- Quality improvements
-- Process optimizations
-```
-      2. Plan adjustments:
-```markdown
-# Adjustment Plan
-- Required changes
-- Implementation steps
-- Validation methods
-- Success criteria
-```
-
-2. [[GPT Agent]] presents findings to [[User]]
-
-3. [[User]] and [[GPT Agent]] enter [[feedback loop]]
-   1. [[feedback loop]]
-      1. IF [[User]] gives feedback
-         1. [[GPT Agent]] processes feedback
-      2. [[User]] and [[GPT Agent]] repeat until [[User]] approves
+5. WHEN [[refocus]] IS complete
+   1. THEN [[GPT Agent]] RESUME work
+      1. AND [[GPT Agent]] FOCUS on current task
+      2. AND [[GPT Agent]] FOLLOW [[your-todo-list]]
+   2. IF [[focus]] IS restored
+      1. THEN [[GPT Agent]] CONTINUE with clarity
+      2. AND [[GPT Agent]] MAINTAIN alignment

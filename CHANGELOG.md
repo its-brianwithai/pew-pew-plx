@@ -11,6 +11,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 All notable changes to the Ultra Wide Turbo framework will be documented in this file.
 
+## [0.18.0] - 2024-01-08
+
+### Added
+- New protocol structure and organization:
+  - Added new protocol files for better task management
+  - Enhanced documentation patterns
+  - Improved workflow organization
+- New wiki documentation structure:
+  - Migrated knowledge base to wiki format
+  - Added detailed how-to guides
+  - Enhanced documentation accessibility
+
+### Changed
+- Restructured protocol files:
+  - Removed redundant protocols
+  - Unified naming conventions
+  - Enhanced protocol clarity
+- Improved file organization:
+  - Moved knowledge base to wiki structure
+  - Updated documentation patterns
+  - Enhanced cross-referencing
+
+### Removed
+- Deprecated protocol files:
+  - Removed redundant plx commands
+  - Cleaned up outdated protocols
+  - Consolidated similar functionalities
+
+## [0.17.0] - 2024-01-08
+
+### Changed
+- Split development workflow into separate files:
+  - Moved planning phase to `the-planning-workflow.md`
+  - Moved development phase to `the-development-workflow.md`
+  - Improved workflow clarity and maintainability
+- Introduced new wiki category:
+  - Added `the-agent-work-documents.md` as first wiki entry
+  - Enhanced documentation structure
+  - Better organization of framework knowledge
+
 ## [0.16.0] - 2024-01-08
 
 ### Added

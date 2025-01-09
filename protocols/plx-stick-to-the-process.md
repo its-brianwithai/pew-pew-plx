@@ -1,85 +1,49 @@
 ---
 document_type: protocol
-goal: realign with development workflow when drifting off process
-gpt_action: follow these steps when process alignment is lost
+goal: realign with workflow and get back on track
+gpt_action: follow these steps when needing to realign with the process
 ---
 
-# 🛑 Process Check
+CONTEXT: The [[User]] notices workflow deviation and wants you to realign with the proper process by analyzing the current state and making corrections.
 
-1. [[GPT Agent]] starts [[pause work]]
-   1. [[pause work]]
-      1. Stop current activity
-      2. Save current state
-      3. Clear current approach
-      4. IF [[work unsaved]]
-         1. [[GPT Agent]] preserves progress
+1. GIVEN [[User]] RUNS plx-stick-to-the-process command
+   1. THEN [[GPT Agent]] ANALYSE [[User]] input
+      1. AND [[GPT Agent]] IDENTIFY current context
+      2. AND [[GPT Agent]] IDENTIFY process concerns
+   2. IF [[User]] input HAS specific concerns
+      1. THEN [[GPT Agent]] FOCUS on those concerns
+   3. IF [[User]] input HAS no specifics
+      1. THEN [[GPT Agent]] CHECK entire process state
 
-2. [[GPT Agent]] starts [[review workflow]]
-   1. [[review workflow]]
-      1. Check phases:
-```markdown
-# Development Phases
-- 🧱 Planning
-  - Research solution
-  - Create plan
-  - Get feedback
-- 🛠️ Development
-  - Start new task
-  - Complete task
-  - Run tests
-  - Fix issues
-- 🚀 Release
-  - Final testing
-  - Present work
-  - Release process
-```
+2. WHEN [[GPT Agent]] STARTS analysis
+   1. THEN [[GPT Agent]] CHECK [[your-todo-list]]
+   2. AND [[GPT Agent]] CHECK [[your-milestones]]
+   3. AND [[GPT Agent]] CHECK current workflow phase
+   4. IF [[workflow]] IS unclear
+      1. THEN [[GPT Agent]] REQUEST clarification from [[User]]
+      2. AND [[GPT Agent]] WAIT for response
 
-# 🎯 Process Realignment
+3. GIVEN [[workflow state]] IS known
+   1. THEN [[GPT Agent]] VERIFY process alignment
+      1. AND [[GPT Agent]] CHECK correct workflow steps
+      2. AND [[GPT Agent]] CHECK task sequence
+      3. AND [[GPT Agent]] CHECK milestone progress
+   2. IF [[misalignment]] IS found
+      1. THEN [[GPT Agent]] DOCUMENT issues
+      2. AND [[GPT Agent]] PROPOSE corrections to [[User]]
 
-1. [[GPT Agent]] starts [[locate position]]
-   1. [[locate position]]
-      1. Current state:
-```markdown
-# Position Check
-- Current phase
-- Last completed step
-- Next required step
-- Missing steps
-```
-      2. Process gaps:
-```markdown
-# Gap Analysis
-- Skipped steps
-- Missing feedback
-- Incomplete tests
-- Required fixes
-```
+4. WHEN [[User]] REVIEWS alignment
+   1. IF [[User]] APPROVES corrections
+      1. THEN [[GPT Agent]] IMPLEMENT realignment
+      2. AND [[GPT Agent]] UPDATE work documents
+   2. IF [[User]] REJECTS corrections
+      1. THEN [[GPT Agent]] REQUEST guidance
+      2. AND [[GPT Agent]] WAIT for [[User]] input
 
-2. [[GPT Agent]] starts [[verify alignment]]
-   1. [[verify alignment]]
-      1. Check completion
-      2. Validate steps
-      3. Confirm order
-      4. IF [[steps missing]]
-         1. [[GPT Agent]] returns to last good state
-
-# 🔄 Process Resumption
-
-1. [[GPT Agent]] starts [[resume process]]
-   1. [[resume process]]
-      1. From correct step:
-```markdown
-# Resumption Point
-- Start from last good state
-- Follow steps in order
-- No step skipping
-- Get required feedback
-```
-
-2. [[GPT Agent]] presents plan to [[User]]
-
-3. [[User]] and [[GPT Agent]] enter [[feedback loop]]
-   1. [[feedback loop]]
-      1. IF [[User]] gives feedback
-         1. [[GPT Agent]] processes feedback
-      2. [[User]] and [[GPT Agent]] repeat until [[User]] approves
+5. WHEN [[realignment]] IS complete
+   1. THEN [[GPT Agent]] CONFIRM next steps with [[User]]
+      1. AND [[GPT Agent]] LIST corrected issues
+      2. AND [[GPT Agent]] PROPOSE path forward
+   2. IF [[User]] CONFIRMS path
+      1. THEN [[GPT Agent]] RESUME workflow
+      2. AND [[GPT Agent]] CONTINUE with next task

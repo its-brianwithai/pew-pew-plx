@@ -45,7 +45,7 @@ components=(
     "Protocols"
     "Workflows"
     "Templates"
-    "Knowledge"
+    "Wiki"
     "Prompts"
 )
 
@@ -150,8 +150,8 @@ for component in "${selected[@]}"; do
         "Templates")
             cp -r "$REPO_ROOT/templates" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No templates found to copy"
             ;;
-        "Knowledge")
-            cp -r "$REPO_ROOT/knowledge" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No knowledge found to copy"
+        "Wiki")
+            cp -r "$REPO_ROOT/wiki" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No knowledge found to copy"
             ;;
         "Prompts")
             cp -r "$REPO_ROOT/prompts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No prompts found to copy"

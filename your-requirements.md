@@ -6,7 +6,7 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 
 # 👤 Actors & 🧩 Components (Who or what)
 > - Someone or something that can perform actions or be interacted with (examples include User, Button, Screen, Input Field, Message, System, API, Database, and they can be a person, service, visual or non-visual).
-> - Possible Parents: Actors, Components
+> - Possible Parents: Itself
 ---
 
 - [ ]
@@ -20,7 +20,7 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 
 ## 🌊 Activity Flows & Scenarios (What in which order?)
 > - Sequences of Atomic Actions (like "Tap button") that map out the steps to complete an Activity. May have optional paths for both successful completion (Happy Flow), errors (Error Flow), and scenarios like no connection, empty states, loading states, etc.
-> - Possible Parents: Activities
+> - Possible Parents: Activities, Itself
 ---
 
 - [ ]
@@ -33,6 +33,7 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 - [ ]
 
 # 🛠️ Behaviours (How does it act when.. in terms of.. ?)
+> - Defines how something looks, works and performs Examples include ui/ux, rules & limits, data & analytics, security, performance and scalability.
 > - Possible Parents: Anything
 ---
 
@@ -44,6 +45,9 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 ---
 
 - [ ]
+
+# 🔖 Context
+> - Optional extra information about certain concepts used to clarify 
 
 # ❓ Questions
 > - Questions that need to be answered to clarify requirements.
@@ -60,7 +64,7 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 - [ ]
 
 
-# 🎯 Roles & 📝 Tasks
+# 🎯 Roles, 📝 Tasks & 🎓 Suggested Approach
 > - Each behaviour, property, activity (flow), scenario, atomic action, actor, component must directly or indirectly (by parents) cascade down to a todo with assigned role. Creating a task for a parent and completing it automatically covers its children unless children have open tasks themselves.
 > - Possible Parents: Anything (optional)
 ---

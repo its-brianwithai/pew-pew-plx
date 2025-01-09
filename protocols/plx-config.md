@@ -1,93 +1,57 @@
 ---
 document_type: protocol
-goal: apply system-wide configuration changes across all framework files
-gpt_action: follow these steps when configuring framework behavior
+goal: manage and update configuration settings
+gpt_action: follow these steps when working with configuration files
 ---
 
-# 🔍 Configuration Analysis
+CONTEXT: The [[User]] notices configuration settings need to be managed and wants you to handle updates and changes to config files safely.
 
-1. [[GPT Agent]] starts [[gather requirements]]
-   1. [[gather requirements]]
-      1. Discuss desired changes
-      2. Document motivations
-      3. List expectations
-      4. IF [[requirements unclear]]
-         1. [[GPT Agent]] asks [[User]] for clarification
+1. GIVEN [[User]] RUNS plx-config command
+   1. THEN [[GPT Agent]] ANALYSE [[User]] input
+      1. AND [[GPT Agent]] IDENTIFY config type
+      2. AND [[GPT Agent]] IDENTIFY config scope
+   2. IF [[User]] input HAS specific file
+      1. THEN [[GPT Agent]] FOCUS on file
+   3. IF [[User]] input HAS no specifics
+      1. THEN [[GPT Agent]] SCAN config files
 
-2. [[GPT Agent]] starts [[analyze impact]]
-   1. [[analyze impact]]
-      1. Review framework scope:
-```markdown
-# Framework Components
-- Protocol files (plx-*.md)
-- Process files (the-*.md)
-- System configuration
-- Documentation patterns
-```
-      2. Map dependencies:
-```markdown
-# Impact Analysis
-- Affected components
-- Cross-file dependencies
-- Behavioral changes
-- Integration points
-```
+2. WHEN [[GPT Agent]] STARTS configuration
+   1. THEN [[GPT Agent]] ANALYSE current settings
+      1. AND [[GPT Agent]] CHECK environment variables
+      2. AND [[GPT Agent]] CHECK config files
+      3. AND [[GPT Agent]] CHECK dependencies
+   2. IF [[conflicts]] ARE found
+      1. THEN [[GPT Agent]] DOCUMENT conflicts
+      2. AND [[GPT Agent]] PROPOSE solutions
 
-# 📝 Change Planning
+3. GIVEN [[analysis]] IS complete
+   1. THEN [[GPT Agent]] PREPARE changes
+      1. AND [[GPT Agent]] CREATE backup if needed
+      2. AND [[GPT Agent]] MODIFY settings
+      3. AND [[GPT Agent]] UPDATE dependencies
+   2. IF [[changes]] NEED validation
+      1. THEN [[GPT Agent]] CREATE validation plan
+      2. AND [[GPT Agent]] ADD test cases
 
-1. [[GPT Agent]] starts [[create change plan]]
-   1. [[create change plan]]
-      1. Document modifications:
-```markdown
-# Required Changes
-- Component: [name]
-  - Current behavior
-  - Proposed changes
-  - Expected outcome
-  - Dependencies affected
-```
-      2. Define update strategy:
-```markdown
-# Update Strategy
-- Order of changes
-- Validation steps
-- Rollback plan
-- Integration tests
-```
+4. WHEN [[changes]] ARE ready
+   1. THEN [[GPT Agent]] PRESENT to [[User]]
+      1. AND [[GPT Agent]] EXPLAIN changes
+      2. AND [[GPT Agent]] EXPLAIN impact
+   2. IF [[User]] APPROVES changes
+      1. THEN [[GPT Agent]] IMPLEMENT changes
+      2. AND [[GPT Agent]] VERIFY settings
+   3. IF [[User]] REQUESTS modifications
+      1. THEN [[GPT Agent]] UPDATE changes
+      2. AND [[GPT Agent]] PRESENT again
 
-2. [[GPT Agent]] starts [[verify plan]]
-   1. [[verify plan]]
-      1. Check completeness
-      2. Validate consistency
-      3. Confirm feasibility
-      4. IF [[plan incomplete]]
-         1. [[GPT Agent]] adds missing details
-
-# 🔄 Implementation
-
-1. [[GPT Agent]] starts [[apply changes]]
-   1. [[apply changes]]
-      1. Execute modifications:
-```markdown
-# Change Execution
-- Update configurations
-- Modify protocols
-- Adjust processes
-- Update documentation
-```
-      2. Verify changes:
-```markdown
-# Verification Steps
-- Check file consistency
-- Validate behavior
-- Test integrations
-- Document updates
-```
-
-2. [[GPT Agent]] presents changes to [[User]]
-
-3. [[User]] and [[GPT Agent]] enter [[feedback loop]]
-   1. [[feedback loop]]
-      1. IF [[User]] gives feedback
-         1. [[GPT Agent]] processes feedback
-      2. [[User]] and [[GPT Agent]] repeat until [[User]] approves
+5. GIVEN [[implementation]] IS complete
+   1. THEN [[GPT Agent]] VERIFY configuration
+      1. AND [[GPT Agent]] CHECK settings
+      2. AND [[GPT Agent]] CHECK dependencies
+      3. AND [[GPT Agent]] CHECK functionality
+   2. IF [[issues]] ARE found
+      1. THEN [[GPT Agent]] FIX issues
+      2. AND [[GPT Agent]] VERIFY again
+   3. IF [[changes]] ARE successful
+      1. THEN [[GPT Agent]] UPDATE documentation
+      2. AND [[GPT Agent]] INFORM [[User]]
