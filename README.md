@@ -188,12 +188,16 @@ PLX commands in `plx-*.md` files guide specific actions:
 | `plx-config` | Configure framework behavior | - Customizes framework<br>- Updates workspace<br>- Maintains consistency |
 | `plx-continue-and-follow-the-process` | Resume work with process adherence | - Reviews state<br>- Follows workflow<br>- Maintains focus |
 | `plx-create-doc` | Create new documentation | - Analyzes needs<br>- Creates structure<br>- Writes content |
+| `plx-create-milestone-gherkin-tests` | Create standardized milestone tests | - Creates test files<br>- Writes Gherkin tests<br>- Ensures test isolation |
 | `plx-create-milestones` | Define project milestones | - Plans phases<br>- Sets goals<br>- Tracks progress |
 | `plx-create-protocol` | Create new protocol | - Defines purpose<br>- Sets structure<br>- Documents steps |
 | `plx-create-ticket` | Create work ticket | - Describes task<br>- Sets requirements<br>- Defines criteria |
 | `plx-document-dart-file` | Document Dart code | - Analyzes code<br>- Writes docs<br>- Verifies format |
 | `plx-fix-errors` | Resolve code issues | - Analyzes errors<br>- Implements fixes<br>- Verifies solution |
 | `plx-focus` | Maintain task focus | - Reviews goals<br>- Checks alignment<br>- Maintains direction |
+| `plx-follow-development-workflow` | Realign with development workflow | - Checks position<br>- Identifies deviation<br>- Corrects course |
+| `plx-follow-planning-workflow` | Realign with planning workflow | - Checks position<br>- Identifies deviation<br>- Corrects course |
+| `plx-follow-test-workflow` | Realign with test workflow | - Checks position<br>- Identifies deviation<br>- Corrects course |
 | `plx-follow-the-docs` | Follow documentation guidelines | - Reviews docs<br>- Follows patterns<br>- Maintains standards |
 | `plx-log-hours` | Track work time | - Records time<br>- Notes progress<br>- Updates status |
 | `plx-pause-work` | Pause current work | - Saves state<br>- Documents progress<br>- Prepares handoff |
@@ -203,10 +207,11 @@ PLX commands in `plx-*.md` files guide specific actions:
 | `plx-resume-work` | Resume paused work | - Loads state<br>- Reviews context<br>- Continues tasks |
 | `plx-run-tests` | Execute test suite | - Runs tests<br>- Checks results<br>- Fixes issues |
 | `plx-scan-project-for-todo` | Find pending tasks | - Scans files<br>- Lists todos<br>- Updates list |
-| `plx-start-workflow` | Begin new workflow | - Sets up work<br>- Initializes state<br>- Starts process |
+| `plx-start-work` | Begin new workflow | - Sets up work<br>- Initializes state<br>- Starts process |
 | `plx-stick-to-the-process` | Maintain process adherence | - Checks workflow<br>- Verifies steps<br>- Stays aligned |
 | `plx-sync-work-documents` | Synchronize documentation | - Reviews docs<br>- Updates content<br>- Maintains consistency |
 | `plx-transfer-context` | Transfer work context | - Summarizes state<br>- Documents progress<br>- Enables handover |
+| `plx-update-read-me-and-changelog` | Update documentation | - Updates changelog<br>- Updates README<br>- Maintains consistency |
 | `plx-update-todo` | Update task list | - Reviews tasks<br>- Updates status<br>- Maintains progress |
 
 ## 📝 Agent Work Documents

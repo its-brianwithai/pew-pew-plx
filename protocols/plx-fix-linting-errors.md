@@ -6,7 +6,7 @@ gpt_action: follow these steps when fixing linting errors
 
 CONTEXT: The [[User]] notices linting errors in their project and wants you to systematically find and fix them.
 
-1. GIVEN [[User]] RUNS plx-fix-errors command
+1. GIVEN [[User]] RUNS plx-fix-linting-errors command
    1. THEN [[GPT Agent]] SCAN project
       1. AND [[GPT Agent]] FIND linting errors
       2. AND [[GPT Agent]] LIST errors

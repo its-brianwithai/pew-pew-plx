@@ -11,6 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 All notable changes to the Ultra Wide Turbo framework will be documented in this file.
 
+## [0.19.0] - 2024-01-08
+
+### ✨ Features:
+  - **✨ New:**
+    - Added new protocol `plx-create-milestone-gherkin-tests.md` for creating standardized Gherkin tests for milestones
+    - Added new protocol `plx-update-read-me-and-changelog.md` for managing documentation updates
+    - Added new protocol `plx-follow-development-workflow.md` for realigning with development workflow
+    - Added new protocol `plx-follow-planning-workflow.md` for realigning with planning workflow
+    - Added new protocol `plx-follow-test-workflow.md` for realigning with test workflow
+
+### 🛠️ Improvements:
+  - **✨ New:**
+    - Enhanced changelog formatting with standardized emoticons and categories
+
 ## [0.18.0] - 2024-01-08
 
 ### Added
@@ -122,7 +136,7 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
 
 ### Removed
 - Outdated protocols:
-  - plx-start
+  - plx-start-work
   - plx-document
   - plx-refine
   - plx-collect

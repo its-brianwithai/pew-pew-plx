@@ -6,7 +6,7 @@ gpt_action: follow these steps when starting work on a project
 
 CONTEXT: The [[User]] wants to start a new development task and needs you to build context and follow the structured development process.
 
-1. GIVEN [[User]] RUNS plx-start command
+1. GIVEN [[User]] RUNS plx-start-work command
    1. THEN [[GPT Agent]] SCAN project
       1. AND [[GPT Agent]] READ codebase
       2. AND [[GPT Agent]] READ documentation
