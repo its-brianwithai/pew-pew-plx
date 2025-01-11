@@ -1,66 +1,53 @@
 ---
 document_type: protocol
-goal: log work hours and progress in our-hours.md
+goal: log work hours and progress in your-hours.md
 gpt_action: follow these steps when logging work hours
 ---
 
-CONTEXT: The [[User]] notices you need to log work hours and wants you to record time spent and progress in the our-hours.md file.
+CONTEXT: The [[User]] notices you need to log work hours and wants you to record time spent and progress in the your-hours.md file.
 
-1. GIVEN [[User]] RUNS plx-log command
-   1. THEN [[GPT Agent]] ANALYSE [[User]] input
-      1. AND [[GPT Agent]] IDENTIFY time period
-      2. AND [[GPT Agent]] IDENTIFY work scope
-   2. IF [[User]] input HAS specific time
-      1. THEN [[GPT Agent]] FOCUS on period
-   3. IF [[User]] input HAS no specifics
-      1. THEN [[GPT Agent]] CHECK current session
+1. GIVEN [[User]] RUNS plx-log-hours command
+	1. THEN [[GPT Agent]] IDENTIFY work type
+		1. AND [[GPT Agent]] IDENTIFY work duration
+		2. AND [[GPT Agent]] IDENTIFY work progress
+		3. AND [[GPT Agent]] IDENTIFY work blockers
+		4. AND [[GPT Agent]] IDENTIFY work next steps
 
 2. WHEN [[GPT Agent]] STARTS logging
-   1. THEN [[GPT Agent]] CALCULATE hours
-      1. AND [[GPT Agent]] CHECK start time
-      2. AND [[GPT Agent]] CHECK end time
-      3. AND [[GPT Agent]] COMPUTE duration
-   2. IF [[breaks]] EXIST
-      1. THEN [[GPT Agent]] SUBTRACT break time
-      2. AND [[GPT Agent]] NOTE break details
+	1. THEN [[GPT Agent]] PREPARE log entry
+		1. AND [[GPT Agent]] ADD date
+		2. AND [[GPT Agent]] ADD time
+		3. AND [[GPT Agent]] ADD duration
+		4. AND [[GPT Agent]] ADD progress
+		5. AND [[GPT Agent]] ADD blockers
+		6. AND [[GPT Agent]] ADD next steps
 
-3. GIVEN [[hours]] ARE calculated
-   1. THEN [[GPT Agent]] PREPARE entry
-      1. AND [[GPT Agent]] ADD timestamp
-      2. AND [[GPT Agent]] ADD duration
-      3. AND [[GPT Agent]] ADD work summary
-   2. IF [[entry]] NEEDS context
-      1. THEN [[GPT Agent]] ADD task details
-      2. AND [[GPT Agent]] ADD progress notes
+3. GIVEN [[log entry]] IS prepared
+	1. THEN [[GPT Agent]] VERIFY log entry quality
+		1. AND [[GPT Agent]] CHECK date format
+		2. AND [[GPT Agent]] CHECK time format
+		3. AND [[GPT Agent]] CHECK duration format
+		4. AND [[GPT Agent]] CHECK progress clarity
+		5. AND [[GPT Agent]] CHECK blockers clarity
+		6. AND [[GPT Agent]] CHECK next steps clarity
 
-4. WHEN [[entry]] IS ready
-   1. THEN [[GPT Agent]] VERIFY details
-      1. AND [[GPT Agent]] CHECK time accuracy
-      2. AND [[GPT Agent]] CHECK work description
-      3. AND [[GPT Agent]] CHECK progress status
-   2. IF [[entry]] NEEDS correction
-      1. THEN [[GPT Agent]] FIX details
-      2. AND [[GPT Agent]] VERIFY again
+4. WHEN [[log entry]] IS verified
+	1. THEN [[GPT Agent]] ADD to [[your-hours]]
+		1. AND [[GPT Agent]] UPDATE total hours
+		2. AND [[GPT Agent]] UPDATE progress status
+		3. AND [[GPT Agent]] UPDATE blockers status
+		4. AND [[GPT Agent]] UPDATE next steps
 
-5. GIVEN [[entry]] IS verified
-   1. THEN [[GPT Agent]] PRESENT to [[User]]
-      1. AND [[GPT Agent]] SHOW time logged
-      2. AND [[GPT Agent]] SHOW work summary
-   2. IF [[User]] APPROVES entry
-      1. THEN [[GPT Agent]] ADD to [[our-hours]]
-      2. AND [[GPT Agent]] UPDATE total hours
-   3. IF [[User]] REQUESTS changes
-      1. THEN [[GPT Agent]] MODIFY entry
-      2. AND [[GPT Agent]] PRESENT again
+5. GIVEN [[log entry]] IS added
+	1. THEN [[GPT Agent]] VERIFY [[your-hours]]
+		1. AND [[GPT Agent]] CHECK total hours
+		2. AND [[GPT Agent]] CHECK progress status
+		3. AND [[GPT Agent]] CHECK blockers status
+		4. AND [[GPT Agent]] CHECK next steps
 
-6. WHEN [[entry]] IS saved
-   1. THEN [[GPT Agent]] VERIFY [[our-hours]]
-      1. AND [[GPT Agent]] CHECK entry format
-      2. AND [[GPT Agent]] CHECK hours total
-      3. AND [[GPT Agent]] CHECK chronology
-   2. IF [[issues]] ARE found
-      1. THEN [[GPT Agent]] FIX issues
-      2. AND [[GPT Agent]] VERIFY again
-   3. IF [[logging]] IS successful
-      1. THEN [[GPT Agent]] UPDATE work status
-      2. AND [[GPT Agent]] INFORM [[User]]
+6. WHEN [[your-hours]] IS verified
+	1. THEN [[GPT Agent]] CONFIRM logging complete
+		1. AND [[GPT Agent]] SHOW updated hours
+		2. AND [[GPT Agent]] SHOW progress status
+		3. AND [[GPT Agent]] SHOW blockers status
+		4. AND [[GPT Agent]] SHOW next steps

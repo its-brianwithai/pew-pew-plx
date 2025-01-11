@@ -1,0 +1,6 @@
+{
+  "content": "🔍 How We Create Documentation: A Structured Approach\n\nLet me walk you through our systematic approach to creating clear, consistent, and maintainable documentation. Here's what makes our docs special:\n\n1️⃣ Every document starts with a clear frontmatter:\n- document_type: [protocol|workflow|wiki|prompt|template]\n- goal: clear purpose statement\n- gpt_action: specific instructions\n\n2️⃣ We follow strict writing rules using Gherkin-style keywords:\n- GIVEN for preconditions\n- WHEN for actions\n- THEN for results\n- AND/OR for additional steps\n- IF/ELSE for conditionals\n\n3️⃣ Every step follows this format:\n- Starts with uppercase keyword\n- Uses [[double brackets]] for components\n- Has clear VERB or STATE\n- Maintains consistent hierarchy\n\n4️⃣ Code examples are always properly formatted:\n```dart\nvoid example() {\n  print('Hello World');\n}\n```\n\n5️⃣ Pro Tips 🔥\n- Keep steps atomic and clear\n- Use consistent formatting\n- Document while fresh\n- Link related concepts\n- Add real examples\n\n#documentation #bestpractices #coding #development",
+  "threadify": true,
+  "schedule_date": null,
+  "share": false
+} 

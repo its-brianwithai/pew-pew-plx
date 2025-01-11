@@ -24,17 +24,13 @@ CONTEXT: The [[User]] needs documentation updated to reflect completed work and 
       2. THEN [[GPT Agent]] ADD new version entry
    3. IF NOT
       1. THEN [[GPT Agent]] AMEND to current version
-   4. THEN [[GPT Agent]] FORMAT changes
-      1. AND [[GPT Agent]] CATEGORIZE under sections
-         1. AND [[GPT Agent]] USE "### ✨ Features:" IF has features
-         2. AND [[GPT Agent]] USE "### 🛠️ Improvements:" IF has improvements
-         3. AND [[GPT Agent]] USE "### 🐛 Bug fixes:" IF has bug fixes
-      2. AND [[GPT Agent]] ADD subcategories ONLY IF they have content
-         1. AND [[GPT Agent]] USE "**✨ New:**" IF has new items
-         2. AND [[GPT Agent]] USE "**⚠️ Breaking:**" IF has breaking changes
-         3. AND [[GPT Agent]] USE "**🐛️ Bugfix:**" IF has bug fixes
-      3. AND [[GPT Agent]] NEVER add empty sections
-      4. AND [[GPT Agent]] ADD date IF new version
+   4. THEN [[GPT Agent]] FORMAT changes using ONLY these sections:
+      1. AND [[GPT Agent]] USE "### ✨ Features:" for new features
+      2. AND [[GPT Agent]] USE "### 🛠️ Improvements:" for improvements
+      3. AND [[GPT Agent]] USE "### 🐛 Bug fixes:" for bug fixes
+      4. AND [[GPT Agent]] ADD "💥 Breaking:" prefix to items ONLY when they break existing functionality
+      5. AND [[GPT Agent]] NEVER add empty sections
+      6. AND [[GPT Agent]] ADD date IF new version
 
 3. GIVEN [[User]] REQUESTS version update
    1. THEN [[GPT Agent]] UPDATE pubspec.yaml

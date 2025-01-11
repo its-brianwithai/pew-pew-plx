@@ -8,7 +8,8 @@
 3. [Development Workflow](#-development-workflow)
 4. [PLX Commands](#-plx-commands)
 5. [Agent Work Documents](#-agent-work-documents)
-6. [Wiki](#-wiki)
+6. [API Integrations](#-api-integrations)
+7. [Wiki](#-wiki)
 
 ## 🔍 Quick Start
 
@@ -33,11 +34,13 @@ The script will:
    - Templates
    - Wiki
    - Prompts
+   - API Integrations
 
 3. Create the workspace with:
    - Selected components
    - Empty CHANGELOG.md
    - Empty README.md
+   - API configuration files (if selected)
 
 You can also provide a custom name when prompted. You can find your workspaces in the `workspaces` folder.
 
@@ -68,6 +71,25 @@ We believe AI agents perform at their best when three key elements align:
    - Active context awareness
    - Proper state management
    - Seamless agent handover
+
+## 📚 API Integrations
+
+The framework includes several API integrations for content management and media:
+
+### Content Management
+- **Ghost API**: Blog content management and publishing
+- **Typefully API**: Social media content scheduling and thread creation
+
+### Media Management
+- **Unsplash API**: High-quality photo integration
+- **Pexels API**: Stock photo integration
+- **Giphy API**: GIF content integration
+
+Each API integration includes:
+- Environment variable configuration
+- Authentication handling
+- Error management
+- Usage documentation
 
 ## 📚 Core Pillars
 
@@ -181,38 +203,49 @@ PLX commands in `plx-*.md` files guide specific actions:
 
 | Protocol | Purpose | Key Actions |
 |----------|---------|-------------|
-| `plx-ask-big-brother` | Get help from more capable agent | - Details current issue<br>- Provides context<br>- Lists attempts<br>- Gets guidance |
-| `plx-ask-questions` | Gather necessary information | - Identifies gaps<br>- Asks clear questions<br>- Validates understanding |
-| `plx-check-todo` | Review todo list status | - Scans todo items<br>- Checks completion<br>- Updates progress |
-| `plx-commit` | Handle git commits | - Reviews changes<br>- Formats messages<br>- Executes commit |
-| `plx-config` | Configure framework behavior | - Customizes framework<br>- Updates workspace<br>- Maintains consistency |
-| `plx-continue-and-follow-the-process` | Resume work with process adherence | - Reviews state<br>- Follows workflow<br>- Maintains focus |
-| `plx-create-doc` | Create new documentation | - Analyzes needs<br>- Creates structure<br>- Writes content |
-| `plx-create-milestone-gherkin-tests` | Create standardized milestone tests | - Creates test files<br>- Writes Gherkin tests<br>- Ensures test isolation |
-| `plx-create-milestones` | Define project milestones | - Plans phases<br>- Sets goals<br>- Tracks progress |
-| `plx-create-protocol` | Create new protocol | - Defines purpose<br>- Sets structure<br>- Documents steps |
-| `plx-create-ticket` | Create work ticket | - Describes task<br>- Sets requirements<br>- Defines criteria |
-| `plx-document-dart-file` | Document Dart code | - Analyzes code<br>- Writes docs<br>- Verifies format |
-| `plx-fix-errors` | Resolve code issues | - Analyzes errors<br>- Implements fixes<br>- Verifies solution |
-| `plx-focus` | Maintain task focus | - Reviews goals<br>- Checks alignment<br>- Maintains direction |
-| `plx-follow-development-workflow` | Realign with development workflow | - Checks position<br>- Identifies deviation<br>- Corrects course |
-| `plx-follow-planning-workflow` | Realign with planning workflow | - Checks position<br>- Identifies deviation<br>- Corrects course |
-| `plx-follow-test-workflow` | Realign with test workflow | - Checks position<br>- Identifies deviation<br>- Corrects course |
-| `plx-follow-the-docs` | Follow documentation guidelines | - Reviews docs<br>- Follows patterns<br>- Maintains standards |
-| `plx-log-hours` | Track work time | - Records time<br>- Notes progress<br>- Updates status |
-| `plx-pause-work` | Pause current work | - Saves state<br>- Documents progress<br>- Prepares handoff |
-| `plx-prepare-content` | Create content | - Plans content<br>- Creates drafts<br>- Reviews quality |
-| `plx-prepare-release` | Prepare version release | - Reviews changes<br>- Updates docs<br>- Creates release |
-| `plx-refresh-context` | Update work context | - Reviews state<br>- Updates context<br>- Maintains focus |
-| `plx-resume-work` | Resume paused work | - Loads state<br>- Reviews context<br>- Continues tasks |
-| `plx-run-tests` | Execute test suite | - Runs tests<br>- Checks results<br>- Fixes issues |
-| `plx-scan-project-for-todo` | Find pending tasks | - Scans files<br>- Lists todos<br>- Updates list |
-| `plx-start-work` | Begin new workflow | - Sets up work<br>- Initializes state<br>- Starts process |
-| `plx-stick-to-the-process` | Maintain process adherence | - Checks workflow<br>- Verifies steps<br>- Stays aligned |
-| `plx-sync-work-documents` | Synchronize documentation | - Reviews docs<br>- Updates content<br>- Maintains consistency |
-| `plx-transfer-context` | Transfer work context | - Summarizes state<br>- Documents progress<br>- Enables handover |
-| `plx-update-read-me-and-changelog` | Update documentation | - Updates changelog<br>- Updates README<br>- Maintains consistency |
-| `plx-update-todo` | Update task list | - Reviews tasks<br>- Updates status<br>- Maintains progress |
+| API Integration Commands |||
+| `plx-use-ghost-api` | Interact with Ghost API | - Create blog posts<br>- Manage content<br>- Handle publishing |
+| `plx-use-typefully-api` | Interact with Typefully API | - Create social threads<br>- Schedule content<br>- Manage drafts |
+| `plx-use-unsplash-api` | Interact with Unsplash API | - Search photos<br>- Download images<br>- Track attribution |
+| `plx-use-pexels-api` | Interact with Pexels API | - Search stock photos<br>- Download images<br>- Handle licensing |
+| `plx-use-giphy-api` | Interact with Giphy API | - Search GIFs<br>- Download content<br>- Manage attribution |
+| Content Creation Commands |||
+| `plx-create-feature-breakdown` | Create feature documentation | - Define structure<br>- Document components<br>- Add examples |
+| `plx-create-tutorial` | Create tutorial content | - Structure sections<br>- Add placeholders<br>- Include examples |
+| `plx-post-to-typefully` | Post social content | - Format threads<br>- Schedule posts<br>- Add media |
+| `plx-add-pexels` | Add stock photos | - Search images<br>- Download content<br>- Add attribution |
+| `plx-add-gifs` | Add GIF content | - Search GIFs<br>- Insert content<br>- Add attribution |
+| Workflow Commands |||
+| `plx-activate-code-red` | Emergency research mode | - Stop work<br>- Block changes<br>- Research systematically |
+| `plx-follow-development-workflow` | Follow development process | - Check position<br>- Verify steps<br>- Maintain flow |
+| `plx-follow-planning-workflow` | Follow planning process | - Review requirements<br>- Create milestones<br>- Plan tasks |
+| `plx-follow-test-workflow` | Follow testing process | - Run tests<br>- Check coverage<br>- Fix issues |
+| Documentation Commands |||
+| `plx-create-doc` | Create documentation | - Structure content<br>- Add sections<br>- Include examples |
+| `plx-create-protocol` | Create new protocol | - Define purpose<br>- Set structure<br>- Document steps |
+| `plx-document-dart-file` | Document Dart code | - Add comments<br>- Document methods<br>- Include examples |
+| Task Management Commands |||
+| `plx-create-todo` | Create task list | - Break down tasks<br>- Set priorities<br>- Track progress |
+| `plx-check-todo` | Review task status | - Check completion<br>- Update progress<br>- Note blockers |
+| `plx-update-todo` | Update task list | - Add new tasks<br>- Mark completed<br>- Update status |
+| Process Commands |||
+| `plx-start-work` | Begin new task | - Initialize state<br>- Set up context<br>- Begin workflow |
+| `plx-pause-work` | Pause current task | - Save state<br>- Document progress<br>- Note next steps |
+| `plx-resume-work` | Resume paused task | - Load state<br>- Review context<br>- Continue work |
+| `plx-focus` | Maintain task focus | - Check alignment<br>- Remove distractions<br>- Stay on track |
+| Testing Commands |||
+| `plx-create-milestone-gherkin-tests` | Create milestone tests | - Write scenarios<br>- Define steps<br>- Add assertions |
+| `plx-run-tests` | Execute test suite | - Run tests<br>- Check results<br>- Report issues |
+| `plx-test-live` | Test in production | - Verify behavior<br>- Check performance<br>- Monitor errors |
+| Utility Commands |||
+| `plx-ask-questions` | Gather information | - Identify gaps<br>- Ask clearly<br>- Verify understanding |
+| `plx-explain-yourself` | Document understanding | - Explain issue<br>- Propose solution<br>- Get approval |
+| `plx-log-hours` | Track work time | - Record time<br>- Note progress<br>- Update status |
+| `plx-commit` | Handle git commits | - Review changes<br>- Format message<br>- Execute commit |
+| Maintenance Commands |||
+| `plx-update-translations` | Update translations | - Find strings<br>- Update files<br>- Verify changes |
+| `plx-fix-linting-errors` | Fix code style | - Find errors<br>- Apply fixes<br>- Verify style |
+| `plx-update-read-me-and-changelog` | Update documentation | - Add changes<br>- Update versions<br>- Maintain docs |
 
 ## 📝 Agent Work Documents
 
@@ -451,3 +484,16 @@ This document is created by the `plx-transfer` protocol to enable seamless hando
 - Current work state across all documents
 - Clear next steps and any blockers
 - User preferences and requirements
+
+### your-hours.md
+
+```markdown
+---
+---
+document_type: agent work document
+goal: track work hours and progress
+gpt_action: log your hours worked
+---
+
+- [ ] 
+```

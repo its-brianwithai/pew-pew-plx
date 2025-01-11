@@ -4,7 +4,7 @@ goal: create Gherkin tests specifically for milestone acceptance criteria
 gpt_action: follow these steps when creating Gherkin tests for milestones
 ---
 
-CONTEXT: The [[User]] needs standardized Gherkin tests created specifically for milestone acceptance criteria in separate test files and wants you to create only the tests that directly validate milestone requirements.
+CONTEXT: The [[User]] needs standardized Gherkin tests created specifically for milestone acceptance criteria. Each milestone must have its own separate test file.
 
 1. GIVEN [[GPT Agent]] READS [[your-milestones]]
    1. THEN [[GPT Agent]] IDENTIFY each [[milestone]]

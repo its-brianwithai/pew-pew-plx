@@ -11,51 +11,91 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 All notable changes to the Ultra Wide Turbo framework will be documented in this file.
 
+## [0.20.0] - 2024-01-11
+
+### ✨ Features:
+- Added new API integrations in `apis` folder:
+  - Typefully API for social media content management
+  - Unsplash API for high-quality photo integration
+  - Ghost API for blog content management
+  - Giphy API for GIF content integration
+  - Pexels API for stock photo integration
+- Added new protocols for API usage:
+  - `plx-use-typefully-api.md` for Typefully API interactions
+  - `plx-use-unsplash-api.md` for Unsplash API interactions
+  - `plx-use-ghost-api.md` for Ghost API interactions
+  - `plx-use-giphy-api.md` for Giphy API interactions
+  - `plx-use-pexels-api.md` for Pexels API interactions
+- Added new protocols for content creation:
+  - `plx-create-feature-breakdown.md` for feature documentation
+  - `plx-create-tutorial.md` for tutorial creation
+  - `plx-post-to-typefully.md` for social media posting
+  - `plx-add-pexels.md` for adding stock photos
+  - `plx-add-gifs.md` for adding GIF content
+
+### 🛠️ Improvements:
+- Updated wiki documentation with new guidelines:
+  - Enhanced `how-we-create-tutorials.md` with image placeholders and style guidelines
+  - Updated `how-we-create-feature-breakdowns.md` with improved structure
+  - Added `how-we-create-docs.md` with documentation best practices
+- Enhanced API integration structure with:
+  - Standardized environment variable handling
+  - Consistent error handling
+  - Proper credential management
+  - Comprehensive test coverage
+
 ## [0.19.0] - 2024-01-08
 
 ### ✨ Features:
-  - **✨ New:**
-    - Added new protocol `plx-create-milestone-gherkin-tests.md` for creating standardized Gherkin tests for milestones
-    - Added new protocol `plx-update-read-me-and-changelog.md` for managing documentation updates
-    - Added new protocol `plx-follow-development-workflow.md` for realigning with development workflow
-    - Added new protocol `plx-follow-planning-workflow.md` for realigning with planning workflow
-    - Added new protocol `plx-follow-test-workflow.md` for realigning with test workflow
+- Added new `apis` folder for API configurations with Ghost API documentation
+- Added new protocol `plx-update-translations.md` for managing project translations and string localization
+- Added new protocol `plx-explain-yourself.md` for thorough issue explanation and solution proposal
+- Added new protocol `plx-activate-code-red.md` for emergency research mode with work stoppage
+- Added new protocol `plx-do.md` for executing high priority user tasks with perfect focus
+- Added new protocol `plx-create-blog.md` for creating Ghost API compatible blog posts
+- Added new protocol `plx-create-typefully.md` for creating Typefully API compatible social media content
+- Added `content` folder structure for organizing posts and media
+- Added new protocol `plx-create-milestone-gherkin-tests.md` for creating standardized Gherkin tests for milestones
+- Added new protocol `plx-update-read-me-and-changelog.md` for managing documentation updates
+- Added new protocol `plx-follow-development-workflow.md` for realigning with development workflow
+- Added new protocol `plx-follow-planning-workflow.md` for realigning with planning workflow
+- Added new protocol `plx-follow-test-workflow.md` for realigning with test workflow
+- Added new protocol `plx-create-todo.md` for creating todo lists from user input
+- Added new protocol `plx-test-live.md` for testing implementations live with users
 
 ### 🛠️ Improvements:
-  - **✨ New:**
-    - Enhanced changelog formatting with standardized emoticons and categories
+- Updated API documentation references in protocols for consistency
+  - Changed `'@Ghost Docs' API documentation` to `@Ghost API documentation`
+  - Changed `'@Typefully API'` to `@Typefully API`
+- Renamed `our-hours.md` to `your-hours.md` for consistency with "your" document naming convention
+- Updated all references to hours logging in protocols and documentation
+- Updated `plx-log-hours.md` protocol to reflect new file name
+- Enhanced changelog formatting with standardized emoticons and categories
+- Enhanced test file organization with one focused file per milestone
+- Improved test file guidelines emphasizing small, focused test files
 
 ## [0.18.0] - 2024-01-08
 
-### Added
-- New protocol structure and organization:
-  - Added new protocol files for better task management
-  - Enhanced documentation patterns
-  - Improved workflow organization
-- New wiki documentation structure:
-  - Migrated knowledge base to wiki format
-  - Added detailed how-to guides
-  - Enhanced documentation accessibility
+### ✨ Features:
+- Added new protocol structure and organization
+- Added new wiki documentation structure
+- Enhanced documentation patterns
+- Improved workflow organization
 
-### Changed
-- Restructured protocol files:
-  - Removed redundant protocols
-  - Unified naming conventions
-  - Enhanced protocol clarity
-- Improved file organization:
-  - Moved knowledge base to wiki structure
-  - Updated documentation patterns
-  - Enhanced cross-referencing
-
-### Removed
-- Deprecated protocol files:
-  - Removed redundant plx commands
-  - Cleaned up outdated protocols
-  - Consolidated similar functionalities
+### 🛠️ Improvements:
+- Restructured protocol files
+- Unified naming conventions
+- Enhanced protocol clarity
+- Improved file organization
+- Updated documentation patterns
+- Enhanced cross-referencing
+- 💥 Breaking: Removed redundant protocols
+- 💥 Breaking: Cleaned up outdated protocols
+- 💥 Breaking: Consolidated similar functionalities
 
 ## [0.17.0] - 2024-01-08
 
-### Changed
+### 🛠️ Improvements:
 - Split development workflow into separate files:
   - Moved planning phase to `the-planning-workflow.md`
   - Moved development phase to `the-development-workflow.md`
@@ -67,49 +107,35 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
 
 ## [0.16.0] - 2024-01-08
 
-### Added
-- New `plx-transfer` protocol for seamless agent handover
-- New `your-transfer.md` template for context transfer between agents
+### ✨ Features:
+- Added new `plx-transfer` protocol for seamless agent handover
+- Added new `your-transfer.md` template for context transfer between agents
 - Added Transfer as fourth core pillar in framework
 - Added seamless agent handover to framework features
 - Added `scripts/create_workspace.sh` for automated workspace creation
-  - Interactive component selection
-  - Smart workspace naming with date-based suffixes
-  - Kebab case conversion for user input
-  - Selective component copying based on user choice
 
-### Changed
+### 🛠️ Improvements:
 - Updated README.md with transfer protocol documentation
 - Enhanced PLX Commands table with transfer protocol details
-- Modified workspace creation script to use custom base names
-  - Now accepts user input for base name (e.g., "my-project-0801-wed-01")
+- Modified workspace creation script:
+  - Now accepts user input for base name
   - Maintains date and sequential numbering format
   - Default base name remains "turbo-workspace"
 
 ## [0.15.0] - 2024-01-08
 
-### Added
-- New templates in `/templates`:
+### ✨ Features:
+- Added new templates in `/templates`:
   - `the-task-template.md`
   - `the-story-template.md`
   - `the-bug-template.md`
   - `the-requirements-template.md`
-- Enhanced development workflow documentation:
-  - Updated `the-development-workflow.md` with clear phases
-  - Improved agent work documents:
-    - `your-requirements.md` with comprehensive structure
-    - `your-ticket.md` with detailed sections
-    - `your-todo-list.md` with milestone tracking
-- New workspace creation script:
-  - Added `scripts/create_workspace.sh`
-  - Interactive component selection
-  - Automatic kebab-case folder naming
-  - Copies framework files to new workspace
-  - Creates workspace in parent directory
-  - Visual feedback during creation
+- Added new workspace creation script with interactive features
 
-### Changed
-- Restructured agent work documents to follow consistent format:
+### 🛠️ Improvements:
+- Enhanced development workflow documentation
+- Improved agent work documents structure
+- Restructured agent work documents with consistent format:
   - Clear metadata headers
   - Emoji-based section headers
   - Detailed section descriptions
@@ -118,24 +144,20 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
 
 ## [0.14.0] - 2024-01-08
 
-### Added
-- New protocol structure following `how_we_create_docs.md` template
-- Actor/action syntax using double brackets
-- Hierarchical relationships between actions
-- Conditional flows with IF statements
-- Feedback loop integration in all protocols
-- Markdown code blocks for structured data
+### ✨ Features:
+- Added new protocol structure following `how_we_create_docs.md` template
+- Added actor/action syntax using double brackets
+- Added hierarchical relationships between actions
+- Added conditional flows with IF statements
+- Added feedback loop integration in all protocols
 
-### Changed
-- Restructured all protocols to follow consistent format:
-  - Clear goal and gpt_action in metadata
-  - Emoji-based section headers
-  - Hierarchical action structure
-  - Structured data templates
-  - User feedback integration
-
-### Removed
-- Outdated protocols:
+### 🛠️ Improvements:
+- Restructured all protocols with consistent format
+- Updated all protocols with clear goals and actions
+- Improved process flow visualization
+- Enhanced error handling
+- Added structured data templates
+- 💥 Breaking: Removed outdated protocols:
   - plx-start-work
   - plx-document
   - plx-refine
@@ -145,214 +167,110 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
   - plx-finish
   - plx-reset
 
-### Updated Protocols
-- `plx-add`: Content addition workflow
-- `plx-ask`: Self-check information process
-- `plx-ask-smarter-agent`: Smarter agent interaction
-- `plx-commit`: Git commit handling
-- `plx-config`: Framework configuration
-- `plx-content`: Content creation process
-- `plx-context`: Conversation context building
-- `plx-dart-document`: Dart documentation creation
-- `plx-focus`: Task evaluation
-- `plx-log`: Work activity recording
-- `plx-pause`: State preservation
-- `plx-release`: Release execution
-- `plx-resume`: Work continuation
-- `plx-stick-to-the-process`: Workflow realignment
-- `plx-sync`: Work alignment verification
-- `plx-test`: Testing process execution
-
-### Improved
-- Clear separation of concerns in protocols
-- Consistent documentation patterns
-- Better process flow visualization
-- Enhanced error handling
-- Structured data templates
-- User interaction patterns
-
-### Development Workflow
-- Implemented clear planning phase
-- Structured development process
-- Defined release procedures
-- Added test-driven development support
-- Integrated continuous feedback loops 
-
 ## [0.13.0] - 2023-12-20
 
-### Added
-- New `_plx-scan.md` protocol for comprehensive repository scanning and context updating
-- Protocol includes steps for analyzing repository structure, core files, and updating all context files
+### ✨ Features:
+- Added new `_plx-scan.md` protocol for comprehensive repository scanning
+- Added context updating functionality
 
 ## [0.12.0] - 2023-12-20
 
-### Changed
-- Simplified all PLX protocol files to be more concise and task-focused
-- Removed redundant sections and complex status indicators
-- Updated protocol formats to use clear task lists with checkboxes
+### 🛠️ Improvements:
+- Simplified all PLX protocol files
+- Updated protocol formats with clear task lists
 - Improved protocol readability and maintainability
-
-### Removed
-- Removed complex file structure references (*.context.md, *.history.md)
-- Removed redundant verification sections
-- Removed `_plx-ask-other-agent.md` protocol
-- Removed `simple-todo-todo.md`
+- 💥 Breaking: Removed complex file structure references
+- 💥 Breaking: Removed redundant verification sections
+- 💥 Breaking: Removed `_plx-ask-other-agent.md` protocol
+- 💥 Breaking: Removed `simple-todo-todo.md`
 
 ## [0.11.0] - 2023-12-20
 
-### Added
-- Added creation date to README.md
-- Fixed historical dates in CHANGELOG.md to reflect actual project creation
+### ✨ Features:
+- Added new `plx-stick-to-the-process` protocol
+- Added new task process workflow in system prompt
 
-### Changed
-- Updated documentation to reflect correct project timeline
-- Improved version history accuracy
-
-### Added
-- New `plx-stick-to-the-process` protocol to help agent stay focused
-- New task process workflow in system prompt
-- Updated README to reflect new workflow
-
-### Changed
+### 🛠️ Improvements:
+- Updated documentation with correct project timeline
 - Simplified system prompt to focus on core workflow
-- Updated README's system prompt section
-- Made PLX commands clearer in documentation
-
-### Fixed
-- Clarified that PLX commands are user tools
 - Improved process adherence guidance
 - Made task workflow more explicit
 
 ## [0.10.0] - 2023-12-19
 
-### Added
-- Content collection protocol:
-  - Added plx-content command
-  - Structured content package template
-  - Social media content preparation
-  - Educational content focus
-  - Technical documentation integration
+### 🛠️ Improvements:
+- Enhanced documentation patterns
+- Improved workflow organization
+- Better process adherence
 
 ## [0.9.0] - 2023-12-19
 
-### Changed
-- Updated system prompt to focus on milestone-based workflow
-- Simplified protocol usage section in README
-- Updated response formats to focus on milestone completion and blockers
-- Clarified interaction points at milestone boundaries
-- Improved framework file organization:
-  - Added underscore prefix to framework files
-  - Updated copy-framework.sh to handle underscore transformation
-  - Enhanced archive.sh to use parent directory as default
-  - Improved archive organization with timestamps
+### ✨ Features:
+- Added new milestone-based development flow
+- Added clear milestone completion format
+- Added structured blocker reporting format
 
-### Added
-- New milestone-based development flow in system prompt
-- Clear milestone completion format
-- Structured blocker reporting format
-- Better framework file handling:
-  - Easier @tag completion in IDEs
-  - Cleaner framework file copying
-  - Improved archive structure
-  - Better default paths
+### 🛠️ Improvements:
+- Updated system prompt for milestone-based workflow
+- Improved framework file organization
+- Enhanced archive organization with timestamps
 
 ## [0.8.0] - 2023-12-19
 
-### Added
-- Framework copy script:
-  - Added copy-framework.sh
-  - Copy all framework files to target
-  - Default to parent directory
-  - Preserve file structure
+### ✨ Features:
+- Added framework copy script (copy-framework.sh)
+- Added file structure preservation features
 
 ## [0.7.0] - 2023-12-19
 
-### Added
-- Complete archival system:
-  - Added archive.sh script
-  - Archive all files, not just personal ones
-  - Preserve file frontmatter on reset
-  - Maintain full workspace history
+### ✨ Features:
+- Added complete archival system with archive.sh script
+- Added full workspace history maintenance
 
 ## [0.6.0] - 2023-12-19
 
-### Added
-- Initial input tracking:
-  - Added your-initial-input.md
-  - Store project starting point
-  - Track original requirements
-  - Document initial analysis
+### ✨ Features:
+- Added initial input tracking with your-initial-input.md
+- Added project starting point documentation
 
 ## [0.5.0] - 2023-12-19
 
-### Changed
-- Integrated hours logging:
-  - Added our-hours.md to archive process
-  - Updated reset protocol for hours
-  - Streamlined file management
-  - Enhanced workspace structure
+### 🛠️ Improvements:
+- Integrated hours logging system
+- Updated reset protocol for hours
+- Enhanced workspace structure
 
 ## [0.4.0] - 2023-12-19
 
-### Added
-- Work hours logging system:
-  - Added plx-log protocol
-  - Created our-hours.md template
-  - Structured time tracking
-  - Progress monitoring
+### ✨ Features:
+- Added work hours logging system
+- Added plx-log protocol
+- Added your-hours.md template
 
 ## [0.3.0] - 2023-12-19
 
-### Changed
-- Restricted file access in protocols:
-  - Limited to "your-" prefixed files only
-  - Removed process file modifications
-  - Prevented new file creation
-  - Clarified file access rules
+### 🛠️ Improvements:
+- 💥 Breaking: Restricted file access in protocols to "your-" prefixed files
+- 💥 Breaking: Removed process file modifications
+- 💥 Breaking: Prevented new file creation
 
 ## [0.2.0] - 2023-12-19
 
-### Changed
-- Enhanced state management:
-  - Updated plx-pause protocol to focus on file updates
-  - Updated plx-resume protocol to focus on file reading
-  - Removed redundant context handling
-  - Improved workflow clarity 
-
-### Added
-- Automatic optimization triggers:
-  - Added file size monitoring
-  - Set 100-line threshold for optimization
-  - Added pre/post milestone triggers
-  - Integrated with core workflows 
+### 🛠️ Improvements:
+- Enhanced state management with updated protocols
+- Added automatic optimization triggers
+- Improved workflow clarity
 
 ## [0.1.0] - 2023-12-19
 
-### Added
-- Initial framework setup:
-  - Core documentation structure
-  - Basic workflow protocols
-  - File templates
-  - Utility scripts
-- Work hours logging system:
-  - Added plx-log protocol
-  - Created our-hours.md template
-  - Structured time tracking
-  - Progress monitoring
-- Framework copy script:
-  - Added copy-framework.sh
-  - Copy all framework files to target
-  - Default to parent directory
-  - Preserve file structure
-- Complete archival system:
-  - Added archive.sh script
-  - Archive all files
-  - Preserve file frontmatter
-  - Maintain workspace history
+### ✨ Features:
+- Initial framework setup with core documentation
+- Added work hours logging system
+- Added framework copy script
+- Added complete archival system
 
-### Changed
-- First implementation:
-  - Basic system prompt
-  - Simple workflow
-  - Core protocols
-  - Essential documentation 
+### 🛠️ Improvements:
+- Implemented basic system prompt
+- Added simple workflow
+- Added core protocols
+- Added essential documentation 

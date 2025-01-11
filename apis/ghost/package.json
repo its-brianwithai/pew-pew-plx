@@ -1,0 +1,39 @@
+{
+  "name": "ghost-publisher",
+  "version": "1.0.0",
+  "description": "Script to publish markdown files as blog posts to Ghost",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "ghost",
+    "blog",
+    "markdown",
+    "publish"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/marked": "^5.0.2",
+    "@types/node": "^22.10.4",
+    "commander": "^13.0.0",
+    "dotenv": "^16.4.7",
+    "gray-matter": "^4.0.3",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "marked": "^15.0.5",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
