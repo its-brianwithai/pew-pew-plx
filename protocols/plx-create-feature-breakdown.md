@@ -32,7 +32,7 @@ CONTEXT: The [[User]] wants to create a new feature breakdown and needs you to h
    1. THEN [[GPT Agent]] CREATE file in features directory
       ```markdown
       # File Location
-      features/title-in-lowercase-with-dashes.md
+      feature-breakdowns/title-in-lowercase-with-dashes.md
       ```
    2. THEN [[GPT Agent]] ADD frontmatter
       ```markdown

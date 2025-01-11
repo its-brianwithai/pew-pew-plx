@@ -194,6 +194,25 @@ Each workflow follows a structured approach with clear steps and checkpoints to 
 
 The wiki category that contains documents that describe various concepts to the agent for reference:
 
+### 📝 Case Studies
+The framework includes a dedicated `case-studies` directory for showcasing projects and learnings:
+- Professional case study format
+- Value-focused content structure
+- Platform-specific optimization
+- Rich media integration
+- Metrics and testimonials
+
+Each case study follows a standard structure:
+1. Executive Summary
+2. Challenge
+3. Solution
+4. Implementation
+5. Results
+6. Key Learnings
+7. Testimonials
+
+### 📝 Insights
+
 ## 💻 PLX Commands
 
 PLX commands in `plx-*.md` files guide specific actions:
@@ -212,6 +231,8 @@ PLX commands in `plx-*.md` files guide specific actions:
 | Content Creation Commands |||
 | `plx-create-feature-breakdown` | Create feature documentation | - Define structure<br>- Document components<br>- Add examples |
 | `plx-create-tutorial` | Create tutorial content | - Structure sections<br>- Add placeholders<br>- Include examples |
+| `plx-create-insight` | Create concise how-to content | - Structure content<br>- Add examples<br>- Follow format |
+| `plx-create-case-study` | Create engaging case studies | - Structure content<br>- Add metrics<br>- Platform optimize |
 | `plx-post-to-typefully` | Post social content | - Format threads<br>- Schedule posts<br>- Add media |
 | `plx-add-pexels` | Add stock photos | - Search images<br>- Download content<br>- Add attribution |
 | `plx-add-gifs` | Add GIF content | - Search GIFs<br>- Insert content<br>- Add attribution |

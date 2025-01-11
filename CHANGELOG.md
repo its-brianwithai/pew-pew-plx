@@ -11,6 +11,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 All notable changes to the Ultra Wide Turbo framework will be documented in this file.
 
+## [0.22.0] - 2024-01-11
+
+### ✨ Features:
+- Added new case studies system with dedicated `case-studies` directory
+- Added new protocol `plx-create-case-study.md` for creating engaging case studies
+- Added structured case study format with sections for:
+  - Executive Summary
+  - Challenge
+  - Solution
+  - Implementation
+  - Results
+  - Key Learnings
+  - Testimonials
+- Added platform-specific optimization for website and LinkedIn content
+
+### 🛠️ Improvements:
+- Enhanced workspace creation script with new directories:
+  - Added `feature-breakdowns` directory
+  - Added `tutorials` directory
+  - Added `case-studies` directory
+  - Added `insights` directory
+  - Added `apis` directory
+  - Added `scripts` directory
+- Removed outdated `our-*.md` files from workspace creation
+
+## [0.21.0] - 2024-01-11
+
+### ✨ Features:
+- Added new insights system with dedicated `insights` directory
+- Added new protocol `plx-create-insight.md` for generating concise how-to content
+- Added structured insight content format with clear sections and examples
+
+### 🛠️ Improvements:
+- Enhanced documentation with image placeholders and style guidelines
+- Improved documentation structure and organization
+- Added clear guidelines for insight content creation
+
 ## [0.20.0] - 2024-01-11
 
 ### ✨ Features:

@@ -47,6 +47,12 @@ components=(
     "Templates"
     "Wiki"
     "Prompts"
+    "APIs"
+    "Insights"
+    "Scripts"
+    "Feature Breakdowns"
+    "Tutorials"
+    "Case Studies"
 )
 
 # Show components and get selection
@@ -67,7 +73,7 @@ if [ -z "$include_nums" ]; then
         echo "✓ $component"
     done
 else
-    for i in {1..6}; do
+    for i in {1..12}; do
         if [[ "$include_nums" == *"$i"* ]]; then
             selected+=("${components[$((i-1))]}")
             echo "✓ ${components[$((i-1))]}"
@@ -139,7 +145,6 @@ for component in "${selected[@]}"; do
     case "$component" in
         "Agent Work Documents")
             cp "$REPO_ROOT"/your-*.md "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No agent work documents found to copy"
-            cp "$REPO_ROOT"/our-*.md "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No template documents found to copy"
             ;;
         "Protocols")
             cp -r "$REPO_ROOT/protocols" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No protocols found to copy"
@@ -155,6 +160,24 @@ for component in "${selected[@]}"; do
             ;;
         "Prompts")
             cp -r "$REPO_ROOT/prompts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No prompts found to copy"
+            ;;
+        "APIs")
+            cp -r "$REPO_ROOT/apis" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No APIs found to copy"
+            ;;
+        "Insights")
+            cp -r "$REPO_ROOT/insights" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No insights found to copy"
+            ;;
+        "Scripts")
+            cp -r "$REPO_ROOT/scripts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No scripts found to copy"
+            ;;
+        "Feature Breakdowns")
+            cp -r "$REPO_ROOT/feature-breakdowns" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No feature breakdowns found to copy"
+            ;;
+        "Tutorials")
+            cp -r "$REPO_ROOT/tutorials" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No tutorials found to copy"
+            ;;
+        "Case Studies")
+            cp -r "$REPO_ROOT/case-studies" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No case studies found to copy"
             ;;
     esac
 done
