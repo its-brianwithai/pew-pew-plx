@@ -1,10 +1,10 @@
 ---
 document_type: protocol
-goal: interact with Typefully API to manage Twitter drafts and threads
+goal: interact with Typefully API to manage Twitter drafts and threads using TypeScript
 gpt_action: follow these steps when user wants to use the Typefully API
 ---
 
-CONTEXT: The [[User]] wants to interact with the Typefully API and needs you to handle the API operations based on their input, particularly for managing Twitter drafts and threads.
+CONTEXT: The [[User]] wants to interact with the Typefully API to manage Twitter drafts and threads and needs you to handle the API operations through the TypeScript implementation in `apis/typefully/`.
 
 1. GIVEN [[User]] RUNS plx-use-typefully-api command
    1. THEN [[GPT Agent]] READ [[input]]
@@ -15,15 +15,8 @@ CONTEXT: The [[User]] wants to interact with the Typefully API and needs you to 
            | 'get-scheduled'   // Get recently scheduled drafts
            | 'get-published'   // Get recently published drafts
            | 'get-notifications' // Get latest notifications
-           | 'mark-read'       // Mark notifications as read
          ```
       2. AND [[GPT Agent]] CHECK required parameters
-   2. IF [[input]] IS empty
-      1. THEN [[GPT Agent]] ASK [[User]] for command type
-      2. AND [[GPT Agent]] ASK for required parameters
-   3. IF [[command]] IS 'create-draft'
-      1. THEN [[GPT Agent]] REQUIRE content
-      2. AND [[GPT Agent]] ACCEPT optional parameters
          ```typescript
          interface CreateDraftOptions {
            content: string;
@@ -34,55 +27,75 @@ CONTEXT: The [[User]] wants to interact with the Typefully API and needs you to 
            auto_plug_enabled?: boolean;
          }
          ```
+   2. IF [[input]] IS empty
+      1. THEN [[GPT Agent]] ASK [[User]] for command type
+      2. AND [[GPT Agent]] ASK for required parameters
 
-2. WHEN [[GPT Agent]] PROCESSES command
-   1. THEN [[GPT Agent]] USE TypefullyAPI
-      ```typescript
-      const client = new TypefullyAPI({
-        apiKey: process.env.TYPEFULLY_API_KEY
-      });
+2. WHEN [[GPT Agent]] PROCESSES 'create-draft'
+   1. THEN [[GPT Agent]] UPDATE draft-content.json
+      ```json
+      {
+        "content": "Your tweet content here",
+        "threadify": true,
+        "schedule_date": null,
+        "share": false
+      }
       ```
-   2. IF [[command]] IS 'create-draft'
-      1. THEN [[GPT Agent]] CALL createDraft
-      2. AND [[GPT Agent]] HANDLE response
-   3. IF [[command]] IS 'get-scheduled'
-      1. THEN [[GPT Agent]] CALL getRecentlyScheduled
-      2. AND [[GPT Agent]] HANDLE response
-   4. IF [[command]] IS 'get-published'
-      1. THEN [[GPT Agent]] CALL getRecentlyPublished
-      2. AND [[GPT Agent]] HANDLE response
-   5. IF [[command]] IS 'get-notifications'
-      1. THEN [[GPT Agent]] CALL getNotifications
-      2. AND [[GPT Agent]] HANDLE response
-   6. IF [[command]] IS 'mark-read'
-      1. THEN [[GPT Agent]] CALL markNotificationsRead
-      2. AND [[GPT Agent]] HANDLE response
+   2. AND [[GPT Agent]] RUN create-draft.ts
+      ```bash
+      cd apis/typefully && npx ts-node create-draft.ts
+      ```
+   3. AND [[GPT Agent]] VERIFY response
+      ```typescript
+      interface Draft {
+        id: string;
+        status: 'draft' | 'scheduled' | 'published';
+        html: string;
+        num_tweets: number;
+        share_url?: string;
+        twitter_url?: string;
+      }
+      ```
 
-3. WHEN [[GPT Agent]] HANDLES response
-   1. THEN [[GPT Agent]] CHECK response status
-   2. IF [[response]] IS successful
-      1. THEN [[GPT Agent]] EXTRACT data
-         ```typescript
-         interface Draft {
-           id: string;
-           content: string;
-           share_url?: string;
-         }
-         ```
-      2. AND [[GPT Agent]] FORMAT output
-   3. IF [[response]] HAS error
-      1. THEN [[GPT Agent]] SHOW error details
-      2. AND [[GPT Agent]] SUGGEST fixes
+3. WHEN [[GPT Agent]] PROCESSES 'get-scheduled'
+   1. THEN [[GPT Agent]] USE TypefullyAPI client
+      ```typescript
+      import typefully from './index';
+      
+      typefully.getRecentlyScheduled()
+        .then(drafts => console.log('Scheduled drafts:', drafts))
+        .catch(error => console.error('Error:', error));
+      ```
 
-4. GIVEN [[response]] IS ready
-   1. THEN [[GPT Agent]] VERIFY rate limits
-      1. AND [[GPT Agent]] CHECK remaining requests
-      2. AND [[GPT Agent]] WARN if near limit
-   2. IF [[User]] WANTS thread
-      1. THEN [[GPT Agent]] SET threadify to true
-      2. AND [[GPT Agent]] FORMAT content appropriately
-   3. IF [[User]] NEEDS scheduling
-      1. THEN [[GPT Agent]] SUGGEST schedule options
-      2. AND [[GPT Agent]] EXPLAIN timing constraints
+4. WHEN [[GPT Agent]] PROCESSES 'get-published'
+   1. THEN [[GPT Agent]] USE TypefullyAPI client
+      ```typescript
+      import typefully from './index';
+      
+      typefully.getRecentlyPublished()
+        .then(drafts => console.log('Published drafts:', drafts))
+        .catch(error => console.error('Error:', error));
+      ```
 
-NOTE: Remember to handle content formatting appropriately for Twitter's character limits and thread structure. Use the threadify option when content exceeds single tweet length. 
+5. WHEN [[GPT Agent]] PROCESSES 'get-notifications'
+   1. THEN [[GPT Agent]] USE TypefullyAPI client
+      ```typescript
+      import typefully from './index';
+      
+      typefully.getNotifications({ kind: 'inbox' })
+        .then(notifications => console.log('Notifications:', notifications))
+        .catch(error => console.error('Error:', error));
+      ```
+
+6. IF [[response]] HAS error
+   1. THEN [[GPT Agent]] CHECK error details
+      ```typescript
+      interface APIError {
+        message: string;
+        code: string;
+      }
+      ```
+   2. AND [[GPT Agent]] SUGGEST fixes
+   3. AND [[GPT Agent]] RETRY operation if appropriate
+
+NOTE: Always use the TypeScript implementation. Never make direct API calls. Handle errors gracefully and verify all responses. 
