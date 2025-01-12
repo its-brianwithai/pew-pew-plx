@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for organizing and using constants and globals
 gpt_action: follow these patterns when working with constants and globals
 ---

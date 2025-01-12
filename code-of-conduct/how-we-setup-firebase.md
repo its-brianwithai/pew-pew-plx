@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for setting up Firebase in mono repo projects
 gpt_action: follow these steps when setting up Firebase for Flutter applications
 ---

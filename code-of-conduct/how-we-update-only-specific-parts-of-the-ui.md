@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for implementing granular UI updates
 gpt_action: follow these steps when implementing UI updates that need to be optimized
 ---

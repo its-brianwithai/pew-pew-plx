@@ -4,108 +4,96 @@ goal: define how to use this framework and its documents
 gpt_action: follow these instructions for all interactions
 ---
 
-You are an AI agent using the Ultra Wide Turbo Agent Workspace framework. A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns. Your job is to deliver high-quality, tested implementations by following these core pillars:
+CONTEXT: The [[User]] wants you to use the Ultra Wide Turbo Agent Workspace framework to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
-## 📚 Core Pillars
+1. GIVEN [[User]] WANTS high-quality, tested implementations
+   1. THEN [[GPT Agent]] FOLLOW core pillars
+      1. AND [[GPT Agent]] USE [[Requirements]] (`your-requirements.md`)
+         1. TO UNDERSTAND what needs to be built
+         2. AND IDENTIFY actors, components, activities, properties, behaviors
+         3. AND CLARIFY acceptance criteria and test scenarios
+      2. AND [[GPT Agent]] USE [[Ticket]] (`your-ticket.md`) 
+         1. TO UNDERSTAND detailed task description and user story
+         2. AND IDENTIFY technical specifications and implementation details
+         3. AND CONSIDER security, data models, and API requirements
+      3. AND [[GPT Agent]] USE [[Milestones]] (`your-milestones.md`)
+         1. TO TRACK clear testable milestones with emoji sections
+         2. AND DEFINE BDD Gherkin style tests for each milestone in [[your-tests.md]]
+         3. AND IDENTIFY dependencies and technical details per milestone
+         4. AND TRACK progress and completion criteria
+      4. AND [[GPT Agent]] USE [[Todo List]] (`your-todo-list.md`)
+         1. TO PRIORITIZE high priority user-added tasks (must be done first)
+         2. AND TRACK current milestone's atomic tasks and tests
+         3. AND REFERENCE completed milestone tasks
+         4. AND LINK to higher-level milestones in [[your-milestones]]
 
-1. **Requirements** (`your-requirements.md`):
-   - Comprehensive breakdown of what needs to be built
-   - Actors, components, activities, properties, behaviors
-   - Clear acceptance criteria and test scenarios
+2. WHEN [[GPT Agent]] SEES document links with double brackets `[[like-this]]`
+   1. THEN [[GPT Agent]] TREAT links as crucial
+      1. AND UNDERSTAND they point to repeated concepts, components, and files in the repo
+      2. AND EXPECT they contain additional information and instructions
+      3. AND READ them before proceeding if not in current context
+      4. AND USE them to maintain consistency across documentation
+      5. AND RECOGNIZE they connect related concepts and actions
+   2. BEFORE [[GPT Agent]] STARTS any task
+      1. THEN [[GPT Agent]] SCAN document for wiki links
+      2. AND [[GPT Agent]] READ all linked files not in current context 
+      3. AND [[GPT Agent]] BUILD complete understanding of concepts
+      4. ONLY THEN [[GPT Agent]] PROCEED with task
 
-2. **Ticket** (`your-ticket.md`):
-   - Detailed task description and user story
-   - Technical specifications and implementation details
-   - Security, data models, and API requirements
+3. WHEN [[GPT Agent]] FOLLOWS development workflow
+   1. THEN [[GPT Agent]] USE planning phase
+      1. AND [[GPT Agent]] RESEARCH solution by scanning codebase, docs, and user input
+      2. AND [[GPT Agent]] CREATE clear testable milestones in [[your-milestones.md]]
+      3. AND [[GPT Agent]] DEFINE BDD tests for each milestone in [[your-tests.md]]
+      3. AND [[GPT Agent]] CREATE atomic tasks under each milestone in [[your-todo-list.md]]
+      4. AND [[GPT Agent]] PRESENT plan and get user feedback
+   2. THEN [[GPT Agent]] USE implementation phase  
+      1. AND [[GPT Agent]] START with first milestone and task
+      2. AND [[GPT Agent]] CONFIRM approach for new milestones
+      3. AND [[GPT Agent]] COMPLETE tasks and run tests from [[your-tests.md]]
+      4. AND [[GPT Agent]] RESEARCH and fix test failures one at a time
+      5. AND [[GPT Agent]] UPDATE todo list and continue
+   3. THEN [[GPT Agent]] USE release phase
+      1. AND [[GPT Agent]] RUN final tests
+      2. AND [[GPT Agent]] PRESENT work summary
+      3. AND [[GPT Agent]] GET user feedback
+      4. AND [[GPT Agent]] FOLLOW release process
 
-3. **Milestones** (`your-milestones.md`):
-   - Clear testable milestones with emoji sections
-   - BDD Gherkin style tests for each milestone
-   - Dependencies and technical details per milestone
-   - Progress tracking and completion criteria
+4. WHEN [[GPT Agent]] SEES PLX commands in `plx-*.md` files
+   1. THEN [[GPT Agent]] UNDERSTAND each command has its own protocol file
+   2. AND [[GPT Agent]] FOLLOW protocol exactly for that part of work  
+   3. AND [[GPT Agent]] STAY focused on current task within protocol
 
-4. **Todo List** (`your-todo-list.md`):
-   - High priority user-added tasks (must be done first)
-   - Current milestone's atomic tasks and tests
-   - Reference to completed milestone tasks
-   - Links to higher-level milestones in [[your-milestones]]
+5. GIVEN [[GPT Agent]] USES `code-of-conduct/` folder 
+   1. THEN [[GPT Agent]] UNDERSTAND it contains all framework documentation
+      1. INCLUDING implementation patterns
+      2. AND best practices
+      3. AND codebase knowledge
+      4. AND workflow guides
+   2. AND [[GPT Agent]] RECOGNIZE documentation is connected through [[double bracketed]] links
 
-## 🔄 Wiki Links
+6. WHEN [[GPT Agent]] FOLLOWS rules
+   1. THEN [[GPT Agent]] ALWAYS
+      1. FOLLOW development workflow 
+      2. AND KEEP todo list updated
+      3. AND FIX one test at a time
+      4. AND GET user feedback for major decisions
+      5. AND ASK permission to change approach
+      6. AND CREATE clear testable milestones with BDD tests
+      7. AND TRACK progress in your-milestones.md
+      8. AND CHECK user-added tasks first in your-todo-list.md
+   2. AND [[GPT Agent]] NEVER  
+      1. SKIP workflow steps
+      2. OR LEAVE tests failing
+      3. OR MODIFY any other documents than `your-*.md` unless explicitly told to do so
+      4. OR FIX multiple tests at once 
+      5. OR CHANGE approach without approval
+      6. OR SKIP milestone creation or BDD tests
+      7. OR IGNORE wiki links or proceed without reading them
+      8. OR ASSUME context without checking linked files
+      9. OR REMOVE user-added tasks from todo list
 
-All documents use wiki-style links with double brackets `[[like-this]]`. These links are crucial:
-- Point to repeated concepts, components, and files in the repo
-- Contain additional information and instructions
-- Must be read before proceeding if not in current context
-- Help maintain consistency across documentation
-- Connect related concepts and actions
-
-Before starting any task:
-1. Scan document for wiki links
-2. Read all linked files not in current context
-3. Build complete understanding of concepts
-4. Only then proceed with task
-
-## 🔄 Development Workflow
-
-1. **Planning Phase**
-   - Research solution by scanning codebase, docs, and user input
-   - Create clear testable milestones with BDD tests
-   - Create atomic tasks under each milestone
-   - Present plan and get user feedback
-
-2. **Implementation Phase**
-   - Start with first milestone and task
-   - Confirm approach for new milestones
-   - Complete tasks and run tests
-   - Research and fix test failures one at a time
-   - Update todo list and continue
-
-3. **Release Phase**
-   - Run final tests
-   - Present work summary
-   - Get user feedback
-   - Follow release process
-
-## 💻 PLX Commands
-
-PLX commands in `plx-*.md` files guide specific actions:
-- Each command has its own protocol file
-- Follow protocol exactly for that part of work
-- Stay focused on current task within protocol
-
-## 📚 Wiki
-
-The `wiki/` folder contains all framework documentation:
-- Implementation patterns
-- Best practices
-- Codebase knowledge
-- Workflow guides
-- Connected through [[double bracketed]] links
-
-## ⚡ Rules
-
-1. Always:
-   - Follow development workflow
-   - Keep todo list updated
-   - Fix one test at a time
-   - Get user feedback for major decisions
-   - Ask permission to change approach
-   - Create clear testable milestones with BDD tests
-   - Track progress in your-milestones.md
-   - Check user-added tasks first in your-todo-list.md
-
-2. Never:
-   - Skip workflow steps
-   - Leave tests failing
-   - Modify any other documents than `your-*.md` unless explicitly told to do so
-   - Fix multiple tests at once
-   - Change approach without approval
-   - Skip milestone creation or BDD tests
-   - Ignore wiki links or proceed without reading them
-   - Assume context without checking linked files
-   - Remove user-added tasks from todo list
-
-Requirements guide what to build, ticket details how to build it, milestones track what to test, and todo list keeps track of progress. All concepts are connected through the wiki system.
+CONTEXT: The [[Requirements]] guide what to build, [[Ticket]] details how to build it, [[Milestones]] track what to test, and [[Todo List]] keeps track of progress. All concepts are connected through the documentation system.
 
 # 🧱 The Planning Workflow
 
@@ -148,3 +136,50 @@ Requirements guide what to build, ticket details how to build it, milestones tra
 				2. AND [[GPT Agent]] START this workflow from beginning
 4. THEN [[GPT Agent]] START next [[atomic development task]]
 	1. AND [[GPT Agent]] START this work from step 2
+
+# 🧪 The Testing Workflow
+
+1. WHEN [[GPT Agent]] STARTS [[testing process]]
+   1. THEN [[GPT Agent]] RUN [[tests]]
+   2. IF [[tests]] FAIL
+      1. THEN [[GPT Agent]] FIND first failing [[test]]
+      2. AND [[GPT Agent]] SET [[attempt]] to 1
+
+2. GIVEN [[GPT Agent]] HAS failing [[test]]
+   1. THEN [[GPT Agent]] READ [[test]]
+   2. AND [[GPT Agent]] SCAN codebase
+   3. AND [[GPT Agent]] CREATE [[fix approach]]
+   4. AND [[GPT Agent]] SHOW [[User]]
+      1. IF [[User]] ACCEPTS [[fix approach]]
+         1. THEN [[GPT Agent]] START implementation
+      2. IF [[User]] REJECTS [[fix approach]]
+         1. THEN [[GPT Agent]] CREATE new [[fix approach]]
+
+3. WHEN [[GPT Agent]] IMPLEMENTS [[fix approach]]
+   1. THEN [[GPT Agent]] RUN [[tests]]
+      1. IF first [[test]] SUCCEEDS
+         1. THEN [[GPT Agent]] START [[testing process]]
+      2. IF first [[test]] FAILS
+         1. THEN [[GPT Agent]] ADD 1 to [[attempt]]
+         2. AND [[GPT Agent]] CHECK [[attempt]]
+            1. IF [[attempt]] IS below 3
+               1. THEN [[GPT Agent]] REPEAT from step 2
+            2. IF [[attempt]] IS 3
+               1. THEN [[GPT Agent]] START analysis
+
+4. GIVEN [[GPT Agent]] NEEDS analysis
+   1. THEN [[GPT Agent]] SCAN codebase
+   2. AND [[GPT Agent]] READ documentation
+   3. AND [[GPT Agent]] CHECK dependencies
+   4. AND [[GPT Agent]] CREATE new [[strategy]]
+   5. AND [[GPT Agent]] SHOW [[User]]
+      1. IF [[User]] ACCEPTS [[strategy]]
+         1. THEN [[GPT Agent]] RESET [[attempt]]
+         2. AND [[GPT Agent]] START implementation
+      2. IF [[User]] REJECTS [[strategy]]
+         1. THEN [[GPT Agent]] CREATE new [[strategy]]
+
+5. WHEN [[tests]] SUCCEED
+   1. THEN [[GPT Agent]] SAVE changes
+   2. AND [[GPT Agent]] UPDATE [[your-todo-list]]
+   3. AND [[GPT Agent]] TELL [[User]] 

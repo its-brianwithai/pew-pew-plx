@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for creating new cloud functions for the Roomy backend
 gpt_action: follow these steps when creating a new cloud function
 ---

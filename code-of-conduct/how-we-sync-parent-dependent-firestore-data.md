@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for syncing parent-dependent Firestore data
 gpt_action: follow these steps when implementing parent-dependent data sync
 ---

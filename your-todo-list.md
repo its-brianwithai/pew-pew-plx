@@ -15,7 +15,14 @@ gpt_action: maintain organized atomic task list for current milestone
 ---
 - [ ] Initial task placeholder
 
+<!--
 # ✅ Completed Milestone
 > - Completed tasks of a previously completed milestone for agent personal reference and context refresh.
 ---
 - [X] Initial completed task placeholder
+
+# ✅ Another Completed Milestone
+> - Completed tasks of a previously completed milestone for agent personal reference and context refresh.
+---
+- [X] Initial completed task placeholder
+-->

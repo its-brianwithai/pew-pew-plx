@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for passing data between views using ViewArguments and routing
 gpt_action: follow these steps when implementing data passing between views
 ---

@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define structure for knowledge, protocol and workflow documents
 gpt_action: follow this template when asked to create new documents
 ---
@@ -9,7 +9,7 @@ gpt_action: follow this template when asked to create new documents
 Every document must have this header:
 ```markdown
 ---
-document_type: [protocol|workflow|wiki|prompt|template]
+document_type: [protocol|workflow|code of conduct|prompt|template]
 goal: [clear goal statement]
 gpt_action: [specific instruction for GPT]
 ---

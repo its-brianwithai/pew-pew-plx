@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for performing first round of quality assurance on own code
 gpt_action: follow these steps when doing self QA on implemented features
 ---

@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define standard structure for organizing class code with clear sections
 gpt_action: follow these section patterns when creating or modifying class files
 ---

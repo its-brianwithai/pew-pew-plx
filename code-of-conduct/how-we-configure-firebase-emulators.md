@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for configuring Firebase emulators in mono repo structure
 gpt_action: follow these steps when setting up Firebase emulators for local development
 ---

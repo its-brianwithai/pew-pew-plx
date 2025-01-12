@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define how to create engaging and educational tutorials
 gpt_action: follow these guidelines when creating student-friendly tutorials
 ---

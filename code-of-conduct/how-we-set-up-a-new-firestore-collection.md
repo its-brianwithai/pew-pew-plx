@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for setting up new Firestore collections with proper architecture
 gpt_action: follow these steps when implementing a new Firestore collection
 ---

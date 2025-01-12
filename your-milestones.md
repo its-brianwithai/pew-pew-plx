@@ -7,13 +7,9 @@ gpt_action: maintain organized milestone list and track overall project directio
 # 🚀 [M1] Milestone Title
 > - Each milestone represents a significant project phase or feature.
 > - Detailed tasks for the current milestone are tracked in [[your-todo-list.md]].
----
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
+> - BDD tests for this milestone are defined in [[your-tests.md]].
 
 # 🚀 [M2] Milestone Title
 > - Each milestone represents a significant project phase or feature.
 > - Detailed tasks for the current milestone are tracked in [[your-todo-list.md]].
----
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
+> - BDD tests for this milestone are defined in [[your-tests.md]].

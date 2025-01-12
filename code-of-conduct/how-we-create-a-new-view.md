@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for creating new views in the application
 gpt_action: follow these steps when creating a new view
 ---

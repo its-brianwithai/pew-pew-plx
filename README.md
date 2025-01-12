@@ -3,13 +3,13 @@
 > A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
 ## 📑 Table of Contents
-1. [Framework Overview](#-framework-overview)
-2. [Core Pillars](#-core-pillars)
-3. [Development Workflow](#-development-workflow)
-4. [PLX Commands](#-plx-commands)
-5. [Agent Work Documents](#-agent-work-documents)
-6. [API Integrations](#-api-integrations)
-7. [Wiki](#-wiki)
+1. [Quick Start](#-quick-start)
+2. [Framework Overview](#-framework-overview)
+3. [Core Pillars](#-core-pillars)
+4. [Development Workflow](#-development-workflow)
+5. [Code of Conduct](#-code-of-conduct)
+6. [PLX Commands](#-plx-commands)
+7. [The Agent Work Documents](#-the-agent-work-documents)
 
 ## 🔍 Quick Start
 
@@ -32,17 +32,12 @@ The script will:
    - Protocols
    - Workflows
    - Templates
-   - Wiki
+   - Code of Conduct
    - Prompts
-   - API Integrations
+   - Scripts
+   - Concepts
 
-3. Create the workspace with:
-   - Selected components
-   - Empty CHANGELOG.md
-   - Empty README.md
-   - API configuration files (if selected)
-
-You can also provide a custom name when prompted. You can find your workspaces in the `workspaces` folder.
+3. Create the workspace with selected components. You can also provide a custom name when prompted. You can find your workspaces in the `workspaces` folder.
 
 ## 🔍 Framework Overview
 
@@ -71,25 +66,6 @@ We believe AI agents perform at their best when three key elements align:
    - Active context awareness
    - Proper state management
    - Seamless agent handover
-
-## 📚 API Integrations
-
-The framework includes several API integrations for content management and media:
-
-### Content Management
-- **Ghost API**: Blog content management and publishing
-- **Typefully API**: Social media content scheduling and thread creation
-
-### Media Management
-- **Unsplash API**: High-quality photo integration
-- **Pexels API**: Stock photo integration
-- **Giphy API**: GIF content integration
-
-Each API integration includes:
-- Environment variable configuration
-- Authentication handling
-- Error management
-- Usage documentation
 
 ## 📚 Core Pillars
 
@@ -135,7 +111,7 @@ gpt_action: follow these steps for all planning work that you do
 2. WHEN [[GPT Agent]] NEED more info
 	1. THEN [[GPT Agent]] ASK clarifying questions
 3. GIVEN [[GPT Agent]] UNDERSTAND task perfectly
-4. THEN [[GPT Agent]] ANALYSE [[the-agent-work-documents]]
+4. THEN [[GPT Agent]] ANALYSE [[the-work-documents]]
 	1. IF [[your-requirements]] is empty
 		1. THEN [[GPT Agent]] ASK [[User]] whether [[GPT Agent]] should update [[your-requirements]]
 			1. IF [[User]] CONFIRMS
@@ -190,28 +166,23 @@ gpt_action: follow these steps for all development work that you do
 
 Each workflow follows a structured approach with clear steps and checkpoints to maintain consistency and quality throughout the development process. The planning phase ensures proper understanding and task breakdown, while the development phase focuses on systematic implementation and testing.
 
-## 📚 Wiki
+## 📚 Code of Conduct
 
-The wiki category that contains documents that describe various concepts to the agent for reference:
+The code of conduct section contains documents that describe various concepts to the agent for reference. This includes:
 
-### 📝 Case Studies
-The framework includes a dedicated `case-studies` directory for showcasing projects and learnings:
-- Professional case study format
-- Value-focused content structure
-- Platform-specific optimization
-- Rich media integration
-- Metrics and testimonials
+- Development patterns and best practices
+- Workflow guides and processes
+- Implementation standards
+- Documentation guidelines
 
-Each case study follows a standard structure:
-1. Executive Summary
-2. Challenge
-3. Solution
-4. Implementation
-5. Results
-6. Key Learnings
-7. Testimonials
+The framework also provides directories for user-populated content:
+- Case Studies
+- Insights
+- Tutorials
+- Feature Breakdowns
+- APIs
 
-### 📝 Insights
+These sections can be customized and populated based on your project's needs.
 
 ## 💻 PLX Commands
 
@@ -233,47 +204,62 @@ PLX commands in `plx-*.md` files guide specific actions:
 | `plx-create-tutorial` | Create tutorial content | - Structure sections<br>- Add placeholders<br>- Include examples |
 | `plx-create-insight` | Create concise how-to content | - Structure content<br>- Add examples<br>- Follow format |
 | `plx-create-case-study` | Create engaging case studies | - Structure content<br>- Add metrics<br>- Platform optimize |
-| `plx-post-to-typefully` | Post social content | - Format threads<br>- Schedule posts<br>- Add media |
+| `plx-prepare-content` | Prepare content for publishing | - Format content<br>- Add media<br>- Review quality |
+| `plx-post-to-typefully` | Post to Typefully | - Format thread<br>- Add media<br>- Schedule post |
 | `plx-add-pexels` | Add stock photos | - Search images<br>- Download content<br>- Add attribution |
 | `plx-add-gifs` | Add GIF content | - Search GIFs<br>- Insert content<br>- Add attribution |
 | Workflow Commands |||
+| `plx-start-work` | Begin new task | - Initialize state<br>- Set up context<br>- Begin workflow |
+| `plx-pause-work` | Pause current task | - Save state<br>- Document progress<br>- Note next steps |
+| `plx-resume-work` | Resume paused task | - Load state<br>- Review context<br>- Continue work |
+| `plx-focus` | Maintain task focus | - Check alignment<br>- Remove distractions<br>- Stay on track |
+| `plx-stick-to-the-process` | Follow process strictly | - Check steps<br>- Verify actions<br>- Maintain order |
+| `plx-continue-and-follow-the-process` | Continue with process | - Resume work<br>- Follow steps<br>- Stay aligned |
 | `plx-activate-code-red` | Emergency research mode | - Stop work<br>- Block changes<br>- Research systematically |
-| `plx-follow-development-workflow` | Follow development process | - Check position<br>- Verify steps<br>- Maintain flow |
-| `plx-follow-planning-workflow` | Follow planning process | - Review requirements<br>- Create milestones<br>- Plan tasks |
-| `plx-follow-test-workflow` | Follow testing process | - Run tests<br>- Check coverage<br>- Fix issues |
+| `plx-do` | Execute high priority task | - Focus task<br>- Execute quickly<br>- Maintain quality |
 | Documentation Commands |||
-| `plx-create-doc` | Create documentation | - Structure content<br>- Add sections<br>- Include examples |
+| `plx-create-code-of-conduct` | Create code of conduct | - Structure rules<br>- Define standards<br>- Set expectations |
 | `plx-create-protocol` | Create new protocol | - Define purpose<br>- Set structure<br>- Document steps |
+| `plx-create-concept` | Create concept explanation | - Extract core concept<br>- Write concisely<br>- Focus on clarity |
+| `plx-create-use-case` | Create use case description | - Analyze subject<br>- Explain benefits<br>- Provide example |
 | `plx-document-dart-file` | Document Dart code | - Add comments<br>- Document methods<br>- Include examples |
 | Task Management Commands |||
 | `plx-create-todo` | Create task list | - Break down tasks<br>- Set priorities<br>- Track progress |
 | `plx-check-todo` | Review task status | - Check completion<br>- Update progress<br>- Note blockers |
 | `plx-update-todo` | Update task list | - Add new tasks<br>- Mark completed<br>- Update status |
-| Process Commands |||
-| `plx-start-work` | Begin new task | - Initialize state<br>- Set up context<br>- Begin workflow |
-| `plx-pause-work` | Pause current task | - Save state<br>- Document progress<br>- Note next steps |
-| `plx-resume-work` | Resume paused task | - Load state<br>- Review context<br>- Continue work |
-| `plx-focus` | Maintain task focus | - Check alignment<br>- Remove distractions<br>- Stay on track |
+| `plx-create-ticket` | Create new ticket | - Define scope<br>- Set requirements<br>- Add details |
+| `plx-create-milestones` | Create milestone plan | - Define goals<br>- Set timeline<br>- Track progress |
 | Testing Commands |||
-| `plx-create-milestone-gherkin-tests` | Create milestone tests | - Write scenarios<br>- Define steps<br>- Add assertions |
+| `plx-create-tests` | Create BDD test scenarios | - Generate test cases<br>- Update test files<br>- Link to milestones |
+| `plx-create-milestone-gherkin-tests` | Create milestone tests | - Define scenarios<br>- Write Gherkin<br>- Link milestones |
 | `plx-run-tests` | Execute test suite | - Run tests<br>- Check results<br>- Report issues |
 | `plx-test-live` | Test in production | - Verify behavior<br>- Check performance<br>- Monitor errors |
+| Context Management Commands |||
+| `plx-transfer-context` | Transfer to another agent | - Document state<br>- Package context<br>- Enable handover |
+| `plx-sync-work-documents` | Sync work documents | - Update files<br>- Align content<br>- Maintain consistency |
+| `plx-scan-project-for-context` | Scan for context | - Search files<br>- Extract info<br>- Build context |
+| `plx-follow-the-docs` | Follow documentation | - Read guides<br>- Follow patterns<br>- Stay consistent |
 | Utility Commands |||
 | `plx-ask-questions` | Gather information | - Identify gaps<br>- Ask clearly<br>- Verify understanding |
 | `plx-explain-yourself` | Document understanding | - Explain issue<br>- Propose solution<br>- Get approval |
 | `plx-log-hours` | Track work time | - Record time<br>- Note progress<br>- Update status |
 | `plx-commit` | Handle git commits | - Review changes<br>- Format message<br>- Execute commit |
+| Workflow Alignment Commands |||
+| `plx-follow-development-workflow` | Follow development process | - Check position<br>- Verify steps<br>- Maintain flow |
+| `plx-follow-planning-workflow` | Follow planning process | - Review requirements<br>- Create milestones<br>- Plan tasks |
+| `plx-follow-test-workflow` | Follow testing process | - Run tests<br>- Check coverage<br>- Fix issues |
 | Maintenance Commands |||
 | `plx-update-translations` | Update translations | - Find strings<br>- Update files<br>- Verify changes |
 | `plx-fix-linting-errors` | Fix code style | - Find errors<br>- Apply fixes<br>- Verify style |
 | `plx-update-read-me-and-changelog` | Update documentation | - Add changes<br>- Update versions<br>- Maintain docs |
+| Release Commands |||
+| `plx-prepare-release` | Prepare for release | - Check tests<br>- Update docs<br>- Package changes |
 
-## 📝 Agent Work Documents
+## 📝 The Agent Work Documents
 
-These documents are maintained by the agent to track work, requirements, and progress. They form the core documentation that ensures consistent delivery and maintained context throughout the development process.
+These documents are maintained by the agent to track work, requirements, and progress:
 
 ### your-requirements.md
-
 ```markdown
 ---
 document_type: agent work document
@@ -295,7 +281,7 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 
 - [ ]
 
-## 🌊 Activity Flows & Scenarios (What in which order?)
+# 🌊 Activity Flows & Scenarios (What in which order?)
 > - Sequences of Atomic Actions (like "Tap button") that map out the steps to complete an Activity. May have optional paths for both successful completion (Happy Flow), errors (Error Flow), and scenarios like no connection, empty states, loading states, etc.
 > - Possible Parents: Activities, Itself
 ---
@@ -323,9 +309,6 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 
 - [ ]
 
-# 🔖 Context
-> - Optional extra information about certain concepts used to clarify 
-
 # ❓ Questions
 > - Questions that need to be answered to clarify requirements.
 > - Possible Parents: Anything (optional)
@@ -339,7 +322,6 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 ---
 
 - [ ]
-
 
 # 🎯 Roles, 📝 Tasks & 🎓 Suggested Approach
 > - Each behaviour, property, activity (flow), scenario, atomic action, actor, component must directly or indirectly (by parents) cascade down to a todo with assigned role. Creating a task for a parent and completing it automatically covers its children unless children have open tasks themselves.
@@ -356,7 +338,6 @@ gpt_action: use as a reference work to understand exactly what (still) needs to 
 ```
 
 ### your-ticket.md
-
 ```markdown
 ---
 document_type: agent work document
@@ -389,7 +370,7 @@ gpt_action: use as reference for documenting details and defining acceptance cri
 ---
 
 # 📊 Analytics
-> 💡 *Old and new analytics that should be created and/or altered when this feature is added. Include a name, when it’s fired and optional properties.*
+> 💡 *Old and new analytics that should be created and/or altered when this feature is added. Include a name, when it's fired and optional properties.*
 ---
 
 # ☎️ Impact Communication
@@ -401,7 +382,7 @@ gpt_action: use as reference for documenting details and defining acceptance cri
 ---
 
 # 🤝 Acceptance Test
-> 💡 *Which scenario’s should we test in the acceptance test? So that we can make sure that this ticket does what it is supposed to do without any unexpected errors.*
+> 💡 *Which scenario's should we test in the acceptance test? So that we can make sure that this ticket does what it is supposed to do without any unexpected errors.*
 ---
 
 # 🎨 UI/UX Behaviour
@@ -431,7 +412,6 @@ gpt_action: use as reference for documenting details and defining acceptance cri
 ```
 
 ### your-milestones.md
-
 ```markdown
 ---
 document_type: agent work document
@@ -455,9 +435,7 @@ gpt_action: maintain organized milestone list and track overall project directio
 ```
 
 ### your-todo-list.md
-
 ```markdown
----
 ---
 document_type: agent work document
 goal: track tasks for current milestone
@@ -481,35 +459,45 @@ gpt_action: maintain organized atomic task list for current milestone
 - [X] Initial completed task placeholder
 ```
 
-### your-transfer.md
-
+### your-tests.md
 ```markdown
 ---
-document_type: agent work document
-goal: transfer current context and work state to new agent
-gpt_action: read this document to quickly understand current context and continue work
+document_type: agent work document 
+goal: define and track BDD tests for each milestone
+gpt_action: maintain Gherkin style tests, run tests, fix failures
 ---
 
-# 📝 Conversation Summary
-> Key points and decisions from the conversation so far
+# 🚀 [M1] Milestone Title
 
-# 📊 Current Work State
-> Status of work documents and tasks
+## Test Scenarios
 
-# ⏭️ Next Steps
-> Immediate actions for the new agent
+### Scenario 1: Test Case Title
+- Given some initial context
+- When some action is taken
+- Then some result is expected
+
+### Scenario 2: Test Case Title 
+- Given some initial context
+- When some action is taken 
+- Then some result is expected
+
+# 🚀 [M2] Milestone Title
+
+## Test Scenarios
+
+### Scenario 1: Test Case Title
+- Given some initial context
+- When some action is taken
+- Then some result is expected
+
+### Scenario 2: Test Case Title
+- Given some initial context 
+- When some action is taken
+- Then some result is expected
 ```
 
-This document is created by the `plx-transfer` protocol to enable seamless handover between agents. It captures:
-- Conversation context and key decisions
-- Current work state across all documents
-- Clear next steps and any blockers
-- User preferences and requirements
-
 ### your-hours.md
-
 ```markdown
----
 ---
 document_type: agent work document
 goal: track work hours and progress
@@ -517,4 +505,3 @@ gpt_action: log your hours worked
 ---
 
 - [ ] 
-```

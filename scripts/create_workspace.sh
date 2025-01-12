@@ -45,14 +45,10 @@ components=(
     "Protocols"
     "Workflows"
     "Templates"
-    "Wiki"
+    "Code of Conduct"
     "Prompts"
-    "APIs"
-    "Insights"
     "Scripts"
-    "Feature Breakdowns"
-    "Tutorials"
-    "Case Studies"
+    "Concepts"
 )
 
 # Show components and get selection
@@ -60,7 +56,7 @@ echo "Available components:"
 for ((i=0; i<${#components[@]}; i++)); do
     echo "$((i+1)). ${components[$i]}"
 done
-
+\
 echo -e "\nEnter numbers of components to include (space-separated) or press ENTER to include all:"
 read -r include_nums
 
@@ -73,7 +69,7 @@ if [ -z "$include_nums" ]; then
         echo "✓ $component"
     done
 else
-    for i in {1..12}; do
+    for i in {1..8}; do
         if [[ "$include_nums" == *"$i"* ]]; then
             selected+=("${components[$((i-1))]}")
             echo "✓ ${components[$((i-1))]}"
@@ -155,29 +151,17 @@ for component in "${selected[@]}"; do
         "Templates")
             cp -r "$REPO_ROOT/templates" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No templates found to copy"
             ;;
-        "Wiki")
-            cp -r "$REPO_ROOT/wiki" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No knowledge found to copy"
+        "Code of Conduct")
+            cp -r "$REPO_ROOT/code-of-conduct" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No code of conduct found to copy"
             ;;
         "Prompts")
             cp -r "$REPO_ROOT/prompts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No prompts found to copy"
             ;;
-        "APIs")
-            cp -r "$REPO_ROOT/apis" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No APIs found to copy"
-            ;;
-        "Insights")
-            cp -r "$REPO_ROOT/insights" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No insights found to copy"
-            ;;
         "Scripts")
             cp -r "$REPO_ROOT/scripts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No scripts found to copy"
             ;;
-        "Feature Breakdowns")
-            cp -r "$REPO_ROOT/feature-breakdowns" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No feature breakdowns found to copy"
-            ;;
-        "Tutorials")
-            cp -r "$REPO_ROOT/tutorials" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No tutorials found to copy"
-            ;;
-        "Case Studies")
-            cp -r "$REPO_ROOT/case-studies" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No case studies found to copy"
+        "Concepts")
+            cp -r "$REPO_ROOT/concepts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No concepts found to copy"
             ;;
     esac
 done

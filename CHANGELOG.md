@@ -6,10 +6,90 @@ gpt_action: use as reference for framework version history
 
 # Changelog
 
+## [0.26.0] - 2024-03-XX
+
+### Changed
+- Renamed wiki folder to code-of-conduct for better clarity
+- Updated documentation to reflect new code of conduct terminology
+- Simplified code of conduct section in README.md
+- Added Scripts and Concepts to Quick Start section
+- Updated table of contents for better organization
+- Maintained user-populated sections in create_workspace.sh
+
+### Added
+- New Concepts folder for clear concept documentation
+- Added plx-create-concept command for documenting concepts
+- Added plx-create-use-case command for documenting use cases
+- Added plx-create-tests command for generating BDD tests
+
+### Fixed
+- Corrected inconsistencies in documentation references
+- Fixed broken links after folder renaming
+- Aligned all documentation with new structure
+
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 All notable changes to the Ultra Wide Turbo framework will be documented in this file.
+
+## [0.25.1] - 2024-01-11
+
+### 🛠️ Improvements:
+- Simplified concept file naming convention to only require "the-" prefix
+- Removed "-concept" suffix requirement for cleaner file names
+- Updated concept creation protocol with clearer naming examples
+
+## [0.25.0] - 2024-01-11
+
+### ✨ Features:
+- Added new protocol `plx-create-concept.md` for creating focused concept explanations
+- Added new `concepts/` directory for storing concept files
+- Added new concept file format:
+  - Standardized naming (the-*)
+  - Simple frontmatter structure
+  - Direct, clear explanations
+  - Optional examples
+- Added support for extracting concepts from existing documentation
+
+### 🛠️ Improvements:
+- Enhanced documentation organization with dedicated concepts directory
+- Simplified concept explanations separate from process documentation
+- Better knowledge sharing through focused concept files
+- Clearer separation between concepts and processes
+
+## [0.24.0] - 2024-01-11
+
+### ✨ Features:
+- Added new protocol `plx-create-use-case.md` for generating use case descriptions
+- Added `use-cases/` directory for storing use case files
+- Added structured use case format with sections for:
+  - What it does
+  - Why we do it this way
+  - How to use it
+- Added handling for code, workflow, and concept input
+
+### 🛠️ Improvements:
+- Enhanced documentation capabilities with use case generation
+- Improved knowledge sharing and consistency through use cases
+- Better organization with dedicated use case directory
+
+## [0.23.0] - 2024-01-11
+
+### ✨ Features:
+- Added new protocol `plx-create-tests.md` for generating BDD test scenarios
+- Added structured test creation workflow with:
+  - Milestone-based organization
+  - BDD Gherkin style formatting
+  - Happy path and edge case coverage
+  - Error handling scenarios
+- Added automatic test task creation in todo list
+- Added integration with existing testing workflow
+
+### 🛠️ Improvements:
+- Enhanced test organization in `your-tests.md`
+- Improved milestone-test linking
+- Better test scenario documentation
+- Clearer test creation process
 
 ## [0.22.0] - 2024-01-11
 
@@ -138,7 +218,7 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
   - Moved development phase to `the-development-workflow.md`
   - Improved workflow clarity and maintainability
 - Introduced new wiki category:
-  - Added `the-agent-work-documents.md` as first wiki entry
+  - Added `the-work-documents.md` as first wiki entry
   - Enhanced documentation structure
   - Better organization of framework knowledge
 
@@ -311,3 +391,21 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
 - Added simple workflow
 - Added core protocols
 - Added essential documentation 
+
+## [0.22.0] - 2024-03-XX
+### Added
+- Updated code of conduct documentation with new guidelines:
+  - Enhanced clarity and structure
+  - Added new examples
+  - Improved formatting
+
+## [0.21.0] - 2024-03-XX
+### Added
+- Added new code of conduct documentation structure
+- Enhanced documentation patterns
+- Improved cross-referencing
+
+## [0.20.0] - 2024-03-XX
+### Added
+- Introduced new code of conduct category:
+- Added `the-work-documents.md` as first code of conduct entry 

@@ -13,7 +13,7 @@ gpt_action: follow these steps for all planning work that you do
 2. WHEN [[GPT Agent]] NEED more info
 	1. THEN [[GPT Agent]] ASK clarifying questions
 3. GIVEN [[GPT Agent]] UNDERSTAND task perfectly
-4. THEN [[GPT Agent]] ANALYSE [[the-agent-work-documents]]
+4. THEN [[GPT Agent]] ANALYSE [[the-work-documents]]
 	1. IF [[your-requirements]] is empty
 		1. THEN [[GPT Agent]] ASK [[User]] whether [[GPT Agent]] should update [[your-requirements]]
 			1. IF [[User]] CONFIRMS

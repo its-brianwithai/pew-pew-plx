@@ -8,7 +8,7 @@ CONTEXT: The [[User]] notices you are drifting off course and wants you to follo
 
 1. GIVEN [[User]] RUNS plx-continue-and-follow-the-process command
    1. THEN [[GPT Agent]] CONFIRM continuation
-   2. AND [[GPT Agent]] CHECK [[the-agent-work-documents]]
+   2. AND [[GPT Agent]] CHECK [[the-work-documents]]
       1. AND [[GPT Agent]] READ [[your-milestones]]
       2. AND [[GPT Agent]] READ [[your-todo-list]]
 

@@ -12,7 +12,7 @@ CONTEXT: The [[User]] wants to start a new development task and needs you to bui
       2. AND [[GPT Agent]] READ documentation
       3. AND [[GPT Agent]] BUILD context
 
-2. WHEN [[GPT Agent]] CHECKS [[the-agent-work-documents]]
+2. WHEN [[GPT Agent]] CHECKS [[the-work-documents]]
    1. IF [[your-requirements]] EXISTS
       1. THEN [[GPT Agent]] READ [[your-requirements]]
    2. IF [[your-ticket]] EXISTS

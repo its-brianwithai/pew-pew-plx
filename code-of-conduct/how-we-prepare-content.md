@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for preparing structured content prompts for various platforms
 gpt_action: follow these steps when preparing content from work logs and other inputs
 ---

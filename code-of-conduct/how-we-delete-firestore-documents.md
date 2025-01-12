@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for deleting Firestore documents safely and consistently
 gpt_action: follow these steps when implementing Firestore document deletion
 ---

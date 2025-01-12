@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for managing multilingual string translations
 gpt_action: follow these steps when adding or modifying translations
 ---

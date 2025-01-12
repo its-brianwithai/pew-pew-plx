@@ -1,12 +1,12 @@
 ---
 document_type: protocol
-goal: create new document based on user input following framework rules
-gpt_action: follow these steps when creating new documents
+goal: create new code of conduct document based on user input following framework rules
+gpt_action: follow these steps when creating new code of conduct documents
 ---
 
-CONTEXT: The [[User]] notices a new documentation file needs to be created and wants you to create it following the framework's documentation standards and protocols.
+CONTEXT: The [[User]] notices a new code of conduct document needs to be created and wants you to create it following the framework's documentation standards and protocols.
 
-1. GIVEN [[User]] RUNS plx-create-doc command
+1. GIVEN [[User]] RUNS plx-create-code-of-conduct command
    1. THEN [[GPT Agent]] READ [[input]]
       1. AND [[GPT Agent]] FIND [[document]] type
       2. AND [[GPT Agent]] FIND [[document]] goal

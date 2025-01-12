@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define structure and process for creating Firestore documents
 gpt_action: follow these steps when implementing Firestore document functionality
 ---

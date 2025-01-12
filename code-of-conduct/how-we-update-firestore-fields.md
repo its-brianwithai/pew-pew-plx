@@ -1,5 +1,5 @@
 ---
-document_type: wiki
+document_type: code of conduct
 goal: define process for updating Firestore fields with proper handling of nullable values
 gpt_action: follow these steps when implementing Firestore field updates
 ---
