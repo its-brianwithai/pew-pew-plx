@@ -6,7 +6,53 @@ gpt_action: use as reference for framework version history
 
 # Changelog
 
-## [0.26.0] - 2024-03-XX
+## [0.28.0] - 2024-01-11
+
+### Changed
+- Standardized API integration approach using curl and JSON files
+- Simplified API documentation with consistent format
+- Updated API folder structure requirements
+
+### Added
+- New `docs.md` format for API-specific documentation
+- Ghost API documentation and configuration
+- Typefully API documentation and configuration
+
+### Removed
+- Complex API client implementations
+- Language-specific API wrappers
+- Redundant API command protocols
+
+## [0.27.0] - 2024-01-11
+
+### Changed
+- Simplified API interaction approach:
+  - Standardized to use only curl and JSON files
+  - Removed all API client implementations
+  - Added clear documentation requirements
+  - Enhanced user interaction for unclear documentation
+- Removed specific API commands in favor of single standardized approach:
+  - Removed plx-use-ghost-api
+  - Removed plx-use-typefully-api
+  - Removed plx-use-unsplash-api
+  - Removed plx-use-giphy-api
+  - Removed plx-use-pexels-api
+
+### Added
+- New `plx-use-api` protocol for standardized API usage
+  - Enforces curl-only approach
+  - Uses request.json for data
+  - Requires proper documentation
+  - Includes user interaction points
+  - Handles all API interactions consistently
+
+### Removed
+- Complex API client implementations
+- Programming language specific wrappers
+- Helper classes and libraries
+- Individual API-specific protocols
+
+## [0.26.0] - 2024-01-11
 
 ### Changed
 - Renamed wiki folder to code-of-conduct for better clarity
