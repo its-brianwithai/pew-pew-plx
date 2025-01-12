@@ -260,13 +260,18 @@ PLX commands in `plx-*.md` files guide specific actions:
 - Follow protocol exactly for that part of work
 - Stay focused on current task within protocol
 
-| Protocol                  | Purpose                      | Key Actions                                                        |
-|---------------------------|------------------------------|--------------------------------------------------------------------|
-| API Integration Commands  |                              |                                                                    |
-| `plx-use-api`             | Standardized API interaction | - Create request.json<br>- Use curl only<br>- Follow documentation |
-| Content Creation Commands |                              |                                                                    |
-
-
+| Protocol | Purpose | Key Actions |
+|----------|---------|-------------|
+| Analysis Commands |||
+| `plx-analyze` | Analyze and present findings | - Analyze input<br>- Present structured findings<br>- Wait for user direction |
+| Planning Commands |||
+| `plx-create-plan-in-chat` | Interactive planning | - Present structured plan in chat<br>- Get user feedback<br>- Choose implementation path |
+| `plx-create-milestones` | Create milestone plan | - Define goals<br>- Set timeline<br>- Track progress |
+| `plx-create-ticket` | Create new ticket | - Define scope<br>- Set requirements<br>- Add details |
+| `plx-create-todo` | Create task list | - Break down tasks<br>- Set priorities<br>- Track progress |
+| API Integration Commands |||
+| `plx-use-api` | Standardized API interaction | - Create request.json<br>- Use curl only<br>- Follow documentation |
+| Content Creation Commands |||
 | `plx-add-pexels` | Add stock photos | - Search images<br>- Download content<br>- Add attribution |
 | `plx-add-gifs` | Add GIF content | - Search GIFs<br>- Insert content<br>- Add attribution |
 | Workflow Commands |||
@@ -291,9 +296,6 @@ PLX commands in `plx-*.md` files guide specific actions:
 | `plx-prepare-content` | Prepare content for publishing | - Format content<br>- Add media<br>- Review quality |
 | Task Management Commands |||
 | `plx-check-todo` | Review task status | - Check completion<br>- Update progress<br>- Note blockers |
-| `plx-create-milestones` | Create milestone plan | - Define goals<br>- Set timeline<br>- Track progress |
-| `plx-create-ticket` | Create new ticket | - Define scope<br>- Set requirements<br>- Add details |
-| `plx-create-todo` | Create task list | - Break down tasks<br>- Set priorities<br>- Track progress |
 | `plx-update-todo` | Update task list | - Add new tasks<br>- Mark completed<br>- Update status |
 | Testing Commands |||
 | `plx-create-milestone-gherkin-tests` | Create milestone tests | - Define scenarios<br>- Write Gherkin<br>- Link milestones |

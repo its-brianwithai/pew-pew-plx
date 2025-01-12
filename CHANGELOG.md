@@ -471,3 +471,21 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
 ### Added
 - Introduced new code of conduct category:
 - Added `the-work-documents.md` as first code of conduct entry 
+
+## [0.30.0] - 2024-03-XX
+
+### Added
+- New `plx-create-plan-in-chat` command for interactive planning:
+  - Present structured plans directly in chat
+  - Get immediate user feedback
+  - Flexible options for plan implementation
+  - Integration with milestones and tasks
+
+## [0.31.0] - 2024-03-XX
+
+### Added
+- New `plx-analyze` command for structured analysis:
+  - Presents findings without taking action
+  - Includes overview, key findings, insights, and considerations
+  - Waits for user direction before proceeding
+  - Supports iterative refinement based on feedback

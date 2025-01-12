@@ -1,66 +1,62 @@
 ---
 document_type: protocol
-goal: create new code of conduct document based on user input following framework rules
-gpt_action: follow these steps when creating new code of conduct documents
+goal: create new code of conduct document that defines standards, rules, and best practices
+gpt_action: follow these steps when user wants to create a new code of conduct document
 ---
 
-CONTEXT: The [[User]] notices a new code of conduct document needs to be created and wants you to create it following the framework's documentation standards and protocols.
+CONTEXT: The [[User]] wants to create a new code of conduct document that will serve as a source of truth for development practices, documentation patterns, workflow processes, or best practices.
 
 1. GIVEN [[User]] RUNS plx-create-code-of-conduct command
    1. THEN [[GPT Agent]] READ [[input]]
-      1. AND [[GPT Agent]] FIND [[document]] type
-      2. AND [[GPT Agent]] FIND [[document]] goal
-      3. AND [[GPT Agent]] FIND [[action]]
-   2. IF [[input]] IS empty
-      1. THEN [[GPT Agent]] ASK [[User]]
+      1. AND [[GPT Agent]] IDENTIFY document purpose
+      2. AND [[GPT Agent]] DETERMINE document scope
+   2. IF [[input]] IS unclear
+      1. THEN [[GPT Agent]] ASK clarifying questions
+      2. AND [[GPT Agent]] WAIT for response
 
-2. WHEN [[GPT Agent]] STARTS creation
-   1. THEN [[GPT Agent]] WRITE [[frontmatter]]
+2. WHEN [[GPT Agent]] CREATES document
+   1. THEN [[GPT Agent]] ADD frontmatter:
       ```markdown
       ---
-      document_type: [protocol|workflow|code-of-conduct|prompt|template]
-      goal: [clear goal statement]
-      gpt_action: [specific instruction for GPT]
+      document_type: code of conduct
+      goal: [clear goal statement about what this document defines]
+      gpt_action: [specific instruction for GPT about how to use this document]
       ---
       ```
-   2. IF [[frontmatter]] NEEDS review
-      1. THEN [[GPT Agent]] CHECK format
-      2. AND [[GPT Agent]] FIX errors
+   2. AND [[GPT Agent]] STRUCTURE content:
+      1. USING uppercase Gherkin keywords (GIVEN, WHEN, THEN)
+      2. AND REFERENCING [[Actors]] and [[Components]] in double brackets
+      3. AND USING VERBS in uppercase after actors
+      4. AND FOLLOWING step hierarchy:
+         - GIVEN for preconditions
+         - WHEN for main steps
+         - THEN for sub-steps
+         - IF for conditionals
 
-3. WHEN [[GPT Agent]] BUILDS structure
-   1. THEN [[GPT Agent]] CREATE sections
-   2. AND [[GPT Agent]] ADD emoji
-   3. AND [[GPT Agent]] WRITE headers
+3. WHEN [[GPT Agent]] WRITES content
+   1. THEN [[GPT Agent]] ENSURE each section:
+      1. DEFINES clear standards or rules
+      2. AND USES consistent formatting
+      3. AND INCLUDES practical examples
+      4. AND REFERENCES related concepts
+   2. AND [[GPT Agent]] FOLLOW writing rules:
+      1. ONE verb in CAPS after each actor
+      2. PROPER indentation for sub-steps
+      3. CLEAR step numbering
+      4. CONSISTENT use of [[double brackets]]
 
-4. GIVEN [[structure]] IS ready
-   1. THEN [[GPT Agent]] WRITE content
-      1. AND [[GPT Agent]] USE keywords
-         - State: IS, HAS, NEEDS, EXISTS
-         - Flow: GIVEN, WHEN, THEN, AND, IF
-         - Verbs: One CAPS word after [[Actor]]
-      2. AND [[GPT Agent]] USE [[brackets]]
-         - [[Actor]] for people/agents
-         - [[Component]] for parts
-         - [[Concept]] for repeated items
+4. WHEN [[GPT Agent]] COMPLETES document
+   1. THEN [[GPT Agent]] VERIFY:
+      1. ALL sections follow format
+      2. ALL actors properly bracketed
+      3. ALL steps properly numbered
+      4. ALL examples properly formatted
+   2. AND [[GPT Agent]] SAVE in code-of-conduct folder
+   3. AND [[GPT Agent]] INFORM [[User]]
 
-5. WHEN [[GPT Agent]] ADDS code
-   1. THEN [[GPT Agent]] USE markdown
-      ```example
-      ```language
-      code here
-      ```
-      ```
-   2. IF [[code]] NEEDS context
-      1. THEN [[GPT Agent]] ADD comments
-
-6. GIVEN [[document]] IS complete
-   1. THEN [[GPT Agent]] CHECK quality
-      1. AND [[GPT Agent]] CHECK format
-      2. AND [[GPT Agent]] CHECK sections
-      3. AND [[GPT Agent]] CHECK style
-   2. IF [[document]] HAS errors
-      1. THEN [[GPT Agent]] FIX [[document]]
-      2. AND [[GPT Agent]] CHECK again
-   3. IF [[document]] IS ready
-      1. THEN [[GPT Agent]] SAVE [[document]]
-      2. AND [[GPT Agent]] TELL [[User]] 
+5. GIVEN [[User]] REVIEWS document
+   1. IF [[User]] REQUESTS changes
+      1. THEN [[GPT Agent]] UPDATE content
+      2. AND [[GPT Agent]] PRESENT new version
+   2. IF [[User]] APPROVES
+      1. THEN [[GPT Agent]] CONFIRM completion 
