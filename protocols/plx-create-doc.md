@@ -35,13 +35,18 @@ CONTEXT: The [[User]] notices a new documentation file needs to be created and w
 4. GIVEN [[structure]] IS ready
    1. THEN [[GPT Agent]] WRITE content
       1. AND [[GPT Agent]] USE keywords
-         - State: IS, HAS, NEEDS, EXISTS
-         - Flow: GIVEN, WHEN, THEN, AND, IF
-         - Verbs: One CAPS word after [[Actor]]
-      2. AND [[GPT Agent]] USE [[brackets]]
-         - [[Actor]] for people/agents
-         - [[Component]] for parts
-         - [[Concept]] for repeated items
+         - Primary: GIVEN (precondition), WHEN (action), THEN (result)
+         - Flow: AND (additional), OR (alternative)
+         - Conditionals: IF/ELSE (branching), BUT (exception)
+      2. AND [[GPT Agent]] FOLLOW rules
+         - UPPERCASE keywords
+         - [[Actor]] or [[Component]] in double brackets
+         - ONE uppercase VERB/STATE after actor
+         - Proper indentation for sub-steps
+      3. AND [[GPT Agent]] USE code elements
+         - Inline code with backticks
+         - Code blocks properly indented
+         - Language-specific syntax highlighting
 
 5. WHEN [[GPT Agent]] ADDS code
    1. THEN [[GPT Agent]] USE markdown

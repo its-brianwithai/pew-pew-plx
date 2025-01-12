@@ -24,21 +24,26 @@ CONTEXT: The [[User]] wants to create a new code of conduct document that will s
       ---
       ```
    2. AND [[GPT Agent]] STRUCTURE content:
-      1. USING uppercase Gherkin keywords (GIVEN, WHEN, THEN)
-      2. AND REFERENCING [[Actors]] and [[Components]] in double brackets
-      3. AND USING VERBS in uppercase after actors
-      4. AND FOLLOWING step hierarchy:
-         - GIVEN for preconditions
-         - WHEN for main steps
-         - THEN for sub-steps
-         - IF for conditionals
+      1. AND [[GPT Agent]] USING Gherkin keywords:
+         - Primary: GIVEN (precondition), WHEN (action), THEN (result)
+         - Flow: AND (additional), OR (alternative)
+         - Conditionals: IF/ELSE (branching), BUT (exception)
+      2. AND [[GPT Agent]] FOLLOWING rules:
+         - UPPERCASE all keywords
+         - [[Actor]] or [[Component]] in double brackets
+         - ONE uppercase VERB/STATE after actor
+         - Proper indentation for sub-steps
+      3. AND [[GPT Agent]] USING code elements:
+         - Inline code with backticks
+         - Code blocks properly indented
+         - Language-specific syntax highlighting
 
 3. WHEN [[GPT Agent]] WRITES content
    1. THEN [[GPT Agent]] ENSURE each section:
       1. DEFINES clear standards or rules
-      2. AND USES consistent formatting
-      3. AND INCLUDES practical examples
-      4. AND REFERENCES related concepts
+      2. AND [[GPT Agent]] USES consistent formatting
+      3. AND [[GPT Agent]] INCLUDES practical examples
+      4. AND [[GPT Agent]] REFERENCES related concepts
    2. AND [[GPT Agent]] FOLLOW writing rules:
       1. ONE verb in CAPS after each actor
       2. PROPER indentation for sub-steps
