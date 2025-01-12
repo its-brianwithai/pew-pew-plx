@@ -489,3 +489,13 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
   - Includes overview, key findings, insights, and considerations
   - Waits for user direction before proceeding
   - Supports iterative refinement based on feedback
+
+## [0.32.0] - 2024-03-XX
+
+### Added
+- New code of conduct document `how-we-handle-secrets.md` detailing:
+  - Secret management process using Firebase Functions secrets manager
+  - Template structure and gitignore configuration
+  - Update and clear scripts for managing secrets
+  - Usage flow for developers
+  - Comprehensive verification checklist

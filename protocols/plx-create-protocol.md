@@ -40,10 +40,19 @@ CONTEXT: The [[User]] notices a chance to create a helpful protocol and wants yo
 
 4. WHEN [[GPT Agent]] WRITES content
    1. THEN [[GPT Agent]] USE format
-      1. AND [[GPT Agent]] START GIVEN/WHEN/THEN
-      2. AND [[GPT Agent]] USE [[brackets]]
-      3. AND [[GPT Agent]] USE keywords
-      4. AND [[GPT Agent]] SET indent
+      1. AND [[GPT Agent]] USE Gherkin keywords:
+         - Primary: GIVEN (precondition), WHEN (action), THEN (result)
+         - Flow: AND (additional), OR (alternative)
+         - Conditionals: IF/ELSE (branching), BUT (exception)
+      2. AND [[GPT Agent]] FOLLOW rules:
+         - UPPERCASE all keywords
+         - [[Actor]] or [[Component]] in double brackets
+         - ONE uppercase VERB/STATE after actor
+         - Proper indentation for sub-steps
+      3. AND [[GPT Agent]] USE code elements:
+         - Inline code with backticks
+         - Code blocks properly indented
+         - Language-specific syntax highlighting
    2. IF [[format]] IS wrong
       1. THEN [[GPT Agent]] FIX format
       2. AND [[GPT Agent]] CHECK again
@@ -56,5 +65,3 @@ CONTEXT: The [[User]] notices a chance to create a helpful protocol and wants yo
    2. IF [[User]] ACCEPTS [[protocol]]
       1. THEN [[GPT Agent]] SAVE [[protocol]]
       2. AND [[GPT Agent]] TELL [[User]]
-
-# Example

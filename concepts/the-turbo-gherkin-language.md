@@ -1,10 +1,10 @@
 ---
 document_type: concept
-goal: explain the Gherkin instruction language and its usage in our framework
-gpt_action: reference this when you need to understand or use Gherkin-style instructions
+goal: explain the Turbo Gherkin language and its usage in our framework
+gpt_action: reference this when you need to understand or use Turbo Gherkin-style instructions
 ---
 
-The Gherkin instruction language provides structured steps for clear, consistent documentation using specific keywords.
+The Turbo Gherkin language provides structured steps for clear, consistent documentation using specific keywords.
 
 # Core Keywords and Rules
 
