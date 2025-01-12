@@ -6,6 +6,22 @@ gpt_action: use as reference for framework version history
 
 # Changelog
 
+## [0.29.0] - 2024-03-XX
+
+### Added
+- New Objects concept for reusable entity definitions:
+  - Added `objects/` directory
+  - Created core objects (User.md, GPT Agent.md)
+  - Introduced exact-match filename convention
+  - Added frontmatter structure for objects
+- Updated workspace creation script with Objects and APIs components
+- Enhanced documentation with Objects section in README
+
+### Changed
+- Updated create_workspace.sh to include Objects and APIs
+- Modified README structure to include Objects section
+- Added exception to kebab-case naming for Object files
+
 ## [0.28.0] - 2024-01-11
 
 ### Changed

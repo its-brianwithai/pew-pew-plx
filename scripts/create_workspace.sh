@@ -49,6 +49,8 @@ components=(
     "Prompts"
     "Scripts"
     "Concepts"
+    "Objects"
+    "APIs"
 )
 
 # Show components and get selection
@@ -162,6 +164,16 @@ for component in "${selected[@]}"; do
             ;;
         "Concepts")
             cp -r "$REPO_ROOT/concepts" "$WORKSPACE_DIR/" 2>/dev/null || echo "⚠️  No concepts found to copy"
+            ;;
+        "Objects")
+            echo "Including Objects..."
+            mkdir -p "$WORKSPACE_DIR/objects"
+            cp -r "$REPO_ROOT/objects/"* "$WORKSPACE_DIR/objects/" 2>/dev/null || echo "No objects found to copy."
+            ;;
+        "APIs")
+            echo "Including APIs..."
+            mkdir -p "$WORKSPACE_DIR/apis"
+            cp -r "$REPO_ROOT/apis/"* "$WORKSPACE_DIR/apis/" 2>/dev/null || echo "No APIs found to copy."
             ;;
     esac
 done

@@ -8,9 +8,10 @@
 3. [Core Pillars](#-core-pillars)
 4. [Development Workflow](#-development-workflow)
 5. [Code of Conduct](#-code-of-conduct)
-6. [API Integration](#-api-integration)
-7. [PLX Commands](#-plx-commands)
-8. [The Agent Work Documents](#-the-agent-work-documents)
+6. [Objects](#-objects)
+7. [API Integration](#-api-integration)
+8. [PLX Commands](#-plx-commands)
+9. [The Agent Work Documents](#-the-agent-work-documents)
 
 ## 🔍 Quick Start
 
@@ -190,6 +191,21 @@ The framework also provides directories for user-populated content:
 - APIs
 
 These sections can be customized and populated based on your project's needs.
+
+## 💻 Objects
+
+The framework uses Objects to define reusable entities that can be referenced throughout the documentation using wiki-style links. Objects:
+
+1. Are stored in the `objects/` directory
+2. Use exact-match filenames for direct linking (e.g., `User.md` for [[User]])
+3. Contain frontmatter with type, goal, and action
+5. Can be referenced using double-bracket links (e.g., `[[User]]`)
+
+Core objects include:
+- [[User]]: The human interacting with the framework
+- [[GPT Agent]]: The AI assistant operating within the framework
+
+This naming convention is an exception to kebab-case to enable direct linking without aliases thus keeping the wiki-style links clean and simple.
 
 ## 💻 API Integration
 
