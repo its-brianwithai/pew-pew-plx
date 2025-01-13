@@ -1,0 +1,30 @@
+name: turbo-workspace
+description: A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
+repository: https://github.com/ultrawideturbodev/ultra_wide_turbo_workspace
+version: 0.1.0
+environment:
+  mason: ^0.1.0
+vars:
+  name:
+    type: string
+    description: Workspace name
+    default: turbo-workspace
+    prompt: What is the name of your workspace?
+  components:
+    type: array
+    description: Select which components to include
+    defaults:
+      - turbo-protocols
+      - turbo-templates
+      - turbo-work-docs
+      - turbo-workflows
+    prompt: Which components do you want to include?
+    values:
+      - turbo-apis
+      - turbo-cocs
+      - turbo-concepts
+      - turbo-objects
+      - turbo-protocols
+      - turbo-templates
+      - turbo-work-docs
+      - turbo-workflows

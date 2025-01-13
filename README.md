@@ -1,4 +1,5 @@
 # 🤖 Ultra Wide Turbo Agent Workspace
+[![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
 > A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
@@ -15,31 +16,40 @@
 
 ## 🔍 Quick Start
 
-Create a new Ultra Wide Turbo Agent Workspace using the provided script:
+Create a new Ultra Wide Turbo Agent Workspace using Mason bricks. You have two options:
+
+### Option 1: Add all bricks at once
+Copy this script and run it in your project root:
 
 ```bash
-./scripts/create_workspace.sh
+mason add turbo-apis --global --path ./apis
+mason add turbo-cocs --global --path ./code-of-conduct
+mason add turbo-concepts --global --path ./concepts
+mason add turbo-objects --global --path ./objects
+mason add turbo-protocols --global --path ./protocols
+mason add turbo-templates --global --path ./templates
+mason add turbo-work-docs --global --path ./work-docs
+mason add turbo-workflows --global --path ./workflows
+mason add turbo-workspace --global --path ./protocols
 ```
 
-The script will:
-1. Generate a default workspace name (e.g. `turbo-workspace-0801-wed-01`)
-   - Format: `turbo-workspace-MMDD-ddd-NN`
-   - `MM`: Month (08)
-   - `DD`: Day (01)
-   - `ddd`: Day of week (wed)
-   - `NN`: Sequential number (01)
+> Note: Remove any lines for components you don't need.
 
-2. Let you select which components to include:
-   - Agent Work Documents (your-*.md files)
-   - Protocols
-   - Workflows
-   - Templates
-   - Code of Conduct
-   - Prompts
-   - Scripts
-   - Concepts
+### Option 2: Add bricks individually
+Navigate to the specific brick directory and run:
 
-3. Create the workspace with selected components. You can also provide a custom name when prompted. You can find your workspaces in the `workspaces` folder.
+```bash
+# Inside the brick directory (e.g., work-docs/)
+mason add turbo-work-docs --global --path .
+```
+
+After adding the bricks, generate components using `mason make`:
+
+```bash
+mason make <brick-name>  # e.g., mason make turbo-work-docs
+```
+
+Each component will be generated in its respective directory, creating a complete workspace structure.
 
 ## 🔍 Framework Overview
 
@@ -290,286 +300,4 @@ PLX commands in `plx-*.md` files guide specific actions:
 | `plx-create-feature-breakdown` | Create feature documentation | - Define structure<br>- Document components<br>- Add examples |
 | `plx-create-insight` | Create concise how-to content | - Structure content<br>- Add examples<br>- Follow format |
 | `plx-create-protocol` | Create new protocol | - Define purpose<br>- Set structure<br>- Document steps |
-| `plx-create-tutorial` | Create tutorial content | - Structure sections<br>- Add placeholders<br>- Include examples |
-| `plx-create-use-case` | Create use case description | - Analyze subject<br>- Explain benefits<br>- Provide example |
-| `plx-document-dart-file` | Document Dart code | - Add comments<br>- Document methods<br>- Include examples |
-| `plx-prepare-content` | Prepare content for publishing | - Format content<br>- Add media<br>- Review quality |
-| Task Management Commands |||
-| `plx-check-todo` | Review task status | - Check completion<br>- Update progress<br>- Note blockers |
-| `plx-update-todo` | Update task list | - Add new tasks<br>- Mark completed<br>- Update status |
-| Testing Commands |||
-| `plx-create-milestone-gherkin-tests` | Create milestone tests | - Define scenarios<br>- Write Gherkin<br>- Link milestones |
-| `plx-create-tests` | Create BDD test scenarios | - Generate test cases<br>- Update test files<br>- Link to milestones |
-| `plx-run-tests` | Execute test suite | - Run tests<br>- Check results<br>- Report issues |
-| `plx-test-live` | Test in production | - Verify behavior<br>- Check performance<br>- Monitor errors |
-| Context Management Commands |||
-| `plx-follow-the-docs` | Follow documentation | - Read guides<br>- Follow patterns<br>- Stay consistent |
-| `plx-scan-project-for-context` | Scan for context | - Search files<br>- Extract info<br>- Build context |
-| `plx-sync-work-documents` | Sync work documents | - Update files<br>- Align content<br>- Maintain consistency |
-| `plx-transfer-context` | Transfer to another agent | - Document state<br>- Package context<br>- Enable handover |
-| Utility Commands |||
-| `plx-ask-questions` | Gather information | - Identify gaps<br>- Ask clearly<br>- Verify understanding |
-| `plx-commit` | Handle git commits | - Review changes<br>- Format message<br>- Execute commit |
-| `plx-explain-yourself` | Document understanding | - Explain issue<br>- Propose solution<br>- Get approval |
-| `plx-log-hours` | Track work time | - Record time<br>- Note progress<br>- Update status |
-| Workflow Alignment Commands |||
-| `plx-follow-development-workflow` | Follow development process | - Check position<br>- Verify steps<br>- Maintain flow |
-| `plx-follow-planning-workflow` | Follow planning process | - Review requirements<br>- Create milestones<br>- Plan tasks |
-| `plx-follow-test-workflow` | Follow testing process | - Run tests<br>- Check coverage<br>- Fix issues |
-| Maintenance Commands |||
-| `plx-fix-linting-errors` | Fix code style | - Find errors<br>- Apply fixes<br>- Verify style |
-| `plx-update-read-me-and-changelog` | Update documentation | - Add changes<br>- Update versions<br>- Maintain docs |
-| `plx-update-translations` | Update translations | - Find strings<br>- Update files<br>- Verify changes |
-| Release Commands |||
-| `plx-prepare-release` | Prepare for release | - Check tests<br>- Update docs<br>- Package changes |
-
-## 📝 The Agent Work Documents
-
-These documents are maintained by the agent to track work, requirements, and progress:
-
-### your-requirements.md
-```markdown
----
-document_type: agent work document
-goal: getting as clear as possible what needs to be done
-gpt_action: use as a reference work to understand exactly what (still) needs to be done and document progress
----
-
-# 👤 Actors & 🧩 Components (Who or what)
-> - Someone or something that can perform actions or be interacted with (examples include User, Button, Screen, Input Field, Message, System, API, Database, and they can be a person, service, visual or non-visual).
-> - Possible Parents: Itself
----
-
-- [ ]
-
-# 🎬 Activities (Who or what does what?)
-> - Actions that an Actor or Component performs (examples include Create List, Delete Item, Sync Data, and they must always contain a verb + action).
-> - Possible Parents: Actors, Components
----
-
-- [ ]
-
-# 🌊 Activity Flows & Scenarios (What in which order?)
-> - Sequences of Atomic Actions (like "Tap button") that map out the steps to complete an Activity. May have optional paths for both successful completion (Happy Flow), errors (Error Flow), and scenarios like no connection, empty states, loading states, etc.
-> - Possible Parents: Activities, Itself
----
-
-- [ ]
-
-# 📝 Properties (Which values?)
-> - Describes a value or configuration that belongs to an object (examples include width, color, id, name).
-> - Possible Parents: Actors, Components, Activities, Activity Flows, Scenarios, Atomic Actions, Scenarios, Behaviours
----
-
-- [ ]
-
-# 🛠️ Behaviours (How does it act when.. in terms of.. ?)
-> - Defines how something looks, works and performs Examples include ui/ux, rules & limits, data & analytics, security, performance and scalability.
-> - Possible Parents: Anything
----
-
-- [ ]
-
-# 💡 Ideas & 🪵 Backlog
-> - Anything that could be added later, too complex now, needs more research, would be nice to have, or alternative approaches.
-> - Possible Parents: Anything (optional)
----
-
-- [ ]
-
-# ❓ Questions
-> - Questions that need to be answered to clarify requirements.
-> - Possible Parents: Anything (optional)
----
-
-- [ ]
-
-# 🧪 Unit & Integration Tests  
-> - Tests that verify the implementation and verifies an item as completed.
-> - Possible Parents: Activities, Activity Flows, Properties, Behaviours, Tasks
----
-
-- [ ]
-
-# 🎯 Roles, 📝 Tasks & 🎓 Suggested Approach
-> - Each behaviour, property, activity (flow), scenario, atomic action, actor, component must directly or indirectly (by parents) cascade down to a todo with assigned role. Creating a task for a parent and completing it automatically covers its children unless children have open tasks themselves.
-> - Possible Parents: Anything (optional)
----
-
-- [ ] UI/UX Designer
-- [ ] Frontend Developer
-- [ ] Backend Developer
-- [ ] Data Engineer
-- [ ] DevOps Engineer
-- [ ] Project Manager
-- [ ] Marketeer
-```
-
-### your-ticket.md
-```markdown
----
-document_type: agent work document
-goal: document and track implementation details, requirements, and acceptance criteria
-gpt_action: use as reference for documenting details and defining acceptance criteria
----
-
-# 🔖 Description
-> 💡 *A short and descriptive introduction of the problem we are going to solve.*
----
-
-# 🗣 User Story
-> 💡 ***As a*** *ROLE* ***I want*** *BEHAVIOUR* ***so that*** *REASON.*
----
-
-# ⚙️ Requirements
-> 💡 *Add a link to your-requirements.md here*
----
-
-# 💾 Data Model
-> 💡 *Old and new data models that will be created and/or altered when this feature is added.*
----
-
-# 🔒 Security Rules
-> 💡 *Old and new security rules with roles and access that should be created and/or altered. Include create, read, update and delete.*
----
-
-# 🐒 API
-> 💡 *Old and new API calls that should be created and/or altered.*
----
-
-# 📊 Analytics
-> 💡 *Old and new analytics that should be created and/or altered when this feature is added. Include a name, when it's fired and optional properties.*
----
-
-# ☎️ Impact Communication
-> 💡 *Who / which teams should we inform about the impact of releasing this ticket? Sales, marketing, data, CS, other?*
----
-
-# 🧪 Tests
-> 💡 *Components/flows/code that would benefit from tests and which scenario's should be tested.*
----
-
-# 🤝 Acceptance Test
-> 💡 *Which scenario's should we test in the acceptance test? So that we can make sure that this ticket does what it is supposed to do without any unexpected errors.*
----
-
-# 🎨 UI/UX Behaviour
-> 💡 *Anything to take note of regarding the behaviour of UI/UX elements (if applicable). Think of position, behaviour when elements do not fit the screen, feedback on elements and properties of animations.*
----
-
-# 📝 Suggested Approach
-> 💡 *With knowledge of the current codebase, try to define a best suggested approach. Think of current components used, flow of data and UI elements.*
----
-
-# 👉️ Final Remarks
-> 💡 *Anything to take note off that is not properly defined yet. Think of out of scope notes, dependencies, anything to be extra cautious about and/or information about related issues.*
----
-
-# ✅ Pull Request Checklist
-> 💡 *Before submitting your PR make sure you've gone through this checklist carefully. Each item represents a crucial aspect of code quality and reliability. Take your time to verify each point - your thoroughness here helps maintain our high standards and makes the review process smoother.*
----
-
-- [ ] I have read the 'Description' and 'Requirements'/'Expected Result' one last time and confirm to have tested the functionality/fix of this ticket thoroughly, and everything is working exactly as described in those sections.
-- [ ] I have tested the functionality on both Android and iOS.
-- [ ] I have double-checked the design file and confirm that the current implementation is a pixel-perfect clone of the original design.
-- [ ] I considered any security risks and took the appropriate actions accordingly, such as placing the right security tag and defining and/or implementing any actions under the heading 'Security'.
-- [ ] I have added short, descriptive, and maintainable documentation to all new classes and methods.
-- [ ] I have added short, descriptive, and maintainable logging to each new piece of code where it seems logical to do so for debugging/crash reporting purposes.
-- [ ] I have added sensible error handling using try/catch statements and optional custom exceptions where needed.
-- [ ] I did a full round of QA of my own code and can confirm that the upcoming PR contains my best possible version of this ticket.
-```
-
-### your-milestones.md
-```markdown
----
-document_type: agent work document
-goal: track high-level milestones and overall project progress
-gpt_action: maintain organized milestone list and track overall project direction
----
-
-# 🚀 [M1] Milestone Title
-> - Each milestone represents a significant project phase or feature.
-> - Detailed tasks for the current milestone are tracked in [[your-todo-list.md]].
----
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
-
-# 🚀 [M2] Milestone Title
-> - Each milestone represents a significant project phase or feature.
-> - Detailed tasks for the current milestone are tracked in [[your-todo-list.md]].
----
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
-- [ ] Initial BDD Milestone Result Confirmation Test Placeholder
-```
-
-### your-todo-list.md
-```markdown
----
-document_type: agent work document
-goal: track tasks for current milestone
-gpt_action: maintain organized atomic task list for current milestone
----
-
-# 🔥 User Added (Do These First! - Don't Remove This Section!!)
-> - User may, at any time, add tasks with high priority to your todo, which you can find here. Complete these first above all other tasks.
----
-- [ ] None at the moment
-
-# 🚀 Current Milestone
-> - Tasks for the current milestone only.
-> - Higher level milestones are tracked in [[your-milestones]].
----
-- [ ] Initial task placeholder
-
-# ✅ Completed Milestone
-> - Completed tasks of a previously completed milestone for agent personal reference and context refresh.
----
-- [X] Initial completed task placeholder
-```
-
-### your-tests.md
-```markdown
----
-document_type: agent work document 
-goal: define and track BDD tests for each milestone
-gpt_action: maintain Gherkin style tests, run tests, fix failures
----
-
-# 🚀 [M1] Milestone Title
-
-## Test Scenarios
-
-### Scenario 1: Test Case Title
-- Given some initial context
-- When some action is taken
-- Then some result is expected
-
-### Scenario 2: Test Case Title 
-- Given some initial context
-- When some action is taken 
-- Then some result is expected
-
-# 🚀 [M2] Milestone Title
-
-## Test Scenarios
-
-### Scenario 1: Test Case Title
-- Given some initial context
-- When some action is taken
-- Then some result is expected
-
-### Scenario 2: Test Case Title
-- Given some initial context 
-- When some action is taken
-- Then some result is expected
-```
-
-### your-hours.md
-```markdown
----
-document_type: agent work document
-goal: track work hours and progress
-gpt_action: log your hours worked
----
-
-- [ ] 
+| `plx-create-tutorial`

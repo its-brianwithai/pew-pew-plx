@@ -1,0 +1,19 @@
+bricks:
+  turbo-apis:
+    path: apis
+  turbo-cocs:
+    path: code-of-conduct
+  turbo-concepts:
+    path: concepts
+  turbo-objects:
+    path: objects
+  turbo-protocols:
+    path: protocols
+  turbo-templates:
+    path: templates
+  turbo-work-docs:
+    path: work-docs
+  turbo-workflows:
+    path: workflows
+  turbo-workspace:
+    path: .

@@ -1,5 +1,0 @@
-name: ultra_wide_turbo_agent_workspace
-description: A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results.
-version: 0.19.0
-environment:
-  sdk: '>=3.0.0 <4.0.0' 
