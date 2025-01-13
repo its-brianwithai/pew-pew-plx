@@ -34,5 +34,5 @@ CONTEXT: The [[User]] notices linting errors in their project and wants you to s
 
 4. WHEN [[You]] TRIES three times
    1. IF [[error]] STILL exists
-      1. THEN [[You]] FOLLOW [[the-test-workflow]]
+      1. THEN [[You]] FOLLOW [[the-testing-workflow]]
       2. AND [[You]] START analysis 

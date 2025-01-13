@@ -4,11 +4,11 @@ goal: realign agent with test workflow when drifting off course
 gpt_action: follow these steps to get back on track with the test workflow
 ---
 
-CONTEXT: The [[User]] notices the [[You]] is not following [[the-test-workflow]] correctly and wants you to realign with the proper test handling steps.
+CONTEXT: The [[User]] notices the [[You]] is not following [[the-testing-workflow]] correctly and wants you to realign with the proper test handling steps.
 
 1. GIVEN [[You]] RECEIVES realignment request
    1. THEN [[You]] PAUSE current actions
-   2. AND [[You]] READ [[the-test-workflow]]
+   2. AND [[You]] READ [[the-testing-workflow]]
    3. AND [[You]] IDENTIFY current position in workflow
       1. AND [[You]] CHECK [[tests]] status
       2. AND [[You]] CHECK current failing [[test]]
