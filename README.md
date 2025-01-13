@@ -113,7 +113,8 @@ We believe AI agents perform at their best when three key elements align:
 The development workflow is split into two main files for better organization and clarity:
 
 1. **Planning Workflow** (`the-planning-workflow.md`)
-   ```markdown
+
+```markdown
 ---
 document_type: workflow
 goal: define core planning workflow
@@ -153,10 +154,11 @@ gpt_action: follow these steps for all planning work that you do
 		2. AND [[GPT Agent]] REPEAT step 8
 	2. ELSE IF [[User]] APPROVES
 		1. THEN [[GPT Agent]] starts with first in [[your-todo-list]]
-   ```
+```
 
 2. **Development Workflow** (`the-development-workflow.md`)
-   ```markdown
+
+```markdown
 document_type: workflow
 goal: define core development workflow
 gpt_action: follow these steps for all development work that you do
@@ -180,7 +182,7 @@ gpt_action: follow these steps for all development work that you do
 				2. AND [[GPT Agent]] START this workflow from beginning
 4. THEN [[GPT Agent]] START next [[atomic development task]]
 	1. AND [[GPT Agent]] START this work from step 2
-   ```
+```
 
 Each workflow follows a structured approach with clear steps and checkpoints to maintain consistency and quality throughout the development process. The planning phase ensures proper understanding and task breakdown, while the development phase focuses on systematic implementation and testing.
 
@@ -256,10 +258,12 @@ The framework uses a standardized approach for API integrations:
       ├── ghost/
       │   ├── docs.md
       │   ├── .env
+      │   ├── .gitignore
       │   └── request.json
       └── typefully/
           ├── docs.md
           ├── .env
+          ├── .gitignore
           └── request.json
       ```
 
