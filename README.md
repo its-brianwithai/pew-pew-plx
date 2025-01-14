@@ -324,10 +324,14 @@ The framework uses a standardized approach for API integrations:
 
 ## 💻 PLX Commands
 
-PLX commands in `plx-*.md` files guide specific actions:
-- Each command has its own protocol file
-- Follow protocol exactly for that part of work
-- Stay focused on current task within protocol
+The framework includes several PLX (Protocol) commands that help maintain consistency and quality:
+
+### Core Protocols
+- `@plx-stick-to-your-prompt` - Ensures strict adherence to system prompts and instructions
+- `@plx-scan-project-for-context` - Analyzes and maintains project context
+- `@plx-create-concept` - Creates focused concept explanations
+- `@plx-create-use-case` - Generates use case descriptions
+- `@plx-create-tests` - Generates BDD test scenarios
 
 | Protocol                              | Purpose                       | Key Actions                                                                              |
 |---------------------------------------|-------------------------------|------------------------------------------------------------------------------------------|

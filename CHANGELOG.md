@@ -6,6 +6,15 @@ gpt_action: use as reference for framework version history
 
 # Changelog
 
+## [0.30.0] - 2024-03-XX
+
+### Added
+- New protocol `plx-stick-to-your-prompt.md` for ensuring strict adherence to system prompts:
+  - Added structured steps for prompt compliance
+  - Enforces systematic approach to request handling
+  - Ensures consistent rule following
+  - Maintains alignment with system instructions
+
 ## [0.29.0] - 2024-03-XX
 
 ### Added
