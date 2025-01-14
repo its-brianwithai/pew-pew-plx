@@ -6,6 +6,14 @@ gpt_action: use as reference for framework version history
 
 # Changelog
 
+## [0.30.1] - 2024-01-14
+
+### Fixed
+- Fixed workspace generation hook to handle file conflicts:
+  - Added `--on-conflict overwrite` flag to mason commands
+  - Prevents interactive prompts during generation
+  - Ensures consistent file generation across machines
+
 ## [0.30.0] - 2024-03-XX
 
 ### Added
@@ -15,7 +23,7 @@ gpt_action: use as reference for framework version history
   - Ensures consistent rule following
   - Maintains alignment with system instructions
 
-## [0.29.0] - 2024-03-XX
+## [0.29.0] - 2024-01-14
 
 ### Added
 - New Objects concept for reusable entity definitions:

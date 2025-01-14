@@ -13,7 +13,14 @@ Future<void> run(HookContext context) async {
 
     final result = await Process.run(
       'mason',
-      ['make', component, '--name', context.vars['name']],
+      [
+        'make',
+        component,
+        '--name',
+        context.vars['name'],
+        '--on-conflict',
+        'overwrite',
+      ],
       runInShell: true,
     );
 
