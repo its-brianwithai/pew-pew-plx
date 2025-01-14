@@ -6,6 +6,16 @@ gpt_action: use as reference for framework version history
 
 # Changelog
 
+## [0.31.1] - 2024-01-14
+
+### Changed
+- Enhanced `plx-ask-questions` protocol for thorough implementation preparation:
+  - Added implementation requirements verification
+  - Added resource and documentation checks
+  - Enhanced information gathering process
+  - Added implementation readiness confirmation
+  - Improved guidance verification steps
+
 ## [0.31.0] - 2024-01-14
 
 ### Added
