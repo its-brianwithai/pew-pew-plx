@@ -2,7 +2,7 @@ bricks:
   apis:
     path: apis
   cocs:
-    path: code-of-conduct
+    path: "code-of-conduct"
   concepts:
     path: concepts
   objects:
@@ -12,7 +12,7 @@ bricks:
   templates:
     path: templates
   work-docs:
-    path: work-docs
+    path: "work-docs"
   workflows:
     path: workflows
   workspace:
