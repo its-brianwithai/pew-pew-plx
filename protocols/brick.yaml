@@ -1,4 +1,4 @@
-name: turbo-protocols
+name: protocols
 description: Protocol definitions for the Ultra Wide Turbo workspace.
 version: 0.1.0
 repository: https://github.com/ultrawideturbodev/ultra_wide_turbo_workspace/protocols

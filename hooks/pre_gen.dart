@@ -8,8 +8,6 @@ Future<void> run(HookContext context) async {
   // Get selected components
   final components = (context.vars['components'] as List);
 
-  print('''[🐛] [PRINT] [🌟] [run] [📞] context.vars: ${context.vars}''');
-
   for (final component in components) {
     logger.info('Running brick for $component...');
 

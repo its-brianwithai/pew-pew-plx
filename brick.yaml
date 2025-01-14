@@ -1,4 +1,4 @@
-name: turbo-workspace
+name: workspace
 description: A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 repository: https://github.com/ultrawideturbodev/ultra_wide_turbo_workspace
 version: 0.1.0

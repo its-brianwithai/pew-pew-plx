@@ -22,15 +22,15 @@ Create a new Ultra Wide Turbo Agent Workspace using Mason bricks. You have two o
 Copy this script and run it in your project root:
 
 ```bash
-mason add turbo-apis --global --path ./apis
-mason add turbo-cocs --global --path ./code-of-conduct
-mason add turbo-concepts --global --path ./concepts
-mason add turbo-objects --global --path ./objects
-mason add turbo-protocols --global --path ./protocols
-mason add turbo-templates --global --path ./templates
-mason add turbo-work-docs --global --path ./work-docs
-mason add turbo-workflows --global --path ./workflows
-mason add turbo-workspace --global --path ./protocols
+mason add apis --global --path ./apis
+mason add cocs --global --path ./code-of-conduct
+mason add concepts --global --path ./concepts
+mason add objects --global --path ./objects
+mason add protocols --global --path ./protocols
+mason add templates --global --path ./templates
+mason add work-docs --global --path ./work-docs
+mason add workflows --global --path ./workflows
+mason add workspace --global --path ./protocols
 ```
 
 > Note: Remove any lines for components you don't need.
@@ -110,7 +110,7 @@ We believe AI agents perform at their best when three key elements align:
 
 ## 🔄 Development Workflow
 
-The development workflow is split into two main files for better organization and clarity:
+The development workflow is split into three main files for better organization and clarity:
 
 1. **Planning Workflow** (`the-planning-workflow.md`)
 
