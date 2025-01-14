@@ -108,6 +108,12 @@ We believe AI agents perform at their best when three key elements align:
    - Integration and unit tests
    - Test coverage tracking
 
+6. **[Backlog](#your-backlogmd)** (`your-backlog.md`)
+   - Chronological list of future work items
+   - No immediate action required
+   - Implementation starts on user request
+   - Maintains original context and requirements
+
 ## 🔄 Development Workflow
 
 The development workflow is split into three main files for better organization and clarity:

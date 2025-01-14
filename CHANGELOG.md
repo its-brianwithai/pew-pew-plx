@@ -6,6 +6,16 @@ gpt_action: use as reference for framework version history
 
 # Changelog
 
+## [0.31.0] - 2024-01-14
+
+### Added
+- New work document `your-backlog.md`:
+  - Tracks future work items chronologically
+  - Implements on-demand processing
+  - Maintains original context
+  - Added to core pillars in documentation
+  - Integrated with existing work documents
+
 ## [0.30.1] - 2024-01-14
 
 ### Fixed
@@ -316,7 +326,7 @@ All notable changes to the Ultra Wide Turbo framework will be documented in this
 - Modified workspace creation script:
   - Now accepts user input for base name
   - Maintains date and sequential numbering format
-  - Default base name remains "turbo-workspace"
+  - Default base name remains "your-workspace"
 
 ## [0.15.0] - 2024-01-08
 

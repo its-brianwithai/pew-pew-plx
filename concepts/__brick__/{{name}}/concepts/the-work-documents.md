@@ -23,3 +23,6 @@ gpt_action: use documents during development
 
 - [[your-hours]]
    Tracks work hours, progress, and task completion status to maintain clear documentation of time spent and work accomplished.
+
+- [[your-backlog]]
+   A chronological list of future work items that are only referenced or modified when explicitly requested by the user.
