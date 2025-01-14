@@ -122,38 +122,38 @@ gpt_action: follow these steps for all planning work that you do
 ---
 
 1. WHEN [[User]] GIVE [[input]].
-	1. THEN [[GPT Agent]] RESEARCH solution based on [[input]].
-		1. AND [[GPT Agent]] SCAN codebase.
-		2. AND [[GPT Agent]] SEARCH documentation.
-		3. AND [[GPT Agent]] ANALYSE [[your-requirements]]
-		4. AND [[GPT Agent]] ANALYSE [[your-ticket]]
-2. WHEN [[GPT Agent]] NEED more info
-	1. THEN [[GPT Agent]] ASK clarifying questions
-3. GIVEN [[GPT Agent]] UNDERSTAND task perfectly
-4. THEN [[GPT Agent]] ANALYSE [[the-work-documents]]
+	1. THEN [[You]] RESEARCH solution based on [[input]].
+		1. AND [[You]] SCAN codebase.
+		2. AND [[You]] SEARCH documentation.
+		3. AND [[You]] ANALYSE [[your-requirements]]
+		4. AND [[You]] ANALYSE [[your-ticket]]
+2. WHEN [[You]] NEED more info
+	1. THEN [[You]] ASK clarifying questions
+3. GIVEN [[You]] UNDERSTAND task perfectly
+4. THEN [[You]] ANALYSE [[the-work-documents]]
 	1. IF [[your-requirements]] is empty
-		1. THEN [[GPT Agent]] ASK [[User]] whether [[GPT Agent]] should update [[your-requirements]]
+		1. THEN [[You]] ASK [[User]] whether [[You]] should update [[your-requirements]]
 			1. IF [[User]] CONFIRMS
-				1. THEN [[GPT Agent]] UPDATE [[your-requirements]]
+				1. THEN [[You]] UPDATE [[your-requirements]]
 	2. IF [[your-ticket]] is empty
-			1. THEN [[GPT Agent]] ASK [[User]] whether [[GPT Agent]] should update ticket
+			1. THEN [[You]] ASK [[User]] whether [[You]] should update ticket
 				1. IF [[User]] CONFIRMS
-					1. THEN [[GPT Agent]] UPDATE [[your-ticket]]
-	1. THEN [[GPT Agent]] CREATE high level list of [[clear testable milestones]]
-		1. AND [[GPT Agent]] UPDATE [[your-milestones]] with [[clear testable milestones]] as markdown sections with relevant emojis
-		2. AND [[GPT Agent]] UPDATE [[your-milestones]] with [[BBD Gherkin style tests]] from [[your-requirements]] or [[your-ticket]] or [[GPT Agent]] own input
-5. GIVEN [[GPT Agent]] DEFINED [[clear testable milestones]] in [[your-milestones]]
-	1. AND [[GPT Agent]] DEFINED [[BBD Gherkin style tests]] in [[your-milestones]].
-6. THEN [[GPT Agent]] UPDATE [[your-todo-list]] with [[step-by-step atomic development tasks]] for first completing first of [[clear testable milestones]].
-7. GIVEN [[GPT Agent]] DEFINED [[clear testable milestones]] in [[your-milestones]]
-	1. AND [[GPT Agent]] DEFINED [[BBD Gherkin style tests]] in [[your-milestones]]
-	2. AND [[GPT Agent]] DEFINED [[step-by-step atomic development tasks]] in [[your-todo-list]]
-8. THEN [[GPT Agent]] PRESENTS plan to [[User]]
+					1. THEN [[You]] UPDATE [[your-ticket]]
+	1. THEN [[You]] CREATE high level list of [[clear testable milestones]]
+		1. AND [[You]] UPDATE [[your-milestones]] with [[clear testable milestones]] as markdown sections with relevant emojis
+		2. AND [[You]] UPDATE [[your-milestones]] with [[BBD Gherkin style tests]] from [[your-requirements]] or [[your-ticket]] or [[You]] own input
+5. GIVEN [[You]] DEFINED [[clear testable milestones]] in [[your-milestones]]
+	1. AND [[You]] DEFINED [[BBD Gherkin style tests]] in [[your-milestones]].
+6. THEN [[You]] UPDATE [[your-todo-list]] with [[step-by-step atomic development tasks]] for first completing first of [[clear testable milestones]].
+7. GIVEN [[You]] DEFINED [[clear testable milestones]] in [[your-milestones]]
+	1. AND [[You]] DEFINED [[BBD Gherkin style tests]] in [[your-milestones]]
+	2. AND [[You]] DEFINED [[step-by-step atomic development tasks]] in [[your-todo-list]]
+8. THEN [[You]] PRESENTS plan to [[User]]
 	1. IF [[User]] GIVE feedback
-		1. THEN [[GPT Agent]] PROCESS feedback
-		2. AND [[GPT Agent]] REPEAT step 8
+		1. THEN [[You]] PROCESS feedback
+		2. AND [[You]] REPEAT step 8
 	2. ELSE IF [[User]] APPROVES
-		1. THEN [[GPT Agent]] starts with first in [[your-todo-list]]
+		1. THEN [[You]] starts with first in [[your-todo-list]]
 ```
 
 2. **Development Workflow** (`the-development-workflow.md`)
@@ -164,24 +164,24 @@ goal: define core development workflow
 gpt_action: follow these steps for all development work that you do
 ---
 
-1. GIVEN [[GPT Agent]] HAS [[atomic development task]] in [[your-todo-list]]
-	1. THEN [[GPT Agent]] RESEARCH approach for first [[atomic development task]]
-2. THEN [[GPT Agent]] START [[atomic development task]]
-3. WHEN [[GPT Agent]] FINISH [[atomic development task]]
+1. GIVEN [[You]] HAS [[atomic development task]] in [[your-todo-list]]
+	1. THEN [[You]] RESEARCH approach for first [[atomic development task]]
+2. THEN [[You]] START [[atomic development task]]
+3. WHEN [[You]] FINISH [[atomic development task]]
 	1. IF [[atomic development task]] IS last task
-		1. THEN [[GPT Agent]] RUNS [[tests]] to confirm correct implementation of all [[atomic development task]]
+		1. THEN [[You]] RUNS [[tests]] to confirm correct implementation of all [[atomic development task]]
 			1. IF [[tests]] FAIL
-				1. THEN [[GPT Agent]] ANALYSE only first of failing [[tests]]
-					1. AND [[GPT Agent]] FIX only first of failing [[tests]]
-				2. WHEN [[GPT Agent]] FIX first of failing [[tests]]
-				3. THEN [[GPT Agent]] RUNS [[tests]] again
-					1. AND [[GPT Agent]] REPEATS process until all [[tests]] succeed
+				1. THEN [[You]] ANALYSE only first of failing [[tests]]
+					1. AND [[You]] FIX only first of failing [[tests]]
+				2. WHEN [[You]] FIX first of failing [[tests]]
+				3. THEN [[You]] RUNS [[tests]] again
+					1. AND [[You]] REPEATS process until all [[tests]] succeed
 		2. GIVEN [[tests]] succeed
-			1. THEN [[GPT Agent]] COMPLETE milestone in [[your-todo-list]]
-				1. AND [[GPT Agent]] CREATE new list of [[atomic development task]] based on next milestone from [[your-milestones]]
-				2. AND [[GPT Agent]] START this workflow from beginning
-4. THEN [[GPT Agent]] START next [[atomic development task]]
-	1. AND [[GPT Agent]] START this work from step 2
+			1. THEN [[You]] COMPLETE milestone in [[your-todo-list]]
+				1. AND [[You]] CREATE new list of [[atomic development task]] based on next milestone from [[your-milestones]]
+				2. AND [[You]] START this workflow from beginning
+4. THEN [[You]] START next [[atomic development task]]
+	1. AND [[You]] START this work from step 2
 ```
 
 3. **Testing Workflow** (`the-testing-workflow.md`)
@@ -270,7 +270,7 @@ The framework uses Objects to define reusable entities that can be referenced th
 
 Core objects include:
 - [[User]]: The human interacting with the framework
-- [[GPT Agent]]: The AI assistant operating within the framework
+- [[You]]: The AI assistant operating within the framework
 
 This naming convention is an exception to kebab-case to enable direct linking without aliases thus keeping the wiki-style links clean and simple.
 
