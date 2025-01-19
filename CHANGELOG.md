@@ -4,8 +4,37 @@ goal: track framework changes and updates
 gpt_action: use as reference for framework version history
 ---
 
-# Changelog
+# 🔄 Changelog
 
+`## [0.32.0] - 2024-01-17
+
+### Changed
+- Simplified Quick Start section to be more concise and narrative
+- Updated Core Pillars section to use descriptive text instead of bullet points
+- Reorganized PLX Commands section into clear categories
+- Added all protocol files from protocols directory to PLX Commands section
+- Fixed workspace creation instructions to clarify global brick usage
+- Updated documentation links to point to correct paths
+- Improved readability of installation instructions
+- Added proper reference to BrickHub documentation
+
+### Added
+- New PLX Commands categories:
+  - Documentation Commands (11 commands)
+  - Task Management Commands (7 commands)
+  - Testing Commands (6 commands)
+  - Process Commands (7 commands)
+  - Analysis Commands (5 commands)
+  - Workflow Control Commands (8 commands)
+  - Maintenance Commands (5 commands)
+  - Context Management Commands (2 commands)
+
+### Fixed
+- Corrected Mason CLI installation instructions
+- Fixed broken documentation links
+- Updated workspace creation workflow
+- Synchronized PLX commands with actual protocol files
+`
 ## [0.31.1] - 2024-01-14
 
 ### Changed

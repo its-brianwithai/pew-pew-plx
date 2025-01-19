@@ -7,7 +7,10 @@ gpt_action: maintain organized atomic task list for current milestone
 # 🔥 User Added (Do These First! - Don't Remove This Section!!)
 > - User may, at any time, add tasks with high priority to your todo, which you can find here. Complete these first above all other tasks.
 ---
-- [ ] None at the moment
+- [ ] Update README.md PLX commands section to match protocol directory
+  - [ ] Only document commands that have protocol files
+  - [ ] Keep current categorization and formatting
+  - [ ] Remove any commands not present in protocols directory
 
 # 🚀 Current Milestone
 > - Tasks for the current milestone only.
