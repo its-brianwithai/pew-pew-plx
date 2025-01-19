@@ -16,7 +16,7 @@
 
 ## 🔍 Quick Start
 
-Before you begin, you'll need to install the Mason CLI. You have two options:
+This method really shines when using the Mason CLI. It will allow you to quickly summon a workspace in any folder by typing `mason make workspace` and then select the documents you want in which folder.
 
 ### 1. Install Mason CLI
 
