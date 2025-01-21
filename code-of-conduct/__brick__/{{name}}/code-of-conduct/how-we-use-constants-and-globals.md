@@ -1,3 +1,4 @@
+
 ---
 document_type: code of conduct
 goal: define process for organizing and using constants and globals

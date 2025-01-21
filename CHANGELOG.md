@@ -6,7 +6,24 @@ gpt_action: use as reference for framework version history
 
 # 🔄 Changelog
 
-`## [0.32.0] - 2024-01-17
+## [0.33.0] - 2024-01-21
+
+### Added
+- Introduced use-cases directory for focused, single-purpose document sets
+- Added first use-case `creating-the-perfect-plan`:
+  - `plx-create-planning.md`: Protocol for creating atomic development plans
+  - `plx-reflect.md`: Protocol for plan refinement and validation
+  - `your-planning.md`: Single document template for planning and refinement
+- Added `scripts/add_brick.sh` for easy use-case installation, check [Use Cases](#-use-cases) for more details
+
+### Changed
+- Simplified protocol approach to prevent information overload:
+  - Reduced protocol complexity to improve agent understanding
+  - Focused on minimal, essential documentation per task
+  - Removed gherkin and wiki links as experiment
+- Updated documentation structure to support focused use-cases
+
+## [0.32.0] - 2024-01-17
 
 ### Changed
 - Simplified Quick Start section to be more concise and narrative
@@ -34,7 +51,7 @@ gpt_action: use as reference for framework version history
 - Fixed broken documentation links
 - Updated workspace creation workflow
 - Synchronized PLX commands with actual protocol files
-`
+
 ## [0.31.1] - 2024-01-14
 
 ### Changed

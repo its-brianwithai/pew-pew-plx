@@ -7,12 +7,13 @@
 1. [Quick Start](#-quick-start)
 2. [Framework Overview](#-framework-overview)
 3. [Core Pillars](#-core-pillars)
-4. [Development Workflow](#-development-workflow)
-5. [Code of Conduct](#-code-of-conduct)
-6. [Objects](#-objects)
-7. [API Integration](#-api-integration)
-8. [PLX Commands](#-plx-commands)
-9. [The Agent Work Documents](#-the-agent-work-documents)
+4. [Use Cases](#-use-cases)
+5. [Development Workflow](#-development-workflow)
+6. [Code of Conduct](#-code-of-conduct)
+7. [Objects](#-objects)
+8. [API Integration](#-api-integration)
+9. [PLX Commands](#-plx-commands)
+10. [The Agent Work Documents](#-the-agent-work-documents)
 
 ## 🔍 Quick Start
 
@@ -119,6 +120,36 @@ The framework is built on six core work documents that guide the development pro
 
 6. **[Backlog](work-docs/__brick__/your-backlog.md)**
    Used for maintaining a chronological list of future work items that require no immediate action and will only be implemented upon user request while preserving original context and requirements.
+
+## 🎯 Use Cases
+
+The framework provides focused, single-purpose document sets for specific use cases. Each use case contains only the essential documents needed for one specific task, reducing complexity and preventing information overload.
+
+### Available Use Cases
+
+#### Creating the Perfect Plan
+A focused approach to development planning:
+- `plx-create-planning.md`: Protocol for creating atomic development plans
+- `plx-reflect.md`: Protocol for plan refinement and validation
+- `your-planning.md`: Single document template for planning and refinement
+
+You can copy the `add_brick.sh` script from the `scripts` directory to any use case directory containing a `brick.yaml` to easily add that use case:
+```bash
+# Run from root of workspace
+# Copy script to use case directory
+cp scripts/add_brick.sh use-cases/__brick__/{{name}}/creating-the-perfect-plan
+
+# Run the script to add the brick
+cd use-cases/__brick__/{{name}}/creating-the-perfect-plan && ./add_brick.sh
+```
+
+After adding the brick, create a new perfect plan with:
+```bash
+# Create a new perfect plan
+mason make perfect-plan
+```
+
+It will ask you for the goal and put that as the folder name. Ideal for creating perfect plans and todo's for different goals that different agents can work on.
 
 ## 🔄 Development Workflow
 
@@ -333,90 +364,3 @@ The framework uses a standardized approach for API integrations:
           ├── .gitignore
           └── request.json
       ```
-
-## 🤖 PLX Commands
-
-PLX (Protocol Language eXecution) commands are structured instructions that help maintain consistency and follow established protocols. Each command has a corresponding protocol file that defines its exact behavior.
-
-### 📝 Documentation Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-create-doc`                 | Create documentation     | - Plan structure<br>- Write content<br>- Add examples                                |
-| `plx-create-protocol`            | Create new protocol      | - Define purpose<br>- Set structure<br>- Document steps                              |
-| `plx-create-code-of-conduct`     | Create code of conduct   | - Structure rules<br>- Define standards<br>- Set expectations                        |
-| `plx-create-concept`             | Create concept docs      | - Extract core concept<br>- Write concisely<br>- Focus on clarity                    |
-| `plx-create-case-study`          | Create case studies      | - Structure content<br>- Add metrics<br>- Platform optimize                          |
-| `plx-create-tutorial`            | Create tutorials         | - Plan structure<br>- Write steps<br>- Add examples                                  |
-| `plx-create-use-case`            | Document use cases       | - Define scenario<br>- Document steps<br>- Add examples                              |
-| `plx-document-dart-file`         | Document Dart code       | - Add comments<br>- Document APIs<br>- Update docs                                   |
-| `plx-create-feature-breakdown`   | Document features        | - Define structure<br>- Document components<br>- Add examples                         |
-| `plx-create-insight`             | Create how-to content    | - Structure content<br>- Add examples<br>- Follow format                             |
-| `plx-create-brick`               | Create Mason brick       | - Define structure<br>- Set up templates<br>- Configure brick                         |
-
-### 🎯 Task Management Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-create-todo`                | Create task list         | - Break down tasks<br>- Set priorities<br>- Track progress                           |
-| `plx-update-todo`                | Update task list         | - Update progress<br>- Adjust priorities<br>- Add new tasks                          |
-| `plx-check-todo`                 | Check task status        | - Review progress<br>- Verify completion<br>- Update status                          |
-| `plx-do`                         | Execute priority task    | - Focus task<br>- Execute quickly<br>- Maintain quality                              |
-| `plx-log-hours`                  | Log work hours           | - Track time<br>- Document work<br>- Submit logs                                     |
-| `plx-create-ticket`              | Create new ticket        | - Define scope<br>- Set requirements<br>- Add details                                |
-| `plx-create-milestones`          | Create milestone plan    | - Define goals<br>- Set timeline<br>- Track progress                                 |
-
-### 🧪 Testing Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-create-tests`               | Create test cases        | - Define scenarios<br>- Write tests<br>- Verify coverage                             |
-| `plx-test-live`                  | Test in live environment | - Set up environment<br>- Run tests<br>- Document results                            |
-| `plx-run-tests`                  | Execute test suite       | - Run tests<br>- Analyze results<br>- Fix failures                                   |
-| `plx-follow-test-workflow`       | Follow testing process   | - Execute steps<br>- Document results<br>- Fix issues                                |
-| `plx-fix-linting-errors`         | Fix code style issues    | - Analyze errors<br>- Apply fixes<br>- Verify changes                                |
-| `plx-create-milestone-gherkin-tests` | Create BDD tests    | - Write scenarios<br>- Define steps<br>- Add assertions                              |
-
-### 🔄 Process Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-analyze`                    | Analyze and present      | - Analyze input<br>- Present findings<br>- Wait for direction                        |
-| `plx-commit`                     | Commit changes           | - Stage changes<br>- Write message<br>- Push updates                                 |
-| `plx-follow-the-docs`            | Follow documentation     | - Read docs<br>- Follow steps<br>- Verify results                                    |
-| `plx-prepare-content`            | Prepare content          | - Plan structure<br>- Create content<br>- Format output                              |
-| `plx-create-plan-in-chat`        | Interactive planning     | - Present plan<br>- Get feedback<br>- Choose path                                    |
-| `plx-follow-development-workflow`| Follow dev workflow      | - Follow steps<br>- Track progress<br>- Maintain quality                             |
-| `plx-follow-planning-workflow`   | Follow planning process  | - Plan steps<br>- Document plan<br>- Execute systematically                          |
-
-### 🔍 Analysis Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-ask`                        | Request information      | - Ask questions<br>- Get answers<br>- Document responses                             |
-| `plx-ask-questions`              | Gather information       | - Ask clarifying questions<br>- Validate assumptions<br>- Document answers           |
-| `plx-ask-big-brother`            | Get expert help          | - Ask questions<br>- Get guidance<br>- Follow advice                                 |
-| `plx-scan-project-for-context`   | Gather project context   | - Scan files<br>- Analyze structure<br>- Document findings                          |
-| `plx-scan-project-for-todo`      | Find TODO comments       | - Scan codebase<br>- List TODOs<br>- Prioritize tasks                              |
-
-### 🔄 Workflow Control Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-start-work`                 | Begin new task           | - Initialize state<br>- Set up context<br>- Begin workflow                           |
-| `plx-pause-work`                 | Pause current task       | - Save state<br>- Document progress<br>- Note next steps                             |
-| `plx-resume-work`                | Resume paused task       | - Load state<br>- Review context<br>- Continue work                                  |
-| `plx-focus`                      | Maintain task focus      | - Check alignment<br>- Remove distractions<br>- Stay on track                        |
-| `plx-stick-to-the-process`       | Follow process strictly  | - Check steps<br>- Verify actions<br>- Maintain order                               |
-| `plx-stick-to-your-prompt`       | Follow prompt strictly   | - Check prompt<br>- Verify alignment<br>- Stay within bounds                         |
-| `plx-continue-and-follow-the-process` | Continue process    | - Resume work<br>- Follow steps<br>- Stay aligned                                    |
-| `plx-activate-code-red`          | Emergency research mode  | - Stop work<br>- Block changes<br>- Research systematically                          |
-
-### 📊 Maintenance Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-prepare-release`            | Prepare for release      | - Version bump<br>- Update changelog<br>- Create release                             |
-| `plx-update-translations`        | Update language files    | - Extract strings<br>- Update translations<br>- Verify changes                       |
-| `plx-update-read-me-and-changelog`| Update docs            | - Update README<br>- Update CHANGELOG<br>- Verify changes                            |
-| `plx-sync-work-documents`        | Sync documentation      | - Update docs<br>- Align content<br>- Verify consistency                            |
-| `plx-use-api`                    | Use API integration      | - Follow docs<br>- Make requests<br>- Handle responses                               |
-
-### 🔄 Context Management Commands
-| Command                          | Purpose                  | Key Actions                                                                           |
-|----------------------------------|--------------------------|--------------------------------------------------------------------------------------|
-| `plx-transfer-context`           | Transfer to another agent| - Document state<br>- Package context<br>- Hand over work                            |
-| `plx-explain-yourself`           | Explain current actions  | - Document thinking<br>- Explain decisions<br>- Share context                        |

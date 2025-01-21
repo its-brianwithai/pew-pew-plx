@@ -15,5 +15,9 @@ bricks:
     path: "work-docs"
   workflows:
     path: workflows
+  use-cases:
+    path: "use-cases"
   workspace:
     path: .
+  perfect-plan:
+    path: "use-cases/__brick__/{{name}}/perfect-plan"

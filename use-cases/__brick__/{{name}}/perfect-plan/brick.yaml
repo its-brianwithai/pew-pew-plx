@@ -1,0 +1,10 @@
+name: perfect-plan
+description: Create the perfect plan based one clear specific goal.
+version: 0.1.0+1
+environment:
+  mason: ^0.1.0
+vars:
+  goalName:
+    type: string
+    description: Clear specific outcome we aim to achieve.
+    prompt: What clear specific outcome do we aim to achieve?
