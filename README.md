@@ -137,10 +137,10 @@ You can copy the `add_brick.sh` script from the `scripts` directory to any use c
 ```bash
 # Run from root of workspace
 # Copy script to use case directory
-cp scripts/add_brick.sh use-cases/__brick__/{{name}}/creating-the-perfect-plan
+cp scripts/add_brick.sh use-cases/__brick__/{{name}}/perfect-plan
 
 # Run the script to add the brick
-cd use-cases/__brick__/{{name}}/creating-the-perfect-plan && ./add_brick.sh
+cd use-cases/__brick__/{{name}}/perfect-plan && ./add_brick.sh
 ```
 
 After adding the brick, create a new perfect plan with:
