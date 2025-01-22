@@ -1,0 +1,28 @@
+name: workspace
+description: A new brick created with the Mason CLI.
+
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.51 <0.1.0"
+
+vars:
+  name:
+    type: string
+    description: Your name
+    default: Dash
+    prompt: What is your name?
+
+  components:
+    type: array
+    description: Which components do you want to include?
+    defaults:
+      - apis
+      - code-of-conduct
+      - concepts
+      - objects
+      - protocols
+      - templates
+      - work-docs
+      - issue
+    prompt: Which components do you want to include?

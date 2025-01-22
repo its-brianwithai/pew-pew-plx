@@ -6,22 +6,35 @@ gpt_action: use as reference for framework version history
 
 # 🔄 Changelog
 
+> Note: As of version 0.34.0, the framework has moved from "use-cases" to "issues" 
+> for better alignment with development practices. Historical entries maintain the 
+> original terminology while new entries use "issues".
+
+## [0.34.0] - 2024-01-22
+
+### Changed
+- Updated `sync.sh` script:
+  - Replaced use-cases with issue in sync paths
+- Moved protocols to correct locations:
+  - Relocated `plx-create-planning.md` and `plx-reflect.md` to protocols directory
+  - Moved `your-planning.md` to work documents directory
+
 ## [0.33.0] - 2024-01-21
 
 ### Added
-- Introduced use-cases directory for focused, single-purpose document sets
-- Added first use-case `creating-the-perfect-plan`:
+- Introduced issue directory for focused, single-purpose document sets
+- Added first issue template `creating-the-perfect-plan`:
   - `plx-create-planning.md`: Protocol for creating atomic development plans
   - `plx-reflect.md`: Protocol for plan refinement and validation
   - `your-planning.md`: Single document template for planning and refinement
-- Added `scripts/add_brick.sh` for easy use-case installation, check [Use Cases](#-use-cases) for more details
+- Added `scripts/add_brick.sh` for easy issue creation, check [Issues](#-issues) for more details
 
 ### Changed
 - Simplified protocol approach to prevent information overload:
   - Reduced protocol complexity to improve agent understanding
   - Focused on minimal, essential documentation per task
   - Removed gherkin and wiki links as experiment
-- Updated documentation structure to support focused use-cases
+- Updated documentation structure to support focused issues
 
 ## [0.32.0] - 2024-01-17
 

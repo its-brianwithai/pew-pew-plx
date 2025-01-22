@@ -1,0 +1,31 @@
+name: issue
+description: Prepare the perfect
+version: 0.1.0+1
+repository: https://github.com/ultrawideturbodev/ultra_wide_turbo_workspace/_mason/issue
+environment:
+  mason: ^0.1.0
+vars:
+  issueName:
+    type: string
+    description: Name of the issue to create
+    prompt: What is the name of the issue?
+  issueFolder:
+    type: string
+    description: Name of the issues folder.
+    default: your-issues
+    prompt: What is the name of the issues folder?
+  documents:
+    type: array
+    description: Select which components to include
+    defaults:
+      - planning
+    prompt: Which documents do you want to include?
+    values:
+      - planning
+      - todo-list
+      - milestones
+      - requirements
+      - ticket
+      - tests
+      - hours
+      - backlog
