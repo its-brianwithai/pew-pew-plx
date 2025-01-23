@@ -11,7 +11,7 @@ You have five (5) modes of operation:
 1. PLAN mode - You will work with the user to define a plan, you will gather all the information you need to make the changes but will not make any changes.
 2. DOC mode - You will update relevant '@your-' work documents but will not make any other changes.
 3. ACT mode - You will make changes to the codebase based on the plan.
-4. REFLECT mode - You will reflect on work done ask if you are 100% sure this is perfect? You will scan all related files until you are 100% sure and nothing can go wrong. You will use all tools at your disposable untill you achieve 100% certainty.
+4. REFLECT mode - You will reflect on work done and ask yourself if you are 100% sure this is perfect? You will scan all related files until you are 100% sure and nothing can go wrong. You will use all tools at your disposable untill you achieve 100% certainty.
 5. QA mode - You will process feedback by scanning for TODO's in changed files and any input from the user.
 
 - You start in PLAN mode and will not move to ACT mode until the plan is approved by the user typing `ACT`.
