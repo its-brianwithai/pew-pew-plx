@@ -227,53 +227,53 @@ If you encounter any issues:
 
 The framework includes a comprehensive set of protocols that guide various aspects of development and documentation. Each protocol is designed to maintain consistency and quality throughout the development process.
 
-| Protocol                        | Category           | Description                                         |
-|---------------------------------|--------------------|-----------------------------------------------------|
-| activate-code-red               | Emergency          | Initiates emergency protocol for critical issues    |
-| analyze                         | Analysis           | Performs detailed analysis of code or requirements  |
-| ask                             | Communication      | Formulates clear questions for better understanding |
-| ask-big-brother                 | Support            | Requests guidance from senior developers/system     |
-| ask-questions                   | Communication      | Generates comprehensive question sets for clarity   |
-| check-todo                      | Task Management    | Reviews and validates todo items                    |
-| commit                          | Version Control    | Handles code commits with proper documentation      |
-| continue-and-follow-the-process | Process            | Ensures adherence to established workflows          |
-| create-brick                    | Development        | Creates new Mason bricks for code generation        |
-| create-case-study               | Documentation      | Develops detailed case studies                      |
-| create-code-of-conduct          | Documentation      | Establishes development guidelines and standards    |
-| create-concept                  | Documentation      | Documents new concepts and architectural decisions  |
-| create-doc                      | Documentation      | Generates various types of documentation            |
-| create-feature-breakdown        | Planning           | Breaks down features into implementable components  |
-| create-insight                  | Analysis           | Generates insights from code or process analysis    |
-| create-milestone-gherkin-tests  | Testing            | Creates BDD tests for milestones                    |
-| create-milestones               | Planning           | Defines project milestones and objectives           |
-| create-plan-in-chat             | Planning           | Develops action plans during chat sessions          |
-| create-planning                 | Planning           | Creates comprehensive project plans                 |
-| create-protocol                 | Process            | Establishes new process protocols                   |
-| create-tests                    | Testing            | Develops various types of tests                     |
-| create-ticket                   | Task Management    | Creates well-structured task tickets                |
-| create-todo                     | Task Management    | Generates todo items and task lists                 |
-| create-tutorial                 | Documentation      | Creates step-by-step tutorials                      |
-| do                              | Execution          | Executes tasks following defined processes          |
-| document-dart-file              | Documentation      | Documents Dart code files comprehensively           |
-| explain-yourself                | Communication      | Provides clear explanations of decisions/actions    |
-| fix-linting-errors              | Quality            | Resolves code linting issues                        |
-| focus                           | Process            | Maintains focus on current task/objective           |
-| follow-the-docs                 | Process            | Ensures adherence to documentation                  |
-| log-hours                       | Project Management | Tracks time spent on tasks                          |
-| pause-work                      | Process            | Properly pauses work with context preservation      |
-| prepare-content                 | Content            | Prepares various types of content                   |
-| prepare-release                 | Release            | Manages release preparation tasks                   |
-| reflect                         | Quality            | Reviews and validates completed work                |
-| resume-work                     | Process            | Resumes work with proper context restoration        |
-| run-tests                       | Testing            | Executes and validates tests                        |
-| scan-project-for-context        | Analysis           | Analyzes project for context gathering              |
-| scan-project-for-todo           | Task Management    | Identifies and collects todo items                  |
-| stick-to-the-process            | Process            | Maintains process adherence                         |
-| stick-to-your-prompt            | Process            | Ensures prompt/instruction adherence                |
-| sync-work-documents             | Documentation      | Synchronizes work-related documents                 |
-| test-live                       | Testing            | Performs live testing procedures                    |
-| transfer-context                | Process            | Handles context transfer between sessions           |
-| update-read-me-and-changelog    | Documentation      | Updates project documentation                       |
-| update-todo                     | Task Management    | Updates todo items and lists                        |
-| update-translations             | Localization       | Manages translation updates                         |
-| use-api                         | Development        | Handles API integration and usage                   |
+| Protocol                            | Category           | Description                                         |
+|-------------------------------------|--------------------|-----------------------------------------------------|
+| plx-activate-code-red               | Emergency          | Initiates emergency protocol for critical issues    |
+| plx-analyze                         | Analysis           | Performs detailed analysis of code or requirements  |
+| plx-ask                             | Communication      | Formulates clear questions for better understanding |
+| plx-ask-big-brother                 | Support            | Requests guidance from senior developers/system     |
+| plx-ask-questions                   | Communication      | Generates comprehensive question sets for clarity   |
+| plx-check-todo                      | Task Management    | Reviews and validates todo items                    |
+| plx-commit                          | Version Control    | Handles code commits with proper documentation      |
+| plx-continue-and-follow-the-process | Process            | Ensures adherence to established workflows          |
+| plx-create-brick                    | Development        | Creates new Mason bricks for code generation        |
+| plx-create-case-study               | Documentation      | Develops detailed case studies                      |
+| plx-create-code-of-conduct          | Documentation      | Establishes development guidelines and standards    |
+| plx-create-concept                  | Documentation      | Documents new concepts and architectural decisions  |
+| plx-create-doc                      | Documentation      | Generates various types of documentation            |
+| plx-create-feature-breakdown        | Planning           | Breaks down features into implementable components  |
+| plx-create-insight                  | Analysis           | Generates insights from code or process analysis    |
+| plx-create-milestone-gherkin-tests  | Testing            | Creates BDD tests for milestones                    |
+| plx-create-milestones               | Planning           | Defines project milestones and objectives           |
+| plx-create-plan-in-chat             | Planning           | Develops action plans during chat sessions          |
+| plx-create-planning                 | Planning           | Creates comprehensive project plans                 |
+| plx-create-protocol                 | Process            | Establishes new process protocols                   |
+| plx-create-tests                    | Testing            | Develops various types of tests                     |
+| plx-create-ticket                   | Task Management    | Creates well-structured task tickets                |
+| plx-create-todo                     | Task Management    | Generates todo items and task lists                 |
+| plx-create-tutorial                 | Documentation      | Creates step-by-step tutorials                      |
+| plx-do                              | Execution          | Executes tasks following defined processes          |
+| plx-document-dart-file              | Documentation      | Documents Dart code files comprehensively           |
+| plx-explain-yourself                | Communication      | Provides clear explanations of decisions/actions    |
+| plx-fix-linting-errors              | Quality            | Resolves code linting issues                        |
+| plx-focus                           | Process            | Maintains focus on current task/objective           |
+| plx-follow-the-docs                 | Process            | Ensures adherence to documentation                  |
+| plx-log-hours                       | Project Management | Tracks time spent on tasks                          |
+| plx-pause-work                      | Process            | Properly pauses work with context preservation      |
+| plx-prepare-content                 | Content            | Prepares various types of content                   |
+| plx-prepare-release                 | Release            | Manages release preparation tasks                   |
+| plx-reflect                         | Quality            | Reviews and validates completed work                |
+| plx-resume-work                     | Process            | Resumes work with proper context restoration        |
+| plx-run-tests                       | Testing            | Executes and validates tests                        |
+| plx-scan-project-for-context        | Analysis           | Analyzes project for context gathering              |
+| plx-scan-project-for-todo           | Task Management    | Identifies and collects todo items                  |
+| plx-stick-to-the-process            | Process            | Maintains process adherence                         |
+| plx-stick-to-your-prompt            | Process            | Ensures prompt/instruction adherence                |
+| plx-sync-work-documents             | Documentation      | Synchronizes work-related documents                 |
+| plx-test-live                       | Testing            | Performs live testing procedures                    |
+| plx-transfer-context                | Process            | Handles context transfer between sessions           |
+| plx-update-read-me-and-changelog    | Documentation      | Updates project documentation                       |
+| plx-update-todo                     | Task Management    | Updates todo items and lists                        |
+| plx-update-translations             | Localization       | Manages translation updates                         |
+| plx-use-api                         | Development        | Handles API integration and usage                   |
