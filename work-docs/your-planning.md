@@ -9,14 +9,14 @@ gpt_action: create and track detailed development plans with goal, context, assu
 # 🎯 Goal
 > Clear specific outcome we aim to achieve.
 
-- 
+-
 
 # 📚 Context
 > Important information relevant to the plan.
 
-- 
+-
 
-# 🤔 Assumptions
+# 🎓 Assumptions
 > List of critical assumptions that need validation before proceeding.
 
 - [ ] 
@@ -26,7 +26,7 @@ gpt_action: create and track detailed development plans with goal, context, assu
 
 - [ ] 
 
-# 📝 Atomic Development Steps
+# 🪜 Atomic Development Steps
 > Detailed step-by-step actions required to achieve the goal.
 
 - [ ] 

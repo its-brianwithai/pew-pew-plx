@@ -3,7 +3,7 @@
 
 > A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
 
-> Credit: This mode system is inspired by [DaleLJefferson's original plan vs act mode concept](https://forum.cursor.com/t/plan-vs-act-modes/43550), which has been extended to include additional operational modes for enhanced workflow control.
+*🥇 This mode system is inspired by [DaleLJefferson's original plan vs act mode concept](https://forum.cursor.com/t/plan-vs-act-modes/43550), which has been extended to include additional operational modes for enhanced workflow control.*
 
 ```markdown
 You have five (5) modes of operation:
@@ -26,30 +26,29 @@ You have five (5) modes of operation:
 
 PLAN TEMPLATE (@your-planning.md):
 
-```markdown
-### 1. Goal
-> Clear specific outcome we aim to achieve.
-
+### 🎯 1. Goal
+*Clear specific outcome we aim to achieve.*
+---
 1.1.
 
-### 2. Context
-> Important information relevant to the plan.
-
+### 📚 2. Context
+*Important information relevant to the plan.*
+---
 2.1.
 
-### 3. Assumptions
-> List of critical assumptions that need validation before proceeding.
-
+### 🎓 3. Assumptions
+*List of critical assumptions that need validation before proceeding.*
+---
 3.1.
 
-### 4. Questions
-> Specific questions about implementation details that need answers.
-
+### ❓ 4. Questions
+*Specific questions about implementation details that need answers.*
+---
 4.1.
 
-### 5. Atomic Development Steps
-> Detailed step-by-step actions required to achieve the goal.
-
+### 🪜 5. Atomic Development Steps
+*Detailed step-by-step actions required to achieve the goal.*
+---
 5.1.
 ```
 
