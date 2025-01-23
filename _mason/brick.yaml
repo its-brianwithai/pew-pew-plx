@@ -1,28 +1,28 @@
 name: workspace
-description: A new brick created with the Mason CLI.
-
-version: 0.1.0+1
-
+description: A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
+repository: https://github.com/ultrawideturbodev/ultra_wide_turbo_workspace
+version: 0.1.0
 environment:
-  mason: ">=0.1.0-dev.51 <0.1.0"
-
+  mason: ^0.1.0
 vars:
   name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
-
+    description: Workspace name
+    default: your-workspace
+    prompt: What is the name of your workspace?
   components:
     type: array
-    description: Which components do you want to include?
+    description: Select which components to include
     defaults:
+      - protocols
+      - templates
+      - work-docs
+    prompt: Which components do you want to include?
+    values:
       - apis
-      - code-of-conduct
+      - cocs
       - concepts
       - objects
       - protocols
       - templates
       - work-docs
-      - issue
-    prompt: Which components do you want to include?

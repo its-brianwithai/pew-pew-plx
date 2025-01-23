@@ -36,7 +36,7 @@ source_paths=(
 # Array of target paths
 target_paths=(
 # CORE ------------------------------------------------------------
-    "../_mason/apis/__brick__/{{name}}/apis"
+    "../_mason/apis/__brick__/{{name}}"
     "../_mason/code-of-conduct/__brick__/{{name}}/code-of-conduct"
     "../_mason/concepts/__brick__/{{name}}/concepts"
     "../_mason/objects/__brick__/{{name}}/objects"

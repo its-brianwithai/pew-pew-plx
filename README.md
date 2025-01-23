@@ -14,27 +14,56 @@ You have five (5) modes of operation:
 4. REFLECT mode - You will reflect on work done ask if you are 100% sure this is perfect? You will scan all related files until you are 100% sure and nothing can go wrong. You will use all tools at your disposable untill you achieve 100% certainty.
 5. QA mode - You will process feedback by scanning for TODO's in changed files and any input from the user.
 
-- You start in PLAN mode and will not move to ACT mode until the plan is approved by the user.
-- You can switch between DOC, REFLECT, QA and PLAN as needed.
+- You start in PLAN mode and will not move to ACT mode until the plan is approved by the user typing `ACT`.
+- After switching to DOC, ACT, REFLECT or QA -- ALWAYS move back to PLAN mode.
 - You will print `# Mode: NAMEOFMODE` at the beginning of each response.
-- Unless the user explicity asks you to move to act mode, by typing `ACT`, you will stay in plan mode.
-- You will move back to PLAN mode after every response, unless the response litteraly instructs a different mode.
-- If the user asks you to take an action while in plan mode you will remind them that you are in plan mode and that they need to approve the plan first.
-- When in plan mode always output the full updated plan in every response.
+- Unless the user explicity asks you to move to act mode, by typing `ACT`, you will stay in current mode.
+- You will move back to PLAN mode after every response.
+- If the user asks you to take an action while in PLAN mode you will remind them that you are in PLAN mode and that they need to approve the plan first.
+- When in PLAN mode always output the full updated plan in every response.
 - A plan must always include a numbered checklist with atomic development steps that start with a verb and include the action.
-- Each step must include a 'how'.
+- Each step must explain 'how'.
+
+PLAN TEMPLATE (@your-planning.md):
+
+```markdown
+### 🎯 1. Goal
+> Clear specific outcome we aim to achieve.
+
+
+
+### 📚 2. Context
+> Important information relevant to the plan.
+
+- 
+
+### 🤔 3. Assumptions
+> List of critical assumptions that need validation before proceeding.
+
+3.1.
+
+### ❓ 4. Questions
+> Specific questions about implementation details that need answers.
+
+4.1.
+
+### 📝 5. Atomic Development Steps
+> Detailed step-by-step actions required to achieve the goal.
+
+5.1.
 ```
 
 ## 📑 Table of Contents
 1. [Quick Start](#-quick-start)
-2. [Framework Overview](#-framework-overview)
-3. [Core Pillars](#-core-pillars)
+2. [Core Pillars](#-core-pillars)
+3. [Framework Overview](#-framework-overview)
 4. [Issues](#-issues)
 5. [Code of Conduct](#-code-of-conduct)
 6. [Objects](#-objects)
 7. [API Integration](#-api-integration)
 8. [PLX Commands](#-plx-commands)
 9. [The Agent Work Documents](#-the-agent-work-documents)
+10. [Protocols](#-protocols)
 
 ## 🔍 Quick Start
 
@@ -93,7 +122,7 @@ This will:
 - Handle file creation and overrides safely
 - Set up your workspace structure automatically in a specifc folder
 
-## 🔍 Framework Overview
+## 📚 Core Pillars
 
 This framework enhances your AI agent's capabilities through three core pillars. It ensures high-quality, tested implementations by maintaining clear requirements, detailed tickets, and organized task lists.
 
@@ -121,9 +150,9 @@ We believe AI agents perform at their best when three key elements align:
    - Proper state management
    - Seamless agent handover
 
-## 📚 Core Pillars
+## 🔍 Framework Overview
 
-The framework is built on six core work documents that guide the development process:
+The framework is built on seven core work documents that guide the development process:
 
 1. **[Requirements](work-docs/your-requirements.md)**
    Used for breaking down all aspects of what needs to be built, including actors, components, activities, properties, behaviors, acceptance criteria and test scenarios.
@@ -131,16 +160,19 @@ The framework is built on six core work documents that guide the development pro
 2. **[Ticket](work-docs/your-ticket.md)**
    Used for containing task descriptions, user stories, technical specifications, implementation details, security considerations, data models and API requirements.
 
-3. **[Milestones](work-docs/your-milestones.md)**
+3. **[Planning](work-docs/your-planning.md)**
+   Used for detailed development planning, breaking down tasks, and organizing the implementation approach.
+
+4. **[Milestones](work-docs/your-milestones.md)**
    Used for breaking down the work into clear testable milestones, tracking dependencies, technical details, progress and completion criteria while maintaining links to related tests and tasks.
 
-4. **[Todo List](work-docs/your-todo-list.md)**
+5. **[Todo List](work-docs/your-todo-list.md)**
    Used for tracking chronological atomic tasks organized by milestone, including progress tracking, task dependencies and test tasks for each testable component.
 
-5. **[Tests](work-docs/your-tests.md)**
+6. **[Tests](work-docs/your-tests.md)**
    Used for defining (BDD Gherkin style) test scenarios, validating acceptance criteria, writing integration and unit tests, and tracking test coverage.
 
-6. **[Backlog](work-docs/your-backlog.md)**
+7. **[Backlog](work-docs/your-backlog.md)**
    Used for maintaining a chronological list of future work items that require no immediate action and will only be implemented upon user request while preserving original context and requirements.
 
 ## 🎯 Issues
@@ -158,10 +190,84 @@ Each issue is organized in its own directory with essential documents:
 - `your-tests.md`: For test scenarios
 - `your-todo-list.md`: For task tracking
 
-To create a new issue add the issue brick by running the `add_make_issue_brick.sh` script and then:
+To create a new issue, first add the issue brick globally by running:
+
+```bash
+./scripts/add_make_issue_brick.sh
+```
+
+This script will:
+- Check if Mason CLI is installed
+- Navigate to the _mason directory
+- Add the issue brick globally if not already present
+- Provide clear feedback about the process
+
+Once the brick is added, you can create new issues using:
 
 ```bash
 mason make issue
 ```
 
 It will ask you for the issue folder and name, creating a structured workspace for that specific issue with all necessary documentation.
+
+If you encounter any issues:
+1. Make sure Mason CLI is installed (`dart pub global activate mason_cli`)
+2. Ensure the script is executable (`chmod +x scripts/add_make_issue_brick.sh`)
+3. Check if you're in the workspace root directory
+
+## 📚 The Agent Work Documents
+
+## 🔄 Protocols
+
+The framework includes a comprehensive set of protocols that guide various aspects of development and documentation. Each protocol is designed to maintain consistency and quality throughout the development process.
+
+| Protocol                        | Category           | Description                                         |
+|---------------------------------|--------------------|-----------------------------------------------------|
+| activate-code-red               | Emergency          | Initiates emergency protocol for critical issues    |
+| analyze                         | Analysis           | Performs detailed analysis of code or requirements  |
+| ask                             | Communication      | Formulates clear questions for better understanding |
+| ask-big-brother                 | Support            | Requests guidance from senior developers/system     |
+| ask-questions                   | Communication      | Generates comprehensive question sets for clarity   |
+| check-todo                      | Task Management    | Reviews and validates todo items                    |
+| commit                          | Version Control    | Handles code commits with proper documentation      |
+| continue-and-follow-the-process | Process            | Ensures adherence to established workflows          |
+| create-brick                    | Development        | Creates new Mason bricks for code generation        |
+| create-case-study               | Documentation      | Develops detailed case studies                      |
+| create-code-of-conduct          | Documentation      | Establishes development guidelines and standards    |
+| create-concept                  | Documentation      | Documents new concepts and architectural decisions  |
+| create-doc                      | Documentation      | Generates various types of documentation            |
+| create-feature-breakdown        | Planning           | Breaks down features into implementable components  |
+| create-insight                  | Analysis           | Generates insights from code or process analysis    |
+| create-milestone-gherkin-tests  | Testing            | Creates BDD tests for milestones                    |
+| create-milestones               | Planning           | Defines project milestones and objectives           |
+| create-plan-in-chat             | Planning           | Develops action plans during chat sessions          |
+| create-planning                 | Planning           | Creates comprehensive project plans                 |
+| create-protocol                 | Process            | Establishes new process protocols                   |
+| create-tests                    | Testing            | Develops various types of tests                     |
+| create-ticket                   | Task Management    | Creates well-structured task tickets                |
+| create-todo                     | Task Management    | Generates todo items and task lists                 |
+| create-tutorial                 | Documentation      | Creates step-by-step tutorials                      |
+| do                              | Execution          | Executes tasks following defined processes          |
+| document-dart-file              | Documentation      | Documents Dart code files comprehensively           |
+| explain-yourself                | Communication      | Provides clear explanations of decisions/actions    |
+| fix-linting-errors              | Quality            | Resolves code linting issues                        |
+| focus                           | Process            | Maintains focus on current task/objective           |
+| follow-the-docs                 | Process            | Ensures adherence to documentation                  |
+| log-hours                       | Project Management | Tracks time spent on tasks                          |
+| pause-work                      | Process            | Properly pauses work with context preservation      |
+| prepare-content                 | Content            | Prepares various types of content                   |
+| prepare-release                 | Release            | Manages release preparation tasks                   |
+| reflect                         | Quality            | Reviews and validates completed work                |
+| resume-work                     | Process            | Resumes work with proper context restoration        |
+| run-tests                       | Testing            | Executes and validates tests                        |
+| scan-project-for-context        | Analysis           | Analyzes project for context gathering              |
+| scan-project-for-todo           | Task Management    | Identifies and collects todo items                  |
+| stick-to-the-process            | Process            | Maintains process adherence                         |
+| stick-to-your-prompt            | Process            | Ensures prompt/instruction adherence                |
+| sync-work-documents             | Documentation      | Synchronizes work-related documents                 |
+| test-live                       | Testing            | Performs live testing procedures                    |
+| transfer-context                | Process            | Handles context transfer between sessions           |
+| update-read-me-and-changelog    | Documentation      | Updates project documentation                       |
+| update-todo                     | Task Management    | Updates todo items and lists                        |
+| update-translations             | Localization       | Manages translation updates                         |
+| use-api                         | Development        | Handles API integration and usage                   |

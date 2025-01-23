@@ -1,3 +1,5 @@
+# The brick name is intentionally shortened to 'cocs' for easier CLI usage,
+# while the directory maintains the full descriptive name 'code-of-conduct'
 name: cocs
 description: Code of Conduct documents for the Ultra Wide Turbo workspace.
 version: 0.1.0
