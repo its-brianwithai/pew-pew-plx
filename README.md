@@ -97,10 +97,17 @@ mason
 
 First, add the workspace brick globally to make it available anywhere on your system:
 
+**Method 1: Using the script (Recommended)**
+```bash
+# Add the workspace brick using the provided script
+./scripts/add_workspace_bricks.sh
+```
+
+**Method 2: Manual installation**
 ```bash
 # Add the workspace brick globally
-cd _mason
-mason add workspace -g
+cd ./_mason
+mason add workspace --path . -g
 ```
 
 ### 3. Create Your Workspace
