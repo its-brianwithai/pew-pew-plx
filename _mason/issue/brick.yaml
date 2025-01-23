@@ -14,18 +14,3 @@ vars:
     description: Name of the issues folder.
     default: your-issues
     prompt: What is the name of the issues folder?
-  documents:
-    type: array
-    description: Select which components to include
-    defaults:
-      - planning
-    prompt: Which documents do you want to include?
-    values:
-      - planning
-      - todo-list
-      - milestones
-      - requirements
-      - ticket
-      - tests
-      - hours
-      - backlog

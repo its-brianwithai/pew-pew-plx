@@ -44,13 +44,13 @@ target_paths=(
     "../_mason/templates/__brick__/{{name}}/templates"
     "../_mason/work-docs/__brick__"
 # ISSUE -----------------------------------------------------------
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/{{#documents.contains('backlog')}}your-backlog.md{{/documents.contains('backlog')}}"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/{{#documents.contains('hours')}}your-hours.md{{/documents.contains('hours')}}"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/{{#documents.contains('milestones')}}your-milestones.md{{/documents.contains('milestones')}}"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/{{#documents.contains('planning')}}your-planning.md{{/documents.contains('planning')}}"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/{{#documents.contains('requirements')}}your-requirements.md{{/documents.contains('requirements')}}"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/{{#documents.contains('tests')}}your-tests.md{{/documents.contains('tests')}}"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/{{#documents.contains('todo-list')}}your-todo-list.md{{/documents.contains('todo-list')}}"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-backlog.md"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-hours.md"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-milestones.md"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-planning.md"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-requirements.md"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-tests.md"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-todo-list.md"
 )
 
 # Check if arrays have same length
