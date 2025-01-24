@@ -3,6 +3,7 @@
 ## 🚀 Version 0.35.0 (Jan 2024)
 ---
 * **🛠️ Improvement:** Added new mode `REFINE` to system prompt, which instructs agent to refine plan in greater detail.
+* **🛠️ Improvement:** Minor improvements to system prompt to now also include high level progress of atomic steps while in `ACT` mode.
 * **🛠️ Improvement:** Simplified plan template.
 * **💔 Breaking:** Removed default work documents hours, milestones, tests and todo list from issue. Leaving planning, ticket and requirements for issue prep.
 
