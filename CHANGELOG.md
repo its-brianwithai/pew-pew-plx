@@ -1,14 +1,10 @@
----
-document_type: documentation
-goal: track framework changes and updates
-gpt_action: use as reference for framework version history
----
-
 # 🔄 Changelog
 
-> Note: As of version 0.34.0, the framework has moved from "use-cases" to "issues" 
-> for better alignment with development practices. Historical entries maintain the 
-> original terminology while new entries use "issues".
+## 🚀 Version 0.35.0 (Jan 2024)
+---
+* **🛠️ Improvement:** Added new mode `REFINE` to system prompt, which instructs agent to refine plan in greater detail.
+* **🛠️ Improvement:** Simplified plan template.
+* **💔 Breaking:** Removed default work documents hours, milestones, tests and todo list from issue. Leaving planning, ticket and requirements for issue prep.
 
 ## [0.34.0] - 2024-01-22
 

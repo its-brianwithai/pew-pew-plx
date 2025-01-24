@@ -1,32 +1,42 @@
----
-document_type: agent work document
-goal: create and maintain atomic development plan
-gpt_action: create and track detailed development plans with goal, context, assumptions, questions, and atomic development steps
+# 🎯 1. Goal(s)
+*Clear specific outcome(s) we aim to achieve.*
 ---
 
-<!-- Do not remove section headers -->
+- 1.1.
 
-# 🎯 Goal
-> Clear specific outcome we aim to achieve.
+# 📚 2. Context
+> *Important information relevant to the plan.*
 
--
+- 2.1.
 
-# 📚 Context
-> Important information relevant to the plan.
+# 🎓 3. Assumptions
+> *List of critical assumptions that need validation before proceeding.*
 
--
+ - 3.1.
 
-# 🎓 Assumptions
-> List of critical assumptions that need validation before proceeding.
+# ❓ 4. Questions
+> *Specific questions about implementation details that need answers.*
 
-- [ ] 
+- [ ] 4.1.
 
-# ❓ Questions
-> Specific questions about implementation details that need answers.
+# 🪜 5. Plan
+> *Detailed step-by-step actions required to achieve the goal.*
 
-- [ ] 
+# 5.1 Issue(s)
+- 5.1.1 · ISSUE_TITLE
+    - 5.1.1.1 · ISSUE_SENTENCE
 
-# 🪜 Atomic Development Steps
-> Detailed step-by-step actions required to achieve the goal.
+# 5.2. Solution(s)
+- [5.1.1.1] · ISSUE_SENTENCE
+    - 5.2.1 · SOLUTION_TITLE
+        - 5.2.1.1 · SOLUTION_SENTENCE
+    - 5.2.2 · SOLUTION_TITLE
+        - 5.2.2.1 · SOLUTION_SENTENCE
+        - 5.2.2.2 · SOLUTION_SENTENCE
 
-- [ ] 
+# 5.3. Atomic Development Steps
+- [5.2.1.1] · SOLUTION_SENTENCE
+    - 5.3.1 · ATOMIC_SENTENCE
+        - how · ATOMIC_HOW
+    - 5.3.2 · ATOMIC_SENTENCE
+        - how · ATOMIC_HOW

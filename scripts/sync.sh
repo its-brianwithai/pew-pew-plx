@@ -22,15 +22,12 @@ source_paths=(
     "../objects"
     "../protocols"
     "../templates"
+    "../prompts"
     "../work-docs"
 # ISSUE -----------------------------------------------------------
-    "../work-docs/your-backlog.md"
-    "../work-docs/your-hours.md"
-    "../work-docs/your-milestones.md"
     "../work-docs/your-planning.md"
     "../work-docs/your-requirements.md"
-    "../work-docs/your-tests.md"
-    "../work-docs/your-todo-list.md"
+    "../work-docs/your-ticket.md"
 )
 
 # Array of target paths
@@ -42,15 +39,12 @@ target_paths=(
     "../_mason/objects/__brick__/{{name}}/objects"
     "../_mason/protocols/__brick__/{{name}}/protocols"
     "../_mason/templates/__brick__/{{name}}/templates"
+    "../_mason/prompts/__brick__/{{name}}/prompts"
     "../_mason/work-docs/__brick__"
 # ISSUE -----------------------------------------------------------
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-backlog.md"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-hours.md"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-milestones.md"
     "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-planning.md"
     "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-requirements.md"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-tests.md"
-    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-todo-list.md"
+    "../_mason/issue/__brick__/{{issueFolder.paramCase()}}/{{issueName.paramCase()}}/your-ticket.md"
 )
 
 # Check if arrays have same length
