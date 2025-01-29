@@ -3,7 +3,7 @@
 name: cocs
 description: Code of Conduct documents for the Ultra Wide Turbo workspace.
 version: 0.1.0
-repository: https://github.com/ultrawideturbodev/ultra_wide_turbo_workspace/_mason/cocs
+repository: https://github.com/ultrawideturbodev/ultra_wide_turbo_workspace/_mason/code-of-conduct
 environment:
   mason: ^0.1.0
 vars:

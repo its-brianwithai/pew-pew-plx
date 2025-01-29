@@ -1,12 +1,3 @@
----
-document_type: agent work document
-goal: create and maintain atomic development plan
-gpt_action: create and track detailed development plans with goal, context, assumptions, questions, and atomic development steps
----
-
-<!-- Do not remove section headers -->
-
-
 # 🎯 1. Goal(s)
 *Clear specific outcome(s) we aim to achieve.*
 ---

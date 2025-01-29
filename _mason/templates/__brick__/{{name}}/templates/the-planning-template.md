@@ -1,4 +1,4 @@
-# 1. Issue(s)
+# the-planning-template
 - 1.1 · ISSUE_TITLE
     - 1.1.1 · ISSUE_SENTENCE
 

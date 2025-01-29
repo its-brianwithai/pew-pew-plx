@@ -16,6 +16,10 @@ bricks:
   work-docs:
     path: "work-docs"
   workspace:
-    path: "."
+    path: .
   issue:
-    path: "issue"
+    path: issue
+  cursor-rules:
+    path: "cursor-rules"
+  scripts:
+    path: scripts

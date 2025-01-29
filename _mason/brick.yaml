@@ -14,15 +14,15 @@ vars:
     type: array
     description: Select which components to include
     defaults:
-      - protocols
-      - templates
-      - work-docs
+      - cursor-rules
     prompt: Which components do you want to include?
     values:
+      - cursor-rules
       - apis
       - cocs
       - concepts
       - objects
       - protocols
+      - scripts
       - templates
       - work-docs
