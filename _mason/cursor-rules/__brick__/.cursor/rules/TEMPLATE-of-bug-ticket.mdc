@@ -4,7 +4,7 @@ globs: *.md, *.markdown, *.mdown
 document_type: bug_template
 goal: Define a standardized format for documenting bug reports and tracking their resolution
 gpt_action: Read and apply template structure when creating new bug tickets
-destination: your-ticket.md
+file_name_convention: your-ticket.md
 ---
 
 # 🔖 Description

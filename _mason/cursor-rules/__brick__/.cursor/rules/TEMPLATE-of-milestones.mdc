@@ -4,7 +4,7 @@ globs: *.md, *.markdown, *.mdown
 document_type: milestone_template
 goal: Define standards for documenting project milestones and tracking overall progress
 gpt_action: Read and apply template structure when documenting project milestones
-destination: your-milestones.md
+file_name_convention: your-milestones.md
 ---
 
 # 🚀 [M1] Milestone Title

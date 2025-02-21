@@ -4,7 +4,7 @@ globs: *.md, *.markdown, *.mdown
 document_type: requirements_template
 goal: Define standards for documenting project requirements and tracking their implementation
 gpt_action: Read and apply template structure when documenting project requirements
-destination: your-requirements.md
+file_name_convention: your-requirements.md
 ---
 
 # 👤 Actors & 🧩 Components (Who or what)

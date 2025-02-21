@@ -4,7 +4,7 @@ globs: *.md, *.markdown, *.mdown
 document_type: documentation_protocol
 goal: Define standards for documenting requirements in a clear, structured, and actionable format
 gpt_action: Read and apply rules when documenting requirements for new features or changes
-destination: your-requirements.md
+file_name_convention: your-requirements.md
 ---
 
 # 👤 Actors & 🧩 Components (Who or what)

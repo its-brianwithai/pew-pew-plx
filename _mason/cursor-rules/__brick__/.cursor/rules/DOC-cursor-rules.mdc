@@ -4,7 +4,7 @@ globs: *.md
 document_type: cursor_rule
 goal: Define standards for creating cursor rule files
 gpt_action: Read and apply rules when creating new cursor rule files
-destination: cursor-rules/{{rule-name}}.md
+file_name_convention: cursor-rules/{{rule-name}}.md
 ---
 
 # Project Rule (cursor-rules/{{rule-name}}.md) Creation Protocol
@@ -28,7 +28,7 @@ globs: {{comma separated file types}}
 document_type: {{type of document}}
 goal: {{goal of document}}
 gpt_action: {{gpt agent action to take when reading this}}
-destination: {{which file to create}} (if applicable, otherwise leave out)
+file_name_convention: {{which file to create}} (if applicable, otherwise leave out)
 ---
 
 # {{Rule Title}}

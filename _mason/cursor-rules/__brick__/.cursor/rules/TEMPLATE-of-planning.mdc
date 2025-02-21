@@ -4,7 +4,7 @@ globs: *.md, *.markdown, *.mdown
 document_type: planning_template
 goal: Define standards for documenting project plans, tracking progress, and ensuring clear execution steps
 gpt_action: Read and apply template structure when creating new project plans or updating existing ones
-destination: your-planning.md
+file_name_convention: your-planning.md
 ---
 
 # 🎯 1. Goal(s)

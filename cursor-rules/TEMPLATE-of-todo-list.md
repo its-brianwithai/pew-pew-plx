@@ -4,7 +4,7 @@ globs: *.md, *.txt, *.yaml, *.json
 document_type: todo
 goal: track and prioritize tasks for current milestone
 gpt_action: maintain and update organized atomic task list for current milestone
-destination: your-todo-list.md
+file_name_convention: your-todo-list.md
 ---
 
 # 🔥 User Added (Do These First! - Don't Remove This Section!!)

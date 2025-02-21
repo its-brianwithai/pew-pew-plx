@@ -4,7 +4,7 @@ globs: *.md, *.markdown, *.mdown
 document_type: hours_template
 goal: Define standards for logging work hours and tracking progress on tasks
 gpt_action: Read and apply template structure when logging work hours
-destination: your-hours.md
+file_name_convention: your-hours.md
 ---
 # 📅 Date: $date$
 ---

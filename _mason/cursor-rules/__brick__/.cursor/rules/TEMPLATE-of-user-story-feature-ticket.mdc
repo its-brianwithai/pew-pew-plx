@@ -4,7 +4,7 @@ globs: *.md, *.markdown, *.mdown
 document_type: user_story_template
 goal: Define standards for documenting user stories, features, and their requirements
 gpt_action: Read and apply template structure when documenting new user stories and features
-destination: your-ticket.md
+file_name_convention: your-ticket.md
 ---
 
 # 🔖 Description

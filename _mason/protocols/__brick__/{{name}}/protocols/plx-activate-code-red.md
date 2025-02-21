@@ -23,7 +23,7 @@ CONTEXT: The [[User]] has identified a critical issue that requires complete wor
       2. AND [[You]] DOCUMENT findings
       3. AND [[You]] TRACK connections
 
-3. GIVEN [[You]] READS file
+3. GIVEN [[You]] READS file[plx-create-activity.md](..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FDesktop%2Fplx-create-activity.md)
    1. THEN [[You]] ANALYZE thoroughly
       1. AND [[You]] STUDY construction
       2. AND [[You]] MAP data flow
