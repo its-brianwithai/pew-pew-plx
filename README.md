@@ -1,280 +1,207 @@
-# 🤖 Ultra Wide Turbo Workspace
-[![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
+# ⚡ Ultra Wide Turbo Workspace
 
-> A structured framework for GPT agents to maintain context, follow processes, and deliver consistent results through well-defined protocols and documentation patterns.
+## 🚀 Your Personal AI-Powered Organizational Framework
 
-*🥇 This mode system is inspired by [DaleLJefferson's original plan vs act mode concept](https://forum.cursor.com/t/plan-vs-act-modes/43550), which has been extended to include additional operational modes for enhanced workflow control.*
+Welcome to the Ultra Wide Turbo Workspace - a comprehensive framework that transforms your workflow by creating a virtual organization where you're the CEO. This workspace allows you to delegate tasks to specialized AI roles, each with their own expertise, activities, and resources.
 
-```markdown
-You have five (6) modes of operation:
+By structuring your work through these roles, you gain clarity on where to store information, how to approach problems from different perspectives, and how to efficiently manage complex projects. Each role acts as a dedicated team member in your business or life, ready to execute tasks based on their specific capabilities.
 
-1. PLAN mode - You will work with the user to define a plan, you will gather all the information you need to make the changes but will not make any changes.
-2. REFINE mode - You will further refine your plans atomic development steps to their most detailed step-by-step execution.
-2. DOC mode - You will update relevant work documents but will not make any other changes.
-3. ACT mode - You will make changes to the codebase based on the plan.
-4. REFLECT mode - You will reflect on work done and ask yourself if you are 100% sure this is perfect? You will scan all related files until you are 100% sure and nothing can go wrong. You will use all tools at your disposable untill you achieve 100% certainty.
-5. QA mode - You will process feedback by scanning for TODO's in changed files and any input from the user.
+## 👥 Roles
 
-- You start start each conversation in PLAN mode. You will scan all related files to request to get a good first understanding of the request.
-- You will not EVER move to ACT mode until the plan is approved by the user typing `ACT`.
-- After switching to REFINE, DOC, ACT, REFLECT or QA -- ALWAYS move back to PLAN mode.
-- You will print `# Mode: NAMEOFMODE` at the beginning of each response.
-- Unless the user explicitly asks you to move to act mode, by typing `ACT`, you will stay in current mode.
-- You will move back to PLAN mode after every response.
-- If the user asks you to take an action while in PLAN mode you will remind them that you are in PLAN mode and that they need to approve the plan first.
-- When in PLAN mode always output the full updated plan in every response.
-- A plan must always include a numbered checklist with super clear atomic development steps of max 1 sentence.
-- Each step must start with a verb and include the action.
-- Each step must include a list of files (one sentence) and their proposed edits (one sentence).
-- When in ACT mode you will start each atomic step with checklist of SOLUTION_SENTENCE atomic steps and their emoji status (⭕, 🔄, ✅).
+A role represents a specialized team member in your virtual organization. Each role has its own expertise, responsibilities, and dedicated workspace structure.
 
-Work documents:
-- your-planning.md
-- your-requirements.md
-- your-ticket.md
+Examples:
 
-PLAN Example:
+- Developer
+- Designer
+- Marketer
+- Personal Assistant
+- Project Manager
+- Data Analyst
 
-# 1. Issue(s)
-- 1.1 · ISSUE_TITLE
-   - 1.1.1 · ISSUE_SENTENCE
+### 📁 Document and Folder Structure by Role
 
-# 2. Solution(s)
-- [1.1.1] · ISSUE_SENTENCE
-   - 2.1 · SOLUTION_TITLE
-      - 2.1.1 · SOLUTION_SENTENCE
-   - 2.2 · SOLUTION_TITLE
-      - 2.2.1 · SOLUTION_SENTENCE
-      - 2.2.2 · SOLUTION_SENTENCE
-# 3. Atomic Development Steps
-- [2.1.1] · SOLUTION_SENTENCE
-   - 3.1 · ATOMIC_STEP
-      - files · FILENAMES
-      - edits · EDITS
-   - 3.2 · ATOMIC_STEP
-      - files · FILENAMES
-      - edits · EDITS
+Each role in the workspace has access to a standardized set of folders and document types to organize their work effectively:
+
+```
+role/
+├── 📝 backlog/
+├── 🔑 credentials/
+├── 📚 docs/
+├── 🖋️ drafts/
+├── 📥 inbox/
+├── 📂 projects/
+├── 💬 prompts/
+├── 🎨 artifacts/
+├── ✅ rubriks/
+├── 📜 scripts/
+├── ⚙️ systems/
+├── 📋 templates/
+├── ✓ todos/
+├── 🛠️ tools/
+└── 📘 tutorials/
 ```
 
-## 📑 Table of Contents
-1. [Quick Start](#-quick-start)
-2. [Core Pillars](#-core-pillars)
-3. [Framework Overview](#-framework-overview)
-4. [Issues](#-issues)
-5. [Code of Conduct](#-code-of-conduct)
-6. [Objects](#-objects)
-7. [API Integration](#-api-integration)
-8. [PLX Commands](#-plx-commands)
-10. [Protocols](#-protocols)
+- **📝 backlog**: Pending tasks and future work items
+- **🔑 credentials**: Access information and permissions
+- **📚 docs**: Documentation related to the role's domain expertise
+- **🖋️ drafts**: Work-in-progress documents
+- **📥 inbox**: New requests and information for processing
+- **📂 projects**: Organized collections of related files and folders
+- **💬 prompts**: Role-specific instructions for AI models
+- **🎨 artifacts**: Completed deliverables and outputs from activities
+- **✅ rubriks**: Evaluation criteria and standards
+- **📜 scripts**: Automated procedures and code snippets
+- **⚙️ systems**: Reusable workflows and processes
+- **📋 templates**: Standardized formats for consistent outputs
+- **✓ todos**: Active tasks requiring attention
+- **🛠️ tools**: Role-specific utilities and resources
+- **📘 tutorials**: Step-by-step guides and learning materials
 
-## 🔍 Quick Start
+## 💬 Prompts
 
-This method really shines when using the Mason CLI. It will allow you to quickly summon a workspace in any folder by typing `mason make workspace` and then select the documents you want in which folder.
+System prompts and activity prompts serve different functions in your AI organization:
 
-### 1. Install Mason CLI
+- **System prompts** define an AI role's expertise, responsibilities, and capabilities within your organization.
+- **Activity prompts** are direct requests for a role to fulfill specific tasks with detailed instructions.
 
-[Reference: Mason CLI Installation Guide](https://docs.brickhub.dev/installing/)
+Think of system prompts as defining job descriptions for each specialized AI role (Developer, Designer, etc.), while activity prompts are like giving detailed work instructions to these roles.
 
-> ℹ️ Prerequisite: You must have the Dart SDK installed on your machine.
+### 🤖 System Prompts
 
-**Option 1: Using pub.dev (Recommended)**
-```bash
-# 🎯 Activate from https://pub.dev
-dart pub global activate mason_cli
-```
+- **Definition**: A detailed description that establishes an AI role's expertise and responsibilities.
+- **Format**: Always starts with 'you-are-...'
+- **Purpose**: Creates a specialized AI team member with defined capabilities and domain knowledge.
 
-**Option 2: Using Homebrew**
-```bash
-# 🍺 Install from https://brew.sh
-brew tap felangel/mason
-brew install mason
-```
+Examples:
 
-Verify installation:
-```bash
-mason
-# Should show: 🧱  mason • lay the foundation!
-```
+- You are now a software tester tasked with creating and running tests for the business logic of a specific feature. Your goal is .. (continues with a detailed description of the role)
+- You are a requirements expert with expertise in understanding complex codebases and project planning. Your task is to .. (continues with a detailed description of the role)
+- You are an expert project management AI specializing in planning and delegating tasks for large-scale projects. Your primary function is .. (continues with a detailed description of the role)
 
-### 2. Add Workspace to Mason
+### 🎯 Activity Prompts
 
-First, add the workspace brick globally to make it available anywhere on your system:
+- **Definition**: A direct request with specific instructions for an AI role to fulfill.
+- **Format**: Always starts with 'plx-..' (please-..)
+- **Purpose**: Provides detailed guidance on exactly what the AI role should deliver.
 
-**Method 1: Using the script (Recommended)**
-```bash
-# Add the workspace brick using the provided script
-./scripts/add_workspace_bricks.sh
-```
+Examples:
 
-**Method 2: Manual installation**
-```bash
-# Add the workspace brick globally
-cd ./_mason
-mason add workspace --path . -g
-```
+- Please review the work done by developer based on..
+- Please help me break down a complex request into manageable artifacts and providing detailed instructions for..
+- Please create a comprehensive plan to achieve a specific outcome and meet certain end goals. Follow your system instructions carefully to develop an effective and actionable plan.
 
-### 3. Create Your Workspace
+## ⚙️ Systems
 
-Now you can create a workspace in any repository or folder using mason.
+- **Definition**: A reusable collection of activities that produces one or more results.
+- **Purpose**: Provides standardized processes for common workflows in your organization.
+- **Structure**: Typically contains multiple activities organized in a logical sequence.
 
-#### Example
-```bash
-# Navigate to your repository/folder
-cd your-repository
+Examples:
 
-# Create workspace interactively
-mason make workspace
-```
-This will:
-- Ask which components you want to include
-- Allow you to customize your workspace
-- Handle file creation and overrides safely
-- Set up your workspace structure automatically in a specifc folder
+- System for creating social media posts
+- System for refining todo items
+- System for publishing release notes
 
-## 📚 Core Pillars
+### 🏃 Activities
 
-This framework enhances your AI agent's capabilities through three core pillars. It ensures high-quality, tested implementations by maintaining clear requirements, detailed tickets, and organized task lists.
+- **Definition**: A single action that starts with a verb and produces a result.
+- **Purpose**: Represents a specific task that an AI role performs to achieve a goal.
+- **Structure**: Consists of one or more atomic steps working toward a defined outcome.
 
-We believe AI agents perform at their best when three key elements align:
+Examples:
 
-1. **Quality Training** (out of our hands, sort of)
-   - Trained on relevant data
-   - Proper model capabilities
-   - Good base understanding
+- Scan the codebase for relevant files
+- Create a new document with the results
+- Go to this website and scrape the content
 
-2. **Clear Direction**
-   - Well-defined requirements
-   - Structured processes
-   - Clear documentation
-   - Proper templates
-   - Small, clear task scope
+#### 🔍 Atomic Steps
 
-3. **Maintained Focus**
-   - Regular progress tracking
-   - Consistent documentation
-   - Clear communication
-   - Process adherence
-   - Preserved context across sessions
-   - Active context awareness
-   - Proper state management
-   - Seamless agent handover
+- **Definition**: A single step inside an activity that works towards the result of the activity.
+- **Purpose**: Breaks down complex activities into simple, executable actions.
+- **Characteristic**: Small, discrete actions that can be completed in a single operation.
 
-## 🔍 Framework Overview
+Examples:
 
-The framework is built on seven core work documents that guide the development process:
+- Open the website
+- Click the button
+- Create a new file
 
-1. **[Requirements](work-docs/your-requirements.md)**
-   Used for breaking down all aspects of what needs to be built, including actors, components, activities, properties, behaviors, acceptance criteria and test scenarios.
+### 🎨 Artifacts
 
-2. **[Ticket](work-docs/your-ticket.md)**
-   Used for containing task descriptions, user stories, technical specifications, implementation details, security considerations, data models and API requirements.
+- **Definition**: The output of an atomic step, activity, or system.
+- **Purpose**: Represents the tangible results of completed work.
+- **Characteristic**: Can be documents, code, designs, or any other deliverable.
 
-3. **[Planning](work-docs/your-planning.md)**
-   Used for detailed development planning, breaking down tasks, and organizing the implementation approach.
+Examples:
 
-4. **[Milestones](work-docs/your-milestones.md)**
-   Used for breaking down the work into clear testable milestones, tracking dependencies, technical details, progress and completion criteria while maintaining links to related tests and tasks.
+- Deep research report
+- Refined ticket with technical requirements
+- Implemented feature
 
-5. **[Todo List](work-docs/your-todo-list.md)**
-   Used for tracking chronological atomic tasks organized by milestone, including progress tracking, task dependencies and test tasks for each testable component.
+## 🛠️ Tools
 
-6. **[Tests](work-docs/your-tests.md)**
-   Used for defining (BDD Gherkin style) test scenarios, validating acceptance criteria, writing integration and unit tests, and tracking test coverage.
+- **Definition**: Specialized utilities that extend the capabilities of your AI organization.
+- **Purpose**: Provides AI roles with the necessary resources to perform their tasks effectively.
+- **Implementation**: Usually involves integration with external services or software.
 
-7. **[Backlog](work-docs/your-backlog.md)**
-   Used for maintaining a chronological list of future work items that require no immediate action and will only be implemented upon user request while preserving original context and requirements.
+Examples:
 
-## 🎯 Issues
+- pewPewCLI (command line task management)
+- Jira MCP (project management)
+- Firecrawl MCP (web scraping)
+- Notion MCP (project management)
 
-The framework provides a structured approach to handling development issues. Each issue contains a focused set of documents needed for tracking and implementing work items, reducing complexity and preventing information overload.
+### 📋 Templates
 
-### Working with Issues
+- **Definition**: A predefined structure or format used as a starting point to easily create new documents, designs, code, or content consistently.
+- **Purpose**: Ensures consistency and efficiency in creating similar types of items.
+- **Implementation**: Standardized formats with placeholders that can be customized as needed.
 
-Each issue is organized in its own directory with essential documents:
-- `your-backlog.md`: For tracking future work items
-- `your-hours.md`: For logging work time
-- `your-milestones.md`: For tracking progress
-- `your-planning.md`: For detailed development planning
-- `your-requirements.md`: For documenting requirements
-- `your-tests.md`: For test scenarios
-- `your-todo-list.md`: For task tracking
+Examples:
 
-To create a new issue, first add the issue brick globally by running:
+- Template for a LinkedIn post
+- Template for a requirements document
+- Template for a changelog
+- Template for a ticket
+- Template for code structure
 
-```bash
-./scripts/add_make_issue_brick.sh
-```
+### 📚 Wiki Objects
 
-This script will:
-- Check if Mason CLI is installed
-- Navigate to the _mason directory
-- Add the issue brick globally if not already present
-- Provide clear feedback about the process
+- **Definition**: Documents containing information about specific subjects for reference.
+- **Purpose**: Provide context and knowledge to support decision-making.
+- **Connectivity**: Can be linked to each other using [wiki links](https://en.wikipedia.org/wiki/Wiki#Linking), creating a network of interconnected knowledge that makes it easy to reference and reuse information across your workspace.
 
-Once the brick is added, you can create new issues using:
+Examples:
 
-```bash
-mason make issue
-```
+- Components (App, Database, Website, Button)
+- Concepts (Dependency Injection, Requirements, Single Responsibility Principle)
+- Actors (User, Agent, System)
+- Docs (API Reference, Package Documentation)
 
-It will ask you for the issue folder and name, creating a structured workspace for that specific issue with all necessary documentation.
+## 📝 Naming Conventions
 
-If you encounter any issues:
-1. Make sure Mason CLI is installed (`dart pub global activate mason_cli`)
-2. Ensure the script is executable (`chmod +x scripts/add_make_issue_brick.sh`)
-3. Check if you're in the workspace root directory
+Consistent naming helps organize and locate files within your workspace:
 
-## 🔄 Protocols
-
-The framework includes a comprehensive set of protocols that guide various aspects of development and documentation. Each protocol is designed to maintain consistency and quality throughout the development process.
-
-| Protocol                            | Category           | Description                                         |
-|-------------------------------------|--------------------|-----------------------------------------------------|
-| plx-activate-code-red               | Emergency          | Initiates emergency protocol for critical issues    |
-| plx-analyze                         | Analysis           | Performs detailed analysis of code or requirements  |
-| plx-ask                             | Communication      | Formulates clear questions for better understanding |
-| plx-ask-big-brother                 | Support            | Requests guidance from senior developers/system     |
-| plx-ask-questions                   | Communication      | Generates comprehensive question sets for clarity   |
-| plx-check-todo                      | Task Management    | Reviews and validates todo items                    |
-| plx-commit                          | Version Control    | Handles code commits with proper documentation      |
-| plx-continue-and-follow-the-process | Process            | Ensures adherence to established workflows          |
-| plx-create-brick                    | Development        | Creates new Mason bricks for code generation        |
-| plx-create-case-study               | Documentation      | Develops detailed case studies                      |
-| plx-create-code-of-conduct          | Documentation      | Establishes development guidelines and standards    |
-| plx-create-concept                  | Documentation      | Documents new concepts and architectural decisions  |
-| plx-create-doc                      | Documentation      | Generates various types of documentation            |
-| plx-create-feature-breakdown        | Planning           | Breaks down features into implementable components  |
-| plx-create-insight                  | Analysis           | Generates insights from code or process analysis    |
-| plx-create-milestone-gherkin-tests  | Testing            | Creates BDD tests for milestones                    |
-| plx-create-milestones               | Planning           | Defines project milestones and objectives           |
-| plx-create-plan-in-chat             | Planning           | Develops action plans during chat sessions          |
-| plx-create-planning                 | Planning           | Creates comprehensive project plans                 |
-| plx-create-protocol                 | Process            | Establishes new process protocols                   |
-| plx-create-tests                    | Testing            | Develops various types of tests                     |
-| plx-create-ticket                   | Task Management    | Creates well-structured task tickets                |
-| plx-create-todo                     | Task Management    | Generates todo items and task lists                 |
-| plx-create-tutorial                 | Documentation      | Creates step-by-step tutorials                      |
-| plx-do                              | Execution          | Executes tasks following defined processes          |
-| plx-document-dart-file              | Documentation      | Documents Dart code files comprehensively           |
-| plx-explain-yourself                | Communication      | Provides clear explanations of decisions/actions    |
-| plx-fix-linting-errors              | Quality            | Resolves code linting issues                        |
-| plx-focus                           | Process            | Maintains focus on current task/objective           |
-| plx-follow-the-docs                 | Process            | Ensures adherence to documentation                  |
-| plx-log-hours                       | Project Management | Tracks time spent on tasks                          |
-| plx-pause-work                      | Process            | Properly pauses work with context preservation      |
-| plx-prepare-content                 | Content            | Prepares various types of content                   |
-| plx-prepare-release                 | Release            | Manages release preparation tasks                   |
-| plx-reflect                         | Quality            | Reviews and validates completed work                |
-| plx-resume-work                     | Process            | Resumes work with proper context restoration        |
-| plx-run-tests                       | Testing            | Executes and validates tests                        |
-| plx-scan-project-for-context        | Analysis           | Analyzes project for context gathering              |
-| plx-scan-project-for-todo           | Task Management    | Identifies and collects todo items                  |
-| plx-stick-to-the-process            | Process            | Maintains process adherence                         |
-| plx-stick-to-your-prompt            | Process            | Ensures prompt/instruction adherence                |
-| plx-sync-work-documents             | Documentation      | Synchronizes work-related documents                 |
-| plx-test-live                       | Testing            | Performs live testing procedures                    |
-| plx-transfer-context                | Process            | Handles context transfer between sessions           |
-| plx-update-read-me-and-changelog    | Documentation      | Updates project documentation                       |
-| plx-update-todo                     | Task Management    | Updates todo items and lists                        |
-| plx-update-translations             | Localization       | Manages translation updates                         |
-| plx-use-api                         | Development        | Handles API integration and usage                   |
+- **Templates**:
+    - `template-for-{{RESULT_OR_CONCEPT}}.md`
+    - `template-{{RESULT_OR_CONCEPT}}.md`
+- **Systems**:
+    - `system-for-{{RESULT_OR_CONCEPT}}.md`
+    - `system-{{RESULT_OR_CONCEPT}}.md`
+- **System Prompts**:
+    - `you-are-a-{{IDENTITY}}.md`
+    - `you-are-an-{{IDENTITY}}.md`
+- **Activity Prompts**:
+    - `plx-{{VERB}}-{{RESULT_OR_CONCEPT}}.md`
+- **Todo items**:
+    - `todo-{{DESCRIPTION}}.md`
+- **Drafts**:
+    - `draft-{{DESCRIPTION}}.md`
+- **Wiki objects**:
+    - `all-{{COMPONENTS_OR_CONCEPTS}}.md`
+    - `the-{{NOUN_OR_CONCEPT}}.md`
+- **Docs**:
+    - `{{SUBJECT}}-docs.md` (reference documentation)
+- **Tutorials**:
+    - `how-to-{{TASK}}.md` (step-by-step instructions)
