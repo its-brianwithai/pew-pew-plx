@@ -26,7 +26,7 @@ folders=(
     "scripts"
     "systems"
     "templates"
-    "todos"
+    "tasks"
     "tools"
     "tutorials"
 )
