@@ -27,7 +27,7 @@ folders=(
     "instructions"
     "projects"
     "prompts"
-    "rubriks"
+    "rubrics"
     "scripts"
     "systems"
     "tasks"

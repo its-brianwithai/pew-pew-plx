@@ -1,17 +1,15 @@
-# Ignore everything by default
-*
+# Ignore credentials folders for all roles
+**/credentials/
 
-# Explicitly whitelist only exact files
-!.gitignore
-!LICENSE
-!README.md
-!CONTRIBUTING.md
-
-# Always ignore OS-specific files
+# OS specific files
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-Thumbs.db 
+Thumbs.db
+.vscode
+.idea
+.env
+.env.*

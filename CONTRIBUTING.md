@@ -44,9 +44,9 @@ When contributing, please follow these conventions:
     - `task-{{DESCRIPTION}}.md`
 - **Inbox**:
     - `inbox-{{DESCRIPTION}}.md`
-- **Rubriks**:
-    - `rubrik-{{RESULT_OR_CONCEPT}}.md`
-    - `rubrik-for-{{RESULT_OR_CONCEPT}}.md`
+- **Rubrics**:
+    - `rubric-{{RESULT_OR_CONCEPT}}.md`
+    - `rubric-for-{{RESULT_OR_CONCEPT}}.md`
 - **Scripts**:
     - `{{VERB}}-{{RESULT_OR_CONCEPT}}.*`
 - **Drafts**:
@@ -71,7 +71,7 @@ When contributing to this workspace framework, please follow these guidelines to
 2. **Ensure general usability** - Contributions should be usable by other developers without requiring knowledge of your personal projects or context. Create files and structures that are self-explanatory and broadly applicable.
 
 3. **Specify domain context** - When creating content related to specific domains, professions, or tools:
-   - Include the context in the filename (e.g., `template-for-marketing-campaign.md`, `system-for-content-calendar.md`, `rubrik-for-design-review.md`)
+   - Include the context in the filename (e.g., `template-for-marketing-campaign.md`, `system-for-content-calendar.md`, `rubric-for-design-review.md`)
    - For technical content, specify the technology (e.g., `template-for-python-projects.md`, `system-for-react-components.md`)
 
 4. **Role specificity** - When creating new roles, be specific about their domain expertise when a role already exists, otherwise be general:

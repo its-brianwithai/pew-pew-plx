@@ -42,7 +42,7 @@ role/
 ├── 📘 instructions/# Step-by-step guides
 ├── 📂 projects/    # Organized collections of files
 ├── 💬 prompts/     # Role-specific AI instructions
-├── ✅ rubriks/     # Evaluation criteria
+├── ✅ rubrics/     # Evaluation criteria
 ├── 📜 scripts/     # Automated procedures
 ├── ⚙️ systems/     # Reusable workflows
 ├── ✓ tasks/        # Active tasks requiring attention
@@ -61,7 +61,7 @@ Enforce these naming patterns for consistency:
 - Backlog: `backlog-{{DESCRIPTION}}.md`, `story-{{DESCRIPTION}}.md`, `bug-{{DESCRIPTION}}.md`
 - Tasks: `todo-{{DESCRIPTION}}.md`, `task-{{DESCRIPTION}}.md`
 - Inbox: `inbox-{{DESCRIPTION}}.md`
-- Rubriks: `rubrik-{{RESULT_OR_CONCEPT}}.md`, `rubrik-for-{{RESULT_OR_CONCEPT}}.md`
+- Rubrics: `rubric-{{RESULT_OR_CONCEPT}}.md`, `rubric-for-{{RESULT_OR_CONCEPT}}.md`
 - Scripts: `{{VERB}}-{{RESULT_OR_CONCEPT}}.*`
 - Drafts: `draft-{{DESCRIPTION}}.md`
 - Wiki: `all-{{COMPONENTS_OR_CONCEPTS}}.md`, `the-{{NOUN_OR_CONCEPT}}.md`, `{{NAME}}.md`

@@ -6,6 +6,35 @@ Welcome to the Ultra Wide Turbo Workspace - a comprehensive framework that trans
 
 By structuring your work through these roles, you gain clarity on where to store information, how to approach problems from different perspectives, and how to efficiently manage complex projects. Each role acts as a dedicated team member in your business or life, ready to execute tasks based on their specific capabilities.
 
+## 📑 Table of Contents
+
+- [👥 Roles](#-roles)
+  - [📁 Document and Folder Structure by Role](#-document-and-folder-structure-by-role)
+    - [🎨 Artifacts](#-artifacts)
+    - [🖼️ Assets](#️-assets)
+    - [📝 Backlog](#-backlog)
+    - [🔑 Credentials](#-credentials-fill-at-own-risk)
+    - [📚 Docs](#-docs)
+    - [🖋️ Drafts](#️-drafts)
+    - [📥 Inbox](#-inbox)
+    - [📘 Instructions](#-instructions)
+    - [📂 Projects](#-projects)
+    - [💬 Prompts](#-prompts)
+      - [🤖 System Prompts](#-system-prompts)
+      - [🎯 Activity Prompts](#-activity-prompts)
+    - [✅ Rubrics](#-rubrics)
+    - [📜 Scripts](#-scripts)
+    - [⚙️ Systems](#️-systems)
+      - [🏃 Activities](#-activities)
+        - [🔍 Atomic Steps](#-atomic-steps)
+    - [✓ Tasks](#-tasks)
+    - [📋 Templates](#-templates)
+    - [🛠️ Tools](#️-tools)
+    - [📚 Wiki](#-wiki)
+- [📝 Naming Conventions](#-naming-conventions)
+- [💎 Credits](#-credits)
+- [🤝 Contributing](#-contributing)
+
 ## 👥 Roles
 
 A role represents a specialized team member in your virtual organization. Each role has its own expertise, responsibilities, and dedicated workspace structure.
@@ -35,7 +64,7 @@ role/
 ├── 📘 instructions/
 ├── 📂 projects/
 ├── 💬 prompts/
-├── ✅ rubriks/
+├── ✅ rubrics/
 ├── 📜 scripts/
 ├── ⚙️ systems/
 ├── ✓ tasks/
@@ -43,340 +72,29 @@ role/
 ├── 🛠️ tools/
 └── 📔 wiki/
 ```
-
-- **🎨 artifacts**: Completed deliverables and outputs from activities
-- **🖼️ assets**: Resources like images, project files, client files, and other required materials
-- **📝 backlog**: Pending tasks and future work items
-- **🔑 credentials**: Access information and permissions
-- **📚 docs**: Documentation related to the role's domain expertise
-- **🖋️ drafts**: Work-in-progress documents
-- **📥 inbox**: New requests and information for processing
-- **📘 instructions**: Step-by-step guides and learning materials
-- **📂 projects**: Organized collections of related files and folders
-- **💬 prompts**: Role-specific instructions for AI models
-- **✅ rubriks**: Evaluation criteria and standards
-- **📜 scripts**: Automated procedures and code snippets
-- **⚙️ systems**: Reusable workflows and processes
-- **✓ tasks**: Active tasks requiring attention
-- **📋 templates**: Standardized formats for consistent outputs
-- **🛠️ tools**: Role-specific utilities and resources
-- **📔 wiki**: Knowledge base with interconnected information
-
-## 📝 Backlog
-
-- **Definition**: A collection of pending tasks, ideas, and future work items that are not yet scheduled or prioritized.
-- **Purpose**: Serves as a repository for capturing potential work before it's ready to be acted upon.
-
-Examples:
-- Feature requests waiting for evaluation
-- Ideas that need further refinement
-- Low-priority improvements
-- Future phases of current projects
-
-## 🔑 Credentials (fill at own risk)
-
-- **Definition**: Secure access information and permissions needed for role-specific tasks.
-- **Purpose**: Allow easy access to credentials for role-specific tasks.
-- **Disclaimer**: Always try to use cloud based credentials over local files. If you need to use local files, make sure to not commit them to version control and possibly encrypt them.
-
-Examples:
-- API keys and tokens
-- Service account credentials
-- Environment-specific configuration
-- Access permissions documentation
-
-## 📚 Docs
-
-- **Definition**: Comprehensive documentation related to the role's domain expertise and responsibilities.
-- **Purpose**: Provides reference materials, guidelines, and knowledge bases for consistent work.
-- **Organization**: Typically structured by subject area, technology, or specific processes.
-
-Examples:
-- Architecture documentation
-- API references
-- Style guides
-- Best practices documents
-- Process documentation
-
-## 🖋️ Drafts
-
-- **Definition**: Work-in-progress documents and content that are not yet finalized.
-- **Purpose**: Provides a space for developing ideas, content, or documentation before they're ready for review or implementation.
-- **Workflow**: Items typically move from drafts to their final destination folders once completed.
-
-Examples:
-- Partial documents awaiting completion
-- Initial versions of designs or plans
-- Content being prepared for review
-- Active work documents
-- Work requiring multiple sessions to complete
-
-## 📥 Inbox
-
-- **Definition**: A staging area for new requests, information, and items requiring processing.
-- **Purpose**: Serves as an entry point for incoming work before it's evaluated, categorized, and assigned.
-- **Workflow**: Items typically move from inbox to appropriate destinations based on evaluation.
-
-Examples:
-- New task requests
-- Information requiring review
-- Unprocessed communications
-- Items awaiting triage
-
-## 📂 Projects
-
-- **Definition**: Organized collections of related files, folders, and resources focused on specific initiatives.
-- **Purpose**: Centralizes all materials related to a particular project or ongoing work area.
-- **Structure**: Typically contains sub-folders for different aspects of the project (planning, implementation, deliverables).
-
-Examples:
-- Website redesign project
-- Product launch materials
-- Research initiative
-- Multi-phase development effort
-
-## 🎨 Artifacts
-
-- **Definition**: The tangible outputs and deliverables resulting from completed work.
-- **Purpose**: Preserves and organizes final products for reference, delivery, or implementation.
-- **Characteristics**: Typically represents polished, reviewed, and approved items ready for use.
-
-Examples:
-- Completed designs
-- Compiled reports
-- Generated code
-- Processed data
-- Finalized documents
-
-## 🖼️ Assets
-
-- **Definition**: Resources and files needed for role-specific work, including raw materials and external content.
-- **Purpose**: Centralizes storage for various media, client files, and resources required for projects and tasks.
-- **Characteristics**: Typically includes binary files, media, and other non-text resources that support the role's work.
-
-Examples:
-- Images and graphics
-- Project source files (PSD, AI, Figma)
-- Client-provided materials
-- Audio and video files
-- Fonts and design resources
-- Data files and raw content
-
-## ✅ Rubriks
-
-- **Definition**: Evaluation criteria, standards, and assessment frameworks for measuring quality and completeness.
-- **Purpose**: Provides consistent benchmarks for evaluating work and ensuring quality standards are met.
-- **Implementation**: Often structured as checklists, scoring systems, or requirement sets.
-
-Examples:
-- Code review checklists
-- Design evaluation criteria
-- Quality assurance standards
-- Performance measurement frameworks
-
-## 📜 Scripts
-
-- **Definition**: Automated procedures, code snippets, and executable routines that perform specific tasks.
-- **Purpose**: Increases efficiency by automating repetitive processes and standardizing common operations.
-- **Types**: May include shell scripts, programming code, or automation routines.
-
-Examples:
-- Build and deployment scripts
-- Data processing routines
-- Environment setup scripts
-- Automation tools
-- Utility functions
-
-## ✓ Tasks
-
-- **Definition**: Active tasks that require immediate attention and ongoing work.
-- **Purpose**: Tracks current priorities and work in progress to ensure timely completion.
-- **Organization**: Typically sorted by priority, deadline, or project association.
-
-Examples:
-- Tasks in progress
-- Items due this week
-- Blocked work awaiting dependencies
-- High-priority action items
-
-## 📘 Instructions
-
-- **Definition**: Step-by-step guides and learning materials for specific processes or technologies.
-- **Purpose**: Facilitates knowledge transfer and skill development within the role's domain.
-- **Structure**: Typically organized in sequential steps with clear instructions and examples.
-
-Examples:
-- Process walkthroughs
-- Technical how-to guides
-- Onboarding materials
-- Training resources
-- Best practices guides
-
-## 💬 Prompts
-
-System prompts and activity prompts serve different functions in your AI organization:
-
-- **System prompts** define an AI role's expertise, responsibilities, and capabilities within your organization.
-- **Activity prompts** are direct requests for a role to fulfill specific tasks with detailed instructions.
-
-Think of system prompts as defining job descriptions for each specialized AI role (Developer, Designer, etc.), while activity prompts are like giving detailed work instructions to these roles.
-
-### 🤖 System Prompts
-
-- **Definition**: A detailed description that establishes an AI role's expertise and responsibilities.
-- **Format**: Always starts with 'you-are-...'
-- **Purpose**: Creates a specialized AI team member with defined capabilities and domain knowledge.
-
-Examples:
-
-- You are now a software tester tasked with creating and running tests for the business logic of a specific feature. Your goal is .. (continues with a detailed description of the role)
-- You are a requirements expert with expertise in understanding complex codebases and project planning. Your task is to .. (continues with a detailed description of the role)
-- You are an expert project management AI specializing in planning and delegating tasks for large-scale projects. Your primary function is .. (continues with a detailed description of the role)
-
-### 🎯 Activity Prompts
-
-- **Definition**: A direct request with specific instructions for an AI role to fulfill.
-- **Format**: Always starts with 'plx-..' (please-..)
-- **Purpose**: Provides detailed guidance on exactly what the AI role should deliver.
-
-Examples:
-
-- Please review the work done by developer based on..
-- Please help me break down a complex request into manageable artifacts and providing detailed instructions for..
-- Please create a comprehensive plan to achieve a specific outcome and meet certain end goals. Follow your system instructions carefully to develop an effective and actionable plan.
-
-## ⚙️ Systems
-
-- **Definition**: A reusable collection of activities that produces one or more results.
-- **Purpose**: Provides standardized processes for common workflows in your organization.
-- **Structure**: Typically contains multiple activities organized in a logical sequence.
-
-Examples:
-
-- System for creating social media posts
-- System for refining todo items
-- System for publishing release notes
-
-### 🏃 Activities
-
-- **Definition**: A single action that starts with a verb and produces a result.
-- **Purpose**: Represents a specific task that an AI role performs to achieve a goal.
-- **Structure**: Consists of one or more atomic steps working toward a defined outcome.
-
-Examples:
-
-- Scan the codebase for relevant files
-- Create a new document with the results
-- Go to this website and scrape the content
-
-#### 🔍 Atomic Steps
-
-- **Definition**: A single step inside an activity that works towards the result of the activity.
-- **Purpose**: Breaks down complex activities into simple, executable actions.
-- **Characteristic**: Small, discrete actions that can be completed in a single operation.
-
-Examples:
-
-- Open the website
-- Click the button
-- Create a new file
-
-### 🎨 Artifacts
-
-- **Definition**: The output of an atomic step, activity, or system.
-- **Purpose**: Represents the tangible results of completed work.
-- **Characteristic**: Can be documents, code, designs, or any other deliverable.
-
-Examples:
-
-- Deep research report
-- Refined ticket with technical requirements
-- Implemented feature
-
-## 🛠️ Tools
-
-- **Definition**: Specialized utilities that extend the capabilities of your AI organization.
-- **Purpose**: Provides AI roles with the necessary resources to perform their tasks effectively.
-- **Implementation**: Usually involves integration with external services or software.
-
-Examples:
-
-- pewPewCLI (command line task management)
-- Jira MCP (project management)
-- Firecrawl MCP (web scraping)
-- Notion MCP (project management)
-
-### 📋 Templates
-
-- **Definition**: A predefined structure or format used as a starting point to easily create new documents, designs, code, or content consistently.
-- **Purpose**: Ensures consistency and efficiency in creating similar types of items.
-- **Implementation**: Standardized formats with placeholders that can be customized as needed.
-
-Examples:
-
-- Template for a LinkedIn post
-- Template for a requirements document
-- Template for a changelog
-- Template for a ticket
-- Template for code structure
-
-### 📚 Wiki
-
-- **Definition**: Documents containing information about specific subjects for reference.
-- **Purpose**: Provide context and knowledge to support decision-making.
-
-Examples:
-
-- Components (App, Database, Website, Button)
-- Concepts (Dependency Injection, Requirements, Single Responsibility Principle)
-- Actors (User, Agent, System)
-- Clients (Customer 1, Customer 2, Customer 3)
-- People (John Doe, Jane Smith, Jack Bauer)
-- Docs (API Reference, Package Documentation)
-
-## 📝 Naming Conventions
-
-We use certain patterns in our file names to make it easier to create and find files. Easier to find by typing (or scanning a folder for) the first few letters of a recurring pattern, and easier to come up with names when creating new files. This saves some energy for the brain and the fingers ⊂(◉‿◉)つ.
-
-- **Templates**:
-    - `template-for-{{RESULT_OR_CONCEPT}}.md`
-    - `template-{{RESULT_OR_CONCEPT}}.md`
-- **Systems**:
-    - `system-for-{{RESULT_OR_CONCEPT}}.md`
-    - `system-{{RESULT_OR_CONCEPT}}.md`
-- **System Prompts**:
-    - `you-are-a-{{IDENTITY}}.md`
-    - `you-are-an-{{IDENTITY}}.md`
-- **Activity Prompts**:
-    - `plx-{{VERB}}-{{RESULT_OR_CONCEPT}}.md`
-- **Backlog**:
-    - `backlog-{{DESCRIPTION}}.md`
-    - `story-{{DESCRIPTION}}.md`
-    - `bug-{{DESCRIPTION}}.md`
-- **Tasks**:
-    - `todo-{{DESCRIPTION}}.md`
-    - `story-{{DESCRIPTION}}.md`
-    - `bug-{{DESCRIPTION}}.md`
-    - `task-{{DESCRIPTION}}.md`
-- **Inbox**:
-    - `inbox-{{DESCRIPTION}}.md`
-- **Rubriks**:
-    - `rubrik-{{RESULT_OR_CONCEPT}}.md`
-    - `rubrik-for-{{RESULT_OR_CONCEPT}}.md`
-- **Scripts**:
-    - `{{VERB}}-{{RESULT_OR_CONCEPT}}.*`
-- **Drafts**:
-    - `draft-{{DESCRIPTION}}.md`
-- **Wiki objects**:
-    - `all-{{COMPONENTS_OR_CONCEPTS}}.md`
-    - `the-{{NOUN_OR_CONCEPT}}.md`
-    - `a-{{NOUN_OR_CONCEPT}}.md`
-    - `an-{{NOUN_OR_CONCEPT}}.md`
-    - `{{NAME}}.md`
-- **Docs**:
-    - `doc-{{SUBJECT}}.md` (reference documentation)
-- **Instructions**:
-    - `how-to-{{TASK}}.md` (step-by-step instructions)
+| Folder                  | Definition                                                                                             | Purpose                                                                                                             | Examples                                                                                                                                                                                                                                                                                                                                   |
+|-------------------------|--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **🎨 Artifacts**        | The tangible outputs and deliverables resulting from completed work.                                   | Preserves and organizes final products for reference, delivery, or implementation.                                  | - Completed designs<br>- Compiled reports<br>- Generated code<br>- Processed data<br>- Finalized documents                                                                                                                                                                                                                                 |
+| **🖼️ Assets**          | Resources and files needed for role-specific work, including raw materials and external content.       | Centralizes storage for various media, client files, and resources required for projects and tasks.                 | - Images and graphics<br>- Project source files (PSD, AI, Figma)<br>- Client-provided materials<br>- Audio and video files<br>- Fonts and design resources<br>- Data files and raw content                                                                                                                                                 |
+| **📝 Backlog**          | A collection of pending tasks, ideas, and future work items that are not yet scheduled or prioritized. | Serves as a repository for capturing potential work before it's ready to be acted upon.                             | - Feature requests waiting for evaluation<br>- Ideas that need further refinement<br>- Low-priority improvements<br>- Future phases of current projects                                                                                                                                                                                    |
+| **🔑 Credentials**      | Secure access information and permissions needed for role-specific tasks.                              | Allow easy access to credentials for role-specific tasks.                                                           | - API keys and tokens<br>- Service account credentials<br>- Environment-specific configuration<br>- Access permissions documentation                                                                                                                                                                                                       |
+| **📚 Docs**             | Comprehensive documentation related to the role's domain expertise and responsibilities.               | Provides reference materials, guidelines, and knowledge bases for consistent work.                                  | - Architecture documentation<br>- API references<br>- Style guides<br>- Best practices documents<br>- Process documentation                                                                                                                                                                                                                |
+| **🖋️ Drafts**          | Work-in-progress documents and content that are not yet finalized.                                     | Provides a space for developing ideas, content, or documentation before they're ready for review or implementation. | - Partial documents awaiting completion<br>- Initial versions of designs or plans<br>- Content being prepared for review<br>- Active work documents<br>- Work requiring multiple sessions to complete                                                                                                                                      |
+| **📥 Inbox**            | A staging area for new requests, information, and items requiring processing.                          | Serves as an entry point for incoming work before it's evaluated, categorized, and assigned.                        | - New task requests<br>- Information requiring review<br>- Unprocessed communications<br>- Items awaiting triage                                                                                                                                                                                                                           |
+| **📘 Instructions**     | Step-by-step guides and learning materials for specific processes or technologies.                     | Facilitates knowledge transfer and skill development within the role's domain.                                      | - Process walkthroughs<br>- Technical how-to guides<br>- Onboarding materials<br>- Training resources<br>- Best practices guides                                                                                                                                                                                                           |
+| **📂 Projects**         | Organized collections of related files, folders, and resources focused on specific initiatives.        | Centralizes all materials related to a particular project or ongoing work area.                                     | - Website redesign project<br>- Product launch materials<br>- Research initiative<br>- Multi-phase development effort                                                                                                                                                                                                                      |
+| **💬 Prompts**          | Role-specific instructions for AI models.                                                              | Provides guidance for AI interactions relevant to the role's responsibilities.                                      | System prompts define an AI role's expertise, responsibilities, and capabilities.<br>Activity prompts are direct requests for a role to fulfill specific tasks.                                                                                                                                                                            |
+| **🤖 System Prompts**   | A detailed description that establishes an AI role's expertise and responsibilities.                   | Creates a specialized AI team member with defined capabilities and domain knowledge.                                | - [`developer/prompts/you-are-a-plan-act-developer.md`](developer/prompts/you-are-a-plan-act-developer.md)<br>- [`developer/prompts/you-are-a-requirements-expert.md`](developer/prompts/you-are-a-requirements-expert.md)<br>- [`operator/prompts/you-are-the-workspace-operator.md`](operator/prompts/you-are-the-workspace-operator.md) |
+| **🎯 Activity Prompts** | A direct request with specific instructions for an AI role to fulfill.                                 | Provides detailed guidance on exactly what the AI role should deliver.                                              | - [`plx-develop.md`](developer/prompts/plx-develop.md)<br>- [`plx-create-requirements.md`](developer/prompts/plx-create-requirements.md)<br>- [`plx-fix-bug.md`](developer/prompts/plx-fix-bug.md)                                                                                                                                         |
+| **✅ Rubrics**           | Evaluation criteria, standards, and assessment frameworks for measuring quality and completeness.      | Provides consistent benchmarks for evaluating work and ensuring quality standards are met.                          | - Code review checklists<br>- Design evaluation criteria<br>- Quality assurance standards<br>- Performance measurement frameworks                                                                                                                                                                                                          |
+| **📜 Scripts**          | Automated procedures, code snippets, and executable routines that perform specific tasks.              | Increases efficiency by automating repetitive processes and standardizing common operations.                        | - [`generate_raycast_snippets.py`](developer/scripts/generate_raycast_snippets.py)<br>- [`create-role.sh`](operator/scripts/create-role.sh)                                                                                                                                                                                                |
+| **⚙️ Systems**          | Reusable workflows and processes within a role's domain.                                               | Provides standardized approaches to common tasks.                                                                   | - Role-specific workflows<br>- Standard operating procedures<br>- Process templates<br>- System for creating social media posts<br>- System for refining todo items<br>- System for publishing release notes                                                                                                                               |
+| **🏃 Activities**       | A single action that starts with a verb and produces a result.                                         | Represents a specific task that an AI role performs to achieve a goal.                                              | - Scan the codebase for relevant files<br>- Create a new document with the results<br>- Go to this website and scrape the content                                                                                                                                                                                                          |
+| **🔍 Atomic Steps**     | A single step inside an activity that works towards the result of the activity.                        | Breaks down complex activities into simple, executable actions.                                                     | - Open the website<br>- Click the button<br>- Create a new file                                                                                                                                                                                                                                                                            |
+| **✓ Tasks**             | Active tasks that require immediate attention and ongoing work.                                        | Tracks current priorities and work in progress to ensure timely completion.                                         | - Tasks in progress<br>- Items due this week<br>- Blocked work awaiting dependencies<br>- High-priority action items                                                                                                                                                                                                                       |
+| **📋 Templates**        | Standardized formats for consistent outputs specific to the role.                                      | Ensures consistency in the role's deliverables.                                                                     | - Role-specific document templates<br>- Standardized formats for common outputs<br>- Reusable content structures                                                                                                                                                                                                                           |
+| **🛠️ Tools**           | Role-specific utilities and resources.                                                                 | Provides specialized capabilities for the role's tasks.                                                             | - Specialized software tools<br>- Role-specific utilities<br>- Productivity enhancers                                                                                                                                                                                                                                                      |
+| **📚 Wiki**             | Knowledge base with interconnected information relevant to the role.                                   | Serves as a reference repository for domain knowledge.                                                              | - Role-specific reference materials<br>- Domain knowledge collections<br>- Interconnected information resources                                                                                                                                                                                                                            |
 
 ## 💎 Credits
 
