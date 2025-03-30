@@ -324,7 +324,6 @@ Examples:
 
 - **Definition**: Documents containing information about specific subjects for reference.
 - **Purpose**: Provide context and knowledge to support decision-making.
-- **Connectivity**: Can be linked to each other using [wiki links](https://en.wikipedia.org/wiki/Wiki#Linking), creating a network of interconnected knowledge that makes it easy to reference and reuse information across your workspace.
 
 Examples:
 

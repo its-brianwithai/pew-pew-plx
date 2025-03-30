@@ -7,46 +7,6 @@
 !README.md
 !CONTRIBUTING.md
 
-# Designer files - only specific files
-!designer/rubriks/rubrik-for-ui-components.md
-
-# Developer files - only specific files
-!developer/artifacts/raycast_snippets.json
-!developer/docs/doc-dart-api-docs.md
-!developer/instructions/how-to-create-and-update-cursor-rules.md
-!developer/instructions/how-to-create-md-docs.md
-!developer/instructions/how-to-develop-astro-websites.md
-!developer/prompts/plx-ask-for-a-code-review.md
-!developer/prompts/plx-create-core-tests.md
-!developer/prompts/plx-create-plan.md
-!developer/prompts/plx-create-prompt-plan.md
-!developer/prompts/plx-create-requirements.md
-!developer/prompts/plx-create-todo-plan.md
-!developer/prompts/plx-create-tutorial.md
-!developer/prompts/plx-develop.md
-!developer/prompts/plx-fix-bug.md
-!developer/prompts/plx-fix-tests.md
-!developer/prompts/plx-generate-raycast-snippets.md
-!developer/prompts/plx-plan-core-tests.md
-!developer/prompts/plx-research-solution.md
-!developer/prompts/plx-run-tests.md
-!developer/prompts/plx-update-changelogs.md
-!developer/prompts/you-are-a-fast-developer.md
-!developer/prompts/you-are-a-plan-act-developer.md
-!developer/prompts/you-are-a-plan-act-mvvm-developer.md
-!developer/prompts/you-are-a-readme-expert.md
-!developer/prompts/you-are-a-requirements-expert.md
-!developer/prompts/you-are-a-researcher.md
-!developer/rubriks/rubrik-for-mvvm-projects.md
-!developer/scripts/generate_raycast_snippets.py
-!developer/templates/template-for-plan.md
-!developer/templates/template-for-research-results.md
-!developer/templates/template-for-test-results.md
-
-# Operator files - only specific files
-!operator/prompts/you-are-the-workspace-operator.md
-!operator/scripts/create-role.sh
-
 # Always ignore OS-specific files
 .DS_Store
 .DS_Store?

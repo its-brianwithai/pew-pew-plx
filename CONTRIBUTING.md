@@ -88,37 +88,6 @@ When contributing to this workspace framework, please follow these guidelines to
 6. Push to the branch (`git push origin feature/your-feature-name`)
 7. Create a new Pull Request
 
-## Gitignore Workflow
-
-This repository uses a strict gitignore workflow to ensure users can freely use the template without worrying about their implementation files being committed:
-
-1. The `.gitignore` is configured to **ignore everything by default**
-2. **Only specific files** are explicitly whitelisted
-3. No directory patterns are used that might track unintended files
-4. Each new template file must be manually added to the whitelist in `.gitignore`
-
-This approach means:
-
-- Users can add any files to any folder without worrying about them being tracked
-- Only the core template structure is preserved in git
-- When contributing, you must manually update the `.gitignore` file to include any new template files
-- Implementation-specific files will never be tracked unless explicitly added to the whitelist
-
-### Adding a New Template File
-
-If you want to add a new template file that should be tracked:
-
-1. Create your file in the appropriate location
-2. Add the **exact path** to the file in `.gitignore` with a `!` prefix
-3. Do not use wildcards or directory patterns
-4. Commit both the new file and the updated `.gitignore`
-
-For example, to add a new prompt file:
-```
-# Add to .gitignore
-!developer/prompts/plx-my-new-prompt.md
-```
-
 ## Using the Template
 
 When using this template for your own projects:
