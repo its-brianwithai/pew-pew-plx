@@ -25,38 +25,42 @@ Each role in the workspace has access to a standardized set of folders and docum
 
 ```
 role/
+├── 🎨 artifacts/
+├── 🖼️ assets/
 ├── 📝 backlog/
 ├── 🔑 credentials/
 ├── 📚 docs/
 ├── 🖋️ drafts/
 ├── 📥 inbox/
+├── 📘 instructions/
 ├── 📂 projects/
 ├── 💬 prompts/
-├── 🎨 artifacts/
 ├── ✅ rubriks/
 ├── 📜 scripts/
 ├── ⚙️ systems/
-├── 📋 templates/
 ├── ✓ tasks/
+├── 📋 templates/
 ├── 🛠️ tools/
-└── 📘 tutorials/
+└── 📔 wiki/
 ```
 
+- **🎨 artifacts**: Completed deliverables and outputs from activities
+- **🖼️ assets**: Resources like images, project files, client files, and other required materials
 - **📝 backlog**: Pending tasks and future work items
 - **🔑 credentials**: Access information and permissions
 - **📚 docs**: Documentation related to the role's domain expertise
 - **🖋️ drafts**: Work-in-progress documents
 - **📥 inbox**: New requests and information for processing
+- **📘 instructions**: Step-by-step guides and learning materials
 - **📂 projects**: Organized collections of related files and folders
 - **💬 prompts**: Role-specific instructions for AI models
-- **🎨 artifacts**: Completed deliverables and outputs from activities
 - **✅ rubriks**: Evaluation criteria and standards
 - **📜 scripts**: Automated procedures and code snippets
 - **⚙️ systems**: Reusable workflows and processes
-- **📋 templates**: Standardized formats for consistent outputs
 - **✓ tasks**: Active tasks requiring attention
+- **📋 templates**: Standardized formats for consistent outputs
 - **🛠️ tools**: Role-specific utilities and resources
-- **📘 tutorials**: Step-by-step guides and learning materials
+- **📔 wiki**: Knowledge base with interconnected information
 
 ## 📝 Backlog
 
@@ -144,6 +148,20 @@ Examples:
 - Processed data
 - Finalized documents
 
+## 🖼️ Assets
+
+- **Definition**: Resources and files needed for role-specific work, including raw materials and external content.
+- **Purpose**: Centralizes storage for various media, client files, and resources required for projects and tasks.
+- **Characteristics**: Typically includes binary files, media, and other non-text resources that support the role's work.
+
+Examples:
+- Images and graphics
+- Project source files (PSD, AI, Figma)
+- Client-provided materials
+- Audio and video files
+- Fonts and design resources
+- Data files and raw content
+
 ## ✅ Rubriks
 
 - **Definition**: Evaluation criteria, standards, and assessment frameworks for measuring quality and completeness.
@@ -181,7 +199,7 @@ Examples:
 - Blocked work awaiting dependencies
 - High-priority action items
 
-## 📘 Tutorials
+## 📘 Instructions
 
 - **Definition**: Step-by-step guides and learning materials for specific processes or technologies.
 - **Purpose**: Facilitates knowledge transfer and skill development within the role's domain.
@@ -302,7 +320,7 @@ Examples:
 - Template for a ticket
 - Template for code structure
 
-### 📚 Wiki Objects
+### 📚 Wiki
 
 - **Definition**: Documents containing information about specific subjects for reference.
 - **Purpose**: Provide context and knowledge to support decision-making.
@@ -317,9 +335,9 @@ Examples:
 - People (John Doe, Jane Smith, Jack Bauer)
 - Docs (API Reference, Package Documentation)
 
-## 📝 Optional Naming Conventions
+## 📝 Naming Conventions
 
-We use this to make it easier to create and find files by typing the first few letters of a recurring pattern. You can of course use your own way to organise the files properly if you like.
+We use certain patterns in our file names to make it easier to create and find files. Easier to find by typing (or scanning a folder for) the first few letters of a recurring pattern, and easier to come up with names when creating new files. This saves some energy for the brain and the fingers ⊂(◉‿◉)つ.
 
 - **Templates**:
     - `template-for-{{RESULT_OR_CONCEPT}}.md`
@@ -332,8 +350,22 @@ We use this to make it easier to create and find files by typing the first few l
     - `you-are-an-{{IDENTITY}}.md`
 - **Activity Prompts**:
     - `plx-{{VERB}}-{{RESULT_OR_CONCEPT}}.md`
+- **Backlog**:
+    - `backlog-{{DESCRIPTION}}.md`
+    - `story-{{DESCRIPTION}}.md`
+    - `bug-{{DESCRIPTION}}.md`
 - **Tasks**:
     - `todo-{{DESCRIPTION}}.md`
+    - `story-{{DESCRIPTION}}.md`
+    - `bug-{{DESCRIPTION}}.md`
+    - `task-{{DESCRIPTION}}.md`
+- **Inbox**:
+    - `inbox-{{DESCRIPTION}}.md`
+- **Rubriks**:
+    - `rubrik-{{RESULT_OR_CONCEPT}}.md`
+    - `rubrik-for-{{RESULT_OR_CONCEPT}}.md`
+- **Scripts**:
+    - `{{VERB}}-{{RESULT_OR_CONCEPT}}.*`
 - **Drafts**:
     - `draft-{{DESCRIPTION}}.md`
 - **Wiki objects**:
@@ -341,9 +373,32 @@ We use this to make it easier to create and find files by typing the first few l
     - `the-{{NOUN_OR_CONCEPT}}.md`
     - `a-{{NOUN_OR_CONCEPT}}.md`
     - `an-{{NOUN_OR_CONCEPT}}.md`
-    - `{{NOUN_OR_CONCEPT}}.md`
     - `{{NAME}}.md`
 - **Docs**:
     - `doc-{{SUBJECT}}.md` (reference documentation)
-- **Tutorials**:
+- **Instructions**:
     - `how-to-{{TASK}}.md` (step-by-step instructions)
+
+## 💎 Credits
+
+This workspace framework was enhanced with inspiration from:
+
+- [bmadcode/cursor-auto-rules-agile-workflow](https://github.com/bmadcode/cursor-auto-rules-agile-workflow) - Special thanks for the excellent markdown guide and comprehensive automatic rules creation documentation.
+
+## 🤝 Contributing
+
+When contributing to this workspace framework, please follow these guidelines to ensure consistency and usability for all:
+
+1. **Adhere to naming conventions** - Follow the patterns outlined in the "Optional Naming Conventions" section to maintain consistency.
+
+2. **Ensure general usability** - Contributions should be usable by other developers without requiring knowledge of your personal projects or context. Create files and structures that are self-explanatory and broadly applicable.
+
+3. **Specify domain context** - When creating content related to specific domains, professions, or tools:
+   - Include the context in the filename (e.g., `template-for-marketing-campaign.md`, `system-for-content-calendar.md`, `rubrik-for-design-review.md`)
+   - For technical content, specify the technology (e.g., `template-for-python-projects.md`, `system-for-react-components.md`)
+
+4. **Role specificity** - When creating new roles, be specific about their domain expertise when a role already exists, otherwise be general:
+   - Technical roles: `python-developer`, `react-frontend-developer`, `data-scientist`
+   - Non-technical roles: `content-marketer`, `product-manager`, `ux-researcher`, `social-media-strategist`
+
+Contributions that follow these guidelines help maintain the workspace as a valuable resource for everyone, regardless of their specific profession, projects, or technical background.
