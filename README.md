@@ -6,35 +6,6 @@ Welcome to the Ultra Wide Turbo Workspace - a comprehensive framework that trans
 
 By structuring your work through these roles, you gain clarity on where to store information, how to approach problems from different perspectives, and how to efficiently manage complex projects. Each role acts as a dedicated team member in your business or life, ready to execute tasks based on their specific capabilities.
 
-## 📑 Table of Contents
-
-- [👥 Roles](#-roles)
-  - [📁 Document and Folder Structure by Role](#-document-and-folder-structure-by-role)
-    - [🎨 Artifacts](#-artifacts)
-    - [🖼️ Assets](#️-assets)
-    - [📝 Backlog](#-backlog)
-    - [🔑 Credentials](#-credentials-fill-at-own-risk)
-    - [📚 Docs](#-docs)
-    - [🖋️ Drafts](#️-drafts)
-    - [📥 Inbox](#-inbox)
-    - [📘 Instructions](#-instructions)
-    - [📂 Projects](#-projects)
-    - [💬 Prompts](#-prompts)
-      - [🤖 System Prompts](#-system-prompts)
-      - [🎯 Activity Prompts](#-activity-prompts)
-    - [✅ Rubrics](#-rubrics)
-    - [📜 Scripts](#-scripts)
-    - [⚙️ Systems](#️-systems)
-      - [🏃 Activities](#-activities)
-        - [🔍 Atomic Steps](#-atomic-steps)
-    - [✓ Tasks](#-tasks)
-    - [📋 Templates](#-templates)
-    - [🛠️ Tools](#️-tools)
-    - [📚 Wiki](#-wiki)
-- [📝 Naming Conventions](#-naming-conventions)
-- [💎 Credits](#-credits)
-- [🤝 Contributing](#-contributing)
-
 ## 👥 Roles
 
 A role represents a specialized team member in your virtual organization. Each role has its own expertise, responsibilities, and dedicated workspace structure.
@@ -48,7 +19,7 @@ Examples:
 - Project Manager
 - Data Analyst
 
-### 📁 Document and Folder Structure by Role
+### 📁 Folder Structure
 
 Each role in the workspace has access to a standardized set of folders and document types to organize their work effectively:
 
