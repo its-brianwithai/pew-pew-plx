@@ -387,18 +387,12 @@ This workspace framework was enhanced with inspiration from:
 
 ## 🤝 Contributing
 
-When contributing to this workspace framework, please follow these guidelines to ensure consistency and usability for all:
+For detailed information on how to contribute to this project, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-1. **Adhere to naming conventions** - Follow the patterns outlined in the "Optional Naming Conventions" section to maintain consistency.
+When using this template for your own projects:
 
-2. **Ensure general usability** - Contributions should be usable by other developers without requiring knowledge of your personal projects or context. Create files and structures that are self-explanatory and broadly applicable.
+1. The `.gitignore` is configured to ignore all files by default and only track the template structure
+2. This means you can freely add your implementation files without worrying about them being committed
+3. Your personal data, projects, and implementation details will remain private
 
-3. **Specify domain context** - When creating content related to specific domains, professions, or tools:
-   - Include the context in the filename (e.g., `template-for-marketing-campaign.md`, `system-for-content-calendar.md`, `rubrik-for-design-review.md`)
-   - For technical content, specify the technology (e.g., `template-for-python-projects.md`, `system-for-react-components.md`)
-
-4. **Role specificity** - When creating new roles, be specific about their domain expertise when a role already exists, otherwise be general:
-   - Technical roles: `python-developer`, `react-frontend-developer`, `data-scientist`
-   - Non-technical roles: `content-marketer`, `product-manager`, `ux-researcher`, `social-media-strategist`
-
-Contributions that follow these guidelines help maintain the workspace as a valuable resource for everyone, regardless of their specific profession, projects, or technical background.
+This approach ensures that the template remains clean and focused on structure, while allowing you to use it for any purpose without accidentally exposing your work.
