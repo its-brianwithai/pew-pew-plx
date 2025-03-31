@@ -368,7 +368,11 @@ npm start
       "command": "node",
       "args": [
         "/absolute/path/to/your/role/tools/your-role-mcp/dist/index.js"
-      ]
+      ],
+      "env": {
+        "API_URL": "https://api.example.com",
+        "API_KEY": "your-api-key"
+      }
     }
   }
 }
@@ -445,7 +449,7 @@ When creating tools that interface with external services like the Ghost Admin A
 
 ### Example: Ghost API Integration
 
-Here's an example of how we implemented the Ghost API integration:
+Here's an example of how we implemented the complete Ghost API integration with support for all CRUD operations:
 
 ```typescript
 // services/GhostService.ts
@@ -483,21 +487,12 @@ export class GhostService {
     this.keySecret = secret;
   }
 
-  async createDraftPost(postParams: GhostPostParams) {
+  // GET - Retrieve resources
+  async getResource(endpoint: string) {
     try {
-      // Ensure post is a draft
-      const postData = {
-        ...postParams,
-        status: 'draft'
-      };
-
-      // Generate JWT token for authentication
       const token = this.generateToken();
-
-      // Make API request
-      const response = await axios.post(`${this.adminApiUrl}/posts/`, {
-        posts: [postData]
-      }, {
+      
+      const response = await axios.get(`${this.adminApiUrl}/${endpoint}`, {
         headers: {
           'Authorization': `Ghost ${token}`,
           'Content-Type': 'application/json',
@@ -514,6 +509,72 @@ export class GhostService {
     }
   }
 
+  // POST - Create a new resource
+  async createResource(endpoint: string, data: any) {
+    try {
+      const token = this.generateToken();
+
+      const response = await axios.post(`${this.adminApiUrl}/${endpoint}`, data, {
+        headers: {
+          'Authorization': `Ghost ${token}`,
+          'Content-Type': 'application/json',
+          'Accept-Version': 'v5.0'
+        }
+      });
+
+      return response.data;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(`Ghost API error: ${error.message} - ${JSON.stringify(error.response?.data || {})}`);
+      }
+      throw error;
+    }
+  }
+
+  // PUT - Update an existing resource
+  async updateResource(endpoint: string, data: any) {
+    try {
+      const token = this.generateToken();
+
+      const response = await axios.put(`${this.adminApiUrl}/${endpoint}`, data, {
+        headers: {
+          'Authorization': `Ghost ${token}`,
+          'Content-Type': 'application/json',
+          'Accept-Version': 'v5.0'
+        }
+      });
+
+      return response.data;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(`Ghost API error: ${error.message} - ${JSON.stringify(error.response?.data || {})}`);
+      }
+      throw error;
+    }
+  }
+
+  // DELETE - Remove a resource
+  async deleteResource(endpoint: string) {
+    try {
+      const token = this.generateToken();
+
+      const response = await axios.delete(`${this.adminApiUrl}/${endpoint}`, {
+        headers: {
+          'Authorization': `Ghost ${token}`,
+          'Content-Type': 'application/json',
+          'Accept-Version': 'v5.0'
+        }
+      });
+
+      return { success: true, data: response.data };
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(`Ghost API error: ${error.message} - ${JSON.stringify(error.response?.data || {})}`);
+      }
+      throw error;
+    }
+  }
+
   private generateToken() {
     // Create proper JWT token with header that includes kid
     // ... JWT token generation code
@@ -522,17 +583,88 @@ export class GhostService {
 ```
 
 ```typescript
-// Using the service in a tool
+// Implementation of the four Ghost API tools
+// GET 
 server.tool(
-  'create_post',
+  'ghost_get',
   { 
-    title: z.string(),
-    mobiledoc: z.string()
+    endpoint: z.string().describe('The Ghost API endpoint path (e.g., "posts", "posts/123", "tags")')
   },
-  async ({ title, mobiledoc }) => {
+  async ({ endpoint }) => {
     try {
       const ghostService = new GhostService();
-      const result = await ghostService.createDraftPost({ title, mobiledoc });
+      const result = await ghostService.getResource(endpoint);
+      
+      return {
+        content: [{ type: 'text', text: JSON.stringify(result) }]
+      };
+    } catch (error) {
+      return {
+        isError: true,
+        content: [{ type: 'text', text: `Error: ${(error as Error).message}` }]
+      };
+    }
+  }
+);
+
+// POST
+server.tool(
+  'ghost_post',
+  { 
+    endpoint: z.string().describe('The Ghost API endpoint path (e.g., "posts", "tags")'),
+    data: z.record(z.any()).describe('The data to send in the POST request')
+  },
+  async ({ endpoint, data }) => {
+    try {
+      const ghostService = new GhostService();
+      const result = await ghostService.createResource(endpoint, data);
+      
+      return {
+        content: [{ type: 'text', text: JSON.stringify(result) }]
+      };
+    } catch (error) {
+      return {
+        isError: true,
+        content: [{ type: 'text', text: `Error: ${(error as Error).message}` }]
+      };
+    }
+  }
+);
+
+// PUT
+server.tool(
+  'ghost_put',
+  { 
+    endpoint: z.string().describe('The Ghost API endpoint path (e.g., "posts/123", "tags/456")'),
+    data: z.record(z.any()).describe('The data to send in the PUT request')
+  },
+  async ({ endpoint, data }) => {
+    try {
+      const ghostService = new GhostService();
+      const result = await ghostService.updateResource(endpoint, data);
+      
+      return {
+        content: [{ type: 'text', text: JSON.stringify(result) }]
+      };
+    } catch (error) {
+      return {
+        isError: true,
+        content: [{ type: 'text', text: `Error: ${(error as Error).message}` }]
+      };
+    }
+  }
+);
+
+// DELETE
+server.tool(
+  'ghost_delete',
+  { 
+    endpoint: z.string().describe('The Ghost API endpoint path (e.g., "posts/123", "tags/456")')
+  },
+  async ({ endpoint }) => {
+    try {
+      const ghostService = new GhostService();
+      const result = await ghostService.deleteResource(endpoint);
       
       return {
         content: [{ type: 'text', text: JSON.stringify(result) }]
@@ -567,4 +699,4 @@ In your documentation, explain how to configure the required environment variabl
     }
   }
 }
-``` 
+```

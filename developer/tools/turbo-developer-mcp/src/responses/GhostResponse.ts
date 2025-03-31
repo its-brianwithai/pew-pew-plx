@@ -1,14 +1,8 @@
-export interface GhostDraftResponse {
+export interface GhostApiResponse {
   success: boolean;
-  post?: {
-    id: string;
-    uuid: string;
-    title: string;
-    slug: string;
-    status: string;
-    url?: string;
-  };
+  data?: any;
   error?: string;
+  details?: string;
 }
 
 export interface GhostErrorResponse {

@@ -12,7 +12,11 @@ By structuring your work through roles, you gain clarity on where to store infor
 - **New Templates**: Added specialized templates for different ticket types (bug, task, story, systems)
 - **Marketeer Role**: Enhanced with wiki resources for blog sites, community channels, forums, and social media
 - **Resources Folder**: Added a dedicated resources folder to the standard structure for all roles
-- **Ghost Blog Integration**: Added capability to create draft posts directly on the Ghost blog using the MCP tool with mobiledoc markdown cards
+- **Ghost Blog Integration**: Added complete Ghost Blog API integration with the MCP tool supporting:
+  - Retrieving posts and content (GET)
+  - Creating draft posts with markdown support (POST)
+  - Updating existing posts (PUT)
+  - Deleting posts (DELETE)
 
 ### 🛠️ Improvements:
 - Updated folder structure to improve organization and clarity

@@ -9,6 +9,9 @@ This MCP server implements the [Model Context Protocol](https://modelcontextprot
 ## Version
 
 Current version: 0.0.2 (April 15, 2025)
+- Fixed JSON parsing issues by removing console.log statements
+- Completed implementation of all four Ghost API endpoints (GET, POST, PUT, DELETE)
+- Improved error handling for the PUT endpoint to handle missing updated_at field
 
 ## Installation
 
@@ -108,88 +111,192 @@ Returns the contents of the project README.md file as JSON with metadata.
   }
   ```
 
-### create_ghost_draft_for_uwtd
+### ghost_get
 
-Creates a draft post on the Ultra Wide Turbo Devs Ghost blog. This tool is optimized to work with the mobiledoc format using markdown cards for reliable content display.
+Makes a GET request to the Ghost Admin API with automatic authentication.
 
-- **Tool Name**: `create_ghost_draft_for_uwtd`
-- **Description**: Creates a draft post on the Ultra Wide Turbo Devs Ghost blog
+- **Tool Name**: `ghost_get`
+- **Description**: Makes a GET request to the Ghost Admin API with automatic authentication
 - **Parameters**:
-  - `title` (string, optional): The title of the post
-  - `mobiledoc` (string, optional): The content in mobiledoc format with markdown card (Ghost's preferred format)
-  - `feature_image` (string, optional): URL of the feature image
-  - `featured` (boolean, optional): Whether this post is featured
-  - `tags` (array, optional): Tags for the post
-  - `authors` (array, optional): Authors of the post
-  - `visibility` (enum, optional): Visibility of the post ('public', 'members', 'paid', 'tiers')
-  - And many other SEO and formatting options (see code for full list)
-
-- **Important Note**: The only supported content format is mobiledoc with markdown card. HTML content is not supported as it can lead to display issues.
-
+  - `endpoint` (string, required): The Ghost API endpoint path (e.g., "posts", "posts/123", "tags")
 - **Example Usage**:
   ```typescript
-  // Call the create_ghost_draft_for_uwtd tool with mobiledoc
+  // Get all posts
   const result = await mcpClient.callTool({
-    name: 'create_ghost_draft_for_uwtd',
+    name: 'ghost_get',
     arguments: {
-      title: 'My Test Post',
-      mobiledoc: JSON.stringify({
-        "version": "0.3.1",
-        "ghostVersion": "4.0",
-        "markups": [],
-        "atoms": [],
-        "cards": [
-          ["markdown", { 
-            "markdown": "## Test Header\n\nThis is a simple test with the markdown card which is well supported in Ghost.\n\n* Item 1\n* Item 2\n* Item 3\n\nThis should definitely show up."
-          }]
-        ],
-        "sections": [[10, 0]]
-      })
+      endpoint: 'posts'
+    }
+  });
+
+  // Get a specific post by ID
+  const result = await mcpClient.callTool({
+    name: 'ghost_get',
+    arguments: {
+      endpoint: 'posts/5f9c4d732be87a0001c2a123'
     }
   });
   ```
-- **Using Mobiledoc Format**:
-  Ghost's preferred content format is mobiledoc with the markdown card, which is the most reliable way to ensure content shows up correctly. Always use the format shown in the example above with these key elements:
-  - Include `"ghostVersion": "4.0"` in your mobiledoc
-  - Use the `["markdown", { "markdown": "..." }]` card 
-  - Write your content in markdown format inside the card
-  - Ensure the sections array points to your card with `[[10, 0]]`
-  - Support for standard markdown formatting includes:
-    - Headers (`#`, `##`, `###`, etc.)
-    - Lists (bulleted and numbered)
-    - Links `[text](url)`
-    - Emphasis (`*italic*`, `**bold**`)
-    - Code blocks (```code```)
-    - Blockquotes (`>`)
-
 - **Response Format**:
   ```json
   {
     "success": true,
-    "post": {
-      "id": "6425dc63a5e3824ac6199376",
-      "uuid": "8b4de54c-fd5e-4bc6-af89-3326d9754490",
-      "title": "My Test Post",
-      "slug": "my-test-post",
-      "status": "draft",
-      "url": "https://www.ultrawideturbodevs.com/p/8b4de54c-fd5e-4bc6-af89-3326d9754490/"
+    "data": {
+      "posts": [
+        {
+          "id": "5ddc9141c35e7700383b2937",
+          "uuid": "a5aa9bd8-ea31-415c-b452-3040dae1e730",
+          "title": "Welcome",
+          "slug": "welcome-short",
+          "status": "published",
+          // ...other post data
+        }
+      ]
     }
   }
   ```
-- **Error Response**:
+
+### ghost_post
+
+Makes a POST request to the Ghost Admin API with automatic authentication.
+
+- **Tool Name**: `ghost_post`
+- **Description**: Creates content via the Ghost API
+- **Parameters**:
+  - `endpoint` (string, required): The Ghost API endpoint path (e.g., "posts", "tags")
+  - `data` (object, required): The data to send in the POST request
+- **Example Usage**:
+  ```typescript
+  // Create a new post
+  const result = await mcpClient.callTool({
+    name: 'ghost_post',
+    arguments: {
+      endpoint: 'posts',
+      data: {
+        posts: [{
+          title: "My test post",
+          lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Hello, beautiful world! 👋\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"root\",\"version\":1}}",
+          status: "published"
+        }]
+      }
+    }
+  });
+
+  // Create a new tag
+  const result = await mcpClient.callTool({
+    name: 'ghost_post',
+    arguments: {
+      endpoint: 'tags',
+      data: {
+        tags: [{
+          name: "Getting Started",
+          description: "Helpful resources for getting started"
+        }]
+      }
+    }
+  });
+  ```
+- **Response Format**:
   ```json
   {
-    "success": false,
-    "error": "Failed to create Ghost draft post",
-    "details": "[error message]"
+    "success": true,
+    "data": {
+      "posts": [
+        {
+          "id": "5ddc9141c35e7700383b2937",
+          "uuid": "a5aa9bd8-ea31-415c-b452-3040dae1e730",
+          "title": "My test post",
+          "slug": "my-test-post",
+          "status": "published",
+          // ...other post data
+        }
+      ]
+    }
   }
   ```
 
-- **Accessing Created Posts**: 
-  After creating a draft post, you can access it in the Ghost admin panel or directly through the URL returned in the response. The post will be in draft status and ready for review.
+### ghost_put
 
-- **Authentication**: 
-  This tool requires Ghost Admin API credentials to be set in your `~/.cursor/mcp.json` file as described in the Environment Variables section.
+Makes a PUT request to the Ghost Admin API with automatic authentication.
+
+- **Tool Name**: `ghost_put`
+- **Description**: Updates content via the Ghost API
+- **Parameters**:
+  - `endpoint` (string, required): The Ghost API endpoint path (e.g., "posts/123", "tags/456")
+  - `data` (object, required): The data to send in the PUT request
+- **Example Usage**:
+  ```typescript
+  // Update a post
+  const result = await mcpClient.callTool({
+    name: 'ghost_put',
+    arguments: {
+      endpoint: 'posts/5b7ada404f87d200b5b1f9c8',
+      data: {
+        posts: [{
+          title: "My updated title",
+          updated_at: "2022-06-05T20:52:37.000Z"
+        }]
+      }
+    }
+  });
+  
+  // Publish a draft post
+  const result = await mcpClient.callTool({
+    name: 'ghost_put',
+    arguments: {
+      endpoint: 'posts/5b7ada404f87d200b5b1f9c8',
+      data: {
+        posts: [{
+          updated_at: "2022-06-05T20:52:37.000Z",
+          status: "published"
+        }]
+      }
+    }
+  });
+  ```
+- **Response Format**:
+  ```json
+  {
+    "success": true,
+    "data": {
+      "posts": [
+        {
+          "id": "5b7ada404f87d200b5b1f9c8",
+          "title": "My updated title",
+          // ...other post data
+        }
+      ]
+    }
+  }
+  ```
+
+### ghost_delete
+
+Makes a DELETE request to the Ghost Admin API with automatic authentication.
+
+- **Tool Name**: `ghost_delete`
+- **Description**: Deletes content via the Ghost API
+- **Parameters**:
+  - `endpoint` (string, required): The Ghost API endpoint path (e.g., "posts/123", "tags/456")
+- **Example Usage**:
+  ```typescript
+  // Delete a post
+  const result = await mcpClient.callTool({
+    name: 'ghost_delete',
+    arguments: {
+      endpoint: 'posts/5b7ada404f87d200b5b1f9c8'
+    }
+  });
+  ```
+- **Response Format**:
+  ```json
+  {
+    "success": true,
+    "data": null
+  }
+  ```
+  
+  Note: Successful deletes return an empty 204 response from the Ghost API.
 
 ## Environment Variables
 

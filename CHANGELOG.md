@@ -12,7 +12,11 @@
   - Forums (general and Reddit)
   - Social media accounts
 - **Resources Folder**: Added a dedicated resources folder to the standard structure for all roles
-- **Ghost Blog Integration**: Added the ability to create draft posts on the Ultra Wide Turbo Devs Ghost blog directly from the MCP tool using mobiledoc format with markdown support
+- **Ghost Blog Integration**: Added complete Ghost Blog API integration with the MCP tool supporting:
+  - Retrieving posts and content (GET)
+  - Creating draft posts with markdown support (POST)
+  - Updating existing posts (PUT)
+  - Deleting posts (DELETE)
 
 ### 🛠️ Improvements:
 - Renamed `template-for-plan.md` to `template-for-project-plans.md` for clarity
@@ -25,6 +29,7 @@
 ### 🐛 Bug fixes:
 - Fixed issue with Ghost Admin API authentication by properly handling the API key format
 - Fixed content display issues in Ghost posts by using the markdown card instead of HTML content
+- Fixed JSON parsing issues in the MCP server by removing console.log statements that interfered with the output
 
 ## 0.0.1 (March 31, 2025)
 
