@@ -9,11 +9,17 @@ By structuring your work through roles, you gain clarity on where to store infor
 ### ✨ Features:
 - **Turbo Developer MCP Tool**: Added a custom Model Context Protocol (MCP) server that provides tools and services for integration with Cursor IDE. This tool allows seamless integration with AI assistants like Claude, providing standardized interfaces for development workflows.
 - **Developer Role**: Added the initial Developer role to the workspace, with a dedicated folder structure, prompts, instructions and documentation.
+- **New Templates**: Added specialized templates for different ticket types (bug, task, story, systems)
+- **Marketeer Role**: Enhanced with wiki resources for blog sites, community channels, forums, and social media
+- **Resources Folder**: Added a dedicated resources folder to the standard structure for all roles
 
 ### 🛠️ Improvements:
 - Updated folder structure to improve organization and clarity
 - Enhanced documentation and README files
 - Implemented standardized templates for various project documents
+- Updated roles in README with proper links to respective directories
+- Enhanced workspace operator script and prompts
+- Added cursor rules file for better IDE integration
 
 ### 💔 Breaking:
 - **Initial Workspace Refactor Release**: Released the first version of the new Ultra Wide Turbo Workspace (UWTW), featuring improved project structure, comprehensive roles documentation and development tools.
@@ -24,12 +30,12 @@ A role represents a specialized team member in your virtual organization. Each r
 
 Examples:
 
-- Developer
-- Designer
-- Marketer
-- Personal Assistant
-- Project Manager
-- Data Analyst
+- [Developer](developer/)
+- [Designer](designer/)
+- [Marketeer](marketeer/)
+- [Operator](operator/)
+- Project Manager *(coming soon, hiring process in progress)*
+- Data Analyst *(coming soon, hiring process in progress)*
 
 ### 📁 Folder Structure
 
@@ -47,6 +53,7 @@ role/
 ├── 📘 instructions/
 ├── 📂 projects/
 ├── 💬 prompts/
+├── 📦 resources/
 ├── ✅ rubrics/
 ├── 📜 scripts/
 ├── ⚙️ systems/
@@ -73,11 +80,12 @@ role/
 | **💬 Prompts**          | Role-specific instructions for AI models.                                                              | Provides guidance for AI interactions relevant to the role's responsibilities.                                      | System prompts define an AI role's expertise, responsibilities, and capabilities.<br>Activity prompts are direct requests for a role to fulfill specific tasks.                                                                                                                                                                            |
 | **🤖 System Prompts**   | A detailed description that establishes an AI role's expertise and responsibilities.                   | Creates a specialized AI team member with defined capabilities and domain knowledge.                                | - [`developer/prompts/you-are-a-plan-act-developer.md`](developer/prompts/you-are-a-plan-act-developer.md)<br>- [`developer/prompts/you-are-a-requirements-expert.md`](developer/prompts/you-are-a-requirements-expert.md)<br>- [`operator/prompts/you-are-the-workspace-operator.md`](operator/prompts/you-are-the-workspace-operator.md) |
 | **🎯 Activity Prompts** | A direct request with specific instructions for an AI role to fulfill.                                 | Provides detailed guidance on exactly what the AI role should deliver.                                              | - [`plx-develop.md`](developer/prompts/plx-develop.md)<br>- [`plx-create-requirements.md`](developer/prompts/plx-create-requirements.md)<br>- [`plx-fix-bug.md`](developer/prompts/plx-fix-bug.md)                                                                                                                                         |
+| **📦 Resources**        | Reusable assets and materials that support role-specific activities.                                   | Provides centralized storage for reference materials and shared resources that support the role's work.             | - Reference documents<br>- Datasets<br>- Sample files<br>- External libraries<br>- Shared utilities<br>- Research papers                                                                                                                                                                                                                   |
 | **✅ Rubrics**           | Evaluation criteria, standards, and assessment frameworks for measuring quality and completeness.      | Provides consistent benchmarks for evaluating work and ensuring quality standards are met.                          | - [`developer/rubrics/rubrik-for-mvvm-projects.md`](developer/rubrics/rubrik-for-mvvm-projects.md)<br>- Code review checklists<br>- Design evaluation criteria<br>- Quality assurance standards                                                                                                         |
 | **📜 Scripts**          | Automated procedures, code snippets, and executable routines that perform specific tasks.              | Increases efficiency by automating repetitive processes and standardizing common operations.                        | - [`generate_raycast_snippets.py`](developer/scripts/generate_raycast_snippets.py)<br>- [`create-role.sh`](operator/scripts/create-role.sh)                                                                                                                                                                                                |
 | **⚙️ Systems**          | Reusable workflows and processes within a role's domain.                                               | Provides standardized approaches to common tasks.                                                                   | - Role-specific workflows<br>- Standard operating procedures<br>- Process templates<br>- System for creating social media posts<br>- System for refining todo items<br>- System for publishing release notes                                                                                                                               |
 | **✓ Tasks**             | Active tasks that require immediate attention and ongoing work.                                        | Tracks current priorities and work in progress to ensure timely completion.                                         | - Tasks in progress<br>- Items due this week<br>- Blocked work awaiting dependencies<br>- High-priority action items                                                                                                                                                                                                                       |
-| **📋 Templates**        | Standardized formats for consistent outputs specific to the role.                                      | Ensures consistency in the role's deliverables.                                                                     | - [`developer/templates/template-for-research-results.md`](developer/templates/template-for-research-results.md)<br>- [`developer/templates/template-for-test-results.md`](developer/templates/template-for-test-results.md)<br>- [`developer/templates/template-for-plan.md`](developer/templates/template-for-plan.md)                                                                                                                                                                                                           |
+| **📋 Templates**        | Standardized formats for consistent outputs specific to the role.                                      | Ensures consistency in the role's deliverables.                                                                     | - [`developer/templates/template-for-research-results.md`](developer/templates/template-for-research-results.md)<br>- [`developer/templates/template-for-test-results.md`](developer/templates/template-for-test-results.md)<br>- [`developer/templates/template-for-project-plans.md`](developer/templates/template-for-project-plans.md)                                                                                                                                                                                                           |
 | **🛠️ Tools**           | Role-specific utilities and resources.                                                                 | Provides specialized capabilities for the role's tasks.                                                             | - [`developer/tools/turbo-developer-mcp`](developer/tools/turbo-developer-mcp/)<br>- Specialized software tools<br>- Role-specific utilities<br>- Productivity enhancers                                                                                                                                                                      |
 | **📚 Wiki**             | Knowledge base with interconnected information relevant to the role.                                   | Serves as a reference repository for domain knowledge.                                                              | - Role-specific reference materials<br>- Domain knowledge collections<br>- Interconnected information resources                                                                                                                                                                                                                            |
 

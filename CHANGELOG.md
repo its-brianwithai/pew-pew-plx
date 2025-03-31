@@ -1,3 +1,24 @@
+## 0.0.2 (April 15, 2025)
+
+### ✨ Features:
+- **New Templates**: Added specialized templates for different ticket types:
+  - Bug tickets template
+  - Task tickets template 
+  - Story tickets template
+  - Systems template
+- **Marketeer Role**: Enhanced the Marketeer role with wiki resources:
+  - Blog sites documentation
+  - Community channels (Discord and Slack)
+  - Forums (general and Reddit)
+  - Social media accounts
+- **Resources Folder**: Added a dedicated resources folder to the standard structure for all roles
+
+### 🛠️ Improvements:
+- Renamed `template-for-plan.md` to `template-for-project-plans.md` for clarity
+- Updated roles in README with proper links to respective directories
+- Enhanced workspace operator script and prompts
+- Added cursor rules file for better IDE integration
+
 ## 0.0.1 (March 31, 2025)
 
 ### ✨ Features:
