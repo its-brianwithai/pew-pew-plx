@@ -6,6 +6,20 @@ Welcome to the Ultra Wide Turbo Workspace - a comprehensive framework that trans
 
 By structuring your work through these roles, you gain clarity on where to store information, how to approach problems from different perspectives, and how to efficiently manage complex projects. Each role acts as a dedicated team member in your business or life, ready to execute tasks based on their specific capabilities.
 
+## Last Update (March 31, 2025)
+
+### ✨ Features:
+- **Turbo Developer MCP Tool**: Added a custom Model Context Protocol (MCP) server that provides tools and services for integration with Cursor IDE. This tool allows seamless integration with AI assistants like Claude, providing standardized interfaces for development workflows.
+- **Developer Role**: Added the initial Developer role to the workspace, with a dedicated folder structure, prompts, instructions and documentation.
+
+### 🛠️ Improvements:
+- Updated folder structure to improve organization and clarity
+- Enhanced documentation and README files
+- Implemented standardized templates for various project documents
+
+### 💔 Breaking:
+- **Initial Workspace Refactor Release**: Released the first version of the new Ultra Wide Turbo Workspace (UWTW), featuring improved project structure, comprehensive roles documentation and development tools.
+
 ## 👥 Roles
 
 A role represents a specialized team member in your virtual organization. Each role has its own expertise, responsibilities, and dedicated workspace structure.

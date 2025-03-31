@@ -9,7 +9,41 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# IDE files
 .vscode
 .idea
+*.iml
+*.iws
+
+# Environment variables
 .env
 .env.*
+.env.local
+.env.*.local
+
+# Build output
+**/dist/
+**/build/
+**/*.tsbuildinfo
+
+# Node.js
+**/node_modules/
+**/package-lock.json
+**/.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+**/.eslintcache
+
+# Logs
+**/logs/
+**/*.log
+
+# Testing
+**/coverage/
+
+# Temporary files
+**/*.swp
+**/*.swo
+**/*~
