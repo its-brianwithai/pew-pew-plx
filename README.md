@@ -12,6 +12,7 @@ By structuring your work through roles, you gain clarity on where to store infor
 - **New Templates**: Added specialized templates for different ticket types (bug, task, story, systems)
 - **Marketeer Role**: Enhanced with wiki resources for blog sites, community channels, forums, and social media
 - **Resources Folder**: Added a dedicated resources folder to the standard structure for all roles
+- **Ghost Blog Integration**: Added capability to create draft posts directly on the Ghost blog using the MCP tool with mobiledoc markdown cards
 
 ### 🛠️ Improvements:
 - Updated folder structure to improve organization and clarity
@@ -20,6 +21,7 @@ By structuring your work through roles, you gain clarity on where to store infor
 - Updated roles in README with proper links to respective directories
 - Enhanced workspace operator script and prompts
 - Added cursor rules file for better IDE integration
+- Improved Ghost API integration with better token handling and content formatting
 
 ### 💔 Breaking:
 - **Initial Workspace Refactor Release**: Released the first version of the new Ultra Wide Turbo Workspace (UWTW), featuring improved project structure, comprehensive roles documentation and development tools.

@@ -12,12 +12,19 @@
   - Forums (general and Reddit)
   - Social media accounts
 - **Resources Folder**: Added a dedicated resources folder to the standard structure for all roles
+- **Ghost Blog Integration**: Added the ability to create draft posts on the Ultra Wide Turbo Devs Ghost blog directly from the MCP tool using mobiledoc format with markdown support
 
 ### 🛠️ Improvements:
 - Renamed `template-for-plan.md` to `template-for-project-plans.md` for clarity
 - Updated roles in README with proper links to respective directories
 - Enhanced workspace operator script and prompts
 - Added cursor rules file for better IDE integration
+- Fixed JWT token generation for Ghost Admin API to properly include the key ID in the header
+- Improved documentation for the Ghost blog integration with clear examples using the markdown card in mobiledoc format
+
+### 🐛 Bug fixes:
+- Fixed issue with Ghost Admin API authentication by properly handling the API key format
+- Fixed content display issues in Ghost posts by using the markdown card instead of HTML content
 
 ## 0.0.1 (March 31, 2025)
 

@@ -426,3 +426,145 @@ Remember to align your tools with your role's responsibilities and the Ultra Wid
    - Use absolute paths in mcp.json
    - Verify file permissions
    - Check working directory 
+
+## Integrating with External APIs
+
+When creating tools that interface with external services like the Ghost Admin API, follow these guidelines:
+
+- [ ] Handle API Authentication properly:
+   - Store credentials in the `env` section of `~/.cursor/mcp.json`, not in your code
+   - Use secure methods for authentication (e.g., JWT tokens)
+   - Include proper error handling for authentication failures
+
+- [ ] Follow these steps for secure API integration:
+   1. Create a dedicated service file for the API (e.g., `services/GhostService.ts`)
+   2. Handle authentication and token generation in the service
+   3. Implement proper error handling with meaningful messages
+   4. Document required environment variables
+   5. Provide examples of configuration in your README
+
+### Example: Ghost API Integration
+
+Here's an example of how we implemented the Ghost API integration:
+
+```typescript
+// services/GhostService.ts
+import axios from 'axios';
+import crypto from 'crypto';
+
+export interface GhostPostParams {
+  title?: string;
+  mobiledoc?: string;
+  // ... other parameters
+}
+
+export class GhostService {
+  private readonly adminApiUrl: string;
+  private readonly adminApiKey: string;
+  private readonly keyId: string;
+  private readonly keySecret: string;
+
+  constructor() {
+    this.adminApiUrl = process.env.GHOST_ADMIN_API_URL || '';
+    this.adminApiKey = process.env.GHOST_ADMIN_API_KEY || '';
+    
+    if (!this.adminApiKey) {
+      throw new Error('Ghost Admin API Key is required');
+    }
+
+    // Split the key into ID and SECRET
+    const [id, secret] = this.adminApiKey.split(':');
+    
+    if (!id || !secret) {
+      throw new Error('Invalid Admin API Key format. Expected format: "id:secret"');
+    }
+
+    this.keyId = id;
+    this.keySecret = secret;
+  }
+
+  async createDraftPost(postParams: GhostPostParams) {
+    try {
+      // Ensure post is a draft
+      const postData = {
+        ...postParams,
+        status: 'draft'
+      };
+
+      // Generate JWT token for authentication
+      const token = this.generateToken();
+
+      // Make API request
+      const response = await axios.post(`${this.adminApiUrl}/posts/`, {
+        posts: [postData]
+      }, {
+        headers: {
+          'Authorization': `Ghost ${token}`,
+          'Content-Type': 'application/json',
+          'Accept-Version': 'v5.0'
+        }
+      });
+
+      return response.data;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        throw new Error(`Ghost API error: ${error.message} - ${JSON.stringify(error.response?.data || {})}`);
+      }
+      throw error;
+    }
+  }
+
+  private generateToken() {
+    // Create proper JWT token with header that includes kid
+    // ... JWT token generation code
+  }
+}
+```
+
+```typescript
+// Using the service in a tool
+server.tool(
+  'create_post',
+  { 
+    title: z.string(),
+    mobiledoc: z.string()
+  },
+  async ({ title, mobiledoc }) => {
+    try {
+      const ghostService = new GhostService();
+      const result = await ghostService.createDraftPost({ title, mobiledoc });
+      
+      return {
+        content: [{ type: 'text', text: JSON.stringify(result) }]
+      };
+    } catch (error) {
+      return {
+        isError: true,
+        content: [{ type: 'text', text: `Error: ${(error as Error).message}` }]
+      };
+    }
+  }
+);
+```
+
+### Configuring Credentials
+
+In your documentation, explain how to configure the required environment variables:
+
+```json
+// ~/.cursor/mcp.json
+{
+  "mcpServers": {
+    "your-role-mcp": {
+      "command": "node",
+      "args": [
+        "/path/to/your/mcp/dist/index.js"
+      ],
+      "env": {
+        "API_URL": "https://api.example.com",
+        "API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+``` 
