@@ -29,7 +29,7 @@ Thumbs.db
 
 # Node.js
 **/node_modules/
-**/package-lock.json
+**/package-lock.jsonk
 **/.npm
 npm-debug.log*
 yarn-debug.log*
