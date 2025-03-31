@@ -78,6 +78,8 @@ When contributing to this workspace framework, please follow these guidelines to
    - Technical roles: `python-developer`, `react-frontend-developer`, `data-scientist`
    - Non-technical roles: `content-marketer`, `product-manager`, `ux-researcher`, `social-media-strategist`
 
+5. **Update relevant documentation** - When adding new content or making changes, always update any relevant documentation like README, instructions, docs, prompts, systems, and templates if applicable.
+
 ## How to Contribute
 
 1. Fork the repository

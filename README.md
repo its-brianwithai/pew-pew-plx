@@ -55,6 +55,10 @@ role/
 ├── 🛠️ tools/
 └── 📔 wiki/
 ```
+
+#### Examples:
+💬 prompts: [All Developer Prompts](developer/wiki/all-developer-prompts.md)
+
 | Folder                  | Definition                                                                                             | Purpose                                                                                                             | Examples                                                                                                                                                                                                                                                                                                                                   |
 |-------------------------|--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **🎨 Artifacts**        | The tangible outputs and deliverables resulting from completed work.                                   | Preserves and organizes final products for reference, delivery, or implementation.                                  | - Completed designs<br>- Compiled reports<br>- Generated code<br>- Processed data<br>- Finalized documents                                                                                                                                                                                                                                 |
