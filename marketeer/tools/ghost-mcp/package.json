@@ -1,7 +1,7 @@
 {
-  "name": "turbo-developer-mcp",
+  "name": "ghost-mcp",
   "version": "0.0.1",
-  "description": "Custom MCP server for Cursor integration",
+  "description": "Ghost API integration MCP server for Cursor",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -12,12 +12,14 @@
   "keywords": [
     "mcp",
     "cursor",
+    "ghost",
     "ai"
   ],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.8.0",
+    "axios": "^1.6.7",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -25,4 +27,4 @@
     "tsx": "^4.7.1",
     "typescript": "^5.4.2"
   }
-} 
+}

@@ -18,9 +18,7 @@ Thumbs.db
 
 # Environment variables
 .env
-.env.*
 .env.local
-.env.*.local
 
 # Build output
 **/dist/
@@ -47,3 +45,14 @@ yarn-error.log*
 **/*.swp
 **/*.swo
 **/*~
+
+.pew
+.pew/config/secrets.yaml
+.pew/.logs/
+
+.idea
+.vscode
+
+# Designer assets
+designer/assets/uwtd/
+designer/assets/uwtd/**/*

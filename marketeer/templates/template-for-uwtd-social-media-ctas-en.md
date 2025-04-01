@@ -2,8 +2,8 @@
 My name == Brian. App developer, entrepenerd & undercover AI agent. Nowadays, I do somewhere between 70% to 90% of all my work with the help of AI. I have found that this is a lot lower for most people I talk too, which is why I created ultrawideturbodevs.com. Here I share everything I discover & use on a daily basis:
 
 - 💬 Prompts
-    - 🤖 System Prompts (You are a..)
-    - 🦾 Activity Prompts (Please do..)
+    - 🎩 System Prompts (You are a..)
+    - 🎯 Activity Prompts (Please do..)
 - 🔧 Tools
 - 🏗️ Systems
 - 📝 Templates
