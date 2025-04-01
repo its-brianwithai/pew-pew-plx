@@ -56,3 +56,6 @@ yarn-error.log*
 # Designer assets
 designer/assets/uwtd/
 designer/assets/uwtd/**/*
+
+# Ignore independently managed repositories
+marketeer/tools/typefully-mcp/
