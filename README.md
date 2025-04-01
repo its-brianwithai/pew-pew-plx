@@ -17,6 +17,10 @@ By structuring your work through roles, you gain clarity on where to store infor
   - Creating draft posts with markdown support (POST)
   - Updating existing posts (PUT)
   - Deleting posts (DELETE)
+- **Typefully Integration**: Added Typefully social media management integration with MCP tool supporting:
+  - Creating drafts with scheduling and threadify options
+  - Retrieving scheduled drafts
+  - Retrieving published drafts
 
 ### 🛠️ Improvements:
 - Updated folder structure to improve organization and clarity
@@ -26,6 +30,7 @@ By structuring your work through roles, you gain clarity on where to store infor
 - Enhanced workspace operator script and prompts
 - Added cursor rules file for better IDE integration
 - Improved Ghost API integration with better token handling and content formatting
+- Improved Typefully MCP server implementation by replacing Axios with native fetch API for better reliability
 
 ### 💔 Breaking:
 - **Initial Workspace Refactor Release**: Released the first version of the new Ultra Wide Turbo Workspace (UWTW), featuring improved project structure, comprehensive roles documentation and development tools.
@@ -312,6 +317,6 @@ My name == Brian. App developer, entrepenerd & undercover AI agent. Nowadays, I 
 - 💡 Hacks
 - 🧠 Tutorials
 
-My primary focus always lies on efficiency, quality and immediate practicality without unnecessary fuss 🗣️. Everything I share comes straight out of my personal toolbox and is 100% free. If you find it useful you can register an account on ultrawideturbodevs.com and you’ll be among the first to receive an email as soon I have a new 🧊 cool 🧊 thing to share.
+My primary focus always lies on efficiency, quality and immediate practicality without unnecessary fuss 🗣️. Everything I share comes straight out of my personal toolbox and is 100% free. If you find it useful you can register an account on ultrawideturbodevs.com and you'll be among the first to receive an email as soon I have a new 🧊 cool 🧊 thing to share.
 
 Stay turbo 🤙

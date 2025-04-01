@@ -1,4 +1,4 @@
-## 0.0.2 (April 15, 2025)
+## 0.0.2 (April 2, 2025)
 
 ### ✨ Features:
 - **New Templates**: Added specialized templates for different ticket types:
@@ -17,6 +17,10 @@
   - Creating draft posts with markdown support (POST)
   - Updating existing posts (PUT)
   - Deleting posts (DELETE)
+- **Typefully Integration**: Added Typefully social media management integration with MCP tool supporting:
+  - Creating drafts with scheduling and threadify options
+  - Retrieving scheduled drafts
+  - Retrieving published drafts
 
 ### 🛠️ Improvements:
 - Renamed `template-for-plan.md` to `template-for-project-plans.md` for clarity
@@ -30,6 +34,7 @@
 - Fixed issue with Ghost Admin API authentication by properly handling the API key format
 - Fixed content display issues in Ghost posts by using the markdown card instead of HTML content
 - Fixed JSON parsing issues in the MCP server by removing console.log statements that interfered with the output
+- Fixed 405 Method Not Allowed error in Typefully MCP by adding trailing slash to draft creation endpoint URL
 
 ## 0.0.1 (March 31, 2025)
 
