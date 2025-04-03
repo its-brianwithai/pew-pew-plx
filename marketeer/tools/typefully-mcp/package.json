@@ -1,9 +1,10 @@
 {
   "name": "typefully-mcp",
   "version": "1.0.0",
-  "description": "Typefully API integration MCP server for Cursor",
+  "description": "Typefully API integration for Cursor IDE using Model Context Protocol. Schedule, manage, and publish Twitter threads directly from your code editor.",
   "main": "dist/index.js",
   "type": "module",
+  "homepage": "https://ultrawideturbodevs.com",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
@@ -16,7 +17,7 @@
     "ai"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.8.0",
     "axios": "^1.8.4",
