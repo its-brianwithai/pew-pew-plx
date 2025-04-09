@@ -29,38 +29,43 @@ When contributing, please follow these conventions:
 
 ### Naming Patterns
 
+// TODO(AI-AGENT): scan the project for wrongly named files and present a list of rename suggestions, wait for feedack before implementation
 - **System Prompts**:
     - `you-are-an-{{IDENTITY}}.md`
+    - `you-are-a-{{IDENTITY}}.md`
 - **Activity Prompts**:
-    - `plx-{{VERB}}-{{RESULT_OR_CONCEPT}}.md`
+    - `plx-{{VERB}}-{{ACTION}}.md`
 - **Backlog**:
-    - `backlog-{{DESCRIPTION}}.md`
-    - `story-{{DESCRIPTION}}.md`
-    - `bug-{{DESCRIPTION}}.md`
 - **Tasks**:
-    - `todo-{{DESCRIPTION}}.md`
-    - `story-{{DESCRIPTION}}.md`
-    - `bug-{{DESCRIPTION}}.md`
-    - `task-{{DESCRIPTION}}.md`
 - **Inbox**:
-    - `inbox-{{DESCRIPTION}}.md`
+    - `{{VERB}}-{{ACTION}}.md`
+    - `{{VERB}}-{{ACTION}}.md`
 - **Rubrics**:
-    - `rubric-{{RESULT_OR_CONCEPT}}.md`
-    - `rubric-for-{{RESULT_OR_CONCEPT}}.md`
+    - `{{RESULT_OR_CONCEPT}}-rubric.md`
 - **Scripts**:
-    - `{{VERB}}-{{RESULT_OR_CONCEPT}}.*`
+    - `{{VERB}}-{{RESULT_OR_CONCEPT}}-script.*`
 - **Drafts**:
-    - `draft-{{DESCRIPTION}}.md`
+    - `{{DESCRIPTION}}-draft.md`
 - **Wiki objects**:
     - `all-{{COMPONENTS_OR_CONCEPTS}}.md`
     - `the-{{NOUN_OR_CONCEPT}}.md`
     - `a-{{NOUN_OR_CONCEPT}}.md`
     - `an-{{NOUN_OR_CONCEPT}}.md`
-    - `{{NAME}}.md`
+    - `{{NOUN_OR_CONCEPT}}.md`
 - **Docs**:
-    - `doc-{{SUBJECT}}.md` (reference documentation)
+    - `{{SUBJECT}}-docs.md` (reference documentation)
 - **Instructions**:
+- **Tutorials**:
     - `how-to-{{TASK}}.md` (step-by-step instructions)
+- **Templates**:
+    - `{{NOUN_OR_CONCEPT}}-template.md`
+- **Tools**:
+- **Systems**:
+- **Credentials**:
+- **Resources**:
+- **Projects**:
+- **Outputs**:
+- **Backlog**:
 
 ## Contribution Guidelines
 
@@ -68,7 +73,7 @@ When contributing to this workspace framework, please follow these guidelines to
 
 1. **Adhere to naming conventions** - Follow the patterns outlined above to maintain consistency.
 
-2. **Ensure general usability** - Contributions should be usable by other developers without requiring knowledge of your personal projects or context. Create files and structures that are self-explanatory and broadly applicable.
+2. **Use kebab-case and lowercase** - We write everything in kebab-case and lowercase because it saves time typing without using shift.
 
 3. **Specify domain context** - When creating content related to specific domains, professions, or tools:
    - Include the context in the filename (e.g., `template-for-marketing-campaign.md`, `system-for-content-calendar.md`, `rubric-for-design-review.md`)

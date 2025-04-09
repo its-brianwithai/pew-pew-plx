@@ -46,3 +46,5 @@ Where can I find the changes that you made? Please select all relevant options:
 
 Or other (please specify).
 </question>
+
+Use the right date, today is: {date}

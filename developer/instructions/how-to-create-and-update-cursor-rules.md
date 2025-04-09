@@ -62,7 +62,7 @@ Common glob patterns for different rule types:
 - React components: src/components/**/*.tsx
 - Documentation: docs/**/*.md
 - Configuration files: *.config.{js,json}
-- Build artifacts: dist/**/*
+- Build results: dist/**/*
 - Multiple extensions: src/**/*.{js,jsx,ts,tsx}
 - Multiple files: dist/**/*, docs/**/*.md
 

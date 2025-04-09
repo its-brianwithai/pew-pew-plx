@@ -64,7 +64,7 @@ npm install --save-dev typescript @types/node
 }
 ```
 
-- [ ] Create a `.gitignore` file to exclude build artifacts and dependencies:
+- [ ] Create a `.gitignore` file to exclude build results and dependencies:
 
 ```
 # Dependencies

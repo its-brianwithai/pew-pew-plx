@@ -1,3 +1,53 @@
+## 0.0.3 (April 9, 2025)
+
+### ✨ Features:
+- **New Developer Prompts**: Added several new developer prompts:
+  - Research-focused prompts (plx-do-proper-research, plx-research-best-practices)
+  - Project planning prompts (plx-create-a-proposal, plx-create-milestone-plan)
+  - Help and documentation prompts (plx-ask-help, plx-create-copy-prompt)
+  - Role-specific prompts (you-are-a-next-js-developer, you-are-a-milestone-expert, you-are-a-proposal-expert)
+- **New Documentation Resources**: Added comprehensive documentation in developer/docs:
+  - Effective Dart documentation
+  - Project management API docs
+  - Reorganized Typefully documentation
+- **New Developer Tutorials**: Added tutorials for:
+  - Launching and growing CLI tools
+  - Preparing open-source project launches
+  - Using markdown task management tools
+- **Extended Marketeer Resources**: Added extensive marketing channel resources:
+  - Developer channels documentation (community, carousel, long/short text, long/short video)
+  - New systems for content management (posting articles, repurposing content)
+- **Design Resources**: Added multiple design resources:
+  - App store screenshot examples
+  - Hero images for various sections
+  - Reference images for Ultra Wide Turbo Developer
+- **New Researcher Resources**: Added example resources for laptopkap
+
+### 🛠️ Improvements:
+- **File Structure Standardization**: Renamed many files to follow a consistent naming convention:
+  - Updated template files to use the pattern `[concept]-template.md`
+  - Updated rubric files to use the pattern `[concept]-rubric.md`
+  - Updated script files to use the pattern `[verb]-[concept]-script.[ext]`
+  - Updated documentation files to use the pattern `[concept]-docs.md`
+- **Documentation Enhancements**:
+  - Updated CONTRIBUTING.md with detailed guidelines for file naming and structure
+  - Updated README.md with additional information
+  - Improved developer wiki documentation
+  - Enhanced Cursor rules instructions
+- **Repository Organization**:
+  - Reorganized file structure across multiple directories
+  - Added script for removing example turbo files (remove-turbo-examples-script.sh)
+  - Updated .gitignore for better file management
+- **Workspace Operations**:
+  - Enhanced workspace operator prompt
+  - Renamed operator scripts for clarity
+
+### 🔄 Reorganization:
+- Moved and renamed multiple files to conform to the naming conventions in CONTRIBUTING.md
+- Restructured Typefully documentation
+- Relocated developer artifacts to outputs directory
+- Consolidated marketeer wiki resources into dedicated resource directories
+
 ## 0.0.2 (April 2, 2025)
 
 ### ✨ Features:

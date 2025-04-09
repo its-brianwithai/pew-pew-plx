@@ -1,7 +1,6 @@
 Please create the following tests:
 
 <tests>
-
 {{LIST_OF_TESTS}}
 
 Only create tests that confirm the core functionality of the feature. Do not create tests for edge cases, error flows or anything else that does not directly confirm just and only the core functionality.

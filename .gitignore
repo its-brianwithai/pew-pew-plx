@@ -53,9 +53,12 @@ yarn-error.log*
 .idea
 .vscode
 
-# Designer assets
-designer/assets/uwtd/
-designer/assets/uwtd/**/*
+.obsidian
 
-# Ignore independently managed repositories
-marketeer/tools/typefully-mcp/
+# Private files
+**/*.private.*
+**/*-private.*
+
+# Private folders
+**/*-private/
+**/*-private/**
