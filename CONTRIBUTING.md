@@ -29,16 +29,15 @@ When contributing, please follow these conventions:
 
 ### Naming Patterns
 
-// TODO(AI-AGENT): scan the project for wrongly named files and present a list of rename suggestions, wait for feedack before implementation
-- **System Prompts**:
     - `you-are-an-{{IDENTITY}}.md`
     - `you-are-a-{{IDENTITY}}.md`
 - **Activity Prompts**:
     - `plx-{{VERB}}-{{ACTION}}.md`
 - **Backlog**:
+    - `{{VERB}}-{{NOUN_OR_CONCEPT}}.md`
 - **Tasks**:
+    - `{{VERB}}-{{NOUN_OR_CONCEPT}}.md`
 - **Inbox**:
-    - `{{VERB}}-{{ACTION}}.md`
     - `{{VERB}}-{{ACTION}}.md`
 - **Rubrics**:
     - `{{RESULT_OR_CONCEPT}}-rubric.md`
@@ -55,17 +54,21 @@ When contributing, please follow these conventions:
 - **Docs**:
     - `{{SUBJECT}}-docs.md` (reference documentation)
 - **Instructions**:
+    - `how-to-{{TASK}}.md` (step-by-step instructions)
 - **Tutorials**:
     - `how-to-{{TASK}}.md` (step-by-step instructions)
 - **Templates**:
     - `{{NOUN_OR_CONCEPT}}-template.md`
 - **Tools**:
+    - `{{TOOL_NAME}}-tool.md`
 - **Systems**:
+    - `{{PROCESS_OR_WORKFLOW}}-system.md`
 - **Credentials**:
+    - `{{SERVICE}}-credentials.md`
 - **Resources**:
-- **Projects**:
+    - Various formats depending on resource type
 - **Outputs**:
-- **Backlog**:
+    - Various formats depending on output type
 
 ## Contribution Guidelines
 
@@ -76,8 +79,8 @@ When contributing to this workspace framework, please follow these guidelines to
 2. **Use kebab-case and lowercase** - We write everything in kebab-case and lowercase because it saves time typing without using shift.
 
 3. **Specify domain context** - When creating content related to specific domains, professions, or tools:
-   - Include the context in the filename (e.g., `template-for-marketing-campaign.md`, `system-for-content-calendar.md`, `rubric-for-design-review.md`)
-   - For technical content, specify the technology (e.g., `template-for-python-projects.md`, `system-for-react-components.md`)
+   - Include the context in the filename (e.g., `marketing-campaign-template.md`, `content-calendar-system.md`, `design-review-rubric.md`)
+   - For technical content, specify the technology (e.g., `python-projects-template.md`, `react-components-system.md`)
 
 4. **Role specificity** - When creating new roles, be specific about their domain expertise when a role already exists, otherwise be general:
    - Technical roles: `python-developer`, `react-frontend-developer`, `data-scientist`
