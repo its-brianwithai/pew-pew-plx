@@ -1,6 +1,18 @@
 ## 0.0.4 (April 14, 2025)
 
 ### ✨ Features:
+- **New Developer Prompts**: Added several new developer prompts:
+  - Prompt engineering prompts (plx-analyze-and-improve-our-prompt, plx-create-prompt)
+  - Gist creation prompt (plx-create-gist)
+  - Updated project management prompts (plx-create-plan, plx-develop-tasks)
+  - Documentation prompts (plx-update-changelog, plx-update-changelogs)
+  - Role-specific prompts (you-are-an-expert-prompt-engineer, you-are-a-requirements-expert-v2)
+- **New Developer Resources**: Added resources for prompt engineering:
+  - ChatGPT best practices for prompt engineering
+  - Comprehensive prompt engineering paper by Lee Boonstra
+- **New Developer Documentation**: Added documentation for various tools:
+  - Pew-pew CLI tool documentation
+  - Roomy documentation
 - **New Marketeer Prompts**: Added several new marketeer prompts:
   - Article creation prompts (plx-write-an-article, plx-submit-draft-article)
   - Role-specific prompts (you-are-an-article-writer)
