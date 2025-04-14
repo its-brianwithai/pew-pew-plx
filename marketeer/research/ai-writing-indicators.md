@@ -1,4 +1,4 @@
-Please avoid these AI writing indicators when writing articles, blog posts, and other social media content.
+Common AI writing indicators when writing articles, blog posts, and other social media content.
 
 ## Tone and Voice Indicators
 
