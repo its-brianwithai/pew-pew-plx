@@ -6,9 +6,7 @@ Begin by reviewing the request and deliverables:
 {{USER_REQUEST}}
 </user_request>
 
-- VERY IMPORTANT: If the full plan needs more than 5k in context output then split your output up in multiple answers with a token output of 5k max each. Where each part builds on the previous one. I will manually copy paste all the parts into a unified file. All I need from you is the output, divided in answers or max 5k tokens. Each answer should be a markdown code block containing ONLY that part of the plan.
-- Upon me saying 'next' you can output the next part of the plan.
-- Never type things like “or similar” or “something like that”. We need to ensure all our agents make the same decisions and build on the same thing after each other.
+- Never type things like “or similar” or “something like that”. Be decisive. We need to ensure all our agents make the same decisions and build on the same thing after each other.
 - Adhere to this workflow:
     - PLAN
         1. Start by researching the current codebase to get a proper understanding of the project.
@@ -26,3 +24,9 @@ So remember:
 - Output plan in markdown codeblock(s).
 - End your answer with a numbered list of of all parts of the plan. 
 - Adhere to your system instructions and response template.
+
+Important:
+
+After doing research, and before presenting your final plan in a markdown codeblock, present the user with the plan in the form of a numbered list of 1 sentence actions, that all start with a verb. This list should outline all the steps of the plan. Ask the user to double check the plan and provide feedback if necessary. Only WHEN and AFTER the user confirms the plan has all steps necessary, you can proceed with outputting the full plan in a markdown codeblock.
+
+Remember: DO NOT OUTPUT THE FULL PLAN UNTIL USER CONFIRMS THE PLAN.

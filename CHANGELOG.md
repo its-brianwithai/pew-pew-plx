@@ -1,3 +1,26 @@
+## 0.0.4 (April 14, 2025)
+
+### ✨ Features:
+- **New Marketeer Prompts**: Added several new marketeer prompts:
+  - Article creation prompts (plx-write-an-article, plx-submit-draft-article)
+  - Role-specific prompts (you-are-an-article-writer)
+- **New Marketeer Templates**: Added template for release posts (release-post-template.md)
+- **New Marketeer Research**: Added AI writing style guide to avoid AI writing indicators
+- **Enhanced Marketeer Outputs**: Added new article drafts:
+  - RepoPrompt article explaining contextual prompt creation
+  - Firebase Studio article for app development
+- **Workspace Operator Improvements**: Completely revised workspace operator prompt with clearer responsibilities and instructions
+
+### 🛠️ Improvements:
+- **Documentation Enhancements**:
+  - Better example thought process for the workspace operator
+  - Clearer instructions for task delegation
+  - Enhanced role definition for the workspace operator
+- **Workspace Coordination**:
+  - Improved action summary format for better user feedback
+  - Enhanced delegation mechanisms with clearer file naming conventions
+  - Better clarification steps for ambiguous requests
+
 ## 0.0.3 (April 9, 2025)
 
 ### ✨ Features:

@@ -27,25 +27,25 @@ Examples:
 
 Each role in the workspace has access to a standardized set of folders and document types to organize their work effectively. This is an example structure - as your work evolves, you'll likely add other folders to fit your specific needs. Feel free to explore the repository to see how we've extended this structure ourselves.
 
-| Folder | Purpose | Examples |
-|--------|---------|----------|
-| 🎨 outputs/ | Final deliverables and results | Compiled reports, generated code, finalized documents |
-| 📦 resources/ | Reference materials and assets | Images, fonts, datasets, reference files, sample files |
-| 📝 backlog/ | Pending tasks and future work | Feature requests, ideas for evaluation |
-| 🔑 credentials/ | Secure access information | API keys, service accounts, access permissions |
-| 📚 docs/ | Comprehensive documentation | Architecture docs, style guides, process documentation |
-| 🖋️ drafts/ | Work-in-progress content | Partial documents, initial designs, active work |
-| 📥 inbox/ | Staging area for new requests | Unprocessed tasks, items awaiting triage |
-| 📘 instructions/ | Step-by-step guides | How-to guides, tutorials, learning materials |
-| 💬 prompts/ | AI model instructions | System prompts, activity prompts |
-| 📝 refinements/ | Requirements and detailed plans | User stories, acceptance criteria, refined specifications |
-| ✅ rubrics/ | Evaluation criteria | Quality standards, assessment frameworks |
-| 📜 scripts/ | Automated procedures | Shell scripts, automation code |
-| ⚙️ systems/ | Reusable workflows | Standard procedures, process templates |
-| ✓ tasks/ | Active work items | In-progress tasks, current priorities |
-| 📋 templates/ | Standardized formats | Document templates, starter files |
-| 🛠️ tools/ | Role-specific utilities | Software tools, productivity enhancers |
-| 📚 wiki/ | Knowledge base | Reference materials, domain knowledge |
+| Folder           | Purpose                         | Examples                                                  |
+|------------------|---------------------------------|-----------------------------------------------------------|
+| 🎨 outputs/      | Final deliverables and results  | Compiled reports, generated code, finalized documents     |
+| 📦 resources/    | Reference materials and assets  | Images, fonts, datasets, reference files, sample files    |
+| 📝 backlog/      | Pending tasks and future work   | Feature requests, ideas for evaluation                    |
+| 🔑 credentials/  | Secure access information       | API keys, service accounts, access permissions            |
+| 📚 docs/         | Comprehensive documentation     | Architecture docs, style guides, process documentation    |
+| 🖋️ drafts/      | Work-in-progress content        | Partial documents, initial designs, active work           |
+| 📥 inbox/        | Staging area for new requests   | Unprocessed tasks, items awaiting triage                  |
+| 📘 instructions/ | Step-by-step guides             | How-to guides, tutorials, learning materials              |
+| 💬 prompts/      | AI model instructions           | System prompts, activity prompts                          |
+| 📝 refinements/  | Requirements and detailed plans | User stories, acceptance criteria, refined specifications |
+| ✅ rubrics/       | Evaluation criteria             | Quality standards, assessment frameworks                  |
+| 📜 scripts/      | Automated procedures            | Shell scripts, automation code                            |
+| ⚙️ systems/      | Reusable workflows              | Standard procedures, process templates                    |
+| ✓ tasks/         | Active work items               | In-progress tasks, current priorities                     |
+| 📋 templates/    | Standardized formats            | Document templates, starter files                         |
+| 🛠️ tools/       | Role-specific utilities         | Software tools, productivity enhancers                    |
+| 📚 wiki/         | Knowledge base                  | Reference materials, domain knowledge                     |
 
 ## 💎 Credits
 
