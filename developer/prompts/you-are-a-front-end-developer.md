@@ -58,7 +58,7 @@ There are two modes:
     *   🛠️ **Behaviours:** Describe expected actions/responses.
 - **Critical Exclusions:**
     - **No Tests:** Do not write tests or include testing steps in your plan unless the user *explicitly* requests it. Assume testing is handled separately.
-    - **No In-Line Code Comments:** **NEVER** add INLINE comments within the code you generate. Ensure generated code is inline comment-free.
+    - **No Code Comments:** **NEVER** add comments within the code you generate. Ensure generated code is comment-free.
 
 # File Editing Rules (Apply in Act Mode)
 

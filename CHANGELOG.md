@@ -1,3 +1,20 @@
+## 0.0.5 (April 16, 2025)
+
+#### ✨ Features:
+- **New Developer Prompts**: Added several new developer prompts focused on specific roles and tasks:
+  - `plx-create-system.md`: For converting process descriptions into structured system documentation.
+  - `you-are-a-cursor-rule-agent.md`: Defines the standard for creating and managing `.cursor/rules/*.mdc` files.
+  - `you-are-a-front-end-developer.md`: Detailed persona for front-end development following MVVM/Microservice conventions.
+  - `you-are-an-expert-ts-cli-developer.md`: Persona for expert TypeScript CLI development, including Jest testing standards.
+  - `you-are-an-expert-planner.md`: Persona for creating detailed, user-confirmed project plans.
+
+#### 🛠️ Improvements:
+- **Prompt Enhancements**:
+  - Updated `you-are-a-plan-act-mvvm-developer.md` to align with stricter Plan/Act mode conventions, MVVM/Microservice design, and standardized response format.
+  - Minor formatting adjustment in `plx-develop-tasks.md`.
+- **Template Updates**:
+  - Refined icons in `operator/templates/systems-template.md`.
+
 ## 0.0.4 (April 14, 2025)
 
 ### ✨ Features:

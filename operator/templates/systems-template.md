@@ -1,7 +1,7 @@
-# ​​🔖 Description
+# 🔖 Description
 > 💡 *A brief description and (optional) instructions on how to get started.*
 
-# ​🎯 Goals
+# 🎯 Goals
 > 💡 *Clear definition(s) what this system aims to accomplish.*
 
 # 📏 Rules
