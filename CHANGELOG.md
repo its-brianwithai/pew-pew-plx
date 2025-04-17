@@ -1,3 +1,23 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+## 0.0.7 (April 17, 2025)
+
+#### 📚 Documentation
+- Added comprehensive best practices guide for App Store Optimization (`aso-best-practices-2025.md`).
+- Added comprehensive best practices guide for MVP Roadmap Planning (`mvp-roadmap-best-practices-2025.md`).
+- Corrected minor formatting issues in ASO and MVP roadmap documentation links.
+
+#### 🛠️ Developer Resources
+- Added new expert planner persona and workflow prompt (`you-are-an-expert-planner.md`).
+- Enhanced the `plx-create-plan.md` prompt to include initial context review and suggested approach sections.
+
+#### ✨ Features
+- Introduced the "App Boy" narrative series with the first installment (`writer/app-boy/20250416-not-your-typical-superhero.md`).
+
+#### 🧹 Housekeeping
+- Removed outdated example image files from researcher resources.
+
 ## 0.0.6 (April 17, 2025)
 
 #### 📚 Documentation:
