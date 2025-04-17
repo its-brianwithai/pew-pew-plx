@@ -10,11 +10,16 @@ This tutorial guides you through creating structured Cursor rule files (`.mdc`) 
 
 ## 1️⃣ Step 1: Obtain the Rule Generation Rule
 
+![](https://www.ultrawideturbodevs.com/content/images/size/w2400/2025/04/CleanShot-2025-04-16-at-15.55.58@2x.png)
+
 The core of this process relies on a [specific Cursor rule](https://github.com/bmadcode/cursor-custom-agents-rules-generator/blob/main/.cursor/rules/core-rules/rule-generating-agent.mdc) designed to guide the AI in creating *other* rules correctly. Think of it as a meta-rule: a rule about how to make rules.
 
 This isn't a separate "agent" in the typical sense, but rather a standard Cursor rule file (`.mdc`) containing detailed instructions (its system prompt) on how to format and structure new rule files based on user input or best practices documents.
 
 **Recommendation:** Adding this rule allows Cursor to efficiently create and update *other* rules for your project whenever you ask it to, ensuring consistency by always referencing these formatting guidelines. To do so follow the following steps:
+
+![](https://www.ultrawideturbodevs.com/content/images/size/w2400/2025/04/CleanShot-2025-04-16-at-15.58.23@2x.png)
+
 1.  Create the directory `.cursor/rules/core-rules/` if it doesn't exist.
 2.  Save the content below into a file named `.cursor/rules/core-rules/rule-generating-agent.mdc`.
 3. (Optional) Cursor has a built in view for showing cursor rules, unfortunately this view may cause updates, by agents, to be lost. To prevent this add the following to your cursor settings, so the files get opened like regular files:
@@ -166,8 +171,13 @@ LIST_PROJECT_PRIORITIES = "code readability, test coverage, consistent error han
 
 Now, you will instruct the Rule Formatting Agent (from Step 1) to create the `.mdc` rule files based on your best practices document (from Step 2).
 
+![](https://www.ultrawideturbodevs.com/content/images/2025/04/CleanShot-2025-04-16-at-16.26.28@2x.png)
+
 1.  **Open Cursor Chat/Repo Prompt:** Start a new chat and select all files.
 2.  **Reference Agent and Document:** Make sure the Rule Formatting Agent is active (e.g., by mentioning `@rule-generating-agent` if you saved its prompt as a rule). Also, provide your best practices document as context (e.g., `@docs/typescript-best-practices.md`).
+
+![](https://www.ultrawideturbodevs.com/content/images/size/w2400/2025/04/CleanShot-2025-04-16-at-16.22.02@2x.png)
+
 3.  **Instruct the Agent:** Tell the agent exactly what to do using a detailed prompt. This prompt should reference the agent, the best practices document (using a variable), and specify the desired output (rule type, directory using a variable, naming, format adherence).
 
     **Example Prompt to Copy/Paste:**
@@ -192,5 +202,7 @@ BEST_PRACTICES_DOC_PATH =
 1. **Review Agent Output:** The agent will respond with the necessary file operations (e.g., `<file path="..." action="create">...`) to generate the `.mdc` files. Review these operations before applying them.
 
 2. **Apply Changes:** If the output looks correct, allow Cursor to apply the changes, creating the new rule files in your specified directory.
+
+![](https://www.ultrawideturbodevs.com/content/images/size/w2400/2025/04/image.png)
 
 You might need to restart cursor or open the files for them to be indexed and take effect. Et voila. You have successfully generated structured Cursor rules from your documented best practices. By separating the *knowledge gathering* (Step 2) from the *rule formatting* (Step 3) and using a dedicated agent for formatting, you ensure consistency and maintainability in your AI-assisted development workflow. These rules will now automatically be referenced by Cursor's AI according to your project's standards.
