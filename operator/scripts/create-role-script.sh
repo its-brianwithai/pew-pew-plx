@@ -15,9 +15,9 @@ else
     echo "Creating role: $role_name"
 fi
 
-# Define folder structure
-folders=(
-    "outputs"
+# Define directories to create
+DIRS=(
+    "artifacts"
     "assets"
     "backlog"
     "credentials"
@@ -39,7 +39,7 @@ folders=(
   // TODO(AI-AGENT): make sure this script has all possible main folders
 
 # Create all folders, skip if they already exist
-for folder in "${folders[@]}"; do
+for folder in "${DIRS[@]}"; do
     if [ ! -d "$role_name/$folder" ]; then
         mkdir -p "$role_name/$folder"
         echo "Created: $role_name/$folder"

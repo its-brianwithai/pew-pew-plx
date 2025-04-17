@@ -1,3 +1,23 @@
+## 0.0.6 (April 17, 2025)
+
+#### 📚 Documentation:
+- **ASO & MVP Roadmap Best Practices**: 
+  - Updated ASO and MVP roadmap documents with improved clarity and structure.
+  - Enhanced visual engagement with emoji-based headings.
+  - Refined introductory sections to emphasize core concepts.
+  - Streamlined language throughout the documents.
+  - Adjusted feature prioritization frameworks for consistency and clarity in the MVP roadmap.
+
+#### 🛠️ Developer Resources:
+- **New Expert Developer Prompts**:
+  - Added `you-are-an-expert-developer.md` detailing the role and workflow of the Expert AI Developer Assistant.
+  - Created `publish-markdown-cursor-article-system.md` for streamlined article publishing across multiple platforms.
+- **Updated Existing Prompts**:
+  - Enhanced `plx-create-plan.md` to include context and suggested approach in the initial review section.
+- **Best Practices Guides**:
+  - Added `aso-best-practices-2025.md` providing comprehensive guidelines for App Store Optimization.
+  - Added `mvp-roadmap-best-practices-2025.md` with detailed guidance for MVP planning and execution.
+
 ## 0.0.5 (April 16, 2025)
 
 #### ✨ Features:
@@ -35,7 +55,7 @@
   - Role-specific prompts (you-are-an-article-writer)
 - **New Marketeer Templates**: Added template for release posts (release-post-template.md)
 - **New Marketeer Research**: Added AI writing style guide to avoid AI writing indicators
-- **Enhanced Marketeer Outputs**: Added new article drafts:
+- **Enhanced Marketeer Artifacts**: Added new article drafts:
   - RepoPrompt article explaining contextual prompt creation
   - Firebase Studio article for app development
 - **Workspace Operator Improvements**: Completely revised workspace operator prompt with clearer responsibilities and instructions
@@ -97,7 +117,7 @@
 ### 🔄 Reorganization:
 - Moved and renamed multiple files to conform to the naming conventions in CONTRIBUTING.md
 - Restructured Typefully documentation
-- Relocated developer artifacts to outputs directory
+- Relocated developer artifacts to artifacts directory
 - Consolidated marketeer wiki resources into dedicated resource directories
 
 ## 0.0.2 (April 2, 2025)

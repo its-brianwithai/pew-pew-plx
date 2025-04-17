@@ -29,7 +29,7 @@ Each role in the workspace has access to a standardized set of folders and docum
 
 | Folder           | Purpose                         | Examples                                                  |
 |------------------|---------------------------------|-----------------------------------------------------------|
-| 🎨 outputs/      | Final deliverables and results  | Compiled reports, generated code, finalized documents     |
+| 🎨 artifacts/    | Final deliverables and results  | Compiled reports, generated code, finalized documents     |
 | 📦 resources/    | Reference materials and assets  | Images, fonts, datasets, reference files, sample files    |
 | 📝 backlog/      | Pending tasks and future work   | Feature requests, ideas for evaluation                    |
 | 🔑 credentials/  | Secure access information       | API keys, service accounts, access permissions            |

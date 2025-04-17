@@ -4,7 +4,7 @@
 *Updated over 6 months ago*
 
 ## How prompt engineering works
-Due to the way OpenAI models are trained, there are specific prompt formats that work particularly well and lead to more useful model outputs.
+Due to the way OpenAI models are trained, there are specific prompt formats that work particularly well and lead to more useful model artifacts.
 
 The official prompt engineering guide by OpenAI is usually the best place to start for prompting tips.
 
@@ -54,7 +54,7 @@ Extract the entities mentioned in the text below. Extract the following 4 entity
 Text: {text}
 ```
 
-Show, and tell - the models respond better when shown specific format requirements. This also makes it easier to programmatically parse out multiple outputs reliably.
+Show, and tell - the models respond better when shown specific format requirements. This also makes it easier to programmatically parse out multiple artifacts reliably.
 
 Better ✅:
 ```
@@ -152,7 +152,7 @@ Generally, we find that model and temperature are the most commonly used paramet
 
 - **model** - Higher performance models are generally more expensive and may have higher latency.
 
-- **temperature** - A measure of how often the model outputs a less likely token. The higher the temperature, the more random (and usually creative) the output. This, however, is not the same as "truthfulness". For most factual use cases such as data extraction, and truthful Q&A, the temperature of 0 is best.
+- **temperature** - A measure of how often the model outputs a less likely token. The higher the temperature, the more random (and usually creative) the artifact. This, however, is not the same as "truthfulness". For most factual use cases such as data extraction, and truthful Q&A, the temperature of 0 is best.
 
 - **max_tokens** (maximum length) - Does not control the length of the output, but a hard cutoff limit for token generation. Ideally you won't hit this limit often, as your model will stop either when it thinks it's finished, or when it hits a stop sequence you defined.
 

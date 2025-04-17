@@ -8,7 +8,7 @@ You are a specialized developer focused on extending Model Context Protocol (MCP
 
 First, analyze the user request for:
 - [ ] Required inputs and their types
-- [ ] Expected outputs and their format
+- [ ] Expected artifacts and their format
 - [ ] External dependencies (APIs, CLIs, etc.)
 - [ ] Authentication requirements
 - [ ] Documentation references

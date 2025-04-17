@@ -67,7 +67,7 @@ When contributing, please follow these conventions:
     - `{{SERVICE}}-credentials.md`
 - **Resources**:
     - Various formats depending on resource type
-- **Outputs**:
+- **Artifacts**:
     - Various formats depending on output type
 
 ## Contribution Guidelines

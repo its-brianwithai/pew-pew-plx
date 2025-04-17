@@ -63,7 +63,7 @@ This whitepaper discusses prompt engineering in detail. We will look into the va
 
 Remember how an LLM works; it’s a prediction engine. The model takes sequential text as  an input and then predicts what the following token should be, based on the data it was  trained on. The LLM is operationalized to do this over and over again, adding the previously  predicted token to the end of the sequential text for predicting the following token. The next  token prediction is based on the relationship between what’s in the previous tokens and what  the LLM has seen during its training.  
 
-When you write a prompt, you are attempting to set up the LLM to predict the right sequence  of tokens. Prompt engineering is the process of designing high-quality prompts that guide  LLMs to produce accurate outputs. This process involves tinkering to find the best prompt,  optimizing prompt length, and evaluating a prompt’s writing style and structure in relation  to the task. In the context of natural language processing and LLMs, a prompt is an input  provided to the model to generate a response or prediction.
+When you write a prompt, you are attempting to set up the LLM to predict the right sequence  of tokens. Prompt engineering is the process of designing high-quality prompts that guide  LLMs to produce accurate artifacts. This process involves tinkering to find the best prompt,  optimizing prompt length, and evaluating a prompt’s writing style and structure in relation  to the task. In the context of natural language processing and LLMs, a prompt is an input  provided to the model to generate a response or prediction.
 
 February 2025 7   
 Prompt Engineering 
@@ -108,7 +108,7 @@ deterministic: the highest probability token is always selected (though note tha
 
 Temperatures close to the max tend to create more random output. And as temperature gets  higher and higher, all tokens become equally likely to be the next predicted token. 
 
-The Gemini temperature control can be understood in a similar way to the softmax function  used in machine learning. A low temperature setting mirrors a low softmax temperature (T),  emphasizing a single, preferred temperature with high certainty. A higher Gemini temperature  setting is like a high softmax temperature, making a wider range of temperatures around  the selected setting more acceptable. This increased uncertainty accommodates scenarios  where a rigid, precise temperature may not be essential like for example when experimenting  with creative outputs. 
+The Gemini temperature control can be understood in a similar way to the softmax function  used in machine learning. A low temperature setting mirrors a low softmax temperature (T),  emphasizing a single, preferred temperature with high certainty. A higher Gemini temperature  setting is like a high softmax temperature, making a wider range of temperatures around  the selected setting more acceptable. This increased uncertainty accommodates scenarios  where a rigid, precise temperature may not be essential like for example when experimenting  with creative artifacts. 
 
 **Top-K and top-P** 
 
@@ -874,7 +874,7 @@ Snippet 2\. Executing ReAct Agent in the terminal
 
 Code Snippet 2 figures out that the band Metallica has four band members. Then it searches  each band member to request the total of children and add up the total. Finally, it returns the  total number of children as the final answer. 
 
-ReAct prompting in practice requires understanding that you continually have to resend the  previous prompts/responses (and do trimming of the extra generated content) as well as set  up the model with appropriate examples/instructions. Please refer to the notebook14 hosted  in the GoogleCloudPlatform Github repository, which goes into a bit more detail showing the  actual LLM inputs and outputs with a more elaborate example.
+ReAct prompting in practice requires understanding that you continually have to resend the  previous prompts/responses (and do trimming of the extra generated content) as well as set  up the model with appropriate examples/instructions. Please refer to the notebook14 hosted  in the GoogleCloudPlatform Github repository, which goes into a bit more detail showing the  actual LLM inputs and artifacts with a more elaborate example.
 
 February 2025 39   
 Prompt Engineering 
@@ -1412,7 +1412,7 @@ Use the following best practices to become a pro in prompt engineering.
 
 **Provide examples** 
 
-The most important best practice is to provide (one shot / few shot) examples within a  prompt. This is highly effective because it acts as a powerful teaching tool. These examples  showcase desired outputs or similar responses, allowing the model to learn from them  and tailor its own generation accordingly. It’s like giving the model a reference point or  target to aim for, improving the accuracy, style, and tone of its response to better match  your expectations.
+The most important best practice is to provide (one shot / few shot) examples within a  prompt. This is highly effective because it acts as a powerful teaching tool. These examples  showcase desired artifacts or similar responses, allowing the model to learn from them  and tailor its own generation accordingly. It’s like giving the model a reference point or  target to aim for, improving the accuracy, style, and tone of its response to better match  your expectations.
 
 February 2025 54   
 Prompt Engineering 
@@ -1513,7 +1513,7 @@ Prompt Engineering
 
 Different models, model configurations, prompt formats, word choices, and submits can yield  different results. Therefore, it’s important to experiment with prompt attributes like the style,  the word choice, and the type prompt (zero shot, few shot, system prompt). 
 
-For example a prompt with the goal to generate text about the revolutionary video game  console Sega Dreamcast, can be formulated as a **question**, a **statement** or an **instruction**,  resulting in different outputs: 
+For example a prompt with the goal to generate text about the revolutionary video game  console Sega Dreamcast, can be formulated as a **question**, a **statement** or an **instruction**,  resulting in different artifacts: 
 
 • **Question:** What was the Sega Dreamcast and why was it such a revolutionary console? 
 
@@ -1640,7 +1640,7 @@ Chain of thought prompting is based on greedy decoding, predicting the next word
 
 The last tip was mentioned before in this chapter, but we can’t stress enough how important  it is: document your prompt attempts in full detail so you can learn over time what went well  and what did not.  
 
-Prompt outputs can differ across models, across sampling settings, and even across different  versions of the same model. Moreover, even across identical prompts to the same model,  small differences in output sentence formatting and word choice can occur. (For example, as  mentioned previously, if two tokens have the same predicted probability, ties may be broken  randomly. This can then impact subsequent predicted tokens.).
+Prompt artifacts can differ across models, across sampling settings, and even across different  versions of the same model. Moreover, even across identical prompts to the same model,  small differences in output sentence formatting and word choice can occur. (For example, as  mentioned previously, if two tokens have the same predicted probability, ties may be broken  randomly. This can then impact subsequent predicted tokens.).
 
 February 2025 64   
 Prompt Engineering 
@@ -1667,7 +1667,7 @@ Name \[name and version of your prompt\]
 | Top-K  | \[number\]  | Top-P  | \[number\] |
 | Prompt  | `[Write all the full prompt]` |  |  |
 
-Output \[Write out the output or multiple outputs\] 
+Output \[Write out the output or multiple artifacts\] 
 
 Table 21\. A template for documenting prompts 
 
