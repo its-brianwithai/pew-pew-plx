@@ -1,7 +1,34 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 0.0.8 (Date 30 Apr 2025)
+## 0.0.9 (April 30, 2025)
+
+#### ✨ Features: New Role-Specific Activity Prompts
+
+- **Architect:**
+  - Added `architect/prompts/activities/plx-create-architecture.md`: Guides the creation of detailed Architecture Documents based on PRDs.
+- **Business Analyst:**
+  - Added `business-analyst/prompts/activities/plx-conduct-market-research.md`: Structures the process for conducting market research.
+  - Added `business-analyst/prompts/activities/plx-create-project-brief.md`: Facilitates the creation of comprehensive Project Briefs.
+- **Project Manager:**
+  - Added `project-manager/prompts/activities/plx-create-backlog.md`: Guides the generation of epics and user stories from PRD/Architecture.
+  - Added `project-manager/prompts/activities/plx-create-new-release.md`: Defines the process for creating a new release (tagging, changelog, etc.).
+  - Added `project-manager/prompts/activities/plx-create-prd.md`: Guides the creation of detailed Product Requirements Documents from project briefs.
+  - Added `project-manager/prompts/activities/plx-create-user-stories.md`: (Duplicate of `plx-create-backlog.md`, standardizing task name).
+  - Added `project-manager/prompts/activities/plx-review-prd.md`: Structures the review and finalization of PRDs against backlogs/architecture.
+- **Prompt Engineer:**
+  - Added `prompt-engineer/prompts/activities/plx-create-document.md`: Generic prompt for creating documents based on user requests and personas.
+  - Added `prompt-engineer/prompts/activities/plx-review-document.md`: Generic prompt for reviewing documents based on user requests and personas.
+
+#### 🛠️ Improvements
+
+- **Project Manager:**
+  - Refined `project-manager/prompts/agents/you-are-a-bmad-prd-expert.md`: Updated the Technical Product Manager persona with clearer instructions, interaction model, and a detailed PRD template structure.
+- **Documentation:**
+  - Updated `README.md` to reflect version 0.0.9, new file counts, and summarize recent changes.
+  - Minor formatting correction in `project-manager/wows/wow-for-bmad-agile-workflow.md`.
+
+## 0.0.8 (April 30, 2025)
 
 #### 🔄 Reorganization & Refinement
 - Restructured the project around top-level **Roles**, each with its own dedicated folder ("office").

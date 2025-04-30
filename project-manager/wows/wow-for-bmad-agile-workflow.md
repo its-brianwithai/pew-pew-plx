@@ -52,7 +52,7 @@ graph TD
 ## AI Project Plan and Memory Structure the Workflow will result in
 
 ```
-.ai/
+ai/
 ├── prd.md                 # Product Requirements Document
 ├── arch.md               # Architecture Decision Record
 ├── epic-1/              # Current Epic directory
