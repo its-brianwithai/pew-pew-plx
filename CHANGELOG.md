@@ -1,6 +1,20 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 0.0.10 (April 30, 2025)
+
+### 🛠️ Improvements:
+- **Developer Scripts:** 
+  - Enhanced `generate_raycast_snippets-script.py` to run from the project root directory
+  - Updated script to correctly process only files in folders named "prompts", "templates", "systems", and "wows"
+  - Fixed file extension filtering to properly handle `.md` and `.mdc` files
+  - Improved logging with more detailed information about found files
+
+### 🏗️ Infrastructure:
+- **Developer Artifacts:**
+  - Added initial `raycast_snippets.json` containing snippets from project markdown files
+  - Generated snippets automatically transform variables in format `{{VARIABLE}}` to Raycast's `{argument name="{{VARIABLE}}"}` format
+
 ## 0.0.9 (April 30, 2025)
 
 #### ✨ Features: New Role-Specific Activity Prompts

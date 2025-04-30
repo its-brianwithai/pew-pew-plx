@@ -1,4 +1,4 @@
-# ⚡ Ultra Wide Turbo Workspace 0.0.9
+# ⚡ Ultra Wide Turbo Workspace 0.0.10
 
 [![Brought to you by ultrawideturbodevs.com](https://img.shields.io/badge/Brought%20to%20you%20by-ultrawideturbodevs.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://ultrawideturbodevs.com)
 
@@ -6,19 +6,25 @@
 
 ---
 
-## ✨ Latest Release: 0.0.9 (April 30, 2025)
-
-#### ✨ Features: New Role-Specific Activity Prompts
-- Added standardized activity prompts (`plx-*.md`) across multiple roles (Architect, Business Analyst, Project Manager, Prompt Engineer) to guide specific tasks like creating architecture documents, market research, backlogs, PRDs, and document reviews.
+## ✨ Latest Release: 0.0.10 (April 30, 2025)
 
 #### 🛠️ Improvements
-- Refined the `project-manager` agent prompt (`you-are-a-bmad-prd-expert.md`) with clearer instructions and a detailed PRD template.
+- Enhanced `generate_raycast_snippets-script.py` to run from the project root and correctly process files from prompts, templates, systems, and wows folders.
+
+#### 🏗️ Infrastructure
+- Added Raycast snippet generation capability: Creates JSON snippets from project markdown files with variable transformation support.
+
+#### 🔄 Previous Release (0.0.9)
+- Added standardized activity prompts (`plx-*.md`) across multiple roles (Architect, Business Analyst, Project Manager, Prompt Engineer).
+- Refined the `project-manager` agent prompt with clearer instructions and a detailed PRD template.
+
+#### 🛠️ Improvements
 - Updated file counts and summaries in documentation.
 
 #### 🔄 Previous Release (0.0.8)
 - Restructured the project around top-level **Roles**, each with its own dedicated folder ("office").
 - Standardized optional subfolders within roles: `prompts`, `templates`, `wows`, `rubrics`, `scripts`, `systems`.
-- Rewrote `README.md` to accurately describe the new role-based structure and optional subfolders.
+- Rewritten `README.md` to accurately describe the new role-based structure and optional subfolders.
 - Added a "Credits" section acknowledging `bmadcode` for influential repositories.
 - Updated `CONTRIBUTING.md` to reflect the current file structure and remove outdated naming conventions.
 

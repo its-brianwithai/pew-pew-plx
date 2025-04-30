@@ -2,13 +2,13 @@ import os
 import json
 import logging
 from typing import List
-import re  # Add import for regular expressions
+import re
 
 # Configuration
-ROOT_FOLDER = "../"  # The root folder to start searching from (the developer directory)
-OUTPUT_FOLDER = "developer/artifacts"  # The folder where the JSON file will be saved (inside developer directory)
-ALLOWED_FOLDERS = ["prompts", "templates", "systems"]  # Only process folders with these exact names
-ALLOWED_FILE_TYPES = [".md, .mdc"]  # Only process files with these extensions
+ROOT_FOLDER = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # Project root
+OUTPUT_FOLDER = "developer/artifacts"  # The folder where the JSON file will be saved
+ALLOWED_FOLDERS = ["prompts", "templates", "systems", "wows"]  # Only process folders with these exact names
+ALLOWED_FILE_TYPES = [".md", ".mdc"]  # Only process files with these extensions
 
 # Set up logging
 logging.basicConfig(
@@ -27,17 +27,19 @@ def find_matching_files() -> List[str]:
     for root, dirs, files in os.walk(ROOT_FOLDER):
         # Check if the current directory's name is in ALLOWED_FOLDERS
         current_folder = os.path.basename(root)
-        if current_folder not in ALLOWED_FOLDERS and root != ROOT_FOLDER:
-            logging.info(f"Skipping folder: {root}")
-            continue
-            
-        # Process files in allowed folders
-        for file in files:
-            file_ext = os.path.splitext(file)[1]
-            if file_ext in ALLOWED_FILE_TYPES:
-                matching_files.append(os.path.join(root, file))
-            else:
-                logging.info(f"Skipping file: {file} (invalid extension)")
+        
+        if current_folder in ALLOWED_FOLDERS:
+            # Process files in allowed folders
+            for file in files:
+                file_ext = os.path.splitext(file)[1]
+                if file_ext in ALLOWED_FILE_TYPES:
+                    file_path = os.path.join(root, file)
+                    matching_files.append(file_path)
+                    logging.info(f"Found matching file: {file_path}")
+                else:
+                    logging.debug(f"Skipping file: {file} (invalid extension)")
+        else:
+            logging.debug(f"Skipping folder: {root}")
     
     return matching_files
 
