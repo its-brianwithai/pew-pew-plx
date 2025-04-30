@@ -44,21 +44,6 @@ def find_matching_files() -> List[str]:
     
     return matching_files
 
-def transform_variables(content: str) -> str:
-    """
-    Transform variables in the format {{VARIABLE}} to {argument name="{{VARIABLE}}"}
-    """
-    # Use a single regex replacement to avoid nested replacements
-    pattern = r'\{\{([^{}]+?)\}\}'
-    
-    # Function to handle each match
-    def replace_func(match):
-        var_name = match.group(1)
-        return f"{{argument name=\"{{{{{var_name}}}}}\"}}"
-    
-    # Apply the replacement once (non-recursive)
-    return re.sub(pattern, replace_func, content)
-
 def generate_snippets():
     """
     Generate Raycast snippets from matching files and save to JSON.
@@ -87,13 +72,10 @@ def generate_snippets():
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
-                # Transform variables in the content
-                transformed_content = transform_variables(content)
-                
-                # Create snippet object
+                # Create snippet object with original content (no transformation)
                 snippet = {
                     "name": name,
-                    "text": transformed_content,
+                    "text": content,
                     "keyword": name
                 }
                 
