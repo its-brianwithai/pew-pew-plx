@@ -7,7 +7,7 @@ import re
 # Configuration
 ROOT_FOLDER = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # Project root
 OUTPUT_FOLDER = "developer/artifacts"  # The folder where the JSON file will be saved
-ALLOWED_FOLDERS = ["prompts", "templates", "systems", "wows"]  # Only process folders with these exact names
+ALLOWED_FOLDERS = ["prompts", "templates", "systems", "wows"]  # Only process files in these folders or their subfolders
 ALLOWED_FILE_TYPES = [".md", ".mdc"]  # Only process files with these extensions
 
 # Set up logging
@@ -25,11 +25,12 @@ def find_matching_files() -> List[str]:
     matching_files = []
     
     for root, dirs, files in os.walk(ROOT_FOLDER):
-        # Check if the current directory's name is in ALLOWED_FOLDERS
-        current_folder = os.path.basename(root)
+        # Check if any parent folder in the path is in ALLOWED_FOLDERS
+        path_parts = root.split(os.sep)
+        is_in_allowed_folder = any(folder in path_parts for folder in ALLOWED_FOLDERS)
         
-        if current_folder in ALLOWED_FOLDERS:
-            # Process files in allowed folders
+        if is_in_allowed_folder:
+            # Process files in allowed folders or their subfolders
             for file in files:
                 file_ext = os.path.splitext(file)[1]
                 if file_ext in ALLOWED_FILE_TYPES:
@@ -68,7 +69,7 @@ def generate_snippets():
     
     try:
         logging.info(f"Starting search in: {os.path.abspath(ROOT_FOLDER)}")
-        logging.info(f"Looking for folders named: {', '.join(ALLOWED_FOLDERS)}")
+        logging.info(f"Looking for files in folders/subfolders named: {', '.join(ALLOWED_FOLDERS)}")
         logging.info(f"Processing files with extensions: {', '.join(ALLOWED_FILE_TYPES)}")
         
         matching_files = find_matching_files()
