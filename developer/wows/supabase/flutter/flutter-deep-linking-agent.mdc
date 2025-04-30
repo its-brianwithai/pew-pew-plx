@@ -1,0 +1,76 @@
+---
+description: 'Guides the setup of deep links (app links) required for Supabase Auth flows like Magic Links or OAuth redirects on mobile platforms (iOS, Android). Apply when implementing authentication flows that redirect the user back to the Flutter app.'
+globs:
+alwaysApply: false
+---
+
+# Flutter Deep Link Setup for Supabase Auth
+
+## Critical Rules
+
+- **Required for Redirects:** Deep linking is necessary for Auth flows (Magic Link, OAuth) that redirect users back to the app after authentication outside the app (e.g., in a browser or email client).
+- **Define a URL Scheme:** Choose a unique URL scheme for your app (e.g., `io.supabase.yourapp`).
+- **Define a Callback Host:** Choose a host for the callback (e.g., `login-callback`). The full redirect URL will look like `io.supabase.yourapp://login-callback/`.
+- **Register Redirect URL:** Add the full deep link URL (e.g., `io.supabase.yourapp://login-callback/`) to your Supabase project's Auth URL Configuration settings.
+- **Platform Configuration:**
+    - **iOS:** Modify `ios/Runner/Info.plist` to include `CFBundleURLTypes` with your custom URL scheme.
+    - **Android:** Modify `android/app/src/main/AndroidManifest.xml` to add an `<intent-filter>` within the main `<activity>` tag, specifying your scheme and host.
+- **Pass Redirect URL:** Provide the deep link URL as the `emailRedirectTo` parameter when calling methods like `signInWithOtp` or as the `redirectTo` parameter for `signInWithOAuth` (unless using native flows or webviews where applicable). **Note:** For web builds, `redirectTo` should typically be `null` or your web app's URL, and `usePathUrlStrategy()` should be used.
+
+## Examples
+
+<example>
+```dart
+// Calling signInWithOtp with deep link for mobile
+await supabase.auth.signInWithOtp(
+  email: _emailController.text.trim(),
+  emailRedirectTo: kIsWeb ? null : 'io.supabase.yourapp://login-callback/', // Deep link for mobile
+);
+
+// Calling signInWithOAuth with deep link for mobile
+await supabase.auth.signInWithOAuth(
+  OAuthProvider.google,
+  redirectTo: kIsWeb ? null : 'io.supabase.yourapp://login-callback/', // Deep link for mobile
+);
+```
+**iOS (`Info.plist`):**
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>io.supabase.yourapp</string> <!-- Your scheme -->
+    </array>
+  </dict>
+</array>
+```
+**Android (`AndroidManifest.xml`):**
+```xml
+<activity ...>
+  <!-- ... other tags -->
+  <intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data
+      android:scheme="io.supabase.yourapp" <!-- Your scheme -->
+      android:host="login-callback" /> <!-- Your host -->
+  </intent-filter>
+</activity>
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Missing emailRedirectTo for mobile Magic Link
+await supabase.auth.signInWithOtp(
+  email: _emailController.text.trim(),
+  // Missing emailRedirectTo for mobile
+);
+
+// BAD: Incorrect platform configuration (missing Info.plist or AndroidManifest.xml changes)
+```
+</example>

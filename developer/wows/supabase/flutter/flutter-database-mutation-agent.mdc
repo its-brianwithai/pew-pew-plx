@@ -1,0 +1,98 @@
+---
+description: 'Guides the correct usage of `supabase-flutter` for mutating data (inserting, updating, upserting, deleting) in Supabase Postgres tables. Covers method usage, data formats, response handling, and error management. Apply when modifying database records from a Flutter app.'
+globs:
+alwaysApply: false
+---
+
+# Mutating Supabase Database Data in Flutter
+
+## Critical Rules
+
+- **Insert:** Use `supabase.from('table_name').insert(data)` to add new rows.
+    - `data` can be a `Map<String, dynamic>` for a single row or a `List<Map<String, dynamic>>` for multiple rows.
+- **Update:** Use `supabase.from('table_name').update(data).eq('column', value)` to modify existing rows.
+    - `data` is a `Map<String, dynamic>` containing the columns and new values.
+    - **Crucially,** chain at least one filter (like `.eq()`, `.match()`) to specify which rows to update. Updating without filters affects all rows (if RLS allows) and is usually unintended.
+- **Upsert:** Use `supabase.from('table_name').upsert(data)` to insert a row or update it if it already exists (based on primary key or specified `onConflict` constraint).
+    - `data` is a `Map<String, dynamic>` or `List<Map<String, dynamic>>`.
+- **Delete:** Use `supabase.from('table_name').delete().eq('column', value)` to remove rows.
+    - **Crucially,** chain at least one filter (like `.eq()`, `.match()`) to specify which rows to delete. Deleting without filters removes all rows (if RLS allows) and is usually unintended.
+- **Returning Data:** By default, mutation methods return `void` or minimal response. To get the modified data back, chain `.select()` after the mutation method (e.g., `insert(data).select()`, `update(data).eq(...).select()`).
+- **Error Handling:** Wrap mutation calls in `try-catch` blocks to handle `PostgrestException`. Check `error.message`, `error.code`, etc. RLS policies might prevent mutations, resulting in errors or no rows affected.
+- **Async Nature:** Mutations are asynchronous. Use `async/await` and provide user feedback (e.g., loading indicators, success/error messages).
+
+## Examples
+
+<example>
+```dart
+// Insert a single instrument
+try {
+  await supabase.from('instruments').insert({
+    'name': 'New Guitar',
+    'type': 'Guitar',
+    'user_id': supabase.auth.currentUser!.id, // Assuming RLS requires user_id
+  });
+  context.showSnackBar('Instrument added!');
+} on PostgrestException catch (error) {
+  context.showSnackBar('Error adding instrument: ${error.message}', isError: true);
+}
+
+// Update an instrument's name and return the updated record
+try {
+  final response = await supabase
+      .from('instruments')
+      .update({'name': 'Updated Guitar Name'})
+      .eq('id', instrumentId)
+      .select() // Request the updated row back
+      .single(); // Assuming update affects one row
+
+  // Use response data
+  context.showSnackBar('Instrument updated!');
+} on PostgrestException catch (error) {
+  context.showSnackBar('Error updating instrument: ${error.message}', isError: true);
+} catch (error) { // Catch potential error from .single() if 0 or >1 rows affected
+   context.showSnackBar('Update error: $error', isError: true);
+}
+
+
+// Upsert profile data
+try {
+  await supabase.from('profiles').upsert({
+    'id': supabase.auth.currentUser!.id,
+    'username': 'New Username',
+    'website': 'https://example.com',
+    'updated_at': DateTime.now().toIso8601String(),
+  });
+   context.showSnackBar('Profile saved!');
+} on PostgrestException catch (error) {
+   context.showSnackBar('Error saving profile: ${error.message}', isError: true);
+}
+
+// Delete an instrument
+try {
+  await supabase
+      .from('instruments')
+      .delete()
+      .eq('id', instrumentId); // Specify which instrument to delete
+  context.showSnackBar('Instrument deleted!');
+} on PostgrestException catch (error) {
+  context.showSnackBar('Error deleting instrument: ${error.message}', isError: true);
+}
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Update without a filter (attempts to update all rows)
+// await supabase.from('instruments').update({'name': 'Default Name'});
+
+// BAD: Delete without a filter (attempts to delete all rows)
+// await supabase.from('instruments').delete();
+
+// BAD: Not handling PostgrestException
+// await supabase.from('instruments').insert({'invalid_column': 'data'}); // Throws unhandled exception
+
+// BAD: Incorrect data format for insert (e.g., string instead of Map or List<Map>)
+// await supabase.from('instruments').insert('New Guitar');
+```
+</example>

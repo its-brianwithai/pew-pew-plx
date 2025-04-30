@@ -1,0 +1,92 @@
+---
+description: 'Provides guidance on handling common exceptions thrown by the `supabase-flutter` SDK, such as `AuthException`, `PostgrestException`, and `StorageException`. Apply whenever making calls to Supabase Auth, Database, or Storage.'
+globs:
+alwaysApply: false
+---
+
+# Handling Supabase Errors in Flutter
+
+## Critical Rules
+
+- **Use `try-catch`:** Wrap all Supabase client calls that interact with the network (Auth, Database, Storage, Functions) in `try-catch` blocks.
+- **Specific Exceptions:** Catch specific Supabase exceptions for more granular error handling:
+    - `AuthException`: Thrown by `supabase.auth` methods (e.g., `signIn`, `signOut`, `signUp`). Contains `message` and `statusCode` (HTTP status).
+    - `PostgrestException`: Thrown by database operations (`.select`, `.insert`, `.update`, `.delete`, `.rpc`). Contains `message`, `code` (PostgREST error code, e.g., '42501' for RLS violation), `details`, `hint`, and `statusCode`.
+    - `StorageException`: Thrown by storage operations (`.upload`, `.download`, `createSignedUrl`). Contains `message` and `statusCode`.
+- **Generic `catch`:** Include a generic `catch (error)` block after specific catches to handle unexpected errors (e.g., network connectivity issues not caught by Supabase exceptions, programming errors).
+- **User Feedback:** In the `catch` blocks, provide clear feedback to the user (e.g., using `ScaffoldMessenger.showSnackBar`, dialogs) instead of just printing to the console. Avoid showing raw technical error messages directly to the user unless appropriate.
+- **Check Error Details:** Inspect the properties of the caught exceptions (`message`, `code`, `details`, `statusCode`) to understand the cause of the error and potentially implement different recovery logic (e.g., prompting for re-authentication on a 401, indicating permission denied on a 403 or RLS violation code).
+- **`.maybeSingle()` Errors:** Remember that `.maybeSingle()` returns `null` if no row is found (not an exception), but `.single()` throws an error if 0 or more than 1 row is found. Catch this potential error separately if using `.single()`.
+
+## Examples
+
+<example>
+```dart
+// Example handling PostgrestException during select
+Future<void> fetchProfile(String userId) async {
+  try {
+    final response = await supabase
+        .from('profiles')
+        .select()
+        .eq('id', userId)
+        .single(); // Use single() - might throw if 0 or >1 rows
+
+    // Process profile data (response)
+
+  } on PostgrestException catch (error) {
+    // Handle specific PostgREST errors
+    print('PostgREST Error: ${error.message}');
+    print('Code: ${error.code}'); // e.g., 'PGRST116' for 0 rows with single()
+    print('Details: ${error.details}');
+    context.showSnackBar('Error fetching profile: ${error.message}', isError: true);
+  } catch (error) {
+    // Handle other errors (e.g., error from .single() if >1 row, network issues)
+    print('Generic Error: $error');
+    context.showSnackBar('An unexpected error occurred: $error', isError: true);
+  }
+}
+
+// Example handling AuthException during sign in
+Future<void> signInUser(String email, String password) async {
+  try {
+    await supabase.auth.signInWithPassword(email: email, password: password);
+    // Navigate to account page on success
+  } on AuthException catch (error) {
+    print('Auth Error: ${error.message}');
+    print('Status Code: ${error.statusCode}');
+    context.showSnackBar('Sign in failed: ${error.message}', isError: true);
+  } catch (error) {
+    print('Generic Error: $error');
+    context.showSnackBar('An unexpected error occurred: $error', isError: true);
+  }
+}
+
+// Example handling StorageException during upload
+Future<void> uploadFile(File file, String path) async {
+  try {
+    await supabase.storage.from('my_bucket').upload(path, file);
+    context.showSnackBar('Upload successful!');
+  } on StorageException catch (error) {
+    print('Storage Error: ${error.message}');
+    print('Status Code: ${error.statusCode}'); // e.g., 403 if RLS denied insert
+    context.showSnackBar('Upload failed: ${error.message}', isError: true);
+  } catch (error) {
+    print('Generic Error: $error');
+    context.showSnackBar('An unexpected error occurred: $error', isError: true);
+  }
+}
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: No try-catch block
+// await supabase.from('profiles').select().eq('id', userId).single(); // App will crash on error
+
+// BAD: Only catching generic Exception
+// try { ... } catch (e) { print(e); } // Misses specific details from Supabase exceptions
+
+// BAD: Showing raw technical errors to the user
+// catch (error) { context.showSnackBar(error.toString()); }
+```
+</example>

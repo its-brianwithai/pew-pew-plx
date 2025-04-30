@@ -23,69 +23,18 @@ This repository is meant to be a template that others can use as a starting poin
 - Implementation-specific files that would not benefit other users
 - Files with hardcoded personal references or organization-specific details
 
-## File Structure and Naming Conventions
-
-When contributing, please follow these conventions:
-
-### Naming Patterns
-
-    - `you-are-an-{{IDENTITY}}.md`
-    - `you-are-a-{{IDENTITY}}.md`
-- **Activity Prompts**:
-    - `plx-{{VERB}}-{{ACTION}}.md`
-- **Backlog**:
-    - `{{VERB}}-{{NOUN_OR_CONCEPT}}.md`
-- **Tasks**:
-    - `{{VERB}}-{{NOUN_OR_CONCEPT}}.md`
-- **Inbox**:
-    - `{{VERB}}-{{ACTION}}.md`
-- **Rubrics**:
-    - `{{RESULT_OR_CONCEPT}}-rubric.md`
-- **Scripts**:
-    - `{{VERB}}-{{RESULT_OR_CONCEPT}}-script.*`
-- **Drafts**:
-    - `{{DESCRIPTION}}-draft.md`
-- **Wiki objects**:
-    - `all-{{COMPONENTS_OR_CONCEPTS}}.md`
-    - `the-{{NOUN_OR_CONCEPT}}.md`
-    - `a-{{NOUN_OR_CONCEPT}}.md`
-    - `an-{{NOUN_OR_CONCEPT}}.md`
-    - `{{NOUN_OR_CONCEPT}}.md`
-- **Docs**:
-    - `{{SUBJECT}}-docs.md` (reference documentation)
-- **Instructions**:
-    - `how-to-{{TASK}}.md` (step-by-step instructions)
-- **Tutorials**:
-    - `how-to-{{TASK}}.md` (step-by-step instructions)
-- **Templates**:
-    - `{{NOUN_OR_CONCEPT}}-template.md`
-- **Tools**:
-    - `{{TOOL_NAME}}-tool.md`
-- **Systems**:
-    - `{{PROCESS_OR_WORKFLOW}}-system.md`
-- **Credentials**:
-    - `{{SERVICE}}-credentials.md`
-- **Resources**:
-    - Various formats depending on resource type
-- **Artifacts**:
-    - Various formats depending on output type
-
 ## Contribution Guidelines
 
 When contributing to this workspace framework, please follow these guidelines to ensure consistency and usability for all:
 
 1. **Adhere to naming conventions** - Follow the patterns outlined above to maintain consistency.
-
 2. **Use kebab-case and lowercase** - We write everything in kebab-case and lowercase because it saves time typing without using shift.
-
 3. **Specify domain context** - When creating content related to specific domains, professions, or tools:
    - Include the context in the filename (e.g., `marketing-campaign-template.md`, `content-calendar-system.md`, `design-review-rubric.md`)
    - For technical content, specify the technology (e.g., `python-projects-template.md`, `react-components-system.md`)
-
 4. **Role specificity** - When creating new roles, be specific about their domain expertise when a role already exists, otherwise be general:
    - Technical roles: `python-developer`, `react-frontend-developer`, `data-scientist`
    - Non-technical roles: `content-marketer`, `product-manager`, `ux-researcher`, `social-media-strategist`
-
 5. **Update relevant documentation** - When adding new content or making changes, always update any relevant documentation like README, instructions, docs, prompts, systems, and templates if applicable.
 
 ## How to Contribute

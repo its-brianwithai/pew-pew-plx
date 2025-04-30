@@ -1,0 +1,108 @@
+---
+description: 'Specifies the correct usage of Supabase API keys (`anonKey`, `service_role`) within a Flutter development context. Emphasizes security implications. Apply when initializing the Supabase client or dealing with backend logic (e.g., Edge Functions).'
+globs:
+alwaysApply: false
+---
+
+# Supabase API Key Usage in Flutter
+
+## Critical Rules
+
+- **`anonKey` (Public Key):**
+    - This key is **intended** to be used in client-side applications like Flutter apps.
+    - It is safe to expose **only if Row Level Security (RLS) is properly enabled** on all accessed tables.
+    - The `anonKey` grants the `anon` role by default, or the `authenticated` role if a valid user JWT is also provided.
+    - Use this key when initializing `Supabase.initialize()` in `main.dart`.
+- **`service_role` Key (Secret Key):**
+    - This key grants **superuser** access and **bypasses all RLS policies**.
+    - It **MUST NEVER** be exposed in client-side code (Flutter app bundle).
+    - Use this key **only** in secure server-side environments (e.g., your own backend server, Supabase Edge Functions, administrative scripts).
+    - If used in Edge Functions, load it securely from secrets/environment variables (`Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')`).
+- **JWT (User Token):**
+    - This is **not** an API key but the user's session token obtained after login.
+    - The `supabase-flutter` client automatically manages and sends the JWT with requests when the user is logged in, granting the `authenticated` role for RLS checks. You generally don't handle it manually for database/storage calls via the client library.
+    - You **do** need to manually retrieve and pass the JWT (`supabase.auth.currentSession?.accessToken`) in the `Authorization: Bearer <token>` header when calling Edge Functions that require user authentication.
+
+## Examples
+
+<example>
+```dart
+// main.dart - Correct initialization using anonKey
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+await Supabase.initialize(
+  url: 'YOUR_SUPABASE_URL',
+  anonKey: 'YOUR_SUPABASE_ANON_KEY', // CORRECT: Use the public anon key
+);
+
+// Calling an Edge Function requiring auth from Flutter
+import 'package:http/http.dart' as http;
+
+Future<void> callSecureFunction() async {
+  final accessToken = supabase.auth.currentSession?.accessToken;
+  if (accessToken == null) {
+    print("User not logged in");
+    return;
+  }
+
+  final url = Uri.parse('YOUR_SUPABASE_URL/functions/v1/secure-function');
+  final response = await http.post(
+    url,
+    headers: {
+      'Authorization': 'Bearer $accessToken', // CORRECT: Pass user JWT
+      'apikey': 'YOUR_SUPABASE_ANON_KEY' // Still need anon key for gateway
+    },
+    body: {'some': 'data'},
+  );
+  // Handle response
+}
+```
+**Edge Function (`supabase/functions/secure-function/index.ts`) using service_role (Example):**
+```typescript
+// Example: Using service_role key securely in an Edge Function
+import { createClient } from 'jsr:@supabase/supabase-js@2'
+
+Deno.serve(async (req) => {
+  // Create a client with the service_role key to bypass RLS for admin tasks
+  const supabaseAdmin = createClient(
+    Deno.env.get('SUPABASE_URL') ?? '',
+    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '' // CORRECT: Use service_role from secrets
+  );
+
+  // Perform admin operation, e.g., count all users regardless of RLS
+  const { count, error } = await supabaseAdmin
+    .from('profiles')
+    .select('*', { count: 'exact', head: true });
+
+  // ... handle response ...
+})
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Using service_role key in Flutter client initialization
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+await Supabase.initialize(
+  url: 'YOUR_SUPABASE_URL',
+  anonKey: 'YOUR_SUPABASE_SERVICE_ROLE_KEY', // INCORRECT AND DANGEROUS
+);
+
+// BAD: Hardcoding service_role key anywhere in Flutter code
+final adminHeader = {'Authorization': 'Bearer YOUR_SERVICE_ROLE_KEY'}; // DANGEROUS
+
+// BAD: Calling Edge Function requiring service_role from Flutter client directly
+// (Even if you could pass the key, it's insecure)
+```
+**Edge Function (`supabase/functions/some-function/index.ts`) - Incorrect Key Usage:**
+```typescript
+// BAD: Using anonKey when service_role privileges are needed
+const supabase = createClient(
+  Deno.env.get('SUPABASE_URL') ?? '',
+  Deno.env.get('SUPABASE_ANON_KEY') ?? '' // Incorrect key for bypassing RLS
+);
+// This query will be subject to RLS based on the anon role (or authenticated if JWT passed)
+const { data, error } = await supabase.from('admin_table').select('*');
+```
+</example>

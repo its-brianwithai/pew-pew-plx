@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 0.0.8 (Date 30 Apr 2025)
+
+#### 🔄 Reorganization & Refinement
+- Restructured the project around top-level **Roles**, each with its own dedicated folder ("office").
+- Standardized optional subfolders within roles: `prompts`, `templates`, `wows`, `rubrics`, `documentation`, `scripts`, `systems`.
+
+#### 📚 Documentation
+- Rewrote `README.md` to accurately describe the new role-based structure and optional subfolders.
+- Added a "Credits" section to `README.md` acknowledging `bmadcode` for influential repositories (`cursor-custom-agents-rules-generator`, `BMAD-METHOD`) and linking to their GitHub/YouTube.
+- Updated `CONTRIBUTING.md` to reflect the current file structure and remove outdated naming conventions.
+
 ## 0.0.7 (April 17, 2025)
 
 #### 📚 Documentation

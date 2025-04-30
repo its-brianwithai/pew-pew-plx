@@ -1,0 +1,87 @@
+---
+description: 'Ensures that Supabase Realtime channels requiring authorization (based on RLS policies on `realtime.messages`) are correctly configured as private in Flutter applications. Apply when setting up Realtime subscriptions (Broadcast, Presence) where access control is needed.'
+globs:
+alwaysApply: false
+---
+
+# Using Private Realtime Channels in Flutter
+
+## Critical Rules
+
+- **Purpose:** Private channels enforce authorization checks based on RLS policies defined on the `realtime.messages` table before allowing a client to join, send, or receive messages (Broadcast/Presence) on a specific channel topic.
+- **When to Use:** Use private channels whenever you need to restrict who can interact with a Realtime channel based on user authentication status or other custom logic defined in RLS.
+- **Configuration:** When creating the channel instance, set the `private` flag to `true` within the `RealtimeChannelConfig` options.
+- **RLS Policies:** You **must** define corresponding RLS policies on the `realtime.messages` table in your database. These policies determine:
+    - Who can `SELECT` (receive messages/presence updates).
+    - Who can `INSERT` (send broadcast messages / track presence).
+    - Policies typically check `auth.uid()`, `realtime.topic()`, and `realtime.messages.extension` (`'broadcast'` or `'presence'`).
+- **Authentication:** The client must be authenticated (i.e., have a valid JWT) for the RLS policies (which usually rely on `auth.uid()`) to be evaluated correctly. The Supabase client automatically sends the JWT when connecting to a private channel.
+- **Subscription Status:** If authorization fails (due to missing/incorrect RLS policies or lack of authentication), the channel subscription will fail. Check the `error` parameter in the `.subscribe()` callback for details.
+
+## Examples
+
+<example>
+```dart
+// Get a private channel instance
+final privateChannel = supabase.channel(
+  'private-room:user-${supabase.auth.currentUser!.id}', // Example topic name
+  opts: const RealtimeChannelConfig(
+    private: true, // Mark the channel as private
+  ),
+);
+
+// Set up listeners (e.g., for broadcast)
+privateChannel.onBroadcast(
+  event: 'user-message',
+  callback: (payload) {
+    print('Received private message: $payload');
+  },
+).subscribe((status, error) {
+  if (status == RealtimeSubscribeStatus.subscribed) {
+    print('Successfully subscribed to private channel!');
+  } else if (status == RealtimeSubscribeStatus.channelError || error != null) {
+    // Subscription failed, likely due to RLS policy rejection
+    print('Failed to subscribe to private channel: $error');
+    // Handle error appropriately (e.g., show message to user)
+  }
+});
+
+// Corresponding RLS Policy Example (Allowing user to read/write on their own private channel)
+/*
+create policy "User can access their own private channel"
+on realtime.messages
+for all -- Covers SELECT (read) and INSERT (write)
+to authenticated
+using (
+  realtime.topic() = ('private-room:user-' || auth.uid()::text) and
+  realtime.messages.extension in ('broadcast', 'presence')
+)
+with check (
+  realtime.topic() = ('private-room:user-' || auth.uid()::text) and
+  realtime.messages.extension in ('broadcast', 'presence')
+);
+*/
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Accessing a restricted channel without setting private: true
+final channel = supabase.channel('private-room:user-123'); // Missing opts or private: false
+channel.subscribe((status, error) {
+  // Likely fails with channelError if RLS policies exist
+});
+
+// BAD: Setting private: true but having no or incorrect RLS policies
+final privateChannel = supabase.channel(
+  'some-topic',
+  opts: const RealtimeChannelConfig(private: true),
+);
+privateChannel.subscribe((status, error) {
+  // Fails with channelError because no RLS policy grants access
+});
+
+// BAD: Trying to access a private channel when the user is not authenticated
+// (Supabase client won't have a JWT to send for RLS checks)
+```
+</example>

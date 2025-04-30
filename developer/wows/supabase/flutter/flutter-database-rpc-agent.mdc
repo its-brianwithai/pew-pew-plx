@@ -1,0 +1,81 @@
+---
+description: 'Guides the correct usage of `supabase.rpc()` in Flutter to call PostgreSQL functions defined in your Supabase database. Covers passing parameters and handling responses/errors. Apply when interacting with custom database logic exposed via functions.'
+globs:
+alwaysApply: false
+---
+
+# Calling Database Functions (RPC) in Flutter
+
+## Critical Rules
+
+- **Method:** Use `supabase.rpc('function_name', params: params)` to call a database function.
+- **Function Name:** Provide the exact name of the PostgreSQL function as the first argument.
+- **Parameters:**
+    - If the function requires parameters, pass them in a `Map<String, dynamic>` to the `params` argument. The map keys must match the function's parameter names.
+    - If the function takes no parameters, omit the `params` argument or pass `null`.
+- **Response Handling:**
+    - The return value depends on what the PostgreSQL function returns.
+    - If the function returns `SETOF <table_type>`, the response (`.data`) will be a `List<Map<String, dynamic>>`, similar to `.select()`. You can chain filters (`.eq()`, `.limit()`, etc.) after `.rpc()` in this case.
+    - If the function returns a single value (e.g., `text`, `integer`, `boolean`), the response (`.data`) will be that value directly.
+    - If the function returns `void` or nothing, `.data` might be `null`.
+- **Error Handling:** Wrap `.rpc()` calls in `try-catch` blocks to handle `PostgrestException`. Errors can occur due to incorrect function names, parameter mismatches, RLS restrictions on the function, or errors within the function's execution.
+- **Async Nature:** RPC calls are asynchronous. Use `async/await` or `FutureBuilder`.
+
+## Examples
+
+<example>
+```dart
+// Assuming a function: hello_world() returns text
+try {
+  final response = await supabase.rpc('hello_world');
+  // response is likely 'hello world'
+  print('Response: $response');
+} on PostgrestException catch (error) {
+  context.showSnackBar('RPC Error: ${error.message}', isError: true);
+}
+
+// Assuming a function: add_planet(name text) returns bigint (the new ID)
+try {
+  final newPlanetId = await supabase.rpc(
+    'add_planet',
+    params: {'name': 'Jakku'},
+  );
+  // newPlanetId is the returned bigint
+  print('New planet ID: $newPlanetId');
+} on PostgrestException catch (error) {
+  context.showSnackBar('RPC Error: ${error.message}', isError: true);
+}
+
+// Assuming a function: get_planets() returns setof planets
+// We can chain filters like select()
+try {
+  final response = await supabase
+      .rpc('get_planets')
+      .eq('id', 1) // Filter the results from the function
+      .select('name') // Select specific columns from the returned set
+      .maybeSingle();
+
+  if (response != null) {
+    print('Planet name: ${response['name']}');
+  }
+} on PostgrestException catch (error) {
+  context.showSnackBar('RPC Error: ${error.message}', isError: true);
+}
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Incorrect function name
+// await supabase.rpc('helloo_world'); // Throws PostgrestException (404 or similar)
+
+// BAD: Missing required parameters
+// await supabase.rpc('add_planet'); // Throws PostgrestException (parameter mismatch)
+
+// BAD: Incorrect parameter name
+// await supabase.rpc('add_planet', params: {'planet_name': 'Jakku'}); // Throws PostgrestException
+
+// BAD: Not handling PostgrestException
+// await supabase.rpc('function_that_might_fail');
+```
+</example>

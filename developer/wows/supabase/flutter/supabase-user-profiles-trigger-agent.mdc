@@ -1,0 +1,131 @@
+---
+description: 'Recommends and guides the creation of a public `profiles` table and a database trigger/function to automatically copy user data from `auth.users` upon signup. This pattern is essential for making user profile information (like username, avatar URL) accessible via RLS-protected API calls from Flutter. Apply when user profile data needs to be stored and accessed beyond the basic `auth.users` information.'
+globs:
+alwaysApply: false
+---
+
+# Syncing `auth.users` to a Public `profiles` Table
+
+## Critical Rules
+
+- **Problem:** The `auth.users` table is in a protected schema (`auth`) and not directly queryable via the public API for security reasons.
+- **Solution:** Create a table in the `public` schema (e.g., `public.profiles`) to store publicly accessible (but RLS-protected) user profile data.
+- **`profiles` Table Structure:**
+    - Must include an `id` column (usually `uuid`) that is a `primary key` and references `auth.users(id)`.
+    - **Crucially**, include `on delete cascade` in the foreign key reference (`references auth.users on delete cascade`) so that deleting a user from `auth.users` automatically deletes their corresponding profile row.
+    - Add other columns needed for the profile (e.g., `username text`, `avatar_url text`, `updated_at timestamptz`).
+- **Trigger Function:** Create a PostgreSQL function (e.g., `public.handle_new_user()`) that:
+    - Returns `trigger`.
+    - Is written in `plpgsql`.
+    - Uses `security definer` to have permission to read `auth.users` (specifically the `new` record). **MUST** include `set search_path = '';` for security when using `security definer`.
+    - Inserts a new row into `public.profiles` using the `id` from the `new` record (`new.id`).
+    - Optionally copies initial data from `new.raw_user_meta_data` if provided during signup (e.g., `new.raw_user_meta_data ->> 'username'`).
+    - Returns `new`.
+- **Trigger:** Create a trigger (e.g., `on_auth_user_created`) that:
+    - Fires `after insert on auth.users`.
+    - Executes `for each row`.
+    - Calls the trigger function (`execute procedure public.handle_new_user()`).
+- **RLS on `profiles`:** Enable RLS on the `public.profiles` table and define appropriate policies (e.g., allow users to select/update their own profile, allow public select if needed).
+
+## Examples
+
+<example>
+```sql
+-- 1. Create public.profiles table
+create table public.profiles (
+  id uuid not null primary key,
+  updated_at timestamptz,
+  username text unique,
+  full_name text,
+  avatar_url text,
+  website text,
+
+  -- Foreign key constraint referencing auth.users
+  -- Ensures data integrity and enables cascading deletes
+  constraint profiles_id_fkey foreign key (id)
+  references auth.users (id) on delete cascade
+);
+
+-- Optional: Add constraint checks
+alter table public.profiles
+  add constraint username_length check (char_length(username) >= 3);
+
+-- 2. Enable RLS
+alter table public.profiles enable row level security;
+
+-- 3. Add RLS policies (Example: Allow public read access)
+create policy "Public profiles are viewable by everyone."
+  on profiles for select using ( true );
+
+create policy "Users can insert their own profile."
+  on profiles for insert with check ( (select auth.uid()) = id );
+
+create policy "Users can update own profile."
+  on profiles for update using ( (select auth.uid()) = id );
+
+-- 4. Create the trigger function
+create or replace function public.handle_new_user()
+returns trigger
+language plpgsql
+security definer set search_path = '' -- SECURITY DEFINER requires search_path
+as $$
+begin
+  -- Insert a new row into public.profiles
+  insert into public.profiles (id, username, avatar_url)
+  values (
+    new.id,
+    -- Optionally grab initial values from metadata if provided at signup
+    new.raw_user_meta_data ->> 'username',
+    new.raw_user_meta_data ->> 'avatar_url'
+  );
+  return new;
+end;
+$$;
+
+-- 5. Create the trigger
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute procedure public.handle_new_user();
+
+-- Optional: Function to handle user deletion cleanup if not using cascade
+-- create function public.handle_user_delete()
+-- returns trigger
+-- language plpgsql
+-- security definer set search_path = ''
+-- as $$
+-- begin
+--   delete from public.profiles where id = old.id;
+--   return old;
+-- end;
+-- $$;
+--
+-- create trigger on_auth_user_deleted
+--   after delete on auth.users
+--   for each row execute procedure public.handle_user_delete();
+```
+**Flutter Interaction:**
+```dart
+// Now you can query the public.profiles table from Flutter
+final response = await supabase.from('profiles').select().eq('id', userId).single();
+// Update profile data
+await supabase.from('profiles').update({'username': 'new_name'}).eq('id', userId);
+```
+</example>
+
+<example type="invalid">
+```sql
+-- BAD: Querying auth.users directly from Flutter (won't work due to schema permissions)
+// final response = await supabase.from('users', schema: 'auth').select();
+
+-- BAD: Forgetting `on delete cascade` on the foreign key reference
+-- constraint profiles_id_fkey foreign key (id) references auth.users (id);
+-- (Deleting user in Auth UI would leave orphaned profile row)
+
+-- BAD: Trigger function missing `security definer` or `set search_path = ''`
+-- create function public.handle_new_user() returns trigger language plpgsql as $$ ... $$;
+-- (Function might fail due to permissions or be insecure)
+
+-- BAD: Forgetting to enable RLS on public.profiles
+-- (Profile data would be exposed publicly via API)
+```
+</example>

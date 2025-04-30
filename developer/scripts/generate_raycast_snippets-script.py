@@ -8,7 +8,7 @@ import re  # Add import for regular expressions
 ROOT_FOLDER = "../"  # The root folder to start searching from (the developer directory)
 OUTPUT_FOLDER = "developer/artifacts"  # The folder where the JSON file will be saved (inside developer directory)
 ALLOWED_FOLDERS = ["prompts", "templates", "systems"]  # Only process folders with these exact names
-ALLOWED_FILE_TYPES = [".md"]  # Only process files with these extensions
+ALLOWED_FILE_TYPES = [".md, .mdc"]  # Only process files with these extensions
 
 # Set up logging
 logging.basicConfig(

@@ -1,0 +1,55 @@
+---
+description: 'Ensures the use of the PKCE (Proof Key for Code Exchange) flow for Supabase authentication in Flutter apps, which is the default and recommended approach in `supabase_flutter` v2+. Apply when implementing or reviewing authentication flows involving redirects (OAuth, Magic Links).'
+globs:
+alwaysApply: false
+---
+
+# Use PKCE Flow for Flutter Auth
+
+## Critical Rules
+
+- **Default in v2+:** The PKCE flow is the default `authFlowType` in `supabase_flutter` v2 and later. Explicit configuration is usually not needed unless overriding defaults.
+- **Enhanced Security:** PKCE provides better security than the implicit flow, especially for mobile apps, by mitigating authorization code interception attacks.
+- **How it Works:** The SDK automatically handles the code challenge and verifier exchange during the authentication process when PKCE is enabled.
+- **Requirement:** PKCE requires deep linking to be set up correctly to handle the callback containing the authorization code.
+- **Verification:** Ensure `authFlowType` is set to `AuthFlowType.pkce` (or left as default in v2+) in `FlutterAuthClientOptions` during `Supabase.initialize()` if custom auth options are provided.
+
+## Examples
+
+<example>
+```dart
+// main.dart - Explicitly setting PKCE (Default in v2+)
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+await Supabase.initialize(
+  url: 'YOUR_SUPABASE_URL',
+  anonKey: 'YOUR_SUPABASE_ANON_KEY',
+  authOptions: const FlutterAuthClientOptions(
+    // PKCE is the default, but shown here for clarity
+    authFlowType: AuthFlowType.pkce,
+  ),
+);
+
+// Auth call (PKCE handled automatically by SDK)
+await supabase.auth.signInWithOAuth(
+  OAuthProvider.google,
+  redirectTo: kIsWeb ? null : 'io.supabase.yourapp://login-callback/',
+);
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Explicitly setting Implicit flow (less secure for mobile)
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+await Supabase.initialize(
+  url: 'YOUR_SUPABASE_URL',
+  anonKey: 'YOUR_SUPABASE_ANON_KEY',
+  authOptions: const FlutterAuthClientOptions(
+    // Avoid Implicit flow unless specifically required and understood
+    authFlowType: AuthFlowType.implicit,
+  ),
+);
+```
+</example>

@@ -1,0 +1,123 @@
+---
+description: 'Guides the correct usage of `supabase_flutter` for uploading files (e.g., images, documents) to Supabase Storage buckets. Covers selecting files, different upload methods, handling progress, and error management. Apply when implementing file upload functionality.'
+globs:
+alwaysApply: false
+---
+
+# Uploading Files to Supabase Storage in Flutter
+
+## Critical Rules
+
+- **Get Bucket Reference:** Use `supabase.storage.from('bucket_name')` to get a reference to the target bucket.
+- **File Selection:** Use packages like `image_picker` or `file_picker` to allow users to select files from their device. These packages typically provide file paths or byte data.
+- **Upload Methods:**
+    - `upload(path, file)`: Uploads a `File` object (from `dart:io`). `path` is the desired path/filename within the bucket.
+    - `uploadBinary(path, data, fileOptions)`: Uploads raw `Uint8List` data. Requires `FileOptions` to specify `contentType` (e.g., `image/png`). Useful for web or when you have byte data directly.
+    - `update(path, file)` / `updateBinary(path, data, fileOptions)`: Updates an existing file at `path`.
+    - `upload()` and `update()` methods have an optional `fileOptions` parameter for setting `cacheControl` and `contentType`.
+    - `upsert: true` in `fileOptions` makes `upload`/`uploadBinary` behave like `upsert`, overwriting if the file exists.
+- **Storage Path:** The `path` argument in upload methods determines the object's key within the bucket. Include folders (e.g., `'public/avatars/user_id.png'`) and ensure unique filenames to avoid overwrites unless intended. Use timestamps or UUIDs for uniqueness.
+- **RLS Policies:** Ensure appropriate RLS policies are set on the `storage.objects` table to allow `INSERT` (for upload) and potentially `UPDATE` (for update/upsert) operations for the authenticated user and target bucket/path.
+- **Error Handling:** Wrap upload calls in `try-catch` blocks to handle `StorageException`. Check `error.message`. Common errors include RLS violations, bucket not found, or network issues.
+- **Async Nature:** Uploads are asynchronous. Provide user feedback (e.g., loading indicators, progress bars if using resumable uploads - though direct progress isn't standard in basic uploads).
+- **Public vs. Private Buckets:** Upload path/logic is the same, but accessing the file later depends on bucket permissions.
+
+## Examples
+
+<example>
+```dart
+import 'dart:io'; // For File
+import 'package:image_picker/image_picker.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+// Function to pick and upload an image
+Future<String?> uploadAvatar(String userId) async {
+  final picker = ImagePicker();
+  final imageFile = await picker.pickImage(
+    source: ImageSource.gallery,
+    maxWidth: 300,
+    maxHeight: 300,
+  );
+
+  if (imageFile == null) {
+    return null;
+  }
+
+  try {
+    final file = File(imageFile.path);
+    final fileExt = imageFile.path.split('.').last;
+    final fileName = '$userId.${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+    final filePath = 'public/$fileName'; // Example path structure
+
+    // Upload the file (mobile example using dart:io File)
+    await supabase.storage.from('avatars').upload(
+          filePath,
+          file,
+          fileOptions: FileOptions(
+            cacheControl: '3600', // Optional: Cache for 1 hour
+            contentType: imageFile.mimeType, // Optional: Set content type
+            upsert: false, // Optional: Default is false, set true to overwrite
+          ),
+        );
+
+    // Get the public URL (or signed URL for private buckets)
+    final imageUrl = supabase.storage.from('avatars').getPublicUrl(filePath);
+    return imageUrl;
+
+  } on StorageException catch (error) {
+    // Handle RLS errors, network errors, etc.
+    print('Storage Error: ${error.message}');
+    return null;
+  } catch (error) {
+    print('Generic Error: $error');
+    return null;
+  }
+}
+
+// Example using uploadBinary (useful for web or when you have bytes)
+Future<void> uploadBytes(String path, Uint8List data, String contentType) async {
+   try {
+      await supabase.storage.from('documents').uploadBinary(
+         path,
+         data,
+         fileOptions: FileOptions(contentType: contentType, upsert: true),
+      );
+      print('Bytes uploaded successfully');
+   } on StorageException catch (error) {
+      print('Storage Error: ${error.message}');
+   }
+}
+```
+**RLS Policy Example (Allow authenticated users to upload to 'avatars' bucket):**
+```sql
+CREATE POLICY "Allow authenticated uploads to avatars"
+ON storage.objects FOR INSERT TO authenticated
+WITH CHECK (bucket_id = 'avatars');
+
+-- Add SELECT if needed for viewing/updating later
+CREATE POLICY "Allow authenticated view of own avatars"
+ON storage.objects FOR SELECT TO authenticated
+USING (bucket_id = 'avatars' AND owner = auth.uid());
+
+-- Add UPDATE if upsert:true is used or update() is called
+CREATE POLICY "Allow authenticated update of own avatars"
+ON storage.objects FOR UPDATE TO authenticated
+USING (bucket_id = 'avatars' AND owner = auth.uid());
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Trying to upload without RLS INSERT policy configured
+// await supabase.storage.from('avatars').upload(path, file); // Throws StorageException (403/401)
+
+// BAD: Using incorrect bucket name
+// await supabase.storage.from('avatar').upload(path, file); // Throws StorageException (404)
+
+// BAD: Not handling StorageException
+// await supabase.storage.from('avatars').upload(path, file); // App might crash or hang
+
+// BAD: Forgetting FileOptions contentType for uploadBinary
+// await supabase.storage.from('documents').uploadBinary(path, data); // Might result in incorrect content type
+```
+</example>

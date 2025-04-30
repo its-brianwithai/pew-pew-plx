@@ -1,0 +1,84 @@
+---
+description: 'Guides the correct usage of common Supabase authentication methods within a Flutter application using `supabase_flutter` v2+. Covers OTP, OAuth, session handling, and error management. Apply when implementing sign-in, sign-up, sign-out, or session management logic.'
+globs:
+alwaysApply: false
+---
+
+# Using Supabase Auth Methods in Flutter
+
+## Critical Rules
+
+- **OTP Sign-in:** Use `supabase.auth.signInWithOtp()` for passwordless email login. Provide `email` and `emailRedirectTo` (for mobile deep links).
+- **OAuth Sign-in:** Use `supabase.auth.signInWithOAuth()`.
+    - Pass the provider using the `OAuthProvider` enum (e.g., `OAuthProvider.google`).
+    - Provide `redirectTo` for mobile deep links.
+    - For native providers like Google/Apple on mobile, consider using `signInWithIdToken()` after obtaining the token via native SDKs (e.g., `google_sign_in`, `sign_in_with_apple`) for a better UX. Generate nonces using `supabase.auth.generateRawNonce()` for Apple Sign In.
+- **Sign Out:** Use `supabase.auth.signOut()`. Handle potential `AuthException`.
+- **Get Current User/Session:** Access the current user via `supabase.auth.currentUser` and the session via `supabase.auth.currentSession`.
+- **Session Validity:** Check if a session is expired using `supabase.auth.currentSession?.isExpired`. Note that `Supabase.initialize()` in v2+ returns immediately; the session might be expired initially. Listen to `onAuthStateChange` for `AuthChangeEvent.tokenRefreshed` or `AuthChangeEvent.signedIn` events for a guaranteed valid session.
+- **Update User:** Use `supabase.auth.updateUser()` to change email, password, or user metadata (`data` parameter).
+- **Error Handling:** Wrap auth calls in `try-catch` blocks to handle `AuthException`. Provide user feedback using mechanisms like `SnackBar`.
+
+## Examples
+
+<example>
+```dart
+// OTP Sign In
+try {
+  await supabase.auth.signInWithOtp(
+    email: emailController.text,
+    emailRedirectTo: kIsWeb ? null : 'io.supabase.yourapp://login-callback/',
+  );
+  context.showSnackBar('Check your email!');
+} on AuthException catch (error) {
+  context.showSnackBar(error.message, isError: true);
+}
+
+// OAuth Sign In (GitHub example)
+try {
+  await supabase.auth.signInWithOAuth(
+    OAuthProvider.github,
+    redirectTo: kIsWeb ? null : 'io.supabase.yourapp://login-callback/',
+  );
+} on AuthException catch (error) {
+  context.showSnackBar(error.message, isError: true);
+}
+
+// Sign Out
+try {
+  await supabase.auth.signOut();
+  // Navigate to login page
+} on AuthException catch (error) {
+  context.showSnackBar(error.message, isError: true);
+}
+
+// Get Current User
+final user = supabase.auth.currentUser;
+if (user != null) {
+  print('User ID: ${user.id}');
+  print('User Email: ${user.email}');
+}
+
+// Check Session Expiry
+final session = supabase.auth.currentSession;
+if (session != null && !session.isExpired) {
+  // Session is likely valid
+} else {
+  // Session is null or expired, wait for onAuthStateChange
+}
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Using Provider enum from v1
+// await supabase.auth.signInWithOAuth(Provider.google);
+
+// BAD: Not handling AuthException
+// await supabase.auth.signOut(); // Might throw
+
+// BAD: Assuming session is always valid immediately after initialize() in v2
+// final session = supabase.auth.currentSession;
+// makeApiCall(session!.accessToken); // session might be null or expired
+```
+</example>

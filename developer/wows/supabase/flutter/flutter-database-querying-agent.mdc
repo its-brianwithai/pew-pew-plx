@@ -1,0 +1,115 @@
+---
+description: 'Guides the correct usage of `supabase-flutter` for querying data from Supabase Postgres tables. Covers selecting data, applying filters, handling responses, and error management. Apply when fetching data for display in the Flutter UI.'
+globs:
+alwaysApply: false
+---
+
+# Querying Supabase Database in Flutter
+
+## Critical Rules
+
+- **Basic Select:** Use `supabase.from('table_name').select('column1, column2')` to fetch data. Select specific columns for performance; use `select()` or `select('*')` to get all columns.
+- **Filtering:** Chain filter methods after `select()`:
+    - `.eq('column', value)`: Equal to
+    - `.neq('column', value)`: Not equal to
+    - `.gt('column', value)`, `.gte('column', value)`: Greater than (or equal)
+    - `.lt('column', value)`, `.lte('column', value)`: Less than (or equal)
+    - `.like('column', 'pattern%')`: LIKE operator
+    - `.ilike('column', 'pattern%')`: ILIKE operator (case-insensitive)
+    - `.isFilter('column', value)`: IS operator (e.g., `null`) - Renamed from `is_` in v2.
+    - `.inFilter('column', [value1, value2])`: IN operator - Renamed from `in_` in v2.
+    - `.contains('column', value)`, `.containedBy('column', value)`: For array or range types.
+    - `.or('filter1,filter2')`, `.not('column', 'operator', value)`: Logical operators.
+- **Ordering:** Use `.order('column', ascending: true/false)` to sort results.
+- **Limiting:** Use `.limit(count)` to limit the number of rows returned.
+- **Pagination:** Use `.range(from, to)` for pagination (e.g., `range(0, 9)` for the first 10 rows).
+- **Single Row:** Use `.single()` if you expect exactly one row. Throws an error if 0 or >1 rows are returned. Use `.maybeSingle()` if you expect 0 or 1 row.
+- **Response Handling:** Queries return a `PostgrestResponse`. Access the data via `response.data`. The data is typically a `List<Map<String, dynamic>>`.
+- **Error Handling:** Wrap queries in `try-catch` blocks to handle `PostgrestException`. Check `error.message`, `error.code` (PostgREST error code in v2+), `error.details`, `error.hint`.
+- **Async Nature:** Database queries are asynchronous. Use `async/await` or `FutureBuilder` / `StreamBuilder` (for Realtime) to handle the results in your UI.
+- **Immutability (v2+):** Query builders are immutable in v2+. Chaining filters creates new query builder instances.
+
+## Examples
+
+<example>
+```dart
+// Fetch all instruments
+final response = await supabase.from('instruments').select();
+if (response.data != null) {
+  final List<Map<String, dynamic>> instruments = List<Map<String, dynamic>>.from(response.data!);
+  // Use instruments data
+}
+
+// Fetch specific instrument by ID using maybeSingle()
+try {
+  final response = await supabase
+      .from('instruments')
+      .select()
+      .eq('id', instrumentId)
+      .maybeSingle(); // Returns Map<String, dynamic>?
+
+  if (response != null) {
+    // Use instrument data
+  } else {
+    // Instrument not found
+  }
+} on PostgrestException catch (error) {
+  context.showSnackBar('Error fetching instrument: ${error.message}', isError: true);
+}
+
+// Fetch instruments with filtering and ordering
+try {
+  final response = await supabase
+      .from('instruments')
+      .select('name, type')
+      .eq('type', 'Guitar')
+      .order('name', ascending: true)
+      .limit(10);
+   // Use response.data
+} on PostgrestException catch (error) {
+   context.showSnackBar('Error fetching guitars: ${error.message}', isError: true);
+}
+
+// Using FutureBuilder
+FutureBuilder<List<Map<String, dynamic>>>(
+  future: supabase.from('instruments').select(),
+  builder: (context, snapshot) {
+    if (snapshot.connectionState == ConnectionState.waiting) {
+      return const CircularProgressIndicator();
+    }
+    if (snapshot.hasError) {
+      return Text('Error: ${snapshot.error}');
+    }
+    if (!snapshot.hasData || snapshot.data!.isEmpty) {
+      return const Text('No instruments found.');
+    }
+    final instruments = snapshot.data!;
+    return ListView.builder(
+      itemCount: instruments.length,
+      itemBuilder: (context, index) {
+        return ListTile(title: Text(instruments[index]['name']));
+      },
+    );
+  },
+)
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Not handling potential null data
+// final data = (await supabase.from('instruments').select()).data;
+// print(data.length); // Might throw if data is null
+
+// BAD: Using .single() when multiple rows might be returned
+// final response = await supabase.from('instruments').select().eq('type', 'Guitar').single(); // Throws if >1 guitar
+
+// BAD: Not handling PostgrestException
+// final response = await supabase.from('non_existent_table').select(); // Throws unhandled exception
+
+// BAD: Using v1 mutable query builder logic in v2
+// final query = supabase.from('instruments').select();
+// final guitars = await query.eq('type', 'Guitar');
+// final basses = await query.eq('type', 'Bass'); // This query still has .eq('type', 'Guitar') in v1! Correct in v2.
+```
+</example>

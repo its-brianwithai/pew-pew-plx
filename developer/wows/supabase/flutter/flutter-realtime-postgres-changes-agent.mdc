@@ -1,0 +1,89 @@
+---
+description: 'Guides the implementation of listening to database changes (INSERT, UPDATE, DELETE) in real-time using Supabase Realtime in Flutter (`supabase_flutter` v2+). Covers subscribing to changes on specific tables/schemas, applying filters, and handling typed payloads.'
+globs:
+alwaysApply: false
+---
+
+# Listening to Postgres Changes with Realtime in Flutter
+
+## Critical Rules
+
+- **Get Channel:** Obtain a channel instance using `supabase.channel('channel_name')`. Channel names are arbitrary but useful for grouping subscriptions.
+- **Subscription Method:** Use the `.onPostgresChanges()` method (introduced in v2) to subscribe to database events.
+- **Event Type:** Specify the event(s) to listen for using `PostgresChangeEvent` enum (e.g., `insert`, `update`, `delete`, `all`).
+- **Schema & Table:** Specify the `schema` (usually `'public'`) and `table` you want to listen to.
+- **Filtering (Optional):** Provide a `PostgresChangeFilter` to listen only to changes matching specific criteria (e.g., rows where `column == value`). Use `PostgresChangeFilterType` (e.g., `eq`, `neq`, `gt`).
+- **Callback:** Provide a `callback` function that receives a `PostgresChangePayload` object.
+- **Payload:** The `PostgresChangePayload` contains:
+    - `eventType`: The type of change (`INSERT`, `UPDATE`, `DELETE`).
+    - `schema`, `table`: Source of the change.
+    - `newRecord`: A `Map<String, dynamic>` representing the new state of the row (for INSERT, UPDATE).
+    - `oldRecord`: A `Map<String, dynamic>` representing the previous state of the row (for UPDATE, DELETE). Contains primary keys only by default unless table `REPLICA IDENTITY` is set to `FULL`.
+    - `commitTimestamp`: Timestamp of the change.
+    - `errors`: Any errors during the change processing.
+- **Subscribe:** Call `.subscribe()` on the channel after setting up listeners. The optional callback in `.subscribe()` indicates the connection status (`RealtimeSubscribeStatus.subscribed`, `RealtimeSubscribeStatus.closed`, etc.) and potential connection errors.
+- **Unsubscribe:** Call `supabase.removeChannel(channel)` or `supabase.removeAllChannels()` when the listener is no longer needed (e.g., in `dispose()`) to clean up resources.
+
+## Examples
+
+<example>
+```dart
+// Inside a StatefulWidget's State class
+RealtimeChannel? _messagesChannel;
+
+@override
+void initState() {
+  super.initState();
+  _messagesChannel = supabase.channel('public:messages');
+
+  _messagesChannel!.onPostgresChanges(
+    event: PostgresChangeEvent.insert, // Listen only to inserts
+    schema: 'public',
+    table: 'messages',
+    // Optional filter: Only messages for room_id = 1
+    filter: PostgresChangeFilter(
+      type: PostgresChangeFilterType.eq,
+      column: 'room_id',
+      value: 1,
+    ),
+    callback: (payload) {
+      print('New message received: ${payload.newRecord}');
+      // Update UI based on the new message
+      setState(() {
+        // Add message to a list, etc.
+      });
+    },
+  ).subscribe((status, error) {
+     if (status == RealtimeSubscribeStatus.subscribed) {
+        print('Subscribed to messages channel!');
+     } else if (error != null) {
+        print('Error subscribing to messages: $error');
+     }
+  });
+}
+
+@override
+void dispose() {
+  if (_messagesChannel != null) {
+    supabase.removeChannel(_messagesChannel!); // Unsubscribe
+  }
+  super.dispose();
+}
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Using v1 .on() method syntax in v2
+// _channel.on(RealtimeListenTypes.postgresChanges, ChannelFilter(...), callback);
+
+// BAD: Incorrect filter type or value
+// filter: PostgresChangeFilter(type: PostgresChangeFilterType.eq, column: 'room_id', value: 'abc') // if room_id is int
+
+// BAD: Not unsubscribing in dispose()
+// Leads to resource leaks and potential errors
+
+// BAD: Accessing payload properties incorrectly (v1 style)
+// callback: (payload) { print(payload['new']); } // Use payload.newRecord in v2
+```
+</example>

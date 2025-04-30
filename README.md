@@ -1,57 +1,76 @@
-# ⚡ Ultra Wide Turbo Workspace
+# ⚡ Ultra Wide Turbo Workspace 0.0.8
 
 [![Brought to you by ultrawideturbodevs.com](https://img.shields.io/badge/Brought%20to%20you%20by-ultrawideturbodevs.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://ultrawideturbodevs.com)
 
-🎩  A virtual organization where you are the CEO and the main folders represent different roles working for you. Each role has its own set of prompts, documents, and main activities.
-
-💭 Each folder can thus function as an individual agent by opening it separately. However, real magic may happen when you use a single agent to orchestrate communication and collaboration between all of them. This might take some creative thinking and technical handiness, but once you get the hang of it there's some really cool stuff you can do with it. Especially when you learn to combine specific roles and their tools within your company with external tools like [Cursor AI](https://www.cursor.com/ai-chatbot), [Repo Prompt](https://www.repoprompt.com/) and a big context tool like [Google AI Studio](https://aistudio.google.com/).
-
-The possibilities are endless. In any case, no matter how you decide to use it, or not. This repo has many prompts, templates, and all sorts of other things that I use on a daily base. May you at least find something useful while you're here 🤙.
-
-> **💭 Little Disclaimer:** I use this repository to direct my life and company in a sort of custom agentic way. While I try to make what I add generic for anyone to use, there might be files and folders included that are specific to something I'm working on. I have left these in here to serve as examples of how you could use it. All these files can be found by grepping the `*.turbo.*` blob. You can remove all of them by running the `developer/scripts/remove-turbo-examples-script.sh` script, which will then also add the glob to .gitignore for you.
+🎩 A virtual organization where you are the CEO. This workspace is structured around distinct **Roles**, each represented by a top-level folder acting as their dedicated "office".
 
 ## 👥 Roles
 
-A role represents a specialized team member in your virtual organization with its own expertise, responsibilities, and dedicated workspace structure.
+A role represents a specialized team member in your virtual organization with its own expertise, responsibilities, and dedicated workspace folder.
 
-Examples:
+Current Roles:
 
-- [Developer](developer/)
-- [Designer](designer/)
-- [Marketeer](marketeer/)
-- [Operator](operator/)
-- Project Manager *(coming soon, hiring process in progress)*
-- Data Analyst *(coming soon, hiring process in progress)*
+- [architect](architect/)
+- [aso-expert](aso-expert/)
+- [business-analyst](business-analyst/)
+- [content-creator](content-creator/)
+- [developer](developer/)
+- [operator](operator/)
+- [project-manager](project-manager/)
+- [prompt-engineer](prompt-engineer/)
+- [proposal-manager](proposal-manager/)
+- [tester](tester/)
+- [uiux-expert](uiux-expert/)
 
-### 📁 Folder Structure
+### 📁 Role Office Structure
 
-Each role in the workspace has access to a standardized set of folders and document types to organize their work effectively. This is an example structure - as your work evolves, you'll likely add other folders to fit your specific needs. Feel free to explore the repository to see how we've extended this structure ourselves.
+Each role's top-level folder serves as their office. Inside, you can optionally organize resources into standardized subfolders to maintain consistency:
 
-| Folder           | Purpose                         | Examples                                                  |
-|------------------|---------------------------------|-----------------------------------------------------------|
-| 🎨 artifacts/    | Final deliverables and results  | Compiled reports, generated code, finalized documents     |
-| 📦 resources/    | Reference materials and assets  | Images, fonts, datasets, reference files, sample files    |
-| 📝 backlog/      | Pending tasks and future work   | Feature requests, ideas for evaluation                    |
-| 🔑 credentials/  | Secure access information       | API keys, service accounts, access permissions            |
-| 📚 docs/         | Comprehensive documentation     | Architecture docs, style guides, process documentation    |
-| 🖋️ drafts/      | Work-in-progress content        | Partial documents, initial designs, active work           |
-| 📥 inbox/        | Staging area for new requests   | Unprocessed tasks, items awaiting triage                  |
-| 📘 instructions/ | Step-by-step guides             | How-to guides, tutorials, learning materials              |
-| 💬 prompts/      | AI model instructions           | System prompts, activity prompts                          |
-| 📝 refinements/  | Requirements and detailed plans | User stories, acceptance criteria, refined specifications |
-| ✅ rubrics/       | Evaluation criteria             | Quality standards, assessment frameworks                  |
-| 📜 scripts/      | Automated procedures            | Shell scripts, automation code                            |
-| ⚙️ systems/      | Reusable workflows              | Standard procedures, process templates                    |
-| ✓ tasks/         | Active work items               | In-progress tasks, current priorities                     |
-| 📋 templates/    | Standardized formats            | Document templates, starter files                         |
-| 🛠️ tools/       | Role-specific utilities         | Software tools, productivity enhancers                    |
-| 📚 wiki/         | Knowledge base                  | Reference materials, domain knowledge                     |
+| Folder                 | Purpose                                    | Examples                                                                                                       |
+|------------------------|--------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 💬 prompts/agents/     | AI agent persona definitions               | Files defining agent roles (e.g., `you-are-{persona}.md`)                                                      |
+| 💬 prompts/activities/ | AI agent task instructions                 | Files defining specific tasks (e.g., `plx-{activity}.md`)                                                      |
+| 📋 templates/          | Standardized formats                       | Document templates, starter files (`*-template.md`)                                                            |
+| ✨ wows/                | Way of Workings (Best Practices/Guides)    | How-to guides, tutorials, best practice docs (`wow-for-*.md`)                                                  |
+| ✅ rubrics/             | Evaluation criteria                        | Quality standards, assessment frameworks (`*-rubric.md`)                                                       |
+| 📜 scripts/            | Automated procedures                       | Shell scripts, Python scripts (`*-script.*`)                                                                   |
+| ⚙️ systems/            | Repeatable workflows & standard procedures | Process templates, defined workflows (`*-system.md`)                                                           |
+| 📦 resources/          | Reusable assets & reference materials      | Collections of some kind, locations of specific tools, any other misc reusable inputs (`the-*.md`, `all-*.md`) |
 
 ## 💎 Credits
 
-This workspace framework was enhanced with inspiration from:
+This workspace framework is deeply integrated with the methodology and tools created by **[bmadcode](https://github.com/bmadcode)**. We've not only adapted concepts but have incorporated the full suite of BMAD persona agents throughout our workspace structure as key components:
 
-- [bmadcode/cursor-auto-rules-agile-workflow](https://github.com/bmadcode/cursor-auto-rules-agile-workflow) - Special thanks for the excellent markdown guide and comprehensive automatic rules creation documentation.
+-   **[BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD):** The B.M.A.D. Method (Breakthrough Method Agile-AI Driven-Development) fundamentally shapes our role-based agentic workflow and persona structure. This comprehensive methodology transforms product ideas into fully implemented applications through AI-driven processes.
+
+-   **[cursor-custom-agents-rules-generator](https://github.com/bmadcode/cursor-custom-agents-rules-generator):** We've integrated the rules generation approach and agent prompts from this project throughout our workspace.
+
+### BMAD Persona Agents
+
+We extensively utilize the following BMAD persona agents throughout our workspace:
+
+| Persona File | Role | Location | Purpose |
+|--------------|------|----------|---------|
+| `you-are-a-bmad-architect.md` | Architect | architect/prompts/agents/ | Creates detailed, opinionated Architecture Documents that serve as technical blueprints based on PRDs, handling technology selection, standards definition, and architectural decisions |
+| `you-are-a-bmad-business-analyst.md` | Business Analyst | business-analyst/prompts/agents/ | Performs market research and project definition, analyzing market opportunities, competitors, and user demographics while guiding structured Project Brief creation |
+| `you-are-a-bmad-developer.md` | Developer | developer/prompts/agents/ | Works through Agile user stories sequentially, implementing features while following technical standards and maintaining test coverage |
+| `you-are-a-bmad-prd-expert.md` | Project Manager | project-manager/prompts/agents/ | Creates Product Requirements Documents and manages the Agile workflow of stories and tasks |
+| `you-are-a-bmad-product-manager.md` | Project Manager | project-manager/prompts/agents/ | Translates Agile user stories into detailed specifications with technical details from PRDs and Architecture Documents |
+| `you-are-a-bmad-product-owner.md` | Project Manager | project-manager/prompts/agents/ | Creates logically ordered backlogs of Epics and User Stories for the MVP based on PRD and Architecture Documents |
+| `you-are-a-bmad-rules-agent.md` | Prompt Engineer | prompt-engineer/prompts/agents/ | Manages and generates consistent rule formats for maintaining development standards and AI agent behaviors |
+| `you-are-a-bmad-vercel-engineer.md` | UI/UX Expert | uiux-expert/prompts/agents/ | Translates UI/UX specifications into optimized prompts for Vercel's V0 AI UI generation tool |
+
+### Additional BMAD Resources
+
+We've also incorporated other valuable BMAD resources:
+
+- `bmad-story-template.md` - Template for creating standardized Agile stories
+- `bmad-architecture-template.md` - Template for creating Architecture Documents
+- `bmad-prd-template.md` - Template for creating Product Requirements Documents
+- `wow-for-the-bmad-code-method.md` - A comprehensive guide explaining the entire methodology
+- `wow-for-bmad-agile-workflow.md` - Guide for implementing BMAD Agile workflow practices
+
+Check out [bmadcode's GitHub](https://github.com/bmadcode) and [YouTube channel](https://www.youtube.com/@BMadCode) for more insights into agentic development workflows.
 
 ## 🤝 Contributing
 

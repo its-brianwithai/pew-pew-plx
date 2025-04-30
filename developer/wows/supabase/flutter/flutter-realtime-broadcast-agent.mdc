@@ -1,0 +1,96 @@
+---
+description: 'Guides the use of Supabase Realtime Broadcast feature in Flutter (`supabase_flutter` v2+) for sending and receiving ephemeral messages between clients connected to the same channel. Covers sending (`channel.send()`) and receiving (`channel.onBroadcast()`) messages.'
+globs:
+alwaysApply: false
+---
+
+# Using Realtime Broadcast in Flutter
+
+## Critical Rules
+
+- **Purpose:** Broadcast is for sending temporary, stateless messages directly between clients on the same channel. Messages are not persisted in the database. Use cases include typing indicators, live cursors, ephemeral notifications.
+- **Get Channel:** Obtain a channel instance using `supabase.channel('channel_name')`.
+- **Listen for Broadcasts:** Use the `.onBroadcast()` method (introduced in v2).
+    - Specify the `event` name (a string) you want to listen for.
+    - Provide a `callback` function that receives the message `payload` (a `Map<String, dynamic>`).
+- **Send Broadcasts:** Use `channel.send()`.
+    - Specify the `type` as `'broadcast'`.
+    - Specify the `event` name (must match the listener's event name).
+    - Provide the `payload` (a `Map<String, dynamic>`) to send.
+- **Subscribe:** Call `.subscribe()` on the channel after setting up listeners. Check the status in the subscribe callback.
+- **Unsubscribe:** Call `supabase.removeChannel(channel)` or `supabase.removeAllChannels()` in `dispose()` to clean up.
+- **Authorization:** If the channel requires authorization (RLS on `realtime.messages`), ensure the channel is initialized with `private: true` and the user has `INSERT` permissions for broadcast messages on that topic.
+
+## Examples
+
+<example>
+```dart
+// Inside a StatefulWidget's State class
+RealtimeChannel? _broadcastChannel;
+final String _userId = supabase.auth.currentUser!.id;
+
+@override
+void initState() {
+  super.initState();
+  _broadcastChannel = supabase.channel('typing-indicators');
+
+  // Listen for 'typing' events from other users
+  _broadcastChannel!.onBroadcast(
+    event: 'typing',
+    callback: (payload) {
+      // Check if the payload is from another user
+      if (payload['user_id'] != _userId) {
+        print('User ${payload['user_id']} is typing: ${payload['is_typing']}');
+        // Update UI to show typing indicator
+        setState(() {
+          // Update typing status map, etc.
+        });
+      }
+    },
+  ).subscribe((status, error) {
+     if (status == RealtimeSubscribeStatus.subscribed) {
+        print('Subscribed to typing indicators!');
+     }
+  });
+}
+
+// Function to send typing status
+Future<void> sendTypingStatus(bool isTyping) async {
+  if (_broadcastChannel?.isSubscribed == true) {
+    try {
+      await _broadcastChannel!.send(
+        type: 'broadcast',
+        event: 'typing',
+        payload: {'user_id': _userId, 'is_typing': isTyping},
+      );
+    } catch (e) {
+      print('Error sending typing status: $e');
+    }
+  }
+}
+
+@override
+void dispose() {
+  if (_broadcastChannel != null) {
+    supabase.removeChannel(_broadcastChannel!); // Unsubscribe
+  }
+  super.dispose();
+}
+```
+</example>
+
+<example type="invalid">
+```dart
+// BAD: Using v1 .on() method syntax in v2
+// _channel.on(RealtimeListenTypes.broadcast, ChannelFilter(event: 'typing'), callback);
+
+// BAD: Mismatched event names between sender and listener
+// Listener: .onBroadcast(event: 'typing', ...)
+// Sender: .send(..., event: 'user_typing', ...)
+
+// BAD: Sending non-Map payload (must be Map<String, dynamic>)
+// await _channel.send(type: 'broadcast', event: 'typing', payload: 'true');
+
+// BAD: Not unsubscribing in dispose()
+```
+</example>

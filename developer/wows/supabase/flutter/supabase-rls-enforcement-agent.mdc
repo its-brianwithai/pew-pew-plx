@@ -1,0 +1,90 @@
+---
+description: 'CRITICAL RULE: Enforces the understanding and implementation of Row Level Security (RLS) for all tables accessed directly by the Flutter client via the Supabase API. Apply whenever creating new tables, writing database queries/mutations in Flutter, or reviewing data access patterns. RLS is the primary security mechanism for client-side data access.'
+globs:
+alwaysApply: false
+---
+
+# Enforce Row Level Security (RLS) for Flutter Client Access
+
+## Critical Rules
+
+- **Enable RLS:** RLS **MUST** be enabled on **ALL** tables in exposed schemas (typically `public`) that the Flutter client interacts with directly via the Supabase API (`supabase.from('table').select/insert/update/delete/rpc`). Use `alter table your_table enable row level security;`.
+- **Default Deny:** Once RLS is enabled, all access is denied by default until explicit `POLICY` statements are created.
+- **Create Policies:** Define policies for each required operation (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) on each table.
+- **Policy Structure:**
+    - `CREATE POLICY "Policy Name" ON table_name`
+    - `FOR {SELECT | INSERT | UPDATE | DELETE | ALL}`
+    - `TO {authenticated | anon | role_name}`: Specify which role(s) the policy applies to. Use `authenticated` for logged-in users, `anon` for public access.
+    - `USING ( condition )`: Required for `SELECT`, `UPDATE`, `DELETE`. Defines which *existing* rows the operation can apply to. The condition must evaluate to true for access.
+    - `WITH CHECK ( condition )`: Required for `INSERT`, `UPDATE`. Defines conditions that the *new* or *updated* row data must satisfy.
+- **Use `auth.uid()`:** For user-specific data access, policies **MUST** use `(select auth.uid())` to compare against a user identifier column (e.g., `user_id uuid`) in the table. Example: `USING ( (select auth.uid()) = user_id )`.
+- **Secure Functions:** Database functions called via `rpc()` are also subject to the caller's role permissions unless defined with `SECURITY DEFINER`. If using `SECURITY DEFINER`, ensure the function itself implements proper authorization checks and sets `search_path = ''`.
+- **Test Policies:** Thoroughly test RLS policies locally or in staging to ensure they grant the intended access and deny unintended access. Test as both authenticated and anonymous users.
+- **Storage RLS:** RLS also applies to the `storage.objects` table for controlling file uploads, downloads, and access.
+
+## Examples
+
+<example>
+```sql
+-- Example: Profiles table accessible by users
+
+-- 1. Enable RLS
+alter table public.profiles enable row level security;
+
+-- 2. Allow anyone to SELECT public profiles (example)
+create policy "Public profiles are viewable by everyone."
+  on public.profiles for select
+  to anon, authenticated -- Applies to both anon and logged-in users
+  using ( true ); -- Condition is always true
+
+-- 3. Allow authenticated users to INSERT their own profile
+create policy "Users can insert their own profile."
+  on public.profiles for insert
+  to authenticated -- Only logged-in users
+  with check ( (select auth.uid()) = user_id ); -- Ensure inserted user_id matches the logged-in user
+
+-- 4. Allow authenticated users to UPDATE their own profile
+create policy "Users can update own profile."
+  on public.profiles for update
+  to authenticated
+  using ( (select auth.uid()) = user_id ) -- Can only update rows they own
+  with check ( (select auth.uid()) = user_id ); -- Cannot change user_id to someone else's
+
+-- 5. Allow authenticated users to DELETE their own profile
+create policy "Users can delete own profile."
+  on public.profiles for delete
+  to authenticated
+  using ( (select auth.uid()) = user_id ); -- Can only delete rows they own
+```
+**Flutter Query (implicitly uses RLS):**
+```dart
+// This SELECT query will only return rows allowed by the SELECT policy
+final response = await supabase.from('profiles').select();
+
+// This INSERT will only succeed if the INSERT policy's WITH CHECK condition is met
+await supabase.from('profiles').insert({'user_id': supabase.auth.currentUser!.id, 'username': 'Me'});
+```
+</example>
+
+<example type="invalid">
+```sql
+-- BAD: Table accessed by Flutter client but RLS is not enabled
+-- alter table public.sensitive_data disable row level security; -- DANGEROUS
+
+-- BAD: Policy grants access too broadly
+create policy "Allow all updates" on public.profiles for update using ( true ); -- Allows any user to update any profile
+
+-- BAD: Missing policy for a required operation (e.g., no INSERT policy, so inserts fail)
+
+-- BAD: Policy condition doesn't use auth.uid() correctly for user-specific data
+create policy "Incorrect user check" on public.profiles for select using ( user_id is not null ); -- Doesn't restrict to the *current* user
+```
+**Flutter Query (fails due to missing/incorrect RLS):**
+```dart
+// Fails if RLS enabled but no SELECT policy exists or allows access
+// final response = await supabase.from('profiles').select();
+
+// Fails if INSERT policy doesn't allow this user or data
+// await supabase.from('profiles').insert({'user_id': some_other_user_id, 'username': 'Hacker'});
+```
+</example>
