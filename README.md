@@ -6,17 +6,24 @@
 
 ---
 
-## ✨ Latest Release: 0.0.10 (April 30, 2025)
+## ✨ Latest Release: 0.0.11 (May 5, 2025)
 
-#### 🛠️ Improvements
-- Enhanced `generate_raycast_snippets-script.py` to run from the project root and correctly process files from prompts, templates, systems, and wows folders.
+#### ✨ Major Features
+- **BMAD Framework Reorganization**: Moved BMAD-related content to its own dedicated folder with specialized templates and agent prompts.
+- **New Doc Expert Role**: Added a new role with dedicated prompts and activities for document management.
 
-#### 🏗️ Infrastructure
-- Added Raycast snippet generation capability: Creates JSON snippets from project markdown files with variable transformation support.
+#### 🏗️ Structural Changes
+- Standardized naming conventions across files (removing "for" in WOW files).
+- Renamed agent prompts to follow consistent pattern.
+- Added new agent roles across multiple domains.
 
-#### 🔄 Previous Release (0.0.9)
-- Added standardized activity prompts (`plx-*.md`) across multiple roles (Architect, Business Analyst, Project Manager, Prompt Engineer).
-- Refined the `project-manager` agent prompt with clearer instructions and a detailed PRD template.
+#### 🛠️ New Resources
+- Added Flutter-specific UI component templates and various Markdown snippets.
+- Created new templates for development planning.
+
+#### 🔄 Previous Release (0.0.10)
+- Enhanced `generate_raycast_snippets-script.py` to run from the project root.
+- Added Raycast snippet generation capability for project markdown files.
 
 #### 🛠️ Improvements
 - Updated file counts and summaries in documentation.
@@ -181,6 +188,14 @@ uiux-expert/
 │   └── agents/ (1)
 └── rubrics/ (1)
 ```
+
+---
+
+## 💎 Credits
+
+We've organized BMAD-related agents and templates into their own dedicated folder as they have inspired us and proven extremely helpful in many cases. 
+
+Check out [bmadcode's GitHub](https://github.com/bmadcode) and [YouTube channel](https://www.youtube.com/@BMadCode) for more insights into agentic development workflows.
 
 ---
 
