@@ -1,0 +1,10 @@
+TFormField<ShadTimeOfDay>(
+  config: CONFIG,
+  label: LABEL,
+  builder: (context, config, child) => ShadTimePicker(
+    controller: config.timePickerController,
+    onChanged: config.silentUpdateValue,
+    initialValue: config.initialValue,
+    enabled: config.isEnabled && !config.isReadOnly,
+  ),
+)

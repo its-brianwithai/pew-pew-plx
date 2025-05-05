@@ -1,0 +1,14 @@
+TFormField<String>(
+  config: CONFIG,
+  label: LABEL,
+  builder: (context, config, child) => ShadTextarea(
+    enabled: config.isEnabled && !config.isReadOnly,
+    placeholder: NULL,
+    onSubmitted: NULL,
+    controller: config.textEditingController,
+    initialValue: config.initialValue,
+    readOnly: config.isReadOnly,
+    onChanged: (value) => config.silentUpdateValue(value),
+    focusNode: config.focusNode,
+  ),
+)

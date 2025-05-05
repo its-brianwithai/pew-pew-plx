@@ -1,3 +1,4 @@
+
 Please create a detailed overview of best practices for a specific stack of technologies based on the following user request:
 
 <user_request>

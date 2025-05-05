@@ -6,10 +6,10 @@
 > - GPT Instructions: Start by listing all nouns from your feature description - these are your potential actors and components. Then expand this list by asking: who uses it, what do they interact with, what shows information, what stores data, and what processes data? For each item, decide if it's an Actor (can perform actions) or Component (is acted upon). Finally, break down any complex components into smaller, more manageable pieces.
 
 > - Possible Parents: Itself
-> - Link actors and components to their (optional) parent by starting with the parent in [[double square brackets]] and the actor(s)/component(s) beneath it. Example:
-> 	- [[parent]]
-> 		- [[Actor]]
-> 		- [[Component]]
+> - Link actors and components to their (optional) parent by starting with the parent in [square brackets] and the actor(s)/component(s) beneath it. Example:
+> 	- [parent]
+> 		- [Actor]
+> 		- [Component]
 ---
 
 - [ ]
@@ -22,10 +22,10 @@
 > - GPT Instructions: Take each Actor and Component and list everything they can do, must do, or should do automatically. Start each activity with a verb (create, update, delete, etc.) and make it specific. Think about: user interactions, system automations, periodic tasks, and data operations. Don't worry about the "how" yet - focus on what needs to happen.
 
 > - Possible Parents: Actor, Component
-> - Link activities to their parent by starting with the parent in [[double square brackets]] and the activitity beneath it. Example:
-> 	- [[parent]]
-> 		- [[Create item]]
-> 		- [[Delete item]]
+> - Link activities to their parent by starting with the parent in [square brackets] and the activitity beneath it. Example:
+> 	- [parent]
+> 		- [Create item]
+> 		- [Delete item]
 ---
 
 - [ ]
@@ -38,14 +38,22 @@
 > - GPT Instructions: For each Activity think of the perfect scenario (Happy Flow) - what happens when everything works? Then optionally add Error Flows by asking "what could go wrong?" at each step. Finally, consider edge cases like no connection, empty states, or loading states. Break each flow into atomic (indivisible) actions that can be clearly implemented and tested. Prefix each atomic action with BDD Gherkin keywords: GIVEN, WHEN, THEN, AND, BUT.
 
 > - Possible Parents: Activities, Itself
-> - Link activity flows to their parent by starting with the parent in [[double square brackets]] and the activity flow(s) beneath it. Example:
-> 	- [[parent]]
-> 		- GIVEN [[User.pew]] is at [[Home Screen]]
-> 		- WHEN [[User.pew]] [[taps create item button]]
-> 		- THEN [[System.pew]] [[shows create item feedback]]
-> 		- AND [[System.pew]] [[creates database item]]
-> 		- BUT [[System.pew]] [[does not navigate]]
+> - Link activity flows to their parent by starting with the parent in [square brackets] and the activity flow(s) beneath it. Example:
+> 	- [parent]
+> 		- GIVEN [User] is at [Home Screen]
+> 		- WHEN [User] [taps create item button]
+> 		- THEN [System] [shows create item feedback]
+> 		- AND [System] [creates database item]
+> 		- BUT [System] [does not navigate]
 ---
+
+  ```mermaid
+  graph TD
+      Start[User at Home Screen] --> TapButton[User taps create item button];
+      TapButton --> ShowFeedback[System shows create item feedback];
+      ShowFeedback --> CreateItem[System creates database item];
+      CreateItem --> NoNavigation[System does not navigate];
+  ```
 
 - [ ]
 
@@ -57,9 +65,9 @@
 > - GPT Instructions: For each object in your system, think about its data needs in three categories: identity (what makes it unique), configuration (what can be changed), and state (what can vary). Consider what needs to be stored, displayed, measured, or tracked. Make sure each property has a clear type and purpose.
 
 > - Possible Parents: Actor, Component, Activity, Activity Flow, Scenario, Atomic Action, Scenario, Behaviour
-> - Link properties to their parent by starting with the parent in [[double square brackets]] and the property/properties beneath it. Example:
-> 	- [[parent]]
-> 		- [[name : string]]
+> - Link properties to their parent by starting with the parent in [square brackets] and the property/properties beneath it. Example:
+> 	- [parent]
+> 		- [name : string]
 ---
 
 - [ ]
@@ -72,10 +80,10 @@
 > - GPT Instructions: Think about each object's rules and constraints in terms of: limits (max/min values, allowed inputs), timing (when, how often), security (who can access), and performance (what needs to be fast). Focus on behaviours that can be clearly tested - if you can't write a test for it, make it more specific.
 
 > - Possible Parents: Actor, Component, Activity, Activity Flow, Scenario, Atomic Action, Scenario, Property
-> - Link behaviours to their parent by starting with the parent in [[double square brackets]] and the behaviour(s) beneath it. Example:
-> 	- [ ] [[parent]]
-> 		- [ ] [[Should fail when length is 100+ characters]]
-> 		- [ ] [[Should not show when list is empty]]
+> - Link behaviours to their parent by starting with the parent in [square brackets] and the behaviour(s) beneath it. Example:
+> 	- [ ] [parent]
+> 		- [ ] [Should fail when length is 100+ characters]
+> 		- [ ] [Should not show when list is empty]
 ---
 
 - [ ]
@@ -88,10 +96,10 @@
 > - GPT Instructions: While working through the requirements, note down any ideas that come up but don't fit the current scope. Think about: future enhancements, alternative approaches, performance improvements, and nice-to-have features. Don't discard ideas just because they're complex - they might be valuable later.
 
 > - Possible Parents: Anything (optional)
-> - Link ideas and backlog items to their (optional) parent by starting with the parent in [[double square brackets]] and the idea(s)/backlog item(s) beneath it. Example:
-> 	- [ ] [[parent]]
-> 		- [ ] [[Do we need a limit?]]
-> 		- [ ] [[Is this safe?]]
+> - Link ideas and backlog items to their (optional) parent by starting with the parent in [square brackets] and the idea(s)/backlog item(s) beneath it. Example:
+> 	- [ ] [parent]
+> 		- [ ] [Do we need a limit?]
+> 		- [ ] [Is this safe?]
 ---
 
 - [ ]
@@ -104,10 +112,10 @@
 > - GPT Instructions: Throughout the process, note any uncertainties or assumptions you make. Focus on questions that could impact implementation or user experience.
 
 > - Possible Parents: Everything (optional)
-> - Link questions to their (optional) parent by starting with the parent in [[double square brackets]] and the question(s) beneath it. Example:
-> 	- [ ] [[parent]]
-> 		- [ ] [[Do we need a limit?]]
-> 		- [ ] [[Is this safe?]]
+> - Link questions to their (optional) parent by starting with the parent in [square brackets] and the question(s) beneath it. Example:
+> 	- [ ] [parent]
+> 		- [ ] [Do we need a limit?]
+> 		- [ ] [Is this safe?]
 ---
 
 - [ ]
@@ -120,8 +128,8 @@
 > - GPT Instructions: Review all items in the requirements and create clear specific tasks for implementation. Every item should have at least one task. Group tasks by role (UI/UX, Frontend, Backend, etc.) and ensure they're specific enough to be actionable and testable.
 
 > - Possible Parents: Everything (optional)
-> - Link tasks to their parent by starting with the parent in [[double square brackets]] and the task(s) beneath it. Example:
-> 	- [ ] [[parent]]
+> - Link tasks to their parent by starting with the parent in [square brackets] and the task(s) beneath it. Example:
+> 	- [ ] [parent]
 > 		- [ ] Make a cool design
 > 		- [ ] Get some feedback
 ---

@@ -1,0 +1,10 @@
+return TFormField<bool>(
+  config: CONFIG,
+  label: LABEL,
+  builder: (context, config, child) => ShadCheckbox(
+    value: config.cValue?.asType() ?? false,
+    focusNode: config.focusNode,
+    onChanged: config.silentUpdateValue,
+    enabled: config.isEnabled && !config.isReadyOnly,
+  ),
+)

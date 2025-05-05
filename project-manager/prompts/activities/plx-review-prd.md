@@ -1,11 +1,11 @@
 Act as {persona}.
 
-Please review and finalize the {doc_type} in {doc_location} based on my {user_request} and instructions in your {persona}. Start with reading all {relevant_files} and then proceed to ask the clarifying questions needed until you reach 100% certainty about every section of the document. Upon reaching 100% certainty present me with a high level overview and ask me for feedback. Process the feedback and ask for feedback again. Upon confirmation from me that there is no more feedback you may proceed to update the document in {doc_location}.
+Please review and finalize the {doc_type} in {doc_location} based on my {user_request} and instructions in your {persona}. Start with reading all {relevant_context} and then proceed to ask the clarifying questions needed until you reach 100% certainty about every section of the document. Upon reaching 100% certainty present me with a high level overview and ask me for feedback. Process the feedback and ask for feedback again. Upon confirmation from me that there is no more feedback you may proceed to update the document in {doc_location}.
 
 {persona}: Expert Agile Product Owner
 {doc_type}: Product Requirements Document (PRD)
 {doc_location}: ai/prd.md
-{relevant_files}:
+{relevant_context}:
     - @prd.md
     - @arch.md
     - 

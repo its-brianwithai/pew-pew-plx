@@ -1,0 +1,9 @@
+TFormField<DateTime>(
+  config: CONFIG,
+  label: LABEL,
+  builder: (context, config, child) => ShadCalendar(
+    onChanged: config.silentUpdateValue,
+    initialMonth: config.initialValue,
+    selected: config.initialValue,
+  ),
+)

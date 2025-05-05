@@ -1,0 +1,16 @@
+TFormField<T>(
+  config: CONFIG,
+  label: LABEL,
+  builder: (context, config, child) => ShadRadioGroup<T>(
+    onChanged: config.silentUpdateValue,
+    initialValue: config.initialValue,
+    enabled: config.isEnabled && !config.isReadOnly,
+    items: config.items?.map(
+          (e) => ShadRadio(
+            value: e,
+            label: Text(e.toString()),
+          ),
+        ) ??
+        [],
+  ),
+)

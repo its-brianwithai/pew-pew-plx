@@ -1,0 +1,25 @@
+TFormField<T>(
+  config: CONFIG,
+  label: LABEL,
+  builder: (context, config, child) => ShadSelect<T>(
+    placeholder: Text(HINT),
+    focusNode: config.focusNode,
+    onChanged: config.silentUpdateValue,
+    initialValue: config.initialValue,
+    itemCount: config.items?.length ?? 0,
+    controller: config.selectController,
+    enabled: config.isEnabled && !config.isReadOnly,
+    optionsBuilder: (context, index) {
+      final item = config.items![index];
+      return ShadOption(
+        value: item,
+        child: Text(
+          itemLabelBuilder?.call(item) ?? item.toString(),
+        ),
+      );
+    },
+    selectedOptionBuilder: (context, value) => Text(
+      itemLabelBuilder?.call(value) ?? value.toString(),
+    ),
+  ),
+)

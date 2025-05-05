@@ -1,0 +1,10 @@
+TFormField<String>(
+  config: CONFIG,
+  label: LABEL,
+  builder: (context, config, child) => ShadInputOTP(
+    inputFormatters: config.inputFormatters,
+    onChanged: config.silentUpdateValue,
+    initialValue: config.initialValue,
+    enabled: config.isEnabled && !config.isReadOnly,
+  ),
+)

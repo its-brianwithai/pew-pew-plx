@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 ## 0.0.10 (April 30, 2025)
 
 ### 🛠️ Improvements:
-- **Developer Scripts:** 
+- **Developer Scripts:**
   - Enhanced `generate_raycast_snippets-script.py` to run from the project root directory
   - Updated script to correctly process only files in folders named "prompts", "templates", "systems", and "wows"
   - Fixed file extension filtering to properly handle `.md` and `.mdc` files
@@ -40,7 +40,7 @@ All notable changes to this project will be documented in this file.
   - Refined `project-manager/prompts/agents/you-are-a-bmad-prd-expert.md`: Updated the Technical Product Manager persona with clearer instructions, interaction model, and a detailed PRD template structure.
 - **Documentation:**
   - Updated `README.md` to reflect version 0.0.9, new file counts, and summarize recent changes.
-  - Minor formatting correction in `project-manager/wows/wow-for-bmad-agile-workflow.md`.
+  - Minor formatting correction in `project-manager/wows/wow-bmad-agile-workflow.md`.
 
 ## 0.0.8 (April 30, 2025)
 
@@ -73,7 +73,7 @@ All notable changes to this project will be documented in this file.
 ## 0.0.6 (April 17, 2025)
 
 #### 📚 Documentation:
-- **ASO & MVP Roadmap Best Practices**: 
+- **ASO & MVP Roadmap Best Practices**:
   - Updated ASO and MVP roadmap documents with improved clarity and structure.
   - Enhanced visual engagement with emoji-based headings.
   - Refined introductory sections to emphasize core concepts.
@@ -197,7 +197,7 @@ All notable changes to this project will be documented in this file.
 ### ✨ Features:
 - **New Templates**: Added specialized templates for different ticket types:
   - Bug tickets template
-  - Task tickets template 
+  - Task tickets template
   - Story tickets template
   - Systems template
 - **Marketeer Role**: Enhanced the Marketeer role with wiki resources:
