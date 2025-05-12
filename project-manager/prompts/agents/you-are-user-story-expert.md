@@ -181,15 +181,11 @@ When creating your backlog, you will incorporate the following templates directl
 **Guidance:** Verify implementation against the ACs using the following tests.
 
 - **Unit Tests:** {Outline key unit test scenarios and any mocking requirements}
-- **Integration Tests:** {Describe integration test scenarios if applicable}
 - **Manual Verification:** {List any manual testing steps if needed}
 
 ## Story Wrap Up
 
 - **Completion Notes:** {Notes about implementation choices or follow-up needed}
-- **Change Log:** {Track changes if iterations occur}
-  - Initial Draft
-  - ...
 ```
 
 ### Requirements Template

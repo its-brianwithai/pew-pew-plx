@@ -1,16 +1,8 @@
-# Milestone: [Enter Milestone Title Here]
-
-*   **Milestone ID:** `[Assign a unique ID, e.g., M-01, F-AUTH-02]`
-*   **Scope:** `[Project | Feature]`
-*   **Owner/DRI:** `[Name or Role, e.g., Project Manager, Tech Lead]`
-*   **Target Date:** `YYYY-MM-DD`
-*   **Status:** `[Not Started | In Progress | Completed | At Risk | Delayed]`
-
----
+# Epic `[Epic ID]`: `[Epic Title]`
 
 ## 🎯 Goal / Objective
 
-*   _Clearly state the primary goal or objective this milestone aims to achieve. Describe what success looks like for this specific milestone and how it aligns with the overall project/feature goals._
+*   _Clearly state the primary goal or objective this epic aims to achieve. Describe what success looks like for this specific epic and how it aligns with the overall project/feature goals._
 *   _Example (Project): Establish core Firebase project infrastructure (Auth, Firestore, Storage) ready for feature development._
 *   _Example (Feature): Implement and test the end-to-end user profile creation and editing flow._
 
@@ -18,7 +10,7 @@
 
 ## 🛠️ Key Tasks / Activities
 
-_List the specific, high-level tasks or activities required to reach this milestone. This is not an exhaustive task list but represents major work streams._
+_List the specific, high-level tasks or activities required to reach this epic. This is not an exhaustive task list but represents major work streams._
 
 *   [ ] Task 1: _Describe the first key task (e.g., Finalize UI Design for Feature X)._
 *   [ ] Task 2: _Describe the second key task (e.g., Implement Supabase RLS policies for related tables)._
@@ -30,7 +22,7 @@ _List the specific, high-level tasks or activities required to reach this milest
 
 ## 👤 Related User Stories / Epics
 
-_List the specific User Stories or Epics (or link to them in your tracking tool) that are directly associated with achieving this milestone._
+_List the specific User Stories or Epics (or link to them in your tracking tool) that are directly associated with achieving this epic._
 
 *   Epic/Feature Link: `[Link to Epic/Feature definition in tracking tool/PRD]`
 *   User Stories:
@@ -42,7 +34,7 @@ _List the specific User Stories or Epics (or link to them in your tracking tool)
 
 ## 📦 Deliverables / Artifacts
 
-_List the tangible outputs or artifacts that will be produced or completed as part of achieving this milestone._
+_List the tangible outputs or artifacts that will be produced or completed as part of achieving this epic._
 
 *   Deliverable 1: _[e.g., Approved Figma designs for relevant screens]_
 *   Deliverable 2: _[e.g., Implemented Flutter UI components/screens]_
@@ -55,21 +47,21 @@ _List the tangible outputs or artifacts that will be produced or completed as pa
 
 ## ✅ Acceptance Criteria / Definition of Done (DoD)
 
-_Define the specific, measurable, and verifiable criteria that MUST be met for this milestone to be considered complete. Reference NFRs and linked user story AC where applicable._
+_Define the specific, measurable, and verifiable criteria that MUST be met for this epic to be considered complete. Reference NFRs and linked user story AC where applicable._
 
 *   **Functional Criteria:**
     *   [ ] All linked User Stories meet their individual Acceptance Criteria.
-    *   [ ] Core functionality related to the milestone goal is demonstrable `[e.g., in staging environment]`.
-    *   [ ] `[Add specific functional checks relevant to the milestone goal, e.g., User can successfully complete the end-to-end flow defined by the goal.]`
+    *   [ ] Core functionality related to the epic goal is demonstrable `[e.g., in staging environment]`.
+    *   [ ] `[Add specific functional checks relevant to the epic goal, e.g., User can successfully complete the end-to-end flow defined by the goal.]`
 *   **Technical Criteria:**
     *   [ ] Code successfully merged to `[target branch, e.g., develop]`.
     *   [ ] Backend configuration (Security Rules/RLS Policies) implemented and verified.
     *   [ ] Infrastructure (if applicable) provisioned and stable.
     *   [ ] Code adheres to project coding standards and Flutter/Dart best practices.
 *   **Quality Criteria:**
-    *   [ ] Key Non-Functional Requirements (NFRs) relevant to this milestone are met (e.g., performance targets, security checks passed).
+    *   [ ] Key Non-Functional Requirements (NFRs) relevant to this epic are met (e.g., performance targets, security checks passed).
     *   [ ] Required testing (Unit, Widget, Integration) completed and passing for associated code.
-    *   [ ] No outstanding Blocker/Critical bugs related to the milestone's scope.
+    *   [ ] No outstanding Blocker/Critical bugs related to the epic's scope.
 *   **Documentation Criteria:**
     *   [ ] Required documentation (e.g., API docs, README updates) is complete.
     *   [ ] Design artifacts are finalized and linked.
@@ -80,9 +72,9 @@ _Define the specific, measurable, and verifiable criteria that MUST be met for t
 
 ## 🔗 Dependencies / Related Links (Optional)
 
-_List any dependencies (e.g., previous milestones, external factors, team availability) or relevant links (e.g., PRD section, Architecture doc, design files, related tickets)._
+_List any dependencies (e.g., previous epics, external factors, team availability) or relevant links (e.g., PRD section, Architecture doc, design files, related tickets)._
 
-*   Dependency: `[Link or Description, e.g., Completion of Milestone M-03]`
+*   Dependency: `[Link or Description, e.g., Completion of Epic M-03]`
 *   Related Link: `[Link or Description, e.g., Figma Design for Profile Screen]`
 *   Related Link: `[Link or Description, e.g., PRD Section 4.2]`
 
@@ -90,7 +82,7 @@ _List any dependencies (e.g., previous milestones, external factors, team availa
 
 ## 📝 Notes / Risks (Optional)
 
-_Add any additional context, notes, assumptions, or potential risks relevant to achieving this milestone._
+_Add any additional context, notes, assumptions, or potential risks relevant to achieving this epic._
 
 *   Note: `[Any clarifying information]`
 *   Risk: `[Potential risk and brief mitigation idea, e.g., Risk of third-party API instability - Mitigation: Implement robust error handling and retry logic.]`

@@ -1,3 +1,5 @@
+todo/
+
 # Ignore credentials folders for all roles
 **/credentials/
 

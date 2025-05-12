@@ -1,0 +1,42 @@
+[
+  {
+    "title": "-------------------- {CATEGORY} AGENTS --------------------",
+    "content": ""
+  },
+  {
+    "title": "🎩{FITTING_EMOJI} {AGENT_NAME}",
+    "content": "{JSON\n_friendly_\nprompt}"
+  },
+  {
+    "title": "-------------------- {CATEGORY} AGENTS --------------------",
+    "content": ""
+  },
+  {
+    "title": "🎩{FITTING_EMOJI} {AGENT_NAME}",
+    "content": "{JSON\n_friendly_\nprompt}"
+  },
+  {
+    "title": "🎩{FITTING_EMOJI} {AGENT_NAME}",
+    "content": "{JSON\n_friendly_\nprompt}"
+  },
+  {
+    "title": "-------------------- {CATEGORY} TEMPLATES --------------------",
+    "content": ""
+  },
+  {
+    "title": "📝{FITTING_EMOJI} {TEMPLATE_NAME}",
+    "content": "{JSON\n_friendly_\nprompt}"
+  },
+  {
+    "title": "-------------------- {CATEGORY} TEMPLATES --------------------",
+    "content": ""
+  },
+  {
+    "title": "📝{FITTING_EMOJI} {TEMPLATE_NAME}",
+    "content": "{JSON\n_friendly_\nprompt}"
+  },
+  {
+    "title": "📝{FITTING_EMOJI} {TEMPLATE_NAME}",
+    "content": "{JSON\n_friendly_\nprompt}"
+  }
+]

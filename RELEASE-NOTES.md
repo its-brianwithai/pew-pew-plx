@@ -1,41 +1,57 @@
-# 🚀 Release v0.0.11
+# 🚀 Release v0.0.12
 
-## What's New in v0.0.11
+## What's New in v0.0.12
 
-### ✨ Major Features
+### ✨ New Features
+- **New Activity Prompts**:
+  - Added system workflow creation activity prompt
+  - Added file-level action prompt
+  - Added milestone splitting functionality
+  - Added feature flow creation capability
+  - Added prompt improvement activities
+  - Added plan transfer and custom context transfer utilities
 
-- **BMAD Framework Reorganization**: 
-  - Moved BMAD-related content to its own dedicated folder with specialized templates and agent prompts
-  - Created specialized BMAD agent roles (Analyst, Architect, Developer, PM, PO, SM)
-  - Added comprehensive set of BMAD-specific templates for different project aspects
+### 👤 New Agent Roles
+- **Workflow & System Experts**:
+  - Added System Workflow Expert agent
+  - Added WOW Expert agent
+  - Added Feature Flow Expert agent
+  - Added Design Pattern Expert agent
+  - Added Agent Prompt Improver
+  - Added QA Specialist agent
+  - Added Content Creator agents (Content Drafter, Tutorial Expert)
+  - Added Freelance Developer PA agent
 
-### 🏗️ Structural Changes
+### 📝 New Templates
+- **System & Documentation Templates**:
+  - Added system template
+  - Added meeting template
+  - Added tutorial template
+  - Added feature flow template
+  - Added tasks template
+  - Added research template
 
-- **File Organization Improvements**:
-  - Standardized naming conventions across files (removing "for" in WOW files, e.g., "wow-for-md-docs.md" → "wow-md-docs.md")
-  - Renamed agent prompts to follow consistent pattern (e.g., "you-are-an-expert-developer.md" → "you-are-expert-developer.md")
-  - Created new Doc Expert role with dedicated prompts and activities
+### 💻 Developer Resources
+- **Snippets & Tools**:
+  - Added numerous code and command snippets
+  - Added repo prompt templates
+  - Enhanced raycast snippets functionality
+  - Added Workflow Automation research documents
 
-### 🛠️ New Templates & Snippets
+### 🔄 Renamed & Reorganized
+- Renamed systems-template.md to system-template.md
+- Renamed you-are-doc-expert.md to you-are-template-expert.md
+- Renamed you-are-mvp-expert.md to you-are-mobile-mvp-expert.md
+- Renamed milestone-template.md to epic-template.md
+- Various file structure improvements
 
-- **Developer Resources**:
-  - Added Flutter-specific UI component templates in developer/snippets
-  - Added various Markdown snippet shortcuts for common patterns
-  - Added new templates for development planning
-
-### 👤 Role Enhancements
-
-- **Updated Agent Prompts**:
-  - Added new specialized agent roles across multiple domains
-  - Refined existing agent prompts with improved instructions
-  - Created new activity prompts for document creation and transformation
-
-### 🧹 Maintenance
-
-- **Cleanup & Reorganization**:
-  - Removed deprecated .cursorrules file
-  - Reorganized multiple templates into more appropriate locations
-  - Updated file paths and references for better organization
+### 🛠️ Improvements
+- **Template Updates**:
+  - Enhanced API reference template
+  - Updated plan creation templates
+  - Refined PRD templates
+  - Improved user story templates
+  - Enhanced multiple agent prompts with clearer instructions
 
 ## 📋 Full Changes
 

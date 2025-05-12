@@ -1,16 +1,4 @@
-```markdown
 # 📝 **Project/Feature Brief: <Project/Feature Name>**
-
-## **Document Control**
-
-*   **Version:** 1.0
-*   **Date:** YYYY-MM-DD
-*   **Author(s):** `[Author Name(s)]`
-*   **Status:** `[Draft | Review | Approved]`
-*   **Last Updated:** YYYY-MM-DD
-*   **Related Project Brief (if Feature Brief):** `[Link to parent project brief, if applicable]`
-
----
 
 ## **1. 🎯 Overview & Purpose**
 
@@ -175,15 +163,15 @@
 
 `[List the major milestones associated with this project/feature. Link to a detailed milestone tracking document if available.]`
 
-| Milestone / Phase           | Target Date | Status  | Notes / Deliverable Link                      |
-| :-------------------------- | :---------- | :------ | :-------------------------------------------- |
-| Brief Approved              | YYYY-MM-DD  | `[To Do]` | `[Link to this approved brief]`               |
-| Design Complete & Approved  | YYYY-MM-DD  | `[To Do]` | `[Link to final Figma/Mockups]`               |
-| Backend Ready (if needed) | YYYY-MM-DD  | `[To Do]` | `[e.g., RLS policies implemented, API ready]` |
-| Development Complete (MVP)  | YYYY-MM-DD  | `[To Do]` | `[Link to Feature Branch/PR]`                 |
-| QA Testing Pass             | YYYY-MM-DD  | `[To Do]` | `[Link to Test Report]`                       |
-| UAT Sign-off                | YYYY-MM-DD  | `[To Do]` | `[Confirmation/Sign-off Document]`            |
-| Release / Deployment        | YYYY-MM-DD  | `[To Do]` | `[Link to Release Notes]`                     |
+| Milestone / Phase          | Target Date | Status    | Notes / Deliverable Link                      |
+|:---------------------------|:------------|:----------|:----------------------------------------------|
+| Brief Approved             | YYYY-MM-DD  | `[To Do]` | `[Link to this approved brief]`               |
+| Design Complete & Approved | YYYY-MM-DD  | `[To Do]` | `[Link to final Figma/Mockups]`               |
+| Backend Ready (if needed)  | YYYY-MM-DD  | `[To Do]` | `[e.g., RLS policies implemented, API ready]` |
+| Development Complete (MVP) | YYYY-MM-DD  | `[To Do]` | `[Link to Feature Branch/PR]`                 |
+| QA Testing Pass            | YYYY-MM-DD  | `[To Do]` | `[Link to Test Report]`                       |
+| UAT Sign-off               | YYYY-MM-DD  | `[To Do]` | `[Confirmation/Sign-off Document]`            |
+| Release / Deployment       | YYYY-MM-DD  | `[To Do]` | `[Link to Release Notes]`                     |
 
 *   Link to Detailed Milestones: `[Link to Milestone Document/Tracker]`
 
@@ -253,11 +241,11 @@
 
 `[List any questions that need answers before or during development. Assign owners and due dates.]`
 
-| Question ID | Question                                      | Owner      | Due Date   | Status    |
-| :---------- | :-------------------------------------------- | :--------- | :--------- | :-------- |
-| Q1          | `[Specific question about requirements/scope]?` | `[Name]`   | YYYY-MM-DD | `[Open]`  |
-| Q2          | `[Technical feasibility question]?`           | `[Tech Lead]` | YYYY-MM-DD | `[Open]`  |
-| ...         | ...                                           | ...        | ...        | ...       |
+| Question ID | Question                                        | Owner         | Due Date   | Status   |
+|:------------|:------------------------------------------------|:--------------|:-----------|:---------|
+| Q1          | `[Specific question about requirements/scope]?` | `[Name]`      | YYYY-MM-DD | `[Open]` |
+| Q2          | `[Technical feasibility question]?`             | `[Tech Lead]` | YYYY-MM-DD | `[Open]` |
+| ...         | ...                                             | ...           | ...        | ...      |
 
 ---
 
@@ -273,5 +261,3 @@
 *   User Persona Documents: `[Link]`
 *   Firebase/Supabase Project Console: `[Link]`
 *   Other Related Documents: `[...]`
-
-```

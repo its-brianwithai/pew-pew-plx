@@ -1,11 +1,4 @@
-# 🛠️ Development Plan: [User Story Name]
-
-*   **Version:** 1.0
-*   **Date:** YYYY-MM-DD
-*   **Status:** `[Draft | Review | Approved]`
-*   **Scope:** `[Milestone | User Story: <Specify User Story Name>]`
-
----
+# 🛠️ Development Plan: `[Epic ID]`: `[Epic Title]`: `[Story ID]`: `[Story Title]`
 
 ## 1. 📝 Overview & Objectives
 

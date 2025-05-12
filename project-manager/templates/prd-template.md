@@ -82,12 +82,12 @@ Defining clear objectives and how success will be measured is crucial for evalua
 
 Tracking changes ensures transparency and provides context for the evolution of requirements, which is vital as PRDs are living documents that adapt as projects progress.2 Understanding *why* a requirement changed can prevent confusion or accidental reversions later.19
 
-| Version | Date | Author | Summary of Changes | Reason for Change |
-| :---- | :---- | :---- | :---- | :---- |
-| 0.1 | 2024-07-15 | Jane Doe (PM) | Initial Draft | N/A |
-| 1.0 | 2024-07-20 | Jane Doe (PM) | Incorporated feedback from Design & Eng review | Alignment on scope & feasibility |
-| 1.1 | 2024-07-25 | John Smith (TL) | Added specific NFRs for performance & security | Technical refinement |
-|  |  |  |  |  |
+| Version | Date       | Author          | Summary of Changes                             | Reason for Change                |
+|:--------|:-----------|:----------------|:-----------------------------------------------|:---------------------------------|
+| 0.1     | 2024-07-15 | Jane Doe (PM)   | Initial Draft                                  | N/A                              |
+| 1.0     | 2024-07-20 | Jane Doe (PM)   | Incorporated feedback from Design & Eng review | Alignment on scope & feasibility |
+| 1.1     | 2024-07-25 | John Smith (TL) | Added specific NFRs for performance & security | Technical refinement             |
+|         |            |                 |                                                |                                  |
 
 ## **IV. User Personas**
 
@@ -114,20 +114,20 @@ Defining the scope clearly upfront is essential for managing expectations, preve
 
 The MoSCoW method (Must-have, Should-have, Could-have, Won't-have) provides a clear framework for prioritizing requirements, guiding decision-making when trade-offs are necessary due to time or resource limitations.5
 
-| Feature/Story ID | Description | Priority | Rationale/Notes |
-| :---- | :---- | :---- | :---- |
-| **Must-have** | *(Essential for the core purpose/viability of this release)* 5 |  |  |
-| US-001 | As a user, I want to create an account using email/password, so that I can log in. | Must | Core functionality required for any user interaction. |
-| US-002 | As a user, I want to log in with my email/password, so that I can access my account. | Must | Core functionality. |
-| FEAT-CHAT-01 | As a workspace member, I want to send a text message in a channel, so that I can communicate with my team. | Must | Minimum viable chat functionality. |
-| **Should-have** | *(Important, but not critical for launch; workarounds may exist)* 20 |  |  |
-| US-003 | As a user, I want to reset my password if forgotten, so that I can regain access. | Should | Important for user recovery, but launch possible without. |
-| FEAT-CHAT-02 | As a workspace member, I want to see typing indicators, so that I know when someone is replying. | Should | Enhances UX, but basic chat works without it. |
-| **Could-have** | *(Desirable, but less important; included if time/resources permit)* 20 |  |  |
-| FEAT-CHAT-03 | As a workspace member, I want to react to messages with emojis, so that I can provide quick feedback. | Could | Nice-to-have engagement feature. |
-| **Won't-have (This Release)** | *(Explicitly excluded from this specific release)* 4 |  |  |
-| FEAT-CHAT-04 | Direct (1-to-1) messaging between users. | Won't | Deferred to v2.1 release. |
-| US-004 | Account creation/login via Google OAuth. | Won't | Deferred to post-MVP enhancement. |
+| Feature/Story ID              | Description                                                                                                | Priority | Rationale/Notes                                           |
+|:------------------------------|:-----------------------------------------------------------------------------------------------------------|:---------|:----------------------------------------------------------|
+| **Must-have**                 | *(Essential for the core purpose/viability of this release)* 5                                             |          |                                                           |
+| US-001                        | As a user, I want to create an account using email/password, so that I can log in.                         | Must     | Core functionality required for any user interaction.     |
+| US-002                        | As a user, I want to log in with my email/password, so that I can access my account.                       | Must     | Core functionality.                                       |
+| FEAT-CHAT-01                  | As a workspace member, I want to send a text message in a channel, so that I can communicate with my team. | Must     | Minimum viable chat functionality.                        |
+| **Should-have**               | *(Important, but not critical for launch; workarounds may exist)* 20                                       |          |                                                           |
+| US-003                        | As a user, I want to reset my password if forgotten, so that I can regain access.                          | Should   | Important for user recovery, but launch possible without. |
+| FEAT-CHAT-02                  | As a workspace member, I want to see typing indicators, so that I know when someone is replying.           | Should   | Enhances UX, but basic chat works without it.             |
+| **Could-have**                | *(Desirable, but less important; included if time/resources permit)* 20                                    |          |                                                           |
+| FEAT-CHAT-03                  | As a workspace member, I want to react to messages with emojis, so that I can provide quick feedback.      | Could    | Nice-to-have engagement feature.                          |
+| **Won't-have (This Release)** | *(Explicitly excluded from this specific release)* 4                                                       |          |                                                           |
+| FEAT-CHAT-04                  | Direct (1-to-1) messaging between users.                                                                   | Won't    | Deferred to v2.1 release.                                 |
+| US-004                        | Account creation/login via Google OAuth.                                                                   | Won't    | Deferred to post-MVP enhancement.                         |
 
 ### **B. Out of Scope**
 

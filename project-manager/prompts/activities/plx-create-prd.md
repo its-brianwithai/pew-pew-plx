@@ -9,9 +9,9 @@ Upon reaching 100% certainty present me with a high level overview and ask me fo
 Upon confirmation from me that there is no more feedback you may proceed create the document in {doc_location}.
 
 ```yaml
-persona: PRD Expert
+persona: Specialist in
 doc_type: Product Requirements Document
-doc_location: PRD.md
+doc_location: docs/prd.md
 relevant_context:
   - <file_map>
   - <file_contents>

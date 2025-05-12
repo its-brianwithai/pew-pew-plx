@@ -1,4 +1,4 @@
-# ⚡ Ultra Wide Turbo Workspace 0.0.11
+# ⚡ Ultra Wide Turbo Workspace 0.0.12
 
 [![Brought to you by ultrawideturbodevs.com](https://img.shields.io/badge/Brought%20to%20you%20by-ultrawideturbodevs.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://ultrawideturbodevs.com)
 
@@ -6,34 +6,22 @@
 
 ---
 
-## ✨ Latest Release: 0.0.11 (May 5, 2025)
+## ✨ Latest Release: 0.0.12 (May 12, 2025)
 
-#### ✨ Major Features
-- **BMAD Framework Reorganization**: Moved BMAD-related content to its own dedicated folder with specialized templates and agent prompts.
-- **New Doc Expert Role**: Added a new role with dedicated prompts and activities for document management.
+#### ✨ New Features
+- **New Activity & Agent Prompts**: Added system workflow creation, feature flow generation, QA specialists, and more expert agent roles.
+- **Developer Resources**: Added numerous code snippets, repo prompt templates, and workflow automation research.
+- **Templates & Documentation**: Added new system templates, meeting templates, and task management structures.
 
 #### 🏗️ Structural Changes
-- Standardized naming conventions across files (removing "for" in WOW files).
-- Renamed agent prompts to follow consistent pattern.
-- Added new agent roles across multiple domains.
-
-#### 🛠️ New Resources
-- Added Flutter-specific UI component templates and various Markdown snippets.
-- Created new templates for development planning.
-
-#### 🔄 Previous Release (0.0.10)
-- Enhanced `generate_raycast_snippets-script.py` to run from the project root.
-- Added Raycast snippet generation capability for project markdown files.
+- Renamed several templates for better clarity and consistency.
+- Enhanced template expert role capabilities.
+- Reorganized milestone and epic structures.
 
 #### 🛠️ Improvements
-- Updated file counts and summaries in documentation.
-
-#### 🔄 Previous Release (0.0.8)
-- Restructured the project around top-level **Roles**, each with its own dedicated folder ("office").
-- Standardized optional subfolders within roles: `prompts`, `templates`, `wows`, `rubrics`, `scripts`, `systems`.
-- Rewritten `README.md` to accurately describe the new role-based structure and optional subfolders.
-- Added a "Credits" section acknowledging `bmadcode` for influential repositories.
-- Updated `CONTRIBUTING.md` to reflect the current file structure and remove outdated naming conventions.
+- Updated existing templates with more detailed information.
+- Enhanced agent prompts across various roles.
+- Improved documentation for planning and requirements templates.
 
 ---
 

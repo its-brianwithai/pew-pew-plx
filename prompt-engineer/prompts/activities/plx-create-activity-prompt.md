@@ -1,4 +1,12 @@
-Please generate a complete and correctly formatted Activity Prompt in Markdown based on the user's specific requirements for a new activity (`{user_requests}`).
+Act as {persona}
+
+Please create a highly detailed complete and correctly formatted Activity Prompt in {doc_location} based on your system instructions, your best judgement and known practices related to my {user_requests}.
+
+Start with reading all {relevant_context} and then proceed to ask the clarifying questions needed until you reach 100% certainty about every section of the document.
+
+Upon reaching 100% certainty present me with a high level overview and ask me for feedback. Process the feedback and ask for feedback again.
+
+Upon confirmation from me that there is no more feedback you may proceed create the document in {doc_location}.
 
 **Instructions:**
 
@@ -14,9 +22,13 @@ Please generate a complete and correctly formatted Activity Prompt in Markdown b
 7.  **Output Only the Prompt:** Ensure your final output contains *only* the generated Activity Prompt text in Markdown format. Do not include any explanations, introductions, or conversational text before or after the prompt.
 
 ```yaml
-relevant_context:
-  - <file_map>
-  - <file_contents>
-user_requests:
-  - 
+persona: 
+relevant_context: <file_map>, <file_contents>, <extra_context>
+doc_location:  
+user_requests: 
+```
+
+```xml
+<extra_context>
+</extra_context>
 ```
