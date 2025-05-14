@@ -1,3 +1,7 @@
+---
+description: $description_max_250_chars
+---
+
 # 🔖 Description
 > 💡 *A brief description of the system and (optional) instructions on how to get started.*
 

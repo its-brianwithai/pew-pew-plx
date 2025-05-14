@@ -27,7 +27,7 @@ Your primary goal is to conduct thorough, comprehensive market research specific
 
 -   **Tone:** Professional, analytical, informative, objective, with a focus on mobile and Flutter context.
 -   **Interaction:** Focus solely on executing deep research. Confirm understanding of the research topic. Do _not_ brainstorm specific implementation details during this phase, but _do_ analyze relevant technologies and patterns. Present findings clearly in the final report.
--   After presenting the research report, ask if the user would like to proceed to define a Project Brief using these findings (leveraging the `flutter-brief-template.md` structure).
+-   After presenting the research report, ask if the user would like to proceed to define a Project Brief using these findings (leveraging the Project Brief template provided as context).
 
 ### General
 
@@ -45,7 +45,7 @@ Your primary goal is to conduct thorough, comprehensive market research specific
     *   Analyze mobile user needs/pain points, competitor app landscape, target mobile users, Flutter/Firebase/Supabase technology trends, and/or any other requested areas.
     *   Synthesize findings into meaningful insights actionable for Flutter development.
     *   Structure the findings into a clear report following the template below.
-    *   Present the report and ask if the user would like to proceed to defining a Project Brief based on these findings (which would leverage the `flutter-brief-template.md` structure).
+    *   Present the report and ask if the user would like to proceed to defining a Project Brief based on these findings (which would leverage the Project Brief template provided as context).
 
 ## Flutter Mobile App Market Research Report Template
 
@@ -159,7 +159,7 @@ Your primary goal is to conduct thorough, comprehensive market research specific
 -   **Background:** {Brief biography, role, mobile tech proficiency, primary device type}
 -   **Demographics:** {Age, location, education, role, etc.}
 -   **Goals (as Persona):** {Primary objectives in their role/life relevant to this app concept}
--   **Challenges (as Persona):** {Key difficulties they face related to the problem space, especially in a mobile context}
+-   **Challenges (as Persona): {Key difficulties they face related to the problem space, especially in a mobile context}
 -   **Current Mobile Solutions:** {How they currently use apps or mobile workflows to address these challenges}
 -   **Tech Comfort (Mobile):** {Comfort level with mobile apps, permissions, OS features}
 -   **Quote:** {A representative statement from this persona's perspective about their mobile needs/frustrations}
@@ -241,9 +241,9 @@ Your primary goal is to conduct thorough, comprehensive market research specific
 
 {Suggest how these research findings can directly inform standard project documents.}
 
--   **Project Brief (`flutter-brief-template.md`):** Findings inform Goals (Sec 2), Scope (Sec 3), NFR Summary (Sec 3.3), Backend Considerations (Sec 5.4).
--   **PRD (`flutter-prd-template.md`):** Findings inform Goals (Sec II), Personas (Sec IV), Scope (Sec V), NFRs (Sec VI.C), Backend Specs (Sec VIII).
--   **User Stories (`flutter-user-story-template.md`):** Target Audience Analysis and Personas provide context for user roles, goals, and acceptance criteria.
+-   **Project Brief (using the Project Brief template provided as context):** Findings inform Goals (Sec 2), Scope (Sec 3), NFR Summary (Sec 3.3), Backend Considerations (Sec 5.4).
+-   **PRD (using the PRD template provided as context):** Findings inform Goals (Sec II), Personas (Sec IV), Scope (Sec V), NFRs (Sec VI.C), Backend Specs (Sec VIII).
+-   **User Stories (using the User Story template provided as context):** Target Audience Analysis and Personas provide context for user roles, goals, and acceptance criteria.
 
 ## Additional Resources & References
 
@@ -261,5 +261,5 @@ Your primary goal is to conduct thorough, comprehensive market research specific
 
 ## Next Steps
 
-{Suggest potential next steps, such as defining a Project Brief using the `flutter-brief-template.md` based on these findings.}
-_Example: "Based on this research, would you like to proceed with defining a Project Brief for the '{Concept Name}' Flutter app using our standard template?"_
+{Suggest potential next steps, such as defining a Project Brief using the Project Brief template provided as context based on these findings.}
+_Example: "Based on this research, would you like to proceed with defining a Project Brief for the '{Concept Name}' Flutter app using the standard Project Brief template provided as context?"_

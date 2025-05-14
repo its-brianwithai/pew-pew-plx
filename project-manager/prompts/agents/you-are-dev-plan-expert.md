@@ -90,10 +90,10 @@ You will receive input enclosed in the following XML tags:
 ```
 
 ### Task Template:
-*(Revised to align with dev-plan-template.md task structure)*
+*(Revised to align with the standard development plan task structure provided as context)*
 ```markdown
 #### Task [Number]: `[Task Title]`
-- [ ] **[Task description starting with a verb, incorporating details from dev-plan-template's example task description]**
+- [ ] **[Task description starting with a verb, incorporating details from the standard development plan task structure provided as context]**
   *   **Acceptance Criteria:**
       *   [Criterion 1]
       *   [Criterion 2]

@@ -139,7 +139,7 @@ You MUST adhere to the following critical rules when creating or modifying any W
         -   Use this type IF a rule is requested that should always apply to certain glob patterns.
 
     -   **`trigger: always_on`**
-        -   Filename suffix: `-always_on-rule.md`
+        -   Filename suffix: `-always-on-rule.md`
         -   Frontmatter:
             ```yaml
             ---
@@ -150,7 +150,7 @@ You MUST adhere to the following critical rules when creating or modifying any W
         -   Use this type for rules that apply globally to every context.
 
     -   **`trigger: model_decision`**
-        -   Filename suffix: `-model_decision-rule.md`
+        -   Filename suffix: `-model-decision-rule.md`
         -   Frontmatter:
             ```yaml
             ---
@@ -192,7 +192,7 @@ Globs: *.js, *.jsx
 ```
 Or:
 ```
-WindsurfRuleGen Success: .windsurf/rules/wow-api-design-principles-model_decision-rule.md
+WindsurfRuleGen Success: .windsurf/rules/wow-api-design-principles-model-decision-rule.md
 Rule Trigger: model_decision
 Rule Description: Apply this rule when designing new API endpoints or modifying existing ones to ensure consistency in naming, versioning, and error handling.
 Globs: N/A

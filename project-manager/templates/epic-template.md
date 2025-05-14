@@ -1,88 +1,146 @@
-# Epic `[Epic ID]`: `[Epic Title]`
+---
+name: 🏔️ Epic
+about: Define a large body of work that can be broken down into smaller stories or features
+title: "🏔️ Epic: [Name of the Epic]"
+labels: 🏔️ epic
+---
+# 🏔️ Epic Summary
+> 💡 *Provide a high-level overview of the epic. What is this large initiative about? What problem does it solve or what opportunity does it address at a strategic level?*
 
-## 🎯 Goal / Objective
-
-*   _Clearly state the primary goal or objective this epic aims to achieve. Describe what success looks like for this specific epic and how it aligns with the overall project/feature goals._
-*   _Example (Project): Establish core Firebase project infrastructure (Auth, Firestore, Storage) ready for feature development._
-*   _Example (Feature): Implement and test the end-to-end user profile creation and editing flow._
-
+[Brief summary of the epic]
 ---
 
-## 🛠️ Key Tasks / Activities
+# 🎯 Strategic Goals & Objectives
+> 💡 *What are the main strategic goals this epic aims to achieve? List 2-5 key objectives.*
+> *e.g., "Increase user engagement by X%," "Expand into new market segment Y," "Improve system performance and scalability for Z."*
 
-_List the specific, high-level tasks or activities required to reach this epic. This is not an exhaustive task list but represents major work streams._
-
-*   [ ] Task 1: _Describe the first key task (e.g., Finalize UI Design for Feature X)._
-*   [ ] Task 2: _Describe the second key task (e.g., Implement Supabase RLS policies for related tables)._
-*   [ ] Task 3: _Describe the third key task (e.g., Build core Flutter widgets for the feature)._
-*   [ ] Task 4: _Describe the fourth key task (e.g., Integrate Flutter UI with Firebase backend endpoints)._
-*   [ ] _Add more tasks as needed._
-
+*   **Goal 1:** [Description of strategic goal]
+    *   Objective 1.1: [Specific, measurable objective contributing to Goal 1]
+    *   Objective 1.2: [Specific, measurable objective contributing to Goal 1]
+*   **Goal 2:** [Description of strategic goal]
+    *   Objective 2.1: [Specific, measurable objective contributing to Goal 2]
 ---
 
-## 👤 Related User Stories / Epics
+# 💼 Business Value / Justification
+> 💡 *Why is this epic important for the business? What value will it deliver? Quantify if possible.*
+> *e.g., "Expected to generate $X in new revenue," "Reduce operational costs by Y%," "Enhance competitive advantage by Z."*
 
-_List the specific User Stories or Epics (or link to them in your tracking tool) that are directly associated with achieving this epic._
-
-*   Epic/Feature Link: `[Link to Epic/Feature definition in tracking tool/PRD]`
-*   User Stories:
-    *   [ ] `[US-ID]` Story Title: _[Brief description or link]_
-    *   [ ] `[US-ID]` Story Title: _[Brief description or link]_
-    *   [ ] _Add more stories as needed._
-
+[Detailed explanation of the business value and justification]
 ---
 
-## 📦 Deliverables / Artifacts
+# 🗺️ Scope
+> 💡 *Define the boundaries of this epic. What is included and what is explicitly excluded?*
 
-_List the tangible outputs or artifacts that will be produced or completed as part of achieving this epic._
+## In Scope:
+> 💡 *List the major features, functionalities, or areas that are part of this epic.*
+*   [Major Feature/Component A]
+*   [User Journey X]
+*   [System Capability Y]
 
-*   Deliverable 1: _[e.g., Approved Figma designs for relevant screens]_
-*   Deliverable 2: _[e.g., Implemented Flutter UI components/screens]_
-*   Deliverable 3: _[e.g., Configured Firebase/Supabase backend (Auth rules, RLS policies, DB schema)]_
-*   Deliverable 4: _[e.g., Deployed Cloud/Edge Functions]_
-*   Deliverable 5: _[e.g., Unit/Widget/Integration test results]_
-*   Deliverable 6: _[e.g., Updated PRD/Architecture documentation]_
-
+## Out of Scope:
+> 💡 *List any related features, functionalities, or areas that are NOT part of this epic and might be addressed separately.*
+*   [Related Feature Z (will be a separate epic/project)]
+*   [Specific edge case Q (deferred)]
 ---
 
-## ✅ Acceptance Criteria / Definition of Done (DoD)
+# ✨ Key Features / User Stories
+> 💡 *List the primary features or user stories that constitute this epic. These will likely be broken down further into individual tickets.*
+> *You can link to existing story/feature tickets if they are already created, or list them as placeholders.*
 
-_Define the specific, measurable, and verifiable criteria that MUST be met for this epic to be considered complete. Reference NFRs and linked user story AC where applicable._
-
-*   **Functional Criteria:**
-    *   [ ] All linked User Stories meet their individual Acceptance Criteria.
-    *   [ ] Core functionality related to the epic goal is demonstrable `[e.g., in staging environment]`.
-    *   [ ] `[Add specific functional checks relevant to the epic goal, e.g., User can successfully complete the end-to-end flow defined by the goal.]`
-*   **Technical Criteria:**
-    *   [ ] Code successfully merged to `[target branch, e.g., develop]`.
-    *   [ ] Backend configuration (Security Rules/RLS Policies) implemented and verified.
-    *   [ ] Infrastructure (if applicable) provisioned and stable.
-    *   [ ] Code adheres to project coding standards and Flutter/Dart best practices.
-*   **Quality Criteria:**
-    *   [ ] Key Non-Functional Requirements (NFRs) relevant to this epic are met (e.g., performance targets, security checks passed).
-    *   [ ] Required testing (Unit, Widget, Integration) completed and passing for associated code.
-    *   [ ] No outstanding Blocker/Critical bugs related to the epic's scope.
-*   **Documentation Criteria:**
-    *   [ ] Required documentation (e.g., API docs, README updates) is complete.
-    *   [ ] Design artifacts are finalized and linked.
-*   **Sign-off (If applicable):**
-    *   [ ] Formal acceptance/review completed by `[e.g., Product Owner, QA Lead]`.
-
+*   **Feature/Story 1:** [Brief description or link to ticket]
+*   **Feature/Story 2:** [Brief description or link to ticket]
+*   **Feature/Story 3:** [Brief description or link to ticket]
+*   *(Add more as needed)*
 ---
 
-## 🔗 Dependencies / Related Links (Optional)
+# 📈 Success Metrics / KPIs
+> 💡 *How will we measure the success of this epic once completed? Define key performance indicators (KPIs).*
+> *e.g., "User adoption rate of new features > X% within Y months," "Reduction in customer support tickets related to Z by A%."*
 
-_List any dependencies (e.g., previous epics, external factors, team availability) or relevant links (e.g., PRD section, Architecture doc, design files, related tickets)._
-
-*   Dependency: `[Link or Description, e.g., Completion of Epic M-03]`
-*   Related Link: `[Link or Description, e.g., Figma Design for Profile Screen]`
-*   Related Link: `[Link or Description, e.g., PRD Section 4.2]`
-
+*   **KPI 1:** [Name of KPI] - Target: [Measurable Target]
+*   **KPI 2:** [Name of KPI] - Target: [Measurable Target]
+*   **KPI 3:** [Name of KPI] - Target: [Measurable Target]
 ---
 
-## 📝 Notes / Risks (Optional)
+# 🔗 Dependencies
+> 💡 *Are there any internal or external dependencies that could impact this epic?*
 
-_Add any additional context, notes, assumptions, or potential risks relevant to achieving this epic._
+*   **Internal Dependencies:** [e.g., Relies on Team X completing Project Y, Requires infrastructure update Z]
+*   **External Dependencies:** [e.g., Third-party API availability, Regulatory approval]
+---
 
-*   Note: `[Any clarifying information]`
-*   Risk: `[Potential risk and brief mitigation idea, e.g., Risk of third-party API instability - Mitigation: Implement robust error handling and retry logic.]`
+# 💣 Potential Risks & Mitigation
+> 💡 *What are the potential risks that could hinder the successful completion of this epic? How can they be mitigated?*
+
+*   **Risk 1:** [Description of risk]
+    *   Mitigation: [Strategy to mitigate this risk]
+*   **Risk 2:** [Description of risk]
+    *   Mitigation: [Strategy to mitigate this risk]
+---
+
+# 🧑‍🤝‍🧑 Stakeholders
+> 💡 *Who are the key stakeholders for this epic? List individuals or teams.*
+
+*   **Product Owner/Sponsor:** [@username or Team Name]
+*   **Key Business Units:** [e.g., Marketing, Sales, Operations]
+*   **Development Lead(s):** [@username or Team Name]
+*   **UX Lead (if applicable):** [@username or Team Name]
+*   **Other Key Contacts:**
+---
+
+# 🎨 High-Level UI/UX Considerations (If Applicable)
+> 💡 *Describe any overarching UI/UX principles, themes, or major changes anticipated for this epic. Detailed designs will be in individual stories/features.*
+
+[General UI/UX direction or considerations]
+*   **Key Design Principles:** [e.g., Simplicity, Accessibility, Consistency with brand]
+*   **Major User Flows Affected/Created:**
+---
+
+# 🛠️ High-Level Technical Considerations (If Applicable)
+> 💡 *Outline any significant architectural changes, new technologies to be adopted, or major technical challenges anticipated.*
+
+*   **Architecture Impact:** [e.g., Introduction of new microservice, Changes to data schema]
+*   **Technology Stack Considerations:** [e.g., Evaluation of new library/framework]
+*   **Integration Points:**
+---
+
+# 🗓️ Estimated Timeline / Phases (Optional)
+> 💡 *Provide a rough timeline or break the epic into logical phases with target completion dates. This is a high-level estimate.*
+
+*   **Phase 1: [Name of Phase, e.g., Research & Design]**
+    *   Target Completion: [e.g., QX YYYY, Month YYYY]
+    *   Key Deliverables:
+*   **Phase 2: [Name of Phase, e.g., Core Feature Development]**
+    *   Target Completion: [e.g., QX YYYY, Month YYYY]
+    *   Key Deliverables:
+*   **Phase 3: [Name of Phase, e.g., Beta Release & Feedback]**
+    *   Target Completion: [e.g., QX YYYY, Month YYYY]
+    *   Key Deliverables:
+---
+
+# 🎯 Roles & Todos (High-Level)
+> 💡 *High-level responsibilities for the epic. Detailed tasks will be in individual stories.*
+> ```
+> * 👑 **Epic Owner/Sponsor**:
+>     - [ ] Champion the epic and secure resources
+>     - [ ] Define strategic goals and business value
+>     - [ ] Make key decisions and resolve roadblocks
+> * 🗣️ **Product Management**:
+>     - [ ] Break down epic into features/stories
+>     - [ ] Prioritize work within the epic
+>     - [ ] Gather and refine requirements
+> * 🏗️ **Lead Architect/Tech Lead**:
+>     - [ ] Define technical approach and architecture
+>     - [ ] Oversee technical implementation
+> * 🎨 **Lead UX Designer (if applicable)**:
+>     - [ ] Define overall UX strategy for the epic
+>     - [ ] Ensure design consistency
+> ```
+---
+
+# 👉️ Final Remarks & Open Questions
+> 💡 *Any other relevant information, links to supporting documents, or open questions that need to be addressed.*
+> - **Supporting Documents:** [Link to PRD, research, market analysis, etc.]
+> - **Open Questions:**
+>     - [Question 1]
+>     - [Question 2]

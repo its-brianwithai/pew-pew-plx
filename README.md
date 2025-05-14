@@ -1,4 +1,4 @@
-# ⚡ Ultra Wide Turbo Workspace 0.0.12
+# ⚡ Ultra Wide Turbo Workspace 0.0.13
 
 [![Brought to you by ultrawideturbodevs.com](https://img.shields.io/badge/Brought%20to%20you%20by-ultrawideturbodevs.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://ultrawideturbodevs.com)
 
@@ -6,7 +6,29 @@
 
 ---
 
-## ✨ Latest Release: 0.0.12 (May 12, 2025)
+## ✨ Latest Release: 0.0.13 (May 14, 2025)
+
+#### ✨ New
+- Added new developer prompts for AI-assisted development workflows (`plx-dev-next-instruction`, `you-are-pew-pew-dev`, `you-are-plan-act-phase-dev`, `you-are-plan-dev`, `you-are-windsurf-workflow-expert`).
+- Introduced new developer script for markdown generation (`generate_missing_markdown.py`).
+- Expanded developer snippets for common tasks (`;cr`, `;do`, `;fm`, `;rcx`, `;tod`, `;tt`, `;value`) and Flutter (`applifecycleservice`, `connectionservicewhen`).
+- Added new templates for Windsurf workflows and various project management artifacts (chores, crash reports, enhancements, feedback, roadmaps, stories).
+- Implemented new prompt engineering activities and agent roles for rules and workflow creation (`plx-create-rules-and-workflows`, `plx-create-todo-rules`, `you-are-cursor-windsurf-rules-expert`).
+- Added new WOW document for Windsurf workflow best practices.
+- Introduced new proposal templates for epics and roadmaps.
+
+#### 🛠️ Modified
+- Updated various agent prompts and templates across Architect, Business Analyst, Communications Officer, Developer, Project Manager, Prompt Engineer, Proposal Manager, and Researcher roles to enhance functionality and clarity.
+- Refined `raycast_snippets.json` and `repo-prompt-prompts.json`.
+
+#### 🔄 Renamed
+- Renamed several developer snippets from `ee*` to `ex*`.
+- Renamed `project-manager/templates/tasks-template.md` to `developer/templates/activity-flow-template.md` and updated its content.
+
+#### 🗑️ Removed
+- Removed `developer/artifacts/SavedPrompts.json`.
+- Deleted `project-manager/templates/user-story-template.md`.
+- Deleted `proposal-manager/templates/feature-proposal-template.md`
 
 #### ✨ New Features
 - **New Activity & Agent Prompts**: Added system workflow creation, feature flow generation, QA specialists, and more expert agent roles.

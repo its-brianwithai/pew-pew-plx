@@ -18,6 +18,7 @@ Upon confirmation from me that there is no more feedback you may proceed create 
 6.  **Save Prompt:** Save the generated Agent Prompt text to the specified file path: `{doc_location}`.
 
 ```yaml
+persona: 
 relevant_context: <file_map>, <file_contents>, <extra_context>
 doc_location: 
 user_requests: 

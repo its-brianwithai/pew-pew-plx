@@ -28,6 +28,10 @@ The input, denoted by `{workflow_specifications}`, will be an object or structur
 (This is the template you MUST use to structure your output)
 
 ```markdown
+---
+description: $description_max_250_chars
+---
+
 # 🔖 Description
 > 💡 *A brief description of the system and (optional) instructions on how to get started.*
 
