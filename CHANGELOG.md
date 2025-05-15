@@ -1,74 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 0.0.13 (May 14, 2025)
+## [v0.0.14] - 2025-05-15
 
-### ✨ New
-- `developer/prompts/activities/plx-dev-next-instruction.md`
-- `developer/prompts/agents/you-are-pew-pew-dev.md`
-- `developer/prompts/agents/you-are-plan-act-phase-dev-raw.md`
-- `developer/prompts/agents/you-are-plan-act-phase-dev.md`
-- `developer/prompts/agents/you-are-plan-dev.md`
-- `developer/prompts/agents/you-are-windsurf-workflow-expert.md`
-- `developer/scripts/generate_missing_markdown.py`
-- `developer/snippets/;cr.md`
-- `developer/snippets/;do.md`
-- `developer/snippets/;fm.md`
-- `developer/snippets/;rcx.md`
-- `developer/snippets/;tod.md`
-- `developer/snippets/;tt.md`
-- `developer/snippets/;value.md`
-- `developer/snippets/flutter/;applifecycleservice.md`
-- `developer/snippets/flutter/;connectionservicewhen.md`
-- `developer/templates/windsurf-workflow-template.md`
-- `project-manager/templates/chore-template.md`
-- `project-manager/templates/crash-report-template.md`
-- `project-manager/templates/enhancement-template.md`
-- `project-manager/templates/feedback-template.md`
-- `project-manager/templates/roadmap-template.md`
-- `project-manager/templates/story-template.md`
-- `prompt-engineer/prompts/activities/plx-create-rules-and-workflows.md`
-- `prompt-engineer/prompts/activities/plx-create-todo-rules.md`
-- `prompt-engineer/prompts/agents/you-are-cursor-windsurf-rules-expert.md`
-- `prompt-engineer/wows/wow-windsurf-workflow-best-practices.md`
-- `proposal-manager/templates/epic-proposal-template.md`
-- `proposal-manager/templates/roadmap-proposal-template.md`
-
-### 🛠️ Modified
-- `architect/prompts/agents/you-are-system-workflow-expert.md`
-- `architect/templates/architecture-template.md`
-- `architect/templates/system-template.md`
-- `business-analyst/prompts/agents/you-are-market-researcher.md`
-- `communications-officer/templates/meeting-template.md`
-- `developer/artifacts/raycast_snippets.json`
-- `developer/artifacts/repo-prompt-prompts.json`
-- `developer/prompts/activities/plx-develop-tasks.md`
-- `project-manager/prompts/agents/you-are-dev-plan-expert.md`
-- `project-manager/prompts/agents/you-are-requirements-expert.md`
-- `project-manager/templates/brief-template.md`
-- `project-manager/templates/bug-template.md`
-- `project-manager/templates/epic-template.md`
-- `project-manager/templates/prd-template.md`
-- `project-manager/templates/requirements-template.md`
-- `prompt-engineer/prompts/activities/plx-create-agent-prompt.md`
-- `prompt-engineer/prompts/activities/plx-transfer-context.md`
-- `prompt-engineer/prompts/agents/you-are-windsurf-rules-expert.md`
-- `proposal-manager/prompts/agents/you-are-a-milestone-proposal-expert.md`
-- `proposal-manager/templates/story-proposal-template.md`
-- `researcher/templates/research-template.md`
-
-### 🔄 Renamed
-- `developer/snippets/;ee1.md` -> `developer/snippets/;ex1.md`
-- `developer/snippets/;ee2.md` -> `developer/snippets/;ex2.md`
-- `developer/snippets/;ee3.md` -> `developer/snippets/;ex3.md`
-- `developer/snippets/;ee4.md` -> `developer/snippets/;ex4.md`
-- `developer/snippets/;ee5.md` -> `developer/snippets/;ex5.md`
-- `project-manager/templates/tasks-template.md` -> `developer/templates/activity-flow-template.md` (also modified)
-
-### 🗑️ Removed
-- `developer/artifacts/SavedPrompts.json` (was added then deleted from working tree)
-- `project-manager/templates/user-story-template.md`
-- `proposal-manager/templates/feature-proposal-template.md`
+### Added
+- **New Researcher Profile Questionnaire Templates**: Introduced a suite of 8 new questionnaire templates within the `researcher/templates/` directory. These templates are designed to create central repositories of detailed information for various profiles (Client, Company, Other People, Overall Goals, Personal, Product, Project, and Service), facilitating AI-assisted tracking, planning, and analysis.
+    - `researcher/templates/client-profile-questions-template.md`
+    - `researcher/templates/company-profile-questions-template.md`
+    - `researcher/templates/other-people-profile-questions-template.md`
+    - `researcher/templates/overall-goals-profile-questions-template.md`
+    - `researcher/templates/personal-profile-questions-template.md`
+    - `researcher/templates/product-profile-questions-template.md`
+    - `researcher/templates/project-profile-questions-template.md`
+    - `researcher/templates/service-profile-questions-template.md`
+- **Documentation**: Updated `README.md` and `CHANGELOG.md` to reflect the v0.0.14 release and ensure accuracy.
 
 ## 0.0.12 (May 12, 2025)
 
@@ -203,7 +148,7 @@ All notable changes to this project will be documented in this file.
 - Standardized optional subfolders within roles: `prompts`, `templates`, `wows`, `rubrics`, `documentation`, `scripts`, `systems`.
 
 #### 📚 Documentation
-- Rewrote `README.md` to accurately describe the new role-based structure and optional subfolders.
+- Rewritten `README.md` to accurately describe the new role-based structure and optional subfolders.
 - Added a "Credits" section to `README.md` acknowledging `bmadcode` for influential repositories (`cursor-custom-agents-rules-generator`, `BMAD-METHOD`) and linking to their GitHub/YouTube.
 - Updated `CONTRIBUTING.md` to reflect the current file structure and remove outdated naming conventions.
 

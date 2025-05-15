@@ -1,4 +1,4 @@
-# ⚡ Ultra Wide Turbo Workspace 0.0.13
+# ⚡ Ultra Wide Turbo Workspace v0.0.14
 
 [![Brought to you by ultrawideturbodevs.com](https://img.shields.io/badge/Brought%20to%20you%20by-ultrawideturbodevs.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://ultrawideturbodevs.com)
 
@@ -6,46 +6,22 @@
 
 ---
 
-## ✨ Latest Release: 0.0.13 (May 14, 2025)
+## ✨ Latest Release: v0.0.14 (2025-05-15)
 
 #### ✨ New
-- Added new developer prompts for AI-assisted development workflows (`plx-dev-next-instruction`, `you-are-pew-pew-dev`, `you-are-plan-act-phase-dev`, `you-are-plan-dev`, `you-are-windsurf-workflow-expert`).
-- Introduced new developer script for markdown generation (`generate_missing_markdown.py`).
-- Expanded developer snippets for common tasks (`;cr`, `;do`, `;fm`, `;rcx`, `;tod`, `;tt`, `;value`) and Flutter (`applifecycleservice`, `connectionservicewhen`).
-- Added new templates for Windsurf workflows and various project management artifacts (chores, crash reports, enhancements, feedback, roadmaps, stories).
-- Implemented new prompt engineering activities and agent roles for rules and workflow creation (`plx-create-rules-and-workflows`, `plx-create-todo-rules`, `you-are-cursor-windsurf-rules-expert`).
-- Added new WOW document for Windsurf workflow best practices.
-- Introduced new proposal templates for epics and roadmaps.
+- **New Researcher Profile Questionnaire Templates**: Introduced a suite of 9 new questionnaire templates within the `researcher/templates/` directory. These templates are designed to create central repositories of detailed information for various profiles (Client, Company, Other People, Overall Goals, Personal, Product, Project, Research, and Service), facilitating AI-assisted tracking, planning, and analysis.
+    - `researcher/templates/client-profile-questions-template.md`
+    - `researcher/templates/company-profile-questions-template.md`
+    - `researcher/templates/other-people-profile-questions-template.md`
+    - `researcher/templates/overall-goals-profile-questions-template.md`
+    - `researcher/templates/personal-profile-questions-template.md`
+    - `researcher/templates/product-profile-questions-template.md`
+    - `researcher/templates/project-profile-questions-template.md`
+    - `researcher/templates/research-template.md`
+    - `researcher/templates/service-profile-questions-template.md`
 
 #### 🛠️ Modified
-- Updated various agent prompts and templates across Architect, Business Analyst, Communications Officer, Developer, Project Manager, Prompt Engineer, Proposal Manager, and Researcher roles to enhance functionality and clarity.
-- Refined `raycast_snippets.json` and `repo-prompt-prompts.json`.
-
-#### 🔄 Renamed
-- Renamed several developer snippets from `ee*` to `ex*`.
-- Renamed `project-manager/templates/tasks-template.md` to `developer/templates/activity-flow-template.md` and updated its content.
-
-#### 🗑️ Removed
-- Removed `developer/artifacts/SavedPrompts.json`.
-- Deleted `project-manager/templates/user-story-template.md`.
-- Deleted `proposal-manager/templates/feature-proposal-template.md`
-
-#### ✨ New Features
-- **New Activity & Agent Prompts**: Added system workflow creation, feature flow generation, QA specialists, and more expert agent roles.
-- **Developer Resources**: Added numerous code snippets, repo prompt templates, and workflow automation research.
-- **Templates & Documentation**: Added new system templates, meeting templates, and task management structures.
-
-#### 🏗️ Structural Changes
-- Renamed several templates for better clarity and consistency.
-- Enhanced template expert role capabilities.
-- Reorganized milestone and epic structures.
-
-#### 🛠️ Improvements
-- Updated existing templates with more detailed information.
-- Enhanced agent prompts across various roles.
-- Improved documentation for planning and requirements templates.
-
----
+- `README.md`: Updated to accurately reflect the v0.0.14 release, adjust previous release notes, and ensure overall project structure and file counts are correct.
 
 ## 📁 Role Folder Structure
 
@@ -74,9 +50,9 @@ Creates detailed technical blueprints and architectural designs based on product
 
 ```
 architect/
-├── prompts/ (7)
+├── prompts/ (8)
 │   ├── activities/ (5)
-│   └── agents/ (2)
+│   └── agents/ (3)
 └── templates/ (2)
 ```
 
@@ -91,17 +67,51 @@ aso-expert/
     └── best-practices/ (1)
 ```
 
+###  automating [Automation Alchemist](automation-alchemist/)
+Specializes in automating complex tasks and research processes, including the development and implementation of advanced automation solutions like Retrieval Augmented Generation (RAG) systems.
+
+```
+automation-alchemist/
+└── deep-research/ (2)
+```
+
+### 🧱 [BMAD](bmad/)
+Dedicated to exploring and implementing BMad (Build, Measure, Adapt, Develop) methodologies, focusing on agentic development workflows and structured project management artifacts.
+
+```
+bmad/
+├── prompts/ (6)
+│   └── agents/ (6)
+└── templates/ (18)
+```
+
+### 💡 [Brainstormer](brainstormer/)
+Facilitates idea generation and creative problem-solving sessions, utilizing prompts and activities to explore new concepts and solutions.
+
+```
+brainstormer/
+└── prompts/ (1)
+    └── activities/ (1)
+```
+
 ### 📊 [Business Analyst](business-analyst/)
 Performs market research and project definition, analyzing opportunities, competitors, and user demographics while creating structured project requirements.
 
 ```
 business-analyst/
 ├── prompts/ (6)
-│   ├── activities/ (3)
-│   └── agents/ (3)
-├── templates/ (1)
+│   ├── activities/ (2)
+│   └── agents/ (4)
 └── wows/ (1)
     └── best-practices/ (1)
+```
+
+### 📢 [Communications Officer](communications-officer/)
+Manages internal and external communications, preparing meeting agendas, summaries, and other communication artifacts.
+
+```
+communications-officer/
+└── templates/ (1)
 ```
 
 ### 📝 [Content Creator](content-creator/)
@@ -109,12 +119,13 @@ Develops optimized content for various platforms and channels, combining writing
 
 ```
 content-creator/
-├── prompts/ (5)
+├── prompts/ (7)
 │   ├── activities/ (3)
-│   └── agents/ (2)
+│   └── agents/ (4)
 ├── resources/ (6)
 │   └── dev-channels/ (6)
 ├── systems/ (3)
+├── templates/ (1)
 └── wows/ (1)
     └── best-practices/ (1)
 ```
@@ -124,12 +135,15 @@ Implements features according to technical specifications, following coding stan
 
 ```
 developer/
-├── prompts/ (25)
+├── artifacts/ (2)
+├── prompts/ (31)
 │   ├── activities/ (16)
-│   └── agents/ (9)
+│   └── agents/ (15)
 ├── rubrics/ (1)
-├── scripts/ (1)
-├── templates/ (1)
+├── scripts/ (2)
+├── snippets/ (42)
+│   └── flutter/ (14)
+├── templates/ (5)
 └── wows/ (35)
     ├── astro/ (1)
     ├── cli-tools/ (2)
@@ -143,16 +157,25 @@ developer/
         └── flutter/ (20)
 ```
 
+### 📖 [Doc Expert](doc-expert/)
+Specializes in creating, reviewing, and transforming documentation, ensuring clarity, accuracy, and adherence to standards. Manages document templates and expert systems for documentation.
+
+```
+doc-expert/
+└── prompts/ (5)
+    ├── activities/ (3)
+    └── agents/ (2)
+```
+
 ### 📋 [Project Manager](project-manager/)
 Creates product requirements documents and manages the Agile workflow of epics, stories, and tasks while coordinating development priorities.
 
 ```
 project-manager/
 ├── prompts/ (18)
-│   ├── activities/ (10)
-│   └── agents/ (8)
-├── templates/ (7)
-└── wows/ (3)
+│   ├── activities/ (11)
+│   └── agents/ (7)
+└── templates/ (12)
 ```
 
 ### 🤖 [Prompt Engineer](prompt-engineer/)
@@ -160,10 +183,11 @@ Designs and optimizes prompts for AI interactions, creating standard formats for
 
 ```
 prompt-engineer/
-├── prompts/ (11)
-│   ├── activities/ (7)
-│   └── agents/ (4)
-└── wows/ (4)
+├── prompts/ (21)
+│   ├── activities/ (14)
+│   └── agents/ (7)
+├── snippets/ (1)
+└── wows/ (5)
 ```
 
 ### 📑 [Proposal Manager](proposal-manager/)
@@ -174,28 +198,50 @@ proposal-manager/
 ├── prompts/ (3)
 │   ├── activities/ (1)
 │   └── agents/ (2)
-└── templates/ (1)
+├── templates/ (3)
+└── wows/ (1)
 ```
 
-### 🧪 [Tester](tester/)
+### 🔬 [Researcher](researcher/)
+Defines research questions and methodologies, conducts studies, analyzes data, and synthesizes findings into actionable insights and comprehensive reports.
+
+```
+researcher/
+├── prompts/ (1)
+│   └── activities/ (1)
+├── questionnaires/ (0) 
+└── templates/ (9)
+```
+
+### ✅ [Tester](tester/)
 Designs and executes acceptance tests to validate functionality, ensure quality, and verify that requirements have been properly implemented.
 
 ```
 tester/
-├── prompts/ (3)
-│   ├── activites/ (2)
-│   └── agents/ (1)
+├── prompts/ (8)
+│   ├── activites/ (6) 
+│   └── agents/ (2)
+├── snippets/ (2)
 └── templates/ (1)
 ```
 
-### 🎨 [UI/UX Expert](uiux-expert/)
+### 🎨 [UIUX Expert](uiux-expert/)
 Translates UI/UX specifications into optimized designs and components, with expertise in creating intuitive user experiences and interfaces.
 
 ```
 uiux-expert/
+├── prompts/ (0)
+└── rubrics/ (1)
+```
+
+### 🧑‍💼 [Virtual Assistent](virtual-assistent/)
+Provides personal assistance for development-related tasks, managing resources and leveraging prompts for efficient support.
+
+```
+virtual-assistent/
 ├── prompts/ (1)
 │   └── agents/ (1)
-└── rubrics/ (1)
+└── resources/ (1)
 ```
 
 ---
