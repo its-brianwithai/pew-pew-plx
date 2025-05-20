@@ -1,0 +1,37 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-github-metadata
+
+title: ⚡ Ultra Wide Turbo Workspace
+description: A virtual organization where you are the CEO
+show_downloads: true
+logo: /assets/img/logo.png
+
+# Enable GitHub Pages metadata
+repository: its-brianwithai/ultra-wide-turbo-workspace
+
+# Configure defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Enable markdown processing for files with these extensions
+markdown_ext: "md,markdown,mdc"
+
+# Configure permalink structure
+permalink: pretty
+
+# Exclude these files from processing
+exclude:
+  - mason.yaml
+  - mason-lock.json
+  - "*.brick.yaml"
+  - "**/__brick__/**"
