@@ -64,3 +64,4 @@ yarn-error.log*
 # Private folders
 **/*-private/
 **/*-private/**
+docs/repo/
