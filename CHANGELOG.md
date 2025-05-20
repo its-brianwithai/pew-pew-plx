@@ -1,8 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [v0.0.14] - 2025-05-15
+## [v0.0.15] - YYYY-MM-DD
 
+### Added
+- **New Developer Agent Prompt**: Added `developer/prompts/agents/you-are-pseudo-coder.md` to assist with generating pseudocode.
+- **New Prompt Engineer Activity**: Added `prompt-engineer/prompts/activities/plx-create-claude-rules.md` for generating Claude-specific rules.
+- **Documentation**: Updated `README.md` and `CHANGELOG.md` to reflect the v0.0.15 release.
+
+## [v0.0.14] - 2025-05-15
+d
 ### Added
 - **New Researcher Profile Questionnaire Templates**: Introduced a suite of 8 new questionnaire templates within the `researcher/templates/` directory. These templates are designed to create central repositories of detailed information for various profiles (Client, Company, Other People, Overall Goals, Personal, Product, Project, and Service), facilitating AI-assisted tracking, planning, and analysis.
     - `researcher/templates/client-profile-questions-template.md`

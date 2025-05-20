@@ -1,0 +1,9 @@
+name: brick
+description: One ultra wide turbo brick to rule them all.
+version: 0.1.0+1
+environment:
+  mason: ^0.1.0
+vars:
+  brickName:
+    type: string
+    description: Name of the brick.
