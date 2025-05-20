@@ -65,3 +65,7 @@ yarn-error.log*
 **/*-private/
 **/*-private/**
 docs/repo/
+
+.idea/
+.claude
+.mason

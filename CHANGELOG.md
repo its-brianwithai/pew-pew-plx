@@ -1,15 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [v0.0.16] - May 20, 2025
+## [v0.0.16] - 2025-05-20
 
 ### Added
-- **Mason Brick Integration**: 
-  - Added Mason brick scaffolding system for code generation
-  - Created reusable brick templates (`developer/bricks/brick/`)
-  - Added Mason configuration files (`mason.yaml`, `mason-lock.json`)
-  - Created example WTF brick (`wtf/__brick__/wtf.dart`, `wtf/brick.yaml`)
-
 - **Testing Framework Enhancements**:
   - Added comprehensive Flutter testing documentation (`developer/wows/flutter/wow-flutter-testing-2025.md`)
   - Added new testing activity prompts:
@@ -31,7 +25,7 @@ All notable changes to this project will be documented in this file.
 - Updated README.md with improved project information
 - Updated documentation around development workflows
 
-## [v0.0.15] - YYYY-MM-DD
+## [v0.0.15] 2025-05-20
 
 ### Added
 - **New Developer Agent Prompt**: Added `developer/prompts/agents/you-are-pseudo-coder.md` to assist with generating pseudocode.
@@ -52,7 +46,7 @@ d
     - `researcher/templates/service-profile-questions-template.md`
 - **Documentation**: Updated `README.md` and `CHANGELOG.md` to reflect the v0.0.14 release and ensure accuracy.
 
-## 0.0.12 (May 12, 2025)
+## 0.0.12 (2025-05-12)
 
 ### ✨ New Features
 - **New Activity Prompts**:
@@ -105,7 +99,7 @@ d
   - Improved user story templates
   - Enhanced multiple agent prompts with clearer instructions
 
-## 0.0.11 (May 5, 2025)
+## 0.0.11 (2025-05-05)
 
 ### ✨ Major Features
 - **BMAD Framework Reorganization**: 
@@ -137,7 +131,7 @@ d
   - Reorganized multiple templates into more appropriate locations
   - Updated file paths and references for better organization
 
-## 0.0.10 (April 30, 2025)
+## 0.0.10 (2025-04-30)
 
 ### 🛠️ Improvements:
 - **Developer Scripts:**
@@ -151,7 +145,7 @@ d
   - Added initial `raycast_snippets.json` containing snippets from project markdown files
   - Generated snippets automatically transform variables in format `{{VARIABLE}}` to Raycast's `{argument name="{{VARIABLE}}"}` format
 
-## 0.0.9 (April 30, 2025)
+## 0.0.9 (2025-04-30)
 
 #### ✨ Features: New Role-Specific Activity Prompts
 
@@ -178,7 +172,7 @@ d
   - Updated `README.md` to reflect version 0.0.9, new file counts, and summarize recent changes.
   - Minor formatting correction in `project-manager/wows/wow-bmad-agile-workflow.md`.
 
-## 0.0.8 (April 30, 2025)
+## 0.0.8 (2025-04-30)
 
 #### 🔄 Reorganization & Refinement
 - Restructured the project around top-level **Roles**, each with its own dedicated folder ("office").
@@ -189,7 +183,7 @@ d
 - Added a "Credits" section to `README.md` acknowledging `bmadcode` for influential repositories (`cursor-custom-agents-rules-generator`, `BMAD-METHOD`) and linking to their GitHub/YouTube.
 - Updated `CONTRIBUTING.md` to reflect the current file structure and remove outdated naming conventions.
 
-## 0.0.7 (April 17, 2025)
+## 0.0.7 (2025-04-17)
 
 #### 📚 Documentation
 - Added comprehensive best practices guide for App Store Optimization (`aso-best-practices-2025.md`).
@@ -206,7 +200,7 @@ d
 #### 🧹 Housekeeping
 - Removed outdated example image files from researcher resources.
 
-## 0.0.6 (April 17, 2025)
+## 0.0.6 (2025-04-17)
 
 #### 📚 Documentation:
 - **ASO & MVP Roadmap Best Practices**:
@@ -226,7 +220,7 @@ d
   - Added `aso-best-practices-2025.md` providing comprehensive guidelines for App Store Optimization.
   - Added `mvp-roadmap-best-practices-2025.md` with detailed guidance for MVP planning and execution.
 
-## 0.0.5 (April 16, 2025)
+## 0.0.5 (2025-04-16)
 
 #### ✨ Features:
 - **New Developer Prompts**: Added several new developer prompts focused on specific roles and tasks:
@@ -243,7 +237,7 @@ d
 - **Template Updates**:
   - Refined icons in `operator/templates/systems-template.md`.
 
-## 0.0.4 (April 14, 2025)
+## 0.0.4 (2025-04-14)
 
 ### ✨ Features:
 - **New Developer Prompts**: Added several new developer prompts:
@@ -278,7 +272,7 @@ d
   - Enhanced delegation mechanisms with clearer file naming conventions
   - Better clarification steps for ambiguous requests
 
-## 0.0.3 (April 9, 2025)
+## 0.0.3 (2025-04-09)
 
 ### ✨ Features:
 - **New Developer Prompts**: Added several new developer prompts:
@@ -328,7 +322,7 @@ d
 - Relocated developer artifacts to artifacts directory
 - Consolidated marketeer wiki resources into dedicated resource directories
 
-## 0.0.2 (April 2, 2025)
+## 0.0.2 (2025-04-02)
 
 ### ✨ Features:
 - **New Templates**: Added specialized templates for different ticket types:
@@ -366,7 +360,7 @@ d
 - Fixed JSON parsing issues in the MCP server by removing console.log statements that interfered with the output
 - Fixed 405 Method Not Allowed error in Typefully MCP by adding trailing slash to draft creation endpoint URL
 
-## 0.0.1 (March 31, 2025)
+## 0.0.1 (2025-03-31)
 
 ### ✨ Features:
 - **Turbo Developer MCP Tool**: Added a custom Model Context Protocol (MCP) server that provides tools and services for integration with Cursor IDE. This tool allows seamless integration with AI assistants like Claude, providing standardized interfaces for development workflows.
