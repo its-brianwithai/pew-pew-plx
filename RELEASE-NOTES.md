@@ -1,3 +1,40 @@
+# 🚀 Release v0.0.16
+
+## What's New in v0.0.16
+
+### 📦 Mason Brick Integration
+- Added complete Mason brick scaffolding system for code generation
+- Created reusable brick templates with parameterized file generation
+- Added Mason configuration files (`mason.yaml`, `mason-lock.json`)
+- Implemented example WTF brick showing implementation patterns
+- Added brick creation automation script (`add_brick.sh`)
+
+### ✅ Testing Framework
+- Added comprehensive Flutter testing documentation for 2025 best practices
+- Introduced five new testing-focused activity prompts:
+  - Flutter unit test creation
+  - Test listing and inventory
+  - Test preparation workflow
+  - Quality assurance reporting
+  - Test review protocol
+- Improved test organization and execution workflows
+
+### 🛠️ Developer Tools
+- Added project context priming activity to improve AI assistant understanding
+- Created pseudocode generator agent for high-level implementation planning
+- Enhanced documentation workflows
+
+### 📝 Documentation & Rules
+- Added Claude rules creation prompt for custom AI behavior configuration
+- Renamed and enhanced technical documentation expert prompt
+- Updated README with improved project information
+
+## 📋 Full Changes
+
+For a complete list of changes, please refer to the [CHANGELOG.md](CHANGELOG.md).
+
+---
+
 # 🚀 Release v0.0.12
 
 ## What's New in v0.0.12

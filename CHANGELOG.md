@@ -1,6 +1,36 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v0.0.16] - May 20, 2025
+
+### Added
+- **Mason Brick Integration**: 
+  - Added Mason brick scaffolding system for code generation
+  - Created reusable brick templates (`developer/bricks/brick/`)
+  - Added Mason configuration files (`mason.yaml`, `mason-lock.json`)
+  - Created example WTF brick (`wtf/__brick__/wtf.dart`, `wtf/brick.yaml`)
+
+- **Testing Framework Enhancements**:
+  - Added comprehensive Flutter testing documentation (`developer/wows/flutter/wow-flutter-testing-2025.md`)
+  - Added new testing activity prompts:
+    - `tester/prompts/activites/plx-create-flutter-unit-tests.md`
+    - `tester/prompts/activites/plx-list-unit-tests.md`
+    - `tester/prompts/activites/plx-prepare-for-flutter-tests.md`
+    - `tester/prompts/activites/plx-qa-work-done.md`
+    - `tester/prompts/activites/plx-review-tests.md`
+
+- **Developer Tools**:
+  - Added project context priming activity (`developer/prompts/activities/plx-prime-project-context.md`)
+  - Added pseudocode generator agent (`developer/prompts/agents/you-are-pseudo-coder.md`)
+  
+- **Documentation and Rules**:
+  - Added Claude rules creation prompt (`prompt-engineer/prompts/activities/plx-create-claude-rules.md`)
+  - Renamed and enhanced technical documentation expert prompt (`doc-expert/prompts/agents/you-are-tech-doc-expert.md`)
+
+### Updated
+- Updated README.md with improved project information
+- Updated documentation around development workflows
+
 ## [v0.0.15] - YYYY-MM-DD
 
 ### Added
