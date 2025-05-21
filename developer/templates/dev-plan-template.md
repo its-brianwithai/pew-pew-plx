@@ -1,3 +1,4 @@
+<!-- IMPORTANT: Update the placeholders like [Epic ID], [Epic Title], [Story ID], [Story Title] in the main title and throughout this document to match the specific context. -->
 # 🛠️ Development Plan: `[Epic ID]`: `[Epic Title]`: `[Story ID]`: `[Story Title]`
 
 ## 1. 📝 Overview & Objectives
@@ -19,6 +20,32 @@
     *   Design Specifications (Figma, etc.): `[Link to Designs]`
     *   Relevant Epics/Stories: `[Link(s) to tracking tool]`
 
+# 🤖 AI Agent Context
+> 💡 *Essential information for the AI agent to understand and execute this development plan. Review all linked resources thoroughly before proceeding.*
+---
+
+## 📚 Relevant Project Files & Code
+> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
+---
+*   `[path/to/architecture_document.md]` - (Relevance: Overall technical architecture and patterns to follow)
+*   `[path/to/coding_standards.md]` - (Relevance: Code style and best practices)
+*   `[path/to/existing_module_related_to_this_plan/]` - (Relevance: Existing code to integrate with or modify)
+*   *Example: `lib/src/core/services/api_client.dart` - (Relevance: Central API client for backend communication)*
+
+## 🌐 Relevant Documentation & Links
+> 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
+---
+*   `[Link to PRD for the feature/story]` - (Relevance: Functional and non-functional requirements)
+*   `[Link to Figma designs for UI tasks]` - (Relevance: Visual specifications for UI implementation)
+*   `[Link to Backend API Documentation (Swagger/Postman)]` - (Relevance: Endpoints to integrate with)
+*   *Example: `https://pub.dev/packages/provider` - (Relevance: Documentation for the state management solution)*
+
+## 💡 Other Key Information
+> 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
+---
+*   `[Context point 1: e.g., This plan focuses on the frontend implementation; backend is assumed to be ready.]`
+*   `[Context point 2: e.g., Ensure all new widgets are responsive and accessible.]`
+*   *Example: The `AuthService` must be used for all authentication-related operations.*
 ---
 
 ## 2. 🗺️ Scope of Work
@@ -37,8 +64,6 @@
     *   `[e.g., Admin management interface]`
     *   `[...]`
 
----
-
 ## 3. 💻 Technical Approach Summary
 
 - [ ] Review Technical Approach: `[Provide a high-level overview of the technical strategy. Reference the architecture document for details. Mention key technologies, patterns (MVVM), libraries, and backend services (Firebase/Supabase) involved.]`
@@ -48,16 +73,12 @@
     *   **Key Libraries:** `[List critical packages, e.g., go_router, dio, freezed]`
     *   **Coding Standards:** Follow `[Link to Coding Standards Doc]`
 
----
-
 ## 4. 🧪 Testing Strategy
 
 - [ ] Review Testing Strategy: `[Briefly describe the testing approach for the work outlined in this plan. Focus ONLY on unit testing core functionality.]`
     *   **Unit Tests:** Services, ViewModels, Repositories, and utility functions constituting core logic will be unit tested using `[e.g., test, mockito]`. Target coverage: `[Refer to NFRs or specify target]`.
     *   **Tools:** `[List specific unit testing tools or frameworks, e.g., mockito, test]`
     *   **Link to Full Strategy:** `[Link to Testing Strategy Document, if separate and applicable]`
-
----
 
 ## 5. 🔗 Dependencies & Assumptions
 

@@ -1,4 +1,5 @@
 ---
+# IMPORTANT: Update the fields below (name, about, title, labels) to match the specific ticket context.
 name: 📄 Product Requirements Document (PRD)
 about: Define the product or feature to be built, its purpose, features, and behavior.
 title: "📄 PRD: [Project/Feature Name]"
@@ -11,9 +12,11 @@ labels: 📄 prd
 ## 🎯 I. Introduction & Purpose
 
 ### A. Document Overview
-> 💡 *This document provides a template for creating Product Requirements Documents (PRDs) specifically tailored for software projects utilizing the Flutter framework with either Firebase or Supabase as the backend service. A PRD serves as a central artifact defining the product or feature to be built, outlining its purpose, features, functionalities, and behavior. It acts as a crucial communication bridge between the initial project concept and the detailed engineering implementation plan, ensuring alignment among stakeholders including product managers, designers, developers, testers, and marketing teams.*
->
-> *This template is designed to be flexible, catering to both broad, project-scoped PRDs that define an entire new product or release, and more specific, feature-scoped PRDs that detail a single piece of functionality within a larger product. The goal is to provide "just enough" context and detail to guide development effectively within an agile environment, fostering collaboration and clarity without becoming overly burdensome or static.*
+> 💡 *This section provides a general overview of what a PRD is and its role, especially for Flutter & Firebase/Supabase projects. This text is generally static.*
+---
+This document provides a template for creating Product Requirements Documents (PRDs) specifically tailored for software projects utilizing the Flutter framework with either Firebase or Supabase as the backend service. A PRD serves as a central artifact defining the product or feature to be built, outlining its purpose, features, functionalities, and behavior. It acts as a crucial communication bridge between the initial project concept and the detailed engineering implementation plan, ensuring alignment among stakeholders including product managers, designers, developers, testers, and marketing teams.
+
+This template is designed to be flexible, catering to both broad, project-scoped PRDs that define an entire new product or release, and more specific, feature-scoped PRDs that detail a single piece of functionality within a larger product. The goal is to provide "just enough" context and detail to guide development effectively within an agile environment, fostering collaboration and clarity without becoming overly burdensome or static.
 
 ### B. Purpose of *This Specific* PRD
 > 💡 *Clearly state whether this PRD covers an entire project/release or a specific feature. Define the high-level objective of what is being documented.*
@@ -21,12 +24,13 @@ labels: 📄 prd
 > **Example (Project Scope):** "This PRD outlines the requirements for the initial release (MVP) of the 'ConnectSphere' mobile application, a social networking platform built using Flutter and Firebase, focusing on core user profile creation, connection requests, and a basic activity feed."
 >
 > **Example (Feature Scope):** "This PRD details the requirements for implementing the 'Real-time Chat' feature within the existing 'TaskMaster' Flutter/Supabase application, enabling users to communicate directly within project workspaces."
-
+---
 [Your specific purpose here]
 
 ### C. Intended Audience
-> 💡 *This document is intended for all stakeholders involved in the planning, design, development, testing, and launch of the specified product or feature. This includes, but is not limited to:*
-
+> 💡 *This document is intended for all stakeholders involved in the planning, design, development, testing, and launch of the specified product or feature.*
+---
+This includes, but is not limited to:
 *   Product Managers
 *   UI/UX Designers
 *   Flutter Developers (Frontend)
@@ -36,24 +40,19 @@ labels: 📄 prd
 *   Marketing & Sales Teams (as applicable)
 *   Relevant Leadership/Executives
 
----
 ## 🏆 II. Goals & Objectives
 
 ### A. Product Vision & Strategic Fit
-> 💡 *Briefly describe the overall vision for the product or how this specific feature fits into the larger product vision and company strategy. Answer "Why are we doing this?"*
->
-> *This section sets the strategic context. It should articulate the high-level aspiration for the product or feature and explain its alignment with broader company goals or market opportunities. Understanding the strategic fit helps the team make informed decisions throughout the development process, ensuring the work contributes meaningfully to the organization's objectives.*
+> 💡 *Briefly describe the overall vision for the product or how this specific feature fits into the larger product vision and company strategy. Answer "Why are we doing this?" This section sets the strategic context.*
 >
 > **Example (Project Scope):** "ConnectSphere aims to be the leading mobile platform for professional networking within the creative industries by fostering genuine connections through shared portfolio work. This aligns with the company's strategic goal of expanding into the creative professional market segment (Objective KR2.1)."
 >
 > **Example (Feature Scope):** "The Real-time Chat feature directly supports TaskMaster's strategic objective of increasing user engagement and collaboration within the platform (Strategy Pillar 3). By enabling seamless communication, we aim to reduce reliance on external chat tools and make TaskMaster the central hub for project work."
-
+---
 [Your product vision and strategic fit here]
 
 ### B. Business Objectives & Success Metrics
 > 💡 *List specific, measurable, achievable, relevant, and time-bound (SMART) goals for this project/feature. Define the Key Performance Indicators (KPIs) or metrics that will be used to measure success.*
->
-> *Defining clear objectives and how success will be measured is crucial for evaluating the product's impact after launch. These metrics provide concrete targets for the team and justify the investment in development. Success metrics should cover relevant aspects like user adoption, engagement, performance, task success rates, or business outcomes.*
 >
 > **Example Goals & Metrics:**
 > *   **Goal 1:** Increase user sign-up conversion rate.
@@ -61,13 +60,39 @@ labels: 📄 prd
 > *   **Goal 2:** Improve user engagement with the new chat feature.
 >     *   **Metric:** Achieve an average of 5 chat messages sent per active user per week within the first month.
 >     *   **Metric:** 70% adoption rate of the chat feature (users sending at least one message) among active users within 2 months.
-
+---
 [Your business objectives and success metrics here]
 
+# 🤖 AI Agent Context
+> 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
 ---
+
+## 📚 Relevant Project Files & Code
+> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
+---
+*   `[path/to/relevant/architecture_document.md]` - (Relevance: Overall system architecture and technical decisions)
+*   `[path/to/existing/feature_module/]` - (Relevance: If enhancing an existing feature, provide path to its code)
+*   *Example: `src/core/services/analytics_service.dart` - (Relevance: For integrating new analytics events)*
+
+## 🌐 Relevant Documentation & Links
+> 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
+---
+*   `[Link to Company Strategic Goals Document]` - (Relevance: For understanding strategic fit)
+*   `[Link to User Persona Documents]` - (Relevance: For understanding target users)
+*   `[Link to Figma designs for this PRD's scope]` - (Relevance: UI/UX specifications)
+*   *Example: `https://firebase.google.com/docs/firestore/security-rules` - (Relevance: For defining Firestore security rules)*
+
+## 💡 Other Key Information
+> 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
+---
+*   `[Context point 1: e.g., This PRD supersedes the previous draft version 0.9.]`
+*   `[Context point 2: e.g., The primary NFR to focus on is application performance on low-end devices.]`
+*   *Example: All user-facing text must be reviewed by the localization team before implementation.*
+---
+
 ## 📑 III. Document Metadata
 > 💡 *Fill in the administrative details for this specific PRD.*
-
+---
 | Field                  | Details                                      |
 | :--------------------- | :------------------------------------------- |
 | **Project/Feature Name** | `[Insert Project or Feature Name]`           |
@@ -81,8 +106,8 @@ labels: 📄 prd
 | **Target Release**     | `[e.g., v2.1, Q4 2024]`                      |
 
 ### Version History
-> 💡 *Maintain a log of significant changes to this document. Tracking changes ensures transparency and provides context for the evolution of requirements, which is vital as PRDs are living documents that adapt as projects progress. Understanding *why* a requirement changed can prevent confusion or accidental reversions later.*
-
+> 💡 *Maintain a log of significant changes to this document. Tracking changes ensures transparency and provides context for the evolution of requirements.*
+---
 | Version | Date       | Author                  | Summary of Changes                             | Reason for Change                |
 |:--------|:-----------|:------------------------|:-----------------------------------------------|:---------------------------------|
 | 0.1     | `YYYY-MM-DD` | `[Name (Role)]`         | Initial Draft                                  | N/A                              |
@@ -90,32 +115,28 @@ labels: 📄 prd
 | 1.1     | `YYYY-MM-DD` | `[Name (Role)]`         | Added specific NFRs for performance & security | Technical refinement             |
 |         |            |                         |                                                |                                  |
 
----
 ## 🧑‍🤝‍🧑 IV. User Personas
-> 💡 *Define the primary and secondary target users for this product/feature. Link to more detailed persona documents if available.*
->
-> *Understanding the target users is fundamental to building a successful product. Personas represent archetypes of real users, encapsulating their goals, needs, behaviors, and pain points. Keeping these personas in mind throughout the design and development process helps ensure the final product effectively addresses user needs rather than just fulfilling a list of features.*
-
+> 💡 *Define the primary and secondary target users for this product/feature. Link to more detailed persona documents if available. Understanding the target users is fundamental.*
+---
 *   **Primary Persona(s):**
     > 💡 *Describe the main user(s) this product/feature is designed for. Their needs should be the primary focus.*
+    ---
     *   **Example:** *Creative Professional (Freelance Graphic Designer):* Needs to easily showcase portfolio work, connect with potential clients, and manage project inquiries efficiently. Values intuitive UI and seamless mobile experience.
     *   `[Primary Persona 1 Name/Type]: [Description]`
 *   **Secondary Persona(s):**
     > 💡 *Describe other users who might interact with the product/feature, but whose needs are not the central focus.*
+    ---
     *   **Example:** *Recruiter/Client:* Needs to quickly browse portfolios, assess skills, and initiate contact with creative professionals. Values efficient search and clear contact information.
     *   `[Secondary Persona 1 Name/Type]: [Description]`
 
 *   **(Link to detailed Persona documents/research if they exist):** `[Link]`
 
----
 ## 🗺️ V. Scope Definition
-> 💡 *Clearly define what is included in this release and, just as importantly, what is explicitly excluded.*
->
-> *Defining the scope clearly upfront is essential for managing expectations, preventing scope creep, and ensuring the team stays focused on delivering the agreed-upon value within the given constraints. While agile methodologies embrace adapting to change, uncontrolled expansion of scope (scope creep) is a common reason for project delays and budget overruns. The "Out of Scope" section serves as a critical boundary marker.*
-
+> 💡 *Clearly define what is included in this release and, just as importantly, what is explicitly excluded. This is essential for managing expectations and preventing scope creep.*
+---
 ### A. In Scope (Prioritized Features/User Stories)
-> 💡 *List the specific features, user stories, or epics planned for this release. Use a prioritization method like MoSCoW (Must-have, Should-have, Could-have, Won't-have). This provides a clear framework for guiding decision-making when trade-offs are necessary.*
-
+> 💡 *List the specific features, user stories, or epics planned for this release. Use a prioritization method like MoSCoW (Must-have, Should-have, Could-have, Won't-have).*
+---
 | Feature/Story ID              | Description                                                                                                | Priority (MoSCoW) | Rationale/Notes                                           |
 |:------------------------------|:-----------------------------------------------------------------------------------------------------------|:------------------|:----------------------------------------------------------|
 | **Must-have**                 | *(Essential for the core purpose/viability of this release)*                                             |                   |                                                           |
@@ -130,21 +151,20 @@ labels: 📄 prd
 | `[FEAT-ID-004]`               | `[Direct (1-to-1) messaging between users.]`                                                               | Won't             | `[Deferred to v2.1 release.]`                             |
 
 ### B. Out of Scope
-> 💡 *Explicitly list features, functionalities, or user requests that are NOT included in this specific release. Note if they are deferred. This prevents misunderstandings and manages stakeholder expectations.*
-
+> 💡 *Explicitly list features, functionalities, or user requests that are NOT included in this specific release. Note if they are deferred.*
+---
 *   `[Integration with third-party project management tools.]`
 *   `[Advanced user permission roles beyond 'Admin' and 'Member'.]`
 *   `[Offline support for chat messages (deferred to future release).]`
 
----
 ## ⚙️ VI. Requirements
 > 💡 *This section forms the core of the PRD, detailing *what* the product or feature needs to do (functional requirements) and *how* it should perform (non-functional requirements).*
-
+---
 ### A. User Stories / Use Cases
-> 💡 *User stories are the preferred format in agile development for capturing requirements from the end-user's perspective, focusing on the value delivered. Each story should be accompanied by clear acceptance criteria. For particularly complex interactions, supplementing a user story with a linked use case description or flowchart can enhance clarity.*
+> 💡 *User stories are the preferred format in agile development for capturing requirements from the end-user's perspective. Each story should have clear acceptance criteria.*
 >
-> *(List the detailed user stories derived from the 'In Scope' features. Link stories to Epics if applicable. Ensure each story has clear Acceptance Criteria.)*
-
+> *(List the detailed user stories derived from the 'In Scope' features. Link stories to Epics if applicable.)*
+---
 **Example User Story:**
 *   **ID:** `US-001`
 *   **Epic Link:** `[Link to User Authentication Epic]`
@@ -163,19 +183,19 @@ labels: 📄 prd
 `[List your user stories here]`
 
 ### B. Functional Requirements
-> 💡 *Functional requirements define *what* the system must do – its specific behaviors, features, and functions. While often captured within user story acceptance criteria, this section can explicitly list system-level functions, business rules, or administrative capabilities.*
+> 💡 *Functional requirements define *what* the system must do. This section can explicitly list system-level functions or business rules not fully captured in user stories.*
 >
-> *(List any specific functional requirements not adequately covered by user story acceptance criteria. Reference relevant user stories where applicable.)*
-
+> *(List any specific functional requirements not adequately covered by user story acceptance criteria.)*
+---
 *   **FR-01 (Data Validation):** `[All user-inputted text fields must sanitize input to prevent cross-site scripting (XSS) attacks.]`
 *   **FR-02 (Business Rule):** `[User accounts inactive for more than 12 months must be flagged for potential deactivation.]`
 *   **FR-03 (Admin Function):** `[System administrators must have the capability to view application logs via the Firebase/Supabase console.]`
 
 ### C. Non-Functional Requirements (NFRs)
-> 💡 *NFRs define *how* the system should perform its functions, focusing on quality attributes like performance, security, usability, and reliability. These are critical for user satisfaction. NFRs must be defined early and made specific and measurable wherever possible. The choice of Flutter and Firebase/Supabase directly influences the specific NFRs that need consideration.*
+> 💡 *NFRs define *how* the system should perform, focusing on quality attributes like performance, security, usability, and reliability. These are critical and must be specific and measurable.*
 >
 > *(Detail the specific NFRs for this project/feature, tailored to Flutter and the chosen backend.)*
-
+---
 *   **Performance:**
     *   **NFR-PERF-01:** `[Application startup time (cold start) must be under X seconds on target devices (e.g., mid-range Android phone, iPhone 12).]`
     *   **NFR-PERF-02:** `[Screen transitions within the main navigation flows must complete in under Y ms.]`
@@ -207,12 +227,11 @@ labels: 📄 prd
     *   **NFR-COMP-01:** `[The application must function correctly on target platforms: iOS version X+ and Android version Y+.]`
     *   **NFR-COMP-02:** `[The UI must be responsive and adapt gracefully to various screen sizes and orientations.]`
 
----
 ## 🎨 VII. Design & User Experience (UX)
-> 💡 *This section provides visual and interaction context, bridging the gap between textual requirements and the final user interface. Linking concrete design artifacts reduces ambiguity.*
+> 💡 *This section provides visual and interaction context. Link concrete design artifacts to reduce ambiguity.*
 >
 > *(Link to the latest versions of relevant design files and briefly describe key workflows or UI principles.)*
-
+---
 *   **Links to Design Artifacts:**
     *   **Wireframes:** `[Link to Wireframes]`
     *   **High-Fidelity Mockups:** `[Link to detailed UI mockups - e.g., Figma, Sketch]`
@@ -220,18 +239,17 @@ labels: 📄 prd
     *   **Design System/Style Guide:** `[Link to relevant design system documentation]`
 *   **Key Workflow Descriptions/Diagrams:**
     > 💡 *(Optional: If a complex flow isn't fully clear from user stories/prototypes, include a flowchart or step-by-step description here.)*
+    ---
     *   **Example:** *User Onboarding Flow:* `[Embed or link to flowchart showing steps from app launch -> sign-up/login -> initial profile setup -> main dashboard].`
 
----
 ## ☁️ VIII. Backend Specifications (Firebase/Supabase)
-> 💡 *This section details requirements specifically related to the chosen backend platform. This is crucial for backend developers and ensures the infrastructure adequately supports the application's features and NFRs. The choice between Firebase (often NoSQL, serverless-centric) and Supabase (PostgreSQL, relational) significantly influences data modeling, querying, and security approaches.*
+> 💡 *This section details requirements specifically related to the chosen backend platform. This is crucial for backend developers.*
 >
 > *(Select the relevant platform (Firebase or Supabase) and detail the specific backend requirements.)*
-
 ---
 ### **Firebase Backend Specifications**
 > 💡 *Fill this section if using Firebase.*
-
+---
 *   **Data Model Overview (Firestore/Realtime Database):**
     *   **Key Collections:** `[e.g., users, workspaces, projects, chatMessages]`
     *   **Document Structure:** `[Outline typical structure for key documents, e.g., fields within a users document: userId, displayName, email, createdAt, profileImageUrl. Specify data types.]`
@@ -260,7 +278,7 @@ labels: 📄 prd
 ---
 ### **Supabase Backend Specifications**
 > 💡 *Fill this section if using Supabase.*
-
+---
 *   **Data Model Overview (PostgreSQL):**
     *   **Key Tables:** `[e.g., users, workspaces, projects, chat_messages]`
     *   **Schema & Relationships:** `[Define columns, data types, primary keys, foreign keys, and relationships.]`
@@ -283,12 +301,12 @@ labels: 📄 prd
 *   **API / Integration Needs:**
     *   `[Utilize Supabase auto-generated REST/GraphQL APIs for standard CRUD operations.]`
     *   `[Integration with external notification service via Edge Function webhook.]`
----
+
 ## ⚖️ IX. Assumptions, Constraints & Dependencies
-> 💡 *Identifying assumptions, constraints, and dependencies early helps in risk management and realistic planning. Assumptions, in particular, represent potential risks if they prove incorrect.*
+> 💡 *Identifying assumptions, constraints, and dependencies early helps in risk management and realistic planning.*
 >
 > *(List known assumptions, constraints, and dependencies for this project/feature.)*
-
+---
 *   **Assumptions:**
     *   `[Users will have reliable internet connectivity for real-time features.]`
     *   `[Firebase/Supabase free tier limits will be sufficient for initial launch and testing phases.]`
@@ -301,12 +319,11 @@ labels: 📄 prd
     *   **Internal:** `[Requires final UI designs from the Design Team by YYYY-MM-DD.]`
     *   **External:** `[Relies on the availability of the Stripe payment gateway API.]`
 
----
 ## ✅ X. Release Criteria
-> 💡 *This section defines the specific, measurable conditions that must be met for the product or feature described in this PRD to be considered ready for release to end-users. These criteria serve as the final quality gate.*
+> 💡 *This section defines the specific, measurable conditions that must be met for the product or feature to be considered ready for release. These criteria serve as the final quality gate.*
 >
 > *(List the criteria that must be satisfied before release.)*
-
+---
 *   **Functionality:**
     *   `[All 'Must-have' user stories/features defined in the Scope section are implemented and meet their respective Acceptance Criteria.]`
     *   `[Core user flows are functional without critical bugs.]`
@@ -324,13 +341,12 @@ labels: 📄 prd
     *   `[Internal support documentation and runbooks are updated.]`
     *   `[Monitoring and alerting systems are configured and operational.]`
 
----
 ## ❓ XI. Open Questions & Future Considerations
-> 💡 *This section serves as a living tracker for unresolved issues and a placeholder for potential future work related to this product/feature. Acknowledging unknowns and tracking questions fosters transparency.*
-
+> 💡 *This section serves as a living tracker for unresolved issues and a placeholder for potential future work. Acknowledging unknowns fosters transparency.*
+---
 ### A. Open Questions Tracker
 > 💡 *Maintain a list of unresolved questions. Update status and resolution as answers are found.*
-
+---
 | ID   | Question                                                                 | Raised By       | Date Raised | Assigned To     | Due Date   | Status   | Answer/Resolution (Link)         |
 | :--- | :----------------------------------------------------------------------- | :-------------- | :---------- | :-------------- | :--------- | :------- | :------------------------------- |
 | Q-01 | `[What is the specific password complexity requirement from Security?]`    | `[John Smith (TL)]` | `YYYY-MM-DD`  | `[Security Team]` | `YYYY-MM-DD` | `[Answered]` | `[Link to answer/decision]`      |
@@ -338,18 +354,17 @@ labels: 📄 prd
 
 ### B. Potential Future Enhancements / Next Steps
 > 💡 *List ideas, features, or iterations considered but deferred from this release. Link back to 'Out of Scope' items where relevant.*
-
+---
 *   `[Implement direct (1-to-1) messaging (See Scope: FEAT-ID-004).]`
 *   `[Add Google OAuth sign-in option.]`
 *   `[Develop advanced search capabilities within chat history.]`
 
----
 ## 📚 XII. Appendix / Glossary
-> 💡 *This section provides supplementary information and definitions to aid understanding. Linking to external resources keeps the main PRD concise while providing access to necessary depth.*
-
+> 💡 *This section provides supplementary information and definitions to aid understanding.*
+---
 ### A. Related Resources
 > 💡 *Add links to relevant external documents.*
-
+---
 *   Market Requirements Document (MRD): `[Link]`
 *   Competitive Analysis: `[Link]`
 *   User Research Findings: `[Link]`
@@ -359,7 +374,7 @@ labels: 📄 prd
 
 ### B. Glossary
 > 💡 *Define key terms, acronyms, or project-specific jargon.*
-
+---
 *   **API:** Application Programming Interface
 *   **BaaS:** Backend as a Service
 *   **Firebase:** Google's mobile and web application development platform.
@@ -376,15 +391,16 @@ labels: 📄 prd
 *   **UI/UX:** User Interface / User Experience
 *   **WCAG:** Web Content Accessibility Guidelines
 
----
 ## ⭐ XIII. Conclusion and Recommendations
-> 💡 *This PRD template provides a structured framework for defining requirements for Flutter applications utilizing Firebase or Supabase backends. Its core purpose is to foster clarity, alignment, and collaboration among all project stakeholders. By systematically addressing goals, scope, user needs, functional and non-functional requirements (including platform-specific considerations like accessibility and backend security), design integration, and release criteria, teams can mitigate risks associated with ambiguity and scope creep.*
->
-> **Key Recommendations for Use:**
-> 1.  **Adaptability:** Tailor this template to the specific needs of the project.
-> 2.  **Collaboration:** Treat the PRD as a collaborative artifact.
-> 3.  **Living Document:** Maintain the PRD throughout the development lifecycle.
-> 4.  **Platform Specificity:** Pay close attention to NFRs and Backend Specifications.
-> 5.  **Focus on the 'Why':** Consistently link features back to user personas and goals.
->
-> *By utilizing this template thoughtfully and collaboratively, teams can establish a shared understanding, make informed decisions, and ultimately build higher-quality Flutter applications that effectively meet user needs and business objectives.*
+> 💡 *This section provides a general conclusion for PRDs of this type. This text is generally static.*
+---
+This PRD template provides a structured framework for defining requirements for Flutter applications utilizing Firebase or Supabase backends. Its core purpose is to foster clarity, alignment, and collaboration among all project stakeholders. By systematically addressing goals, scope, user needs, functional and non-functional requirements (including platform-specific considerations like accessibility and backend security), design integration, and release criteria, teams can mitigate risks associated with ambiguity and scope creep.
+
+**Key Recommendations for Use:**
+1.  **Adaptability:** Tailor this template to the specific needs of the project.
+2.  **Collaboration:** Treat the PRD as a collaborative artifact.
+3.  **Living Document:** Maintain the PRD throughout the development lifecycle.
+4.  **Platform Specificity:** Pay close attention to NFRs and Backend Specifications.
+5.  **Focus on the 'Why':** Consistently link features back to user personas and goals.
+
+By utilizing this template thoughtfully and collaboratively, teams can establish a shared understanding, make informed decisions, and ultimately build higher-quality Flutter applications that effectively meet user needs and business objectives.

@@ -1,4 +1,5 @@
 ---
+# IMPORTANT: Update the fields below (name, description, version, author, tags, params) to match the specific workflow context.
 name: "Example Web App Deployment"
 description: "A reusable workflow to build, test, and deploy a standard web application to a specified environment."
 version: "1.0.1"
@@ -29,6 +30,33 @@ params:
 Description: {{ description }}
 Version: {{ version }}
 Target Environment: {{params.deployEnvironment}}
+
+# 🤖 AI Agent Context
+> 💡 *Essential information for the AI agent to understand and execute this Windsurf workflow. Review all linked resources thoroughly before proceeding.*
+---
+
+## 📚 Relevant Project Files & Code
+> 💡 *List any project files, scripts, or configuration files within the target repository (`{{params.repositoryUrl}}`) that are critical for this workflow's execution (e.g., package.json, Dockerfile, test scripts).*
+---
+*   `[e.g., package.json]` - (Relevance: Defines scripts for install, test, build)
+*   `[e.g., Dockerfile]` - (Relevance: If containerization is part of the build/deploy process)
+*   `[e.g., .github/workflows/main.yml]` - (Relevance: If this workflow is based on or interacts with existing CI/CD)
+*   *Example: `scripts/deploy.sh` - (Relevance: Custom deployment script used in a step)*
+
+## 🌐 Relevant Documentation & Links
+> 💡 *List any external web pages, API documentation for deployment services, or internal wikis related to the deployment environments or tools used in this workflow.*
+---
+*   `[Link to Deployment Service Documentation (e.g., AWS S3, Vercel, Netlify)]` - (Relevance: For the deploy step)
+*   `[Link to Internal Wiki page for {{params.deployEnvironment}} environment]` - (Relevance: Environment-specific configurations or access details)
+*   *Example: `https://docs.npmjs.com/cli/test` - (Relevance: For understanding `npm test` behavior)*
+
+## 💡 Other Key Information
+> 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include required environment variables (like $DEPLOY_TOKEN), assumptions about the build environment, or specific error conditions to watch for.*
+---
+*   `[Context point 1: e.g., The $DEPLOY_TOKEN environment variable must be set with appropriate permissions for the target environment.]`
+*   `[Context point 2: e.g., The build step assumes a Node.js version >= 18.x is available.]`
+*   *Example: If tests fail, the workflow should not proceed to build or deploy.*
+---
 
 ## Step: Setup Project
 

@@ -1,9 +1,36 @@
+<!-- IMPORTANT: If this template is used to generate a new file with frontmatter (e.g., for GitHub issues), ensure all frontmatter fields like 'name', 'about', 'title', 'labels' are updated to match the specific ticket context. -->
 # Project Plan: [Project Name]
 
 ## 1. Project Overview
 A brief summary of the project, including its main objectives and key features. Clearly state the end goals formulated in your analysis.
 - [ ] Read the project overview:
     - [Brief summary of the project, including end goals]
+
+# 🤖 AI Agent Context
+> 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
+---
+
+## 📚 Relevant Project Files & Code
+> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
+---
+*   `[path/to/relevant/requirements_document.md]` - (Relevance: Detailed project requirements)
+*   `[path/to/relevant/architecture_overview.md]` - (Relevance: High-level system architecture)
+*   *Example: `src/core/constants.dart` - (Relevance: Core application constants and configurations)*
+
+## 🌐 Relevant Documentation & Links
+> 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
+---
+*   `[Link to PRD or Feature Brief]` - (Relevance: Overall project goals and user stories)
+*   `[Link to Design System/UI Kit]` - (Relevance: UI components and styling guidelines)
+*   *Example: `https://docs.exampleframework.com/` - (Relevance: Documentation for a key framework used)*
+
+## 💡 Other Key Information
+> 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
+---
+*   `[Context point 1: e.g., This project plan assumes the backend APIs are already defined and stable.]`
+*   `[Context point 2: e.g., Focus on delivering Milestone 1 first as it unblocks other teams.]`
+*   *Example: Adherence to the MVVM pattern is mandatory for all new Flutter code.*
+---
 
 ## 2. Requirements
 Overview of all requirements.
