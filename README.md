@@ -1,4 +1,4 @@
-# ⚡ Ultra Wide Turbo Workspace v0.0.15
+# ⚡ Ultra Wide Turbo Workspace v0.0.17
 
 [![Brought to you by ultrawideturbodevs.com](https://img.shields.io/badge/Brought%20to%20you%20by-ultrawideturbodevs.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://ultrawideturbodevs.com)
 
@@ -6,12 +6,12 @@
 
 ---
 
-## ✨ Latest Release: v0.0.15 (YYYY-MM-DD)
+## ✨ Latest Release: v0.0.17 (2025-05-21)
 
 ### Added
-- **New Developer Agent Prompt**: Added `developer/prompts/agents/you-are-pseudo-coder.md` to assist with generating pseudocode.
-- **New Prompt Engineer Activity**: Added `prompt-engineer/prompts/activities/plx-create-claude-rules.md` for generating Claude-specific rules.
-- **Documentation**: Updated `README.md` and `CHANGELOG.md` to reflect the v0.0.15 release.
+- **Template Enhancements**: Enhanced all relevant templates across multiple roles with AI agent context sections to improve automated workflow consistency and effectiveness.
+- **AI Agent Context Integration**: Updated 20+ templates spanning architect, communications, content creator, developer, project manager, and tester roles.
+- **Workflow Automation**: Enhanced template usability for AI-driven processes with standardized guidance.
 
 #### ✨ New
 - **New Researcher Profile Questionnaire Templates**: Introduced a suite of 9 new questionnaire templates within the `researcher/templates/` directory. These templates are designed to create central repositories of detailed information for various profiles (Client, Company, Other People, Overall Goals, Personal, Product, Project, Research, and Service), facilitating AI-assisted tracking, planning, and analysis.

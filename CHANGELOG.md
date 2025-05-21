@@ -1,6 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v0.0.17] - 2025-05-21
+
+### Added
+- **Template Enhancements**:
+  - Enhanced all relevant templates across multiple roles with AI agent context sections
+  - Added structured AI guidance to improve automated workflow consistency and effectiveness
+  - Updated 20+ templates spanning architect, communications, content creator, developer, project manager, and tester roles
+
+### Improved
+- **Template Structure**: Standardized AI agent context integration across the workspace
+- **Workflow Automation**: Enhanced template usability for AI-driven processes
+- **Documentation**: Improved template clarity and guidance for automated workflows
+
 ## [v0.0.16] - 2025-05-20
 
 ### Added
