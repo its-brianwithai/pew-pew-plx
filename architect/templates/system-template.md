@@ -1,5 +1,4 @@
 ---
-# IMPORTANT: Update the 'description' field below to match the specific system context.
 description: $description_max_250_chars # Update this with a concise system description
 ---
 

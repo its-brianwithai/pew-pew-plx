@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [v0.0.17] - 2025-05-21
-
+n
 ### Added
 - **Template Enhancements**:
   - Enhanced all relevant templates across multiple roles with AI agent context sections

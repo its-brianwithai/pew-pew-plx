@@ -1,5 +1,4 @@
 ---
-# IMPORTANT: Update the fields below (name, about, title, labels) to match the specific ticket context.
 name: 🏗️ Architecture
 about: Define the architecture for a project or feature.
 title: "🏗️ Architecture: [Project/Feature Name]"

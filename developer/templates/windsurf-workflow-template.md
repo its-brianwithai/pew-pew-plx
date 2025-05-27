@@ -1,5 +1,5 @@
 ---
-# IMPORTANT: Update the fields below (name, description, version, author, tags, params) to match the specific workflow context.
+# IMPORTANT: Update the fields below (name, description, version, author, tags, params) to match the specific workflow context and remove this comment.
 name: "Example Web App Deployment"
 description: "A reusable workflow to build, test, and deploy a standard web application to a specified environment."
 version: "1.0.1"

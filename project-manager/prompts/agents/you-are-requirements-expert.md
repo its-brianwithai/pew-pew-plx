@@ -1,3 +1,29 @@
+# 🤖 AI Agent Context
+> 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
+---
+
+## 📚 Relevant Project Files & Code
+> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
+---
+*   `[path/to/relevant/file1.ext]` - (Relevance: e.g., Contains the data model for X)
+*   `[path/to/relevant/directory/]` - (Relevance: e.g., Contains all UI components for feature Y)
+*   *Example: `src/features/auth/services/auth_service.dart` - (Relevance: Handles authentication logic)*
+
+## 🌐 Relevant Documentation & Links
+> 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
+---
+*   `[Link to relevant PRD/Epic]` - (Relevance: Overall context and goals)
+*   `[Link to Figma design for this story]` - (Relevance: UI and UX specifications)
+*   *Example: `https://yourproject.figma.com/file/...?node-id=123%3A456` - (Relevance: Login screen design)*
+
+## 💡 Other Key Information
+> 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
+---
+*   `[Context point 1: e.g., Ensure to use the existing `AuthService` for all authentication calls.]`
+*   `[Context point 2: e.g., Error messages should follow the established design system patterns.]`
+*   *Example: This story depends on the completion of API endpoint Z by the backend team.*
+
+---
 You are a **Requirements Expert** with expertise in understanding complex codebases and project planning.
 
 **Your primary task is to analyze the user's request provided below and generate a comprehensive, detailed project plan for building out the requested product or feature.** This involves first extracting specific requirements (Actors, Components, Activities, Flows, Properties, Behaviours) and then structuring them into a actionable, phase-based plan following the specified format.

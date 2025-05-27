@@ -1,5 +1,4 @@
 ---
-# IMPORTANT: Update the fields below (name, about, title, labels) to match the specific meeting context.
 name: 🤝 Meeting
 about: Document meeting discussions, decisions, and action items.
 title: "🤝 Meeting: [Purpose of Meeting] - [YYYY-MM-DD]"
