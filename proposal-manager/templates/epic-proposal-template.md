@@ -1,8 +1,7 @@
-name: 🏔️ Epic Proposal
-about: Propose a significant project or initiative (epic).
-title: "🏔️ Proposal: [Epic Name]"
-labels: 🚀 proposal, 🏔️ epic
----
+# 📋 Epic Proposal: {title}
+
+> Strategic proposal for {major_initiative} requiring multiple development cycles and {estimated_effort}. Presents comprehensive business case, technical approach, and phased delivery plan for major product enhancements or platform investments.
+
 ## 📄 1. Executive Summary
 > 💡 *Provide a compelling overview of the proposed epic. Summarize the challenge/opportunity, the proposed solution (the epic), its key benefits, high-level scope, and estimated timeline & effort. This should be concise and impactful.*
 
@@ -12,7 +11,6 @@ labels: 🚀 proposal, 🏔️ epic
 
 [High-Level Scope, Estimated Timeline & Effort Summary]
 
----
 
 ## 🎯 2. Epic Rationale & Objectives
 > 💡 *Demonstrate a clear understanding of the situation, objectives, and success criteria for this epic.*
@@ -36,7 +34,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   KPI 2: `[e.g., Reduce system downtime by Y% for affected components]`
 *   KPI 3: `[e.g., Deliver Z core functionalities by QX YYYY]`
 
----
 
 ## 🏔️ 3. Proposed Epic: [Epic Name]
 > 💡 *Detail the proposed epic, including its vision, key components, and how it addresses the defined needs.*
@@ -62,7 +59,6 @@ labels: 🚀 proposal, 🏔️ epic
 
 [Description of solution architecture, technologies (e.g., Flutter, Firebase, Supabase, specific AI models), and methodologies (e.g., Agile, Waterfall)]
 
----
 
 ## 🗺️ 4. Scope of Work
 > 💡 *Clearly define what is included and excluded in this proposal, along with any key assumptions.*
@@ -87,7 +83,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   `[Assumption 2: e.g., Necessary access to existing systems/APIs will be available.]`
 *   `[Assumption 3: e.g., Scope will remain as defined; changes will follow a change request process.]`
 
----
 
 ## ⚙️ 5. Key Requirements Summary
 > 💡 *Summarize the essential functional and non-functional requirements for this epic.*
@@ -105,7 +100,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   **Security:** `[e.g., All sensitive data must be encrypted at rest and in transit; RLS/Security Rules must enforce access control.]`
 *   **Maintainability:** `[e.g., Code must follow defined coding standards and be well-documented.]`
 
----
 
 ## ✅ 6. Epic Acceptance Criteria
 > 💡 *Specific, measurable conditions that must be met for the epic to be considered complete. These are at a higher level than individual story criteria.*
@@ -115,7 +109,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   [ ] Criterion 4: `[e.g., The solution is deployed to the target environment(s) and is stable.]`
 *   [ ] Criterion 5: `[e.g., Required documentation (technical, user) is completed and delivered.]`
 
----
 
 ## 🛠️ 7. High-Level Technical Considerations
 > 💡 *Outline key technical aspects and impacts of this epic.*
@@ -136,7 +129,6 @@ labels: 🚀 proposal, 🏔️ epic
 > 💡 *What key interactions or data points need to be tracked for this epic?*
 [e.g., New analytics events for feature A, B, C. Metrics to monitor for success criteria.]
 
----
 
 ## 🎨 8. UI/UX Approach (High-Level)
 > 💡 *Describe the overall UI/UX strategy or significant design considerations for this epic.*
@@ -145,7 +137,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   **Key User Flows:** `[List 2-3 major user flows impacted or created by this epic]`
 *   **Accessibility Standards:** `[e.g., WCAG 2.1 AA]`
 
----
 
 ## 🧪 9. Testing Strategy (High-Level)
 > 💡 *Outline the overall approach to ensuring quality for this epic.*
@@ -156,7 +147,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   **Performance Testing (if applicable):** `[e.g., Load testing for specific services if high traffic is expected.]`
 *   **Security Testing (if applicable):** `[e.g., Basic vulnerability scans, review of security configurations.]`
 
----
 
 ## 🗓️ 10. Project Timeline & Milestones
 > 💡 *Provide an estimated timeline for the epic, broken down into phases and key milestones.*
@@ -183,7 +173,6 @@ labels: 🚀 proposal, 🏔️ epic
 
 *(Note: This timeline is an estimate and may be subject to adjustments based on project progress and mutual agreement.)*
 
----
 
 ## ⏱️ 11. Estimated Effort
 > 💡 *Detailed breakdown of estimated effort for the epic. Estimates are in person-hours/days/weeks and do not include monetary values.*
@@ -224,7 +213,6 @@ labels: 🚀 proposal, 🏔️ epic
     *   `[Assumption 2, e.g., Requirements stability after the initial planning phase; significant changes will require re-estimation]`
     *   `[Assumption 3, e.g., Standard work hours per day/week for resource calculation]`
 
----
 ## 🎯 12. Roles & Responsibilities (High-Level)
 > 💡 *Outline key roles and their primary responsibilities for this epic.*
 *   **Epic Owner / Product Manager:** `[e.g., Defines vision, prioritizes features, represents stakeholder needs, accepts completed work]`
@@ -234,7 +222,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   **QA Engineer/Tester:** `[e.g., Develops test plans, executes tests, reports bugs, verifies fixes, supports UAT]`
 *   **Project Manager (if separate from Epic Owner):** `[e.g., Manages timeline, resources, risks, communication; facilitates meetings]`
 
----
 ## ☎️ 13. Impact Communication Plan
 > 💡 *Who needs to be informed about the epic's progress, key decisions, and completion? How and when?*
 *   **Stakeholders:** `[List key stakeholder groups, e.g., Leadership, Marketing, Sales, Support, Other Teams]`
@@ -242,7 +229,6 @@ labels: 🚀 proposal, 🏔️ epic
 *   **Frequency:** `[e.g., Weekly, Bi-weekly, Per milestone]`
 *   **Key Information to Communicate:** `[e.g., Progress against milestones, Risks and issues, Upcoming activities, Impact of changes]`
 
----
 
 ## 🚀 14. Next Steps (Internal)
 > 💡 *Clearly outline what needs to happen internally to move forward with this epic proposal.*
@@ -254,7 +240,6 @@ labels: 🚀 proposal, 🏔️ epic
 5.  **Approval:** Obtain formal internal approval to proceed with the epic.
 6.  **Kick-off Planning:** Schedule a project kick-off meeting to initiate Phase 1.
 
----
 ## 👉 15. Final Remarks / Open Questions
 > 💡 *Any other relevant information, dependencies not yet covered, or open questions that need to be addressed before or during the epic.*
 *   **Dependencies:**

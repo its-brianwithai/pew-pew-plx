@@ -1,5 +1,6 @@
-# "Other People" Profile Questionnaire
-Document Purpose: To capture key information about important individuals for AI-assisted interaction, understanding, and relationship management.
+# 👥 People Profile: {person_name}
+
+> Stakeholder profile for {person_name} - {role/relationship}. Captures key information about communication preferences, expertise, collaboration history, and relationship dynamics for effective interaction and project coordination.
 Date of Creation/Last Update: `[YYYY-MM-DD]`
 Identifier for this Profile (e.g., Initials, Role_Name): `[Create a unique identifier for this person's profile]`
 

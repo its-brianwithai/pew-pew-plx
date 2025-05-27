@@ -1,16 +1,20 @@
 ---
 name: 📒 Story
 about: User-focused feature with clear goals and outcomes
-title: "📒" # Update this title to be descriptive, e.g., "📒 Story: Implement User Login"
+title: "📒 Story: [Feature/Project Name]"
 labels: 📒 story
 ---
-# 🔖 Description
+
+# 📒 Story: {title}
+
+> User-focused feature implementation that delivers specific functionality to meet user needs and business objectives.
+
+## 🔖 Description
 > 💡 *A short and descriptive introduction of the problem we are going to solve.*
----
 
 [Introduction to the problem]
 
-# 🗣 User Story
+## 🗣 User Story
 > 💡 ***As a*** *ROLE* ***I want*** *BEHAVIOUR* ***so that*** *REASON.*
 ---
 
@@ -44,7 +48,7 @@ labels: 📒 story
 *   *Example: This story depends on the completion of API endpoint Z by the backend team.*
 ---
 
-# ⚙️ Requirements
+## ⚙️ Requirements
 > 💡 *What are the requirements for this story? What should be in scope and what should be out of scope?*
 ---
 
@@ -56,7 +60,7 @@ labels: 📒 story
 *   [Out of scope item 1]
 *   [Out of scope item 2]
 
-# ✅ Acceptance Criteria
+## ✅ Acceptance Criteria
 > 💡 *Specific conditions that must be met for the story to be considered complete. Each criterion should be testable and unambiguous.*
 ---
 
@@ -64,37 +68,37 @@ labels: 📒 story
 * [ ] Criterion 2: *Description of what must be true for this criterion to pass*
 * [ ] Criterion 3: *Description of what must be true for this criterion to pass*
 
-# 💾 Data Model
+## 💾 Data Model
 > 💡 *Old and new data models that will be created and/or altered when this feature is added.*
 ---
 
 [Describe data model changes, or "No changes to data model" if applicable.]
 
-# 🔒 Security Rules / Row Level Security
+## 🔒 Security Rules / Row Level Security
 > 💡 *Old and new security rules with roles and access that should be created and/or altered. Include create, read, update and delete.*
 ---
 
 [Describe security rule changes, or "No changes to security rules" if applicable.]
 
-# 🐒 API
+## 🐒 API
 > 💡 *Old and new API calls that should be created and/or altered.*
 ---
 
 [Describe API changes, or "No API changes" if applicable.]
 
-# 📊 Analytics
+## 📊 Analytics
 > 💡 *Old and new analytics that should be created and/or altered when this feature is added. Include a name, when it's fired and optional properties.*
 ---
 
 [Describe analytics changes, or "No new analytics events" if applicable.]
 
-# ☎️ Impact Communication
+## ☎️ Impact Communication
 > 💡 *Who / which teams should we inform about the impact of releasing this ticket? Sales, marketing, data, CS, other?*
 ---
 
 [List teams/individuals to inform, or "No specific impact communication needed" if applicable.]
 
-# 🧪 Tests
+## 🧪 Tests
 > 💡 *Components/flows/code that would benefit from tests and which scenario's should be tested.*
 ---
 
@@ -102,7 +106,7 @@ labels: 📒 story
 *   **Widget Tests:** [e.g., Login form rendering and interaction]
 *   **Integration Tests:** [e.g., Login flow with mock AuthService]
 
-# 🤝 Acceptance Test
+## 🤝 Acceptance Test
 > 💡 *Which scenario's should we test in the acceptance test? So that we can make sure that this ticket does what it is supposed to do without any unexpected errors.*
 ---
 
@@ -115,14 +119,14 @@ labels: 📒 story
     *   When: User enters invalid credentials and taps "Login".
     *   Then: An appropriate error message is displayed.
 
-# 🎨 UI/UX Behaviour
+## 🎨 UI/UX Behaviour
 > 💡 *Anything to take note of regarding the behaviour of UI/UX elements (if applicable). Think of position, behaviour when elements do not fit the screen, feedback on elements and properties of animations.*
 ---
 
 *   [UI/UX note 1: e.g., Login button should show a loading indicator while processing.]
 *   [UI/UX note 2: e.g., Error messages should appear below the respective input field.]
 
-# ⏱️ Effort Breakdown & Estimates
+## ⏱️ Effort Breakdown & Estimates
 > 💡 *Detailed breakdown of estimated effort required for each aspect of the user story implementation.*
 ---
 
@@ -137,7 +141,7 @@ labels: 📒 story
 *   **General Work:** [X] hours
     *   _Reasoning: [Explain any other tasks not covered above (e.g., documentation, specific integrations)]_
 
-# 🧪 QA, Testing & Delay Margin
+## 🧪 QA, Testing & Delay Margin
 > 💡 *Estimates for quality assurance, testing efforts, and buffer time for potential delays.*
 ---
 
@@ -148,7 +152,7 @@ labels: 📒 story
 *   **Delay Margin:** [X] hours ([Y]%)
     *   _Reasoning: [Based on complexity and potential risks/unknowns, explain the buffer needed]_
 
-# 📝 Suggested High Level Approach
+## 📝 Suggested High Level Approach
 > 💡 *With knowledge of the current codebase, try to define a best suggested approach. Think of current components used, flow of data and UI elements. Include mermaid diagrams to illustrate flows and connections.*
 ---
 
@@ -167,7 +171,7 @@ labels: 📒 story
       LoginViewModel --> |Shows Error| LoginScreen
   ```
 
-# 🎯 Roles & Todo's
+## 🎯 Roles & Todo's
 > *Backend Dev · Front-end Dev · Ui/Ux Designer · DevOps Engineer*
 ---
 
@@ -191,7 +195,7 @@ labels: 📒 story
 ```
 > 💡 *Remove or adjust roles and tasks as necessary for the specific story.*
 
-# 👉️ Final Remarks
+## 👉️ Final Remarks
 > 💡 *Anything to take note off that is not properly defined yet. Think of out of scope notes, dependencies, anything to be extra cautious about and/or information about related issues.*
 ---
 

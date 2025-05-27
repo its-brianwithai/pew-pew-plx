@@ -1,9 +1,8 @@
----
-name: 🔬 Research
-about: Instruct and document research for a software project initiative.
-title: "🔬 Research: [Specific Topic or Question]"
-labels: 🔬 research
----
+# 🔍 Research: {topic}
+
+> Systematic research investigation into {topic/question} examining {scope_areas}. Documents findings, analysis, and actionable recommendations to support evidence-based decision making for {purpose/decision}.
+
+🔐 **Research Methodology Supported:** Literature review, prototyping, data analysis, user interviews, surveys, competitive analysis, and expert consultation with clear deliverables and next steps.
 ## 🎯 1. Research Objective
 > 💡 *What is the primary goal of this research? What specific question(s) are we trying to answer, or what problem are we trying to solve through this investigation? Be clear and concise.*
 
@@ -42,7 +41,7 @@ labels: 🔬 research
 *   **Tools:** [e.g., Specific search engines, Databases, Analytics platforms, Survey tools, Prototyping software]
 *   **Key Information Sources:** [e.g., Academic papers, Industry reports, Competitor websites, Internal documentation, Specific experts to consult]
 
-##  deliverables 5. Expected Deliverables
+## 📦 5. Expected Deliverables
 > 💡 *What tangible outputs are expected from this research? How should the findings be presented?*
 
 *   [ ] **Summary Document:** A written report summarizing findings, analysis, and recommendations.
@@ -60,9 +59,7 @@ labels: 🔬 research
 *   **Requested Completion Date:** `[YYYY-MM-DD]`
 *   **Estimated Effort:** `[e.g., X hours, Y story points]`
 
----
 **(To be filled in by the assignee during and after research)**
----
 
 ## 🔑 7. Key Findings
 > 💡 *Document the main facts, data points, and observations gathered during the research. Be objective and cite sources where applicable.*

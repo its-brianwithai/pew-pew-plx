@@ -1,7 +1,6 @@
-# Service Profile (Development Services) Questionnaire
-Document Purpose: To define a specific freelance development service for AI-assisted proposal generation, client communication, and marketing.
-Date of Creation/Last Update: `[YYYY-MM-DD]`
-Service Name/Title: `[Enter the Name/Title of the Service Here, e.g., "Custom iOS App Development"]`
+# 🛠️ Service Profile: {service_name}
+
+> Service offering documentation for {service_name} defining deliverables, pricing, target market, and value proposition. Enables consistent proposal generation, marketing messaging, and client communication.
 
 ## I. Core Service Identification & Overview
 1.  **Service Name/Title:**

@@ -1,5 +1,5 @@
-# Feature Flow Template
-# This template follows the structure expected by the Feature Flow Architect agent
+# 🔄 Feature Flow: {feature_name}
+# > Detailed feature flow specification for {feature_name} using Given-When-Then scenarios. Documents class interactions, method implementations, data flow, and test requirements in structured YAML format for behavior-driven development.
 
 activity:
   name: [Activity Name]

@@ -1,9 +1,6 @@
----
-name: ⚙️ Requirements
-about: Define actors, components, activities, properties, and behaviors for a feature or project.
-title: "⚙️ Requirements: [Feature/Project Name]"
-labels: ⚙️ requirements
----
+# 📑 Requirements: {title}
+
+> Detailed requirements specification for {system/feature} documenting functional and non-functional requirements. Captures actors, components, activities, behaviors, and properties to ensure all aspects are thoroughly defined and testable.
 
 # 🧩 Actors & Components (Who or what)
 > 💡 *Someone or something that can perform actions or be interacted with (examples include User, Button, Screen, Input Field, Message, System, API, Database, and they can be a person, service, visual or non-visual).*
@@ -17,7 +14,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Actor]*
 > 		*- [Component]*
----
 
 *   `[Actor/Component 1]`
 *   `[Actor/Component 2]`
@@ -26,29 +22,24 @@ labels: ⚙️ requirements
 
 # 🤖 AI Agent Context
 > 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
----
 
 ## 📚 Relevant Project Files & Code
 > 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
----
 *   `[path/to/relevant/feature_description.md]` - (Relevance: High-level overview of the feature)
 *   `[path/to/existing/module_if_related/]` - (Relevance: Code for related existing functionality)
 *   *Example: `docs/data_models.md` - (Relevance: Definitions of existing data structures)*
 
 ## 🌐 Relevant Documentation & Links
 > 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
----
 *   `[Link to User Stories or Epic]` - (Relevance: User-centric view of the requirements)
 *   `[Link to UI Mockups/Prototypes (Figma, etc.)]` - (Relevance: Visual and interaction design)
 *   *Example: `https://www.w3.org/TR/WCAG21/` - (Relevance: Accessibility guidelines if applicable)*
 
 ## 💡 Other Key Information
 > 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
----
 *   `[Context point 1: e.g., These requirements are for the MVP (Minimum Viable Product) release.]`
 *   `[Context point 2: e.g., The system must integrate with the existing authentication service.]`
 *   *Example: Performance is a key consideration; avoid solutions known to be resource-intensive.*
----
 
 # 🎬 Activities (Who or what does what?)
 > 💡 *Actions that an Actor or Component performs (examples include Create List, Delete Item, Sync Data, and they must always contain a verb + action).*
@@ -62,7 +53,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Create item]*
 > 		*- [Delete item]*
----
 
 *   `[Actor/Component Name]`
     *   `[Activity 1 for this Actor/Component]`
@@ -84,7 +74,6 @@ labels: ⚙️ requirements
 > 		*- THEN [System] [shows create item feedback]*
 > 		*- AND [System] [creates database item]*
 > 		*- BUT [System] [does not navigate]*
----
 
 *   `[Activity Name]`
     *   **Happy Flow:**
@@ -116,7 +105,6 @@ labels: ⚙️ requirements
 > *Link properties to their parent by starting with the parent in [square brackets] and the property/properties beneath it. Example:*
 > 	*- [parent]*
 > 		*- [name : string]*
----
 
 *   `[Actor/Component/Activity Name]`
     *   `[property_name : data_type (e.g., user_id : string, is_enabled : boolean)]`
@@ -135,7 +123,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Should fail when length is 100+ characters]*
 > 		*- [Should not show when list is empty]*
----
 
 *   `[Actor/Component/Activity/Property Name]`
     *   `[Behaviour 1: e.g., Button should display a loading spinner when tapped and an API call is in progress.]`
@@ -154,7 +141,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Do we need a limit?]*
 > 		*- [Is this safe?]*
----
 
 *   `[Optional Parent Context]`
     *   `[Idea/Backlog Item 1: e.g., Explore integration with X service for Y feature.]`
@@ -173,7 +159,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Do we need a limit?]*
 > 		*- [Is this safe?]*
----
 
 *   `[Optional Parent Context]`
     *   `[Question 1: e.g., What is the exact timeout duration for API calls? Assignee: @TechLead]`
@@ -192,7 +177,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [ ] Make a cool design*
 > 		*- [ ] Get some feedback*
----
 
 *   **🎨 UI/UX Designer**
     *   `[Optional Parent Context]`

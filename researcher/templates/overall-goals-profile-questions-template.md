@@ -1,5 +1,6 @@
-# Overall Goals Profile Questionnaire
-Document Purpose: To create a central repository of overarching goals (personal, business, financial, learning, etc.) for AI-assisted tracking, planning, and analysis.
+# 🎯 Goals Profile: {goal_category}
+
+> Strategic goals documentation for {time_period/initiative} covering {goal_types}. Creates central repository of objectives, key results, and success metrics for tracking progress and aligning efforts across personal, business, and financial dimensions.
 Date of Creation/Last Update: `[YYYY-MM-DD]`
 
 **Instructions:**

@@ -1,26 +1,22 @@
----
-name: 📝 Story Proposal
-about: Propose a specific user story with effort estimation and acceptance criteria.
-title: "📝 Story Proposal: [User Story Title]"
-labels: 📝 proposal, 📒 story
----
-# 👤 1. User Story
+# 📒 Story Proposal: {title}
+
+> Sprint-sized proposal for {feature/enhancement} requiring {estimated_hours} hours of effort. Presents specific functionality improvements with clear value proposition, implementation approach, and acceptance criteria for quick wins.
+
+## 👤 1. User Story
 > 💡 *Provide a clear and concise description of the user story, its purpose, and the value it brings. Format: "As a [type of user], I want [an action] so that [a benefit/value]."*
 
 **As a** `[type of user]`
 **I want** `[an action/goal]`
 **So that** `[a benefit/value]`
 
----
 
-# 🔍 2. High-Level Solution Approach
+## 🔍 2. High-Level Solution Approach
 > 💡 *Outline the proposed technical approach to implement this user story. Mention key technologies, components, or strategies involved.*
 
 [High-Level Solution Approach Here]
 
----
 
-# ⏱️ 3. Effort Breakdown & Estimates
+## ⏱️ 3. Effort Breakdown & Estimates
 > 💡 *Break down the estimated effort for this specific user story.*
 
 *   **Design:** `[X]` hours
@@ -34,9 +30,8 @@ labels: 📝 proposal, 📒 story
 *   **General Work:** `[X]` hours
     *   _Reasoning: `[Explain any other tasks not covered above (e.g., documentation, specific integrations, meetings related to this story). e.g., Updating API documentation.]`_
 
----
 
-# 🧪 4. QA, Testing & Delay Margin
+## 🧪 4. QA, Testing & Delay Margin
 > 💡 *Estimates for quality assurance, testing efforts, and buffer time for potential delays for this specific user story.*
 
 *   **QA:** `[X]` hours (`[Y]`%)
@@ -46,16 +41,14 @@ labels: 📝 proposal, 📒 story
 *   **Delay Margin:** `[X]` hours (`[Y]`%)
     *   _Reasoning: `[Based on complexity and potential risks/unknowns, explain the buffer needed. e.g., Potential for unforeseen issues with third-party API.]`_
 
----
 
-# 📊 5. Total Estimated Effort
+## 📊 5. Total Estimated Effort
 > 💡 *Sum of all estimated hours for this user story.*
 
 *   **Total Effort:** `[Sum of all estimates above]` hours
 
----
 
-# 📦 6. Deliverables / Artifacts
+## 📦 6. Deliverables / Artifacts
 > 💡 *List the tangible outputs or artifacts that will be produced upon completion of this user story.*
 
 *   `[Deliverable 1: e.g., New UI component for X in Storybook/Figma]`
@@ -64,9 +57,8 @@ labels: 📝 proposal, 📒 story
 *   `[Deliverable 4: e.g., Set of passing automated tests covering new logic]`
 *   `[Deliverable 5: e.g., Merged Pull Request with implemented feature]`
 
----
 
-# ✅ 7. Acceptance Criteria
+## ✅ 7. Acceptance Criteria
 > 💡 *Define the specific, measurable criteria that must be met for this user story to be considered complete and accepted. Each should be a testable statement.*
 
 *   [ ] Criterion 1: `[e.g., User can successfully perform X action via the new UI on Y screen.]`
@@ -75,9 +67,8 @@ labels: 📝 proposal, 📒 story
 *   [ ] Criterion 4: `[e.g., The feature meets the design specifications outlined in [Link to Figma/Design Document].]`
 *   [ ] Criterion 5: `[e.g., Error state B is handled gracefully and displays message C.]`
 
----
 
-# 📝 8. Assumptions & Notes
+## 📝 8. Assumptions & Notes
 > 💡 *List any assumptions made during the estimation process. Include any important notes, exclusions, dependencies, or potential risks related to this specific user story.*
 
 *   **Assumptions:**

@@ -4,18 +4,21 @@ about: Outline the strategic plan and timeline for a product or project
 title: "🗺️ Roadmap: [Name of Product/Project Roadmap - e.g., Q1-Q2 2024]"
 labels: 🗺️ roadmap
 ---
-# 🗺️ Roadmap Overview
+
+# 🗺️ Roadmap: {title}
+
+> Strategic plan outlining key milestones, deliverables, and timeline for {product/project} development.
+
+## 📋 Roadmap Overview
 > 💡 *Provide a high-level summary of this roadmap. What is its main purpose? What period does it cover? What are the overarching goals?*
----
 
 *   **Roadmap Name:** [e.g., Product X Roadmap 2024, Project Phoenix Phase 1]
 *   **Timeframe:** [e.g., Q1 2024 - Q4 2024, January 2024 - June 2024]
 *   **Version:** [e.g., v1.0, Draft]
 *   **Last Updated:** [YYYY-MM-DD]
 
-# 🤖 AI Agent Context
+## 🤖 AI Agent Context
 > 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
----
 
 ## 📚 Relevant Project Files & Code
 > 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
@@ -40,7 +43,7 @@ labels: 🗺️ roadmap
 *   *Example: The CEO has specifically requested a focus on international expansion in H2.*
 ---
 
-# 🌟 Vision & Strategic Goals
+## 🌟 Vision & Strategic Goals
 > 💡 *What is the long-term vision this roadmap supports? What are the key strategic goals for this specific roadmap period?*
 ---
 
@@ -50,13 +53,13 @@ labels: 🗺️ roadmap
     2.  [Goal 2: e.g., Launch new core feature Z to improve user retention]
     3.  [Goal 3: e.g., Enhance platform stability and performance]
 
-# 🎯 Target Audience
+## 🎯 Target Audience
 > 💡 *Who is this roadmap primarily for? (e.g., Internal Teams, Leadership, Stakeholders, Customers)*
 ---
 
 [Description of the target audience and their interest in this roadmap]
 
-# ⏳ Timeline & Key Phases/Quarters
+## ⏳ Timeline & Key Phases/Quarters
 > 💡 *Outline the major time blocks for this roadmap (e.g., Quarters, Months, specific phases). For each block, list the key focus areas or themes.*
 ---
 
@@ -78,7 +81,7 @@ labels: 🗺️ roadmap
 
 *(Add more quarters/phases as needed)*
 
-# 🧭 Strategic Themes / Initiatives
+## 🧭 Strategic Themes / Initiatives
 > 💡 *Describe the major strategic themes or initiatives that will be pursued during this roadmap. Each theme should contribute to the overall strategic goals.*
 ---
 
@@ -103,7 +106,7 @@ labels: 🗺️ roadmap
 
 *(Add more themes as needed)*
 
-# 📍 Key Milestones
+## 📍 Key Milestones
 > 💡 *List the most important milestones for this roadmap, along with their target completion dates. These should be significant achievements.*
 ---
 
@@ -112,14 +115,14 @@ labels: 🗺️ roadmap
 *   **Milestone 3:** [Description of milestone] - **Target:** [e.g., End of Q2 YYYY]
 *(Add more milestones as needed)*
 
-# 🔗 Dependencies
+## 🔗 Dependencies
 > 💡 *Identify any critical dependencies between initiatives within this roadmap, or external dependencies that could impact its execution.*
 ---
 
 *   **Internal Dependency:** [e.g., Initiative A requires completion of Platform Upgrade B]
 *   **External Dependency:** [e.g., Launch of Feature C depends on third-party API availability]
 
-# 💣 Potential Risks
+## 💣 Potential Risks
 > 💡 *What are the major risks that could affect the successful delivery of this roadmap?*
 ---
 
@@ -128,7 +131,7 @@ labels: 🗺️ roadmap
 *   **Risk 2:** [Description of risk, e.g., Technology changes]
     *   Mitigation: [Potential mitigation strategy]
 
-# 📈 Success Metrics / KPIs for Roadmap
+## 📈 Success Metrics / KPIs for Roadmap
 > 💡 *How will the overall success of this roadmap be measured at the end of the period? These should align with the strategic goals.*
 ---
 
@@ -136,7 +139,7 @@ labels: 🗺️ roadmap
 *   **KPI 2:** [e.g., Reduce customer churn by Y%] - Target: [Value]
 *   **KPI 3:** [e.g., Successfully launch Z new major features] - Target: [All launched]
 
-# 🔑 Legend / Status Key (Optional)
+## 🔑 Legend / Status Key (Optional)
 > 💡 *If you use visual indicators or statuses in a more detailed version of the roadmap (e.g., in a diagram or presentation), define them here.*
 ---
 > *   🔵 **Planned:** Work has not started.
@@ -145,7 +148,7 @@ labels: 🗺️ roadmap
 > *   🔴 **At Risk/Blocked:** Facing issues.
 > *   ⚪ **On Hold/Deferred:** Postponed.
 
-# 🧑‍🤝‍🧑 Key Stakeholders
+## 🧑‍🤝‍🧑 Key Stakeholders
 > 💡 *Identify the key individuals or groups who have a significant interest or influence in this roadmap.*
 ---
 
@@ -155,13 +158,13 @@ labels: 🗺️ roadmap
 *   **Marketing/Sales:** [Team or Key Contact]
 *   **Other:**
 
-# 🔄 Revision History
+## 🔄 Revision History
 > 💡 *Track major changes or updates to this roadmap.*
 ---
 
 *   **YYYY-MM-DD (vX.Y):** [Brief description of changes, e.g., Initial draft, Added Theme Z, Adjusted Q3 priorities]
 
-# 👉️ Final Remarks & Open Questions
+## 👉️ Final Remarks & Open Questions
 > 💡 *Any other relevant information, links to supporting documents (e.g., market research, detailed project plans), or open questions.*
 ---
 

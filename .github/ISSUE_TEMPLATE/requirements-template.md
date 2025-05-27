@@ -5,7 +5,11 @@ title: "⚙️ Requirements: [Feature/Project Name]"
 labels: ⚙️ requirements
 ---
 
-# 🧩 Actors & Components (Who or what)
+# ⚙️ Requirements: {title}
+
+> Comprehensive specification detailing all actors, components, activities, and behaviors needed to implement {feature/project}.
+
+## 🧩 Actors & Components (Who or what)
 > 💡 *Someone or something that can perform actions or be interacted with (examples include User, Button, Screen, Input Field, Message, System, API, Database, and they can be a person, service, visual or non-visual).*
 >
 > *What benefits from this? · Who maintains this? · What do users interact with? · What shows information? · What processes data? · What stores data? · What external systems are involved? · What needs to be monitored?*
@@ -17,40 +21,34 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Actor]*
 > 		*- [Component]*
----
 
 *   `[Actor/Component 1]`
 *   `[Actor/Component 2]`
     *   `[Child Actor/Component 2.1]`
 *   ...
 
-# 🤖 AI Agent Context
+## 🤖 AI Agent Context
 > 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
----
 
-## 📚 Relevant Project Files & Code
+### 📚 Relevant Project Files & Code
 > 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
----
 *   `[path/to/relevant/feature_description.md]` - (Relevance: High-level overview of the feature)
 *   `[path/to/existing/module_if_related/]` - (Relevance: Code for related existing functionality)
 *   *Example: `docs/data_models.md` - (Relevance: Definitions of existing data structures)*
 
-## 🌐 Relevant Documentation & Links
+### 🌐 Relevant Documentation & Links
 > 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
----
 *   `[Link to User Stories or Epic]` - (Relevance: User-centric view of the requirements)
 *   `[Link to UI Mockups/Prototypes (Figma, etc.)]` - (Relevance: Visual and interaction design)
 *   *Example: `https://www.w3.org/TR/WCAG21/` - (Relevance: Accessibility guidelines if applicable)*
 
-## 💡 Other Key Information
+### 💡 Other Key Information
 > 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
----
 *   `[Context point 1: e.g., These requirements are for the MVP (Minimum Viable Product) release.]`
 *   `[Context point 2: e.g., The system must integrate with the existing authentication service.]`
 *   *Example: Performance is a key consideration; avoid solutions known to be resource-intensive.*
----
 
-# 🎬 Activities (Who or what does what?)
+## 🎬 Activities (Who or what does what?)
 > 💡 *Actions that an Actor or Component performs (examples include Create List, Delete Item, Sync Data, and they must always contain a verb + action).*
 >
 > *What can each actor do? · What should happen automatically? · What needs user input? · What happens periodically? · What triggers other activities? · What needs to be logged? · What needs to be measured? · What needs authorization?*
@@ -62,7 +60,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Create item]*
 > 		*- [Delete item]*
----
 
 *   `[Actor/Component Name]`
     *   `[Activity 1 for this Actor/Component]`
@@ -84,7 +81,6 @@ labels: ⚙️ requirements
 > 		*- THEN [System] [shows create item feedback]*
 > 		*- AND [System] [creates database item]*
 > 		*- BUT [System] [does not navigate]*
----
 
 *   `[Activity Name]`
     *   **Happy Flow:**
@@ -105,7 +101,7 @@ labels: ⚙️ requirements
         ```
 *   ...
 
-# 📝 Properties (Which values?)
+## 📝 Properties (Which values?)
 > 💡 *Describes a value or configuration that belongs to an object (examples include width, color, id, name).*
 >
 > *What identifies it? · What describes it? · What configures it? · What measures it? · What styles it? · What formats it? · What tracks it? · What groups it? · What orders it?*
@@ -116,14 +112,13 @@ labels: ⚙️ requirements
 > *Link properties to their parent by starting with the parent in [square brackets] and the property/properties beneath it. Example:*
 > 	*- [parent]*
 > 		*- [name : string]*
----
 
 *   `[Actor/Component/Activity Name]`
     *   `[property_name : data_type (e.g., user_id : string, is_enabled : boolean)]`
     *   `[another_property : data_type]`
 *   ...
 
-# 🛠️ Behaviours (How does it act when.. in terms of.. ?)
+## 🛠️ Behaviours (How does it act when.. in terms of.. ?)
 > 💡 *Defines how something looks, works and performs. Examples include ui/ux, rules & limits, data & analytics, security, performance and scalability.*
 >
 > *When should it change? · How should it respond? · What are the limits? · What needs validation? · What needs animation? · What needs protection? · What should be cached? · What should be optimized? · What should be monitored? · What needs fallback? · How should it scale? · What should be logged? · How should it fail? · What should be measured? · What needs authorization?*
@@ -135,14 +130,13 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Should fail when length is 100+ characters]*
 > 		*- [Should not show when list is empty]*
----
 
 *   `[Actor/Component/Activity/Property Name]`
     *   `[Behaviour 1: e.g., Button should display a loading spinner when tapped and an API call is in progress.]`
     *   `[Behaviour 2: e.g., Input field for 'email' must validate format against standard email regex.]`
 *   ...
 
-# 💡 Ideas & 🪵 Backlog
+## 💡 Ideas & 🪵 Backlog
 > 💡 *Anything that could be added later, too complex now, needs more research, would be nice to have, or alternative approaches.*
 >
 > *What could be added later? · What's too complex now? · What needs more research? · What would be nice to have? · What are alternative approaches? · What could be automated?*
@@ -154,14 +148,13 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Do we need a limit?]*
 > 		*- [Is this safe?]*
----
 
 *   `[Optional Parent Context]`
     *   `[Idea/Backlog Item 1: e.g., Explore integration with X service for Y feature.]`
     *   `[Idea/Backlog Item 2: e.g., Consider adding gamification elements to user profiles.]`
 *   ...
 
-# ❓ Questions
+## ❓ Questions
 > 💡 *Questions that need to be answered to clarify requirements.*
 >
 > *What's unclear? · What needs decision? · What are the edge cases? · What could be improved? · What are we missing? · What assumptions are we making? · What risks exist? · What dependencies are there?*
@@ -173,14 +166,13 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [Do we need a limit?]*
 > 		*- [Is this safe?]*
----
 
 *   `[Optional Parent Context]`
     *   `[Question 1: e.g., What is the exact timeout duration for API calls? Assignee: @TechLead]`
     *   `[Question 2: e.g., Are there any specific branding guidelines for the error messages? Assignee: @UXDesigner]`
 *   ...
 
-# 🎯 Roles, 📝 Tasks & 🎓 Suggested Approach
+## 🎯 Roles, 📝 Tasks & 🎓 Suggested Approach
 > 💡 *Each behaviour, property, activity (flow), scenario, atomic action, actor, component must directly or indirectly (by parents) cascade down to a todo with assigned role. Creating a task for a parent and completing it automatically covers its children unless children have open tasks themselves.*
 >
 > *Who's responsible for what?*
@@ -192,7 +184,6 @@ labels: ⚙️ requirements
 > 	*- [parent]*
 > 		*- [ ] Make a cool design*
 > 		*- [ ] Get some feedback*
----
 
 *   **🎨 UI/UX Designer**
     *   `[Optional Parent Context]`

@@ -1,9 +1,7 @@
----
-name: 🗺️ Roadmap Proposal
-about: Propose a strategic product or project roadmap.
-title: "🗺️ Proposal: [Product/Project] Roadmap"
-labels: 🚀 proposal, 🗺️ roadmap
----
+# 🗺️ Roadmap Proposal: {title}
+
+> Strategic roadmap proposal for {product/initiative} covering {time_period}. Outlines phased execution plan, resource requirements, and milestone targets to align stakeholders on long-term product direction and secure commitment.
+
 ## 📄 1. Executive Summary
 > 💡 *Provide a concise overview of the proposed roadmap. Highlight the strategic direction, key objectives it aims to achieve, the timeframe, and the overall value proposition. This should capture the essence of the roadmap and its benefits.*
 
@@ -12,8 +10,6 @@ labels: 🚀 proposal, 🗺️ roadmap
 [Overview of Proposed Roadmap, Key Objectives & Timeframe]
 
 [Primary Value & Expected Outcomes for the Project/Product]
-
----
 
 ## 🌟 2. Vision & Strategic Imperatives
 > 💡 *Outline the long-term vision, market positioning (if relevant), and key strategic challenges or opportunities that this roadmap will address.*
@@ -36,8 +32,6 @@ labels: 🚀 proposal, 🗺️ roadmap
 *   Outcome 1: `[e.g., Enhanced market positioning or user adoption]`
 *   Outcome 2: `[e.g., Improved operational efficiency or system performance]`
 *   Outcome 3: `[e.g., Increased user loyalty and value delivery]`
-
----
 
 ## 🗺️ 3. Proposed Strategic Roadmap: [Roadmap Title]
 > 💡 *Detail the proposed roadmap, including its overarching vision, strategic themes, key initiatives, and timeline.*
@@ -85,8 +79,6 @@ labels: 🚀 proposal, 🗺️ roadmap
 
 *(A more detailed visual roadmap can be provided separately.)*
 
----
-
 ## 📈 4. Expected Value & Outcomes
 > 💡 *Clearly articulate the tangible and intangible benefits expected from the successful execution of this roadmap. Connect these back to the strategic imperatives and desired outcomes.*
 
@@ -95,8 +87,6 @@ labels: 🚀 proposal, 🗺️ roadmap
 *   **Operational Efficiency:** `[e.g., Reduced operational overhead, Streamlined processes, Improved scalability]`
 *   **User Satisfaction:** `[e.g., Enhanced user experience, Higher retention rates]`
 *   **Innovation:** `[e.g., Development of new capabilities, Fostering a culture of continuous improvement]`
-
----
 
 ## ⚙️ 5. Execution Approach & Governance
 > 💡 *Describe how the work outlined in the roadmap will be managed and executed.*
@@ -116,8 +106,6 @@ labels: 🚀 proposal, 🗺️ roadmap
 
 [Approach to ongoing risk assessment and mitigation strategies]
 
----
-
 ## ⏱️ 6. Estimated Effort & Timeline Considerations
 > 💡 *Outline the estimated effort for the work described in the roadmap. Focus on time-based estimates (e.g., person-weeks, person-months).*
 
@@ -136,8 +124,6 @@ labels: 🚀 proposal, 🗺️ roadmap
 ### 6.2. Key Assumptions for Estimation
 *   `[Assumption 1, e.g., Availability of X resources/skillsets]`
 *   `[Assumption 2, e.g., Dependencies on Y will be met by Z date]`
-
----
 
 ## 🚀 7. Next Steps
 > 💡 *Guide on how to proceed with this roadmap proposal internally.*

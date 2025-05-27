@@ -1,7 +1,6 @@
-# Project Profile Questionnaire
-Document Purpose: To document individual development projects for AI-assisted analysis, knowledge retention, future project estimation, and portfolio building.
-Date of Creation/Last Update: `[YYYY-MM-DD]`
-Project Name: `[Enter the Name of the Project Here]`
+# 🚀 Project Profile: {project_name}
+
+> Development project documentation for {project_name} capturing technical details, client context, outcomes, and lessons learned. Enables knowledge retention, future estimation accuracy, and portfolio showcasing.
 
 ## I. Core Project Identification & Overview
 1.  **Project Name/Title:**

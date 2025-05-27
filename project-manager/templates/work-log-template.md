@@ -1,12 +1,15 @@
+# 📝 Work Log: {title}
+
+> Daily work progress documentation for {date} covering {project/task}. Tracks completed activities, time spent, deliverables produced, and next steps to maintain transparency and create a historical record of project progress.
+
 # 📝 TLDR; (Too Long; Didn't Read)
 > 💡 *A short summary of the key accomplishments or outcomes. Make it impactful and easy to grasp for busy stakeholders.*
----
 
 `[Provide a very brief summary of what was done and the main result. e.g., "Implemented the user authentication flow and resolved critical login bug X, unblocking UI development."]`
 
 # 🗓️ Date & Task Identification
 > 💡 *Specify when the work was done and identify the task.*
----
+
 *   **Date of Work:** `[YYYY-MM-DD]`
 *   **Task Type:** `[chore | enh | story | bug | content | crash | feedback]`
 *   **Task Title:** `[Concise title of the task worked on]`
@@ -14,7 +17,6 @@
 
 # ✅ Work Completed
 > 💡 *Detail the specific actions taken and what was achieved. Use bullet points for clarity. Be concise but provide enough detail for understanding.*
----
 
 *   `[Accomplishment 1: e.g., Designed and implemented the new database schema for user profiles.]`
 *   `[Accomplishment 2: e.g., Refactored the `AuthService` to improve performance and readability.]`
@@ -23,7 +25,6 @@
 
 # 🔗 Relevant Links
 > 💡 *Provide direct links to any relevant Pull Requests, other issues, documentation, or markdown tickets found in `issues/`. Ensure links to markdown issues are web-accessible (e.g., full GitHub URL to the file in the `main` branch).*
----
 
 *   **Pull Request(s):**
     *   `[Link to PR 1: e.g., https://github.com/your-repo/project/pull/456]`

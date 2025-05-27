@@ -1,4 +1,6 @@
-<!-- IMPORTANT: This is a meta-template for creating tutorials. When using this to generate a specific tutorial, ensure all placeholders like "File Name In Pascal Case With Spaces" and content descriptions are filled appropriately for that tutorial's topic. -->
+# 📚 Tutorial: {title}
+
+> Step-by-step technical tutorial for {topic} providing interactive learning experiences with hands-on exercises and practical examples. Includes comprehensive explanations, suggested approaches, implementation guides, verification checklists, and progressive skill development tailored for {skill_level} learners.
 
 ## ✍️ Common Style Guidelines
 
@@ -60,7 +62,7 @@ Interactive step-by-step guides designed for optimal learning and engagement.
 
 #### Table of Contents
 
-- Title: "# 📝 Table of Contents"
+- Title: "## 📝 Table of Contents"
 - Content: List of all sections in the document
 - Keep it concise but comprehensive
 - Add estimated completion time for each section ⏱️
@@ -69,7 +71,7 @@ Interactive step-by-step guides designed for optimal learning and engagement.
 
 #### Introduction Section
 
-- Title: "# 📝 File Name In Pascal Case With Spaces"
+- Title: "## 📝 File Name In Pascal Case With Spaces"
 - Content: Explain what the feature/concept is, how it works, and why we use it
 - Keep it concise but comprehensive
 - Add a "What You'll Learn" checklist ✅
@@ -78,39 +80,33 @@ Interactive step-by-step guides designed for optimal learning and engagement.
 - Include real-world applications and examples 🌍
 - Add a "Time to Complete" estimate ⏱️
 
----
+
 [Content for Introduction Section as described above]
----
 
-#### 🤖 AI Agent Context
+### 🤖 AI Agent Context
 > 💡 *Essential information for the AI agent to understand the context of this tutorial and assist in its creation or execution. Review all linked resources thoroughly before proceeding.*
----
 
-##### 📚 Relevant Project Files & Code
+#### 📚 Relevant Project Files & Code
 > 💡 *List any specific project files, starting code, or completed solution code relevant to this tutorial. This helps the AI understand the technical environment.*
----
 *   `[path/to/starter_code_for_tutorial/]` - (Relevance: Initial code base for users to start with)
 *   `[path/to/solution_code_for_tutorial/]` - (Relevance: Completed code for reference or verification)
 *   *Example: `src/components/MyComponent.jsx` - (Relevance: The component being explained in the tutorial)*
 
-##### 🌐 Relevant Documentation & Links
+#### 🌐 Relevant Documentation & Links
 > 💡 *List any official documentation, API references, or external resources that are prerequisites or supplementary to this tutorial.*
----
 *   `[Link to official documentation for the technology/framework]` - (Relevance: Core concepts and API details)
 *   `[Link to any prerequisite tutorials or concepts]` - (Relevance: Knowledge needed before starting this tutorial)
 *   *Example: `https://reactjs.org/docs/hooks-intro.html` - (Relevance: If the tutorial is about React Hooks)*
 
-##### 💡 Other Key Information
+#### 💡 Other Key Information
 > 💡 *Include any other critical context for the AI agent, such as the target audience's skill level, specific learning objectives not covered elsewhere, or common pitfalls to highlight.*
----
 *   `[Context point 1: e.g., This tutorial is aimed at absolute beginners with no prior experience in X.]`
 *   `[Context point 2: e.g., The main learning objective is to understand how to implement Y using Z.]`
 *   *Example: Ensure all code examples are compatible with version A.B.C of the software.*
----
 
 #### Suggested Approach Section
 
-- Title: "# 🎯 Suggested Approach"
+- Title: "## 🎯 Suggested Approach"
 - Format: Checklist style with "- [ ]" prefix
 - Each step should be one sentence max
 - Steps should outline the implementation process
@@ -119,13 +115,12 @@ Interactive step-by-step guides designed for optimal learning and engagement.
 - Add difficulty indicators for each step
 - Include "Quick Win" markers for motivation 🏆
 
----
+
 [Content for Suggested Approach Section as described above]
----
 
 #### Tutorial Section
 
-- Title: "# 👨‍🏫 Tutorial"
+- Title: "## 👨‍🏫 Tutorial"
 - Important: Sub-sections should match each step from the Suggested Approach
 - Include code examples with detailed comments
 - Add explanations for complex concepts
@@ -137,13 +132,12 @@ Interactive step-by-step guides designed for optimal learning and engagement.
 - Include interactive challenges 🎮
 - Add "Pro Tips" for advanced techniques 🔥
 
----
+
 [Content for Tutorial Section as described above, with sub-sections for each step from Suggested Approach]
----
 
 #### Checklist Section
 
-- Title: "# ✅ Checklist"
+- Title: "## ✅ Checklist"
 - Format: Checklist style with "- [ ]" prefix
 - List verification points for correct implementation
 - Cover all critical aspects mentioned in tutorial
@@ -152,14 +146,12 @@ Interactive step-by-step guides designed for optimal learning and engagement.
 - Add "Further Resources" section 📚
 - Include a "Share Your Success" prompt 🌟
 
----
+
 [Content for Checklist Section as described above]
----
 
 ## 🤖 GPT Agent Instructions
 
 - Instructions for a hypothetical agent to perform all the tasks in the tutorial so agent creates the end result of the tutorial.
 
----
+
 [Detailed instructions for the GPT agent to follow the tutorial steps and produce the final outcome.]
----
