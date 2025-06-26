@@ -7,231 +7,40 @@
 
 ---
 
-## 📁 Role Folder Structure
+## 📁 Resource Types
 
-Each role's top-level folder serves as their office. Inside, you can optionally organize resources into standardized subfolders to maintain consistency:
+Each role organizes resources into standardized categories:
 
-| Folder                 | Purpose                                                                                                                                                                                                                                                                                                                                                                                                        | Examples                                                                                                       |
-|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| 💬 prompts/agents/     | An Agent Prompt is a structured instruction file (typically named you-are-{persona}.md) stored in a role's prompts/agents/ directory that defines an AI persona with specific expertise, responsibilities, and behaviors to guide AI interactions when assuming that role, providing the character traits, knowledge base, and workflow patterns needed to fulfill specialized functions within the workspace. | Files defining agent roles (e.g., `you-are-{persona}.md`)                                                      |
-| 💬 prompts/activities/ | An Activity Prompt is a structured instruction file (typically named plx-*.md) that guides AI agents to perform specific, well-defined tasks within a role's domain, providing standardized formats and steps for completing discrete activities.                                                                                                                                                              | Files defining specific tasks (e.g., `plx-{activity}.md`)                                                      |
-| ✨ snippets/            | Reusable text fragments or code blocks designed for quick insertion into prompts or documents, often triggered by abbreviations, to ensure consistency and speed up repetitive writing tasks.                                                                                                                                                                                                                  | Short text files, often with `.md` or `.txt` extensions (e.g., `;given.md`, `;ai.md`)                          |
-| 📋 templates/          | Standardized formats                                                                                                                                                                                                                                                                                                                                                                                           | Document templates, starter files (`*-template.md`)                                                            |
-| ✨ wows/                | Way of Workings (Best Practices/Guides)                                                                                                                                                                                                                                                                                                                                                                        | How-to guides, tutorials, best practice docs (`wow-*.md`)                                                      |
-| ✅ rubrics/             | Evaluation criteria                                                                                                                                                                                                                                                                                                                                                                                            | Quality standards, assessment frameworks (`*-rubric.md`)                                                       |
-| 📜 scripts/            | Automated procedures                                                                                                                                                                                                                                                                                                                                                                                           | Shell scripts, Python scripts (`*-script.*`)                                                                   |
-| ⚙️ systems/            | Repeatable workflows & standard procedures                                                                                                                                                                                                                                                                                                                                                                     | Process templates, defined workflows (`*-system.md`)                                                           |
-| 📦 resources/          | Reusable assets & reference materials                                                                                                                                                                                                                                                                                                                                                                          | Collections of some kind, locations of specific tools, any other misc reusable inputs (`the-*.md`, `all-*.md`) |
+| Resource | Purpose | Naming Convention |
+|----------|---------|-------------------|
+| 🤖 **agents/** | AI persona definitions with specific expertise and behaviors | `you-are-{persona}.md` |
+| 📝 **prompts/** | Task-specific instructions for AI agents | `plx-{activity}.md` |
+| 📋 **templates/** | Standardized document formats | `{type}-template.md` |
+| ✨ **best-practices/** | Guidelines and methodologies | `wow-{topic}.md` |
+| ⚙️ **systems/** | Repeatable workflows and procedures | `{name}-system.md` |
+| 📚 **collections/** | Curated resource lists | `all-{category}.md` |
+| ✅ **rubrics/** | Evaluation criteria | `{subject}-rubric.md` |
+| 📜 **scripts/** | Automation tools | `{name}-script.{ext}` |
+| 🔄 **workflows/** | Process documentation | `{name}-workflow.md` |
+| ✏️ **snippets/** | Reusable text fragments | `;{abbreviation}.md` |
 
 ---
 
 ## 🏢 Organizational Structure
 
-Your virtual organization is structured into **7 departments**, each containing specialized roles. Each role represents a team member with specific expertise and a dedicated workspace.
+Your virtual organization consists of **7 departments** with **14 specialized roles** and over **200 resources**.
 
 ### 📊 Department Overview
 
-| Department | Purpose | Roles |
-|------------|---------|--------|
-| 🤖 **AI** | Artificial intelligence, automation, and intelligent system design | Doc Expert, Prompt Engineer |
-| 📢 **Communications** | Internal/external communications and team coordination | Communications Officer |
-| 💡 **Innovation** | Research, analysis, and creative problem-solving | Brainstormer, Business Analyst, Researcher |
-| 📋 **Management** | Project planning, coordination, and delivery | Project Manager |
-| 📣 **Marketing** | Content creation, optimization, and market presence | ASO Expert, Content Creator |
-| 💼 **Sales** | Business development, proposals, and client relationships | Proposal Manager |
-| 💻 **Tech** | Technical implementation, architecture, and quality assurance | Architect, Developer, Tester, UIUX Expert |
-
----
-
-## 🤖 AI Department
-> *Focused on artificial intelligence, automation, and intelligent system design*
-
-### 📖 Doc Expert
-**Location:** `ai/doc-expert/`  
-**Responsibility:** Creating, reviewing, and transforming documentation with AI-powered systems
-
-<details>
-<summary>View Structure</summary>
-
-```
-ai/doc-expert/
-└── prompts/ (5)
-    ├── activities/ (3)
-    └── agents/ (2)
-```
-</details>
-
-### 🤖 Prompt Engineer
-**Location:** `ai/prompt-engineer/`  
-**Responsibility:** Designing and optimizing prompts for consistent AI interactions
-
-<details>
-<summary>View Structure</summary>
-
-```
-ai/prompt-engineer/
-├── prompts/ (23)
-│   ├── activities/ (16)
-│   └── agents/ (7)
-├── snippets/ (1)
-└── wows/ (5)
-```
-</details>
-
----
-
-## 📢 Communications Department
-> *Managing internal and external communications, documentation, and team coordination*
-
-### 📢 Communications Officer
-**Location:** `communications/core/`  
-**Responsibility:** Managing communication artifacts, meeting agendas, and summaries
-
-<details>
-<summary>View Structure</summary>
-
-```
-communications/core/
-└── templates/ (1)
-```
-</details>
-
----
-
-## 💡 Innovation Department
-> *Research, analysis, and creative problem-solving for business growth*
-
-### 💡 Brainstormer
-**Location:** `innovation/brainstormer/`  
-**Responsibility:** Facilitating idea generation and creative problem-solving sessions
-
-<details>
-<summary>View Structure</summary>
-
-```
-innovation/brainstormer/
-└── prompts/ (1)
-    └── activities/ (1)
-```
-</details>
-
-### 📊 Business Analyst
-**Location:** `innovation/business-analyst/`  
-**Responsibility:** Market research, competitor analysis, and project requirements
-
-<details>
-<summary>View Structure</summary>
-
-```
-innovation/business-analyst/
-├── prompts/ (6)
-│   ├── activities/ (2)
-│   └── agents/ (4)
-└── wows/ (1)
-    └── best-practices/ (1)
-```
-</details>
-
-### 🔬 Researcher
-**Location:** `innovation/researcher/`  
-**Responsibility:** Research methodologies, data analysis, and insights synthesis
-
-<details>
-<summary>View Structure</summary>
-
-```
-innovation/researcher/
-├── prompts/ (1)
-│   └── activities/ (1)
-└── templates/ (9)
-```
-</details>
-
----
-
-## 📋 Management Department
-> *Project planning, coordination, and delivery management*
-
-### 📋 Project Manager
-**Location:** `management/project-manager/`  
-**Responsibility:** Product requirements, Agile workflow, and development priorities
-
-<details>
-<summary>View Structure</summary>
-
-```
-management/project-manager/
-├── prompts/ (17)
-│   ├── activities/ (10)
-│   └── agents/ (7)
-├── templates/ (13)
-└── wows/ (0)
-```
-</details>
-
----
-
-## 📣 Marketing Department
-> *Content creation, optimization, and market presence*
-
-### 📱 ASO Expert
-**Location:** `marketing/aso-expert/`  
-**Responsibility:** App Store Optimization strategies and mobile app visibility
-
-<details>
-<summary>View Structure</summary>
-
-```
-marketing/aso-expert/
-├── prompts/ (1)
-│   └── agents/ (1)
-└── wows/ (1)
-    └── best-practices/ (1)
-```
-</details>
-
-### 📝 Content Creator
-**Location:** `marketing/content-creator/`  
-**Responsibility:** Content development with SEO optimization for engagement
-
-<details>
-<summary>View Structure</summary>
-
-```
-marketing/content-creator/
-├── prompts/ (7)
-│   ├── activities/ (3)
-│   └── agents/ (4)
-├── resources/ (6)
-│   └── dev-channels/ (6)
-├── systems/ (3)
-├── templates/ (2)
-└── wows/ (1)
-    └── best-practices/ (1)
-```
-</details>
-
----
-
-## 💼 Sales Department
-> *Business development, proposals, and client relationships*
-
-### 📑 Proposal Manager
-**Location:** `sales/proposal-manager/`  
-**Responsibility:** Creating milestone and project proposals for stakeholder approval
-
-<details>
-<summary>View Structure</summary>
-
-```
-sales/proposal-manager/
-├── prompts/ (3)
-│   ├── activities/ (1)
-│   └── agents/ (2)
-├── templates/ (3)
-└── wows/ (1)
-```
-</details>
+| Department | Files | Purpose | Roles |
+|------------|-------|---------|--------|
+| 💻 **Tech** | 89 | Technical implementation, architecture, and quality | Architect, Developer, Tester, UIUX Expert |
+| 🤖 **AI** | 34 | Artificial intelligence and automation | Department Resources, Prompt Engineer |
+| 📋 **Management** | 30 | Project planning and coordination | Project Manager |
+| 📣 **Marketing** | 21 | Content creation and market presence | ASO Expert, Content Creator |
+| 💡 **Innovation** | 18 | Research and creative problem-solving | Brainstormer, Business Analyst, Researcher |
+| 💼 **Sales** | 7 | Business development and proposals | Proposal Manager |
+| 📢 **Communications** | 1 | Internal/external communications | Department Resources |
 
 ---
 
@@ -243,92 +52,347 @@ sales/proposal-manager/
 **Responsibility:** Technical blueprints, technology selection, and high-level design
 
 <details>
-<summary>View Structure</summary>
+<summary>View Structure (10 files)</summary>
 
 ```
 tech/architect/
-├── prompts/ (8)
-│   ├── activities/ (5)
-│   └── agents/ (3)
+├── agents/ (3)
+│   ├── you-are-codebase-expert.md
+│   ├── you-are-system-workflow-expert.md
+│   └── you-are-wow-expert.md
+├── prompts/ (5)
+│   ├── plx-analyze-codebase.md
+│   ├── plx-create-system-workflow.md
+│   ├── plx-create-system.md
+│   ├── plx-research-before-you-continue.md
+│   └── plx-research-solution.md
 └── templates/ (2)
+    ├── architecture-template.md
+    └── system-template.md
 ```
 </details>
 
 ### 💻 Developer
 **Location:** `tech/developer/`  
-**Responsibility:** Feature implementation following coding standards and best practices
+**Responsibility:** Feature implementation, coding standards, and best practices
 
 <details>
-<summary>View Structure</summary>
+<summary>View Structure (61 files)</summary>
 
 ```
 tech/developer/
-├── artifacts/ (0)
-├── checklists/ (1)
-├── develop-features/ (0)
-│   └── wows/ (0)
-│       └── supabase/ (0)
-├── issues/ (1)
-│   └── stories/ (1)
-├── prompts/ (47)
-│   ├── activities/ (29)
-│   ├── agents/ (17)
-│   └── rules/ (1)
+├── agents/ (17)
+├── prompts/ (29)
+├── best-practices/ (35)
+│   ├── astro/ (1)
+│   ├── cli-tools/ (2)
+│   ├── flutter/ (2)
+│   ├── markdown/ (1)
+│   ├── mcp-servers/ (2)
+│   ├── next-js/ (1)
+│   ├── open-source/ (1)
+│   └── supabase/ (25)
+├── templates/ (6)
+├── systems/ (1)
+├── workflows/ (1)
 ├── rubrics/ (1)
 ├── scripts/ (2)
-├── snippets/ (42)
-│   └── flutter/ (14)
-├── systems/ (1)
-├── templates/ (6)
-├── workflows/ (1)
-└── wows/ (35)
-    ├── astro/ (1)
-    ├── cli-tools/ (2)
-    ├── flutter/ (2)
-    ├── markdown/ (1)
-    ├── mcp-servers/ (2)
-    ├── next-js/ (1)
-    ├── open-source/ (1)
-    └── supabase/ (26)
-        ├── database/ (6)
-        └── flutter/ (20)
+└── checklists/ (1)
 ```
 </details>
 
 ### ✅ Tester
 **Location:** `tech/tester/`  
-**Responsibility:** Acceptance testing, quality assurance, and requirement validation
+**Responsibility:** Quality assurance, testing, and validation
 
 <details>
-<summary>View Structure</summary>
+<summary>View Structure (14 files)</summary>
 
 ```
 tech/tester/
+├── agents/ (2)
+│   ├── you-are-acceptance-test-expert.md
+│   └── you-are-qa-specialist.md
 ├── prompts/ (11)
-│   ├── activites/ (9)
-│   └── agents/ (2)
-├── snippets/ (2)
+│   ├── plx-create-core-tests.md
+│   ├── plx-create-flutter-unit-tests.md
+│   ├── plx-create-qa-report.md
+│   └── ... (8 more)
 └── templates/ (1)
+    └── test-results-template.md
 ```
 </details>
 
 ### 🎨 UIUX Expert
 **Location:** `tech/uiux-expert/`  
-**Responsibility:** UI/UX design and intuitive user experience creation
+**Responsibility:** User interface and experience design
 
 <details>
-<summary>View Structure</summary>
+<summary>View Structure (2 files)</summary>
 
 ```
 tech/uiux-expert/
 ├── prompts/ (1)
-│   └── activities/ (1)
+│   └── plx-suggest-ui-ux-improvements.md
 └── rubrics/ (1)
+    └── ui-components-rubric.md
 ```
 </details>
+
+---
+
+## 🤖 AI Department
+> *Focused on artificial intelligence, automation, and intelligent system design*
+
+### 📚 Department Resources
+**Location:** `ai/department/`  
+**Responsibility:** Shared AI resources and documentation tools
+
+<details>
+<summary>View Structure (5 files)</summary>
+
+```
+ai/department/
+├── agents/ (1)
+│   └── you-are-doc-transformer.md
+└── prompts/ (4)
+    ├── plx-create-anything.md
+    ├── plx-create-doc.md
+    ├── plx-review-doc.md
+    └── plx-update-doc.md
+```
+</details>
+
+### 🤖 Prompt Engineer
+**Location:** `ai/prompt-engineer/`  
+**Responsibility:** Prompt design and optimization for AI interactions
+
+<details>
+<summary>View Structure (29 files)</summary>
+
+```
+ai/prompt-engineer/
+├── agents/ (7)
+├── prompts/ (17)
+├── wows/ (5)
+│   ├── wow-chat-gpt-prompt-engineering.md
+│   ├── wow-creating-cursor-rules.md
+│   ├── wow-prompt-engineering-by-lee-boonstra.md
+│   ├── wow-prompting-with-gpt-4-1.md
+│   └── wow-windsurf-workflow-best-practices.md
+└── snippets/ (1)
+    └── ;dvars.md
+```
+</details>
+
+---
+
+## 📋 Management Department
+> *Project planning, coordination, and delivery management*
+
+### 📋 Project Manager
+**Location:** `management/project-manager/`  
+**Responsibility:** Requirements, Agile workflow, and development priorities
+
+<details>
+<summary>View Structure (30 files)</summary>
+
+```
+management/project-manager/
+├── agents/ (7)
+├── prompts/ (10)
+└── templates/ (13)
+    ├── brief-template.md
+    ├── bug-template.md
+    ├── chore-template.md
+    ├── crash-report-template.md
+    ├── enhancement-template.md
+    ├── epic-template.md
+    ├── feedback-template.md
+    ├── prd-template.md
+    ├── project-plans-template.md
+    ├── requirements-template.md
+    ├── roadmap-template.md
+    ├── story-template.md
+    └── work-log-template.md
+```
+</details>
+
+---
+
+## 📣 Marketing Department
+> *Content creation, optimization, and market presence*
+
+### 📱 ASO Expert
+**Location:** `marketing/aso-expert/`  
+**Responsibility:** App Store Optimization strategies
+
+<details>
+<summary>View Structure (2 files)</summary>
+
+```
+marketing/aso-expert/
+├── agents/ (1)
+│   └── you-are-aso-expert.md
+└── best-practices/ (1)
+    └── wow-aso-best-practices.md
+```
+</details>
+
+### 📝 Content Creator
+**Location:** `marketing/content-creator/`  
+**Responsibility:** Content development with SEO optimization
+
+<details>
+<summary>View Structure (19 files)</summary>
+
+```
+marketing/content-creator/
+├── agents/ (4)
+├── prompts/ (3)
+├── collections/ (6)
+│   ├── all-dev-carousel-channels.md
+│   ├── all-dev-community-channels.md
+│   ├── all-dev-long-text-channels.md
+│   ├── all-dev-long-video-channels.md
+│   ├── all-dev-short-text-channels.md
+│   └── all-dev-short-video-channels.md
+├── systems/ (3)
+├── templates/ (2)
+└── best-practices/ (1)
+    └── wow-ai-writing-indicators.md
+```
+</details>
+
+---
+
+## 💡 Innovation Department
+> *Research, analysis, and creative problem-solving*
+
+### 💡 Brainstormer
+**Location:** `innovation/brainstormer/`  
+**Responsibility:** Idea generation and creative sessions
+
+<details>
+<summary>View Structure (1 file)</summary>
+
+```
+innovation/brainstormer/
+└── prompts/ (1)
+    └── plx-brainstorm.md
+```
+</details>
+
+### 📊 Business Analyst
+**Location:** `innovation/business-analyst/`  
+**Responsibility:** Market research and requirements analysis
+
+<details>
+<summary>View Structure (7 files)</summary>
+
+```
+innovation/business-analyst/
+├── agents/ (4)
+│   ├── you-are-business-analyst.md
+│   ├── you-are-market-researcher.md
+│   ├── you-are-mobile-mvp-expert.md
+│   └── you-are-researcher.md
+├── prompts/ (2)
+│   ├── plx-conduct-market-research.md
+│   └── plx-research-best-practices.md
+└── best-practices/ (1)
+    └── wow-mvp-roadmap-best-practices.md
+```
+</details>
+
+### 🔬 Researcher
+**Location:** `innovation/researcher/`  
+**Responsibility:** Research methodologies and data synthesis
+
+<details>
+<summary>View Structure (10 files)</summary>
+
+```
+innovation/researcher/
+├── prompts/ (1)
+│   └── plx-research.md
+└── templates/ (9)
+    ├── client-profile-questions-template.md
+    ├── company-profile-questions-template.md
+    ├── other-people-profile-questions-template.md
+    ├── overall-goals-profile-questions-template.md
+    ├── personal-profile-questions-template.md
+    ├── product-profile-questions-template.md
+    ├── project-profile-questions-template.md
+    ├── research-template.md
+    └── service-profile-questions-template.md
+```
+</details>
+
+---
+
+## 💼 Sales Department
+> *Business development, proposals, and client relationships*
+
+### 📑 Proposal Manager
+**Location:** `sales/proposal-manager/`  
+**Responsibility:** Creating proposals for stakeholder approval
+
+<details>
+<summary>View Structure (7 files)</summary>
+
+```
+sales/proposal-manager/
+├── agents/ (2)
+│   ├── you-are-a-milestone-proposal-expert.md
+│   └── you-are-a-proposal-expert.md
+├── prompts/ (1)
+│   └── plx-create-proposal.md
+├── templates/ (3)
+│   ├── epic-proposal-template.md
+│   ├── roadmap-proposal-template.md
+│   └── story-proposal-template.md
+└── best-practices/ (1)
+    └── wow-business-proposal-best-practices.md
+```
+</details>
+
+---
+
+## 📢 Communications Department
+> *Managing internal and external communications*
+
+### 📢 Department Resources
+**Location:** `communications/deptartment/`  
+**Responsibility:** Communication templates and resources
+
+<details>
+<summary>View Structure (1 file)</summary>
+
+```
+communications/deptartment/
+└── templates/ (1)
+    └── meeting-template.md
+```
+</details>
+
+---
+
+## 🚀 Getting Started
+
+1. **Choose a Department**: Navigate to the department that aligns with your current needs
+2. **Select a Role**: Pick the specialized role within that department
+3. **Use Resources**: Leverage the agents, prompts, templates, and best practices
+4. **Follow Conventions**: Use the naming conventions and folder structure consistently
 
 ---
 
 ## 🤝 Contributing
 
 For detailed information on how to contribute to this project, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
