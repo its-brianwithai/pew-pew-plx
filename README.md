@@ -1,6 +1,7 @@
 # ⚡ Ultra Wide Turbo Workspace v0.0.17
 
-[![Brought to you by ultrawideturbodevs.com](https://img.shields.io/badge/Brought%20to%20you%20by-ultrawideturbodevs.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://ultrawideturbodevs.com)
+[![Brought to you by brianwithai.com](https://img.shields.io/badge/Brought%20to%20you%20by-brianwithai.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianwithai.com)
+[![Mede mogelijk gemaakt door brianmetai.nl](https://img.shields.io/badge/Mede%20mogelijk%20gemaakt%20door-brianmetai.nl-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianmetai.nl)
 
 🎩 A virtual organization where you are the CEO. This workspace is structured around **Departments**, each containing specialized **Roles** with their own dedicated workspace folders.
 
@@ -24,15 +25,33 @@ Each role's top-level folder serves as their office. Inside, you can optionally 
 
 ---
 
-## 🏢 Departments & Roles
+## 🏢 Organizational Structure
 
-Your virtual organization is structured into departments, each containing specialized roles. A role represents a team member with specific expertise, responsibilities, and a dedicated workspace folder.
+Your virtual organization is structured into **7 departments**, each containing specialized roles. Each role represents a team member with specific expertise and a dedicated workspace.
 
-### 🤖 AI Department
-**Focused on artificial intelligence, automation, and intelligent system design**
+### 📊 Department Overview
 
-#### 📖 [Doc Expert](ai/doc-expert/)
-Specializes in creating, reviewing, and transforming documentation, ensuring clarity, accuracy, and adherence to standards. Manages document templates and expert systems for documentation.
+| Department | Purpose | Roles |
+|------------|---------|--------|
+| 🤖 **AI** | Artificial intelligence, automation, and intelligent system design | Doc Expert, Prompt Engineer |
+| 📢 **Communications** | Internal/external communications and team coordination | Communications Officer |
+| 💡 **Innovation** | Research, analysis, and creative problem-solving | Brainstormer, Business Analyst, Researcher |
+| 📋 **Management** | Project planning, coordination, and delivery | Project Manager |
+| 📣 **Marketing** | Content creation, optimization, and market presence | ASO Expert, Content Creator |
+| 💼 **Sales** | Business development, proposals, and client relationships | Proposal Manager |
+| 💻 **Tech** | Technical implementation, architecture, and quality assurance | Architect, Developer, Tester, UIUX Expert |
+
+---
+
+## 🤖 AI Department
+> *Focused on artificial intelligence, automation, and intelligent system design*
+
+### 📖 Doc Expert
+**Location:** `ai/doc-expert/`  
+**Responsibility:** Creating, reviewing, and transforming documentation with AI-powered systems
+
+<details>
+<summary>View Structure</summary>
 
 ```
 ai/doc-expert/
@@ -40,9 +59,14 @@ ai/doc-expert/
     ├── activities/ (3)
     └── agents/ (2)
 ```
+</details>
 
-#### 🤖 [Prompt Engineer](ai/prompt-engineer/)
-Designs and optimizes prompts for AI interactions, creating standard formats for maintaining consistent development practices and agent behaviors.
+### 🤖 Prompt Engineer
+**Location:** `ai/prompt-engineer/`  
+**Responsibility:** Designing and optimizing prompts for consistent AI interactions
+
+<details>
+<summary>View Structure</summary>
 
 ```
 ai/prompt-engineer/
@@ -52,32 +76,51 @@ ai/prompt-engineer/
 ├── snippets/ (1)
 └── wows/ (5)
 ```
+</details>
 
-### 📢 Communications Department
-**Managing internal and external communications, documentation, and team coordination**
+---
 
-#### 📢 [Communications Officer](communications/core/)
-Manages internal and external communications, preparing meeting agendas, summaries, and other communication artifacts.
+## 📢 Communications Department
+> *Managing internal and external communications, documentation, and team coordination*
+
+### 📢 Communications Officer
+**Location:** `communications/core/`  
+**Responsibility:** Managing communication artifacts, meeting agendas, and summaries
+
+<details>
+<summary>View Structure</summary>
 
 ```
 communications/core/
 └── templates/ (1)
 ```
+</details>
 
-### 💡 Innovation Department
-**Research, analysis, and creative problem-solving for business growth**
+---
 
-#### 💡 [Brainstormer](innovation/brainstormer/)
-Facilitates idea generation and creative problem-solving sessions, utilizing prompts and activities to explore new concepts and solutions.
+## 💡 Innovation Department
+> *Research, analysis, and creative problem-solving for business growth*
+
+### 💡 Brainstormer
+**Location:** `innovation/brainstormer/`  
+**Responsibility:** Facilitating idea generation and creative problem-solving sessions
+
+<details>
+<summary>View Structure</summary>
 
 ```
 innovation/brainstormer/
 └── prompts/ (1)
     └── activities/ (1)
 ```
+</details>
 
-#### 📊 [Business Analyst](innovation/business-analyst/)
-Performs market research and project definition, analyzing opportunities, competitors, and user demographics while creating structured project requirements.
+### 📊 Business Analyst
+**Location:** `innovation/business-analyst/`  
+**Responsibility:** Market research, competitor analysis, and project requirements
+
+<details>
+<summary>View Structure</summary>
 
 ```
 innovation/business-analyst/
@@ -87,9 +130,14 @@ innovation/business-analyst/
 └── wows/ (1)
     └── best-practices/ (1)
 ```
+</details>
 
-#### 🔬 [Researcher](innovation/researcher/)
-Defines research questions and methodologies, conducts studies, analyzes data, and synthesizes findings into actionable insights and comprehensive reports.
+### 🔬 Researcher
+**Location:** `innovation/researcher/`  
+**Responsibility:** Research methodologies, data analysis, and insights synthesis
+
+<details>
+<summary>View Structure</summary>
 
 ```
 innovation/researcher/
@@ -97,12 +145,19 @@ innovation/researcher/
 │   └── activities/ (1)
 └── templates/ (9)
 ```
+</details>
 
-### 📋 Management Department
-**Project planning, coordination, and delivery management**
+---
 
-#### 📋 [Project Manager](management/project-manager/)
-Creates product requirements documents and manages the Agile workflow of epics, stories, and tasks while coordinating development priorities.
+## 📋 Management Department
+> *Project planning, coordination, and delivery management*
+
+### 📋 Project Manager
+**Location:** `management/project-manager/`  
+**Responsibility:** Product requirements, Agile workflow, and development priorities
+
+<details>
+<summary>View Structure</summary>
 
 ```
 management/project-manager/
@@ -112,12 +167,19 @@ management/project-manager/
 ├── templates/ (13)
 └── wows/ (0)
 ```
+</details>
 
-### 📣 Marketing Department
-**Content creation, optimization, and market presence**
+---
 
-#### 📱 [ASO Expert](marketing/aso-expert/)
-Specializes in App Store Optimization strategies to improve mobile application visibility, conversion rates, and ranking in app stores.
+## 📣 Marketing Department
+> *Content creation, optimization, and market presence*
+
+### 📱 ASO Expert
+**Location:** `marketing/aso-expert/`  
+**Responsibility:** App Store Optimization strategies and mobile app visibility
+
+<details>
+<summary>View Structure</summary>
 
 ```
 marketing/aso-expert/
@@ -126,9 +188,14 @@ marketing/aso-expert/
 └── wows/ (1)
     └── best-practices/ (1)
 ```
+</details>
 
-#### 📝 [Content Creator](marketing/content-creator/)
-Develops optimized content for various platforms and channels, combining writing expertise with SEO knowledge to maximize engagement and reach.
+### 📝 Content Creator
+**Location:** `marketing/content-creator/`  
+**Responsibility:** Content development with SEO optimization for engagement
+
+<details>
+<summary>View Structure</summary>
 
 ```
 marketing/content-creator/
@@ -142,12 +209,19 @@ marketing/content-creator/
 └── wows/ (1)
     └── best-practices/ (1)
 ```
+</details>
 
-### 💼 Sales Department
-**Business development, proposals, and client relationships**
+---
 
-#### 📑 [Proposal Manager](sales/proposal-manager/)
-Creates milestone proposals and project proposals that outline scope, requirements, and deliverables for stakeholder approval.
+## 💼 Sales Department
+> *Business development, proposals, and client relationships*
+
+### 📑 Proposal Manager
+**Location:** `sales/proposal-manager/`  
+**Responsibility:** Creating milestone and project proposals for stakeholder approval
+
+<details>
+<summary>View Structure</summary>
 
 ```
 sales/proposal-manager/
@@ -157,12 +231,19 @@ sales/proposal-manager/
 ├── templates/ (3)
 └── wows/ (1)
 ```
+</details>
 
-### 💻 Tech Department
-**Technical implementation, architecture, and quality assurance**
+---
 
-#### 🏛️ [Architect](tech/architect/)
-Creates detailed technical blueprints and architectural designs based on product requirements. Responsible for technology selection, standards definition, and making high-level design decisions.
+## 💻 Tech Department
+> *Technical implementation, architecture, and quality assurance*
+
+### 🏛️ Architect
+**Location:** `tech/architect/`  
+**Responsibility:** Technical blueprints, technology selection, and high-level design
+
+<details>
+<summary>View Structure</summary>
 
 ```
 tech/architect/
@@ -171,9 +252,14 @@ tech/architect/
 │   └── agents/ (3)
 └── templates/ (2)
 ```
+</details>
 
-#### 💻 [Developer](tech/developer/)
-Implements features according to technical specifications, following coding standards and best practices while maintaining test coverage and documentation.
+### 💻 Developer
+**Location:** `tech/developer/`  
+**Responsibility:** Feature implementation following coding standards and best practices
+
+<details>
+<summary>View Structure</summary>
 
 ```
 tech/developer/
@@ -207,9 +293,14 @@ tech/developer/
         ├── database/ (6)
         └── flutter/ (20)
 ```
+</details>
 
-#### ✅ [Tester](tech/tester/)
-Designs and executes acceptance tests to validate functionality, ensure quality, and verify that requirements have been properly implemented.
+### ✅ Tester
+**Location:** `tech/tester/`  
+**Responsibility:** Acceptance testing, quality assurance, and requirement validation
+
+<details>
+<summary>View Structure</summary>
 
 ```
 tech/tester/
@@ -219,9 +310,14 @@ tech/tester/
 ├── snippets/ (2)
 └── templates/ (1)
 ```
+</details>
 
-#### 🎨 [UIUX Expert](tech/uiux-expert/)
-Translates UI/UX specifications into optimized designs and components, with expertise in creating intuitive user experiences and interfaces.
+### 🎨 UIUX Expert
+**Location:** `tech/uiux-expert/`  
+**Responsibility:** UI/UX design and intuitive user experience creation
+
+<details>
+<summary>View Structure</summary>
 
 ```
 tech/uiux-expert/
@@ -229,6 +325,7 @@ tech/uiux-expert/
 │   └── activities/ (1)
 └── rubrics/ (1)
 ```
+</details>
 
 ---
 

@@ -1,3 +1,0 @@
-<example>
-{clipboard}
-</example>
