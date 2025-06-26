@@ -6,28 +6,6 @@
 
 ---
 
-## ✨ Latest Release: v0.0.17 (2025-05-21)
-
-### Added
-- **Template Enhancements**: Enhanced all relevant templates across multiple roles with AI agent context sections to improve automated workflow consistency and effectiveness.
-- **AI Agent Context Integration**: Updated 20+ templates spanning architect, communications, content creator, developer, project manager, and tester roles.
-- **Workflow Automation**: Enhanced template usability for AI-driven processes with standardized guidance.
-
-#### ✨ New
-- **New Researcher Profile Questionnaire Templates**: Introduced a suite of 9 new questionnaire templates within the `researcher/templates/` directory. These templates are designed to create central repositories of detailed information for various profiles (Client, Company, Other People, Overall Goals, Personal, Product, Project, Research, and Service), facilitating AI-assisted tracking, planning, and analysis.
-    - `researcher/templates/client-profile-questions-template.md`
-    - `researcher/templates/company-profile-questions-template.md`
-    - `researcher/templates/other-people-profile-questions-template.md`
-    - `researcher/templates/overall-goals-profile-questions-template.md`
-    - `researcher/templates/personal-profile-questions-template.md`
-    - `researcher/templates/product-profile-questions-template.md`
-    - `researcher/templates/project-profile-questions-template.md`
-    - `researcher/templates/research-template.md`
-    - `researcher/templates/service-profile-questions-template.md`
-
-#### 🛠️ Modified
-- `README.md`: Updated to accurately reflect the v0.0.15 release, adjust previous release notes, and ensure overall project structure and file counts are correct.
-
 ## 📁 Role Folder Structure
 
 Each role's top-level folder serves as their office. Inside, you can optionally organize resources into standardized subfolders to maintain consistency:
