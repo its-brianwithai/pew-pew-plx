@@ -11,18 +11,18 @@
 
 Each role organizes resources into standardized categories:
 
-| Resource | Purpose | Naming Convention |
-|----------|---------|-------------------|
-| 🤖 **agents/** | AI persona definitions with specific expertise and behaviors | `you-are-{persona}.md` |
-| 📝 **prompts/** | Task-specific instructions for AI agents | `plx-{activity}.md` |
-| 📋 **templates/** | Standardized document formats | `{type}-template.md` |
-| ✨ **best-practices/** | Guidelines and methodologies | `wow-{topic}.md` |
-| ⚙️ **systems/** | Repeatable workflows and procedures | `{name}-system.md` |
-| 📚 **collections/** | Curated resource lists | `all-{category}.md` |
-| ✅ **rubrics/** | Evaluation criteria | `{subject}-rubric.md` |
-| 📜 **scripts/** | Automation tools | `{name}-script.{ext}` |
-| 🔄 **workflows/** | Process documentation | `{name}-workflow.md` |
-| ✏️ **snippets/** | Reusable text fragments | `;{abbreviation}.md` |
+| Resource              | Purpose                                                      | Naming Convention           |
+|-----------------------|--------------------------------------------------------------|-----------------------------|
+| 🤖 **agents/**        | AI persona definitions with specific expertise and behaviors | `you-are-{persona}.md`      |
+| 📝 **prompts/**       | Task-specific instructions for AI agents                     | `plx-{activity}.md`         |
+| 📋 **templates/**     | Standardized document formats                                | `{type}-template.md`        |
+| ✨ **best-practices/** | Guidelines and methodologies                                 | `{topic}-best-practices.md` |
+| ⚙️ **systems/**       | Repeatable workflows and procedures                          | `{name}-system.md`          |
+| 📚 **collections/**   | Curated resource lists                                       | `all-{category}.md`         |
+| ✅ **rubrics/**        | Evaluation criteria                                          | `{subject}-rubric.md`       |
+| 📜 **scripts/**       | Automation tools                                             | `{name}-script.{ext}`       |
+| 🔄 **workflows/**     | Process documentation                                        | `{name}-workflow.md`        |
+| ✏️ **snippets/**      | Reusable text fragments                                      | `;{abbreviation}.md`        |
 
 ---
 
@@ -32,15 +32,15 @@ Your virtual organization consists of **7 departments** with **14 specialized ro
 
 ### 📊 Department Overview
 
-| Department | Files | Purpose | Roles |
-|------------|-------|---------|--------|
-| 💻 **Tech** | 89 | Technical implementation, architecture, and quality | Architect, Developer, Tester, UIUX Expert |
-| 🤖 **AI** | 34 | Artificial intelligence and automation | Department Resources, Prompt Engineer |
-| 📋 **Management** | 30 | Project planning and coordination | Project Manager |
-| 📣 **Marketing** | 21 | Content creation and market presence | ASO Expert, Content Creator |
-| 💡 **Innovation** | 18 | Research and creative problem-solving | Brainstormer, Business Analyst, Researcher |
-| 💼 **Sales** | 7 | Business development and proposals | Proposal Manager |
-| 📢 **Communications** | 1 | Internal/external communications | Department Resources |
+| Department            | Files | Purpose                                             | Roles                                      |
+|-----------------------|-------|-----------------------------------------------------|--------------------------------------------|
+| 💻 **Tech**           | 89    | Technical implementation, architecture, and quality | Architect, Developer, Tester, UIUX Expert  |
+| 🤖 **AI**             | 34    | Artificial intelligence and automation              | Department Resources, Prompt Engineer      |
+| 📋 **Management**     | 30    | Project planning and coordination                   | Project Manager                            |
+| 📣 **Marketing**      | 21    | Content creation and market presence                | ASO Expert, Content Creator                |
+| 💡 **Innovation**     | 18    | Research and creative problem-solving               | Brainstormer, Business Analyst, Researcher |
+| 💼 **Sales**          | 7     | Business development and proposals                  | Proposal Manager                           |
+| 📢 **Communications** | 1     | Internal/external communications                    | Department Resources                       |
 
 ---
 
