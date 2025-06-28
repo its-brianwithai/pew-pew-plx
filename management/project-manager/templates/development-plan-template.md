@@ -1,4 +1,4 @@
-# 📋 Project Plan: {title}
+# 📋 Development Plan: {title}
 
 > Comprehensive project planning document for {project_name} breaking down work into manageable milestones and tasks. Defines actors, components, activities, and technical specifications to ensure clear communication and executable delivery plans.
 
@@ -39,7 +39,7 @@ Overview of all requirements.
             - [Activity]
         - [Component]
             - [Activity]
-    - 🌊 Activity Flows & Scenarios: Break down complex activities into step-by-step processes.
+    - 🌊 Activity Flows & Scenarios: Complex activities broken down into step-by-step processes.
         - [Parent]
             - [Activity Flow]
     - 📝 Properties: Define any values or configurations associated with components or activities.
@@ -49,51 +49,52 @@ Overview of all requirements.
         - [Parent]
             - [Behaviour]
 
-## 🛣️ 3. Milestones and Tasks
-The project broken down into milestones. Each milestone should be executable by an independent AI developer agent. Each milestone should not exceed 3 story points and should be executable independently. You can assume that each milestone will be offered in a new call by an agent with empty context. However, the executing agent will have access the ticket and thus be able to form an idea about the work that has been done.
+## 3. Phases and Tasks
+The project broken down into logical phases. Each phase is independently executable by an AI developer agent, represent roughly 1-3 story points of effort, and assume the agent starts with empty context (but has access to this plan).
 
-Each milestone consists of individual tasks for the unpacking agent. For each task, include:
-    - A one-sentence to one-paragraph description of what needs to be done, starting with a verb.
-    - A sequence diagram of end result.
-    - File names that will be created, read, updated, or deleted (CRUD), using proper naming conventions and casing styles.
-    - Objects/classes that will be CRUDed, including appropriate class keywords (e.g., sealed, abstract).
-    - Variables that will be CRUDed, including types, values, and keywords. Use proper casing and specify whether they are part of a class, method, or global constants.
-    - Methods that will be CRUDed, including return values, input values, and whether they are async/sync.
-    - For any complex processes or setup required to achieve a task or goal, provide clear, step-by-step instructions on how to complete these processes.
+Each phase contains individual, numbered tasks. For each task, include:
+- A clear, actionable description (1 sentence to 1 paragraph, starting with a verb).
+- A sequence diagram illustrating the end result (ASCII or textual).
+- Files to be Created, Read, Updated, or Deleted (CRUD), using conventional naming and casing.
+- Objects/Classes to be CRUDed (specify keywords like `sealed`, `abstract`).
+- Variables to be CRUDed (specify type, value, keywords, scope - class, method, global). Use conventional casing.
+- Methods to be CRUDed (specify return type, inputs, async/sync).
+- Step-by-step instructions for any complex processes or setup needed.
 
+### Phase 1: [Phase Name]
+[Phase description, linking back to requirements]
 
-### Milestone 1: [Milestone Name]
-[Milestone description]
+#### Task 1.1: [Task Title]
+- [ ] **Do:** [Task description starting with a verb].
+- **Sequence Diagram:**
+    ```mermaid
+    sequenceDiagram
+        participant A as Actor/ComponentA
+        participant B as Actor/ComponentB
+        A->>B: MethodCall(data)
+        B-->>A: Response(result)
+    ```
+  *(Replace with actual diagram)*
+- **Files:**
+    - C: `path/to/new_file.ext`
+    - U: `path/to/existing_file.ext`
+- **Classes:**
+    - C: `public class NewClassName`
+    - U: `internal sealed class ExistingClassName`
+- **Variables:**
+    - C: `ExistingClassName.private string _newVariable = "initial";`
+    - U: `MethodName.int updatedCounter = 0;`
+- **Methods:**
+    - C: `public async Task<ResultType> NewMethod(InputType input)`
+    - U: `private void ExistingMethod()`
+- **Process:**
+    - 1. Step one...
+    - 2. Step two...
 
-#### Task title
-- [ ] 1. [Task description]
-- Sequence diagram
-    - [ASCII art or textual representation of the sequence diagram]
-- Files:
-    - [List of files]
-- Classes:
-    - [List of classes]
-- Variables:
-    - [List of variables]
-- Methods:
-    - [List of methods]
-- Process:
-    - [Step-by-step instructions for any complex processes]
+#### Task 1.2: [Next Task Title]
+- [ ] **Do:** [Task description...]
+- ... (repeat structure) ...
 
-- [ ] 2. [Next task...]
-
-#### Task title
-- [ ] 1. [Task description]
-- Files:
-    - [List of files]
-- Classes:
-    - [List of classes]
-- Variables:
-    - [List of variables]
-- Methods:
-    - [List of methods]
-- Process:
-    - [Step-by-step instructions for any complex processes]
-
-### Milestone 2: [Milestone Name]
-[Repeat the structure for each milestone]
+### Phase 2: [Phase Name]
+[Phase description...]
+- ... (repeat structure for tasks) ...
