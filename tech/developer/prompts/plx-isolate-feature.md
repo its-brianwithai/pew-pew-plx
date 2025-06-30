@@ -113,7 +113,7 @@ class _HeaderWidget extends StatelessWidget {
 - Dependency injection pattern assumed for service integration
 - The feature module must be self-contained with all imports within the module using relative paths
 - Dependencies on code outside the folder limited exclusively to base SDK (Flutter, Dart) and common third-party packages
-- Project uses specific naming conventions (e.g., T... for public widgets)
+- Project uses specific naming conventions (e.g., T... for custom widgets)
 - Features should be portable and can be copied and pasted from one project to another with minimal integration effort
 </relevant_context>
 
@@ -137,7 +137,7 @@ class _HeaderWidget extends StatelessWidget {
 - Stateless by Default: Prefer creating StatelessWidgets for UI and composition
 - Only use StatefulWidgets when explicitly necessary for managing transient, internal UI state
 - Code should be self-documenting
-- Centralize all hardcoded strings, numbers, and other literal values in their respective k_... constant files
+- Centralize all hardcoded strings, numbers, and other literal values in their respective abstract class {Type}Collection.{var} ... constant files
 - Use enums to differentiate between types where appropriate
 - Always consider algorithmic complexity (Big O) in implementations
 - Be mindful of security measures and implement them where necessary
@@ -146,7 +146,6 @@ class _HeaderWidget extends StatelessWidget {
 <personal_preferences>
 - Use snake_case for feature directory names (e.g., user_profile)
 - Follow the specific directory structure with /views, /widgets, /services, /apis, /models, /dtos, /routing, /constants, /enums, /strings
-- Use k_... prefix for constant files
 - Follow project's existing naming conventions (e.g., T... for public widgets)
 - Prefer composition over inheritance for UI components
 - Create separate private StatelessWidget classes instead of methods returning widgets
