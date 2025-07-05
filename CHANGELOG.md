@@ -1,8 +1,44 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v0.0.18] - 2025-07-05
+
+### Added
+- **New Jsonify Prompts**: Added comprehensive set of jsonify prompts for structured data extraction and analysis
+  - Added `plx-jsonify.md` - Core jsonify prompt for general data structuring
+  - Added `plx-jsonify-data-models.md` - Data model structuring prompt
+  - Added `plx-jsonify-deployment.md` - Deployment configuration structuring
+  - Added `plx-jsonify-design-system.md` - Design system documentation structuring
+  - Added `plx-jsonify-features.md` - Feature documentation structuring
+  - Added `plx-jsonify-firebase.md` - Firebase configuration structuring
+  - Added `plx-jsonify-network-requests.md` - Network request documentation structuring
+  - Added `plx-jsonify-project.md` - Project structure documentation
+  - Added `plx-jsonify-routes.md` - Route configuration structuring
+  - Added `plx-jsonify-services.md` - Service layer documentation structuring
+  - Added `plx-jsonify-supabase.md` - Supabase configuration structuring
+  - Added `plx-jsonify-ui-components.md` - UI component documentation structuring
+  - Added `plx-jsonify-user-stories.md` - User story structuring prompt
+
+### Enhanced
+- **Expert Prompts**: Enhanced existing expert prompts with improved capabilities
+  - Updated requirements expert with enhanced analysis capabilities
+  - Added JSON image profile expert for image analysis and profiling
+  - Improved development plan expert with better template integration
+
+### Improved
+- **Template Organization**: Enhanced template structure and organization
+  - Updated development plan template with requirements components
+  - Improved user story template integration
+  - Enhanced requirements template with better formatting
+  - Added PLX-fix documentation for troubleshooting
+
+### Fixed
+- **Repository Structure**: Clean up and organizational improvements
+  - Moved tech project manager to appropriate tech folder
+  - Improved folder structure consistency
+  - Enhanced documentation and template accessibility
+
 ## [v0.0.17] - 2025-05-21
-n
 ### Added
 - **Template Enhancements**:
   - Enhanced all relevant templates across multiple roles with AI agent context sections
