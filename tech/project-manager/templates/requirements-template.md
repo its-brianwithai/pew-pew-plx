@@ -20,27 +20,6 @@
     *   `[Child Actor/Component 2.1]`
 *   ...
 
-# 🤖 AI Agent Context
-> 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
-
-## 📚 Relevant Project Files & Code
-> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance.*
-*   `[path/to/relevant/feature_description.md]` - (Relevance: High-level overview of the feature)
-*   `[path/to/existing/module_if_related/]` - (Relevance: Code for related existing functionality)
-*   *Example: `docs/data_models.md` - (Relevance: Definitions of existing data structures)*
-
-## 🌐 Relevant Documentation & Links
-> 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
-*   `[Link to User Stories or Epic]` - (Relevance: User-centric view of the requirements)
-*   `[Link to UI Mockups/Prototypes (Figma, etc.)]` - (Relevance: Visual and interaction design)
-*   *Example: `https://www.w3.org/TR/WCAG21/` - (Relevance: Accessibility guidelines if applicable)*
-
-## 💡 Other Key Information
-> 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
-*   `[Context point 1: e.g., These requirements are for the MVP (Minimum Viable Product) release.]`
-*   `[Context point 2: e.g., The system must integrate with the existing authentication service.]`
-*   *Example: Performance is a key consideration; avoid solutions known to be resource-intensive.*
-
 # 🎬 Activities (Who or what does what?)
 > 💡 *Actions that an Actor or Component performs (examples include Create List, Delete Item, Sync Data, and they must always contain a verb + action).*
 >
