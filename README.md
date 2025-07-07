@@ -1,39 +1,70 @@
-# ⚡ Ultra Wide Turbo Workspace v0.0.17
+# ⚡ Ultra Wide Turbo Workspace v0.0.20
 
 [![Brought to you by brianwithai.com](https://img.shields.io/badge/Brought%20to%20you%20by-brianwithai.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianwithai.com)
 [![Mede mogelijk gemaakt door brianmetai.nl](https://img.shields.io/badge/Mede%20mogelijk%20gemaakt%20door-brianmetai.nl-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianmetai.nl)
 
-🎩 A virtual organization where you are the CEO. This workspace is structured around **Departments**, each containing specialized **Roles** with their own dedicated workspace folders.
+🎩 A comprehensive virtual organization featuring an **AI-driven software development lifecycle framework** plus specialized **departments** and **roles** for complete project management.
 
 ---
 
-## 📁 Resource Types
+## 🎯 Idea-Context-Refine-Plan-Act-Review Framework
 
-Each role organizes resources into standardized categories:
+The centerpiece of this workspace: a comprehensive **AI-driven software development lifecycle framework** designed to take any idea from conception to completion through a structured sequence of phases.
 
-| Resource              | Purpose                                                      | Naming Convention           |
-|-----------------------|--------------------------------------------------------------|-----------------------------|
-| 🤖 **agents/**        | AI persona definitions with specific expertise and behaviors | `you-are-{persona}.md`      |
-| 📝 **prompts/**       | Task-specific instructions for AI agents                     | `plx-{activity}.md`         |
-| 📋 **templates/**     | Standardized document formats                                | `{type}-template.md`        |
-| ✨ **best-practices/** | Guidelines and methodologies                                 | `{topic}-best-practices.md` |
-| ⚙️ **systems/**       | Repeatable workflows and procedures                          | `{name}-system.md`          |
-| 📚 **collections/**   | Curated resource lists                                       | `all-{category}.md`         |
-| ✅ **rubrics/**        | Evaluation criteria                                          | `{subject}-rubric.md`       |
-| 📜 **scripts/**       | Automation tools                                             | `{name}-script.{ext}`       |
-| 🔄 **workflows/**     | Process documentation                                        | `{name}-workflow.md`        |
-| ✏️ **snippets/**      | Reusable text fragments                                      | `;{abbreviation}.md`        |
+### 📋 Framework Overview
+
+**Location:** `idea-context-refine-plan-act-review/`
+
+This framework implements a rigorous, systematic approach where each phase is managed by dedicated teams of AI agents, ensuring thorough project development with complete traceability.
+
+### 🚀 Project Lifecycle
+
+The framework follows a sequence of phases, each managed by a dedicated team:
+
+| Phase | Team | Purpose | Key Output |
+|-------|------|---------|------------|
+| **🌀 Idea** | **01-Research** | Clarifies initial idea, brainstorms solutions, conducts research | Clear, actionable concept |
+| **📚 Context** | **02-Context** | Gathers best practices, examples, preferences, ways of working | Comprehensive contextual foundation |
+| **💎 Refine** | **03-Requirements & 04-Refinement** | Creates detailed requirements and formal documents (PRDs, Architecture) | Complete specifications |
+| **🗺️ Plan** | **05-Plan** | Creates actionable plans (roadmaps, epics, stories, tasks) | Implementation roadmap |
+| **🚀 Act** | **06-Act** | Executes the plan, simulates work, produces detailed reports | Working implementation with tests |
+| **🔍 Review** | **07-Review** | Reviews work against criteria, provides feedback until perfect | Quality-assured deliverable |
+
+### 🤖 Orchestration System
+
+The entire process is coordinated by multiple layers of orchestration:
+
+- **Master Orchestrator**: `you-are-team-orchestrator-agent.md` delegates tasks to appropriate teams
+- **Team Orchestrators**: Each team has its own orchestrator managing internal workflow
+- **Specialist Agents**: Focused experts within each team handling specific tasks
+- **All-Teams Resources**: `00-all-teams/` provides complete visibility across all teams
+
+### 📂 Framework Directory Structure
+
+- **`/00-all-teams`**: Combined prompts and overviews for all teams
+- **`/01-research-team`**: Idea clarification, brainstorming, and research
+- **`/02-context-team`**: Project context, best practices, and preferences  
+- **`/03-requirements-team`**: Granular, testable requirements definition
+- **`/04-refinement-team`**: Formal PRDs and Architecture documents
+- **`/05-plan-team`**: Actionable plans breakdown
+- **`/06-act-team`**: Plan execution and comprehensive reporting
+- **`/07-review-team`**: Quality standards definition and enforcement
+
+Each team includes specialized orchestrators, agents, and templates designed for their specific phase of the development lifecycle.
 
 ---
 
-## 🏢 Organizational Structure
+## 🏢 Department-Based Organization
 
-Your virtual organization consists of **7 departments** with **14 specialized roles** and over **200 resources**.
+In addition to the framework above, this workspace provides **7 departments** with **14 specialized roles** containing specialized resources for specific domains and expertise areas.
 
 ### 📊 Department Overview
 
+Your virtual organization totals over **300 resources** across departments and framework:
+
 | Department            | Files | Purpose                                             | Roles                                      |
 |-----------------------|-------|-----------------------------------------------------|--------------------------------------------|
+| 🎯 **Project Framework** | 78    | End-to-end project management from idea to delivery | 7 specialized teams with orchestrators    |
 | 💻 **Tech**           | 89    | Technical implementation, architecture, and quality | Architect, Developer, Tester, UIUX Expert  |
 | 🤖 **AI**             | 34    | Artificial intelligence and automation              | Department Resources, Prompt Engineer      |
 | 📋 **Management**     | 30    | Project planning and coordination                   | Project Manager                            |
@@ -378,8 +409,33 @@ communications/deptartment/
 
 ---
 
+## 📁 Resource Types
+
+Both the framework and departments organize resources into standardized categories:
+
+| Resource              | Purpose                                                      | Naming Convention           |
+|-----------------------|--------------------------------------------------------------|-----------------------------|
+| 🤖 **agents/**        | AI persona definitions with specific expertise and behaviors | `you-are-{persona}.md`      |
+| 📝 **prompts/**       | Task-specific instructions for AI agents                     | `plx-{activity}.md`         |
+| 📋 **templates/**     | Standardized document formats                                | `{type}-template.md`        |
+| ✨ **best-practices/** | Guidelines and methodologies                                 | `{topic}-best-practices.md` |
+| ⚙️ **systems/**       | Repeatable workflows and procedures                          | `{name}-system.md`          |
+| 📚 **collections/**   | Curated resource lists                                       | `all-{category}.md`         |
+| ✅ **rubrics/**        | Evaluation criteria                                          | `{subject}-rubric.md`       |
+| 📜 **scripts/**       | Automation tools                                             | `{name}-script.{ext}`       |
+| 🔄 **workflows/**     | Process documentation                                        | `{name}-workflow.md`        |
+| ✏️ **snippets/**      | Reusable text fragments                                      | `;{abbreviation}.md`        |
+
+---
+
 ## 🚀 Getting Started
 
+### For Project Management Workflow:
+1. **Start with Research**: Use the `idea-context-refine-plan-act-review/01-research-team/` to clarify your idea
+2. **Follow the Framework**: Progress through each team sequentially (Research → Context → Requirements → Refinement → Plan → Act → Review)
+3. **Use Team Orchestrators**: Each team has an orchestrator agent to coordinate the workflow
+
+### For Department-Based Resources:
 1. **Choose a Department**: Navigate to the department that aligns with your current needs
 2. **Select a Role**: Pick the specialized role within that department
 3. **Use Resources**: Leverage the agents, prompts, templates, and best practices

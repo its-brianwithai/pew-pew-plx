@@ -9,10 +9,11 @@ The Review Team is responsible for quality assurance. It defines the criteria fo
 ## 🤖 Specialist Agents
 
 *   **`you-are-acceptance-criteria-agent.md`**: Defines specific, testable criteria for a feature.
-*   **`you-are-quality-standards-agent.md`**: Defines the project's overall quality bar and rubrics.
-*   **`you-are-rules-agent.md`**: Documents mandatory operational or compliance rules.
-*   **`you-are-restrictions-agent.md`**: Documents hard project boundaries and constraints.
+*   **`you-are-code-review-agent.md`**: A peer reviewer who inspects the implemented code for quality and adherence to architectural principles.
 *   **`you-are-feedback-agent.md`**: Compares the final result against all criteria and provides structured feedback.
+*   **`you-are-quality-standards-agent.md`**: Defines the project's overall quality bar and rubrics.
+*   **`you-are-restrictions-agent.md`**: Documents hard project boundaries and constraints.
+*   **`you-are-rules-agent.md`**: Documents mandatory operational or compliance rules.
 
 ## 📄 Templates
 

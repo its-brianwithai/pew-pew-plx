@@ -1,6 +1,24 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v0.0.20] - 2025-07-07
+
+### ✨ Features:
+- **New Idea-Context-Refine-Plan-Act-Review Framework**: Complete project management team structure with 7 specialized teams for end-to-end development workflow
+- **Enhanced Act Team Capabilities**: Added three new specialist agents:
+  - Lead Developer Agent for expert code implementation with dependency injection principles
+  - Unit Tester Agent for isolated business logic testing without mocks or stubs
+  - Acceptance Test Agent for creating UAT plans in Markdown or CSV formats
+- **Code Review Integration**: Added Code Review Agent to the Review Team for comprehensive code quality assessment
+- **Comprehensive Team Overviews**: Added all-teams overview files in `00-all-teams/` directory providing complete visibility across all team structures and capabilities
+
+### 🛠️ Improvements:
+- **Agent Role Definitions**: Enhanced all agent role definitions with clearer responsibilities, workflows, and output specifications
+- **Template Enhancements**: Improved templates with better formatting, guidance, and cross-references between teams using `@team/file.md` pattern
+- **Testing Standards**: Established strict unit testing standards focusing on pure business logic testing with fake implementations instead of mocks
+- **UAT Process**: Standardized User Acceptance Testing with dual format support (Markdown tables and CSV files for stakeholder use)
+- **Development Workflow**: Comprehensive workflow from idea clarification through research, context gathering, requirements, refinement, planning, acting, and review
+
 ## [v0.0.19] - 2025-07-07
 
 ### Added

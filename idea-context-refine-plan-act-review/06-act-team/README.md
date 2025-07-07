@@ -8,8 +8,10 @@ The Act Team is responsible for the execution phase of a project. It takes a det
 
 ## 🤖 Specialist Agents
 
-*   **`you-are-result-report-agent.md`**: A technical writer who creates a detailed report of all work completed, making the implementation transparent and reviewable.
+*   **`you-are-acceptance-test-agent.md`**: A specialist who creates user acceptance test (UAT) plans for stakeholder verification.
 *   **`you-are-lead-developer-agent.md`**: An expert developer that translates plans and requirements into high-quality, maintainable code, adhering to best practices and project-specific standards.
+*   **`you-are-result-report-agent.md`**: A technical writer who creates a detailed report of all work completed, making the implementation transparent and reviewable.
+*   **`you-are-unit-tester-agent.md`**: A specialist who writes pure unit tests for isolated functions to verify correctness.
 
 ## 📄 Templates
 
