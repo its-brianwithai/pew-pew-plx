@@ -3,19 +3,19 @@
 [![Brought to you by brianwithai.com](https://img.shields.io/badge/Brought%20to%20you%20by-brianwithai.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianwithai.com)
 [![Mede mogelijk gemaakt door brianmetai.nl](https://img.shields.io/badge/Mede%20mogelijk%20gemaakt%20door-brianmetai.nl-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianmetai.nl)
 
-🎩 A comprehensive virtual organization featuring an **AI-driven software development lifecycle framework** plus specialized **departments** and **roles** for complete project management.
+🎩 A virtual organization where you are the CEO. This workspace includes an AI-driven software development lifecycle framework plus specialized departments and roles.
 
 ---
 
 ## 🎯 Idea-Context-Refine-Plan-Act-Review Framework
 
-The centerpiece of this workspace: a comprehensive **AI-driven software development lifecycle framework** designed to take any idea from conception to completion through a structured sequence of phases.
+An AI-driven software development lifecycle framework that takes projects from initial idea to completion through a structured sequence of phases.
 
 ### 📋 Framework Overview
 
 **Location:** `idea-context-refine-plan-act-review/`
 
-This framework implements a rigorous, systematic approach where each phase is managed by dedicated teams of AI agents, ensuring thorough project development with complete traceability.
+Each phase is managed by dedicated teams of AI agents for systematic project development.
 
 ### 🚀 Project Lifecycle
 
@@ -50,17 +50,17 @@ The entire process is coordinated by multiple layers of orchestration:
 - **`/06-act-team`**: Plan execution and comprehensive reporting
 - **`/07-review-team`**: Quality standards definition and enforcement
 
-Each team includes specialized orchestrators, agents, and templates designed for their specific phase of the development lifecycle.
+Each team includes orchestrators, agents, and templates for their specific phase.
 
 ---
 
 ## 🏢 Department-Based Organization
 
-In addition to the framework above, this workspace provides **7 departments** with **14 specialized roles** containing specialized resources for specific domains and expertise areas.
+In addition to the framework above, this workspace provides 7 departments with 14 roles containing resources for specific domains and expertise areas.
 
 ### 📊 Department Overview
 
-Your virtual organization totals over **300 resources** across departments and framework:
+Total of over 300 resources across departments and framework:
 
 | Department            | Files | Purpose                                             | Roles                                      |
 |-----------------------|-------|-----------------------------------------------------|--------------------------------------------|
