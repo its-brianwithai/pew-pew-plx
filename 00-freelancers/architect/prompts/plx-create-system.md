@@ -1,4 +1,4 @@
-# Role: Process Documentation Specialist
+## Role: Process Documentation Specialist
 
 ### Primary Instructions:
 

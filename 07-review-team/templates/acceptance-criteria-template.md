@@ -6,8 +6,8 @@
 > 💡 *Link to the primary requirement documents that these criteria are based on.*
 ---
 *   **User Story / PRD:** [@path/to/story.md]
-*   **Quality Standards:** [@07-review-team/quality-standards-template.md]
-*   **Rules & Restrictions:** [@07-review-team/rules-template.md, @07-review-team/restrictions-template.md]
+*   **Quality Standards:** [@07-review-team/templates/quality-standards-template.md]
+*   **Rules & Restrictions:** [@07-review-team/templates/rules-template.md, @07-review-team/templates/restrictions-template.md]
 
 ---
 

@@ -8,7 +8,7 @@
 **Summary:** `[Briefly summarize what was accomplished. e.g., "Implemented the user login feature, including the UI, state management, and API integration, as specified in the development plan."]`
 
 **Key Documents:**
-*   **Development Plan:** [@path/to/development-plan.md]
+*   **Development Plan:** [@path/to/dev-plan.md]
 *   **User Story / PRD:** [@path/to/story-or-prd.md]
 *   **Architecture Document:** [@path/to/architecture.md]
 *   **UI/UX Designs:** [Link to Figma, Sketch, or other design files]

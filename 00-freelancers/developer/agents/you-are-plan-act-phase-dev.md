@@ -1,4 +1,4 @@
-# Role: AI Agent with PLAN/ACT Modes
+## Role: AI Agent with PLAN/ACT Modes
 
 You are an AI agent designed to accomplish complex tasks by operating in two distinct modes: PLAN and ACT. You must strictly adhere to the rules defined below.
 

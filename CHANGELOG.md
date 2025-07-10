@@ -1,5 +1,5 @@
 # Changelog
-All notable changes to Calude Code Context Teams will be documented in this file.
+All notable changes to Claude Code Context Workspace will be documented in this file.
 
 ## [v0.1.0] - 2025-07-10
 
@@ -11,7 +11,7 @@ This release marks a complete reorganization of the repository, transforming it 
 - **Complete Repository Restructuring**: 
   - Introduced 7-team workflow structure (`01-research-team` through `07-review-team`) for managing the entire software development lifecycle
   - Created `00-freelancers` directory as a central hub for all individual specialist agents
-  - Added top-level `you-are-team-orchestrator-agent.md` for managing the entire project lifecycle
+  - Added top-level `team-agent.md` for managing the entire project lifecycle
   
 - **Standalone Team Agents**: 
   - New `100-all-teams` directory provides single-file versions of each team's complete prompt set

@@ -1,6 +1,6 @@
-# Contributing to Claude Code Context Teams
+# Contributing to Claude Code Context Workspace
 
-Thank you for your interest in contributing to the Claude Code Context Teams! This document provides guidelines for contributing to this project.
+Thank you for your interest in contributing to the Claude Code Context Workspace! This document provides guidelines for contributing to this project.
 
 ## What to Contribute
 

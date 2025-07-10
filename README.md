@@ -1,4 +1,4 @@
-# ⚡ Calude Code Context Teams v0.1
+# ⚡ Claude Code Context Workspace v0.1
 
 [![Brought to you by brianwithai.com](https://img.shields.io/badge/Brought%20to%20you%20by-brianwithai.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianwithai.com)
 [![Mede mogelijk gemaakt door brianmetai.nl](https://img.shields.io/badge/Mede%20mogelijk%20gemaakt%20door-brianmetai.nl-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianmetai.nl)
@@ -31,7 +31,7 @@ graph TD
     end
 
     subgraph "Main Orchestrator"
-        B(you-are-team-orchestrator-agent.md)
+        B(team-agent.md)
     end
 
     subgraph "Team Orchestrators (Phase Managers)"
@@ -55,9 +55,9 @@ graph TD
 ```
 
 *   **You (The CEO):** You provide the high-level goal.
-*   **The Team Orchestrator (`you-are-team-orchestrator-agent.md`):** Your possible main point of contact. This agent understands the entire project lifecycle and routes your request to the correct Team Orchestrator.
-*   **Team Orchestrators:** Each of the 7 teams has an orchestrator (e.g., `you-are-research-orchestrator-agent.md`). They manage the specialists within their team to complete a specific phase of the project.
-*   **Specialist Agents:** These are the "doers" with specific skills (e.g., `you-are-idea-agent.md`, `you-are-prd-agent.md`). They execute granular tasks.
+*   **The Team Orchestrator (`team-agent.md`):** This agent understands the entire project lifecycle and routes your request to the correct Team Orchestrator.
+*   **Team Orchestrators:** Each of the 7 teams has an orchestrator (e.g., `research-agent.md`). They manage the specialists within their team to complete a specific phase of the project.
+*   **Specialist Agents:** These are the "doers" with specific skills (e.g., `idea-agent.md`, `prd-agent.md`). They execute granular tasks.
 
 ### Teams vs. Freelancers
 
@@ -83,31 +83,31 @@ graph TD
 
 ### 1. `01-research-team`
 *   **Purpose:** To clarify initial ideas, brainstorm solutions, and conduct formal research. This team turns a vague concept into a well-defined problem statement.
-*   **Agents:** `you-are-brainstorm-agent.md`, `you-are-idea-agent.md`, `you-are-research-agent.md`.
+*   **Agents:** `brainstorm-agent.md`, `idea-agent.md`, `research-agent.md`.
 
 ### 2. `02-context-team`
 *   **Purpose:** To gather and document all necessary project context. This includes best practices, good and bad examples, personal preferences, and suggested approaches.
-*   **Agents:** `you-are-bad-examples-agent.md`, `you-are-best-practices-agent.md`, `you-are-collection-agent.md`, `you-are-good-examples-agent.md`, `you-are-personal-preferences-agent.md`, `you-are-suggested-approach-agent.md`.
+*   **Agents:** `bad-examples-agent.md`, `best-practices-agent.md`, `collection-agent.md`, `good-examples-agent.md`, `personal-preferences-agent.md`, `suggested-approach-agent.md`.
 
 ### 3. `03-requirements-team`
 *   **Purpose:** To create detailed, granular, and testable requirements specifications. This team deconstructs an idea into its fundamental actors, activities, properties, and behaviors.
-*   **Agents:** `you-are-activities-agent.md`, `you-are-actors-components-agent.md`, `you-are-behaviours-agent.md`, `you-are-properties-agent.md`, `you-are-scenarios-agent.md`.
+*   **Agents:** `activities-agent.md`, `actors-components-agent.md`, `behaviours-agent.md`, `properties-agent.md`, `scenarios-agent.md`.
 
 ### 4. `04-refinement-team`
 *   **Purpose:** To formalize requirements into structured, industry-standard documents like a Product Requirements Document (PRD) and an Architecture Document.
-*   **Agents:** `you-are-architecture-agent.md`, `you-are-prd-agent.md`.
+*   **Agents:** `architecture-agent.md`, `prd-agent.md`.
 
 ### 5. `05-plan-team`
 *   **Purpose:** To break down refined requirements into actionable plans. This team creates the project roadmap, epics, user stories, and detailed development tasks.
-*   **Agents:** `you-are-development-plan-agent.md`, `you-are-epic-agent.md`, `you-are-roadmap-agent.md`, `you-are-story-agent.md`, `you-are-task-agent.md`.
+*   **Agents:** `dev-plan-agent.md`, `epic-agent.md`, `roadmap-agent.md`, `story-agent.md`, `task-agent.md`.
 
 ### 6. `06-act-team`
 *   **Purpose:** To execute the development plan. This team simulates the building of the feature and produces a detailed `result-report.md` documenting what was done.
-*   **Agents:** `you-are-acceptance-test-agent.md`, `you-are-lead-developer-agent.md`, `you-are-result-report-agent.md`, `you-are-unit-tester-agent.md`.
+*   **Agents:** `acceptance-test-agent.md`, `lead-developer-agent.md`, `result-report-agent.md`, `unit-test-agent.md`.
 
 ### 7. `07-review-team`
 *   **Purpose:** To review the completed work against all defined criteria to ensure quality. This team checks for adherence to acceptance criteria, quality standards, rules, and restrictions.
-*   **Agents:** `you-are-acceptance-criteria-agent.md`, `you-are-code-review-agent.md`, `you-are-feedback-agent.md`, `you-are-quality-standards-agent.md`, `you-are-restrictions-agent.md`, `you-are-rules-agent.md`.
+*   **Agents:** `acceptance-criteria-agent.md`, `code-review-agent.md`, `feedback-agent.md`, `quality-standards-agent.md`, `restrictions-agent.md`, `rules-agent.md`.
 
 ---
 
@@ -118,13 +118,13 @@ graph TD
     git clone https://github.com/your-repo/ultra-turbo-claude-code-context-teams.git
     ```
 2.  **Install the Commands:**
-    Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `you-are-team-orchestrator-agent.md` file into your `.claude/commands/` directory. This makes them available as commands in your IDE.
+    Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `team-agent.md` file into your `.claude/commands/` directory. This makes them available as commands in your IDE.
 
 3.  **Configure Your Project Context:**
     This is the most important step. Go into each team's context file (e.g., `01-research-team/context/research-team-context.md`) and update the file links to point to the relevant files in *your* project.
 
 4.  **Start a Conversation:**
-    Start a chat with `@you-are-team-orchestrator-agent` in your IDE and describe what you want to do. It will guide you to the right team.
+    Start a chat with `@team-agent` in your IDE and describe what you want to do. It will guide you to the right team.
 
 ## 🧠 How to Use: The Power of Context
 
@@ -216,7 +216,7 @@ Here is a high-level overview of the repository structure:
 ├── 07-review-team/        # Team for reviewing completed work
 ├── 100-all-teams/         # Single-file versions of teams for custom GPTs
 ├── README.md              # This file
-└── you-are-team-orchestrator-agent.md # The main entry point agent
+└── team-agent.md # The main entry point agent
 ```
 
 ## 📄 License

@@ -8,10 +8,10 @@
 *   **Reviewer(s):** [@username or Name]
 *   **Date of Review:** [YYYY-MM-DD]
 *   **Key Documents Used in Review:**
-    *   Result Report: [@06-act-team/result-report-template.md]
-    *   Acceptance Criteria: [@07-review-team/acceptance-criteria-template.md]
-    *   Quality Standards: [@07-review-team/quality-standards-template.md]
-    *   Rules & Restrictions: [@07-review-team/rules-template.md, @07-review-team/restrictions-template.md]
+    *   Result Report: [@06-act-team/templates/result-report-template.md]
+    *   Acceptance Criteria: [@07-review-team/templates/acceptance-criteria-template.md]
+    *   Quality Standards: [@07-review-team/templates/quality-standards-template.md]
+    *   Rules & Restrictions: [@07-review-team/templates/rules-template.md, @07-review-team/templates/restrictions-template.md]
     *   Original PRD/Story: [@path/to/story.md]
 
 ## 2. 📈 High-Level Summary

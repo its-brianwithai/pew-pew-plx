@@ -35,7 +35,7 @@
 ---
 *   @path/to/current_architecture_overview.md - (Relevance: If evolving an existing system)
 *   @path/to/key_process_interface.md - (Relevance: Example of existing interface to adhere to)
-*   *Example: @03-requirements-team/requirements-template.md - (Relevance: Source requirements for this architecture)*
+*   *Example: @03-requirements-team/templates/requirements-template.md - (Relevance: Source requirements for this architecture)*
 
 ## 🌐 Relevant Documentation & Links
 > 💡 *List any external web pages, standards documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
@@ -359,6 +359,7 @@ sequenceDiagram
 *   **Alternative 2:** `[e.g., Tool Y vs. Tool X]`
     *   Pros: `[... ]`
     *   Cons: `[... ]`
+    *   Reason Not Chosen: `[... ]`
     *   Reason Not Chosen: `[... ]`
 
 ## 13. 📖 Glossary
