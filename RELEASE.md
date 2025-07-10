@@ -1,6 +1,6 @@
 # Release v0.1: The Team-Based Workflow & Freelancer Hub
 
-This is the first major release of the **Ultra Turbo Claude Code Context Teams** framework, version 0.1. This version marks a complete reorganization of the repository, moving from a simple agent structure to a comprehensive, team-based workflow designed for end-to-end software development with AI.
+This is the first major release of the **Ultra Calude Code Context Teams** framework, version 0.1. This version marks a complete reorganization of the repository, moving from a simple agent structure to a comprehensive, team-based workflow designed for end-to-end software development with AI.
 
 ## ✨ What's New?
 

@@ -1,6 +1,6 @@
-# Contributing to Ultra Wide Turbo Workspace
+# Contributing to Claude Code Context Teams
 
-Thank you for your interest in contributing to the Ultra Wide Turbo Workspace! This document provides guidelines for contributing to this project.
+Thank you for your interest in contributing to the Claude Code Context Teams! This document provides guidelines for contributing to this project.
 
 ## What to Contribute
 

@@ -1,5 +1,5 @@
 # Changelog
-All notable changes to Turbo Claude Code Context Teams will be documented in this file.
+All notable changes to Calude Code Context Teams will be documented in this file.
 
 ## [v0.1.0] - 2025-07-10
 
@@ -517,4 +517,4 @@ d
 - Updated README with a link to the developer prompts documentation
 
 ### 💔 Breaking:
-- **Initial Workspace Refactor Release**: Released the first version of the new Ultra Wide Turbo Workspace (UWTW), featuring improved project structure, comprehensive roles documentation and development tools.
+- **Initial Workspace Refactor Release**: Released the first version of the new Claude Code Context Teams (UWTW), featuring improved project structure, comprehensive roles documentation and development tools.

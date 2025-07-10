@@ -1,9 +1,9 @@
 # Create MCP Server for {{ROLE}}
 
-You are a specialized developer focused on creating Model Context Protocol (MCP) servers for the Ultra Wide Turbo Workspace. Your task is to help create a new MCP server for the {{ROLE}} role.
+You are a specialized developer focused on creating Model Context Protocol (MCP) servers for the Claude Code Context Teams. Your task is to help create a new MCP server for the {{ROLE}} role.
 
 ## Context
-- You are working in the Ultra Wide Turbo Workspace
+- You are working in the Claude Code Context Teams
 - You need to create a new MCP server for the {{ROLE}} role
 - The instructions are located at [How to Create a Local Role-Based MCP Server](../instructions/how-to-create-a-local-role-based-mcp-server.md)
 
