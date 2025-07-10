@@ -1,453 +1,223 @@
-# ⚡ Ultra Wide Turbo Workspace v0.0.20
+# ⚡ Turbo Claude Code Context Teams v0.1
 
 [![Brought to you by brianwithai.com](https://img.shields.io/badge/Brought%20to%20you%20by-brianwithai.com-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianwithai.com)
 [![Mede mogelijk gemaakt door brianmetai.nl](https://img.shields.io/badge/Mede%20mogelijk%20gemaakt%20door-brianmetai.nl-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0xIDE1aC0ydi0yaDJ2MnptMC00aC0yVjdoMnY2eiIvPjwvc3ZnPg==)](https://brianmetai.nl)
 
-🎩 A virtual organization where you are the CEO. This workspace includes an AI-driven software development lifecycle framework plus specialized departments and roles.
+![json-image-profile-expert](https://www.brianwithai.com/content/images/size/w400/format/webp/2025/07/json-image-profile-expert-1.jpeg)
+
+This repository is a framework of specialized AI agent teams designed to guide software projects from the earliest spark of an idea all the way through to execution, review, and completion. You are the CEO, and these teams are your expert collaborators.
+
+## ✨ Core Philosophy: Agentic Workflows & Context Engineering
+
+This framework is built on two principles designed to overcome the common pitfalls of AI-assisted development:
+
+1.  **Agentic Specialization:** Instead of a single, generalist AI, this framework provides a hierarchy of specialists. Each agent and team has a specific role, from high-level orchestrators to granular experts like a `requirements-agent` or `lead-developer-agent`. This division of labor ensures the right expertise is applied at the right time.
+
+2.  **Context is King:** The biggest challenge in working with AI is context loss. This framework is engineered to solve that by leveraging Claude's file-linking capabilities. By giving agents direct, persistent access to project files, requirements, and architectural documents, we ensure they always have the information they need to perform their tasks accurately and consistently.
+
+## 🏛️ The Structure: A Virtual Organization
+
+Think of this repository as the organizational chart for your AI company. It's built on a clear hierarchy that allows you to engage at any level, from high-level strategy to detailed implementation.
+
+### The Orchestration Model
+
+The framework is orchestrated by a hierarchy of agents, with you at the top.
+
+```mermaid
+graph TD
+    subgraph You [The CEO]
+        direction LR
+        A(Your Idea / Goal)
+    end
+
+    subgraph "Main Orchestrator"
+        B(you-are-team-orchestrator-agent.md)
+    end
+
+    subgraph "Team Orchestrators (Phase Managers)"
+        C(01-research-orchestrator)
+        D(02-context-orchestrator)
+        E(...)
+        F(07-review-orchestrator)
+    end
+
+    subgraph "Specialist Agents (The Experts)"
+        G(idea-agent.md)
+        H(prd-agent.md)
+        I(lead-developer-agent.md)
+        J(...)
+    end
+
+    A --> B;
+    B --> C & D & E & F;
+    C --> G;
+    F --> H;
+```
+
+*   **You (The CEO):** You provide the high-level goal.
+*   **The Team Orchestrator (`you-are-team-orchestrator-agent.md`):** Your possible main point of contact. This agent understands the entire project lifecycle and routes your request to the correct Team Orchestrator.
+*   **Team Orchestrators:** Each of the 7 teams has an orchestrator (e.g., `you-are-research-orchestrator-agent.md`). They manage the specialists within their team to complete a specific phase of the project.
+*   **Specialist Agents:** These are the "doers" with specific skills (e.g., `you-are-idea-agent.md`, `you-are-prd-agent.md`). They execute granular tasks.
+
+### Teams vs. Freelancers
+
+*   **The Teams (`01-` to `07-`):** Seven specialized teams that guide a project through the development lifecycle, from research to review.
+*   **The Freelancers (`00-freelancers`):** A collection of individual specialist agents (like Architect, Developer, Tester) that can be called upon for specific, ad-hoc tasks outside the main team workflow.
+
+## 🌊 The Project Lifecycle: Meet the Teams
+
+The framework guides a project through seven distinct phases, each managed by a dedicated team. This ensures a structured progression from concept to completion.
+
+```mermaid
+graph TD
+    A[Phase 1: Research] --> B[Phase 2: Context];
+    B --> C[Phase 3: Requirements];
+    C --> D[Phase 4: Refinement];
+    D --> E[Phase 5: Plan];
+    E --> F[Phase 6: Act];
+    F --> G[Phase 7: Review];
+    G --> F;
+```
 
 ---
 
-## 🎯 Idea-Context-Refine-Plan-Act-Review Framework
-
-An AI-driven software development lifecycle framework that takes projects from initial idea to completion through a structured sequence of phases.
-
-### 📋 Framework Overview
-
-**Location:** `idea-context-refine-plan-act-review/`
-
-Each phase is managed by dedicated teams of AI agents for systematic project development.
-
-### 🚀 Project Lifecycle
-
-The framework follows a sequence of phases, each managed by a dedicated team:
-
-| Phase | Team | Purpose | Key Output |
-|-------|------|---------|------------|
-| **🌀 Idea** | **01-Research** | Clarifies initial idea, brainstorms solutions, conducts research | Clear, actionable concept |
-| **📚 Context** | **02-Context** | Gathers best practices, examples, preferences, ways of working | Comprehensive contextual foundation |
-| **💎 Refine** | **03-Requirements & 04-Refinement** | Creates detailed requirements and formal documents (PRDs, Architecture) | Complete specifications |
-| **🗺️ Plan** | **05-Plan** | Creates actionable plans (roadmaps, epics, stories, tasks) | Implementation roadmap |
-| **🚀 Act** | **06-Act** | Executes the plan, simulates work, produces detailed reports | Working implementation with tests |
-| **🔍 Review** | **07-Review** | Reviews work against criteria, provides feedback until perfect | Quality-assured deliverable |
-
-### 🤖 Orchestration System
-
-The entire process is coordinated by multiple layers of orchestration:
-
-- **Master Orchestrator**: `you-are-team-orchestrator-agent.md` delegates tasks to appropriate teams
-- **Team Orchestrators**: Each team has its own orchestrator managing internal workflow
-- **Specialist Agents**: Focused experts within each team handling specific tasks
-- **All-Teams Resources**: `00-all-teams/` provides complete visibility across all teams
-
-### 📂 Framework Directory Structure
-
-- **`/00-all-teams`**: Combined prompts and overviews for all teams
-- **`/01-research-team`**: Idea clarification, brainstorming, and research
-- **`/02-context-team`**: Project context, best practices, and preferences  
-- **`/03-requirements-team`**: Granular, testable requirements definition
-- **`/04-refinement-team`**: Formal PRDs and Architecture documents
-- **`/05-plan-team`**: Actionable plans breakdown
-- **`/06-act-team`**: Plan execution and comprehensive reporting
-- **`/07-review-team`**: Quality standards definition and enforcement
-
-Each team includes orchestrators, agents, and templates for their specific phase.
-
----
-
-## 🏢 Department-Based Organization
-
-In addition to the framework above, this workspace provides 7 departments with 14 roles containing resources for specific domains and expertise areas.
-
-### 📊 Department Overview
-
-Total of over 300 resources across departments and framework:
-
-| Department            | Files | Purpose                                             | Roles                                      |
-|-----------------------|-------|-----------------------------------------------------|--------------------------------------------|
-| 🎯 **Project Framework** | 78    | End-to-end project management from idea to delivery | 7 specialized teams with orchestrators    |
-| 💻 **Tech**           | 89    | Technical implementation, architecture, and quality | Architect, Developer, Tester, UIUX Expert  |
-| 🤖 **AI**             | 34    | Artificial intelligence and automation              | Department Resources, Prompt Engineer      |
-| 📋 **Management**     | 30    | Project planning and coordination                   | Project Manager                            |
-| 📣 **Marketing**      | 21    | Content creation and market presence                | ASO Expert, Content Creator                |
-| 💡 **Innovation**     | 18    | Research and creative problem-solving               | Brainstormer, Business Analyst, Researcher |
-| 💼 **Sales**          | 7     | Business development and proposals                  | Proposal Manager                           |
-| 📢 **Communications** | 1     | Internal/external communications                    | Department Resources                       |
-
----
-
-## 💻 Tech Department
-> *Technical implementation, architecture, and quality assurance*
-
-### 🏛️ Architect
-**Location:** `tech/architect/`  
-**Responsibility:** Technical blueprints, technology selection, and high-level design
-
-<details>
-<summary>View Structure (10 files)</summary>
-
-```
-tech/architect/
-├── agents/ (3)
-│   ├── you-are-codebase-expert.md
-│   ├── you-are-system-workflow-expert.md
-│   └── you-are-wow-expert.md
-├── prompts/ (5)
-│   ├── plx-analyze-codebase.md
-│   ├── plx-create-system-workflow.md
-│   ├── plx-create-system.md
-│   ├── plx-research-before-you-continue.md
-│   └── plx-research-solution.md
-└── templates/ (2)
-    ├── architecture-template.md
-    └── system-template.md
-```
-</details>
-
-### 💻 Developer
-**Location:** `tech/developer/`  
-**Responsibility:** Feature implementation, coding standards, and best practices
-
-<details>
-<summary>View Structure (61 files)</summary>
-
-```
-tech/developer/
-├── agents/ (17)
-├── prompts/ (29)
-├── best-practices/ (35)
-│   ├── astro/ (1)
-│   ├── cli-tools/ (2)
-│   ├── flutter/ (2)
-│   ├── markdown/ (1)
-│   ├── mcp-servers/ (2)
-│   ├── next-js/ (1)
-│   ├── open-source/ (1)
-│   └── supabase/ (25)
-├── templates/ (6)
-├── systems/ (1)
-├── workflows/ (1)
-├── rubrics/ (1)
-├── scripts/ (2)
-└── checklists/ (1)
-```
-</details>
-
-### ✅ Tester
-**Location:** `tech/tester/`  
-**Responsibility:** Quality assurance, testing, and validation
-
-<details>
-<summary>View Structure (14 files)</summary>
-
-```
-tech/tester/
-├── agents/ (2)
-│   ├── you-are-acceptance-test-expert.md
-│   └── you-are-qa-specialist.md
-├── prompts/ (11)
-│   ├── plx-create-core-tests.md
-│   ├── plx-create-flutter-unit-tests.md
-│   ├── plx-create-qa-report.md
-│   └── ... (8 more)
-└── templates/ (1)
-    └── test-results-template.md
-```
-</details>
-
-### 🎨 UIUX Expert
-**Location:** `tech/uiux-expert/`  
-**Responsibility:** User interface and experience design
-
-<details>
-<summary>View Structure (2 files)</summary>
-
-```
-tech/uiux-expert/
-├── prompts/ (1)
-│   └── plx-suggest-ui-ux-improvements.md
-└── rubrics/ (1)
-    └── ui-components-rubric.md
-```
-</details>
-
----
-
-## 🤖 AI Department
-> *Focused on artificial intelligence, automation, and intelligent system design*
-
-### 📚 Department Resources
-**Location:** `ai/department/`  
-**Responsibility:** Shared AI resources and documentation tools
-
-<details>
-<summary>View Structure (5 files)</summary>
-
-```
-ai/department/
-├── agents/ (1)
-│   └── you-are-doc-transformer.md
-└── prompts/ (4)
-    ├── plx-create-anything.md
-    ├── plx-create-doc.md
-    ├── plx-review-doc.md
-    └── plx-update-doc.md
-```
-</details>
-
-### 🤖 Prompt Engineer
-**Location:** `ai/prompt-engineer/`  
-**Responsibility:** Prompt design and optimization for AI interactions
-
-<details>
-<summary>View Structure (29 files)</summary>
-
-```
-ai/prompt-engineer/
-├── agents/ (7)
-├── prompts/ (17)
-├── wows/ (5)
-│   ├── wow-chat-gpt-prompt-engineering.md
-│   ├── wow-creating-cursor-rules.md
-│   ├── wow-prompt-engineering-by-lee-boonstra.md
-│   ├── wow-prompting-with-gpt-4-1.md
-│   └── wow-windsurf-workflow-best-practices.md
-└── snippets/ (1)
-    └── ;dvars.md
-```
-</details>
-
----
-
-## 📋 Management Department
-> *Project planning, coordination, and delivery management*
-
-### 📋 Project Manager
-**Location:** `management/project-manager/`  
-**Responsibility:** Requirements, Agile workflow, and development priorities
-
-<details>
-<summary>View Structure (30 files)</summary>
-
-```
-management/project-manager/
-├── agents/ (7)
-├── prompts/ (10)
-└── templates/ (13)
-    ├── brief-template.md
-    ├── bug-template.md
-    ├── chore-template.md
-    ├── crash-report-template.md
-    ├── enhancement-template.md
-    ├── epic-template.md
-    ├── feedback-template.md
-    ├── prd-template.md
-    ├── project-plans-template.md
-    ├── requirements-template.md
-    ├── roadmap-template.md
-    ├── story-template.md
-    └── work-log-template.md
-```
-</details>
-
----
-
-## 📣 Marketing Department
-> *Content creation, optimization, and market presence*
-
-### 📱 ASO Expert
-**Location:** `marketing/aso-expert/`  
-**Responsibility:** App Store Optimization strategies
-
-<details>
-<summary>View Structure (2 files)</summary>
-
-```
-marketing/aso-expert/
-├── agents/ (1)
-│   └── you-are-aso-expert.md
-└── best-practices/ (1)
-    └── wow-aso-best-practices.md
-```
-</details>
-
-### 📝 Content Creator
-**Location:** `marketing/content-creator/`  
-**Responsibility:** Content development with SEO optimization
-
-<details>
-<summary>View Structure (19 files)</summary>
-
-```
-marketing/content-creator/
-├── agents/ (4)
-├── prompts/ (3)
-├── collections/ (6)
-│   ├── all-dev-carousel-channels.md
-│   ├── all-dev-community-channels.md
-│   ├── all-dev-long-text-channels.md
-│   ├── all-dev-long-video-channels.md
-│   ├── all-dev-short-text-channels.md
-│   └── all-dev-short-video-channels.md
-├── systems/ (3)
-├── templates/ (2)
-└── best-practices/ (1)
-    └── wow-ai-writing-indicators.md
-```
-</details>
-
----
-
-## 💡 Innovation Department
-> *Research, analysis, and creative problem-solving*
-
-### 💡 Brainstormer
-**Location:** `innovation/brainstormer/`  
-**Responsibility:** Idea generation and creative sessions
-
-<details>
-<summary>View Structure (1 file)</summary>
-
-```
-innovation/brainstormer/
-└── prompts/ (1)
-    └── plx-brainstorm.md
-```
-</details>
-
-### 📊 Business Analyst
-**Location:** `innovation/business-analyst/`  
-**Responsibility:** Market research and requirements analysis
-
-<details>
-<summary>View Structure (7 files)</summary>
-
-```
-innovation/business-analyst/
-├── agents/ (4)
-│   ├── you-are-business-analyst.md
-│   ├── you-are-market-researcher.md
-│   ├── you-are-mobile-mvp-expert.md
-│   └── you-are-researcher.md
-├── prompts/ (2)
-│   ├── plx-conduct-market-research.md
-│   └── plx-research-best-practices.md
-└── best-practices/ (1)
-    └── wow-mvp-roadmap-best-practices.md
-```
-</details>
-
-### 🔬 Researcher
-**Location:** `innovation/researcher/`  
-**Responsibility:** Research methodologies and data synthesis
-
-<details>
-<summary>View Structure (10 files)</summary>
-
-```
-innovation/researcher/
-├── prompts/ (1)
-│   └── plx-research.md
-└── templates/ (9)
-    ├── client-profile-questions-template.md
-    ├── company-profile-questions-template.md
-    ├── other-people-profile-questions-template.md
-    ├── overall-goals-profile-questions-template.md
-    ├── personal-profile-questions-template.md
-    ├── product-profile-questions-template.md
-    ├── project-profile-questions-template.md
-    ├── research-template.md
-    └── service-profile-questions-template.md
-```
-</details>
-
----
-
-## 💼 Sales Department
-> *Business development, proposals, and client relationships*
-
-### 📑 Proposal Manager
-**Location:** `sales/proposal-manager/`  
-**Responsibility:** Creating proposals for stakeholder approval
-
-<details>
-<summary>View Structure (7 files)</summary>
-
-```
-sales/proposal-manager/
-├── agents/ (2)
-│   ├── you-are-a-milestone-proposal-expert.md
-│   └── you-are-a-proposal-expert.md
-├── prompts/ (1)
-│   └── plx-create-proposal.md
-├── templates/ (3)
-│   ├── epic-proposal-template.md
-│   ├── roadmap-proposal-template.md
-│   └── story-proposal-template.md
-└── best-practices/ (1)
-    └── wow-business-proposal-best-practices.md
-```
-</details>
-
----
-
-## 📢 Communications Department
-> *Managing internal and external communications*
-
-### 📢 Department Resources
-**Location:** `communications/deptartment/`  
-**Responsibility:** Communication templates and resources
-
-<details>
-<summary>View Structure (1 file)</summary>
-
-```
-communications/deptartment/
-└── templates/ (1)
-    └── meeting-template.md
-```
-</details>
-
----
-
-## 📁 Resource Types
-
-Both the framework and departments organize resources into standardized categories:
-
-| Resource              | Purpose                                                      | Naming Convention           |
-|-----------------------|--------------------------------------------------------------|-----------------------------|
-| 🤖 **agents/**        | AI persona definitions with specific expertise and behaviors | `you-are-{persona}.md`      |
-| 📝 **prompts/**       | Task-specific instructions for AI agents                     | `plx-{activity}.md`         |
-| 📋 **templates/**     | Standardized document formats                                | `{type}-template.md`        |
-| ✨ **best-practices/** | Guidelines and methodologies                                 | `{topic}-best-practices.md` |
-| ⚙️ **systems/**       | Repeatable workflows and procedures                          | `{name}-system.md`          |
-| 📚 **collections/**   | Curated resource lists                                       | `all-{category}.md`         |
-| ✅ **rubrics/**        | Evaluation criteria                                          | `{subject}-rubric.md`       |
-| 📜 **scripts/**       | Automation tools                                             | `{name}-script.{ext}`       |
-| 🔄 **workflows/**     | Process documentation                                        | `{name}-workflow.md`        |
-| ✏️ **snippets/**      | Reusable text fragments                                      | `;{abbreviation}.md`        |
+### 1. `01-research-team`
+*   **Purpose:** To clarify initial ideas, brainstorm solutions, and conduct formal research. This team turns a vague concept into a well-defined problem statement.
+*   **Agents:** `you-are-brainstorm-agent.md`, `you-are-idea-agent.md`, `you-are-research-agent.md`.
+
+### 2. `02-context-team`
+*   **Purpose:** To gather and document all necessary project context. This includes best practices, good and bad examples, personal preferences, and suggested approaches.
+*   **Agents:** `you-are-bad-examples-agent.md`, `you-are-best-practices-agent.md`, `you-are-collection-agent.md`, `you-are-good-examples-agent.md`, `you-are-personal-preferences-agent.md`, `you-are-suggested-approach-agent.md`.
+
+### 3. `03-requirements-team`
+*   **Purpose:** To create detailed, granular, and testable requirements specifications. This team deconstructs an idea into its fundamental actors, activities, properties, and behaviors.
+*   **Agents:** `you-are-activities-agent.md`, `you-are-actors-components-agent.md`, `you-are-behaviours-agent.md`, `you-are-properties-agent.md`, `you-are-scenarios-agent.md`.
+
+### 4. `04-refinement-team`
+*   **Purpose:** To formalize requirements into structured, industry-standard documents like a Product Requirements Document (PRD) and an Architecture Document.
+*   **Agents:** `you-are-architecture-agent.md`, `you-are-prd-agent.md`.
+
+### 5. `05-plan-team`
+*   **Purpose:** To break down refined requirements into actionable plans. This team creates the project roadmap, epics, user stories, and detailed development tasks.
+*   **Agents:** `you-are-development-plan-agent.md`, `you-are-epic-agent.md`, `you-are-roadmap-agent.md`, `you-are-story-agent.md`, `you-are-task-agent.md`.
+
+### 6. `06-act-team`
+*   **Purpose:** To execute the development plan. This team simulates the building of the feature and produces a detailed `result-report.md` documenting what was done.
+*   **Agents:** `you-are-acceptance-test-agent.md`, `you-are-lead-developer-agent.md`, `you-are-result-report-agent.md`, `you-are-unit-tester-agent.md`.
+
+### 7. `07-review-team`
+*   **Purpose:** To review the completed work against all defined criteria to ensure quality. This team checks for adherence to acceptance criteria, quality standards, rules, and restrictions.
+*   **Agents:** `you-are-acceptance-criteria-agent.md`, `you-are-code-review-agent.md`, `you-are-feedback-agent.md`, `you-are-quality-standards-agent.md`, `you-are-restrictions-agent.md`, `you-are-rules-agent.md`.
 
 ---
 
 ## 🚀 Getting Started
 
-### For Project Management Workflow:
-1. **Start with Research**: Use the `idea-context-refine-plan-act-review/01-research-team/` to clarify your idea
-2. **Follow the Framework**: Progress through each team sequentially (Research → Context → Requirements → Refinement → Plan → Act → Review)
-3. **Use Team Orchestrators**: Each team has an orchestrator agent to coordinate the workflow
+1.  **Clone the Project:**
+    ```bash
+    git clone https://github.com/your-repo/ultra-turbo-claude-code-context-teams.git
+    ```
+2.  **Install the Commands:**
+    Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `you-are-team-orchestrator-agent.md` file into your `.claude/commands/` directory. This makes them available as commands in your IDE.
 
-### For Department-Based Resources:
-1. **Choose a Department**: Navigate to the department that aligns with your current needs
-2. **Select a Role**: Pick the specialized role within that department
-3. **Use Resources**: Leverage the agents, prompts, templates, and best practices
-4. **Follow Conventions**: Use the naming conventions and folder structure consistently
+3.  **Configure Your Project Context:**
+    This is the most important step. Go into each team's context file (e.g., `01-research-team/context/research-team-context.md`) and update the file links to point to the relevant files in *your* project.
 
----
+4.  **Start a Conversation:**
+    Start a chat with `@you-are-team-orchestrator-agent` in your IDE and describe what you want to do. It will guide you to the right team.
 
-## 🤝 Contributing
+## 🧠 How to Use: The Power of Context
 
-For detailed information on how to contribute to this project, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+This framework is heavily optimized for Claude's ability to automatically read and incorporate file context. Understanding this is key to using the framework effectively.
 
----
+![copy-paste-2](https://www.brianmetai.nl/content/images/2025/06/copy-paste-2.png)
+
+### Automatic File Loading with `@` links
+When you reference a file in a prompt using the syntax `@path/to/file.md` (without backticks), Claude automatically reads that file and includes its content in the context for the AI agents. This is a massive time-saver and the core mechanism for providing context.
+
+### Dynamic vs. Static Context
+*   **`@links` (Immediate Load):** Use the `@` prefix for files that provide essential, upfront context that the agent should *always* read at the start of a task.
+*   **Regular Paths (On-Demand Load):** You can also include regular file paths in your instructions (e.g., "Please review `docs/old_spec.md`"). The agent is then instructed to read these files as needed, giving you more flexible control over the context.
+
+### The `team-context.md` File
+Each team has a `context/team-context.md` file. This is where you should link to your project's most important files (e.g., your architecture document, key source files, style guides). By updating this one file for a team, you provide all its agents with the necessary project knowledge.
+
+Here is the template used for the context files:
+```markdown
+# 🧠 Project Context
+> The file paths contain important contextual information about the project's architecture, conventions, rules and collections.
+>
+> Use your best judgement to determine which files are relevant to your task and read them before planning any approach.
+>
+> All files starting with `@` contain essential information that is relevant to every task and should ALWAYS be read at the start of every conversation.
+>
+> > 💡 All file paths are relative to the root of the project repository.
+> > ⚠️ Do NOT use backticks (`) in file paths to avoid breaking the automatic reading of files that some AI tools like Claude Code facilitate.
+
+- @essential/path/file/example.md
+- non-essential/path/file/example.md
+```
+
+## 🛠️ Advanced Usage
+
+### Using Freelancers
+The `00-freelancers` directory contains a wide range of specialist agents you can call for ad-hoc tasks.
+```
+00-freelancers
+├── architect
+├── aso-expert
+├── brainstormer
+├── business-analyst
+├── content-creator
+├── developer
+├── mvp-expert
+├── project-manager
+├── prompt-engineer
+├── proposal-magician
+├── researcher
+├── tester
+└── uiux-expert
+```
+
+### Creating Custom Agents for ChatGPT/Gemini
+The `100-all-teams` directory contains single-file versions of each team's entire prompt library. You can copy the content of these files and paste it into the system prompt of a custom agent (like a ChatGPT GPT or a Gemini agent). This allows you to create powerful, specialized team agents on other platforms.
+
+## 🔧 Maintenance & Contribution
+
+Making changes to this framework across many files can be complex. To edit files in bulk while maintaining the relationships between them, we highly recommend using **[Repo Prompt](https://repoprompt.com/)**. It allows you to provide context from multiple files and apply changes across the entire repository in one go, which is ideal for maintaining a framework like this.
+
+![Repo Prompt](https://www.brianwithai.com/content/images/size/w1000/2025/07/CleanShot-2025-07-05-at-23.29.53@2x-1.png)
+
+## 🙏 Acknowledgements
+
+This repository and its concepts are heavily inspired by the pioneering work done in the **[BMAD-METHOD](https://github.com/bmadcode/BMAD-METHOD)** repository.
+
+The BMAD-METHOD introduces a powerful two-phase approach for AI-assisted development that significantly reduces context loss. It consists of:
+1.  **Agentic Planning:** Where dedicated agents collaborate to produce comprehensive and consistent planning documents (like PRDs and Architecture).
+2.  **Context-Engineered Development:** Where a Scrum Master agent transforms those plans into hyper-detailed development stories, giving the development agent all the context it needs to build features correctly.
+
+Our team-based framework builds on these ideas to create a structured, collaborative environment for AI agents. A big thank you to the creators for the inspiration!
+
+## 📂 File Structure Overview
+
+Here is a high-level overview of the repository structure:
+```
+.
+├── 00-freelancers/       # Collection of individual specialist agents
+├── 01-research-team/      # Team for idea clarification and research
+│   ├── agents/
+│   ├── context/
+│   └── templates/
+├── 02-context-team/       # Team for gathering project context
+├── 03-requirements-team/  # Team for detailed requirements specification
+├── 04-refinement-team/    # Team for creating PRDs and Architecture docs
+├── 05-plan-team/          # Team for creating roadmaps, epics, and tasks
+├── 06-act-team/           # Team for executing the plan
+├── 07-review-team/        # Team for reviewing completed work
+├── 100-all-teams/         # Single-file versions of teams for custom GPTs
+├── README.md              # This file
+└── you-are-team-orchestrator-agent.md # The main entry point agent
+```
 
 ## 📄 License
 

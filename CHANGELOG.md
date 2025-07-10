@@ -1,5 +1,53 @@
 # Changelog
-All notable changes to this project will be documented in this file.
+All notable changes to Turbo Claude Code Context Teams will be documented in this file.
+
+## [v0.1.0] - 2025-07-10
+
+### 🚀 Major Release: Team-Based Workflow & Freelancer Hub
+
+This release marks a complete reorganization of the repository, transforming it from a simple agent structure to a comprehensive, team-based workflow designed for end-to-end software development with AI.
+
+### ✨ Features:
+- **Complete Repository Restructuring**: 
+  - Introduced 7-team workflow structure (`01-research-team` through `07-review-team`) for managing the entire software development lifecycle
+  - Created `00-freelancers` directory as a central hub for all individual specialist agents
+  - Added top-level `you-are-team-orchestrator-agent.md` for managing the entire project lifecycle
+  
+- **Standalone Team Agents**: 
+  - New `100-all-teams` directory provides single-file versions of each team's complete prompt set
+  - Enables easy creation of powerful specialized agents on platforms like ChatGPT and Gemini
+  
+- **Enhanced Claude Integration**: 
+  - Optimized for Claude's `@` file-linking feature for superior context management
+  - Team-specific context files for automatic loading of relevant project files
+  - Reduces context loss through persistent file access
+
+### 🔄 Reorganization:
+- **Freelancer Migration**: Moved all specialist agents from domain-specific folders to unified `00-freelancers` hub:
+  - `tech/` → `00-freelancers/` (architect, developer, project-manager, tester, uiux-expert)
+  - `innovation/` → `00-freelancers/` (brainstormer, business-analyst, researcher)
+  - `marketing/` → `00-freelancers/` (aso-expert → mvp-expert, content-creator)
+  - `ai/` → `00-freelancers/` (prompt-engineer)
+  - `sales/` → `00-freelancers/` (proposal-manager → proposal-magician)
+  
+- **Team Structure**: Each team includes:
+  - Dedicated orchestrator agent for team management
+  - Specialist agents for specific tasks
+  - Context files for project-specific configuration
+  - Templates for consistent output formats
+
+### 🛠️ Improvements:
+- **Hierarchical Orchestration Model**: Clear delegation from CEO (user) → Team Orchestrator → Team-specific Orchestrators → Specialist Agents
+- **Structured Project Lifecycle**: Seven distinct phases ensure systematic progression from concept to completion
+- **Context Persistence**: Team context files maintain project knowledge across conversations
+- **Naming Standardization**: 
+  - Renamed `proposal-manager` to `proposal-magician`
+  - Renamed `aso-expert` to `mvp-expert`
+
+### 📚 Documentation:
+- Added comprehensive RELEASE.md documenting the v0.1 release
+- Updated README.md with new framework structure and usage instructions
+- Added acknowledgements to BMAD-METHOD for inspiration
 
 ## [v0.0.20] - 2025-07-07
 
