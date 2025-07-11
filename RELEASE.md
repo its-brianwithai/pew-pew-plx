@@ -8,7 +8,7 @@ This is the first major release of the **Claude Code Context Workspace** framewo
 
 *   **Introduction of the "Freelancer" Hub:** All individual specialist agents (Architect, Developer, Tester, etc.) have been moved into the `00-freelancers` directory. They can be called upon for ad-hoc tasks that fall outside the standard team workflow.
 
-*   **Powerful Orchestration Model:** The framework now includes a top-level `team-agent.md` that can guide users through the entire lifecycle by delegating tasks to the appropriate team orchestrator. This creates a clear and powerful hierarchy for managing AI collaboration.
+*   **Powerful Orchestration Model:** The framework now includes a top-level `lead-orchestrator-agent.md` that can guide users through the entire lifecycle by delegating tasks to the appropriate team orchestrator. This creates a clear and powerful hierarchy for managing AI collaboration.
 
 *   **Standalone Team Agents for Custom GPTs:** The new `100-all-teams` directory provides single-file versions of each team's complete prompt set. This allows you to easily create powerful, specialized agents on platforms like ChatGPT (as custom GPTs) or Gemini by using these files as system prompts.
 
@@ -21,7 +21,7 @@ This is the first major release of the **Claude Code Context Workspace** framewo
     git clone https://github.com/your-repo/ultra-turbo-claude-code-context-teams.git
     ```
 2.  **Copy Teams to Claude:**
-    Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `team-agent.md` file into your `.claude/commands/` directory.
+    Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `lead-orchestrator-agent.md` file into your `.claude/commands/` directory.
 
 3.  **Update Context Files:**
     This is the most important step. Go into each team's context file (e.g., `01-research-team/context/research-team-context.md`) and update the `@path/to/file.md` links to point to the relevant files in your own project.

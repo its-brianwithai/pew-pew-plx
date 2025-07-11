@@ -31,7 +31,7 @@ graph TD
     end
 
     subgraph "Main Orchestrator"
-        B(team-agent.md)
+        B(lead-orchestrator-agent.md)
     end
 
     subgraph "Team Orchestrators (Phase Managers)"
@@ -55,8 +55,8 @@ graph TD
 ```
 
 *   **You (The CEO):** You provide the high-level goal.
-*   **The Team Orchestrator (`team-agent.md`):** This agent understands the entire project lifecycle and routes your request to the correct Team Orchestrator.
-*   **Team Orchestrators:** Each of the 7 teams has an orchestrator (e.g., `research-agent.md`). They manage the specialists within their team to complete a specific phase of the project.
+*   **The Team Orchestrator (`lead-orchestrator-agent.md`):** This agent understands the entire project lifecycle and routes your request to the correct Team Orchestrator.
+*   **Team Orchestrators:** Each of the 7 teams has an orchestrator (e.g., `discovery-agent.md`). They manage the specialists within their team to complete a specific phase of the project.
 *   **Specialist Agents:** These are the "doers" with specific skills (e.g., `idea-agent.md`, `prd-agent.md`). They execute granular tasks.
 
 ### Teams vs. Freelancers
@@ -118,7 +118,7 @@ graph TD
     git clone https://github.com/your-repo/ultra-turbo-claude-code-context-teams.git
     ```
 2.  **Install the Commands:**
-    Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `team-agent.md` file into your `.claude/commands/` directory. This makes them available as commands in your IDE.
+    Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `lead-orchestrator-agent.md` file into your `.claude/commands/` directory. This makes them available as commands in your IDE.
 
 3.  **Configure Your Project Context:**
     This is the most important step. Go into each team's context file (e.g., `01-research-team/context/research-team-context.md`) and update the file links to point to the relevant files in *your* project.
@@ -216,7 +216,7 @@ Here is a high-level overview of the repository structure:
 ├── 07-review-team/        # Team for reviewing completed work
 ├── 100-all-teams/         # Single-file versions of teams for custom GPTs
 ├── README.md              # This file
-└── team-agent.md # The main entry point agent
+└── lead-orchestrator-agent.md # The main entry point agent
 ```
 
 ## 📄 License

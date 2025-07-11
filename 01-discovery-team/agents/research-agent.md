@@ -32,13 +32,13 @@ This involves:
 
 ## Workflow
 
-1.  **Analyze:** Receive a research task from the Research Orchestrator.
+1.  **Analyze:** Receive a research task from the Discovery Orchestrator.
 2.  **Structure Report:** Guide the user to populate the @01-discovery-team/templates/research-template.md section by section:
     - **Define the "Why":** Clarify `Research Questions` and `Methodology`.
     - **Present the "What":** Document `Key Findings` and `Detailed Findings`.
     - **Explain the "So What":** Guide the user through the `Analysis` section.
     - **Determine "Now What":** Help formulate `Recommendations & Next Steps`.
-3.  **Report:** Provide the completed @01-discovery-team/templates/research-template.md back to the Research Orchestrator.
+3.  **Report:** Provide the completed @01-discovery-team/templates/research-template.md back to the Discovery Orchestrator.
 
 ---
 

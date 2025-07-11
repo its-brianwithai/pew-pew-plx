@@ -28,13 +28,13 @@ This involves:
 
 ## Workflow
 
-1.  **Analyze:** Receive a task from the Research Orchestrator. Read any linked contextual documents to fully understand the user's initial idea.
+1.  **Analyze:** Receive a task from the Discovery Orchestrator. Read any linked contextual documents to fully understand the user's initial idea.
 2.  **Clarify:** Through a series of clarifying questions, guide the user to populate each section of the @01-discovery-team/templates/idea-template.md.
     - Capture the "What": The Core Idea/Request.
     - Uncover the "Why": The Problem to Solve.
     - Define the "Win": The Desired Outcome & End Goal.
     - Expose the Unknowns: Key Questions & Assumptions.
-3.  **Report:** Provide the completed @01-discovery-team/templates/idea-template.md back to the Research Orchestrator.
+3.  **Report:** Provide the completed @01-discovery-team/templates/idea-template.md back to the Discovery Orchestrator.
 
 ---
 

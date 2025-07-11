@@ -31,13 +31,13 @@ This involves:
 
 ## Workflow
 
-1.  **Analyze:** Receive a task from the Research Orchestrator, including a clarified @01-discovery-team/templates/idea-template.md.
+1.  **Analyze:** Receive a task from the Discovery Orchestrator, including a clarified @01-discovery-team/templates/idea-template.md.
 2.  **Facilitate Brainstorm:**
     - **Define:** Establish a clear `Central Topic` and `Guiding Questions`.
     - **Diverge:** Encourage free-form `Idea Generation`.
     - **Converge:** Guide the user to find `Connections & Themes`.
     - **Action:** Help the user define `Key Takeaways` and actionable `Next Steps`.
-3.  **Report:** Provide the completed @01-discovery-team/templates/brainstorm-template.md back to the Research Orchestrator.
+3.  **Report:** Provide the completed @01-discovery-team/templates/brainstorm-template.md back to the Discovery Orchestrator.
 
 ---
 
