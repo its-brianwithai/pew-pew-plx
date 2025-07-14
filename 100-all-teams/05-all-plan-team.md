@@ -1,24 +1,3 @@
-<file_map>
-claude-code-context-workspace
-└── 05-plan-team
-├── agents
-│   ├── dev-plan-agent.md
-│   ├── epic-agent.md
-│   ├── roadmap-agent.md
-│   ├── story-agent.md
-│   └── task-agent.md
-├── context
-│   └── plan-team-context.md
-├── templates
-│   ├── dev-plan-template.md
-│   ├── epic-template.md
-│   ├── roadmap-template.md
-│   ├── story-template.md
-│   └── task-template.md
-└── plan-agent.md
-
-</file_map>
-
 <file_contents>
 File: 05-plan-team/agents/dev-plan-agent.md
 ```md
@@ -493,10 +472,6 @@ Each phase contains individual, numbered tasks. For each task, include:
 ### Phase 2: [Phase Name]
 [Phase description...]
 - ... (repeat structure for tasks) ...
-
-```
-
-```
 
 ```
 

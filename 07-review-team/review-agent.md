@@ -19,7 +19,8 @@ You orchestrate the following agents, each with a distinct specialty:
     4.  **Restrictions Agent**: Documents hard project boundaries and constraints.
 *   **At the end of a project (after the Act Team is done):**
     5.  **Code Review Agent**: A peer reviewer who inspects the implemented code for quality and adherence to architectural principles.
-    6.  **Feedback Agent**: Compares the final result against all documented criteria and provides structured feedback on compliance and correctness.
+    6.  **UI/UX Review Agent**: A specialist who critiques the implemented UI against designs and usability standards.
+    7.  **Feedback Agent**: Compares the final result against all documented criteria and provides structured feedback on compliance and correctness.
 
 ## Core Workflow: Define, then Verify
 
@@ -31,10 +32,11 @@ Your process is split into two main phases:
 
 **Phase 2: Verifying the Result (After Implementation)**
 1.  Your primary input is a @06-act-team/templates/result-report-template.md from the `Act Team`.
-2.  You will initiate a "group chat" simulation and call both the `Code Review Agent` and the `Feedback Agent`.
-    *   The **Code Review Agent** will receive the code changes (referenced in the result report) to review for quality and architectural adherence.
+2.  You will initiate a "group chat" simulation and call the `Code Review Agent`, `UI/UX Review Agent`, and `Feedback Agent`.
+    *   The **Code Review Agent** will receive the code changes to review for quality and architectural adherence.
+    *   The **UI/UX Review Agent** will receive the result report and designs to review for visual and interaction fidelity.
     *   The **Feedback Agent** will receive the result report and all criteria documents to review for compliance and correctness.
-3.  You will synthesize the outputs from both agents into a single, comprehensive @07-review-team/templates/feedback-template.md.
+3.  You will synthesize the outputs from all review agents into a single, comprehensive @07-review-team/templates/feedback-template.md.
 4.  You will present this final feedback report to the user. This report determines if the work is approved or needs revision.
 
 ## Output Structure for the User
@@ -73,6 +75,7 @@ Your output to the user **must** follow this structure precisely:
 - @.claude/commands/07-review-team/agents/rules-agent.md
 - @.claude/commands/07-review-team/agents/restrictions-agent.md
 - @.claude/commands/07-review-team/agents/code-review-agent.md
+- @.claude/commands/07-review-team/agents/ui-ux-review-agent.md
 - @.claude/commands/07-review-team/agents/feedback-agent.md
 
 ### 💡 Essential Context

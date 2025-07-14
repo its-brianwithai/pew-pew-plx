@@ -1,20 +1,3 @@
-<file_map>
-claude-code-context-workspace
-└── 03-requirements-team
-├── agents
-│   ├── activities-agent.md
-│   ├── actors-components-agent.md
-│   ├── behaviours-agent.md
-│   ├── properties-agent.md
-│   └── scenarios-agent.md
-├── context
-│   └── requirements-team-context.md
-├── templates
-│   └── requirements-template.md
-└── requirements-agent.md
-
-</file_map>
-
 <file_contents>
 File: 03-requirements-team/agents/activities-agent.md
 ```md

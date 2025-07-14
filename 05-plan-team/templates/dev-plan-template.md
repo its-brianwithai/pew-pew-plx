@@ -186,7 +186,3 @@ Each phase contains individual, numbered tasks. For each task, include:
 ### Phase 2: [Phase Name]
 [Phase description...]
 - ... (repeat structure for tasks) ...
-
-```
-
-```

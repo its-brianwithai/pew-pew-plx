@@ -95,7 +95,7 @@ graph TD
 
 ### 4. `04-refinement-team`
 *   **Purpose:** To formalize requirements into structured, industry-standard documents like a Product Requirements Document (PRD) and an Architecture Document.
-*   **Agents:** `architecture-agent.md`, `prd-agent.md`.
+*   **Agents:** `architecture-agent.md`, `prd-agent.md`, `ui-ux-design-agent.md`.
 
 ### 5. `05-plan-team`
 *   **Purpose:** To break down refined requirements into actionable plans. This team creates the project roadmap, epics, user stories, and detailed development tasks.
@@ -103,11 +103,11 @@ graph TD
 
 ### 6. `06-act-team`
 *   **Purpose:** To execute the development plan. This team simulates the building of the feature and produces a detailed `result-report.md` documenting what was done.
-*   **Agents:** `acceptance-test-agent.md`, `lead-developer-agent.md`, `result-report-agent.md`, `unit-test-agent.md`.
+*   **Agents:** `acceptance-test-agent.md`, `lead-developer-agent.md`, `result-report-agent.md`, `unit-test-agent.md`, `ui-ux-implementation-agent.md`.
 
 ### 7. `07-review-team`
 *   **Purpose:** To review the completed work against all defined criteria to ensure quality. This team checks for adherence to acceptance criteria, quality standards, rules, and restrictions.
-*   **Agents:** `acceptance-criteria-agent.md`, `code-review-agent.md`, `feedback-agent.md`, `quality-standards-agent.md`, `restrictions-agent.md`, `rules-agent.md`.
+*   **Agents:** `acceptance-criteria-agent.md`, `code-review-agent.md`, `feedback-agent.md`, `quality-standards-agent.md`, `restrictions-agent.md`, `rules-agent.md`, `ui-ux-review-agent.md`.
 
 ---
 

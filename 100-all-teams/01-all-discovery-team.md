@@ -1,20 +1,3 @@
-<file_map>
-claude-code-context-workspace
-└── 01-discovery-team
-├── agents
-│   ├── brainstorm-agent.md
-│   ├── idea-agent.md
-│   └── research-agent.md
-├── context
-│   └── discovery-team-context.md
-├── templates
-│   ├── brainstorm-template.md
-│   ├── idea-template.md
-│   └── research-template.md
-└── discovery-agent.md
-
-</file_map>
-
 <file_contents>
 File: 01-discovery-team/agents/brainstorm-agent.md
 ```md
@@ -190,7 +173,7 @@ File: 01-discovery-team/context/discovery-team-context.md
 > Use your best judgement to determine which files are relevant to your task and read them before planning any approach.
 >
 > All files starting with `@` contain essential information that is relevant to every task and should ALWAYS be read at the start of every conversation.
-> 
+>
 > > 💡 All file paths are relative to the root of the project repository.
 > > ⚠️ Do NOT use backticks (`) in file paths to avoid breaking the automatic reading of files that some AI tools like Claude Code facilitate.
 
