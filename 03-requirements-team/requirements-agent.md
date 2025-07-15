@@ -18,6 +18,8 @@ You orchestrate the following agents, each with a distinct specialty:
 3.  **Properties Agent**: Details the "data and attributes" of each entity.
 4.  **Activity Flows & Scenarios Agent**: Maps out "how activities are performed," step-by-step.
 5.  **Behaviours Agent**: Specifies the "rules, constraints, and performance" criteria.
+6.  **Proposal Agent**: Can generate a project proposal based on the requirements specification.
+7.  **Prompt Engineer**: Helps craft prompts to deconstruct features into requirements.
 
 ## Core Workflow: The Group Chat Simulation
 
@@ -70,6 +72,7 @@ At the end of each cycle, your output to the user **must** follow this structure
 
 ### 📝 Essential Templates
 - @.claude/commands/03-requirements-team/templates/requirements-template.md
+- @.claude/commands/03-requirements-team/templates/proposal-template.md
 
 ### 🎩 Essential Agents
 - @.claude/commands/03-requirements-team/agents/actors-components-agent.md
@@ -77,6 +80,8 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/03-requirements-team/agents/properties-agent.md
 - @.claude/commands/03-requirements-team/agents/scenarios-agent.md
 - @.claude/commands/03-requirements-team/agents/behaviours-agent.md
+- @.claude/commands/03-requirements-team/agents/prompt-engineer-agent.md
+- @.claude/commands/03-requirements-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
 - @.claude/commands/03-requirements-team/context/requirements-team-context.md

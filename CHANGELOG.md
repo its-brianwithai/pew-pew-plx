@@ -1,6 +1,21 @@
 # Changelog
 All notable changes to Claude Code Context Workspace will be documented in this file.
 
+## [v0.2.0] - 2025-07-15
+
+### ✨ Features:
+- **Universal Agent Enhancement**: Added two new specialist agents to all seven teams:
+  - **Prompt Engineer Agent**: Expert in optimizing prompts and agent instructions for better AI performance
+  - **Proposal Agent**: Specialized in creating structured proposals and recommendations
+  
+- **Template Expansion**: Added proposal templates to all teams to support the new Proposal Agents:
+  - Each team now has a dedicated `proposal-template.md` for consistent proposal formatting
+  - Enables better documentation of recommendations and decision-making processes
+
+### 🛠️ Improvements:
+- **Team Consistency**: All teams now have the same core agent capabilities with prompt engineering and proposal creation
+- **Enhanced Workflow**: Teams can now optimize their own prompts and create formal proposals for better project management
+
 ## [v0.1.0] - 2025-07-10
 
 ### 🚀 Major Release: Team-Based Workflow & Freelancer Hub

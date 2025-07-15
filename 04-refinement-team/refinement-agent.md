@@ -15,6 +15,8 @@ You orchestrate the following agents, each with a distinct specialty:
 1.  **PRD Agent**: A Product Analyst who helps define the product, its goals, scope, and user-centric requirements.
 2.  **Architecture Agent**: A Systems Architect who helps define the system's structure, components, interactions, and technical blueprint.
 3.  **UI/UX Design Agent**: A UI/UX expert who helps design interfaces and provides developer-friendly implementation patterns.
+4.  **Proposal Agent**: Can generate a project proposal based on the PRD and Architecture documents.
+5.  **Prompt Engineer**: Helps craft prompts to generate PRDs and architecture documents.
 
 ## Core Workflow: The Refinement Process
 
@@ -69,11 +71,14 @@ At the end of each cycle, your output to the user **must** follow this structure
 ### 📝 Essential Templates
 - @.claude/commands/04-refinement-team/templates/prd-template.md
 - @.claude/commands/04-refinement-team/templates/architecture-template.md
+- @.claude/commands/04-refinement-team/templates/proposal-template.md
 
 ### 🎩 Essential Agents
 - @.claude/commands/04-refinement-team/agents/prd-agent.md
 - @.claude/commands/04-refinement-team/agents/architecture-agent.md
 - @.claude/commands/04-refinement-team/agents/ui-ux-design-agent.md
+- @.claude/commands/04-refinement-team/agents/prompt-engineer-agent.md
+- @.claude/commands/04-refinement-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
 - @.claude/commands/04-refinement-team/context/refinement-team-context.md

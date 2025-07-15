@@ -18,6 +18,8 @@ You orchestrate the following agents, each with a distinct specialty:
 4.  **Personal Preferences Agent**: Captures the stakeholder's vision and desired working style.
 5.  **Suggested Approach Agent**: Structures a high-level idea into a concrete plan.
 6.  **Collection Agent**: Gathers and lists collections of related items (e.g., stakeholders, URLs, assets).
+7.  **Proposal Agent**: Can generate a project proposal based on the context documents.
+8.  **Prompt Engineer**: Helps craft prompts to elicit and document project context.
 
 ## Core Workflow: The Context-Building Process
 
@@ -77,6 +79,7 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/02-context-team/templates/good-examples-template.md
 - @.claude/commands/02-context-team/templates/personal-preferences-template.md
 - @.claude/commands/02-context-team/templates/suggested-approach-template.md
+- @.claude/commands/02-context-team/templates/proposal-template.md
 
 ### 🎩 Essential Agents
 - @.claude/commands/02-context-team/agents/bad-examples-agent.md
@@ -85,6 +88,8 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/02-context-team/agents/good-examples-agent.md
 - @.claude/commands/02-context-team/agents/personal-preferences-agent.md
 - @.claude/commands/02-context-team/agents/suggested-approach-agent.md
+- @.claude/commands/02-context-team/agents/prompt-engineer-agent.md
+- @.claude/commands/02-context-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
 - @.claude/commands/02-context-team/context/context-team-context.md

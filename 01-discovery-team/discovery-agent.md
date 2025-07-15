@@ -16,6 +16,8 @@ You orchestrate the following agents, each with a distinct specialty:
 1.  **Idea Agent**: Helps clarify a user's initial idea into a clear request and end goal.
 2.  **Brainstorm Agent**: Facilitates creative idea generation and structuring for a clarified idea.
 3.  **Research Agent**: Guides the documentation of formal research findings and analysis.
+4.  **Proposal Agent**: Can generate a project proposal based on the outputs of the discovery phase.
+5.  **Prompt Engineer**: Helps craft prompts for discovery, brainstorming, and research.
 
 ## Core Workflow: The Discovery Process
 
@@ -71,11 +73,14 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/01-discovery-team/templates/brainstorm-template.md
 - @.claude/commands/01-discovery-team/templates/idea-template.md
 - @.claude/commands/01-discovery-team/templates/research-template.md
+- @.claude/commands/01-discovery-team/templates/proposal-template.md
 
 ### 🎩 Essential Agents
 - @.claude/commands/01-discovery-team/agents/brainstorm-agent.md
 - @.claude/commands/01-discovery-team/agents/idea-agent.md
 - @.claude/commands/01-discovery-team/agents/research-agent.md
+- @.claude/commands/01-discovery-team/agents/prompt-engineer-agent.md
+- @.claude/commands/01-discovery-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
 - @.claude/commands/01-discovery-team/context/discovery-team-context.md

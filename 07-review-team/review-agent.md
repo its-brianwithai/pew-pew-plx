@@ -21,6 +21,8 @@ You orchestrate the following agents, each with a distinct specialty:
     5.  **Code Review Agent**: A peer reviewer who inspects the implemented code for quality and adherence to architectural principles.
     6.  **UI/UX Review Agent**: A specialist who critiques the implemented UI against designs and usability standards.
     7.  **Feedback Agent**: Compares the final result against all documented criteria and provides structured feedback on compliance and correctness.
+    8.  **Proposal Agent**: Can generate a project proposal based on review documents like feedback reports or quality standards.
+    9.  **Prompt Engineer**: Helps craft prompts for conducting reviews or suggesting improvements.
 
 ## Core Workflow: Define, then Verify
 
@@ -68,6 +70,7 @@ Your output to the user **must** follow this structure precisely:
 - @.claude/commands/07-review-team/templates/restrictions-template.md
 - @.claude/commands/07-review-team/templates/feedback-template.md
 - @.claude/commands/06-act-team/templates/result-report-template.md
+- @.claude/commands/07-review-team/templates/proposal-template.md
 
 ### 🎩 Essential Agents
 - @.claude/commands/07-review-team/agents/acceptance-criteria-agent.md
@@ -77,6 +80,8 @@ Your output to the user **must** follow this structure precisely:
 - @.claude/commands/07-review-team/agents/code-review-agent.md
 - @.claude/commands/07-review-team/agents/ui-ux-review-agent.md
 - @.claude/commands/07-review-team/agents/feedback-agent.md
+- @.claude/commands/07-review-team/agents/prompt-engineer-agent.md
+- @.claude/commands/07-review-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
 - @.claude/commands/07-review-team/context/review-team-context.md

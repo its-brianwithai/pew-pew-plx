@@ -83,31 +83,31 @@ graph TD
 
 ### 1. `01-research-team`
 *   **Purpose:** To clarify initial ideas, brainstorm solutions, and conduct formal research. This team turns a vague concept into a well-defined problem statement.
-*   **Agents:** `brainstorm-agent.md`, `idea-agent.md`, `research-agent.md`.
+*   **Agents:** `brainstorm-agent.md`, `idea-agent.md`, `prompt-engineer-agent.md`, `proposal-agent.md`, `research-agent.md`.
 
 ### 2. `02-context-team`
 *   **Purpose:** To gather and document all necessary project context. This includes best practices, good and bad examples, personal preferences, and suggested approaches.
-*   **Agents:** `bad-examples-agent.md`, `best-practices-agent.md`, `collection-agent.md`, `good-examples-agent.md`, `personal-preferences-agent.md`, `suggested-approach-agent.md`.
+*   **Agents:** `bad-examples-agent.md`, `best-practices-agent.md`, `collection-agent.md`, `good-examples-agent.md`, `personal-preferences-agent.md`, `proposal-agent.md`, `prompt-engineer-agent.md`, `suggested-approach-agent.md`.
 
 ### 3. `03-requirements-team`
 *   **Purpose:** To create detailed, granular, and testable requirements specifications. This team deconstructs an idea into its fundamental actors, activities, properties, and behaviors.
-*   **Agents:** `activities-agent.md`, `actors-components-agent.md`, `behaviours-agent.md`, `properties-agent.md`, `scenarios-agent.md`.
+*   **Agents:** `activities-agent.md`, `actors-components-agent.md`, `behaviours-agent.md`, `properties-agent.md`, `proposal-agent.md`, `prompt-engineer-agent.md`, `scenarios-agent.md`.
 
 ### 4. `04-refinement-team`
 *   **Purpose:** To formalize requirements into structured, industry-standard documents like a Product Requirements Document (PRD) and an Architecture Document.
-*   **Agents:** `architecture-agent.md`, `prd-agent.md`, `ui-ux-design-agent.md`.
+*   **Agents:** `architecture-agent.md`, `prd-agent.md`, `prompt-engineer-agent.md`, `proposal-agent.md`, `ui-ux-design-agent.md`.
 
 ### 5. `05-plan-team`
 *   **Purpose:** To break down refined requirements into actionable plans. This team creates the project roadmap, epics, user stories, and detailed development tasks.
-*   **Agents:** `dev-plan-agent.md`, `epic-agent.md`, `roadmap-agent.md`, `story-agent.md`, `task-agent.md`.
+*   **Agents:** `dev-plan-agent.md`, `epic-agent.md`, `proposal-agent.md`, `prompt-engineer-agent.md`, `roadmap-agent.md`, `story-agent.md`, `task-agent.md`.
 
 ### 6. `06-act-team`
 *   **Purpose:** To execute the development plan. This team simulates the building of the feature and produces a detailed `result-report.md` documenting what was done.
-*   **Agents:** `acceptance-test-agent.md`, `lead-developer-agent.md`, `result-report-agent.md`, `unit-test-agent.md`, `ui-ux-implementation-agent.md`.
+*   **Agents:** `acceptance-test-agent.md`, `lead-developer-agent.md`, `proposal-agent.md`, `prompt-engineer-agent.md`, `result-report-agent.md`, `ui-ux-implementation-agent.md`, `unit-test-agent.md`.
 
 ### 7. `07-review-team`
 *   **Purpose:** To review the completed work against all defined criteria to ensure quality. This team checks for adherence to acceptance criteria, quality standards, rules, and restrictions.
-*   **Agents:** `acceptance-criteria-agent.md`, `code-review-agent.md`, `feedback-agent.md`, `quality-standards-agent.md`, `restrictions-agent.md`, `rules-agent.md`, `ui-ux-review-agent.md`.
+*   **Agents:** `acceptance-criteria-agent.md`, `code-review-agent.md`, `feedback-agent.md`, `proposal-agent.md`, `prompt-engineer-agent.md`, `quality-standards-agent.md`, `restrictions-agent.md`, `rules-agent.md`, `ui-ux-review-agent.md`.
 
 ---
 
@@ -173,7 +173,7 @@ The `00-freelancers` directory contains a wide range of specialist agents you ca
 ├── mvp-expert
 ├── project-manager
 ├── prompt-engineer
-├── proposal-magician
+├── proposal-expert
 ├── researcher
 ├── tester
 └── uiux-expert

@@ -18,6 +18,8 @@ You orchestrate the following agents:
 3.  **Unit Tester Agent**: A specialist who writes pure unit tests for the implemented logic.
 4.  **Acceptance Test Agent**: A specialist who creates UAT plans for stakeholder validation.
 5.  **Result Report Agent**: A technical writer who documents all implemented changes and testing artifacts.
+6.  **Proposal Agent**: Can generate a project proposal based on the final result report.
+7.  **Prompt Engineer**: Helps craft prompts to guide development and testing tasks.
 
 ## Core Workflow: From Plan to Report
 
@@ -68,6 +70,7 @@ Your final output to the user **must** follow this structure precisely:
 ### 📝 Essential Templates
 - @.claude/commands/06-act-team/templates/result-report-template.md
 - @.claude/commands/05-plan-team/templates/dev-plan-template.md
+- @.claude/commands/06-act-team/templates/proposal-template.md
 
 ### 🎩 Essential Agents
 - @.claude/commands/06-act-team/agents/lead-developer-agent.md
@@ -75,6 +78,8 @@ Your final output to the user **must** follow this structure precisely:
 - @.claude/commands/06-act-team/agents/unit-test-agent.md
 - @.claude/commands/06-act-team/agents/acceptance-test-agent.md
 - @.claude/commands/06-act-team/agents/result-report-agent.md
+- @.claude/commands/06-act-team/agents/prompt-engineer-agent.md
+- @.claude/commands/06-act-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
 - @.claude/commands/06-act-team/context/act-team-context.md

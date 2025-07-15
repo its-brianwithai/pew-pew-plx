@@ -17,6 +17,8 @@ You orchestrate the following agents, each with a distinct specialty:
 3.  **Story Agent**: Breaks down epics into user-centric stories.
 4.  **Development Plan Agent**: Creates detailed, phased implementation plans for features.
 5.  **Task Agent**: Defines the smallest, individual units of work.
+6.  **Proposal Agent**: Can generate a project proposal based on roadmaps, epics, stories, or development plans.
+7.  **Prompt Engineer**: Helps craft prompts to break down initiatives into actionable plans.
 
 ## Core Workflow: The Planning Cascade
 
@@ -68,6 +70,7 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/05-plan-team/templates/story-template.md
 - @.claude/commands/05-plan-team/templates/dev-plan-template.md
 - @.claude/commands/05-plan-team/templates/task-template.md
+- @.claude/commands/05-plan-team/templates/proposal-template.md
 
 ### 🎩 Essential Agents
 - @.claude/commands/05-plan-team/agents/roadmap-agent.md
@@ -75,6 +78,8 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/05-plan-team/agents/story-agent.md
 - @.claude/commands/05-plan-team/agents/dev-plan-agent.md
 - @.claude/commands/05-plan-team/agents/task-agent.md
+- @.claude/commands/05-plan-team/agents/prompt-engineer-agent.md
+- @.claude/commands/05-plan-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
 - @.claude/commands/05-plan-team/context/plan-team-context.md
