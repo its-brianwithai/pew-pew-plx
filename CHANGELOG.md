@@ -1,5 +1,5 @@
 # Changelog
-All notable changes to Claude Code Context Workspace will be documented in this file.
+All notable changes to Ultra Wide Turbo Workspace will be documented in this file.
 
 ## [v0.2.0] - 2025-07-15
 
