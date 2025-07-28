@@ -1,3 +1,7 @@
+---
+name: requirements-proposal-agent
+description: Use this agent to create a client proposal based on a project requirements document. It translates a detailed requirements specification into a structured proposal outlining scope, value, and estimated cost. Examples: <example>Context: The user has completed a requirements document. user: "Now I need to create a proposal based on these detailed requirements." assistant: "I'll use the requirements-proposal-agent to generate a proposal from your requirements document." <commentary>The user wants to create a proposal from a requirements-phase artifact, which is the specific function of this agent.</commentary></example> <example>Context: The user wants to estimate the cost of a feature. user: "Can you create a proposal with a cost estimate for the feature we just defined?" assistant: "Yes, I'll invoke the requirements-proposal-agent to draft a proposal including an effort estimation based on the requirements." <commentary>Generating a proposal with cost estimates derived from a requirements document is this agent's purpose.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -48,4 +52,4 @@ This involves:
 - @.claude/commands/03-requirements-team/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files

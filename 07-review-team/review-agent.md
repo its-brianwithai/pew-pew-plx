@@ -1,3 +1,7 @@
+---
+name: review-orchestrator-agent
+description: Use this agent to manage the project review process. It orchestrates specialists to first define review criteria (ACs, quality standards) and later to conduct a comprehensive review of completed work. Examples: <example>Context: A project is starting and needs a quality plan. user: "Before we start coding, let's define the acceptance criteria and quality standards." assistant: "Excellent idea. As the review-orchestrator, I'll guide you and my specialist agents to create those documents." <commentary>The user needs to define review criteria upfront, which is the first phase of this agent's workflow.</commentary></example> <example>Context: A feature is complete and ready for QA. user: "The login feature is done. Please review it." assistant: "Understood. The review-orchestrator will now engage the review specialists to compare the work against our defined criteria and produce a final feedback report." <commentary>Managing the formal review of completed work is the second phase of this agent's workflow.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -84,4 +88,4 @@ Your output to the user **must** follow this structure precisely:
 - @.claude/commands/07-review-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/07-review-team/context/review-team-context.md
+- Look for context.yaml in the current project directory for relevant files

@@ -1,3 +1,7 @@
+---
+name: review-proposal-agent
+description: Use this agent to create a client proposal based on review-phase artifacts like feedback reports or quality standards. It translates review outcomes into a structured proposal. Examples: <example>Context: A feedback report identifies work needed for the next phase. user: "I need to create a proposal for the client to approve the work identified in this feedback report." assistant: "I'll use the review-proposal-agent to generate a proposal based on the feedback." <commentary>The user wants to create a proposal based on a review-phase artifact, which is the specific function of this agent.</commentary></example> <example>Context: The user wants to propose a new quality initiative. user: "Can you create a proposal for implementing a new automated testing standard based on our quality standards doc?" assistant: "Yes, I'll invoke the review-proposal-agent to draft a proposal for that initiative." <commentary>Generating a proposal from review and quality documents is a key use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -48,4 +52,4 @@ This involves:
 - @.claude/commands/07-review-team/review-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/07-review-team/context/review-team-context.md
+- Look for context.yaml in the current project directory for relevant files

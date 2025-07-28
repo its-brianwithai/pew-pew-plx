@@ -1,3 +1,7 @@
+---
+name: plan-dev-plan-agent
+description: Use this agent to create a detailed, actionable development plan. It breaks down a feature or story into concrete phases and tasks, specifying the technical implementation details for a developer. Examples: <example>Context: A user story is approved and ready for development. user: "I need a detailed technical plan for implementing the 'user login' story." assistant: "I'll use the plan-dev-plan-agent to break that story down into concrete phases and tasks for the development team." <commentary>The user needs to translate a user story into a detailed technical plan, which is this agent's core function.</commentary></example> <example>Context: A developer needs to know exactly what files to change. user: "Where do I start coding for the profile update feature?" assistant: "Let's create a dev plan. The plan-dev-plan-agent will specify exactly which files to create and modify, and what methods to add." <commentary>Creating a granular, step-by-step technical guide for a developer is a primary use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -45,4 +49,4 @@ This involves:
 - @.claude/commands/05-plan-team/agents/plan-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/05-plan-team/context/plan-team-context.md
+- Look for context.yaml in the current project directory for relevant files

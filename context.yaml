@@ -1,0 +1,53 @@
+# Context Configuration Template
+# This file defines relevant context files for AI agents.
+# Agents will look for this file in the current project directory.
+# 
+# Instructions:
+# 1. Copy this template to your project root
+# 2. Add your team configurations and relevant files
+# 3. Each team should have a name and a list of file paths
+# 
+# Example usage:
+# team_name:
+#   - path/to/relevant/file.md
+#   - another/important/document.yaml
+#   - src/components/
+
+discovery_team:
+  - 01-discovery-team/templates/
+  - 01-discovery-team/agents/
+  # Add your project-specific discovery files here
+
+context_team:
+  - 02-context-team/templates/
+  - 02-context-team/agents/
+  # Add your project-specific context files here
+
+requirements_team:
+  - 03-requirements-team/templates/
+  - 03-requirements-team/agents/
+  # Add your project-specific requirements files here
+
+refinement_team:
+  - 04-refinement-team/templates/
+  - 04-refinement-team/agents/
+  # Add your project-specific refinement files here
+
+plan_team:
+  - 05-plan-team/templates/
+  - 05-plan-team/agents/
+  # Add your project-specific planning files here
+
+act_team:
+  - 06-act-team/templates/
+  - 06-act-team/agents/
+  # Add your project-specific implementation files here
+
+review_team:
+  - 07-review-team/templates/
+  - 07-review-team/agents/
+  # Add your project-specific review files here
+
+# Add custom teams or sections as needed:
+# custom_team:
+#   - path/to/files/

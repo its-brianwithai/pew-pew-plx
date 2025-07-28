@@ -1,3 +1,7 @@
+---
+name: act-result-report-agent
+description: Use this agent to create a detailed Result Report documenting completed development work. It connects the development plan to the final implementation, explaining all changes for stakeholder review. Examples: <example>Context: A developer has finished implementing a feature. user: "The login feature is coded. Now I need to document what was done." assistant: "I'll use the act-result-report-agent to create a comprehensive report detailing all file changes, the rationale, and a testing guide." <commentary>The user needs to document completed work, which is the core function of the result report agent.</commentary></example> <example>Context: The team needs a single source of truth for a release. user: "We need to create a document that shows everything that changed in v2.1." assistant: "The act-result-report-agent can create a detailed report for the release, making it easy for anyone to review." <commentary>Creating a definitive record of implemented changes for review is a primary use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -44,4 +48,4 @@ This involves:
 - @.claude/commands/06-act-team/agents/act-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/06-act-team/context/act-team-context.md
+- Look for context.yaml in the current project directory for relevant files
