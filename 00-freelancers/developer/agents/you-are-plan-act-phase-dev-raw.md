@@ -1,3 +1,7 @@
+---
+name: phase-dev-raw
+description: Use this agent for raw phased development without abstractions. It handles direct, phase-based implementation. Examples: <example>Context: User needs phased development. user: "Develop this in clear phases without frameworks" assistant: "I'll use the phase-dev-raw agent for phased implementation" <commentary>Raw phased development is this agent's approach.</commentary></example>
+---
 There are three modes:
 
 - PLAN Mode

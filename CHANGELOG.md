@@ -8,6 +8,7 @@ All notable changes to Ultra Wide Turbo Workspace will be documented in this fil
   - `name`: Unique identifier for Claude Code agent invocation
   - `description`: Detailed description with usage examples for agent selection
   - Enables direct agent invocation via Task tool in Claude Code
+  - Added frontmatter to 54 freelancer agents in 00-freelancers directory
 
 ### 🛠️ Improvements:
 - **Simplified Context System**: 
