@@ -1,54 +1,59 @@
-# Release v0.2.0 - Universal Agent Enhancement
+# Claude Code Integration & Context Simplification
 
-## 🆕 What's New
+## 🎯 Overview
 
-This release brings significant enhancements to all seven teams in the Ultra Wide Turbo Workspace framework. We've added two powerful new agents to every team, ensuring consistent capabilities across the entire project lifecycle.
+This release brings major enhancements for Claude Code integration, enabling direct agent invocation through YAML frontmatter and simplifying the context management system.
 
-### 🤖 New Agents
+## 🤖 Agent Enhancements
 
-**1. Prompt Engineer Agent** 
-- Now available in all 7 teams
-- Specializes in optimizing AI prompts and agent instructions
-- Helps teams refine their communication with AI for better results
+**YAML Frontmatter for All Agents**
+- Added YAML frontmatter to 117 agent files across the entire workspace
+- Each agent now has:
+  - `name`: Unique identifier for Claude Code invocation
+  - `description`: Detailed description with usage examples
+- Enables direct agent invocation via Claude Code's Task tool
+- Covers all team agents (63 files) and freelancer agents (54 files)
 
-**2. Proposal Agent**
-- Added to all 7 teams 
-- Creates structured proposals and recommendations
-- Ensures consistent decision documentation across all project phases
+## 🛠️ Context System Improvements
 
-### 📝 New Templates
+**Simplified Context Management**
+- Replaced complex team-specific context folders with a single `context.yaml` template
+- Agents now look for `context.yaml` in the current project directory
+- Users can customize context per project by adding their own `context.yaml`
+- Removed old context folders from all team directories
+- More flexible and project-agnostic approach
 
-- **Proposal Templates**: Each team now has a dedicated `proposal-template.md` to support the new Proposal Agents
-- Standardized format for capturing recommendations and decisions
-- Improves project documentation and traceability
+## 📁 Structural Changes
+
+- Deleted 7 team-specific context folders
+- Updated all agent references from specific context files to local `context.yaml` lookup
+- Created instructional `context.yaml` template with examples
 
 ## 💡 Why This Matters
 
-- **Consistency**: All teams now have the same core capabilities for prompt optimization and proposal creation
-- **Better Communication**: Teams can optimize their own prompts for more effective AI interactions
-- **Enhanced Documentation**: Formal proposals capture important decisions and recommendations
-- **Improved Workflow**: From research through review, every phase can now create optimized prompts and structured proposals
+- **Claude Code Integration**: Agents can now be invoked directly by name in Claude Code
+- **Better Agent Selection**: Detailed descriptions help Claude Code choose the right agent
+- **Simplified Setup**: One context file per project instead of managing multiple team contexts
+- **Project Flexibility**: Each project can define its own relevant files
+- **Cleaner Structure**: Removed redundant context folders
 
 ## 📦 What's Included
 
-- 14 new agent files (7 Prompt Engineer Agents + 7 Proposal Agents)
-- 7 new proposal templates
-- Updated documentation reflecting the new capabilities
+- 117 agent files updated with YAML frontmatter
+- New `context.yaml` template with instructions
+- Updated documentation in README.md and CHANGELOG.md
+- Cleaner directory structure without context folders
 
 ## 🚀 Upgrade Instructions
 
 1. Pull the latest changes from the repository
-2. Review the new agents in each team's `agents/` directory
-3. Familiarize yourself with the proposal templates in each team's `templates/` directory
-4. Start using the Prompt Engineer Agent to optimize your existing prompts
-5. Use the Proposal Agent whenever you need to document recommendations or decisions
+2. Copy `context.yaml` to your project root
+3. Customize the context.yaml with your project's file paths
+4. Use Claude Code to invoke agents directly by name
+5. Remove any references to old context folders in your projects
 
-## 📚 Documentation
+## 📚 Breaking Changes
 
-- README has been updated to version 0.2
-- CHANGELOG includes detailed information about all changes
-- Each new agent includes comprehensive documentation within their respective files
-
----
-
-Thank you for using Ultra Wide Turbo Workspace! This release represents our commitment to providing consistent, powerful tools across all phases of AI-assisted development.
+- Context folders removed from all teams
+- Agents now expect `context.yaml` in the project root
+- Old context file references will no longer work
