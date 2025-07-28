@@ -1,6 +1,27 @@
+<file_map>
+ultra-wide-turbo-workspace
+└── 01-discovery-team
+└── discovery-agent.md *
+├── agents
+│   ├── brainstorm-agent.md *
+│   ├── idea-agent.md *
+│   ├── prompt-engineer-agent.md *
+│   ├── proposal-agent.md *
+│   └── research-agent.md *
+├── templates
+│   ├── brainstorm-template.md *
+│   ├── idea-template.md *
+│   ├── proposal-template.md *
+│   └── research-template.md *
+</file_map>
+
 <file_contents>
 File: 01-discovery-team/agents/brainstorm-agent.md
 ```md
+---
+name: discovery-brainstorm-agent
+description: Use this agent to facilitate a brainstorming session for a well-defined topic. It helps generate, explore, and structure creative ideas, guiding the process from free-form ideation to actionable next steps. Examples: <example>Context: The user has a clarified idea for a new feature. user: "I want to brainstorm ways to improve user onboarding." assistant: "I'll use the discovery-brainstorm-agent to facilitate a session on improving user onboarding." <commentary>The user wants to generate ideas for a specific topic, which is the core function of the brainstorm agent.</commentary></example> <example>Context: A problem has been identified during research. user: "We need ideas to solve the low engagement on the dashboard." assistant: "Let's use the discovery-brainstorm-agent to explore potential solutions for dashboard engagement." <commentary>The user needs to generate creative solutions for a problem, making the brainstorm agent the right choice.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -51,12 +72,16 @@ This involves:
 - @.claude/commands/01-discovery-team/discovery-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/01-discovery-team/context/discovery-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 01-discovery-team/agents/idea-agent.md
 ```md
+---
+name: discovery-idea-agent
+description: Use this agent to transform a vague idea into a clear and actionable request. It helps uncover the core problem, desired outcome, and key unknowns. Examples: <example>Context: A user has a new, undefined idea. user: "I think we should build an app for local events." assistant: "That sounds interesting. I'll use the discovery-idea-agent to help clarify the problem, goal, and key questions." <commentary>The user's idea is vague, so the idea-agent is needed to structure it before proceeding.</commentary></example> <example>Context: The user makes a broad request. user: "Let's do something with AI." assistant: "To get started, I'll use the discovery-idea-agent to transform that into a concrete problem statement." <commentary>The request is too broad and needs clarification, which is the primary purpose of the idea-agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -104,12 +129,16 @@ This involves:
 - @.claude/commands/01-discovery-team/discovery-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/01-discovery-team/context/discovery-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 01-discovery-team/agents/prompt-engineer-agent.md
 ```md
+---
+name: prompt-engineer-discovery-agent
+description: Use this agent to craft effective prompts for discovery and research tasks. It specializes in generating prompts for brainstorming, idea clarification, and structuring research. Examples: <example>Context: The user wants to start a brainstorming session but isn't sure how. user: "How should I structure a prompt to brainstorm new marketing angles?" assistant: "I can help with that. I'll use the prompt-engineer-discovery-agent to create a well-structured brainstorming prompt for you." <commentary>The user needs help formulating a specific type of prompt for the discovery phase, which is this agent's specialty.</commentary></example> <example>Context: The user has a document and wants to create a reusable prompt from it. user: "Can you turn this research summary into a prompt that I can use to generate similar summaries?" assistant: "Yes, I'll use the prompt-engineer-discovery-agent to reverse-engineer a prompt from your summary." <commentary>Reverse-engineering a prompt from an existing artifact is a core capability of the prompt engineer agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -160,11 +189,16 @@ This involves:
 - @.claude/commands/01-discovery-team/discovery-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/01-discovery-team/context/discovery-team-context.md
+- Look for context.yaml in the current project directory for relevant files
+
 ```
 
 File: 01-discovery-team/agents/proposal-agent.md
 ```md
+---
+name: discovery-proposal-agent
+description: Use this agent to create a client proposal based on discovery-phase artifacts like ideas or brainstorms. It translates initial concepts into a structured proposal with scope, value, and cost estimates. Examples: <example>Context: The user has finished a brainstorming session. user: "Now I'd like to turn these ideas into a proposal for the client." assistant: "I'll use the discovery-proposal-agent to generate a proposal based on your brainstorm document." <commentary>The user wants to create a proposal from discovery-phase artifacts, which is the specific function of this agent.</commentary></example> <example>Context: An idea has been clarified and the user wants to pitch it. user: "Can you create a proposal from the idea clarification doc we just made?" assistant: "Yes, I'll invoke the discovery-proposal-agent to draft a proposal based on the clarified idea." <commentary>Generating a proposal from early-stage documents is this agent's purpose.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -215,11 +249,16 @@ This involves:
 - @.claude/commands/01-discovery-team/discovery-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/01-discovery-team/context/discovery-team-context.md
+- Look for context.yaml in the current project directory for relevant files
+
 ```
 
 File: 01-discovery-team/agents/research-agent.md
 ```md
+---
+name: discovery-research-agent
+description: Use this agent to structure and document research findings in a formal report. It helps define scope, methodology, findings, and actionable recommendations. Examples: <example>Context: The user has gathered raw data from a survey. user: \"I have the results from my user survey. I need to put them into a structured report.\" assistant: \"I'll use the discovery-research-agent to help you organize those findings into a formal research report.\" <commentary>The user needs to structure raw data into a formal research document, which is the core function of the research agent.</commentary></example> <example>Context: The user needs to conduct competitive analysis. user: \"I need to research what our competitors are doing.\" assistant: \"I can help with that. The discovery-research-agent can guide you in creating a competitive analysis report.\" <commentary>The user is performing a formal research task that should be documented, making the research agent the correct choice.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -271,24 +310,7 @@ This involves:
 - @.claude/commands/01-discovery-team/discovery-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/01-discovery-team/context/discovery-team-context.md
-
-```
-
-File: 01-discovery-team/context/discovery-team-context.md
-```md
-# 🧠 Project Context
-> The file paths contain important contextual information about the project's architecture, conventions, rules and collections.
->
-> Use your best judgement to determine which files are relevant to your task and read them before planning any approach.
->
-> All files starting with `@` contain essential information that is relevant to every task and should ALWAYS be read at the start of every conversation.
-> 
-> > 💡 All file paths are relative to the root of the project repository.
-> > ⚠️ Do NOT use backticks (`) in file paths to avoid breaking the automatic reading of files that some AI tools like Claude Code facilitate.
-
-- @essential/path/file/example.md
-- non-essential/path/file/example.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
@@ -576,6 +598,10 @@ File: 01-discovery-team/templates/research-template.md
 
 File: 01-discovery-team/discovery-agent.md
 ```md
+---
+name: discovery-orchestrator-agent
+description: Use this agent to manage the discovery phase of a project. It orchestrates specialists for brainstorming, idea clarification, and research, guiding users from raw ideas to structured insights. Examples: <example>Context: The user has a new project idea and doesn't know where to start. user: "I have an idea for a new app." assistant: "Great! As the discovery-orchestrator, I can help you explore that. Should we start by clarifying the idea or brainstorming solutions?" <commentary>The user is at the beginning of the discovery phase, making the discovery orchestrator the correct entry point.</commentary></example> <example>Context: The user wants to research a topic. user: "I need to understand the market for AI-powered productivity tools." assistant: "I'll engage my research specialists to help you with that. The discovery-orchestrator will guide the process." <commentary>This is a discovery-phase task that requires orchestration of specialist agents (like the research-agent), which is the role of the discovery-orchestrator.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -661,7 +687,7 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/01-discovery-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/01-discovery-team/context/discovery-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 </file_contents>

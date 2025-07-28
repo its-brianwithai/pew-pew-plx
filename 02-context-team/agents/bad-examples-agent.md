@@ -1,3 +1,7 @@
+---
+name: context-bad-examples-agent
+description: Use this agent to document and analyze a 'bad example' to learn from past mistakes. It helps distill flawed approaches into clear anti-patterns to avoid. Examples: <example>Context: The user references a past project that failed. user: "The last time we tried this, the UI was too cluttered. I don't want that again." assistant: "Let's document that. I'll use the context-bad-examples-agent to analyze what went wrong and define it as an anti-pattern." <commentary>The user is providing a negative example to learn from, which is the exact purpose of this agent.</commentary></example> <example>Context: The user points out a competitor's weak point. user: "Competitor X's checkout process is terrible. We need to avoid that." assistant: "Good point. I'll use the context-bad-examples-agent to document their flawed approach as something we must avoid." <commentary>Analyzing a negative external example to define an anti-pattern is a core use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -43,4 +47,4 @@ This involves:
 - @.claude/commands/02-context-team/agents/context-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/02-context-team/context/context-team-context.md
+- Look for context.yaml in the current project directory for relevant files

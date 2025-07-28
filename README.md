@@ -121,7 +121,7 @@ graph TD
     Copy the team folders (`00-freelancers`, `01-research-team`, etc.) and the root `lead-orchestrator-agent.md` file into your `.claude/commands/` directory. This makes them available as commands in your IDE.
 
 3.  **Configure Your Project Context:**
-    This is the most important step. Go into each team's context file (e.g., `01-research-team/context/research-team-context.md`) and update the file links to point to the relevant files in *your* project.
+    Copy the `context.yaml` template to your project root and customize it with paths to your project's relevant files. Agents will automatically look for this file when working in your project.
 
 4.  **Start a Conversation:**
     Start a chat with `@team-agent` in your IDE and describe what you want to do. It will guide you to the right team.
@@ -139,23 +139,20 @@ When you reference a file in a prompt using the syntax `@path/to/file.md` (witho
 *   **`@links` (Immediate Load):** Use the `@` prefix for files that provide essential, upfront context that the agent should *always* read at the start of a task.
 *   **Regular Paths (On-Demand Load):** You can also include regular file paths in your instructions (e.g., "Please review `docs/old_spec.md`"). The agent is then instructed to read these files as needed, giving you more flexible control over the context.
 
-### The `team-context.md` File
-Each team has a `context/team-context.md` file. This is where you should link to your project's most important files (e.g., your architecture document, key source files, style guides). By updating this one file for a team, you provide all its agents with the necessary project knowledge.
+### The `context.yaml` File
+The framework uses a simplified context system. Place a `context.yaml` file in your project root to provide agents with relevant file paths. Each team can have its own list of files, and agents will automatically look for this file when working in your project.
 
-Here is the template used for the context files:
-```markdown
-# 🧠 Project Context
-> The file paths contain important contextual information about the project's architecture, conventions, rules and collections.
->
-> Use your best judgement to determine which files are relevant to your task and read them before planning any approach.
->
-> All files starting with `@` contain essential information that is relevant to every task and should ALWAYS be read at the start of every conversation.
->
-> > 💡 All file paths are relative to the root of the project repository.
-> > ⚠️ Do NOT use backticks (`) in file paths to avoid breaking the automatic reading of files that some AI tools like Claude Code facilitate.
+Example structure:
+```yaml
+discovery_team:
+  - src/docs/project-brief.md
+  - requirements/initial-ideas.md
 
-- @essential/path/file/example.md
-- non-essential/path/file/example.md
+context_team:
+  - docs/best-practices.md
+  - examples/
+
+# Add more teams and customize paths as needed
 ```
 
 ## 🛠️ Advanced Usage
@@ -204,9 +201,8 @@ Here is a high-level overview of the repository structure:
 ```
 .
 ├── 00-freelancers/       # Collection of individual specialist agents
-├── 01-research-team/      # Team for idea clarification and research
+├── 01-discovery-team/     # Team for idea clarification and research
 │   ├── agents/
-│   ├── context/
 │   └── templates/
 ├── 02-context-team/       # Team for gathering project context
 ├── 03-requirements-team/  # Team for detailed requirements specification

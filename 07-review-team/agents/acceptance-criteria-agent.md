@@ -1,3 +1,7 @@
+---
+name: review-acceptance-criteria-agent
+description: Use this agent to define clear, testable, and comprehensive Acceptance Criteria (AC) for a feature. It translates requirements into a concrete checklist that unambiguously defines 'done'. Examples: <example>Context: A user story has been written, but needs a definition of 'done'. user: "I need to define the acceptance criteria for the 'user login' story." assistant: "I'll use the review-acceptance-criteria-agent to help you write a clear, testable checklist for what constitutes a successful login." <commentary>The user needs to define what 'done' means for a feature, which is the core function of this agent.</commentary></example> <example>Context: The user wants to prepare for testing. user: "What should we test for the profile page?" assistant: "Let's define the acceptance criteria first. I'll use the review-acceptance-criteria-agent to create a list of all functional, UI, and performance criteria to be tested." <commentary>Creating a comprehensive, categorized list of testable criteria is a primary use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -43,4 +47,4 @@ This involves:
 - @.claude/commands/07-review-team/agents/review-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/07-review-team/context/review-team-context.md
+- Look for context.yaml in the current project directory for relevant files

@@ -1,6 +1,22 @@
 # Changelog
 All notable changes to Ultra Wide Turbo Workspace will be documented in this file.
 
+## [Unreleased]
+
+### ✨ Features:
+- **Agent YAML Frontmatter**: Added YAML frontmatter to all agent files with:
+  - `name`: Unique identifier for Claude Code agent invocation
+  - `description`: Detailed description with usage examples for agent selection
+  - Enables direct agent invocation via Task tool in Claude Code
+  - Added frontmatter to 54 freelancer agents in 00-freelancers directory
+
+### 🛠️ Improvements:
+- **Simplified Context System**: 
+  - Replaced complex team-specific context folders with a single `context.yaml` template
+  - Agents now look for `context.yaml` in the current project directory
+  - Users can customize context per project by adding their own `context.yaml`
+  - Removed old context folders from all team directories
+
 ## [v0.2.0] - 2025-07-15
 
 ### ✨ Features:

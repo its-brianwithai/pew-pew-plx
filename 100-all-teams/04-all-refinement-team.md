@@ -1,6 +1,26 @@
+<file_map>
+ultra-wide-turbo-workspace
+└── 04-refinement-team
+└── refinement-agent.md *
+├── agents
+│   ├── architecture-agent.md *
+│   ├── prd-agent.md *
+│   ├── prompt-engineer-agent.md *
+│   ├── proposal-agent.md *
+│   └── ui-ux-design-agent.md *
+├── templates
+│   ├── architecture-template.md *
+│   ├── prd-template.md *
+│   └── proposal-template.md *
+</file_map>
+
 <file_contents>
 File: 04-refinement-team/agents/architecture-agent.md
 ```md
+---
+name: refinement-architecture-agent
+description: Use this agent to define and document the architecture for a project. It helps translate requirements into a detailed architectural blueprint, including components, interactions, and design rationale. Examples: <example>Context: After defining a PRD, the user needs a technical plan. user: "We have the PRD for the new feature. Now, how should we build it?" assistant: "Let's create the technical blueprint. I'll use the refinement-architecture-agent to help you define the system architecture." <commentary>The user needs to create a technical plan based on requirements, which is the core function of the architecture agent.</commentary></example> <example>Context: The user needs to decide on a technology stack. user: "What database and messaging queue should we use for this project?" assistant: "Those are key architectural decisions. I'll use the refinement-architecture-agent to document the technology stack and the rationale for our choices." <commentary>Defining the technology stack and documenting architectural decisions is a key part of this agent's role.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -50,12 +70,16 @@ This involves:
 - @.claude/commands/04-refinement-team/agents/refinement-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/04-refinement-team/context/refinement-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 04-refinement-team/agents/prd-agent.md
 ```md
+---
+name: refinement-prd-agent
+description: Use this agent to create a comprehensive Product Requirements Document (PRD). It helps define a project's purpose, goals, scope, and user-centric requirements, serving as a single source of truth for what to build and why. Examples: <example>Context: The user has a feature idea and needs to formalize it. user: "I want to create a formal document for the new 'analytics dashboard' feature." assistant: "Perfect, a PRD is what we need. I'll use the refinement-prd-agent to help you create it." <commentary>The user needs to create a formal requirements document, which is the exact purpose of the PRD agent.</commentary></example> <example>Context: The team needs a single source of truth for a project. user: "We need to get everyone aligned on the goals and scope of Project X." assistant: "Let's create a PRD. I'll use the refinement-prd-agent to guide us through defining the goals, user stories, and scope." <commentary>Creating a central document for project alignment is a primary use case for the PRD agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -103,12 +127,16 @@ This involves:
 - @.claude/commands/04-refinement-team/agents/refinement-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/04-refinement-team/context/refinement-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 04-refinement-team/agents/prompt-engineer-agent.md
 ```md
+---
+name: prompt-engineer-refinement-agent
+description: Use this agent to craft effective prompts for product and architectural refinement. It specializes in generating prompts to create structured documents like PRDs and architecture specifications. Examples: <example>Context: The user wants to write a PRD with AI assistance. user: "How can I write a prompt to generate the user stories section of my PRD?" assistant: "I can help with that. I'll use the prompt-engineer-refinement-agent to create a detailed prompt for generating user stories." <commentary>The user needs help formulating a prompt to create a part of a refinement document, which is this agent's specialty.</commentary></example> <example>Context: The user wants to explore architectural options. user: "Create a prompt that helps me compare a monolithic vs. microservices architecture for my project." assistant: "Certainly. I'll use the prompt-engineer-refinement-agent to craft a prompt for that architectural comparison." <commentary>Generating prompts for complex technical or product definitions is a core capability of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -158,11 +186,16 @@ This involves:
 - @.claude/commands/04-refinement-team/agents/refinement-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/04-refinement-team/context/refinement-team-context.md
+- Look for context.yaml in the current project directory for relevant files
+
 ```
 
 File: 04-refinement-team/agents/proposal-agent.md
 ```md
+---
+name: refinement-proposal-agent
+description: Use this agent to create a client proposal based on refined project documents like a PRD or Architecture document. It translates detailed specifications into a structured proposal. Examples: <example>Context: The user has a completed PRD. user: "I need to create a proposal for the client based on this PRD." assistant: "I'll use the refinement-proposal-agent to generate a professional proposal from your PRD." <commentary>The user wants to create a proposal from a refinement-phase artifact like a PRD, which is this agent's specific function.</commentary></example> <example>Context: The architecture document is ready. user: "Can you create a proposal that includes the technical approach from our architecture doc?" assistant: "Yes, I'll invoke the refinement-proposal-agent to draft a proposal that incorporates the architectural details." <commentary>Generating a proposal from a detailed technical specification is a key use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -213,11 +246,16 @@ This involves:
 - @.claude/commands/04-refinement-team/refinement-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/04-refinement-team/context/refinement-team-context.md
+- Look for context.yaml in the current project directory for relevant files
+
 ```
 
 File: 04-refinement-team/agents/ui-ux-design-agent.md
 ```md
+---
+name: refinement-ui-ux-design-agent
+description: Use this agent for UI/UX design expertise during project refinement. It helps design professional, responsive interfaces and provides developer-friendly implementation patterns and code snippets. Examples: <example>Context: The user is defining a new feature in a PRD and needs design input. user: "What would be a good UI for the new search filter feature?" assistant: "I'll consult the refinement-ui-ux-design-agent to propose a design and provide a developer-friendly implementation pattern for the search filters." <commentary>The user needs UI/UX design input during the refinement phase, which is this agent's specialty.</commentary></example> <example>Context: A developer needs specific implementation details for a UI component. user: "How do I build this responsive card component from the mockup?" assistant: "Let me get the refinement-ui-ux-design-agent to provide you with the exact code snippet and responsive breakpoint logic." <commentary>Providing developer-friendly implementation details for a design is a core function of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -343,23 +381,7 @@ Implementation: [copy-paste ready code snippet]
 - @.claude/commands/04-refinement-team/agents/refinement-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/04-refinement-team/context/refinement-team-context.md
-```
-
-File: 04-refinement-team/context/refinement-team-context.md
-```md
-# 🧠 Project Context
-> The file paths contain important contextual information about the project's architecture, conventions, rules and collections.
->
-> Use your best judgement to determine which files are relevant to your task and read them before planning any approach.
->
-> All files starting with `@` contain essential information that is relevant to every task and should ALWAYS be read at the start of every conversation.
->
-> > 💡 All file paths are relative to the root of the project repository.
-> > ⚠️ Do NOT use backticks (`) in file paths to avoid breaking the automatic reading of files that some AI tools like Claude Code facilitate.
-
-- @essential/path/file/example.md
-- non-essential/path/file/example.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
@@ -1155,6 +1177,10 @@ File: 04-refinement-team/templates/proposal-template.md
 
 File: 04-refinement-team/refinement-agent.md
 ```md
+---
+name: refinement-orchestrator-agent
+description: Use this agent to manage the refinement of project requirements and design. It orchestrates specialists to produce a comprehensive Product Requirements Document (PRD) and a detailed Architecture Document. Examples: <example>Context: The user has a set of requirements and needs to formalize them. user: "I have the requirements, now I need to create the formal PRD and architecture." assistant: "I can help with that. As the refinement-orchestrator, I'll guide you to the PRD agent for the 'what' and the architecture agent for the 'how'." <commentary>The user needs to move from requirements to formal documents, making the refinement orchestrator the correct entry point to route them to the right specialist.</commentary></example> <example>Context: The user is unsure whether to define product features or technical design first. user: "Should I write the PRD or the architecture doc first?" assistant: "The refinement-orchestrator recommends starting with the PRD to define what we're building and why, then moving to the architecture. I'll engage the PRD agent for you." <commentary>Guiding the user through the refinement process and orchestrating the specialist agents is the core role of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -1238,7 +1264,7 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/04-refinement-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/04-refinement-team/context/refinement-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 </file_contents>

@@ -1,3 +1,7 @@
+---
+name: prompt-engineer-context-agent
+description: Use this agent to craft effective prompts for capturing project context. It specializes in generating prompts for documenting best practices, examples, and preferences. Examples: <example>Context: The user wants to document a best practice but isn't sure how to start. user: "How can I prompt my team to document our coding standards?" assistant: "I can help with that. I'll use the prompt-engineer-context-agent to generate a prompt you can share with your team to capture those standards." <commentary>The user needs help formulating a prompt to elicit contextual information, which is this agent's specialty.</commentary></example> <example>Context: The user wants to create a reusable prompt from an existing document. user: "Can you turn this 'bad example' document into a prompt I can use to analyze other bad examples?" assistant: "Yes, I'll use the prompt-engineer-context-agent to reverse-engineer a prompt for you from that document." <commentary>Creating reusable prompts from existing context documents is a core capability of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -51,4 +55,4 @@ This involves:
 - @.claude/commands/02-context-team/agents/context-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/02-context-team/context/context-team-context.md
+- Look for context.yaml in the current project directory for relevant files

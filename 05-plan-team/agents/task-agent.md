@@ -45,4 +45,4 @@ This involves:
 - @.claude/commands/05-plan-team/agents/plan-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/05-plan-team/context/plan-team-context.md
+- Look for context.yaml in the current project directory for relevant files

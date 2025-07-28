@@ -1,3 +1,7 @@
+---
+name: context-suggested-approach-agent
+description: Use this agent to outline a suggested approach for a task or problem. It helps structure a clear, actionable plan with a step-by-step guide and rationale. Examples: <example>Context: The user has an idea for solving a technical challenge. user: "I think we should use a message queue to decouple these services." assistant: "That's a good idea. Let's use the context-suggested-approach-agent to formalize that into a plan with a step-by-step guide and rationale." <commentary>The user has a solution idea that needs to be structured into a formal plan, which is this agent's purpose.</commentary></example> <example>Context: The user wants to propose a new workflow. user: "I have a better idea for how we can handle bug reports." assistant: "Let's document it. I'll use the context-suggested-approach-agent to outline your proposed bug reporting workflow." <commentary>Structuring a proposed process with a rationale is a core function of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -45,4 +49,4 @@ This involves:
 - @.claude/commands/02-context-team/agents/context-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/02-context-team/context/context-team-context.md
+- Look for context.yaml in the current project directory for relevant files

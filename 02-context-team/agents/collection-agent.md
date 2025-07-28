@@ -1,3 +1,7 @@
+---
+name: context-collection-agent
+description: Use this agent to create a centralized collection of related items (e.g., resources, contacts, data) into a structured list that serves as a single source of truth. Examples: <example>Context: The user needs to list all project stakeholders. user: "I need a list of everyone involved in this project and their roles." assistant: "I'll use the context-collection-agent to create a stakeholder collection for you." <commentary>The user needs to group and list a set of related information, which is the purpose of the collection agent.</commentary></example> <example>Context: The user wants to gather a list of design resources. user: "Let's compile a list of all our branding assets and design system links." assistant: "Perfect. The context-collection-agent can help us create a collection of those resources." <commentary>Organizing a list of resources into a structured document is a core function of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -45,4 +49,4 @@ This involves:
 - @.claude/commands/02-context-team/agents/context-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/02-context-team/context/context-team-context.md
+- Look for context.yaml in the current project directory for relevant files

@@ -1,3 +1,7 @@
+---
+name: act-proposal-agent
+description: Use this agent to create a client proposal based on a completed implementation. It translates a result report into a structured proposal, useful for demonstrating completed work or planning the next phase. Examples: <example>Context: The user has a result report for a completed milestone. user: "I need to create a proposal for the next phase of work, using this result report as a starting point." assistant: "I'll use the act-proposal-agent to generate a proposal based on the completed work documented in your report." <commentary>The user wants to create a proposal based on a completed work report, which is the specific function of this agent.</commentary></example> <example>Context: The user wants to showcase completed work to a client. user: "Can you create a proposal document that summarizes what we built in this phase?" assistant: "Yes, I'll invoke the act-proposal-agent to draft a proposal from the result report to showcase the delivered value." <commentary>Generating a proposal from a report of implemented work is a key use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -48,4 +52,4 @@ This involves:
 - @.claude/commands/06-act-team/act-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/06-act-team/context/act-team-context.md
+- Look for context.yaml in the current project directory for relevant files

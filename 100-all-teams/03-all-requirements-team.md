@@ -1,6 +1,27 @@
+<file_map>
+ultra-wide-turbo-workspace
+└── 03-requirements-team
+└── requirements-agent.md *
+├── agents
+│   ├── activities-agent.md *
+│   ├── actors-components-agent.md *
+│   ├── behaviours-agent.md *
+│   ├── prompt-engineer-agent.md *
+│   ├── properties-agent.md *
+│   ├── proposal-agent.md *
+│   └── scenarios-agent.md *
+├── templates
+│   ├── proposal-template.md *
+│   └── requirements-template.md *
+</file_map>
+
 <file_contents>
 File: 03-requirements-team/agents/activities-agent.md
 ```md
+---
+name: requirements-activities-agent
+description: Use this agent to identify and define all actions (Activities) that each Actor and Component in a system can perform. It specializes in creating verb-driven descriptions of capabilities for the requirements document. Examples: <example>Context: After identifying Actors and Components, the next step is to define what they do. user: "Now let's define what the 'User' and 'Admin Panel' can do." assistant: "I'll use the requirements-activities-agent to list all the actions for each of your actors and components." <commentary>The user needs to define the actions for identified entities, which is the specific function of this agent.</commentary></example> <example>Context: The user is describing a process. user: "The user uploads a file, then the system processes it and sends a notification." assistant: "I see several activities there. I'll use the requirements-activities-agent to break them down: 'Upload file', 'Process file', 'Send notification'." <commentary>Extracting verb-driven activities from a process description is a core capability of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -43,12 +64,16 @@ This involves:
 - @.claude/commands/03-requirements-team/agents/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 03-requirements-team/agents/actors-components-agent.md
 ```md
+---
+name: requirements-actors-components-agent
+description: Use this agent to identify and categorize all Actors (who/what performs actions) and Components (what is interacted with) in a system. It extracts entities from user descriptions. Examples: <example>Context: The user is describing a new feature at a high level. user: "I want a feature where users can upload a profile picture to their account." assistant: "Okay, to start defining requirements, I'll use the requirements-actors-components-agent to identify the key entities: 'User', 'Profile Picture', and 'Account'." <commentary>The user's description contains nouns that need to be identified as actors or components, which is the first step in requirements gathering and this agent's specialty.</commentary></example> <example>Context: The user provides a document. user: "Here is the project brief." assistant: "Thank you. I'll start by using the requirements-actors-components-agent to extract all the key actors and components mentioned in the brief." <commentary>Extracting entities from a source document is a primary use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -94,12 +119,16 @@ This involves:
 - @.claude/commands/03-requirements-team/agents/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 03-requirements-team/agents/behaviours-agent.md
 ```md
+---
+name: requirements-behaviours-agent
+description: Use this agent to define the operational rules, constraints, and performance logic (Behaviours) for entities in a project. It specifies how entities should act, respond, and perform under various conditions. Examples: <example>Context: The user needs to define validation rules. user: "The password field must be at least 8 characters long." assistant: "That's a behaviour. I'll use the requirements-behaviours-agent to document this validation rule for the 'password' property." <commentary>Defining specific rules and constraints for a property is a core function of the behaviours agent.</commentary></example> <example>Context: The user is thinking about performance. user: "The search results must load in under 1 second." assistant: "Got it. I'll use the requirements-behaviours-agent to add a performance behaviour for the 'search' activity." <commentary>Specifying non-functional requirements like performance is a key use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -146,12 +175,16 @@ This involves:
 - @.claude/commands/03-requirements-team/agents/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 03-requirements-team/agents/prompt-engineer-agent.md
 ```md
+---
+name: prompt-engineer-requirements-agent
+description: Use this agent to craft effective prompts for requirements engineering. It specializes in generating prompts to deconstruct a feature description into granular, testable requirements. Examples: <example>Context: The user has a feature idea but needs to break it down. user: "How do I write a prompt to get all the requirements for a login feature?" assistant: "I can help. I'll use the prompt-engineer-requirements-agent to create a detailed prompt that will guide you through defining actors, activities, and behaviors for the login feature." <commentary>The user needs help formulating a prompt to guide the requirements gathering process, which is this agent's specialty.</commentary></example> <example>Context: The user wants to generate BDD scenarios. user: "Create a prompt to generate Gherkin scenarios for a file upload activity." assistant: "Certainly. I'll use the prompt-engineer-requirements-agent to craft a prompt for generating those BDD scenarios." <commentary>Generating prompts for specific requirements artifacts like BDD scenarios is a core capability of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -200,11 +233,16 @@ This involves:
 - @.claude/commands/03-requirements-team/agents/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files
+
 ```
 
 File: 03-requirements-team/agents/properties-agent.md
 ```md
+---
+name: requirements-properties-agent
+description: Use this agent to identify and define data attributes (Properties) for all entities in a system. It determines the configuration, state, and identity values for each actor, component, and activity. Examples: <example>Context: After defining actors, the user needs to detail their data. user: "What information do we need to store for a 'User'?" assistant: "Let's define its properties. I'll use the requirements-properties-agent to list attributes like 'user_id', 'email', and 'display_name'." <commentary>The user needs to define the data attributes for an entity, which is this agent's core function.</commentary></example> <example>Context: The user is describing an activity. user: "When a user uploads a file, we need to track its size and type." assistant: "Those are properties of the 'upload' activity. I'll use the requirements-properties-agent to add 'file_size' and 'file_type' to it." <commentary>Identifying and documenting data attributes related to an activity is a key use case for this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -247,12 +285,16 @@ This involves:
 - @.claude/commands/03-requirements-team/agents/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
 File: 03-requirements-team/agents/proposal-agent.md
 ```md
+---
+name: requirements-proposal-agent
+description: Use this agent to create a client proposal based on a project requirements document. It translates a detailed requirements specification into a structured proposal outlining scope, value, and estimated cost. Examples: <example>Context: The user has completed a requirements document. user: "Now I need to create a proposal based on these detailed requirements." assistant: "I'll use the requirements-proposal-agent to generate a proposal from your requirements document." <commentary>The user wants to create a proposal from a requirements-phase artifact, which is the specific function of this agent.</commentary></example> <example>Context: The user wants to estimate the cost of a feature. user: "Can you create a proposal with a cost estimate for the feature we just defined?" assistant: "Yes, I'll invoke the requirements-proposal-agent to draft a proposal including an effort estimation based on the requirements." <commentary>Generating a proposal with cost estimates derived from a requirements document is this agent's purpose.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -303,11 +345,16 @@ This involves:
 - @.claude/commands/03-requirements-team/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files
+
 ```
 
 File: 03-requirements-team/agents/scenarios-agent.md
 ```md
+---
+name: requirements-scenarios-agent
+description: Use this agent to map out step-by-step sequences (Scenarios) for completing activities, using BDD Gherkin syntax. It defines ideal paths (happy flows), exception flows, and edge cases. Examples: <example>Context: An activity has been defined, and now the user needs to detail how it works. user: "Let's define the steps for the 'user login' activity." assistant: "Okay, I'll use the requirements-scenarios-agent to write the BDD scenarios for a successful login, and for failed attempts." <commentary>The user needs to detail the step-by-step flow of an activity, which is the core function of the scenarios agent.</commentary></example> <example>Context: The user wants to consider edge cases. user: "What happens if the user tries to upload a file that's too large?" assistant: "That's an important scenario. I'll use the requirements-scenarios-agent to create an error flow scenario for that case." <commentary>Defining exception and edge-case scenarios is a key capability of this agent.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -356,24 +403,7 @@ This involves:
 - @.claude/commands/03-requirements-team/agents/requirements-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
-
-```
-
-File: 03-requirements-team/context/requirements-team-context.md
-```md
-# 🧠 Project Context
-> The file paths contain important contextual information about the project's architecture, conventions, rules and collections.
->
-> Use your best judgement to determine which files are relevant to your task and read them before planning any approach.
->
-> All files starting with `@` contain essential information that is relevant to every task and should ALWAYS be read at the start of every conversation.
->
-> > 💡 All file paths are relative to the root of the project repository.
-> > ⚠️ Do NOT use backticks (`) in file paths to avoid breaking the automatic reading of files that some AI tools like Claude Code facilitate.
-
-- @essential/path/file/example.md
-- non-essential/path/file/example.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 
@@ -560,6 +590,10 @@ File: 03-requirements-team/templates/requirements-template.md
 
 File: 03-requirements-team/requirements-agent.md
 ```md
+---
+name: requirements-orchestrator-agent
+description: Use this agent to manage the creation of a comprehensive requirements specification. It orchestrates specialists to define actors, activities, properties, scenarios, and behaviors. Examples: <example>Context: The user has a feature idea that needs to be fully defined. user: "I need to break down the 'user profile' feature into detailed requirements." assistant: "I can help with that. As the requirements-orchestrator, I'll guide you and my team of specialists to define all the necessary requirements." <commentary>The user needs to create a complete requirements document, making the requirements orchestrator the correct entry point.</commentary></example> <example>Context: The user provides a high-level feature description. user: "Users should be able to post comments." assistant: "Understood. The requirements-orchestrator will engage the right specialists to break that down into actors, activities, scenarios, and more." <commentary>This is a requirements-gathering task that requires orchestration of multiple specialist agents, which is the role of the requirements-orchestrator.</commentary></example>
+---
 # Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
@@ -646,7 +680,7 @@ At the end of each cycle, your output to the user **must** follow this structure
 - @.claude/commands/03-requirements-team/agents/proposal-agent.md
 
 ### 💡 Essential Context
-- @.claude/commands/03-requirements-team/context/requirements-team-context.md
+- Look for context.yaml in the current project directory for relevant files
 
 ```
 </file_contents>
