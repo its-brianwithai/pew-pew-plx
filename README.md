@@ -44,7 +44,14 @@ To integrate this framework with your local Claude Code setup, follow these step
     - Create act-as agent commands in `.claude/commands/act/` with special headers
     - Copy all prompts to `.claude/commands/plx/`
 
-3.  **Watch for Changes (Optional):**
+3.  **Pull Latest Changes (Optional):**
+    To update your local copy with the latest changes from the main branch without using git:
+    ```bash
+    make pull main
+    ```
+    This will download and extract the latest version, overwriting local files.
+
+4.  **Watch for Changes (Optional):**
     If you plan to develop new agents or prompts, you can run the watch script. It monitors the `agents/` and `prompts/` directories for changes and automatically re-runs the sync script.
     ```bash
     ./scripts/claude-code/watch-claude-code.sh
