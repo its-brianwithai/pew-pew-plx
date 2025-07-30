@@ -41,8 +41,8 @@ To integrate this framework with your local Claude Code setup, follow these step
     ```
     This will:
     - Copy all agent definitions to `.claude/agents/` maintaining directory structure
-    - Create act-as agent commands in `.claude/commands/agents/` with special headers
-    - Copy all prompts to `.claude/commands/activities/`
+    - Create act-as agent commands in `.claude/commands/act/` with special headers
+    - Copy all prompts to `.claude/commands/plx/`
 
 3.  **Watch for Changes (Optional):**
     If you plan to develop new agents or prompts, you can run the watch script. It monitors the `agents/` and `prompts/` directories for changes and automatically re-runs the sync script.
@@ -66,6 +66,6 @@ To integrate this framework with your local Claude Code setup, follow these step
 The `scripts/claude-code/` directory contains shell scripts to manage the integration with Claude Code:
 
 -   `sync-claude-code.sh`: The main script that runs the agent and command sync scripts.
--   `sync-claude-code-agents.sh`: Copies agent definitions to `.claude/agents/` and creates act-as commands in `.claude/commands/agents/`.
--   `sync-claude-code-commands.sh`: Copies prompt files from `prompts/` to `.claude/commands/activities/`.
+-   `sync-claude-code-agents.sh`: Copies agent definitions to `.claude/agents/` and creates act-as commands in `.claude/commands/act/`.
+-   `sync-claude-code-commands.sh`: Copies prompt files from `prompts/` to `.claude/commands/plx/`.
 -   `watch-claude-code.sh`: A convenience script to monitor for file changes and trigger the sync automatically.
