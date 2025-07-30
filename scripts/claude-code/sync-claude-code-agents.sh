@@ -5,7 +5,7 @@ set -e
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 AGENTS_DIR="$PROJECT_ROOT/agents"
 CLAUDE_AGENTS_DIR="$PROJECT_ROOT/.claude/agents"
-CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands/agents"
+CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands/act"
 
 if [ ! -d "$AGENTS_DIR" ]; then
     echo "❌ Error: Agents directory not found at $AGENTS_DIR"
@@ -26,14 +26,14 @@ else
     echo "⚠️  No agent files found to copy"
 fi
 
-echo "📋 Creating act-as commands in $CLAUDE_COMMANDS_DIR..."
+echo "📋 Creating as commands in $CLAUDE_COMMANDS_DIR..."
 
 # Process each .md file for commands
 for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*"); do
     if [ -f "$agent_file" ]; then
         base_name=$(basename "$agent_file" .md)
-        # Create act-as- filename
-        command_name="act-as-${base_name}.md"
+        # Create as- filename
+        command_name="as-${base_name}.md"
         command_file="$CLAUDE_COMMANDS_DIR/$command_name"
         
         # Create temporary file for processing
