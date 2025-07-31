@@ -1,0 +1,12 @@
+assets
+bin
+lib
+node_modules
+repos
+issues
+.gitignore
+.plxignore
+CLAUDE.md
+package.json
+package-lock.json
+README.md

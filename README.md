@@ -1,72 +1,104 @@
 [![Brought to you by pewpewprompts.com](https://img.shields.io/badge/Brought%20to%20you%20by-pewpewprompts.com-blue)](https://pewpewprompts.com)
+# 🔫 Pew Pew 💨 Plx 🙏
 
-# Pew Pew Projects
+![Pew Pew Plx Hero](assets/hero.png)
 
-A comprehensive framework for managing software development projects using AI agents, structured documentation, and predefined conventions. This repository provides a robust set of templates and agent definitions designed to work with tools like Claude Code to streamline planning, execution, and review processes.
+AI - project management - context engineering - with large collection - prompts, agents & templates - syncing with Claude Code.
 
-## ✨ Key Features
+## 🧠 Folders & Concepts
 
--   **AI Agent Definitions:** A suite of specialized AI sub-agents for tasks like planning, research, code review, and documentation.
--   **Structured Templates:** A rich library of markdown templates for creating consistent and comprehensive project documentation (PRDs, architecture, user stories, etc.).
--   **Convention-Driven:** Establishes clear conventions for code, architecture, and development practices.
--   **Automated Syncing:** Scripts to synchronize agent and command definitions with Claude Code's local configuration (`.claude/`).
--   **Extensible:** Easily add new agents, templates, and conventions to fit your project's needs.
+### 💬 Prompting
 
-## 📂 Directory Structure
+- `agents/`: AI (sub-)agents for different tasks (idea, plan, act, review).
+- `prompts/`: Reusable prompts for Claude Code commands.
+- `templates/`: Markdown templates for documentation.
 
-This framework is organized into several key directories:
+### 📂 Context Engineering
 
--   `agents/`: Contains definitions for specialized AI sub-agents, categorized by function (idea, plan, act, review).
--   `context/`: Provides project-specific context, including documentation on platforms, roles, and teams.
--   `conventions/`: Defines project standards, patterns, and best practices.
--   `issues/`: A place to track issues and tasks.
--   `prompts/`: Stores reusable prompts that can be used as custom Claude Code commands.
--   `scripts/`: Holds utility scripts for managing the framework, primarily for syncing configurations.
--   `templates/`: A collection of markdown templates for all types of project documentation.
+- `context/`: Project related information used to brainstorm, plan and refine.
+  - Below is an example of a possible context structure, adjust accordingly to your own project needs:
+    - `actors/`: Who interacts with your system.
+    - `components/`: Elements and system parts.
+    - `concepts/`: Wiki style concepts.
+    - `features/`: Descriptions of main features.
+    - `platforms/`: Where your code runs (Supabase, GitHub, App Store, etc.).
+    - `roles/`: Team member responsibilities.
+    - `teams/`: Responsibilities and organization.
+    - `models/`: Data structures and schemas.
+- `conventions/`: Project conventions and best practices.
+- `logs/`: Logs and records of project activities.
+- `issues/`: Issue tracking and task management.
+- `scripts/`: Utility scripts for managing the framework.
 
-## 🚀 Getting Started
+## 🥜 Syncing In A Nutshell
 
-To integrate this framework with your local Claude Code setup, follow these steps:
+Running `plx sync claude` copies:
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone <repository-url>
-    cd pew-pew-project-context
-    ```
+- all markdown files in `agents/` to:
+  - `.claude/agents/`
+    - allowing Claude Code to use them as [sub-agents](https://docs.anthropic.com/en/docs/claude-code/sub-agents).
+  - `.claude/commands/act/`
+    - creates `/act:as-{filename}` commands, allowing you to use them as main agent through [commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands).
+- `prompts/` to:
+  - `.claude/commands/plx/`
+    - creates easy to use (and remember) `/plx:{verb-filename}` [commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands) (activities, instructions, plx do this, plx do that)
+- `templates/` to:
+  - `.claude/commands/use/`
+    - creates `/use:{template-filename}` [commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands), allowing you to efficiently instruct an agent to use specific templates as output or work documents.
 
-2.  **Run the Sync Script:**
-    Execute the main sync script to copy all agent and prompt definitions into your local `.claude` directory, making them available to Claude Code.
-    ```bash
-    make sync claude
-    ```
-    This will:
-    - Copy all agent definitions to `.claude/agents/` maintaining directory structure
-    - Create act-as agent commands in `.claude/commands/act/` with special headers
-    - Copy all prompts to `.claude/commands/plx/`
+## 📚 WikiLinks
 
-3.  **Pull Latest Changes (Optional):**
-    To update your local copy with the latest changes from the main branch without using git:
-    ```bash
-    make pull main
-    ```
-    This will download and extract the latest version, overwriting local files.
+This framework uses [[Wiki Links]] to connect context documents, making it easy to navigate and understand relationships between different parts of your project.
 
-4.  **Watch for Changes (Optional):**
-    If you plan to develop new agents or prompts, you can run the watch script. It monitors the `agents/` and `prompts/` directories for changes and automatically re-runs the sync script.
-    ```bash
-    make watch claude
-    ```
-    *Note: `fswatch` is recommended for better performance. The script will fall back to a polling mechanism if it's not installed (`brew install fswatch` on macOS).*
+### Update Mechanism
+```bash
+plx pull main
+```
+Downloads latest version from GitHub without git.
 
-## 💡 Core Concepts
+### Makefile System
+`plx` is a wrapper around make:
+1. `plx init` downloads the framework
+2. All other commands pass through to `make`
 
--   **🤖 Agents:** Specialized AI assistants defined in the `agents/` directory. Each is tailored for a specific task (e.g., `code-review-agent`, `prd-agent`) with its own system prompt and instructions. Claude Code can delegate tasks to these agents automatically or upon request.
+Add custom commands to Makefile:
+```makefile
+deploy:
+	@echo "Deploying..."
+	# deployment logic
+```
+Then run: `plx deploy`
 
--   **📄 Templates:** Standardized markdown files located in `templates/` used to create consistent documentation for various project artifacts like user stories, milestones, and architectural designs.
+## 📦 Installation
 
--   **🌐 Context:** The `context/` directory stores documents that provide shared knowledge about the project's ecosystem, including platforms used (`supabase`, `codemagic`), team structures, and roles.
+### Option 1: NPM Package
 
--   **📜 Conventions:** Located in `conventions/`, these documents establish the rules, patterns, and guidelines for the project to ensure consistency and quality in code and processes.
+```bash
+npm install -g pew-pew-plx
+plx init
+plx sync claude
+```
+
+### Option 2: Git Clone
+
+```bash
+git clone https://github.com/its-brianwithai/pew-pew-plx.git
+cd pew-pew-plx
+make sync claude
+```
+
+## 🔧 Commands
+
+```bash
+plx init           # Download framework files
+plx sync claude    # Sync to Claude Code config
+plx sync claude clean  # Delete agents & commands + sync again
+```
+
+## 🎯 Pro Tips
+
+### 📎 Link Files in Commands
+When using writing commands, use @path/to/file.md without `backticks` to immediately trigger a read of the file(s) upon activation of the command.
 
 ## 🛠️ Scripts
 

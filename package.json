@@ -1,0 +1,51 @@
+{
+  "name": "pew-pew-plx",
+  "version": "1.0.0",
+  "description": "AI-powered project management framework with specialized agents, templates, and conventions for effective software development using Claude Code",
+  "type": "module",
+  "main": "lib/index.js",
+  "bin": {
+    "plx": "bin/plx.js"
+  },
+  "homepage": "https://pewpewprompts.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/its-brianwithai/pew-pew-projects.git"
+  },
+  "keywords": [
+    "productivity",
+    "documentation",
+    "automation",
+    "ai",
+    "templates",
+    "project-management",
+    "developer-tools",
+    "cursor",
+    "agents",
+    "prompts",
+    "ai-agents",
+    "development-framework",
+    "prompt-engineering",
+    "ai-agents-framework",
+    "prompt-templates",
+    "markdown-templates",
+    "cursor-ai",
+    "claude-code",
+    "agent-templates",
+    "context-engineering"
+  ],
+  "author": "its-brianwithai <its@brianwithai.com>",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "lib",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "node-fetch": "^3.3.2"
+  }
+}

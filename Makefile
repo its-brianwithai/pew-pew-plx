@@ -17,14 +17,20 @@ endif
 pull:
 ifeq ($(word 2,$(MAKECMDGOALS)),main)
 	@echo "📥 Pulling latest from main branch..."
-	@curl -L https://github.com/its-brianwithai/pew-pew-projects/archive/refs/heads/main.zip -o .fetched_repo.zip
+	@curl -L https://github.com/its-brianwithai/pew-pew-plx/archive/refs/heads/main.zip -o .fetched_repo.zip
 	@echo "📦 Extracting files..."
 	@unzip -q .fetched_repo.zip
 	@echo "📁 Updating project files..."
-	@cp -R pew-pew-projects-main/* .
-	@cp -R pew-pew-projects-main/.[^.]* . 2>/dev/null || true
+	@# Copy everything except what's in .plxignore
+	@cd pew-pew-plx-main && \
+	if [ -f .plxignore ]; then \
+		rsync -av --exclude-from=.plxignore . ../ ; \
+	else \
+		cp -R * ../ ; \
+		cp -R .[^.]* ../ 2>/dev/null || true ; \
+	fi
 	@echo "🧹 Cleaning up..."
-	@rm -rf pew-pew-projects-main .fetched_repo.zip
+	@rm -rf pew-pew-plx-main .fetched_repo.zip
 	@echo "✅ Pull complete!"
 else
 	@echo "Usage: make pull main"
