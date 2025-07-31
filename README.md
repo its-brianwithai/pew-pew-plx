@@ -9,7 +9,11 @@ AI - project management - context engineering - with large collection - prompts,
 
 ### 💬 Prompting
 
-- `agents/`: AI (sub-)agents for different tasks (idea, plan, act, review).
+- `agents/`: AI (sub-)agents organized by workflow phase:
+  - `discovery/`: Research and idea exploration agents
+  - `plan/`: Planning and documentation agents
+  - `act/`: Action and implementation agents
+  - `review/`: Code review and work log agents
 - `prompts/`: Reusable prompts for Claude Code commands.
 - `templates/`: Markdown templates for documentation.
 
