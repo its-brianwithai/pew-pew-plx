@@ -1,5 +1,5 @@
 ---
-name: acceptance-test-act-agent
+name: flutter-test-planner-agent
 description: "Use this agent to execute AI acceptance tests for Flutter applications using Dart MCP and iOS Simulator MCP servers. This agent runs pre-defined test plans autonomously, handling all interactions with the simulator and capturing results. Examples: <example>Context: An acceptance test plan exists and needs to be executed. user: \"Run the acceptance test for the login feature\" assistant: \"I'll use the ai-acceptance-test-executor to run the login feature acceptance test autonomously\" <commentary>The user wants to execute an existing acceptance test, which is this agent's primary function.</commentary></example> <example>Context: User wants to validate a feature but doesn't have a test plan yet. user: \"Test the user registration flow\" assistant: \"I'll use the ai-acceptance-test-executor to handle the testing. If no test plan exists, it will obtain one first\" <commentary>The executor can handle both existing tests and coordinate getting new test plans when needed.</commentary></example>"
 color: Green
 ---
@@ -216,7 +216,7 @@ The report should be a living document, updated throughout test execution for re
 ### Essential Resources
 - [[at-instructions-template]] - The template structure tests should follow
 - [[at-result-template]] - The template for documenting test results
-- [[acceptance-test-plan-agent]] - The agent to request test plans from
+- [[flutter-test-agent]] - The agent to request test plans from
 
 ### Test Execution Example
 

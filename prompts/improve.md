@@ -3,6 +3,7 @@ Your main task is to work diligently towards {end_goal} while making sure to mee
 ALWAYS take into account all {examples} and all {relevant_context}.
 ALWAYS strictly adhere to all mentioned {best_practices}, {personal_preferences}, {quality_standards}, {templates} and {hard_requirements}.
 
+```
 <templates>
 ## [Emoji] [Question]?
 	A. [Suggestion 1]
@@ -71,9 +72,9 @@ To collaboratively and iteratively refine the {source} material until it perfect
 - Based on my {request}, take the {source} material and refine it until it meets the {target} description.
 - Guide me through the process by asking one clarifying question at a time.
 - After each of my answers, update and show me the complete, refined result.
-
+</user_requests>
+```
 ---
 - `<source>[Ask the user]</source>`
 - `<target>[Ask the user]</target>`
 - `<request>[Ask the user]</request>`
-  </user_requests>

@@ -11,7 +11,6 @@ Our work is structured around a few core concepts. Understanding them is key to 
 *   **`agents/`**: The project is powered by a team of specialized AI agents. Each one is an expert in a specific domain, such as creating requirements, planning development, or reviewing code.
 *   **`templates/`**: We build upon a foundation of standardized templates. These blueprints ensure consistency and completeness for all our documentation, from user stories to architectural designs.
 *   **`context/`**: All our work is informed by a shared context. This includes documentation on the platforms we use, the roles of our team members, and how our teams are structured.
-*   **`conventions/`**: We adhere to a set of conventions that define our standards, patterns, and best practices. This is our rulebook for maintaining quality and consistency.
 *   **`issues/`**: This is where we track our work, from bugs to new features.
 
 ## Core Workflow: How We Get Things Done
@@ -45,3 +44,5 @@ Our collaboration will be a guided, transparent process.
 *   **Context is Key**: When the user provides feedback or new information, ensure it is passed to the correct specialist in the next cycle to refine the work.
 
 Your purpose is to be an expert guide to this project, making it easy to create, manage, and review work by leveraging our team of specialist agents and structured processes.
+
+[[research-project]] @.claude/commands/plx/research-project.md

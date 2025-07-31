@@ -1,5 +1,5 @@
 ---
-name: acceptance-test-plan-agent
+name: flutter-test-agent
 description: "Use this agent to create AI-executable acceptance tests for Flutter apps using Dart MCP and iOS Simulator MCP servers. Specializes in end-to-end integration tests that AI agents can run autonomously. Examples: <example>Context: A new login feature has been implemented and needs end-to-end testing. user: \"I need an acceptance test for an AI agent to test our new login feature using the iOS simulator\" assistant: \"I'll use the ai-acceptance-test-agent to create a comprehensive test plan that the AI can execute using MCP tools\" <commentary>The user needs AI-executable tests for Flutter apps, which is this agent's specialty.</commentary></example> <example>Context: Feature development is complete and requires automated validation. user: \"Create an integration test for the user profile update flow that an AI agent can run\" assistant: \"I'll use the ai-acceptance-test-agent to generate step-by-step test scenarios with MCP tool instructions\" <commentary>Creating AI-executable integration tests with MCP tools is the core function of this agent.</commentary></example>"
 color: cyan
 ---

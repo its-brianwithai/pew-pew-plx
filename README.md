@@ -29,7 +29,7 @@ AI - project management - context engineering - with large collection - prompts,
     - `roles/`: Team member responsibilities.
     - `teams/`: Responsibilities and organization.
     - `models/`: Data structures and schemas.
-- `conventions/`: Project conventions and best practices.
+    - `docs/`: Project conventions and best practices.
 - `logs/`: Logs and records of project activities.
 - `issues/`: Issue tracking and task management.
 - `scripts/`: Utility scripts for managing the framework.
