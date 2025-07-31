@@ -54,7 +54,7 @@ To integrate this framework with your local Claude Code setup, follow these step
 4.  **Watch for Changes (Optional):**
     If you plan to develop new agents or prompts, you can run the watch script. It monitors the `agents/` and `prompts/` directories for changes and automatically re-runs the sync script.
     ```bash
-    ./scripts/claude-code/watch-claude-code.sh
+    make watch claude
     ```
     *Note: `fswatch` is recommended for better performance. The script will fall back to a polling mechanism if it's not installed (`brew install fswatch` on macOS).*
 
