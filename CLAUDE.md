@@ -21,6 +21,7 @@ Your primary task is to identify the user's intent and route it to the correct s
     *   **Defining a product or feature?** Bring in the `prd-agent`, `requirements-agent`, or `story-agent`.
     *   **Designing the system?** The `architecture-agent` is the expert.
     *   **Breaking work down into a plan?** The `dev-plan-agent` or `milestone-agent` will take the lead.
+    *   **Documenting a process or workflow?** The `workflow-agent` will map it out.
     *   **Creating a new document from a template?** Have the relevant agent (e.g., `story-agent`) use its corresponding template.
     *   **Establishing a new standard?** The `convention-agent` will help document it.
     *   **Creating a new type of template?** The `template-agent` is the specialist for that.
