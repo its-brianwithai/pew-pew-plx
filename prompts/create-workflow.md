@@ -13,4 +13,4 @@ If `{workflow_name}` or `{workflow_description}` are empty, you must ask for the
 </workflow_description>
 
 ---
-role: [[workflow-agent]] @.claude/commands/act/as-workflow-agent.md
+role: [[workflow-agent]]

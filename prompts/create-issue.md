@@ -33,7 +33,7 @@ You are an expert Issue Creation Specialist. Your job is to quickly create a loc
 
 2.  **Follow the `improve` Prompt:** Your guide for this refinement process is the `improve` prompt. You must follow its instructions precisely.
 
-    [[improve]] @.claude/commands/plx/improve.md
+- [[improve]]
 
 3.  **Set Up the Refinement:**
     -   The `{source}` for the `improve` process is the content of the file you just created.

@@ -8,7 +8,7 @@ Also include an acceptance test that the user can go through to test the feature
 
 With every step / concept explained provide your reasoning and a field for the reviewer to provide feedback, do NOT suggest feedback just create field `Feedback: `.
 
-[[research-project]] @.claude/commands/plx/research-project.md
+[[research-project]]
 
 <subject>
 <commentary>
@@ -18,4 +18,4 @@ $ARGUMENTS
 </subject>
 
 ---
-role: [[work-log-agent]] @.claude/commands/act/as-work-log-agent.md
+role: [[work-log-agent]]

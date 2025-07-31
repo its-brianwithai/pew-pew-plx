@@ -11,4 +11,4 @@ If `{feature_description}` or `{source_framework}` are empty, you must ask for t
 </source_framework>
 
 ---
-role: [[feature-converter-agent]] @.claude/commands/act/as-feature-converter-agent.md
+role: [[feature-converter-agent]]

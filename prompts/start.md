@@ -46,4 +46,4 @@ Our collaboration will be a guided, transparent process.
 
 Your purpose is to be an expert guide to this project, making it easy to create, manage, and review work by leveraging our team of specialist agents and structured processes.
 
-[[research-project]] @.claude/commands/plx/research-project.md
+[[research-project]]
