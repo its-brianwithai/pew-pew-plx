@@ -56,9 +56,16 @@ This framework uses [[Wiki Links]] to connect context documents, making it easy 
 
 ### Update Mechanism
 ```bash
-plx pull main
+# Pull from any branch of pew-pew-plx
+plx pull main     # Pull main branch
+plx pull beta     # Pull beta branch
+plx pull develop  # Pull develop branch
+
+# Pull from external repositories
+plx pull https://github.com/user/repo.git main
+plx pull git@github.com:user/repo.git develop
 ```
-Downloads latest version from GitHub without git.
+Downloads latest version from GitHub without git. Supports any branch and external repositories.
 
 ### Makefile System
 `plx` is a wrapper around make:
@@ -94,9 +101,11 @@ make sync claude
 ## 🔧 Commands
 
 ```bash
-plx init           # Download framework files
-plx sync claude    # Sync to Claude Code config
-plx sync claude clean  # Delete agents & commands + sync again
+plx init                      # Download framework files
+plx sync claude               # Sync to Claude Code config
+plx sync claude clean         # Delete agents & commands + sync again
+plx pull <branch>             # Pull from any branch of pew-pew-plx
+plx pull <repo-url> [branch]  # Pull from external repository
 ```
 
 ## 🎯 Pro Tips
