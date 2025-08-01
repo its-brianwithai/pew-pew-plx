@@ -1,3 +1,9 @@
+---
+name: refinement-prd-template
+description: Use this template when creating comprehensive Product Requirements Documents (PRDs) for projects or features, providing structure for goals, requirements, design specifications, and completion criteria.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
+---
+
 # 📄 Product Requirements Document (PRD)
 
 ## 🎯 I. Introduction & Purpose
@@ -11,10 +17,6 @@ This template is designed to be flexible, catering to both broad, project-scoped
 
 ### B. Purpose of *This Specific* PRD
 > 💡 *Clearly state whether this PRD covers an entire project/release or a specific feature. Define the high-level objective of what is being documented.*
->
-> **Example (Project Scope):** "This PRD outlines the requirements for the initial release (MVP) of 'ConnectSphere', a professional networking platform focusing on core user profile creation, connection requests, and a basic activity feed."
->
-> **Example (Feature Scope):** "This PRD details the requirements for implementing the 'Real-time Collaboration' feature within the existing 'TaskMaster' platform, enabling users to communicate and edit documents together."
 ---
 [Your specific purpose here]
 
@@ -34,22 +36,11 @@ This includes, but is not limited to:
 
 ### A. Product Vision & Strategic Fit
 > 💡 *Briefly describe the overall vision for the product or how this specific feature fits into the larger product vision and company strategy. Answer "Why are we doing this?" This section sets the strategic context.*
->
-> **Example (Project Scope):** "'ConnectSphere' aims to be the leading platform for professional networking within the creative industries by fostering genuine connections through shared portfolio work. This aligns with the company's strategic goal of expanding into the creative professional market segment (Objective KR2.1)."
->
-> **Example (Feature Scope):** "The 'Real-time Collaboration' feature directly supports TaskMaster's strategic objective of increasing user engagement and collaboration within the platform (Strategy Pillar 3). By enabling seamless communication, we aim to reduce reliance on external tools and make TaskMaster the central hub for project work."
 ---
 [Your product vision and strategic fit here]
 
 ### B. Business Objectives & Success Metrics
 > 💡 *List specific, measurable, achievable, relevant, and time-bound (SMART) goals for this project/feature. Define the Key Performance Indicators (KPIs) or metrics that will be used to measure success.*
->
-> **Example Goals & Metrics:**
-> *   **Goal 1:** Increase user sign-up conversion rate.
-      >     *   **Metric:** Achieve a 15% increase in the sign-up completion rate within 3 months post-launch.
-> *   **Goal 2:** Improve user engagement with the new feature.
-      >     *   **Metric:** Achieve an average of 5 interactions per active user per week with the new feature within the first month.
->     *   **Metric:** 70% adoption rate of the feature among active users within 2 months.
 ---
 [Your business objectives and success metrics here]
 
@@ -62,7 +53,6 @@ This includes, but is not limited to:
 ---
 *   [[refinement-architecture-template]] - (Relevance: Overall system architecture and technical decisions)
 *   [path/to/existing/feature_module/] - (Relevance: If enhancing an existing feature, provide path to its code/process)
-*   *Example: [[analytics-service-script]] - (Relevance: For integrating new analytics events)*
 
 ## 🌐 Relevant Documentation & Links
 > 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
@@ -70,14 +60,12 @@ This includes, but is not limited to:
 *   [Link to Company Strategic Goals Document] - (Relevance: For understanding strategic fit)
 *   [[persona-docs]] - (Relevance: For understanding target users)
 *   [Link to Figma/Sketch designs for this PRD's scope] - (Relevance: UI/UX specifications)
-*   *Example: https://www.w3.org/TR/WCAG/ - (Relevance: For defining accessibility requirements)*
 
 ## 💡 Other Key Information
 > 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
 ---
 *   [Context point 1: e.g., This PRD supersedes the previous draft version 0.9.]
 *   [Context point 2: e.g., The primary NFR to focus on is performance on low-end devices/slow connections.]
-*   *Example: All user-facing text must be reviewed by the localization team before implementation.*
 
 ## 📑 III. Document Metadata
 > 💡 *Fill in the administrative details for this specific PRD.*
@@ -109,12 +97,10 @@ This includes, but is not limited to:
 *   **Primary Persona(s):**
     > 💡 *Describe the main user(s) this product/feature is designed for. Their needs should be the primary focus.*
     ---
-    *   **Example:** *Creative Professional (Freelance Graphic Designer):* Needs to easily showcase portfolio work, connect with potential clients, and manage project inquiries efficiently. Values intuitive UI and seamless experience.
     *   `[Primary Persona 1 Name/Type]: [Description]`
 *   **Secondary Persona(s):**
     > 💡 *Describe other users who might interact with the product/feature, but whose needs are not the central focus.*
     ---
-    *   **Example:** *Recruiter/Client:* Needs to quickly browse portfolios, assess skills, and initiate contact with creative professionals. Values efficient search and clear contact information.
     *   `[Secondary Persona 1 Name/Type]: [Description]`
 
 *   **(Link to detailed Persona documents/research if they exist):** [[persona-docs]]
@@ -128,22 +114,20 @@ This includes, but is not limited to:
 | Feature/Story ID              | Description                                                                                                | Priority (MoSCoW) | Rationale/Notes                                           |
 | :------------------------------|:-----------------------------------------------------------------------------------------------------------|:------------------|:----------------------------------------------------------|
 | **Must-have**                 | *(Essential for the core purpose/viability of this release)*                                              |                   |                                                           |
-| `[US-ID-001]`                 | `[As a user, I want to create an account using email/password, so that I can log in.]`                     | Must              | `[Core functionality required for any user interaction.]` |
-| `[FEAT-ID-001]`               | `[As a workspace member, I want to send a text message in a channel, so that I can communicate with my team.]` | Must              | `[Minimum viable chat functionality.]`                    |
+| `[US-ID-001]`                 | `[User story description]`     | Must              | `[Rationale for must-have]` |
 | **Should-have**               | *(Important, but not critical for launch; workarounds may exist)*                                         |                   |                                                           |
-| `[US-ID-002]`                 | `[As a user, I want to reset my password if forgotten, so that I can regain access.]`                      | Should            | `[Important for user recovery, but launch possible without.]` |
-| `[FEAT-ID-002]`               | `[As a workspace member, I want to see typing indicators, so that I know when someone is replying.]`        | Should            | `[Enhances UX, but basic communication works without it.]`|
+| `[US-ID-002]`                 | `[User story description]`      | Should            | `[Rationale for should-have]` |
 | **Could-have**                | *(Desirable, but less important; included if time/resources permit)*                                      |                   |                                                           |
-| `[FEAT-ID-003]`               | `[As a workspace member, I want to react to messages with emojis, so that I can provide quick feedback.]`   | Could             | `[Nice-to-have engagement feature.]`                      |
+| `[FEAT-ID-003]`               | `[Feature description]`   | Could             | `[Rationale for could-have]`                      |
 | **Won't-have (This Release)** | *(Explicitly excluded from this specific release)*                                                        |                   |                                                           |
-| `[FEAT-ID-004]`               | `[Direct (1-to-1) messaging between users.]`                                                                | Won't             | `[Deferred to v2.1 release.]`                             |
+| `[FEAT-ID-004]`               | `[Feature description]`                                                                | Won't             | `[Reason for exclusion]`                             |
 
 ### B. Out of Scope
 > 💡 *Explicitly list features, functionalities, or user requests that are NOT included in this specific release. Note if they are deferred.*
 ---
-*   `[Integration with third-party project management tools.]`
-*   `[Advanced user permission roles beyond 'Admin' and 'Member'.]`
-*   `[Offline support for real-time features (deferred to future release).]`
+*   `[Feature 1 that is out of scope]`
+*   `[Feature 2 that is out of scope]`
+*   `[Feature 3 that is deferred to future release]`
 
 ## ⚙️ VI. Requirements
 > 💡 *This section forms the core of the PRD, detailing *what* the product or feature needs to do (functional requirements) and *how* it should perform (non-functional requirements).*
@@ -153,59 +137,55 @@ This includes, but is not limited to:
 >
 > *(List the detailed user stories derived from the 'In Scope' features. Link stories to Epics if applicable.)*
 ---
-**Example User Story:**
-*   **ID:** `US-001`
+**User Story Template:**
+*   **ID:** `[US-XXX]`
 *   **Epic Link:** [[epic-name]]
-*   **User Story:** As a new user, I want to create an account using my email address and a password, so that I can log in and access the application's features.
+*   **User Story:** [As a [user type], I want to [action], so that [benefit/reason].]
 *   **Acceptance Criteria:**
-    *   **Given** I am on the Sign-Up page/screen
-    *   **When** I enter a valid email address (format check)
-    *   **And** I enter a password meeting complexity requirements (e.g., min 8 chars)
-    *   **And** I confirm the password
-    *   **And** I click the "Sign Up" button
-    *   **Then** my account is created in the system.
-    *   **And** I am automatically logged in.
-    *   **And** I am redirected to the application's main dashboard/home screen.
-    *   *(Add more criteria for error handling, edge cases, etc.)*
+    *   **Given** [context/precondition]
+    *   **When** [action/trigger]
+    *   **And** [additional condition]
+    *   **Then** [expected outcome]
+    *   **And** [additional outcome]
 
 `[List your user stories here]`
 
 ### B. Functional Requirements
 > 💡 *Functional requirements define *what* the system must do. This section can explicitly list system-level functions or business rules not fully captured in user stories.*
 ---
-*   **FR-01 (Data Validation):** `[All user-inputted text fields must be sanitized to prevent common injection attacks.]`
-*   **FR-02 (Business Rule):** `[User accounts inactive for more than 12 months must be flagged for potential deactivation.]`
-*   **FR-03 (Admin Function):** `[System administrators must have the capability to view system logs via an admin dashboard.]`
+*   **FR-01:** `[Functional requirement description]`
+*   **FR-02:** `[Functional requirement description]`
+*   **FR-03:** `[Functional requirement description]`
 
 ### C. Non-Functional Requirements (NFRs) / Quality Attributes
 > 💡 *NFRs define *how* the system should perform, focusing on qualities like performance, security, usability, and reliability. These are critical and should be as specific and measurable as possible.*
 ---
 *   **Performance:**
-    *   **NFR-PERF-01:** `[Key user interactions (e.g., page loads, search results) must complete in under X seconds on a standard connection.]`
-    *   **NFR-PERF-02:** `[System response times for primary data reads must average below Y ms under normal load conditions.]`
+    *   **NFR-PERF-01:** `[Performance requirement with specific metrics]`
+    *   **NFR-PERF-02:** `[Performance requirement with specific metrics]`
 *   **Scalability:**
-    *   **NFR-SCAL-01:** `[The system must support efficient querying for up to X users and Y data points without significant performance degradation.]`
-    *   **NFR-SCAL-02:** `[The system must be able to handle peak loads up to N times the average daily traffic without failure.]`
+    *   **NFR-SCAL-01:** `[Scalability requirement]`
+    *   **NFR-SCAL-02:** `[Scalability requirement]`
 *   **Reliability:**
-    *   **NFR-REL-01:** `[The core services must maintain X% uptime availability.]`
-    *   **NFR-REL-02:** `[Critical user actions (e.g., submitting a form, making a purchase) must have a success rate of > Y%.]`
-    *   **NFR-REL-03:** `[The system must gracefully handle network interruptions where possible and notify the user.]`
+    *   **NFR-REL-01:** `[Reliability requirement]`
+    *   **NFR-REL-02:** `[Reliability requirement]`
+    *   **NFR-REL-03:** `[Reliability requirement]`
 *   **Usability & Accessibility:**
-    *   **NFR-USE-01:** `[The interface should be intuitive and require minimal training for the target user persona.]`
-    *   **NFR-ACC-01:** `[All interactive elements must have a minimum target size for easy interaction (e.g., 44x44 pixels).]`
-    *   **NFR-ACC-02:** `[Text contrast ratios must meet WCAG AA guidelines.]`
-    *   **NFR-ACC-03:** `[All interactive elements and important informational content must be keyboard-navigable and have appropriate labels for screen readers.]`
+    *   **NFR-USE-01:** `[Usability requirement]`
+    *   **NFR-ACC-01:** `[Accessibility requirement]`
+    *   **NFR-ACC-02:** `[Accessibility requirement]`
+    *   **NFR-ACC-03:** `[Accessibility requirement]`
 *   **Security:**
-    *   **NFR-SEC-01:** `[User authentication is required for all non-public sections.]`
-    *   **NFR-SEC-02:** `[The system must enforce least-privilege access; users should only be able to access data they are authorized to see.]`
-    *   **NFR-SEC-03:** `[All data transmission between client and server must use encryption (e.g., HTTPS/TLS).]`
-    *   **NFR-SEC-04:** `[Sensitive data must be encrypted at rest. API keys/secrets must be stored securely and not exposed on the client-side.]`
+    *   **NFR-SEC-01:** `[Security requirement]`
+    *   **NFR-SEC-02:** `[Security requirement]`
+    *   **NFR-SEC-03:** `[Security requirement]`
+    *   **NFR-SEC-04:** `[Security requirement]`
 *   **Maintainability & Testability:**
-    *   **NFR-MAIN-01:** `[Work must adhere to established project conventions and style guides.]`
-    *   **NFR-TEST-01:** `[Critical business logic must be covered by automated tests.]`
+    *   **NFR-MAIN-01:** `[Maintainability requirement]`
+    *   **NFR-TEST-01:** `[Testability requirement]`
 *   **Compatibility:**
-    *   **NFR-COMP-01:** `[The application must function correctly on the latest versions of major web browsers (Chrome, Firefox, Safari, Edge) or specified operating systems.]`
-    *   **NFR-COMP-02:** `[The UI must be responsive and adapt gracefully to common screen sizes (desktop, tablet, mobile).]`
+    *   **NFR-COMP-01:** `[Compatibility requirement]`
+    *   **NFR-COMP-02:** `[Compatibility requirement]`
 
 ## 🎨 VII. Design & User Experience (UX)
 > 💡 *This section provides visual and interaction context. Link concrete design artifacts to reduce ambiguity.*
@@ -220,7 +200,7 @@ This includes, but is not limited to:
 *   **Key Workflow Descriptions/Diagrams:**
     > 💡 *(Optional: If a complex flow isn't fully clear from user stories/prototypes, include a flowchart or step-by-step description here.)*
     ---
-    *   **Example:** *User Onboarding Flow:* `[Embed or link to flowchart showing steps from app launch -> sign-up/login -> initial profile setup -> main dashboard].`
+    *   **[Workflow Name]:** `[Description or diagram of key user workflow]`
 
 ## ⚙️ VIII. System & Data Specifications
 > 💡 *This section details requirements related to the system's structure, data handling, and technical interactions.*
@@ -241,16 +221,16 @@ This includes, but is not limited to:
 > 💡 *Identifying assumptions, constraints, and dependencies early helps in risk management and realistic planning.*
 ---
 *   **Assumptions:**
-    *   `[Users will have reliable internet connectivity for real-time features.]`
-    *   `[The existing infrastructure can support the initial launch traffic.]`
+    *   `[Assumption 1]`
+    *   `[Assumption 2]`
 *   **Constraints:**
-    *   **Budget:** `[Project must be completed within the allocated budget of $X.]`
-    *   **Timeline:** `[Target completion date is YYYY-MM-DD.]`
-    *   **Resources:** `[Development team consists of X engineers.]`
-    *   **Technology:** `[Must use the existing technology stack unless a change is explicitly approved.]`
+    *   **Budget:** `[Budget constraint]`
+    *   **Timeline:** `[Timeline constraint]`
+    *   **Resources:** `[Resource constraint]`
+    *   **Technology:** `[Technology constraint]`
 *   **Dependencies:**
-    *   **Internal:** `[Requires final UI designs from the Design Team by YYYY-MM-DD.]`
-    *   **External:** `[Relies on the availability of a third-party payment gateway API.]`
+    *   **Internal:** `[Internal dependency]`
+    *   **External:** `[External dependency]`
 
 ## ✅ X. Completion Criteria
 > 💡 *This section defines the specific, measurable conditions that must be met for the product or feature to be considered complete. These criteria serve as the final quality gate.*
@@ -280,15 +260,15 @@ This includes, but is not limited to:
 ---
 | ID   | Question                                                                 | Raised By       | Date Raised | Assigned To     | Due Date   | Status   | Answer/Resolution (Link)         |
 | :--- | :----------------------------------------------------------------------- | :-------------- | :---------- | :-------------- | :--------- | :------- | :------------------------------- |
-| Q-01 | `[What is the specific password complexity requirement from Security?]`    | `[John Smith (TL)]` | `YYYY-MM-DD`  | `[Security Team]` | `YYYY-MM-DD` | `[Answered]` | [Link to answer/decision]      |
-| Q-02 | `[How should the system handle simultaneous edit conflicts on shared data?]`| `[Design Team]`   | `YYYY-MM-DD`  | `[Jane Doe (PM)]` | `YYYY-MM-DD` | `[Open]`   | `[Needs discussion w/ Eng & Design]` |
+| Q-01 | `[Question description]`    | `[Name]` | `YYYY-MM-DD`  | `[Assignee]` | `YYYY-MM-DD` | `[Status]` | [Link to answer/decision]      |
+| Q-02 | `[Question description]`| `[Name]`   | `YYYY-MM-DD`  | `[Assignee]` | `YYYY-MM-DD` | `[Status]`   | `[Resolution notes]` |
 
 ### B. Potential Future Enhancements / Next Steps
 > 💡 *List ideas, features, or iterations considered but deferred from this release. Link back to 'Out of Scope' items where relevant.*
 ---
-*   `[Implement direct (1-to-1) messaging (See Scope: FEAT-ID-004).]`
-*   `[Add Google OAuth sign-in option.]`
-*   `[Develop advanced search capabilities.]`
+*   `[Future enhancement 1]`
+*   `[Future enhancement 2]`
+*   `[Future enhancement 3]`
 
 ## 📚 XII. Appendix / Glossary
 > 💡 *This section provides supplementary information and definitions to aid understanding.*

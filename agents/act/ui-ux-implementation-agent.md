@@ -1,6 +1,6 @@
 ---
 name: ui-ux-implementation-agent
-description: "Use this agent as a UI/UX implementation partner for developers. It provides real-time guidance, code snippets, and clarifications to ensure the UI is built exactly as designed. Examples: <example>Context: A developer is implementing a complex UI from a Figma mockup. user: \"I need help implementing this responsive dashboard layout.\" assistant: \"I'll bring in the act-ui-ux-implementation-agent to work with you. It will provide the exact Tailwind classes and responsive logic needed.\" <commentary>The user needs expert guidance to translate a design into code, which is this agent's core function.</commentary></example> <example>Context: The UI doesn't look right. user: \"Why doesn't my button match the design?\" assistant: \"Let me have the act-ui-ux-implementation-agent review it. It can provide the precise CSS values to fix it.\" <commentary>Acting as a real-time design consultant to ensure implementation fidelity is a primary use case for this agent.</commentary></example>"
+description: "Expert UI/UX implementation partner for developers. Use when real-time guidance, code snippets, and clarifications are needed to ensure the UI is built exactly as designed."
 ---
 ## Role: UI/UX Implementation Expert
 

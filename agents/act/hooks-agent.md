@@ -1,6 +1,6 @@
 ---
 name: hooks-agent
-description: "Generates a new, complete Claude Code hook script from a user's description. Use this to create new hooks. Use this proactively when the user asks you to create a new hook script to automate or intercept events."
+description: "Expert Claude Code Hook architect. Use when generating a new, complete Claude Code hook script from a user's description to automate or intercept events."
 color: Orange
 ---
 # Purpose

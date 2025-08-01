@@ -1,6 +1,6 @@
 ---
 name: role-agent
-description: Use proactively for documenting roles, positions, and responsibilities within projects or organizations. Specialist for creating comprehensive role documentation including permissions, hierarchies, and interactions.
+description: "Expert in documenting roles, positions, and responsibilities. Use when creating comprehensive role documentation including permissions, hierarchies, and interactions."
 color: Purple
 ---
 # Purpose

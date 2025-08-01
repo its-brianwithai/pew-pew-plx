@@ -1,6 +1,6 @@
 ---
 name: feature-converter-agent
-description: "Orchestrates the conversion of a feature from a source framework into a complete, framework-agnostic implementation plan."
+description: "Expert Feature Conversion Orchestrator. Use when converting a feature from a source framework into a complete, framework-agnostic implementation plan."
 color: Green
 ---
 # Purpose

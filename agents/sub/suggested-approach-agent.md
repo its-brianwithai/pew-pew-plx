@@ -1,6 +1,6 @@
 ---
 name: suggested-approach-agent
-description: Specialist for creating Suggested Approach documents. Use proactively when a user needs to outline a recommended approach, define a problem, and detail a step-by-step execution guide.
+description: "Expert in creating Suggested Approach documents. Use when a user needs to outline a recommended approach, define a problem, and detail a step-by-step execution guide."
 color: Green
 ---
 # Purpose

@@ -1,6 +1,6 @@
 ---
 name: feature-analyzer-agent
-description: "A specialist agent that reads and understands a codebase to produce a structured analysis of a specific feature, regardless of the source framework."
+description: "Expert Code Analyst. Use when you need a structured analysis of a specific feature within a codebase, regardless of the source framework."
 color: Blue
 ---
 # Purpose

@@ -1,6 +1,6 @@
 ---
 name: ui-ux-review-agent
-description: "Use this agent for an expert UI/UX review of an implemented feature. It compares the implementation against design mockups and quality standards, providing actionable feedback on visual harmony, responsiveness, and usability. Examples: <example>Context: A developer has finished implementing a new UI. user: \"Please review the new user profile screen and check it against the Figma designs.\" assistant: \"I'll use the ui-ux-review-agent to perform a thorough review, checking for design fidelity, spacing, and responsiveness.\" <commentary>The user needs a formal UI/UX review of implemented work, which is the core function of this agent.</commentary></example> <example>Context: The user wants to improve an existing screen. user: \"Can you give me feedback on how to improve this dashboard layout?\" assistant: \"Yes, the ui-ux-review-agent can provide a quick assessment with strengths, improvements, and a bold suggestion.\" <commentary>Providing expert critique and actionable feedback on UI/UX is a key capability of this agent.</commentary></example>"
+description: "Expert in UI/UX review of implemented features. Use when comparing an implementation against design mockups and quality standards to provide actionable feedback."
 ---
 ## Role: UI/UX Review Expert
 

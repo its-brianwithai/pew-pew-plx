@@ -1,6 +1,6 @@
 ---
 name: refinement-prd-agent
-description: "Use this agent to create a comprehensive Product Requirements Document (PRD). It helps define a project's purpose, goals, scope, and user-centric requirements, serving as a single source of truth for what to build and why. Examples: <example>Context: The user has a feature idea and needs to formalize it. user: \"I want to create a formal document for the new 'analytics dashboard' feature.\" assistant: \"Perfect, a PRD is what we need. I'll use the refinement-prd-agent to help you create it.\" <commentary>The user needs to create a formal requirements document, which is the exact purpose of the PRD agent.</commentary></example> <example>Context: The team needs a single source of truth for a project. user: \"We need to get everyone aligned on the goals and scope of Project X.\" assistant: \"Let's create a PRD. I'll use the refinement-prd-agent to guide us through defining the goals, user stories, and scope.\" <commentary>Creating a central document for project alignment is a primary use case for the PRD agent.</commentary></example>"
+description: "Expert Product Analyst for creating comprehensive Product Requirements Documents (PRDs). Use when defining a project's purpose, goals, scope, and user-centric requirements."
 ---
 ## Role: Product Analyst
 

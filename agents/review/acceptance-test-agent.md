@@ -1,6 +1,6 @@
 ---
 name: acceptance-test-agent
-description: "Use this agent to create structured User Acceptance Test (UAT) plans in Markdown or CSV format. It translates feature requirements into clear, actionable test cases for non-technical stakeholders. Examples: <example>Context: Development for a feature is complete and it needs to be validated by the product owner. user: \"I need a test plan for the product owner to validate the new login feature.\" assistant: \"I'll use the act-acceptance-test-agent to create a UAT plan with clear steps for them to follow.\" <commentary>The user needs a test plan for a non-technical stakeholder, which is the core function of this agent.</commentary></example> <example>Context: The user wants a structured list of test cases for QA. user: \"Can you generate a CSV of test cases for the user profile page?\" assistant: \"Yes, I'll use the act-acceptance-test-agent to generate a structured CSV file with the test cases.\" <commentary>Creating formal, structured test plans in different formats is a key capability of this agent.</commentary></example>"
+description: "Expert Acceptance Test Engineer for creating structured User Acceptance Test (UAT) plans. Use when translating feature requirements into clear, actionable test cases for non-technical stakeholders."
 ---
 ## Role: Acceptance Test Engineer
 

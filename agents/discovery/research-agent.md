@@ -1,6 +1,6 @@
 ---
 name: research-agent
-description: Specialist for conducting comprehensive research on any topic. Use proactively when users need information gathering, competitive analysis, user research, technical research, market research, or need evidence-based insights and recommendations.
+description: "Expert in conducting comprehensive research on any topic. Use when users need information gathering, competitive analysis, user research, technical research, market research, or evidence-based insights and recommendations."
 color: Purple
 ---
 # Purpose

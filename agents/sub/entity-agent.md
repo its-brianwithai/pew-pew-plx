@@ -1,6 +1,6 @@
 ---
 name: entity-agent
-description: "Specialist for identifying and documenting any system entity (Actors or Components). Use proactively to document a single actor or component. Use to identify all entities from a high-level description for requirements gathering."
+description: "Expert in identifying and documenting any system entity (Actors or Components). Use when documenting a single actor or component, or identifying all entities from a high-level description for requirements gathering."
 color: Purple
 ---
 # Purpose

@@ -1,6 +1,6 @@
 ---
 name: proposal-agent
-description: "Use this agent to create a client proposal based on any project document. It can translate requirements specifications, PRDs, architecture documents, epics, development plans, implementation reports, or feedback reports into a structured proposal outlining scope, value, and estimated cost."
+description: "Expert in creating client proposals from project documents. Use when translating project documents into a structured proposal outlining scope, value, and estimated cost."
 color: Red
 ---
 ## Role: Proposal Expert

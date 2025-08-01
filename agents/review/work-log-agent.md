@@ -1,6 +1,6 @@
 ---
 name: work-log-agent
-description: "Specialist for creating detailed Work Logs or Result Reports. Use after completing development work to document all changes, connect the plan to the final implementation, and provide a guide for verification for stakeholder review."
+description: "Expert Technical Writer for creating detailed Work Logs or Result Reports. Use after completing development work to document all changes and provide a verification guide for stakeholders."
 color: Orange
 ---
 # Purpose

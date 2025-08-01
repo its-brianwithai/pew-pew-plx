@@ -1,6 +1,6 @@
 ---
 name: commands-agent
-description: "Generates a new, complete Claude Code slash command from a user's description. Use this to create new custom commands for automating prompts and workflows."
+description: "Expert Claude Code Slash Command architect. Use when generating a new, complete Claude Code slash command from a user's description to automate prompts and workflows."
 color: Yellow
 ---
 # Purpose

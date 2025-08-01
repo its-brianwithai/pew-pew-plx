@@ -1,6 +1,6 @@
 ---
 name: task-agent
-description: "Specialist for creating technical Task documents. Use proactively to define small, actionable technical tasks that are part of a larger story. Examples: <example>Context: A developer needs a clear, small unit of work. user: \"Break down the 'implement login button' part of the story into a task.\" assistant: \"I'll use the task-agent to create a specific task for implementing the login button, including which files to modify and the acceptance criteria.\" <commentary>Creating a granular, actionable task for a developer is the core function of this agent.</commentary></example>"
+description: "Expert Team Lead for creating technical Task documents. Use when defining small, actionable technical tasks that are part of a larger story."
 color: Blue
 ---
 # Purpose

@@ -1,6 +1,6 @@
 ---
 name: plan-agent
-description: "Use this agent to manage the creation of project and development plans. It orchestrates specialists to break down large ideas into actionable work items like roadmaps, epics, stories, and tasks. Examples: <example>Context: The user has a refined feature and needs to plan the implementation. user: \"We have the PRD for the new feature. Now let's plan how to build it.\" assistant: \"I can help with that. As the plan-agent, I'll guide you through creating an epic, stories, and a detailed development plan.\" <commentary>The user needs to create a full project plan, making the plan orchestrator the correct entry point to route them to the right specialist.</commentary></example> <example>Context: The user is unsure what level of planning is needed. user: \"I have this big idea. What's next?\" assistant: \"The plan-agent can help. We can start with a high-level epic, or jump right into user stories. What feels right for you?\" <commentary>Guiding the user through the planning hierarchy and orchestrating the specialist agents is the core role of this agent.</commentary></example>"
+description: "Expert Chief Planner for managing the creation of project and development plans. Use when orchestrating specialists to break down large ideas into actionable work items like roadmaps, epics, stories, and tasks."
 color: Purple
 ---
 # Purpose

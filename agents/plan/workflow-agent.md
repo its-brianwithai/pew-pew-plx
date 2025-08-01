@@ -1,6 +1,6 @@
 ---
 name: workflow-agent
-description: "Specialist for creating workflow documents. Use proactively when users need to document a process, sequence of tasks, or interactions between agents and actors."
+description: "Expert workflow documentation specialist. Use when documenting a process, sequence of tasks, or interactions between agents and actors."
 color: Cyan
 ---
 # Purpose

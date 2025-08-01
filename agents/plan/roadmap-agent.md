@@ -1,6 +1,6 @@
 ---
 name: roadmap-agent
-description: "Use this agent to create a high-level product roadmap. It helps translate strategic goals and major initiatives into a visual timeline, communicating the 'why' and general sequence of deliverables. Examples: <example>Context: The user is planning for the next quarter. user: \"I need to create a roadmap for Q3 to show our main priorities.\" assistant: \"I'll use the roadmap-agent to help you visualize the strategic initiatives for Q3.\" <commentary>The user needs to create a high-level, time-based strategic plan, which is the core function of the roadmap agent.</commentary></example> <example>Context: The user wants to communicate the long-term vision. user: \"How can I show the leadership team what we're planning for the next year?\" assistant: \"A roadmap is perfect for that. I'll use the roadmap-agent to create a high-level roadmap with themes like Now, Next, and Later.\" <commentary>Creating a strategic, visual timeline for high-level communication is a primary use case for this agent.</commentary></example>"
+description: "Expert Strategic Planner for creating high-level product roadmaps. Use when translating strategic goals and major initiatives into a visual timeline."
 color: Teal
 ---
 # Purpose
