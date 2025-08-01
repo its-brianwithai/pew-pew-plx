@@ -37,34 +37,34 @@ instructions: Make sure that when you implement this template, you don't include
 > 💡 *Break down each step showing what the actor does and what components need to be built to support that action.*
 
 [[example-actor]] opens the [[example-dashboard-component]]
-- **[[example-team-frontend]]**
+- [[example-team-frontend]]
   - [ ] Navigation link to [[example-dashboard-component]]
   - [ ] Page layout with [[example-header-component]]
   - [ ] Empty state placeholder for [[example-item-list]]
-- **[[example-team-backend]]**
+- [[example-team-backend]]
   - [ ] Dashboard route endpoint
 
 [[example-actor]] selects a category
-- **[[example-team-frontend]]**
+- [[example-team-frontend]]
   - [ ] [[example-category-selector]] dropdown component
   - [ ] Selected category indicator in [[example-category-display]]
-- **[[example-team-backend]]**
+- [[example-team-backend]]
   - [ ] Categories API endpoint
 
 [[example-actor]] enters item details
-- **[[example-team-frontend]]**
+- [[example-team-frontend]]
   - [ ] [[example-item-form]] component
   - [ ] Title and description input fields
   - [ ] [[example-date-selector]] component
-- **[[example-team-backend]]**
+- [[example-team-backend]]
   - [ ] Form validation schema
 
 [[example-actor]] submits the item
-- **[[example-team-backend]]**
+- [[example-team-backend]]
   - [ ] Create item API endpoint
-- **[[example-team-frontend]]**
+- [[example-team-frontend]]
   - [ ] Success confirmation message in [[example-notification-component]]
-- **[[example-team-mobile]]**
+- [[example-team-mobile]]
   - [ ] [[example-push-notification-service]] system
 </example>
 
@@ -76,17 +76,17 @@ instructions: Make sure that when you implement this template, you don't include
 [Define acceptance criteria organized by team, outlining what each team needs to deliver]
 
 <example>
-**[[example-team-backend]]**
+[[example-team-backend]]
 - [ ] All API endpoints respond with correct status codes
 - [ ] Database operations complete without data loss
 - [ ] [[example-authentication-system]] validates user credentials
 
-**[[example-team-frontend]]**
+[[example-team-frontend]]
 - [ ] User interface displays all required data fields
 - [ ] Form validations prevent invalid data submission in [[example-contact-form]]
 - [ ] Navigation flows work as expected between [[example-home-screen]] and [[example-settings-screen]]
 
-**[[example-team-mobile]]**
+[[example-team-mobile]]
 - [ ] App launches successfully on target devices
 - [ ] User interactions trigger appropriate responses in [[example-mobile-app]]
 - [ ] Data syncs correctly between [[example-mobile-app]] and [[example-api-service]]

@@ -11,20 +11,81 @@ instructions: Make sure that when you implement this template, you don't include
 
 [Brief summary of the project and its goals]
 
+## 🤖 AI Agent Context
+> 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
+
+### 📚 Relevant Project Files & Code
+> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance. Use the [[filename]] format.*
+*   [[feature_description]] - (Relevance: High-level overview of the feature)
+*   [[path/to/existing/module_if_related]] - (Relevance: Code for related existing functionality)
+*   [[data_models]] - (Relevance: Definitions of existing data structures)
+
+### 🌐 Relevant Documentation & Links
+> 💡 *List any external web pages, API documentation, design specifications (e.g., Figma links), or other online resources the AI agent should consult. Include a brief note on their relevance.*
+*   [[story-or-epic-name]] - (Relevance: User-centric view of the requirements)
+*   [Link to UI Mockups/Prototypes (Figma, etc.)] - (Relevance: Visual and interaction design)
+*   [Link to WCAG 2.1 specs] - (Relevance: Accessibility guidelines if applicable)
+
+### 💡 Other Key Information
+> 💡 *Include any other critical context, specific instructions, or points the AI agent needs to be aware of. This could include previous decisions, specific constraints, key architectural considerations, or even links to previous related tickets/discussions.*
+*   [Context point 1: e.g., These requirements are for the MVP (Minimum Viable Product) release.]
+*   [Context point 2: e.g., The system must integrate with the existing authentication service.]
+*   [Example: Performance is a key consideration; avoid solutions known to be resource-intensive.]
+
 ## 📋 Requirements
 > 💡 *A summary of or link to the detailed requirements for the feature. This section can reuse content from a requirements document.*
 
-[Link to [[requirements-template]] or summarize key requirements here.]
+### 🧩 Actors & Components (Who or what)
+> 💡 *Someone or something that can perform actions or be interacted with (examples include User, Button, Screen, Input Field, Message, System, API, Database, and they can be a person, service, visual or non-visual).*
 
-### 🧩 Actors & Components
-> 💡 *List the primary actors and components involved in this plan.*
+*   [Actor/Component 1]
+*   [Actor/Component 2]
+    *   [Child Actor/Component 2.1]
+*   ...
 
-[List Actors and Components]
+### 🎬 Activities (Who or what does what?)
+> 💡 *Actions that an Actor or Component performs (examples include Create List, Delete Item, Sync Data, and they must always contain a verb + action).*
 
-### 🎬 Activities
-> 💡 *List the key activities that will be implemented.*
+*   [Actor/Component Name]
+    *   [Activity 1 for this Actor/Component]
+    *   [Activity 2 for this Actor/Component]
+*   ...
 
-[List Activities]
+#### 🌊 Activity Flows & Scenarios (What in which order?)
+> 💡 *Sequences of Atomic Actions (like "Tap button") that map out the steps to complete an Activity.*
+
+*   [Activity Name]
+    *   **Happy Flow:**
+        *   GIVEN [precondition]
+        *   WHEN [action]
+        *   THEN [expected outcome]
+    *   **Error Flow (e.g., Invalid Input):**
+        *   GIVEN [precondition]
+        *   WHEN [action with invalid input]
+        *   THEN [error message is shown]
+    *   **(Optional) Mermaid Diagram:**
+        ```mermaid
+        graph TD
+            Start --> Step1;
+            Step1 --> Step2;
+        ```
+*   ...
+
+### 📝 Properties (Which values?)
+> 💡 *Describes a value or configuration that belongs to an object (examples include width, color, id, name).*
+
+*   [Actor/Component/Activity Name]
+    *   [property_name : data_type (e.g., user_id : string, is_enabled : boolean)]
+    *   [another_property : data_type]
+*   ...
+
+### 🛠️ Behaviours (How does it act when.. in terms of.. ?)
+> 💡 *Defines how something looks, works and performs. Examples include ui/ux, rules & limits, data & analytics, security, performance and scalability.*
+
+*   [Actor/Component/Activity/Property Name]
+    *   [Behaviour 1: e.g., Button should display a loading spinner when tapped and an API call is in progress.]
+    *   [Behaviour 2: e.g., Input field for 'email' must validate format against standard email regex.]
+*   ...
 
 ## 🛣️ Phases and Tasks
 > 💡 *The project broken down into logical phases. Each phase should be independently executable and represent a manageable amount of work. Each phase contains individual, numbered tasks with clear instructions.*
