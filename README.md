@@ -74,11 +74,12 @@ plx watch claude
 ### Sync Mechanism  
   
 The framework syncs to Claude Code's configuration:  
-- Agents `.claude/agents/` (as sub-agents) and `.claude/commands/act/` (as commands)  
-- Prompts `.claude/commands/plx/` (as `/plx:` commands)  
-- Templates `.claude/commands/use/` (as `/use:` commands)  
+- Agents → `.claude/agents/` (flat structure) and `.claude/commands/act/` (as commands)  
+- Prompts → `.claude/commands/plx/` (as `/plx:` commands)  
+- Templates → `.claude/commands/use/` (as `/use:` commands)  
+- Workflows → `.claude/commands/start/` (as `/start:` commands)  
   
-WikiLinks (`[[filename]]`) are automatically converted to full paths (`@.claude/plx/filename.md`) during sync.
+WikiLinks (`[[filename]]`) are automatically resolved to their actual locations during sync.
   
 ### Key Design Principles  
   
