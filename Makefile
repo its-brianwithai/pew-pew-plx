@@ -1,17 +1,6 @@
-.PHONY: sync claude pull main watch clean
+.PHONY: sync claude pull main watch clean all repo
 
-# Sync Claude Code
-sync:
-ifeq ($(word 2,$(MAKECMDGOALS)),claude)
-ifeq ($(word 3,$(MAKECMDGOALS)),clean)
-	@echo "Syncing Claude Code with clean..."
-	@./scripts/claude-code/sync-claude-code.sh --clean
-endif
-	@echo "Syncing Claude Code..."
-	@./scripts/claude-code/sync-claude-code.sh
-else
-	@echo "Usage: make sync claude [clean]"
-endif
+# Sync commands
 
 # Pull latest from any branch or repository
 pull:
@@ -79,6 +68,51 @@ else
 	@echo "Usage: make watch claude"
 endif
 
+# Clean all local content
+clean:
+ifeq ($(word 2,$(MAKECMDGOALS)),all)
+	@echo "🧹 Cleaning all local content (prompts, agents, templates)..."
+	@rm -rf prompts/* agents/* templates/*
+	@echo "✅ All local content cleaned!"
+else
+	@echo "Usage: make clean all"
+endif
+
+# Sync from repository
+sync:
+ifeq ($(word 2,$(MAKECMDGOALS)),repo)
+ifeq ($(word 3,$(MAKECMDGOALS)),clean)
+	@echo "🔄 Syncing from repository with clean..."
+	@echo "📥 Pulling latest from main branch..."
+	@$(MAKE) -s pull main
+	@echo "🧹 Cleaning all local content..."
+	@$(MAKE) -s clean all
+	@echo "🔄 Syncing Claude Code with clean..."
+	@./scripts/claude-code/sync-claude-code.sh --clean
+else
+	@echo "🔄 Syncing from repository..."
+	@echo "📥 Pulling latest from main branch..."
+	@$(MAKE) -s pull main
+	@echo "🔄 Syncing Claude Code..."
+	@./scripts/claude-code/sync-claude-code.sh
+endif
+else
+# Original sync claude command
+ifeq ($(word 2,$(MAKECMDGOALS)),claude)
+ifeq ($(word 3,$(MAKECMDGOALS)),clean)
+	@echo "Syncing Claude Code with clean..."
+	@./scripts/claude-code/sync-claude-code.sh --clean
+else
+	@echo "Syncing Claude Code..."
+	@./scripts/claude-code/sync-claude-code.sh
+endif
+else
+	@echo "Usage:"
+	@echo "  make sync claude [clean]"
+	@echo "  make sync repo [clean]"
+endif
+endif
+
 # Allow targets as secondary parameters to prevent "No rule to make target" error
 main:
 	@:
@@ -87,6 +121,12 @@ claude:
 	@:
 
 clean:
+	@:
+
+all:
+	@:
+
+repo:
 	@:
 
 # Allow any word to be used as a target (for branch names and URLs)
