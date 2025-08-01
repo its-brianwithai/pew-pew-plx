@@ -54,6 +54,11 @@ Running `plx sync claude` copies:
 
 This framework uses [[Wiki Links]] to connect context documents, making it easy to navigate and understand relationships between different parts of your project.
 
+### Automatic Path Resolution
+When syncing to Claude Code, all `[[wikilinks]]` are automatically replaced with their full destination paths:
+- `[[filename]]` → `@.claude/plx/filename.md`
+- This ensures Claude Code can properly resolve all document references
+
 ### Update Mechanism
 ```bash
 # Pull from any branch of pew-pew-plx

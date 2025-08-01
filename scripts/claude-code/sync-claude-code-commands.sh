@@ -80,11 +80,29 @@ for template_file in "$TEMPLATES_DIR"/*-template.md; do
             } > "$temp_file"
         fi
         
-        # Move temp file to final location
-        mv "$temp_file" "$output_file"
+        # Replace wikilinks with full paths before moving
+        # Create another temp file for wikilink processing
+        temp_file2=$(mktemp)
+        
+        # Process wikilinks - find all [[...]] patterns and replace with full paths
+        sed -E 's/\[\[([^]]+)\]\]/@.claude\/plx\/\1.md/g' "$temp_file" > "$temp_file2"
+        
+        # Move processed file to final location
+        mv "$temp_file2" "$output_file"
+        rm -f "$temp_file"
         
         ((template_count++))
     fi
 done
+
+echo "📋 Processing wikilinks in copied prompt files..."
+
+# Process all copied prompt files to replace wikilinks
+find "$CLAUDE_COMMANDS_PLX_DIR" -name "*.md" -type f -exec bash -c '
+    file="$1"
+    temp_file=$(mktemp)
+    sed -E "s/\[\[([^]]+)\]\]/@.claude\/plx\/\1.md/g" "$file" > "$temp_file"
+    mv "$temp_file" "$file"
+' _ {} \;
 
 echo "✅ Successfully created $template_count template commands"
