@@ -18,10 +18,10 @@ mkdir -p "$CLAUDE_COMMANDS_DIR"
 
 echo "📋 Copying agents from $AGENTS_DIR to $CLAUDE_AGENTS_DIR..."
 
-# Copy entire directory structure
+# Copy all .md files from all subdirectories to the root of CLAUDE_AGENTS_DIR (flat copy)
 if [ -d "$AGENTS_DIR" ]; then
-    cp -r "$AGENTS_DIR"/* "$CLAUDE_AGENTS_DIR/" 2>/dev/null || true
-    echo "✅ Successfully copied agent files with directory structure"
+    find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" -exec cp {} "$CLAUDE_AGENTS_DIR/" \;
+    echo "✅ Successfully copied $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" | wc -l) agent files"
 else
     echo "⚠️  No agent files found to copy"
 fi
@@ -69,28 +69,10 @@ for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! 
             } > "$temp_file"
         fi
         
-        # Replace wikilinks with full paths before moving
-        # Create another temp file for wikilink processing
-        temp_file2=$(mktemp)
-        
-        # Process wikilinks - find all [[...]] patterns and replace with full paths
-        sed -E 's/\[\[([^]]+)\]\]/@.claude\/plx\/\1.md/g' "$temp_file" > "$temp_file2"
-        
         # Move processed file to final location
-        mv "$temp_file2" "$command_file"
-        rm -f "$temp_file"
+        mv "$temp_file" "$command_file"
         echo "✅ Created $command_name"
     fi
 done
-
-echo "📋 Processing wikilinks in copied agent files..."
-
-# Process all copied files to replace wikilinks
-find "$CLAUDE_AGENTS_DIR" -name "*.md" -type f -exec bash -c '
-    file="$1"
-    temp_file=$(mktemp)
-    sed -E "s/\[\[([^]]+)\]\]/@.claude\/plx\/\1.md/g" "$file" > "$temp_file"
-    mv "$temp_file" "$file"
-' _ {} \;
 
 echo "✅ Agent sync complete!"

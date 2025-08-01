@@ -33,7 +33,7 @@ The primary goal of this workflow is to provide a structured, collaborative proc
     - [[prd-agent]]: Helps create the Product Requirements Document.
     - [[architecture-agent]]: Helps create the Architecture Document.
     - [[ui-ux-design-agent]]: Provides UI/UX design expertise and implementation patterns.
-    - [[refinement-proposal-agent]]: Can be called to generate a client proposal from the refined documents.
+    - [[proposal-agent]]: Can be called to generate a client proposal from the refined documents.
 
 ## 🔄 Workflow Steps
 > 💡 *The sequential breakdown of the workflow from start to finish. This process is iterative.*

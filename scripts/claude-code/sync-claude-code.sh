@@ -18,7 +18,16 @@ echo "🔄 Starting Claude Code synchronization..."
 echo "📋 Syncing agents..."
 "$SCRIPT_DIR/sync-claude-code-agents.sh"
 
-echo "🎯 Syncing commands..."
-"$SCRIPT_DIR/sync-claude-code-commands.sh"
+echo "🎯 Syncing prompts..."
+"$SCRIPT_DIR/sync-claude-code-prompts.sh"
+
+echo "📋 Syncing templates..."
+"$SCRIPT_DIR/sync-claude-code-templates.sh"
+
+echo "🔄 Syncing workflows..."
+"$SCRIPT_DIR/sync-claude-code-workflows.sh"
+
+echo "🔗 Processing wikilinks..."
+"$SCRIPT_DIR/sync-claude-code-wikilinks.sh"
 
 echo "✅ Claude Code synchronization complete!"
