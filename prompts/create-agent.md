@@ -1,6 +1,6 @@
 Act as {{role}}.
 
-[[research-project-first]]
+[[research-project]]
 
 Your task is to create a new agent based on {request}. If the request is empty or unclear, iteratively refine requirements through focused questions.
 

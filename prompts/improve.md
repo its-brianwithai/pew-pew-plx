@@ -1,6 +1,6 @@
 Act as {{role}}.
 
-[[research-project-first]]
+[[research-project]]
 
 Your task is to iteratively refine {source} material until it meets the {target} through a question-driven improvement process.
 
