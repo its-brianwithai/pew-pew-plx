@@ -4,7 +4,13 @@ set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 TEMPLATES_DIR="$PROJECT_ROOT/templates"
-CLAUDE_COMMANDS_USE_DIR="$PROJECT_ROOT/.claude/commands/use"
+
+# Use temp directory if available, otherwise use project directory
+if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
+    CLAUDE_COMMANDS_USE_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/use"
+else
+    CLAUDE_COMMANDS_USE_DIR="$PROJECT_ROOT/.claude/commands/use"
+fi
 
 if [ ! -d "$TEMPLATES_DIR" ]; then
     echo "❌ Error: Templates directory not found at $TEMPLATES_DIR"

@@ -4,7 +4,13 @@ set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 WORKFLOWS_DIR="$PROJECT_ROOT/workflows"
-CLAUDE_COMMANDS_START_DIR="$PROJECT_ROOT/.claude/commands/start"
+
+# Use temp directory if available, otherwise use project directory
+if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
+    CLAUDE_COMMANDS_START_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/start"
+else
+    CLAUDE_COMMANDS_START_DIR="$PROJECT_ROOT/.claude/commands/start"
+fi
 
 if [ ! -d "$WORKFLOWS_DIR" ]; then
     echo "❌ Error: Workflows directory not found at $WORKFLOWS_DIR"

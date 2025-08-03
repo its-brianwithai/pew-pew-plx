@@ -4,7 +4,15 @@ set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 PROMPTS_DIR="$PROJECT_ROOT/prompts"
-CLAUDE_COMMANDS_PLX_DIR="$PROJECT_ROOT/.claude/commands/plx"
+
+# Use temp directory if available, otherwise use project directory
+if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
+    CLAUDE_COMMANDS_PLX_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/plx"
+    CLAUDE_COMMANDS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands"
+else
+    CLAUDE_COMMANDS_PLX_DIR="$PROJECT_ROOT/.claude/commands/plx"
+    CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands"
+fi
 
 if [ ! -d "$PROMPTS_DIR" ]; then
     echo "❌ Error: Prompts directory not found at $PROMPTS_DIR"
@@ -66,10 +74,10 @@ for prompt_file in "$PROMPTS_DIR"/*.md; do
             mv "$temp_file" "$output_file"
             echo "✅ Created $verb/$object.md"
         else
-            # Single word prompt - move to root of commands directory
-            output_file="$PROJECT_ROOT/.claude/commands/$base_name.md"
+            # Single word prompt - move to plx directory
+            output_file="$CLAUDE_COMMANDS_PLX_DIR/$base_name.md"
             mv "$temp_file" "$output_file"
-            echo "✅ Created commands/$base_name.md"
+            echo "✅ Created plx/$base_name.md"
         fi
         
         ((prompt_count++))

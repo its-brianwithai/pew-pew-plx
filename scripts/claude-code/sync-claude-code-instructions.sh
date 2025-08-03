@@ -4,7 +4,13 @@ set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 INSTRUCTIONS_DIR="$PROJECT_ROOT/instructions"
-CLAUDE_FOLLOW_DIR="$PROJECT_ROOT/.claude/commands/follow"
+
+# Use temp directory if available, otherwise use project directory
+if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
+    CLAUDE_FOLLOW_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/follow"
+else
+    CLAUDE_FOLLOW_DIR="$PROJECT_ROOT/.claude/commands/follow"
+fi
 
 if [ ! -d "$INSTRUCTIONS_DIR" ]; then
     echo "❌ Error: Instructions directory not found at $INSTRUCTIONS_DIR"

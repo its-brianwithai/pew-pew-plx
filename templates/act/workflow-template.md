@@ -1,66 +1,38 @@
-# 🌊 Workflow Template
-> 💡 *A template for defining orchestrated multi-step processes with defined agents, prompts, inputs, and outputs.*
+---
+name: workflow-template
+description: "Use this template when defining orchestrated multi-step processes with defined agents, prompts, inputs, and outputs."
+instructions: "Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path."
+---
+# 🌊 [Workflow Name]: [Descriptive Title]
+> 💡 *Clear description of what this workflow accomplishes.*
+
+[Brief description of the workflow's purpose and value]
 
 ## 🎭 Orchestrator
-> 💡 *The leading agent orchestrating the task at hand.*
+> 💡 *The agent responsible for executing this workflow.*
 
-[System prompt or wikilink to the agent that will orchestrate this workflow]
-
-## 📥 Inputs
-> 💡 *Required inputs from the user.*
-
-[List the required inputs for this workflow]
-
-```
-<example>
-1. Source material or request
-   - Format: [Description of expected format or wikilink to template]
-2. Target outcome description
-   - Format: [Text description of desired result]
-3. Additional context or constraints
-   - Format: [Optional parameters or requirements]
-</example>
-```
+[[agent-name]] - [Brief description of why this agent orchestrates this workflow]
 
 ## 🚶 Steps
-> 💡 *Sequential tasks to be executed in order to complete this workflow.*
+> 💡 *Sequential steps to complete the workflow.*
 
-[Define each step of the workflow with its orchestrator, prompt, and output]
-
-```
-<example>
-1. [Step Name: e.g., "Initial Analysis"]
-   - Orchestrator: [System prompt or wikilink to the agent]
-   - Prompt: [The prompt text or wikilink to prompt file]
-   - Output: [Description of output format or wikilink to template]
-
-2. [Step Name: e.g., "Requirements Gathering"]
-   - Orchestrator: [System prompt or wikilink to the agent]
-   - Prompt: [The prompt text or wikilink to prompt file]
-   - Output: [Description of output format or wikilink to template]
-
-3. [Step Name: e.g., "Documentation Generation"]
-   - Orchestrator: [System prompt or wikilink to the agent]
-   - Prompt: [The prompt text or wikilink to prompt file]
-   - Output: [Description of output format or wikilink to template]
-
-[Continue adding steps as needed]
-</example>
-```
-
-## 📤 Output(s)
-> 💡 *The template structure to use for generating the final deliverable.*
-
-[List the expected outputs of the workflow]
+[List each step with instructions, optional sub-agent, and expected output]
 
 ```
 <example>
-1. [Primary Output Name]
-   - Format: [Description or wikilink to the template]
-   - Contains: [Brief description of what this output includes]
+1. [Step Name]
+   - Instructions: [What to do] or [[prompt-name]]
+   - Agent: [[sub-agent-name]] (optional)
+   - Output: [Expected result] or [[template-name]]
 
-2. [Secondary Output Name (if applicable)]
-   - Format: [Description or wikilink to the template]
-   - Contains: [Brief description of what this output includes]
+2. [Step Name]
+   - Instructions: [What to do] or [[prompt-name]]
+   - Agent: [[sub-agent-name]] (optional)
+   - Output: [Expected result] or [[template-name]]
+
+3. [Step Name]
+   - Instructions: [What to do] or [[prompt-name]]
+   - Agent: [[sub-agent-name]] (optional)
+   - Output: [Expected result] or [[template-name]]
 </example>
 ```

@@ -4,8 +4,15 @@ set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 AGENTS_DIR="$PROJECT_ROOT/agents"
-CLAUDE_AGENTS_DIR="$PROJECT_ROOT/.claude/agents"
-CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands/act"
+
+# Use temp directory if available, otherwise use project directory
+if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
+    CLAUDE_AGENTS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/agents"
+    CLAUDE_COMMANDS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/act"
+else
+    CLAUDE_AGENTS_DIR="$PROJECT_ROOT/.claude/agents"
+    CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands/act"
+fi
 
 if [ ! -d "$AGENTS_DIR" ]; then
     echo "❌ Error: Agents directory not found at $AGENTS_DIR"
@@ -26,8 +33,7 @@ else
     echo "⚠️  No agent files found to copy"
 fi
 
-echo "📋 Creating agent commands in $CLAUDE_COMMANDS_DIR/as/..."
-mkdir -p "$CLAUDE_COMMANDS_DIR/as"
+echo "📋 Creating agent commands in $CLAUDE_COMMANDS_DIR..."
 
 # Process each .md file for commands
 for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*"); do
@@ -55,15 +61,15 @@ for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! 
         
         # Determine the output path
         if [ -n "$persona" ] && [ -n "$object_path" ]; then
-            # Multi-part name with persona: as/object-path/persona.md
-            output_dir="$CLAUDE_COMMANDS_DIR/as/$object_path"
+            # Multi-part name with persona: act/object-path/persona.md (NO 'as' folder)
+            output_dir="$CLAUDE_COMMANDS_DIR/$object_path"
             mkdir -p "$output_dir"
             command_file="$output_dir/$persona.md"
-            echo "✅ Created as/$object_path/$persona.md"
+            echo "✅ Created act/$object_path/$persona.md"
         else
-            # Single word or no recognized persona: as/filename.md
-            command_file="$CLAUDE_COMMANDS_DIR/as/$base_name.md"
-            echo "✅ Created as/$base_name.md"
+            # Single word or no recognized persona: act/filename.md
+            command_file="$CLAUDE_COMMANDS_DIR/$base_name.md"
+            echo "✅ Created act/$base_name.md"
         fi
         
         # Create temporary file for processing
