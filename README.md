@@ -5,7 +5,7 @@
 
 # 🔫 Pew Pew 💨 Plx 🙏
 
-> Transform your Claude Code experience with AI-powered project management through specialized agents, smart templates, and context-aware workflows.
+> (Claude Code) Context framework  with AI-powered project management through specialized agents, smart templates, and context-aware workflows.
 
 ![Pew Pew Plx Hero](assets/hero.png)
 
