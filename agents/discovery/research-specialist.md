@@ -1,5 +1,5 @@
 ---
-name: research-specialist
+name: discovery-research-specialist
 description: "Expert in conducting comprehensive research on any topic. Use when users need information gathering, competitive analysis, user research, technical research, market research, or evidence-based insights and recommendations."
 color: Purple
 ---

@@ -7,7 +7,8 @@
 
 ```
 <example>
-- ALWAYS [something the agent should always do]
+- WHEN [Describe event] ALWAYS [something the agent should always do]
+- [More ALWAYS rules if needed]
 - [...]
 </example>
 ```
@@ -16,7 +17,8 @@
 
 ```
 <example>
-- NEVER [something the agent should never do]
+- WHEN [Describe event] NEVER [something the agent should never do]
+- [More NEVER examples if needed]
 - [...]
 </example>
 ```

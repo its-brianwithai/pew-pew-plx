@@ -12,37 +12,42 @@ color: `{{selected-color}}`
 
 ```
 <example>
-1. [Action Title]: [Specific action description]
-    - [Sub-steps if needed]
-    - [Additional details]
-    - [...]
-1. [Next Action]: [Specific action description]
-    - [Sub-steps if needed]
-    - [Additional details]
-    - [...]
-3. [...]
-[Continue with numbered steps...]
+1. [First action type]: [Description of what this action does]
+   - [Sub-step type if needed]
+   - [Another sub-step type if needed]
+2. [Second action type]: [Description of what this action does]
+3. [More action types as needed]
+[...]
 </example>
 ```
 
-**⭐ Best Practices:**
+## ⭐ Best Practices
+> 💡 *Industry standards and recommended approaches that should be followed.*
+
+[List best practices with references to relevant documentation]
 
 ```
 <example>
-- [List of best practices relevant to the agent's domain]
-- [Follow existing project patterns and conventions]
-- [Include domain-specific guidelines]
+- [Domain-specific best practice type with wikilink reference]
+- [Project convention type with documentation reference]
+- [Quality practice type with standards reference]
+- [Performance consideration type with guide reference]
+- [Security practice type with guidelines reference]
+- [Testing approach type with standards reference]
 - [...]
 </example>
 ```
 
 ## 📏 Rules
+> 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
 
 ### 👍 Always
 
 ```
 <example>
-- ALWAYS [something the agent should always do]
+- WHEN [event type] ALWAYS [behavior type]
+- WHEN referencing project documents ALWAYS use wikilinks without backticks
+- [More ALWAYS rule types if needed]
 - [...]
 </example>
 ```
@@ -51,10 +56,66 @@ color: `{{selected-color}}`
 
 ```
 <example>
-- NEVER [something the agent should never do]
+- WHEN [event type] NEVER [prohibited behavior type]
+- WHEN working with security NEVER violate documented security policies
+- [More NEVER rule types if needed]
 - [...]
 </example>
 ```
+
+## 🔍 Relevant Context
+> 💡 *Essential information to understand. Review all linked resources thoroughly before proceeding.*
+
+### 📚 Project Files & Code
+> 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
+
+[List project files with their relevance]
+
+```
+<example>
+- [Wikilink to relevant file type] - (Relevance: [Description of why this is important])
+- [Wikilink to project documentation type] - (Relevance: [Description of relevance])
+- [Wikilink to related component type] - (Relevance: [Description of integration])
+- [...]
+</example>
+```
+
+### 🌐 Documentation & External Resources
+> 💡 *List any external documentation, API references, design specs, or other resources to consult.*
+
+[List external resources with their relevance]
+
+```
+<example>
+- [Wikilink to API documentation type] - (Relevance: [Description of endpoints needed])
+- [Wikilink to design spec type] - (Relevance: [Description of requirements])
+- [External documentation URL type] - (Relevance: [Description of external resource])
+- [...]
+</example>
+```
+
+### 💡 Additional Context
+> 💡 *Include any other critical context, constraints, or considerations.*
+
+[List additional context points]
+
+```
+<example>
+- [Architectural decision types, limitation types, constraint types, dependency types, performance consideration types, and other critical context types]
+- [Additional context categories if needed]
+- [...]
+</example>
+```
+
+## 📊 Quality Standards
+> 💡 *Clear quality standards that define what "good" looks like for this work.*
+
+| Category | Standard | How to Verify |
+|:---------|:---------|:--------------|
+| [Category type] | [Standard description type] | [Verification method type] |
+| [Another category type] | [Another standard type] | [Another verification type] |
+| [More categories as needed] | [More standards as needed] | [More verification methods] |
+| [...] | [...] | [...] |
 
 ## 📤 Report / Response
 

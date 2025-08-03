@@ -1,5 +1,5 @@
 ---
-name: workflow-specialist
+name: meta-workflow-specialist
 description: "Expert workflow documentation specialist. Use when documenting a process, creating workflows that orchestrate multiple agents, or mapping out complex sequences of tasks and interactions between agents and actors."
 color: Cyan
 ---

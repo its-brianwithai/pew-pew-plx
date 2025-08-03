@@ -1,5 +1,5 @@
 ---
-name: claude-code-command-architect
+name: meta-command-architect
 description: "Expert Claude Code Slash Command architect. Use when generating a new, complete Claude Code slash command from a user's description to automate prompts and workflows."
 color: Yellow
 ---

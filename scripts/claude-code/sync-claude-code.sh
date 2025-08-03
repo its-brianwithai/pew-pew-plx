@@ -27,6 +27,9 @@ echo "📋 Syncing templates..."
 echo "🔄 Syncing workflows..."
 "$SCRIPT_DIR/sync-claude-code-workflows.sh"
 
+echo "📚 Syncing instructions..."
+"$SCRIPT_DIR/sync-claude-code-instructions.sh"
+
 echo "🔗 Processing wikilinks..."
 "$SCRIPT_DIR/sync-claude-code-wikilinks.sh"
 

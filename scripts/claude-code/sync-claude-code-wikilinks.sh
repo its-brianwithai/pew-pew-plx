@@ -7,26 +7,52 @@ CLAUDE_DIR="$PROJECT_ROOT/.claude"
 
 echo "🔗 Processing wikilinks in .claude directory..."
 
-# Process all markdown files in .claude (excluding commands/act)
+# Process all markdown files in .claude
 total_files=0
 processed_files=0
 
 # Count total files to process
 for file in $(find "$CLAUDE_DIR" -name "*.md" -type f); do
-    if [[ "$file" != *"/commands/act/"* ]]; then
-        ((total_files++))
-    fi
+    ((total_files++))
 done
 
 echo "📊 Found $total_files files to process"
 
-# Process each file
-find "$CLAUDE_DIR" -name "*.md" -type f | while read -r file; do
-    # Skip files in commands/act directory
-    if [[ "$file" == *"/commands/act/"* ]]; then
-        continue
+# Function to search for file in project directories
+find_in_project() {
+    local filename="$1"
+    local search_dirs=("prompts" "agents" "instructions" "templates" "context" "docs")
+    
+    for dir in "${search_dirs[@]}"; do
+        if [ -d "$PROJECT_ROOT/$dir" ]; then
+            # Search recursively in the directory
+            local found=$(find "$PROJECT_ROOT/$dir" -name "$filename.md" -type f | head -1)
+            if [ -n "$found" ]; then
+                echo "$found"
+                return 0
+            fi
+        fi
+    done
+    
+    return 1
+}
+
+# Function to search for file in .claude directories  
+find_in_claude() {
+    local filename="$1"
+    
+    # Search recursively in .claude
+    local found=$(find "$CLAUDE_DIR" -name "$filename.md" -type f | head -1)
+    if [ -n "$found" ]; then
+        echo "$found"
+        return 0
     fi
     
+    return 1
+}
+
+# Process each file
+find "$CLAUDE_DIR" -name "*.md" -type f | while read -r file; do
     # Create a temporary file
     temp_file=$(mktemp)
     
@@ -46,20 +72,15 @@ find "$CLAUDE_DIR" -name "*.md" -type f | while read -r file; do
             # Find the actual location
             replacement=""
             
-            # Check in commands directories (plx, use, start) first
-            if [ -f "$CLAUDE_DIR/commands/plx/$base_filename.md" ]; then
-                replacement="@.claude/commands/plx/$base_filename.md"
-            elif [ -f "$CLAUDE_DIR/commands/use/$base_filename.md" ]; then
-                replacement="@.claude/commands/use/$base_filename.md"
-            elif [ -f "$CLAUDE_DIR/commands/start/$base_filename.md" ]; then
-                replacement="@.claude/commands/start/$base_filename.md"
-            # Check in agents directory - first check root (for our flat copy)
-            elif [ -f "$CLAUDE_DIR/agents/$base_filename.md" ]; then
-                replacement="@.claude/agents/$base_filename.md"
-            # Then check recursively for other use cases
-            elif agent_file=$(find "$CLAUDE_DIR/agents" -name "$base_filename.md" -type f | head -1) && [ -n "$agent_file" ]; then
-                # Convert absolute path to relative path starting with @.claude/agents/
-                relative_path="${agent_file#$CLAUDE_DIR/}"
+            # First search in project directories
+            if project_file=$(find_in_project "$base_filename") && [ -n "$project_file" ]; then
+                # Convert to relative path from project root
+                relative_path="${project_file#$PROJECT_ROOT/}"
+                replacement="@$relative_path"
+            # Then search in .claude directories
+            elif claude_file=$(find_in_claude "$base_filename") && [ -n "$claude_file" ]; then
+                # Convert to relative path starting with @.claude/
+                relative_path="${claude_file#$CLAUDE_DIR/}"
                 replacement="@.claude/$relative_path"
             else
                 # If not found, keep the original wikilink

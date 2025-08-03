@@ -1,5 +1,5 @@
 ---
-name: hook-architect
+name: meta-hook-architect
 description: "Expert Claude Code Hook architect. Use when generating a new, complete Claude Code hook script from a user's description to automate or intercept events."
 color: Orange
 ---

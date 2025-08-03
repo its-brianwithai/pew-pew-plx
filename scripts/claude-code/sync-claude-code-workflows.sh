@@ -31,13 +31,11 @@ for workflow_file in "$WORKFLOWS_DIR"/*.md; do
         first_line=$(head -n 1 "$workflow_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
-            awk '
+            PROJECT_ROOT="$PROJECT_ROOT" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    print "# Workflow Command"; 
-                    print ""; 
-                    print "When this command is given, assume the role of the orchestrator for this workflow and start the workflow process.";
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/meta/workflow-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 
@@ -49,9 +47,7 @@ for workflow_file in "$WORKFLOWS_DIR"/*.md; do
         else
             # No frontmatter, add header at the beginning
             {
-                echo "# Workflow Command"
-                echo ""
-                echo "When this command is given, assume the role of the orchestrator for this workflow and start the workflow process."
+                cat "$PROJECT_ROOT/blocks/meta/workflow-command-block.md"
                 echo ""
                 cat "$workflow_file"
             } > "$temp_file"

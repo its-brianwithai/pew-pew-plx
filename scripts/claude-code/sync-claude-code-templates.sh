@@ -31,13 +31,11 @@ for template_file in "$TEMPLATES_DIR"/*-template.md; do
         first_line=$(head -n 1 "$template_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
-            awk '
+            PROJECT_ROOT="$PROJECT_ROOT" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    print "# Template Command"; 
-                    print ""; 
-                    print "When this command is used, use the following template. Acknowledge your understanding and then await the user'\''s request.";
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/meta/template-command-block.md");
                     print "";
                     print "````````````";
                     in_frontmatter = 0; 
@@ -51,9 +49,7 @@ for template_file in "$TEMPLATES_DIR"/*-template.md; do
         else
             # No frontmatter, add header at the beginning
             {
-                echo "# Template Command"
-                echo ""
-                echo "When this command is used, use the following template. Acknowledge your understanding and then await the user's request."
+                cat "$PROJECT_ROOT/blocks/meta/template-command-block.md"
                 echo ""
                 echo "\`\`\`\`\`\`\`\`\`\`"
                 cat "$template_file"

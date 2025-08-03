@@ -14,12 +14,66 @@ fi
 echo "🎯 Creating Claude plx commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_PLX_DIR"
 
-echo "🎯 Copying prompts from $PROMPTS_DIR to $CLAUDE_COMMANDS_PLX_DIR..."
+echo "🎯 Processing prompts from $PROMPTS_DIR to $CLAUDE_COMMANDS_PLX_DIR..."
 
-# Copy all .md files from prompts directory (flat copy)
-if [ -d "$PROMPTS_DIR" ]; then
-    find "$PROMPTS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" -exec cp {} "$CLAUDE_COMMANDS_PLX_DIR/" \;
-    echo "✅ Successfully copied $(find "$PROMPTS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" | wc -l) prompt files"
-else
-    echo "⚠️  No prompt files found to copy"
-fi
+# Process all .md files from prompts directory
+prompt_count=0
+for prompt_file in "$PROMPTS_DIR"/*.md; do
+    if [ -f "$prompt_file" ] && [[ ! $(basename "$prompt_file") =~ ^(README|readme) ]]; then
+        base_name=$(basename "$prompt_file" .md)
+        
+        # Create temporary file for processing
+        temp_file=$(mktemp)
+        
+        # Check if file has frontmatter
+        first_line=$(head -n 1 "$prompt_file")
+        if [[ "$first_line" == "---" ]]; then
+            # File has frontmatter, find where it ends and insert header after
+            PROJECT_ROOT="$PROJECT_ROOT" awk '
+                BEGIN { in_frontmatter = 1; found_end = 0 }
+                in_frontmatter && /^---$/ && NR > 1 { 
+                    print; 
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/meta/prompt-command-block.md");
+                    print "";
+                    in_frontmatter = 0; 
+                    found_end = 1; 
+                    next 
+                }
+                in_frontmatter { print; next }
+                { print }
+            ' "$prompt_file" > "$temp_file"
+        else
+            # No frontmatter, add header at the beginning
+            {
+                cat "$PROJECT_ROOT/blocks/meta/prompt-command-block.md"
+                echo ""
+                cat "$prompt_file"
+            } > "$temp_file"
+        fi
+        
+        # Check if filename contains a hyphen (verb-object pattern)
+        if [[ "$base_name" == *"-"* ]]; then
+            # Extract verb and object
+            verb="${base_name%%-*}"
+            object="${base_name#*-}"
+            
+            # Create verb subdirectory
+            verb_dir="$CLAUDE_COMMANDS_PLX_DIR/$verb"
+            mkdir -p "$verb_dir"
+            
+            # Move processed file to verb directory with object name only
+            output_file="$verb_dir/$object.md"
+            mv "$temp_file" "$output_file"
+            echo "✅ Created $verb/$object.md"
+        else
+            # Single word prompt - move to root of commands directory
+            output_file="$PROJECT_ROOT/.claude/commands/$base_name.md"
+            mv "$temp_file" "$output_file"
+            echo "✅ Created commands/$base_name.md"
+        fi
+        
+        ((prompt_count++))
+    fi
+done
+
+echo "✅ Successfully processed $prompt_count prompt files"
