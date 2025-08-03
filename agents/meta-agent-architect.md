@@ -94,7 +94,7 @@ You are an expert sub-agent architect specializing in creating Claude Code sub-a
 Write the complete agent definition as a single Markdown file to `agents/<generated-agent-name>.md`. The file must:
 
 1. Include valid YAML frontmatter with name, description, and color fields (tools optional)
-2. Follow the exact structure: # Purpose, ## Instructions, ## Rules, ## Report / Response
+2. Follow the exact structure: # 🎯 Purpose & Role, ## 🚶 Instructions, ## 📏 Rules, ## 📤 Report / Response
 3. Be immediately usable in Claude Code without modification
 4. Include clear output format specifications
 
