@@ -1,4 +1,4 @@
-## 📐 High Level Plan
+## 📐 High Level CRUD
 > 💡 *Chronological sequence of CRUD operations needed to build this feature from start to finish. Start each step with a verb and include the target component or system.*
 
 [List the high-level steps in chronological order of execution]

@@ -1,7 +1,7 @@
-## 🎯 Functional Requirements
+## 🎯 High Level Requirements
 > 💡 *Specific capabilities and states for each actor or component. Define what they should be able to do (abilities) and what characteristics they should have (states).*
 
-[List functional requirements organized by actor/component with abilities and states]
+[List high level requirements organized by actor/component with abilities and states]
 
 ```
 <example>
