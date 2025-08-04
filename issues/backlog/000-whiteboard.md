@@ -8,7 +8,7 @@
 - transform command - transform something ito something else - thus local issue draft to story
 - contextualize / conventionalise command - turns any document into a project spe - hmm same as transform-to-project
 - add open command - open in cursor, open in intellij, open in finder
-
+- add back /as/ in between folder for agents
 - add plx/refine/backlog - which goes over all backlog issues and refines it with refine agnet
 
 ```

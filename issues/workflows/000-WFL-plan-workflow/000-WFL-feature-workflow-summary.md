@@ -1,18 +1,19 @@
-# Plan Workflow Implementation Summary
+# Feature Workflow Implementation Summary
 
 ## Overview
-This document summarizes the work completed on the Plan Workflow and outlines the remaining tasks needed to fully implement this systematic approach to transforming user requests into actionable development plans.
+This document summarizes the work completed on the Feature Workflow and outlines the remaining tasks needed to fully implement this systematic approach to transforming user requests into actionable development plans.
 
 ## Work Completed
 
-### 1. Plan Workflow Structure
-Created `/issues/workflows/000-WFL-plan-workflow/000-WFL-plan-workflow-initial-draft.md` which defines a 5-phase workflow:
+### 1. Feature Workflow Structure
+Created `/issues/workflows/000-WFL-plan-workflow/000-WFL-feature-workflow-initial-draft.md` which defines a 6-phase workflow:
 
 1. **Phase 1: Discovery & Context Gathering** → `discovery-template.md`
 2. **Phase 2: Requirements Elaboration** → `requirements-template.md`
 3. **Phase 3: Refinement & Architecture** → `refinement-template.md`
 4. **Phase 4: Milestone Planning** → `roadmap-template.md`
-5. **Phase 5: Implementation Planning** → `implementation-plan-template.md`
+5. **Phase 5: Story Creation** → `story-template.md`
+6. **Phase 6: Implementation Planning** → `implementation-plan-template.md`
 
 ### 2. Created Templates
 All templates are in `/templates/workflows/`:
@@ -22,6 +23,7 @@ All templates are in `/templates/workflows/`:
 - **refinement-template.md** - Defines properties, behaviors, and system architecture
 - **roadmap-template.md** - Organizes deliverables into milestones with effort estimates
 - **milestone-template.md** - Documents individual milestones in detail
+- **story-template.md** - (existing at `/templates/plan/story-template.md`) - Creates detailed user stories from milestone deliverables
 - **implementation-plan-template.md** - Provides detailed CRUD operations and action plans
 
 ### 3. Created Blocks
@@ -44,11 +46,12 @@ New blocks in `/blocks/refinements/`:
 ### 1. Create Sub-Agents
 Create specialized agents for each phase in `/agents/plan/`:
 
-- [ ] **discovery-agent.md** - Specializes in Phase 1 discovery and context gathering
-- [ ] **requirements-agent.md** - Specializes in Phase 2 activity flows and deliverables
-- [ ] **refinement-agent.md** - Specializes in Phase 3 properties, behaviors, architecture
-- [ ] **roadmap-agent.md** - Specializes in Phase 4 milestone and story planning
-- [ ] **implementation-agent.md** - Specializes in Phase 5 CRUD and action planning
+- [x] **discovery-agent.md** - Specializes in Phase 1 discovery and context gathering
+- [x] **requirements-agent.md** - Specializes in Phase 2 activity flows and deliverables
+- [x] **refinement-agent.md** - Specializes in Phase 3 properties, behaviors, architecture
+- [x] **roadmap-agent.md** - Specializes in Phase 4 milestone and story planning
+- [x] **story-agent.md** - Specializes in creating detailed user stories from milestone deliverables
+- [x] **implementation-agent.md** - Specializes in Phase 5 CRUD and action planning
 
 Each agent should:
 - Have deep expertise in their phase
@@ -60,18 +63,22 @@ Each agent should:
 Create prompts in `/prompts/` following the pattern of existing prompts:
 
 #### Create Prompts (for starting fresh):
-- [ ] **create-discovery.md** - Start Phase 1 from scratch
-- [ ] **create-requirements.md** - Start Phase 2 from scratch
-- [ ] **create-refinement.md** - Start Phase 3 from scratch
-- [ ] **create-roadmap.md** - Start Phase 4 from scratch
-- [ ] **create-implementation.md** - Start Phase 5 from scratch
+- [x] **create-discovery.md** - Start Phase 1 from scratch
+- [x] **create-requirements.md** - Start Phase 2 from scratch
+- [x] **create-refinement.md** - Start Phase 3 from scratch
+- [x] **create-roadmap.md** - Start Phase 4 from scratch
+- [x] **create-milestone.md** - Create individual milestone
+- [x] **create-story.md** - Create user story from milestone
+- [x] **create-implementation-plan.md** - Start Phase 5 from scratch
 
 #### Update Prompts (for refining existing):
-- [ ] **update-discovery.md** - Refine existing discovery document
-- [ ] **update-requirements.md** - Refine existing requirements
-- [ ] **update-refinement.md** - Refine existing refinement
-- [ ] **update-roadmap.md** - Refine existing roadmap
-- [ ] **update-implementation.md** - Refine existing implementation plan
+- [x] **update-discovery.md** - Refine existing discovery document
+- [x] **update-requirements.md** - Refine existing requirements
+- [x] **update-refinement.md** - Refine existing refinement
+- [x] **update-roadmap.md** - Refine existing roadmap
+- [x] **update-milestone.md** - Refine existing milestone
+- [x] **update-story.md** - Refine existing story
+- [x] **update-implementation-plan.md** - Refine existing implementation plan
 
 ### 3. Create Orchestrator Agent
 Create `/agents/act/plan-workflow-orchestrator.md`:

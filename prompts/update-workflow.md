@@ -38,4 +38,4 @@ $ARGUMENTS
 If the request is empty or unclear, begin by asking which workflow and what aspect to update.
 
 ---
-role: [[meta-workflow-specialist]]
+role: [[workflow-specialist]]

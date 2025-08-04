@@ -1,5 +1,3 @@
-Act as {{role}}.
-
 [[research-project]]
 
 Your task is to iteratively refine {source} material until it meets the {target} through a question-driven improvement process.
@@ -40,6 +38,3 @@ $ARGUMENTS
 </target>
 
 Begin by analyzing the source material and asking the most impactful first question.
-
----
-role: [[prompt-engineer]]
