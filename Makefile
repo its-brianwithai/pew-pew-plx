@@ -6,9 +6,10 @@ ifeq ($(word 2,$(MAKECMDGOALS)),claude)
 ifeq ($(word 3,$(MAKECMDGOALS)),clean)
 	@echo "Syncing Claude Code with clean..."
 	@./scripts/claude-code/sync-claude-code.sh --clean
-endif
+else
 	@echo "Syncing Claude Code..."
 	@./scripts/claude-code/sync-claude-code.sh
+endif
 else
 	@echo "Usage: make sync claude [clean]"
 endif
