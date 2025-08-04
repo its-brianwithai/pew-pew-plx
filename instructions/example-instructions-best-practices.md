@@ -23,12 +23,22 @@ description: "Use when adding examples and instructions to workflows, agents, pr
     - Example: See `{{multiple-items-example}}`
 - WHEN examples require specific structure (like steps with substeps) ALWAYS show the exact structure with inline [placeholder] instructions while keeping type descriptions on single lines.
     - Example: See `{{structured-example}}`
+- WHEN creating examples for structured content (like nested lists, hierarchies, or multi-level content) NEVER show the structure - ONLY describe what types go there in a single line.
+- WHEN an example has complex formatting IGNORE the formatting and ONLY list the content types.
 
 ### 👎 Never
 
 - WHEN creating examples NEVER use backticks around wikilinks.
 - WHEN creating examples NEVER use actual content, only describe the types of examples.
 - WHEN creating examples NEVER use multiple lines for the example types.
+
+### 🚫 Example Structure Rule
+NEVER recreate the structure of what you're documenting in the example. The example should ONLY contain:
+1. First line: [Description of all the types that go in this section]
+2. Second line: [Additional items if needed]  
+3. Third line: [...]
+
+Even if the actual content has bullets, sub-bullets, multiple levels, categories, etc - IGNORE ALL OF THAT in the example.
 
 ### ✅ Good Examples
 
