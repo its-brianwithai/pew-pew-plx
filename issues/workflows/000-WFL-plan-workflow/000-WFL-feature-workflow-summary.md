@@ -3,6 +3,8 @@
 ## Overview
 This document summarizes the work completed on the Feature Workflow and outlines the remaining tasks needed to fully implement this systematic approach to transforming user requests into actionable development plans.
 
+**Pull Request:** #2 (https://github.com/its-brianwithai/pew-pew-plx/pull/2)
+
 ## Work Completed
 
 ### 1. Feature Workflow Structure
