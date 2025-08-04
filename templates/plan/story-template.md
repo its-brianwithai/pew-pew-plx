@@ -78,7 +78,7 @@ instructions: Make sure that when you implement this template, you don't include
 ```
 
 # 🧪 Test Focus
-> 💡 What we want to guarantee with the tests written for this story.*.
+> 💡 *What we want to guarantee with the tests written for this story.*
 
 When 100% of the tests pass, we should be able to guarantee that:
 
