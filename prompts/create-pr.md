@@ -14,7 +14,7 @@ Execute the pull request creation workflow, ensuring local and remote synchroniz
 Before creating the PR, verify:
 1. We are on a feature branch following project conventions: `{category}/{ticket-number}-{descriptive-name}`
 2. Check if all changes are committed: `git status`
-   - If uncommitted changes exist, suggest: "Please commit your changes first using [[commit]]"
+   - If uncommitted changes exist, execute the commit workflow using [[commit]]
    - Only proceed after all changes are committed
 3. Local issue in `issues/` reflects the exact implementation (if it exists)
 </prerequisites>
@@ -46,6 +46,10 @@ Before creating the PR, verify:
    - Push any remaining changes with `git push -u origin <branch-name>`
 
 4. **Generate Pull Request Report**
+   - Analyze all changes between current branch and target branch:
+     - `git log {{target_branch}}..HEAD --oneline` to see all commits
+     - `git diff {{target_branch}}...HEAD --stat` to see all changed files
+     - `git diff {{target_branch}}...HEAD` to see detailed changes
    - Identify the issue folder in `issues/[concept]/[issue-folder]/`
    - Count existing documents to determine next sequential number
    - Create PR report using [[pull-request-template]] 
@@ -94,7 +98,7 @@ Before creating the PR, verify:
 </documentation_guidelines>
 
 <output_format>
-1. All changes committed (or user prompted to commit using [[commit]])
+1. All changes committed (or commit executed using [[commit]])
 2. Local issue in `issues/` updated with:
    - Implementation details
    - GitHub issue reference (if exists)
@@ -108,10 +112,10 @@ Before creating the PR, verify:
 </output_format>
 
 <requirements>
-Target branch: `{{target_branch}}`
+Target branch: `{{target_branch}}` (defaults to 'main' if not specified)
 </requirements>
 
 Begin by identifying the current issue and branch, then proceed with the PR creation workflow.
 
 ---
-target_branch: [Target branch for the pull request]
+target_branch: [Target branch for the pull request - defaults to 'main']
