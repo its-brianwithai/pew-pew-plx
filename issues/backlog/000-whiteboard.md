@@ -1,5 +1,6 @@
 - add plx/refine/backlog - which goes over all backlog issues and refines it with refine agent
 - add an advisor type of agent that advices what to do based on waht you want to achieve - ith advice prompt
+  - also suggest the next best thing to do in the project in terms of creating special agents, creating certain prompts, creating templates, creating context documents - for this we need to create a workflow that creates or updates a project perfect initialisation
 - add process feedback prompt - which instructs to improve and agent templates and prompts
 - add create branch etc
 - add open 
