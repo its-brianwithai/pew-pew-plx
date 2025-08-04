@@ -24,7 +24,7 @@ echo "📋 Processing templates from $TEMPLATES_DIR to $CLAUDE_COMMANDS_USE_DIR.
 
 # Process each template file
 template_count=0
-for template_file in "$TEMPLATES_DIR"/*-template.md; do
+for template_file in $(find "$TEMPLATES_DIR" -name "*-template.md" -type f); do
     if [ -f "$template_file" ]; then
         # Keep the original filename
         basename=$(basename "$template_file")

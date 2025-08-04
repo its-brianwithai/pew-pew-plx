@@ -15,6 +15,7 @@ instructions: Make sure that when you implement this template, you don't include
 
 [List the specific deliverables that will be created for this milestone]
 
+```
 <example>
 - [ ] [[example-login-screen]] with email/password fields
 - [ ] User authentication API endpoint in [[example-auth-service]]
@@ -22,6 +23,7 @@ instructions: Make sure that when you implement this template, you don't include
 - [ ] [[example-home-screen]] with hamburger menu
 - [ ] Settings page navigation to [[example-settings-screen]]
 </example>
+```
 
 ---
 
@@ -30,6 +32,8 @@ instructions: Make sure that when you implement this template, you don't include
 
 [Create scenarios that break down the milestone into concrete user interactions and system behaviors]
 
+
+```
 <example>
 ## 🎯 Scenario: [[example-actor]] can create item
 
@@ -67,6 +71,7 @@ instructions: Make sure that when you implement this template, you don't include
 - [[example-team-mobile]]
   - [ ] [[example-push-notification-service]] system
 </example>
+```
 
 ---
 
@@ -75,6 +80,8 @@ instructions: Make sure that when you implement this template, you don't include
 
 [Define acceptance criteria organized by team, outlining what each team needs to deliver]
 
+
+```
 <example>
 [[example-team-backend]]
 - [ ] All API endpoints respond with correct status codes
@@ -90,7 +97,9 @@ instructions: Make sure that when you implement this template, you don't include
 - [ ] App launches successfully on target devices
 - [ ] User interactions trigger appropriate responses in [[example-mobile-app]]
 - [ ] Data syncs correctly between [[example-mobile-app]] and [[example-api-service]]
+
 </example>
+```
 
 ---
 
@@ -99,6 +108,7 @@ instructions: Make sure that when you implement this template, you don't include
 
 [Create a table showing effort estimates across different work types for each feature or component]
 
+```
 <example>
 | Feature/Component/Story | Design (hrs) | Refinement (hrs) | Front-end (hrs) | Back-end (hrs) | Operations (hrs) | Core Total | QA (hrs) | Testing (hrs) | Subtotal | Delay Margin (%) | Delay Margin (hrs) | Total Hours |
 | :---------------------- | :----------- | :--------------- | :-------------- | :------------- | :------------ | :--------- | :------- | :------------ | :------- | :--------------- | :----------------- | :---------- |
@@ -106,4 +116,6 @@ instructions: Make sure that when you implement this template, you don't include
 | [[example-item-management]] | 12           | 6                | 24              | 18             | 4             | 64         | 16       | 9.6           | 89.6     | 15%              | 13.4               | 103         |
 | [[example-dashboard-navigation]] | 6            | 3                | 12              | 8              | 2             | 31         | 7.8      | 4.7           | 43.5     | 10%              | 4.4                | 48          |
 | **TOTAL**              | **26**       | **13**           | **52**          | **38**         | **8**         | **137**    | **34.3** | **20.6**      | **191.9** | **12%**          | **23.7**           | **216**     |
+
 </example>
+```
