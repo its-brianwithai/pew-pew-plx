@@ -28,4 +28,4 @@ The user wants to update their PLX framework and perform a clean sync. This remo
 </output_format>
 
 ---
-role: [ultra-meta-agent]
+role: [[ultra-meta-agent]]

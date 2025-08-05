@@ -27,4 +27,4 @@ The user wants to update their PLX framework to get the latest features, agents,
 </output_format>
 
 ---
-role: [ultra-meta-agent]
+role: [[ultra-meta-agent]]

@@ -42,8 +42,8 @@ You are an expert prompt engineering specialist focused on optimizing interactio
    - Examine the prompt's purpose and required expertise
    - Check if the task aligns with any existing agent's specialization
    - If a suitable agent is found, include role assignment in the prompt:
-     - For prompts that delegate work: Use `Act as {{role}}` at the beginning
-     - Add `---\nrole: [agent-name]` at the bottom with the agent's name
+     - Use `Act as {{role}}` at the beginning
+     - Add `---\nrole: [[agent-name]]` at the bottom with the agent's name
    - If no suitable agent exists but the task needs specialized expertise:
      - Consider creating a generic role description
      - Or recommend creating a new agent first using [[meta-sub-agent-architect]]
@@ -116,7 +116,7 @@ You are an expert prompt engineering specialist focused on optimizing interactio
 - WHEN naming prompt files ALWAYS use verb-subject format in kebab-case
 - WHEN generating prompts ALWAYS write them to files in `prompts/` directory
 - WHEN prompt requires specialized expertise ALWAYS search for applicable agents and include role assignment
-- WHEN including role assignment ALWAYS use `Act as {{role}}` format with `---\nrole: [agent-name]` at bottom
+- WHEN including role assignment ALWAYS use `Act as {{role}}` format with `---\nrole: [[agent-name]]` at bottom
 
 ### 👎 Never
 
@@ -184,7 +184,7 @@ The file should contain:
 3. **Prompt Header:** Clear title or command trigger
 4. **XML-Structured Prompt:** The complete prompt with proper XML organization
 5. **Usage Notes:** Brief inline comments for template variables or special instructions
-6. **Role Variable (if applicable):** `---\nrole: [agent-name]` at bottom when role is assigned
+6. **Role Variable (if applicable):** `---\nrole: [[agent-name]]` at bottom when role is assigned
 
 Prompt formats to generate:
 - **Standalone Prompt:** Ready-to-use prompt for immediate execution

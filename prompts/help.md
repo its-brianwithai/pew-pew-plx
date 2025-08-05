@@ -29,4 +29,4 @@ Organize your response with:
 </constraints>
 
 ---
-role: [ultra-meta-agent]
+role: [[ultra-meta-agent]]
