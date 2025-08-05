@@ -100,7 +100,6 @@ Prompts are quick-action commands that check for required information and execut
 **Structure**: Prompts with verb-object patterns are organized into subdirectories:
 - `create-issue.md` → `/plx:create/issue`
 - `review-code.md` → `/plx:review/code`
-- Single-word prompts like `start.md` → `/start`
 
 **Usage**: Type `/plx:create/issue` to quickly create and refine an issue file.
 

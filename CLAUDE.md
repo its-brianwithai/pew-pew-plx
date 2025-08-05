@@ -51,7 +51,7 @@ plx watch claude
    - `template/` - Template-specific agents for document sections
 
 2. **Prompts** (`prompts/`) - Reusable command prompts that become `/plx:` commands:
-   - `start.md`, `plan.md`, `refine.md` - Workflow initiators
+   -  `plan.md`, `refine.md` - Workflow initiators
    - `improve.md`, `review-code.md` - Quality improvement
    - `create-issue.md`, `commit.md` - Development tasks
 

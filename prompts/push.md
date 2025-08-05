@@ -32,7 +32,6 @@ Once the push type is determined, follow these guidelines:
   - [ ] Update the @release_notes.json (if present) with user-facing release notes.
   - [ ] Update @assets/md/changelog_nl.md and @assets/md/changelog_en.md (if present).
   - [ ] Update the @README.md if needed.
-  - [ ] Update the @prompts/start.md command if needed.
   - [ ] Update any other relevant project documentation.
 - **Issue Management:**
   - [ ] Update any active local or GitHub issues mentioned in this conversation.

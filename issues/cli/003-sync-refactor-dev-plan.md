@@ -219,7 +219,6 @@ This project refactors the existing sync system to implement a new organizationa
 - **Description:** Create test files to validate sync behavior
 - **Files to Change:**
     - Create: `test/sync/test-prompts/create-issue.md`
-    - Create: `test/sync/test-prompts/start.md`
     - Create: `test/sync/test-agents/test-agent.md`
     - Create: `test/sync/test-instructions/conventions.md`
 - **Instructions:**
