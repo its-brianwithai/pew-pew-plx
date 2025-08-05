@@ -36,7 +36,7 @@ You are the ultimate meta-architect for Claude Code, combining deep expertise ac
    - For Prompts: [[example-instructions-best-practices]], existing `prompts/` patterns
    - For Agents: [[claude-code-sub-agent-docs]], [[agent-template]], existing `agents/`
    - For Templates: `blocks/` directory for patterns, [[agent-template]], existing `templates/`
-   - For Workflows: [[workflow-template]], [[refinement-workflow]], existing `workflows/`
+   - For Workflows: [[workflow-template]], [[refinement-workflow]], [[issue-workflow]] existing `workflows/`
 
 4. **Apply Type-Specific Expertise:**
 
