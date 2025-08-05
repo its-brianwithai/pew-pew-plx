@@ -1,4 +1,4 @@
-Act as [[prompt-engineer]].
+Act as [[meta-prompt-engineer]].
 
 Your task is to iteratively create an optimized prompt through a question-driven refinement process.
 

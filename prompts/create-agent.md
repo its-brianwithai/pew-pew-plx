@@ -38,4 +38,4 @@ $ARGUMENTS
 If the request is empty or unclear, begin by asking about the agent's primary purpose.
 
 ---
-role: [[meta-agent-architect]]
+role: [[meta-sub-agent-architect]]

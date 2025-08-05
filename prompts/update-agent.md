@@ -38,4 +38,4 @@ $ARGUMENTS
 If the request is empty or unclear, begin by asking which agent and what aspect to update.
 
 ---
-role: [[meta-agent-architect]]
+role: [[meta-sub-agent-architect]]

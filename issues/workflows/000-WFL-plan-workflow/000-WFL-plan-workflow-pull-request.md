@@ -7,7 +7,7 @@
 | File | Type | Description |
 |:-----|:-----|:------------|
 | [`agents/feature-workflow-orchestrator.md`](../../../agents/feature-workflow-orchestrator.md) | Added | Master orchestrator coordinating all 6 workflow phases |
-| [`agents/meta/workflow-specialist.md`](../../../agents/meta/workflow-specialist.md) | Modified | Enhanced with sophisticated workflow design capabilities |
+| [`agents/meta/workflow-specialist.md`](../../../agents/meta/meta-workflow-specialist) | Modified | Enhanced with sophisticated workflow design capabilities |
 | [`agents/plan/discovery-agent.md`](../../../agents/plan/discovery-agent.md) | Added | Phase 1 specialist for context gathering |
 | [`agents/plan/requirements-agent.md`](../../../agents/plan/requirements-agent.md) | Added | Phase 2 specialist for requirements elaboration |
 | [`agents/plan/refinement-agent.md`](../../../agents/plan/refinement-agent.md) | Added | Phase 3 specialist for technical refinement |

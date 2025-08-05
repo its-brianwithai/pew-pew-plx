@@ -38,4 +38,4 @@ $ARGUMENTS
 If the request is empty or unclear, begin by asking what information is needed.
 
 ---
-role: [[prompt-engineer]]
+role: [[meta-prompt-engineer]]

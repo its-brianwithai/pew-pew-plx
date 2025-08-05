@@ -77,4 +77,4 @@ $ARGUMENTS
 If no repository URL or package name is provided, ask for the MCP server repository or package to install.
 
 ---
-role: [[prompt-engineer]]
+role: [[claude-code-mcp-specialist]]

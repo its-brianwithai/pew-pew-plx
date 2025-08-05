@@ -38,4 +38,4 @@ $ARGUMENTS
 If the request is empty or unclear, begin by asking about the workflow's primary goal.
 
 ---
-role: [[workflow-specialist]]
+role: [[meta-workflow-specialist]]

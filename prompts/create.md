@@ -38,4 +38,4 @@ $ARGUMENTS
 If the request is empty or unclear, begin by asking what type of resource to create.
 
 ---
-role: [[prompt-engineer]]
+role: [[meta-prompt-engineer]]

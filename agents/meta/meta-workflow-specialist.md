@@ -1,5 +1,5 @@
 ---
-name: workflow-specialist
+name: meta-workflow-specialist
 description: "Expert in designing sophisticated multi-agent orchestrations and systematic workflows. Use when creating complex workflows that require hierarchical thinking, decision points, quality gates, and comprehensive error handling. Specializes in transforming abstract processes into executable, testable orchestrations."
 color: Violet
 ---

@@ -2,116 +2,135 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
-
-Pew Pew Plx is an AI-powered project management framework that syncs specialized agents, templates, and prompts with Claude Code. It provides a structured approach to software development through context engineering and orchestrated workflows.
-
 ## Common Development Commands
 
-### Primary Commands
+### Core Commands
 ```bash
-# Initialize the framework (only needed once)
-plx init
-
-# Sync agents, prompts, and templates to Claude Code
+# Sync all framework components to Claude Code
 plx sync claude
 
-# Clean and re-sync Claude Code configuration
+# Clean sync (removes and re-adds all components)
 plx sync claude clean
 
-# Pull latest updates from a branch
-plx pull main      # Pull from main branch
-plx pull beta      # Pull from beta branch
+# Pull latest framework updates
+plx pull main      # From main branch
+plx pull beta      # From beta branch
 
-# Pull from external repositories
-plx pull https://github.com/user/repo.git main
-plx pull git@github.com:user/repo.git develop
-
-# Watch for changes and auto-sync
+# Watch mode for auto-sync during development
 plx watch claude
+
+# Initialize framework in a new project
+plx init
 ```
 
-### Development Workflow
-1. Make changes to agents, prompts, or templates
-2. Run `plx sync claude` to update Claude Code configuration
-3. Use `/plx:{prompt-name}` commands in Claude Code to access prompts
-4. Use `/act:as-{agent-name}` commands to invoke specific agents
-5. Use `/use:{template-name}` commands to apply templates
+### Testing Framework Components
+```bash
+# Test agent functionality
+node bin/plx.js sync claude
 
-## Architecture & Structure
+# Test specific sync scripts
+./scripts/claude-code/sync-claude-code-agents.sh
+./scripts/claude-code/sync-claude-code-prompts.sh
+```
 
-### Framework Components
+## Architecture Overview
 
-1. **Agents** (`agents/`) - Specialized AI agents organized by workflow phase:
-   - `discovery/` - Research and exploration agents
-   - `plan/` - Planning and documentation agents (story, epic, milestone, etc.)
-   - `act/` - Implementation agents (commands, hooks, meta-agent)
-   - `review/` - Review and quality agents (code-review, work-log)
-   - `context/` - Context management agents (convention, role, team)
-   - `template/` - Template-specific agents for document sections
+### Component Types and Sync Behavior
 
-2. **Prompts** (`prompts/`) - Reusable command prompts that become `/plx:` commands:
-   -  `plan.md`, `refine.md` - Workflow initiators
-   - `improve.md`, `review-code.md` - Quality improvement
-   - `create-issue.md`, `commit.md` - Development tasks
+1. **Agents** (`agents/`) → Synced as both:
+   - Sub-agents in `.claude/agents/` (for automatic delegation)
+   - Commands in `.claude/commands/act/` (for manual invocation via `/act:`)
 
-3. **Templates** (`templates/`) - Markdown documentation templates that become `/use:` commands:
-   - Story, Epic, Milestone templates for project management
-   - Architecture, PRD, Dev Plan templates for technical documentation
-   - Workflow templates for process documentation
+2. **Prompts** (`prompts/`) → Synced to `.claude/commands/`:
+   - Verb-object patterns create subdirectories (e.g., `create-issue.md` → `/plx:create/issue`)
+   - Single-word prompts go directly to commands directory
 
-4. **Context** (`context/`) - Project-specific information:
-   - `actors/`, `components/`, `features/` - System elements
-   - `platforms/` - Integration points and deployment targets
-   - `roles/`, `teams/` - Organization structure
+3. **Templates** (`templates/`) → Synced to `.claude/commands/use/`
+   - Available as `/use:{template-name}`
 
-5. **Workflows** (`workflows/`) - Orchestrated multi-agent processes:
-   - `refinement-workflow.md` - Project concept to PRD/Architecture
-   - `requirements-workflow.md` - Requirements gathering process
-   - `feature-conversion-workflow.md` - Feature migration process
+4. **Instructions** (`instructions/`) → Synced to `.claude/commands/follow/`
+   - Available as `/follow:{instruction-name}`
 
-### Sync Mechanism
+5. **Workflows** (`workflows/`) → Synced to `.claude/commands/start/`
+   - Available as `/start:{workflow-name}`
 
-The framework syncs to Claude Code's configuration:
-- Agents � `.claude/agents/` (as sub-agents) and `.claude/commands/act/` (as commands)
-- Prompts � `.claude/commands/plx/` (as `/plx:` commands)
-- Templates � `.claude/commands/use/` (as `/use:` commands)
+### WikiLink Resolution System
 
-WikiLinks (`[[filename]]`) are automatically converted to full paths (`@.claude/plx/filename.md`) during sync.
+The framework automatically resolves WikiLinks (`[[filename]]`) to absolute paths during sync:
+- Search order: project directories first (`prompts/`, `agents/`, etc.), then `.claude/` recursively
+- Converted to `@path/to/file.md` format for Claude Code
+- Enables automatic context loading when commands are used
 
-### Key Design Principles
+### Command Header Processing
 
-1. **Agent Specialization**: Each agent has a specific role and follows a structured format with Purpose, Core Capabilities, Workflow, and Report sections.
+Each component type has specific headers that instruct Claude's behavior:
+- Headers are processed by `process-claude-code-headers.sh`
+- Define how Claude should respond when a command is invoked
+- Located at the top of each markdown file
 
-2. **Template-Driven Documentation**: All documentation follows predefined templates for consistency.
+## Key Implementation Details
 
-3. **Orchestrated Workflows**: Complex tasks use orchestrator agents that delegate to specialist sub-agents.
+### CLI Architecture
+- Main entry: `bin/plx.js` (ES module)
+- Delegates to Makefile for command execution
+- `lib/init.js` handles project initialization
 
-4. **Context Engineering**: Heavy emphasis on maintaining project context through structured documentation.
+### Sync Scripts
+- Master script: `scripts/claude-code/sync-claude-code.sh`
+- Component-specific scripts handle different file types
+- WikiLink resolution: `sync-claude-code-wikilinks.sh`
+- Uses temporary directory for atomic operations
 
-5. **Command Integration**: Seamless integration with Claude Code through custom slash commands.
+### Directory Structure
+```
+pew-pew-plx/
+├── agents/          # AI agents organized by category
+│   ├── dev/         # Development agents
+│   ├── discovery/   # Research agents
+│   ├── meta/        # Framework meta-agents
+│   ├── plan/        # Planning agents
+│   └── review/      # Review agents
+├── prompts/         # Quick-action commands
+├── templates/       # Document templates
+├── instructions/    # Convention documents
+├── workflows/       # Multi-agent orchestrations
+├── blocks/          # Reusable content blocks
+├── context/         # Project-specific information
+├── scripts/         # Sync and utility scripts
+│   └── claude-code/ # Claude Code sync scripts
+├── lib/             # Core JavaScript modules
+└── bin/             # CLI executable
+```
 
-## Working with Agents
+### Agent Naming Convention
+Agent filenames are parsed to extract personas:
+- Pattern: `{feature}-{role}.md` or `{feature}-{compound}-{role}.md`
+- Examples: `flutter-developer.md`, `unit-test-engineer.md`
+- Role extraction for command generation
 
-Agents follow a standard structure:
-- Frontmatter with name, description, and color
-- Purpose section defining the agent's role
-- Core Capabilities outlining what the agent can do
-- Workflow describing the step-by-step process
-- Report/Response format specification
+## Development Guidelines
 
-When creating new agents:
-1. Place in appropriate directory under `agents/`
-2. Follow existing agent structure and conventions
-3. Include references to related templates and agents
-4. Run `plx sync claude` to make available in Claude Code
+### Adding New Components
+1. Create file in appropriate directory (`agents/`, `prompts/`, etc.)
+2. Include proper header for Claude Code behavior
+3. Use WikiLinks for cross-references
+4. Run `plx sync claude` to make available
 
-## Extension Points
+### Modifying Sync Behavior
+- Sync scripts are in `scripts/claude-code/`
+- Each component type has its own sync script
+- WikiLink resolution happens after initial sync
 
-The framework is designed to be extended:
-- Add custom agents for project-specific needs
-- Create new templates for documentation types
-- Define workflows for complex processes
-- Extend the Makefile for custom commands
+### Testing Changes
+1. Make changes to components
+2. Run `plx sync claude clean` for fresh sync
+3. Test commands in Claude Code
+4. Use `plx watch claude` for continuous development
 
-Custom make commands can be added to the Makefile and run with `plx <command>`.
+## Important Notes
+
+- Framework uses GNU Make for command orchestration
+- All paths must be absolute in final output
+- Temporary sync directory ensures atomic operations
+- Clean flag removes existing `.claude/` directories before sync
+- Watch mode monitors `agents/` and `prompts/` directories only

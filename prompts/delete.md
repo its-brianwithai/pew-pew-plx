@@ -38,4 +38,4 @@ $ARGUMENTS
 If the request is empty or unclear, begin by asking what should be deleted.
 
 ---
-role: [[prompt-engineer]]
+role: [[meta-prompt-engineer]]
