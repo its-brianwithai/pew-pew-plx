@@ -1,3 +1,56 @@
+
+Een goede prompt bestaat uit:
+
+- End Goal
+- Persona
+  - Expertise
+  - Domain
+  - Role
+  - Context
+  - Knowledge
+  - Experience
+  - Skills
+  - Abilities
+  - Responsibilities
+  - Interests
+  - Background
+  - Preferences
+- Request
+- Workflow
+  - Steps
+  - Deliverables
+- Instructies (when)
+  - (When) Scenario:
+    - [Best Practices]
+    - [Conventions]
+    - [Constraints]
+    - [Rules]
+    - Acceptance Criteria
+- Output Format
+
+Alles moet waarde toevoegen aan het end_goal
+Dingen moeten niet twee keer voorkomen
+
+- Create frontmatter inserters with prompts - any wiki links in frontmatter get inserted
+      - agent: [[agent-here]]
+      - agent-backticks: 10
+      - agent-backtick-count: 1
+      - agent-leading: # Persona\n\nAct as {{persona}}.
+      - agent-trailing:
+      - agent-tag: persona
+      - prompt: [[prompt-here]] - inserted leading # Instructions - trailing
+      - workflow: [[instructions-here]] - inserted leading # Instructions - trailing
+      - instructions: [[instructions-here]] - inserted leading # Instructions - trailing
+        - rules: [[instructions-here]] - inserted leading # Instructions - trailing
+        - quality_standards: [[instructions-here]] - inserted leading # Instructions - trailing
+        - best_practices: [[instructions-here]] - inserted leading # Instructions - trailing
+      - output-format: [[some-template]] - inserted leading # Instructions - trailing
+  - this allows prompts to be focused on the actual activity and get 
+- Remove default agents, prompts and subagents from workflows
+- Allow same struture
+- this removes the need for 
+
+
 - add plx/refine/backlog - which goes over all backlog issues and refines it with refine agent
 - add an advisor type of agent that advices what to do based on waht you want to achieve - ith advice prompt
   - also suggest the next best thing to do in the project in terms of creating special agents, creating certain prompts, creating templates, creating context documents - for this we need to create a workflow that creates or updates a project perfect initialisation
