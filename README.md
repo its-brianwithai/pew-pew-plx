@@ -5,7 +5,7 @@
 
 # 🔫 Pew Pew 💨 Plx 🙏
 
-> (Claude Code) Context framework  with AI-powered project management through specialized agents, smart templates, and context-aware workflows.
+> Advanced AI project management framework for Claude Code with specialized agents, smart templates, and context-aware workflows.
 
 ![Pew Pew Plx Hero](assets/hero.png)
 
@@ -26,23 +26,17 @@ That's it! You now have access to 20+ specialized agents, 30+ prompt commands, a
   
 ## 🎯 What is Pew Pew Plx?
 
-Pew Pew Plx is a comprehensive AI project management framework that supercharges Claude Code with:
-
-- **🤖 20+ Specialized Agents** - From Flutter developers to workflow orchestrators
-- **🎯 30+ Smart Prompts** - Quick-action commands for common tasks
-- **📋 15+ Templates** - Structured formats for consistent documentation
+Pew Pew Plx is an AI project management framework that enhances Claude Code with:
+- **🤖 30+ Specialized Agents** - From Flutter developers to workflow orchestrators
+- **🎯 50+ Smart Prompts** - Quick-action commands for common tasks
+- **📋 25+ Templates** - Structured formats for consistent documentation
 - **🔄 Intelligent Workflows** - Multi-agent orchestration for complex tasks
 - **🔗 WikiLink Resolution** - Automatic context loading and cross-referencing
 - **📚 Context Engineering** - Maintain project knowledge across conversations
 
-## 📦 Installation
+## 📦 Installation Methods
 
-### Via npm (Recommended)
-```bash
-npm install -g pew-pew-plx
-```
-
-### Via Git
+### Via Git (Development)
 ```bash
 git clone https://github.com/its-brianwithai/pew-pew-projects.git
 cd pew-pew-projects
@@ -156,30 +150,54 @@ This means when you use a command, all referenced documentation is automatically
 
 ## 🏗️ Architecture  
   
+### Core Components
+
 1. **Agents** (`agents/`) - Specialized AI agents with specific expertise:
-   - Each agent has a focused role and clear responsibilities
-   - Agents can work as sub-agents (automatic delegation) or via commands (manual invocation)
-   - Follow a structured format: Purpose, Instructions, Best Practices, Rules, Output
+   - **Development** (`dev/`): Flutter Developer, Lead Developer
+   - **Planning** (`plan/`): Discovery, Requirements, Refinement, Story, Roadmap, Implementation Agents
+   - **Review** (`review/`): Code Reviewer, Unit Test Engineer, Bug Management Agents
+   - **Meta** (`meta/`): Framework architects for creating agents, prompts, templates, workflows
+   - **Claude** (`claude/`): Claude Code-specific tools (Commands, Hooks, MCP)
+   - **Discovery** (`discovery/`): Research Specialist
+   - **Standalone**: Makefile Expert
   
 2. **Prompts** (`prompts/`) - Quick-action commands for common tasks:
-   - Check for required information before executing
-   - Organized by verb (create, review, sync, etc.)
-   - Streamline repetitive workflows
+   - **Creation**: create-{issue, story, milestone, agent, prompt, template, workflow, test, bug-report}
+   - **Updates**: update-{issue, story, milestone, agent, prompt, template, workflow, readme}
+   - **Reviews**: review-code, verify-bug-fix, triage-bug-report
+   - **Process**: commit, push, sync-claude, refine, improve
+   - **Research**: research-project, give-feedback, process-feedback
   
 3. **Templates** (`templates/`) - Structured documentation formats:
-   - Ensure consistency across project documentation
-   - Include placeholders and instructions for completion
-   - Cover stories, epics, architecture docs, and more
+   - **Planning**: story, epic, milestone, roadmap, task, proposal templates
+   - **Workflows**: requirements, discovery, implementation-plan, refinement templates  
+   - **Review**: bug-report, pull-request, feedback, work-log templates
+   - **Context**: platform, role, team, persona templates
+   - **Meta**: agent, workflow, block templates
   
 4. **Instructions** (`instructions/`) - Project conventions and guidelines:
-   - Define coding standards, naming conventions, and best practices
-   - Applied to conversations to ensure consistency
-   - Can include examples and anti-patterns
+   - Claude Code sub-agent documentation
+   - Example and instruction best practices
+   - Issue creation conventions
+   - Makefile best practices
   
 5. **Workflows** (`workflows/`) - Multi-step orchestrated processes:
-   - Coordinate multiple agents to complete complex tasks
-   - Define clear phases and handoffs
-   - Include decision points and quality gates
+   - **Refinement Workflow**: 5-layer systematic approach to breaking down features
+   - **Issue Workflow**: 6-phase feature development from discovery to implementation
+   - **Bug Workflow**: 4-phase bug resolution from report to verification
+   
+6. **Blocks** (`blocks/`) - Reusable content components:
+   - **Context**: Access config, capabilities, functions, purpose blocks
+   - **Instructions**: Best practices, rules, quality standards blocks
+   - **Meta**: Command blocks for different artifact types
+   - **Refinements**: 40+ specialized blocks for comprehensive documentation
+   - **Workflows**: Inputs, outputs, steps, orchestrator blocks
+   
+7. **Context** (`context/`) - Project knowledge base:
+   - **Platforms**: External services and integrations
+   - **Roles**: Team member responsibilities
+   - **Teams**: Department organization
+   - **Actors, Components, Concepts, Features, Models**: System documentation
   
 ### Sync Mechanism  
   
@@ -223,80 +241,139 @@ Each command type has a specific header that instructs Claude how to behave:
 
 ### 🤖 Specialized Agents
 Each agent is an expert in their domain:
-- **Flutter Developer** - Mobile app development specialist
-- **Lead Developer** - Architecture and code quality expert
-- **Makefile Expert** - Build automation and GNU Make master
-- **Unit Test Engineer** - Pure testing without mocks
-- **Meta Agents** - Framework extension specialists
+
+**Development Agents:**
+- **Flutter Developer** - Mobile app development with shadcn-flutter expertise
+- **Lead Developer** - Architecture, code quality, and technical leadership
+
+**Planning Agents:**
+- **Discovery Agent** - Initial research and context gathering
+- **Requirements Agent** - Detailed requirements elaboration
+- **Refinement Agent** - System architecture and component design
+- **Story Agent** - User story creation with acceptance criteria
+- **Roadmap Agent** - Milestone planning and effort estimation
+- **Implementation Agent** - Technical implementation planning
+- **Issue Workflow Orchestrator** - 6-phase feature development coordination
+
+**Review & Quality Agents:**
+- **Code Reviewer** - Comprehensive code quality analysis
+- **Unit Test Engineer** - Pure unit testing without mocks
+- **Bug Reporter/Triage/Fix/Verifier** - Complete bug lifecycle management
+- **Bug Workflow Orchestrator** - 4-phase bug resolution coordination
+- **Content Drafter** - SaaS content and documentation
+
+**Meta Framework Agents:**
+- **Meta Architect** - Ultimate artifact creator (prompts, agents, templates, workflows)
+- **Meta Prompt Engineer** - Advanced prompt optimization
+- **Meta Sub-Agent Architect** - Agent creation specialist
+- **Meta Template Expert** - Documentation template architect
+- **Meta Workflow Specialist** - Multi-agent orchestration designer
+- **Meta Context Expert** - Context documentation specialist
+- **Meta Instructions Expert** - Convention documentation architect
+
+**Claude Code Specialists:**
+- **Command Agent** - Slash command creation
+- **Hook Architect** - Event hook automation
+- **MCP Specialist** - Model Context Protocol server configuration
+
+**Other Specialists:**
+- **Makefile Expert** - GNU Make mastery and build automation
+- **Research Specialist** - Comprehensive research and analysis
 
 ### 🎯 Smart Prompts
 Quick-action commands that streamline workflows:
-- `/plx:create/issue` - Create and refine GitHub issues
-- `/plx:review/code` - Comprehensive code review
+
+**Creation Commands:**
+- `/plx:create/issue` - Create GitHub issues with proper formatting
+- `/plx:create/story` - Generate user stories with acceptance criteria
+- `/plx:create/milestone` - Plan project milestones
+- `/plx:create/bug-report` - File comprehensive bug reports
+- `/plx:create/test` - Generate unit tests
+- `/plx:create/agent` - Build new AI agents
+- `/plx:create/workflow` - Design multi-step processes
+
+**Update Commands:**
+- `/plx:update/readme` - Keep documentation current
+- `/plx:update/story` - Refine user stories
+- `/plx:update/agent` - Modify agent behavior
+- `/plx:update/makefile` - Enhance build scripts
+
+**Review & Process:**
+- `/plx:review/code` - Comprehensive code analysis
+- `/plx:commit` - Smart git commits
+- `/plx:push` - Push changes with checks
 - `/plx:sync/claude` - Sync framework components
-- `/plx:refine` - Refine project concepts into actionable plans
+- `/plx:refine` - Refine concepts systematically
+
+**Research & Analysis:**
+- `/plx:research/project` - Deep project research
+- `/plx:give/feedback` - Provide structured feedback
+- `/plx:process/feedback` - Integrate feedback systematically
 
 ### 📋 Structured Templates
 Consistent documentation formats:
-- **Story/Epic/Milestone** - Agile project management
-- **Architecture/PRD** - Technical documentation
-- **Research Reports** - Discovery findings
-- **Work Logs** - Progress tracking
+
+**Planning Templates:**
+- **Story/Epic/Task** - Agile project artifacts
+- **Milestone/Roadmap** - Project planning
+- **Proposal** - Feature proposals
+
+**Workflow Templates:**
+- **Requirements** - Comprehensive requirement docs
+- **Discovery** - Research documentation
+- **Implementation Plan** - Technical planning
+- **Refinement** - System design docs
+
+**Review Templates:**
+- **Bug Report** - Issue tracking
+- **Pull Request** - PR descriptions
+- **Feedback** - Structured feedback
+- **Work Log** - Progress tracking
+
+**Context Templates:**
+- **Platform** - Integration documentation
+- **Role/Team** - Organization structure
+- **Persona** - User profiles
+
+**Meta Templates:**
+- **Agent** - AI agent creation
+- **Workflow** - Process design
+- **Block** - Reusable components
 
 ### 🔄 Intelligent Workflows
 Multi-agent orchestration for complex tasks:
-- **Refinement Workflow** - Concept to PRD/Architecture
-- **Requirements Workflow** - Comprehensive gathering
-- **Feature Conversion** - Migration processes
+
+**Refinement Workflow** (`/start:refinement-workflow`)
+- 5-layer systematic decomposition
+- Actors & Components → Activities → Flows → Properties → Behaviors
+- Transforms concepts into testable requirements
+
+**Issue Workflow** (`/start:issue-workflow`)
+- 6-phase feature development
+- Discovery → Requirements → Refinement → Story Creation → Roadmap → Implementation
+- Complete feature lifecycle management
+
+**Bug Workflow** (`/start:bug-workflow`)
+- 4-phase bug resolution
+- Reporting → Triage → Fix Planning → Verification
+- Systematic bug lifecycle management
 
 ### 🔗 WikiLink Magic
 Automatic context loading:
 ```
 # In your documents:
-Follow [[project-conventions]] and use [[story-template]]
+Follow [[issue-creation-instructions]] and use [[story-template]]
 
 # Becomes after sync:
-Follow @instructions/project-conventions.md and use @templates/story-template.md
+Follow @instructions/issue-creation-instructions.md and use @templates/plan/story-template.md
 ```
 
-## 🛠️ Creating Custom Components
-
-### Custom Agent
-```bash
-# Create a new agent
-plx create agent my-specialist
-
-# Edit the agent file
-edit agents/my-specialist.md
-
-# Sync to Claude Code
-plx sync claude
-```
-
-### Custom Prompt
-```bash
-# Create a new prompt command
-plx create prompt analyze-performance
-
-# The prompt becomes available as:
-/plx:analyze/performance
-```
-
-### Custom Template
-```bash
-# Create a new template
-plx create template architecture-decision-record
-
-# Use in Claude Code:
-/use:architecture-decision-record
-```
 
 ## 🚦 Common Workflows
-
 ### Starting a New Feature
 ```bash
 # 1. Use the refinement workflow
-/start:refinement-workflow
+/start:issue-workflow
 
 # 2. Create a story
 /plx:create/story "User Authentication"
@@ -317,28 +394,48 @@ plx create template architecture-decision-record
 /plx:update/readme
 ```
 
-## 🔧 Advanced Configuration
+## 🔧 Advanced Features
 
-### Custom Make Commands
-Add to your `Makefile`:
+### 🎨 Blocks System
+Reusable content components for building comprehensive documentation:
+
+**Available Block Categories:**
+- **Context Blocks**: Access configuration, capabilities, functions
+- **Instruction Blocks**: Best practices, rules, quality standards
+- **Meta Blocks**: Command headers for different artifact types
+- **Refinement Blocks**: 40+ specialized blocks for requirements
+- **Workflow Blocks**: Process components
+
+
+### 🛠️ Custom Make Commands
+Extend the CLI with project-specific commands:
 ```makefile
-# Custom deployment command
+# In your Makefile
 deploy:
     @echo "Deploying to production..."
     # Your deployment logic here
+
+tests:
+    @npm test
+
+lint:
+    @npm run lint
 ```
 
 Then run:
 ```bash
 plx deploy
+plx tests
+plx lint
 ```
 
-### Project-Specific Context
-Add context files to:
-- `context/actors/` - System users and personas
-- `context/features/` - Feature specifications
-- `context/platforms/` - Integration details
-- `context/roles/` - Team member roles
+
+### 🔄 Watch Mode
+Auto-sync changes during development:
+```bash
+plx watch claude
+```
+Monitors `agents/` and `prompts/` directories for changes.
 
 ## 🤝 Contributing
 
@@ -365,42 +462,10 @@ npm link
 
 ## 📚 Documentation
 
-- **[Getting Started Guide](docs/getting-started.md)** <!-- TODO: Create getting started guide -->
-- **[Agent Development](docs/agent-development.md)** <!-- TODO: Create agent development guide -->
-- **[Template Creation](docs/template-creation.md)** <!-- TODO: Create template creation guide -->
-- **[Workflow Orchestration](docs/workflow-orchestration.md)** <!-- TODO: Create workflow guide -->
-
-## 🐛 Troubleshooting
-
-### Sync Issues
-```bash
-# Clean and re-sync
-plx sync claude clean
-```
-
-### Command Not Found
-```bash
-# Ensure global installation
-npm list -g pew-pew-plx
-
-# Reinstall if needed
-npm install -g pew-pew-plx
-```
-
-### Make Not Found
-- **macOS**: `brew install make`
-- **Ubuntu/Debian**: `sudo apt-get install build-essential`
-- **Windows**: Use WSL or install GNU Make
-
+ 
 ## 📄 License
 
 MIT License - see [LICENSE](LICENSE) for details
-
-## 🙏 Acknowledgments
-
-- Built for the Claude Code community
-- Inspired by modern AI development workflows
-- Special thanks to all contributors
 
 ## 🔗 Links
 
@@ -409,6 +474,8 @@ MIT License - see [LICENSE](LICENSE) for details
 - **npm Package**: [pew-pew-plx](https://www.npmjs.com/package/pew-pew-plx)
 - **Issues**: [GitHub Issues](https://github.com/its-brianwithai/pew-pew-projects/issues)
 
+
 ---
 
 <p align="center">Made with ❤️ by the Pew Pew team</p>
+<p align="center">⭐ Star us on GitHub if this helps your workflow!</p>
