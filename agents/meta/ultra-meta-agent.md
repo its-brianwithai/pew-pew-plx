@@ -177,6 +177,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - [[meta-workflow-specialist]] - (Relevance: Workflow orchestration expertise)
 - [[meta-context-expert]] - (Relevance: Context documentation patterns)
 - [[meta-instructions-expert]] - (Relevance: Instruction documentation standards)
+- [[meta-issue-agent]] - (Relevance: Complete 6-phase issue workflow execution and optimization)
 
 ### 🌐 Documentation & External Resources
 > 💡 *List any external documentation, API references, design specs, or other resources to consult.*
