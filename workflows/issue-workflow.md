@@ -1,4 +1,4 @@
-# 🌊 Feature Workflow: Systematic Feature Development Through Progressive Refinement
+# 🌊 Issue Workflow: Systematic Feature Development Through Progressive Refinement
 > 💡 *A sophisticated orchestration that transforms ambiguous feature requests into executable implementation plans through a disciplined 6-phase refinement process, ensuring comprehensive coverage and actionable deliverables.*
 
 This workflow embodies the intellectual framework for feature development, transforming nebulous ideas into concrete, implementable plans. It orchestrates specialized agents through a systematic methodology that progressively refines abstract concepts into detailed technical specifications, ensuring nothing is overlooked and everything is actionable.

@@ -6,7 +6,7 @@
 
 | File | Type | Description |
 |:-----|:-----|:------------|
-| [`agents/feature-workflow-orchestrator.md`](../../../agents/feature-workflow-orchestrator.md) | Added | Master orchestrator coordinating all 6 workflow phases |
+| [`agents/feature-workflow-orchestrator.md`](issue-workflow-orchestrator.md) | Added | Master orchestrator coordinating all 6 workflow phases |
 | [`agents/meta/workflow-specialist.md`](../../../agents/meta/meta-workflow-specialist) | Modified | Enhanced with sophisticated workflow design capabilities |
 | [`agents/plan/discovery-agent.md`](../../../agents/plan/discovery-agent.md) | Added | Phase 1 specialist for context gathering |
 | [`agents/plan/requirements-agent.md`](../../../agents/plan/requirements-agent.md) | Added | Phase 2 specialist for requirements elaboration |
@@ -14,7 +14,7 @@
 | [`agents/plan/story-agent.md`](../../../agents/plan/story-agent.md) | Added | Phase 4 specialist for user story creation |
 | [`agents/plan/roadmap-agent.md`](../../../agents/plan/roadmap-agent.md) | Added | Phase 5 specialist for milestone planning |
 | [`agents/plan/implementation-agent.md`](../../../agents/plan/implementation-agent.md) | Added | Phase 6 specialist for implementation planning |
-| [`workflows/feature-workflow.md`](../../../workflows/feature-workflow.md) | Added | Comprehensive 800+ line workflow documentation |
+| [`workflows/feature-workflow.md`](issue-workflow.md) | Added | Comprehensive 800+ line workflow documentation |
 | [`workflows/refinement-workflow.md`](../../../workflows/refinement-workflow.md) | Added | 5-layer systematic refinement approach |
 | [`templates/workflows/discovery-template.md`](../../../templates/workflows/discovery-template.md) | Added | Phase 1 output template |
 | [`templates/workflows/requirements-template.md`](../../../templates/workflows/requirements-template.md) | Added | Phase 2 output template |
@@ -33,15 +33,15 @@
 | [`prompts/create-refinement.md`](../../../prompts/create-refinement.md) | Added | Create Phase 3 documents |
 | [`prompts/update-refinement.md`](../../../prompts/update-refinement.md) | Added | Update Phase 3 documents |
 | [`prompts/create-story.md`](../../../prompts/create-story.md) | Added | Create user stories |
-| [`prompts/update-story.md`](../../../prompts/update-story.md) | Added | Update user stories |
+| [`prompts/update-story.md`](update-story.md) | Added | Update user stories |
 | [`prompts/create-roadmap.md`](../../../prompts/create-roadmap.md) | Added | Create Phase 4 documents |
 | [`prompts/update-roadmap.md`](../../../prompts/update-roadmap.md) | Added | Update Phase 4 documents |
 | [`prompts/create-milestone.md`](../../../prompts/create-milestone.md) | Added | Create milestone documents |
 | [`prompts/update-milestone.md`](../../../prompts/update-milestone.md) | Added | Update milestone documents |
 | [`prompts/create-implementation-plan.md`](../../../prompts/create-implementation-plan.md) | Added | Create Phase 5 documents |
 | [`prompts/update-implementation-plan.md`](../../../prompts/update-implementation-plan.md) | Added | Update Phase 5 documents |
-| [`prompts/create-feature.md`](../../../prompts/create-feature.md) | Added | Orchestrate full feature workflow |
-| [`prompts/update-feature.md`](../../../prompts/update-feature.md) | Added | Update existing feature workflow |
+| [`prompts/create-feature.md`](create-issue.md) | Added | Orchestrate full issue workflow |
+| [`prompts/update-feature.md`](update-issue.md) | Added | Update existing issue workflow |
 | [`prompts/create-pr.md`](../../../prompts/create-pr.md) | Added | Create comprehensive pull requests |
 | [`prompts/update-pr.md`](../../../prompts/update-pr.md) | Added | Update existing pull requests |
 | [`prompts/push.md`](../../../prompts/push.md) | Added | Git push with documentation updates |
@@ -119,9 +119,9 @@ Created a hierarchical agent system with a master orchestrator managing 6 specia
 ```
 
 #### File References
-- [[feature-workflow-orchestrator]] - Master orchestrator implementation
+- [[issue-workflow-orchestrator]] - Master orchestrator implementation
 - [[discovery-agent]] through [[implementation-agent]] - Phase specialists
-- [[feature-workflow]] - Complete workflow documentation
+- [[issue-workflow]] - Complete workflow documentation
 
 #### Reasoning
 The orchestrator pattern was chosen to:
@@ -192,7 +192,7 @@ Created 22 new/modified prompts following a create/update pair pattern for each 
 ```
 
 #### File References
-- [[create-feature]] / [[update-feature]] - Orchestrator prompts
+- [[create-issue]] / [[update-issue]] - Orchestrator prompts
 - [[create-discovery]] through [[create-implementation-plan]] - Phase creation
 - [[create-pr]] / [[update-pr]] - Enhanced PR management
 
@@ -292,7 +292,7 @@ graph TD
     end
     
     subgraph "Orchestration Layer"
-        B --> C[Feature Workflow Orchestrator]
+        B --> C[Issue Workflow Orchestrator]
         C --> D{Execution Mode?}
         D -->|New| E[Full Sequential]
         D -->|Partial| F[Partial Sequential]
@@ -385,7 +385,7 @@ graph TD
 ## ✅ Manual Acceptance Testing
 > 💡 *Step-by-step guide for manually testing the implementation*
 
-### Test Case 1: Full Feature Workflow
+### Test Case 1: Full Issue Workflow
 **Objective:** Validate complete workflow from vague request to implementation plan
 
 **Prerequisites:**

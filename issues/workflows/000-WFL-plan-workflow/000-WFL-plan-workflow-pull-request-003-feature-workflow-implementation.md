@@ -6,14 +6,14 @@
 
 | File | Type | Description |
 |:-----|:-----|:------------|
-| [`agents/feature-workflow-orchestrator.md`](../../../agents/feature-workflow-orchestrator.md) | Added | Main orchestrator agent for the entire workflow |
+| [`agents/feature-workflow-orchestrator.md`](issue-workflow-orchestrator.md) | Added | Main orchestrator agent for the entire workflow |
 | [`agents/plan/discovery-agent.md`](../../../agents/plan/discovery-agent.md) | Added | Phase 1 discovery and context gathering specialist |
 | [`agents/plan/requirements-agent.md`](../../../agents/plan/requirements-agent.md) | Added | Phase 2 requirements elaboration specialist |
 | [`agents/plan/refinement-agent.md`](../../../agents/plan/refinement-agent.md) | Added | Phase 3 refinement and architecture specialist |
 | [`agents/plan/roadmap-agent.md`](../../../agents/plan/roadmap-agent.md) | Added | Phase 4 milestone and roadmap planning specialist |
 | [`agents/plan/story-agent.md`](../../../agents/plan/story-agent.md) | Added | Story creation specialist from milestone deliverables |
 | [`agents/plan/implementation-agent.md`](../../../agents/plan/implementation-agent.md) | Added | Phase 5 implementation planning specialist |
-| [`workflows/feature-workflow.md`](../../../workflows/feature-workflow.md) | Added | Complete workflow documentation and orchestration guide |
+| [`workflows/feature-workflow.md`](issue-workflow.md) | Added | Complete workflow documentation and orchestration guide |
 | [`templates/workflows/*`](../../../templates/workflows/) | Added | All phase-specific templates (6 files) |
 | [`prompts/create-*.md`](../../../prompts/) | Added | Creation prompts for each workflow phase (8 files) |
 | [`prompts/update-*.md`](../../../prompts/) | Added | Update prompts for each workflow phase (8 files) |
@@ -38,7 +38,7 @@ Key achievements:
 ## 🔧 Technical Implementation Details
 > 💡 *Detailed breakdown of all technical changes made*
 
-### Feature Workflow Orchestrator
+### Issue Workflow Orchestrator
 
 #### What Changed
 Created the main orchestrator agent that coordinates the entire 6-phase workflow, managing phase transitions, quality gates, and delegating to specialist sub-agents.
@@ -66,8 +66,8 @@ Created the main orchestrator agent that coordinates the entire 6-phase workflow
 ```
 
 #### File References
-- [`agents/feature-workflow-orchestrator.md`](../../../agents/feature-workflow-orchestrator.md) - Main orchestrator implementation
-- [`workflows/feature-workflow.md`](../../../workflows/feature-workflow.md) - Complete workflow documentation
+- [`agents/feature-workflow-orchestrator.md`](issue-workflow-orchestrator.md) - Main orchestrator implementation
+- [`workflows/feature-workflow.md`](issue-workflow.md) - Complete workflow documentation
 
 #### Reasoning
 The orchestrator pattern was chosen to:
@@ -254,7 +254,7 @@ Refinement blocks provide:
 
 ```mermaid
 graph TD
-    A[User Request] --> B[Feature Workflow Orchestrator]
+    A[User Request] --> B[Issue Workflow Orchestrator]
     B --> C{Entry Point?}
     
     C -->|New Project| D[Phase 1: Discovery]
