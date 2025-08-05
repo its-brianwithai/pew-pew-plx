@@ -31,7 +31,7 @@ You've been asked to process feedback for improving PLX framework components. Fo
 
 4. **Process Based on Current Agent**:
    - **If you ARE the recommended meta agent**: Process directly with your expertise
-   - **If you are meta-architect**: Process directly as you can update all component types
+   - **If you are ultra-meta-agent**: Process directly as you can update all component types
    - **If you are NOT the recommended meta agent**: 
      - Read the appropriate meta agent file to understand their role and approach
      - Assume their expertise and follow their documented practices
