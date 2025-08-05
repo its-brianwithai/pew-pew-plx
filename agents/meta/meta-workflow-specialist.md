@@ -167,6 +167,7 @@ You are an expert workflow architect specializing in designing sophisticated orc
 | Maintainability         | Changes don't cascade unnecessarily                | Impact analysis                   |
 | Observability           | Can troubleshoot any failure                       | Monitoring coverage               |
 
+
 ## 📤 Report / Response
 
 **10. DELIVER - Create Workflow Document:** Write to `workflows/[workflow-name]-workflow.md` and provide:

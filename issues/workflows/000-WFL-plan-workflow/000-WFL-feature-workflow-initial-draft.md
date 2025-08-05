@@ -91,14 +91,14 @@ This workflow transforms initial user requests into actionable development plans
 ---
 
 ## Phase 3: Refinement & Architecture
-**Goal**: Define exact properties, behaviors, and architecture of all components
+**Goal**: Define exact properties, behaviours, and architecture of all components
 
 ### Input
 - Activity flows and deliverables from Phase 2
 
 ### Process
-1. **Define Properties & Behaviors**
-   - Define exact properties and behaviors of all things to be created/updated
+1. **Define Properties & Behaviours**
+   - Define exact properties and behaviours of all things to be created/updated
    - Follow refinement workflow from @drafts/refinement-workflow.draft.md
    - Output: Filled [[refinement-block]]
 

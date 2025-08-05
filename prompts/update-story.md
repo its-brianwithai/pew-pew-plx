@@ -11,14 +11,14 @@ Your task is to iteratively update an existing user story through a question-dri
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect of the story needs updating?
-	A. Acceptance criteria (new requirements or changed conditions)
-	B. Technical details (deliverables, estimates, or implementation)
+    A. Acceptance criteria (new requirements or changed conditions)
+    B. Technical details (deliverables, estimates, or implementation)
 </example>
 
 <requirements>

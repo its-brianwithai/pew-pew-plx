@@ -1,19 +1,19 @@
 ---
 name: refinement-template
-description: Use this template when in Phase 3 of the plan workflow to define exact properties, behaviors, and architecture of all components that need to be created or updated.
+description: Use this template when in Phase 3 of the plan workflow to define exact properties, behaviours, and architecture of all components that need to be created or updated.
 instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
 ---
 # 🔧 Refinement & Architecture: [Project Name]
-> 💡 *Detailed refinement phase that defines exact properties, behaviors, and system architecture. This document provides the technical blueprint for implementation.*
+> 💡 *Detailed refinement phase that defines exact properties, behaviours, and system architecture. This document provides the technical blueprint for implementation.*
 
 [Brief overview of what's being refined and architected]
 
 ---
 
 ## 🔄 Refinement
-> 💡 *Define exact properties and behaviors of all components to be created or updated. Follow the 5-layer approach: Actors & Components, Activities, Activity Flows, Properties, and Behaviors. Each layer builds upon the previous one.*
+> 💡 *Define exact properties and behaviours of all components to be created or updated. Follow the 5-layer approach: Actors & Components, Activities, Activity Flows, Properties, and Behaviours. Each layer builds upon the previous one.*
 
-[Define properties and behaviors for each component following the refinement workflow]
+[Define properties and behaviours for each component following the refinement workflow]
 
 ```
 <example>
@@ -35,7 +35,7 @@ instructions: Make sure that when you implement this template, you don't include
 - currentValue: [Runtime data tracked]
 - [Other state properties]
 
-#### Behaviors
+#### Behaviours
 **UI/UX**
 - Visual: [How it looks - colors, layout, spacing]
 - Interaction: [How users interact with it]

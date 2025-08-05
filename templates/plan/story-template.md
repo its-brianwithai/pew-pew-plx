@@ -55,9 +55,9 @@ instructions: Make sure that when you implement this template, you don't include
 ```
 
 ## 📊 Analytics
-> 💡 *What user actions and behaviors should be tracked to understand how this feature is used.*
+> 💡 *What user actions and behaviours should be tracked to understand how this feature is used.*
 
-[List the key user actions and behaviors to track, or state "No analytics tracking needed" if none]
+[List the key user actions and behaviours to track, or state "No analytics tracking needed" if none]
 
 ### 📈 Events to Track
 
@@ -122,6 +122,7 @@ When 100% of the tests pass, we should be able to guarantee that:
 | **Operations** | [ X ]       | [ DevOps, deployment, configuration tasks ]                                       |
 | **Core Total** | **[ Sum ]** |                                                                                   |
 
+
 ### QA, Testing & Delay Margin
 
 | Work Type        | Hours | Percentage | Reasoning                                                  |
@@ -129,6 +130,7 @@ When 100% of the tests pass, we should be able to guarantee that:
 | **QA**           | [ X ] | **25%**    | [ 25% of core work total for quality assurance ]           |
 | **Testing**      | [ X ] | **15%**    | [ 15% of core work total for testing effort ]              |
 | **Delay Margin** | [ X ] | **10%+**   | [ 10% minimum, increase for high-risk/unknown complexity ] |
+
 
 ### Total Estimate
 **Total Hours:** [ Grand Total ]

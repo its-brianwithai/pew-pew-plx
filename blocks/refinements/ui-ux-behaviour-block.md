@@ -1,5 +1,5 @@
 ## 🎨 UI/UX Behaviour
-> 💡 *Specific behaviour requirements for UI/UX elements including positioning, responsive behavior, feedback, and animations.*
+> 💡 *Specific behavior requirements for UI/UX elements including positioning, responsive behavior, feedback, and animations.*
 
 [List UI/UX behavioral requirements using wikilinks where applicable]
 

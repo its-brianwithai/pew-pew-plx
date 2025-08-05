@@ -11,14 +11,14 @@ Your task is to iteratively create a requirements document through a question-dr
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🌊 Which core user journey should we detail first?
-	A. Primary happy path (most common user flow)
-	B. Critical error handling (what happens when things fail)
+    A. Primary happy path (most common user flow)
+    B. Critical error handling (what happens when things fail)
 </example>
 
 <requirements>

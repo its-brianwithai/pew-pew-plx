@@ -11,14 +11,14 @@ Your task is to iteratively update an existing roadmap document through a questi
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect of the roadmap needs updating?
-	A. Milestone changes (scope, timing, or sequencing)
-	B. Story adjustments (new stories, estimates, or priorities)
+    A. Milestone changes (scope, timing, or sequencing)
+    B. Story adjustments (new stories, estimates, or priorities)
 </example>
 
 <requirements>

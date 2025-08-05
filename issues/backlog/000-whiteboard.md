@@ -129,42 +129,42 @@ Steps
 Rules of this framework:
 
 Workflows:
-	have:
-		- Orchestrator (Agent)
-		- Steps
-			have:
-				- Input (optional Template)
-				- Orchestrator (Agent)
-				- Prompt
-					syncs to:
-						- .claude/plx/{verb}/{object}.md (`plx:create:issue.md`)
-				- Output (Template)
-					has:
-						- Blocks
-					sync to:
-						- .claude/use/{filename}.md (`use/story-template`)
-			sync to:
-				- .claude/execute/{filename}.md (`/execute:create-issue-step`)
-		- Output(s)
-	sync to:
-		- .claude/start/{filename}.md (`/start:refinement-workflow`)
+    have:
+        - Orchestrator (Agent)
+        - Steps
+            have:
+                - Input (optional Template)
+                - Orchestrator (Agent)
+                - Prompt
+                    syncs to:
+                        - .claude/plx/{verb}/{object}.md (`plx:create:issue.md`)
+                - Output (Template)
+                    has:
+                        - Blocks
+                    sync to:
+                        - .claude/use/{filename}.md (`use/story-template`)
+            sync to:
+                - .claude/execute/{filename}.md (`/execute:create-issue-step`)
+        - Output(s)
+    sync to:
+        - .claude/start/{filename}.md (`/start:refinement-workflow`)
 
 Agents:
-	have:
-		- Expert Role
-		- Instructions
-			are:
-				- Best Practices
-				- Personal Preferences
-				- Examples
-				- Acceptance Criteria
-				- Rules
-				- Constraints
-			sync to:
-				- .claude/follow/{filename}.md (`/follow:project-conventions`)
-	sync to:
-		- .claude/agents/{filename}.md (sub agents)
-		- .claude/commands/act/as-{filename}.md (`/act:as-requirements-expert`)
+    have:
+        - Expert Role
+        - Instructions
+            are:
+                - Best Practices
+                - Personal Preferences
+                - Examples
+                - Acceptance Criteria
+                - Rules
+                - Constraints
+            sync to:
+                - .claude/follow/{filename}.md (`/follow:project-conventions`)
+    sync to:
+        - .claude/agents/{filename}.md (sub agents)
+        - .claude/commands/act/as-{filename}.md (`/act:as-requirements-expert`)
 
 
 

@@ -7,7 +7,7 @@ This approach helps you systematically break down any system or feature into its
 Refined documentation should be:
 - **Systematic**: Follow a consistent structure
 - **Testable**: Each requirement can be validated
-- **Hierarchical**: Build from basic elements to complex behaviors
+- **Hierarchical**: Build from basic elements to complex behaviours
 - **Complete**: Cover all aspects from actors to performance
 
 ## 🧩 The Five-Layer Approach
@@ -138,7 +138,7 @@ Refined documentation should be:
     - Analytics (what data to track)
     - UI/UX (how it looks and feels)
     - Rules (what rules apply)
-2. Focus on behaviors that can be clearly tested
+2. Focus on behaviours that can be clearly tested
 3. If you can't write a test for it, make it more specific
 
 ## 🔄 Implementation Process

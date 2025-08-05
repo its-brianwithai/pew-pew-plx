@@ -13,14 +13,14 @@ Your task is to update existing project resources based on {request}. If the req
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect needs updating?
-	A. Content modification (code, text, configuration)
-	B. Structure reorganization (refactoring, renaming, moving)
+    A. Content modification (code, text, configuration)
+    B. Structure reorganization (refactoring, renaming, moving)
 </example>
 
 <constraints>

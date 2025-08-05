@@ -35,7 +35,7 @@ node bin/plx.js sync claude
 
 ## Architecture Overview
 
-### Component Types and Sync Behavior
+### Component Types and Sync Behaviour
 
 1. **Agents** (`agents/`) → Synced as both:
    - Sub-agents in `.claude/agents/` (for automatic delegation)
@@ -116,7 +116,7 @@ Agent filenames are parsed to extract personas:
 3. Use WikiLinks for cross-references
 4. Run `plx sync claude` to make available
 
-### Modifying Sync Behavior
+### Modifying Sync Behaviour
 - Sync scripts are in `scripts/claude-code/`
 - Each component type has its own sync script
 - WikiLink resolution happens after initial sync

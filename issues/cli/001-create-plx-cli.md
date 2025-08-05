@@ -40,7 +40,7 @@ The [[package.json]] has been configured as an ES module with the following key 
 
 ### 2. Main CLI Executable
 
-The [[bin/plx.js]] serves as the entry point with three main behaviors:
+The [[bin/plx.js]] serves as the entry point with three main behaviours:
 
 #### Command Router Implementation
 
@@ -207,14 +207,14 @@ The CLI seamlessly proxies to the [[Makefile]]:
 # Example commands that work through plx
 sync:
 ifeq ($(word 2,$(MAKECMDGOALS)),claude)
-	@echo "Syncing Claude Code..."
-	@./scripts/claude-code/sync-claude-code.sh
+    @echo "Syncing Claude Code..."
+    @./scripts/claude-code/sync-claude-code.sh
 endif
 
 pull:
 ifeq ($(word 2,$(MAKECMDGOALS)),main)
-	@echo "📥 Pulling latest from main branch..."
-	# ... implementation
+    @echo "📥 Pulling latest from main branch..."
+    # ... implementation
 endif
 ```
 

@@ -11,14 +11,14 @@ Your task is to iteratively create a discovery document through a question-drive
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🎯 What is the primary goal or problem this project addresses?
-	A. New feature or capability (describe what users will be able to do)
-	B. Improvement or fix (describe current pain points)
+    A. New feature or capability (describe what users will be able to do)
+    B. Improvement or fix (describe current pain points)
 </example>
 
 <requirements>

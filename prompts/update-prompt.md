@@ -11,14 +11,14 @@ Your task is to iteratively update an existing prompt through a question-driven 
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect of the prompt needs improvement?
-	A. Clarity and structure (ambiguity, organization, flow)
-	B. Performance and effectiveness (outputs, accuracy, constraints)
+    A. Clarity and structure (ambiguity, organization, flow)
+    B. Performance and effectiveness (outputs, accuracy, constraints)
 </example>
 
 <requirements>

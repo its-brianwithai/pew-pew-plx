@@ -52,7 +52,7 @@ This workflow exists to bridge the chasm between human intent and machine implem
 - **Discovery Document**: Structured capture of initial context and requirements
 - **Activity Flow**: Step-by-step journey through system interactions
 - **Deliverable**: Discrete unit of work that creates value
-- **Refinement**: Systematic decomposition into properties and behaviors
+- **Refinement**: Systematic decomposition into properties and behaviours
 - **Milestone**: Independently releasable collection of deliverables
 - **User Story**: Atomic work unit sized for sprint execution
 - **Implementation Plan**: Detailed technical roadmap for story execution
@@ -98,7 +98,7 @@ Phase 2: Requirements Elaboration
 Phase 3: Refinement & Architecture
 ├── Parallel Block A: Component Refinement
 │   ├── Step 3.1a: Property Definition
-│   └── Step 3.2a: Behavior Specification
+│   └── Step 3.2a: Behaviour Specification
 ├── Parallel Block B: Architecture Design
 │   ├── Step 3.1b: System Architecture
 │   └── Step 3.2b: Component Relationships
@@ -306,7 +306,7 @@ Use [[create-requirements]] to start fresh or [[update-requirements]] to enhance
 - **Fail Actions**: Return to specific steps for completion
 
 ### Phase 3: Refinement & Architecture
-> *Definition phase that specifies exact properties, behaviors, and system design*
+> *Definition phase that specifies exact properties, behaviours, and system design*
 
 #### Prerequisites
 - Completed requirements document OR clear list of what needs to be built
@@ -316,7 +316,7 @@ Use [[create-requirements]] to start fresh or [[update-requirements]] to enhance
 **Flexibility**: Jump directly to this phase if you:
 - Have requirements defined elsewhere (e.g., PRD, technical spec)
 - Need to define technical architecture for known components
-- Want to refine properties and behaviors of existing systems
+- Want to refine properties and behaviours of existing systems
 Use [[create-refinement]] for new specifications or [[update-refinement]] to enhance existing ones.
 
 #### Parallel Execution Block
@@ -339,14 +339,14 @@ Use [[create-refinement]] for new specifications or [[update-refinement]] to enh
   - **Recovery Strategy**: Use examples to clarify
   - **Escalation Path**: Define based on common patterns
 
-###### Step 3.2a: Behavior Specification
+###### Step 3.2a: Behaviour Specification
 - **Purpose**: Define how components behave and interact
 - **Instructions**: Specify methods, events, and state changes
-- **Agent**: [[refinement-agent]] - Behavioral modeling expert
+- **Agent**: [[refinement-agent]] - Behavioural modeling expert
 - **Inputs**: Components with properties
 - **Outputs**: Complete [[refinement-block]]
 - **Success Criteria**: 
-  - All behaviors documented
+  - All behaviours documented
   - State transitions clear
   - Side effects identified
 - **Error Handling**:
@@ -668,6 +668,7 @@ Use [[create-implementation-plan]] for new plans or [[update-implementation-plan
 > 💡 *Comprehensive strategies for handling failures and maintaining workflow integrity.*
 
 ### Error Classification
+
 | Error Type            | Severity | Detection Method            | Recovery Strategy         |
 |:----------------------|:---------|:----------------------------|:--------------------------|
 | Missing Context       | High     | Empty sections in templates | Return to discovery phase |
@@ -676,6 +677,7 @@ Use [[create-implementation-plan]] for new plans or [[update-implementation-plan
 | Unclear Requirements  | High     | Validation failures         | Stakeholder clarification |
 | Technical Unknowns    | Medium   | Gap analysis                | Research spikes           |
 | Resource Constraints  | Low      | Effort estimation           | Adjust milestone scope    |
+
 
 ### Circuit Breaker Patterns
 - **Scope Creep Detection**: Halt if requirements grow >30% during workflow
@@ -753,7 +755,7 @@ Use [[create-implementation-plan]] for new plans or [[update-implementation-plan
    - [ ] Identify deliverables
    - [ ] Pass quality gate
 6. [ ] Execute Phase 3: Refinement (can parallelize)
-   - [ ] Define properties/behaviors
+   - [ ] Define properties/behaviours
    - [ ] Create architecture
    - [ ] Validate consistency
 7. [ ] Proceed to Phase 4: Story Creation
@@ -769,6 +771,7 @@ Use [[create-implementation-plan]] for new plans or [[update-implementation-plan
    - [ ] Verify executability
 
 ### Troubleshooting Guide
+
 | Symptom | Likely Cause | Resolution |
 |:------- |:------------ |:---------- |
 | Stuck in discovery | Unclear requirements | Document what's known and proceed with assumptions |
@@ -777,6 +780,7 @@ Use [[create-implementation-plan]] for new plans or [[update-implementation-plan
 | Estimates unrealistic | Missing hidden work | Add integration/deployment tasks |
 | Plans too vague | Insufficient technical detail | Analyze codebase for specifics |
 | Dependencies blocking | Poor architecture | Refactor component boundaries |
+
 
 ## 🔮 Evolution & Adaptation
 > 💡 *How this workflow adapts and improves over time.*

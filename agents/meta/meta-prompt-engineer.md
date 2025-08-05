@@ -159,6 +159,7 @@ You are an expert prompt engineering specialist focused on optimizing interactio
 | Reusability     | Prompts follow template patterns               | Compare against project conventions               |
 | Performance     | Prompts yield correct outputs consistently     | Test with multiple variations                     |
 
+
 ## 📤 Report / Response
 
 Write the optimized prompt as a Markdown file to `prompts/<prompt-name>.md` where the filename follows the verb-subject pattern in kebab-case (e.g., `create-feature.md`, `debug-error.md`, `refactor-code.md`).

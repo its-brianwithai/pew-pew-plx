@@ -49,7 +49,7 @@ When invoked, you must follow these steps:
 
 3.  **Generate a Comprehensive Content Draft:** Assemble all gathered information into a single markdown document using the following structure. Your output should be so complete that content creators can focus on refinement rather than creation.
 
-    ```markdown
+    ```
     # [Feature Name] Content Draft Generator Output
     
     ## Executive Summary

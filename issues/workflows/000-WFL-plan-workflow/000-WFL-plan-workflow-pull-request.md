@@ -77,6 +77,7 @@
 | [`prompts/plan.md`](../../../prompts/plan.md) | Deleted | Replaced by phase-specific prompts |
 | [`blocks/refinements/high-level-plan-block.md`](../../../blocks/refinements/high-level-plan-block.md) | Deleted | Replaced by more specific blocks |
 
+
 ## 🎯 Implementation Overview
 > 💡 *High-level description of what was implemented and why*
 
@@ -98,7 +99,7 @@ The implementation addresses the need for systematic project planning in AI-assi
 Created a hierarchical agent system with a master orchestrator managing 6 specialized phase agents, each responsible for a specific aspect of the planning workflow.
 
 #### Code Examples
-```markdown
+```
 # Orchestrator Decision Tree
 1. Assess Request
    ├─ New Feature → Full Sequential Mode
@@ -139,7 +140,7 @@ The orchestrator pattern was chosen to:
 Migrated workflow-specific templates from `templates/plan/` to `templates/workflows/` and created 6 new phase-specific templates aligned with the Plan Workflow.
 
 #### Code Examples
-```markdown
+```
 # Before: Scattered templates in plan/
 templates/plan/
 ├── dev-plan-template.md
@@ -175,7 +176,7 @@ Reorganization provides:
 Created 22 new/modified prompts following a create/update pair pattern for each phase, plus orchestrator prompts for full workflow execution.
 
 #### Code Examples
-```markdown
+```
 # Individual Phase Prompt Pattern
 1. Act as [[specialized-agent]]
 2. Use ONE focused question at a time
@@ -212,7 +213,7 @@ The prompt system enables:
 Added 11 new reusable documentation blocks providing standardized components for building comprehensive templates.
 
 #### Code Examples
-```markdown
+```
 # Activity Flow Block Structure
 ## 📊 Activity Flows
 > 💡 *Step-by-step flows showing how actors interact*
@@ -262,11 +263,11 @@ for template_file in $(find "$TEMPLATES_DIR" -name "*-template.md" -type f); do
 
 # Makefile Enhancement
 pull: ## Pull updates from a branch or external repository
-	@if [ -z "$(BRANCH)" ]; then \
-		echo "Usage: make pull BRANCH=<branch-name|repo-url>"; \
-	else \
-		./scripts/pull-updates.sh "$(BRANCH)"; \
-	fi
+    @if [ -z "$(BRANCH)" ]; then \
+        echo "Usage: make pull BRANCH=<branch-name|repo-url>"; \
+    else \
+        ./scripts/pull-updates.sh "$(BRANCH)"; \
+    fi
 ```
 
 #### File References
@@ -337,26 +338,26 @@ graph TD
 > 💡 *Document any changes to business rules or domain logic*
 
 ### Planning Methodology
-- **Previous Behavior:** Ad-hoc planning with inconsistent documentation
-- **New Behavior:** Systematic 6-phase workflow with progressive refinement
+- **Previous Behaviour:** Ad-hoc planning with inconsistent documentation
+- **New Behaviour:** Systematic 6-phase workflow with progressive refinement
 - **Impact:** All feature planning now follows a consistent, quality-controlled process
 - **Example:** User request "build a chat app" produces:
   - Discovery: Actors (users, admins), Components (UI, API, database)
   - Requirements: Activity flows for sending/receiving messages
-  - Refinement: Message properties, real-time behaviors
+  - Refinement: Message properties, real-time behaviours
   - Stories: "As a user, I want to send messages..."
   - Roadmap: MVP milestone with 3 sprints
   - Implementation: Step-by-step technical plan
 
 ### Agent Orchestration
-- **Previous Behavior:** Single agents handling entire workflows
-- **New Behavior:** Orchestrator delegates to phase-specific specialists
+- **Previous Behaviour:** Single agents handling entire workflows
+- **New Behaviour:** Orchestrator delegates to phase-specific specialists
 - **Impact:** Better separation of concerns and expertise
 - **Example:** Refinement agent focuses solely on technical specifications
 
 ### Documentation Standards
-- **Previous Behavior:** Varied documentation formats
-- **New Behavior:** Standardized templates with reusable blocks
+- **Previous Behaviour:** Varied documentation formats
+- **New Behaviour:** Standardized templates with reusable blocks
 - **Impact:** Consistent, comprehensive documentation
 - **Example:** All user stories follow same format with effort estimates
 
@@ -367,7 +368,7 @@ graph TD
 
 ### Claude Code Commands
 - **Visual Changes:** 22 new `/plx:` commands in command palette
-- **Behavioral Changes:** Commands now invoke specific phase agents
+- **Behavioural Changes:** Commands now invoke specific phase agents
 - **Accessibility Impact:** More discoverable workflow phases
 - **Example Commands:**
   - `/plx:create-feature` - Start full workflow
@@ -376,7 +377,7 @@ graph TD
 
 ### Prompt Interaction
 - **Visual Changes:** Question-driven interface with A/B options
-- **Behavioral Changes:** Iterative refinement vs single response
+- **Behavioural Changes:** Iterative refinement vs single response
 - **Accessibility Impact:** Clearer guidance for users
 - **Example:** "Which component needs refinement? A) User Authentication B) Message System"
 
@@ -430,7 +431,7 @@ graph TD
    
 2. Complete refinement process
    - Expected: Technical specifications created
-   - Verify: Properties and behaviors fully defined
+   - Verify: Properties and behaviours fully defined
    
 3. Continue to implementation planning
    - Expected: Can proceed without earlier phases

@@ -9,7 +9,7 @@ A comprehensive guide to writing clean, maintainable, and efficient Makefiles ba
 ```makefile
 # CORRECT
 target:
-	command  # This is a TAB
+    command  # This is a TAB
 
 # WRONG
 target:
@@ -53,10 +53,10 @@ CFLAGS += -O2  # Now CFLAGS = "-Wall -O2"
 all: program documentation
 
 program: main.o utils.o
-	$(CC) $^ -o $@
+    $(CC) $^ -o $@
 
 documentation:
-	doxygen
+    doxygen
 ```
 
 #### Use `.PHONY` for Non-File Targets
@@ -64,10 +64,10 @@ documentation:
 .PHONY: all clean test install
 
 clean:
-	rm -f *.o $(TARGET)
+    rm -f *.o $(TARGET)
 
 test:
-	./run_tests.sh
+    ./run_tests.sh
 ```
 
 ### 4. Use Automatic Variables
@@ -75,10 +75,10 @@ test:
 ```makefile
 # Essential automatic variables
 target: prereq1 prereq2
-	echo $@   # target name
-	echo $<   # first prerequisite
-	echo $^   # all prerequisites
-	echo $?   # prerequisites newer than target
+    echo $@   # target name
+    echo $<   # first prerequisite
+    echo $^   # all prerequisites
+    echo $?   # prerequisites newer than target
 ```
 
 ### 5. Pattern Rules and Static Pattern Rules
@@ -87,7 +87,7 @@ target: prereq1 prereq2
 ```makefile
 # Generic rule for all .c to .o conversions
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
 ```
 
 #### Static Pattern Rules for Specific Sets
@@ -96,7 +96,7 @@ OBJECTS = main.o utils.o parser.o
 
 # Only applies to files in $(OBJECTS)
 $(OBJECTS): %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
 ```
 
 ### 6. Dependency Management
@@ -111,7 +111,7 @@ DEPS := $(OBJECTS:.o=.d)
 
 # Compile with dependency generation
 %.o: %.c
-	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
+    $(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 ```
 
 ### 7. Error Handling
@@ -125,9 +125,9 @@ DEPS := $(OBJECTS:.o=.d)
 #### Ignore Errors When Appropriate
 ```makefile
 clean:
-	# The - prefix ignores errors from this command
-	-rm -f *.o
-	-rm -f $(TARGET)
+    # The - prefix ignores errors from this command
+    -rm -f *.o
+    -rm -f $(TARGET)
 ```
 
 ### 8. Directory Structure
@@ -139,8 +139,8 @@ SRC_DIR := src
 
 # Create directory before building into it
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+    @mkdir -p $(dir $@)
+    $(CC) $(CFLAGS) -c $< -o $@
 ```
 
 ### 9. Command Echoing
@@ -149,18 +149,18 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 ```makefile
 # Suppress command echo with @
 quiet-target:
-	@echo "Building..."
-	@$(CC) $(CFLAGS) -c file.c
+    @echo "Building..."
+    @$(CC) $(CFLAGS) -c file.c
 
 # Or use a verbosity variable
 ifeq ($(V),1)
-	Q =
+    Q =
 else
-	Q = @
+    Q = @
 endif
 
 target:
-	$(Q)$(CC) $(CFLAGS) -c file.c
+    $(Q)$(CC) $(CFLAGS) -c file.c
 ```
 
 ### 10. Shell Usage
@@ -169,25 +169,25 @@ target:
 ```makefile
 # WRONG - cd doesn't affect next line
 wrong:
-	cd subdir
-	make
+    cd subdir
+    make
 
 # CORRECT - use semicolons or backslashes
 correct:
-	cd subdir && make
+    cd subdir && make
 
 # Or use backslashes for readability
 also-correct:
-	cd subdir && \
-	make
+    cd subdir && \
+    make
 ```
 
 #### Use `$$` for Shell Variables
 ```makefile
 target:
-	for file in *.c; do \
-		echo "Processing $$file"; \
-	done
+    for file in *.c; do \
+        echo "Processing $$file"; \
+    done
 ```
 
 ## Advanced Best Practices
@@ -206,7 +206,7 @@ BASENAMES := $(notdir $(basename $(SOURCES)))
 # Use call for reusable "functions"
 define compile-rule
 $(1): $(2)
-	$$(CC) $$(CFLAGS) -c $(2) -o $(1)
+    $$(CC) $$(CFLAGS) -c $(2) -o $(1)
 endef
 
 $(eval $(call compile-rule,main.o,main.c))
@@ -247,7 +247,7 @@ endif # COMMON_MK
 $(OBJECTS): | $(BUILD_DIR)
 
 $(BUILD_DIR):
-	mkdir -p $@
+    mkdir -p $@
 ```
 
 ### 5. Export Variables Judiciously
@@ -290,20 +290,20 @@ CPPFLAGS := $(INC_FLAGS) -MMD -MP
 
 # Main target
 $(BUILD_DIR)/$(TARGET): $(OBJS)
-	$(CXX) $(OBJS) -o $@ $(LDFLAGS)
+    $(CXX) $(OBJS) -o $@ $(LDFLAGS)
 
 # Build rules
 $(BUILD_DIR)/%.c.o: %.c
-	@mkdir -p $(dir $@)
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+    @mkdir -p $(dir $@)
+    $(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.cpp.o: %.cpp
-	@mkdir -p $(dir $@)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+    @mkdir -p $(dir $@)
+    $(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD_DIR)
+    rm -rf $(BUILD_DIR)
 
 # Include dependencies
 -include $(DEPS)
@@ -329,18 +329,18 @@ LIB_DIR := $(PREFIX)/lib
 all: $(STATIC_LIB) $(SHARED_LIB)
 
 $(STATIC_LIB): $(OBJS)
-	$(AR) rcs $@ $^
+    $(AR) rcs $@ $^
 
 $(SHARED_LIB): $(OBJS)
-	$(CC) -shared -Wl,-soname,lib$(LIB_NAME).so.1 -o $@ $^
+    $(CC) -shared -Wl,-soname,lib$(LIB_NAME).so.1 -o $@ $^
 
 .PHONY: install
 install: all
-	install -d $(INCLUDE_DIR) $(LIB_DIR)
-	install -m 644 include/*.h $(INCLUDE_DIR)
-	install -m 755 $(SHARED_LIB) $(LIB_DIR)
-	install -m 644 $(STATIC_LIB) $(LIB_DIR)
-	ldconfig
+    install -d $(INCLUDE_DIR) $(LIB_DIR)
+    install -m 644 include/*.h $(INCLUDE_DIR)
+    install -m 755 $(SHARED_LIB) $(LIB_DIR)
+    install -m 644 $(STATIC_LIB) $(LIB_DIR)
+    ldconfig
 ```
 
 ## Common Pitfalls to Avoid
@@ -367,35 +367,35 @@ OBJS := $(wildcard *.o)
 ```makefile
 # WRONG - if a file named 'clean' exists, target won't run
 clean:
-	rm -f *.o
+    rm -f *.o
 
 # CORRECT
 .PHONY: clean
 clean:
-	rm -f *.o
+    rm -f *.o
 ```
 
 ### 4. Shell Loop Pitfalls
 ```makefile
 # WRONG - each line in new shell
 wrong:
-	export VAR=value
-	echo $$VAR  # Won't see the exported value
+    export VAR=value
+    echo $$VAR  # Won't see the exported value
 
 # CORRECT
 correct:
-	export VAR=value; echo $$VAR
+    export VAR=value; echo $$VAR
 ```
 
 ### 5. Not Quoting Shell Variables
 ```makefile
 # WRONG - breaks with spaces in filenames
 wrong:
-	for f in $(FILES); do cp $$f backup/; done
+    for f in $(FILES); do cp $$f backup/; done
 
 # CORRECT
 correct:
-	for f in $(FILES); do cp "$$f" backup/; done
+    for f in $(FILES); do cp "$$f" backup/; done
 ```
 
 ## Performance Tips
@@ -411,7 +411,7 @@ make -j$(sysctl -n hw.ncpu)  # macOS
 ```makefile
 # Instead of recursive make
 all:
-	$(MAKE) -C subdir
+    $(MAKE) -C subdir
 
 # Consider including submakefiles
 include subdir/module.mk
@@ -430,7 +430,7 @@ SOURCES := $(wildcard *.c)  # Evaluated once
 ```makefile
 # Generate multiple outputs atomically
 parser.c parser.h &: parser.y
-	yacc -d $<
+    yacc -d $<
 ```
 
 ## Debugging Makefiles
@@ -438,7 +438,7 @@ parser.c parser.h &: parser.y
 ### 1. Print Variable Values
 ```makefile
 print-%:
-	@echo '$*=$($*)'
+    @echo '$*=$($*)'
 
 # Usage: make print-CFLAGS
 ```
@@ -464,7 +464,7 @@ make --trace  # Trace execution (GNU Make 4.0+)
 ```makefile
 # Multiple outputs from single recipe
 foo bar baz &: source
-	generate-all $< $@
+    generate-all $< $@
 ```
 
 ### 2. .ONESHELL
@@ -472,9 +472,9 @@ foo bar baz &: source
 # Run all recipe lines in single shell
 .ONESHELL:
 deploy:
-	cd /path/to/deployment
-	git pull
-	make install
+    cd /path/to/deployment
+    git pull
+    make install
 ```
 
 ### 3. Improved Functions

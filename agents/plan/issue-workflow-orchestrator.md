@@ -123,7 +123,7 @@ You are an expert workflow orchestrator specializing in the systematic transform
 - [[story-agent]] - (Relevance: Phase 4 specialist for user story creation)
 - [[roadmap-agent]] - (Relevance: Phase 5 specialist for milestone planning)
 - [[implementation-agent]] - (Relevance: Phase 6 specialist for technical planning)
-- `templates/plan/` directory - (Relevance: Output templates for each phase)
+- `templates/workflows/` directory - (Relevance: Output templates for each phase)
 - `prompts/create-*.md` and `prompts/update-*.md` - (Relevance: Phase-specific prompts)
 
 ### 💡 Additional Context
@@ -152,6 +152,7 @@ You are an expert workflow orchestrator specializing in the systematic transform
 | Parallel Execution | Concurrent paths properly synchronized | Verify merged outputs consistency |
 | Scope Management | Requirements growth contained (<30%) | Compare final to initial scope |
 | Workflow Adaptation | Flexibility used appropriately | Assess if all phases were necessary |
+
 
 ## 📤 Report / Response
 

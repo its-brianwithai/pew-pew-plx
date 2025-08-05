@@ -117,6 +117,7 @@ color: `{{selected-color}}`
 | [More categories as needed] | [More standards as needed] | [More verification methods] |
 | [...] | [...] | [...] |
 
+
 ## 📤 Report / Response
 
 [Clear description of the expected output format and structure. Specify if the agent should create files, provide structured responses, or format output in a particular way]

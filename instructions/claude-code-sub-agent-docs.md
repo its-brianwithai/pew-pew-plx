@@ -80,13 +80,14 @@ Subagents are stored as Markdown files with YAML frontmatter in two possible loc
 | **Project subagents** | `.claude/agents/`   | Available in current project  | Highest  |
 | **User subagents**    | `~/.claude/agents/` | Available across all projects | Lower    |
 
+
 When subagent names conflict, project-level subagents take precedence over user-level subagents.
 
 ### File format
 
 Each subagent is defined in a Markdown file with this structure:
 
-```markdown
+```
 ---
 name: your-sub-agent-name
 description: Description of when this subagent should be invoked
@@ -108,6 +109,7 @@ the subagent should follow.
 | `name`        | Yes      | Unique identifier using lowercase letters and hyphens                                       |
 | `description` | Yes      | Natural language description of the subagent's purpose                                      |
 | `tools`       | No       | Comma-separated list of specific tools. If omitted, inherits all tools from the main thread |
+
 
 ### Available tools
 
@@ -190,7 +192,7 @@ Request a specific subagent by mentioning it in your command:
 
 ### Code reviewer
 
-```markdown
+```
 ---
 name: code-reviewer
 description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code.
@@ -224,7 +226,7 @@ Include specific examples of how to fix issues.
 
 ### Debugger
 
-```markdown
+```
 ---
 name: debugger
 description: Debugging specialist for errors, test failures, and unexpected behavior. Use proactively when encountering any issues.
@@ -259,7 +261,7 @@ Focus on fixing the underlying issue, not just symptoms.
 
 ### Data scientist
 
-```markdown
+```
 ---
 name: data-scientist
 description: Data analysis expert for SQL queries, BigQuery operations, and data insights. Use proactively for data analysis tasks and queries.

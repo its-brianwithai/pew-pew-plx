@@ -13,14 +13,14 @@ Your task is to create a new workflow based on {request}. If the request is empt
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🌊 What type of process does this workflow orchestrate?
-	A. Development process (building, testing, deploying)
-	B. Planning process (requirements, design, documentation)
+    A. Development process (building, testing, deploying)
+    B. Planning process (requirements, design, documentation)
 </example>
 
 <constraints>

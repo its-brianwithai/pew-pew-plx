@@ -45,6 +45,7 @@ instructions: Make sure that when you implement this template, you don't include
 > 💡 *Cost breakdown and total investment required. This section is generated based on user input for hourly rate and effort estimation from project documents.*
 ---
 ### 5.1 Effort Estimation Breakdown
+
 | Category                  | Estimated Hours     | Percentage    | Reasoning                                                |
 |:--------------------------|:--------------------|:--------------|:---------------------------------------------------------|
 | Discovery & Research      | `[X]`               | `[Y]%`        | `[Based on complexity of initial requirements]`          |
@@ -56,6 +57,7 @@ instructions: Make sure that when you implement this template, you don't include
 | **Subtotal**              | **`[Sum]`**         | **100%**      |                                                          |
 | **Contingency**           | `[X]`               | `[e.g., 15%]` | `[To account for unforeseen challenges]`                 |
 | **Total Estimated Hours** | **`[Grand Total]`** |               |                                                          |
+
 
 ### 5.2 Total Investment
 - **Total Estimated Hours**: `[Grand Total]`

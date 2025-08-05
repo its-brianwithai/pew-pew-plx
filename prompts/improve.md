@@ -11,14 +11,14 @@ Your task is to iteratively refine {source} material until it meets the {target}
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🤔 Is the primary goal of this feature to increase user engagement or to streamline an existing workflow?
-	A. Increase user engagement
-	B. Streamline an existing workflow
+    A. Increase user engagement
+    B. Streamline an existing workflow
 </example>
 
 <constraints>

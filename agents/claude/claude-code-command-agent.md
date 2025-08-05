@@ -44,7 +44,7 @@ Your final response should be a markdown document showing the path and content o
 
 ### Command File: `[.claude|~/.claude]/commands/[path/to/command.md]`
 
-```markdown
+```
 ---
 description: [A brief description of the command]
 argument-hint: [optional arguments]

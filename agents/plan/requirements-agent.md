@@ -137,6 +137,7 @@ You are an expert requirements analyst specializing in Phase 2 of the plan workf
 | Size Appropriateness | All deliverables ≤3 points | Check story point estimates |
 | Dependency Mapping | All dependencies identified | No surprise blockers |
 
+
 ## 📤 Report / Response
 
 Create a complete requirements document following the [[requirements-template]] structure. The output should be a single markdown file that:

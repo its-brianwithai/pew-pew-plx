@@ -28,6 +28,7 @@ instructions: Make sure that when you implement this template, you don't include
 | [[epic-001]]        | [Goal 1]     | [Guided Tour, Profile Setup Wizard, Welcome Emails]                                | `In Progress` |
 | [[epic-002]]        | [Goal 3]     | [Database Query Optimization, Frontend Asset Caching]                              | `Planning`    |
 
+
 ---
 
 ### ➡️ Next (Ready for Development)
@@ -38,6 +39,7 @@ instructions: Make sure that when you implement this template, you don't include
 | [[epic-003]]        | [Goal 1, 2]    | [Customizable Dashboards, PDF Exports, Scheduled Reports]                          | `Ready`     |
 | [[epic-004]]    | [Goal 2]       | [User Groups, Role-based Access Control (RBAC)]                                    | `Discovery` |
 
+
 ---
 
 ### ⏳ Later (To Be Prioritized)
@@ -47,6 +49,7 @@ instructions: Make sure that when you implement this template, you don't include
 |:----------------------------------------------------------|:---------------|:-------------------------------------------------------------------------------------|:-------|
 | [[idea-integrations]]      | [Goal 1]     | [Connectors for major communication and storage platforms]                         | `Idea` |
 | [[idea-mobile-mvp]]                    | [Goal 1]     | [Core feature access on iOS and Android]                                           | `Idea` |
+
 
 ## 📊 Visual Timeline (Gantt Chart)
 > 💡 *A visual representation of the roadmap, showing estimated timelines for major initiatives. This is for high-level planning and is subject to change.*

@@ -13,14 +13,14 @@ Your task is to update an existing template based on {request}. If the request i
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔧 What aspect of the template needs updating?
-	A. Structure and sections (add/remove/reorganize)
-	B. Content and instructions (placeholders, guidance)
+    A. Structure and sections (add/remove/reorganize)
+    B. Content and instructions (placeholders, guidance)
 </example>
 
 <constraints>

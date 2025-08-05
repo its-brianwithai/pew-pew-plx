@@ -144,7 +144,7 @@ WikiLinks are resolved in this order:
 2. Claude directories: Recursively searches `.claude/`
 
 ### Example:
-```markdown
+```
 # In your agent file:
 Follow the conventions in [[project-conventions]] and use [[story-template]].
 
@@ -251,7 +251,7 @@ Multi-agent orchestration for complex tasks:
 
 ### 🔗 WikiLink Magic
 Automatic context loading:
-```markdown
+```
 # In your documents:
 Follow [[project-conventions]] and use [[story-template]]
 
@@ -324,8 +324,8 @@ Add to your `Makefile`:
 ```makefile
 # Custom deployment command
 deploy:
-	@echo "Deploying to production..."
-	# Your deployment logic here
+    @echo "Deploying to production..."
+    # Your deployment logic here
 ```
 
 Then run:

@@ -11,14 +11,14 @@ Your task is to iteratively create an optimized prompt through a question-driven
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🎯 What is the primary complexity level of the task this prompt will handle?
-	A. Simple, single-step task (e.g., format text, extract data)
-	B. Complex, multi-step workflow (e.g., refactor codebase, debug system)
+    A. Simple, single-step task (e.g., format text, extract data)
+    B. Complex, multi-step workflow (e.g., refactor codebase, debug system)
 </example>
 
 <requirements>

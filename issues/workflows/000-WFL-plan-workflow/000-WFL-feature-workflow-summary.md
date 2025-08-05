@@ -23,7 +23,7 @@ All templates are in `/templates/workflows/`:
 
 - **discovery-template.md** - Captures initial requests, actors/components, requirements, dependencies
 - **requirements-template.md** - Expands requirements into activity flows and deliverables
-- **refinement-template.md** - Defines properties, behaviors, and system architecture
+- **refinement-template.md** - Defines properties, behaviours, and system architecture
 - **roadmap-template.md** - Organizes deliverables into milestones with effort estimates
 - **milestone-template.md** - Documents individual milestones in detail
 - **story-template.md** - (existing at `/templates/plan/story-template.md`) - Creates detailed user stories from milestone deliverables
@@ -32,7 +32,7 @@ All templates are in `/templates/workflows/`:
 ### 3. Created Blocks
 New blocks in `/blocks/refinements/`:
 
-- **refinement-block.md** - Template for defining component properties and behaviors
+- **refinement-block.md** - Template for defining component properties and behaviours
 - **architecture-diagram-block.md** - Template for system architecture visualization
 - **milestone-block.md** - Template for milestone definitions
 
@@ -51,7 +51,7 @@ Create specialized agents for each phase in `/agents/plan/`:
 
 - [x] **discovery-agent.md** - Specializes in Phase 1 discovery and context gathering
 - [x] **requirements-agent.md** - Specializes in Phase 2 activity flows and deliverables
-- [x] **refinement-agent.md** - Specializes in Phase 3 properties, behaviors, architecture
+- [x] **refinement-agent.md** - Specializes in Phase 3 properties, behaviours, architecture
 - [x] **roadmap-agent.md** - Specializes in Phase 4 milestone and story planning
 - [x] **story-agent.md** - Specializes in creating detailed user stories from milestone deliverables
 - [x] **implementation-agent.md** - Specializes in Phase 5 CRUD and action planning

@@ -15,6 +15,7 @@ instructions: "Make sure that when you implement this template, you don't includ
 | [`another/file.ts`](another/file.ts#L123) | [Modified] | [Link to specific line if relevant] |
 | [Add all modified files with clickable links] | | |
 
+
 ## 🎯 Implementation Overview
 > 💡 *High-level description of what was implemented and why*
 
@@ -85,8 +86,8 @@ graph TD
 > 💡 *Document any changes to business rules or domain logic*
 
 ### [Business Rule/Logic Area]
-- **Previous Behavior:** [How it worked before]
-- **New Behavior:** [How it works now]
+- **Previous Behaviour:** [How it worked before]
+- **New Behaviour:** [How it works now]
 - **Impact:** [Who/what is affected by this change]
 - **Example:** [Concrete example showing the difference]
 
@@ -97,7 +98,7 @@ graph TD
 
 ### [Screen/Component Name]
 - **Visual Changes:** [Description of what looks different]
-- **Behavioral Changes:** [Description of interaction changes]
+- **Behavioural Changes:** [Description of interaction changes]
 - **Accessibility Impact:** [Any a11y considerations]
 - **Screenshots:** [If applicable, though not always possible in text]
 

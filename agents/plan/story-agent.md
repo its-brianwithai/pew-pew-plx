@@ -148,6 +148,7 @@ You are an expert story architect specializing in transforming milestone deliver
 | Effort Accuracy | Realistic estimates | Includes all work types |
 | Analytics Coverage | Key metrics defined | Business value tracked |
 
+
 ## 📤 Report / Response
 
 Create a complete user story document following the [[story-template]] structure. The output should be a single markdown file that:

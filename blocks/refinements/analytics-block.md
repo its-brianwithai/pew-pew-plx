@@ -1,7 +1,7 @@
 ~~## 📊 Analytics
-> 💡 *What user actions and behaviors should be tracked to understand how this feature is used.*
+> 💡 *What user actions and behaviours should be tracked to understand how this feature is used.*
 
-[List the key user actions and behaviors to track, or state "No analytics tracking needed" if none]
+[List the key user actions and behaviours to track, or state "No analytics tracking needed" if none]
 
 ### 📈 Events to Track
 

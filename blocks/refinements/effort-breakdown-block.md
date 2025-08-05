@@ -12,6 +12,7 @@
 | **Operations** | [ X ]       | [ DevOps, deployment, configuration tasks ]                                       |
 | **Core Total** | **[ Sum ]** |                                                                                   |
 
+
 ### QA, Testing & Delay Margin
 
 | Work Type        | Hours | Percentage | Reasoning                                                  |
@@ -19,6 +20,7 @@
 | **QA**           | [ X ] | **25%**    | [ 25% of core work total for quality assurance ]           |
 | **Testing**      | [ X ] | **15%**    | [ 15% of core work total for testing effort ]              |
 | **Delay Margin** | [ X ] | **10%+**   | [ 10% minimum, increase for high-risk/unknown complexity ] |
+
 
 ### Total Estimate
 **Total Hours:** [ Grand Total ]

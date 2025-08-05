@@ -13,14 +13,14 @@ Your task is to update an existing agent based on {request}. If the request is e
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔧 What aspect of the agent needs updating?
-	A. Core functionality (purpose, instructions, workflow)
-	B. Configuration (tools, description, best practices)
+    A. Core functionality (purpose, instructions, workflow)
+    B. Configuration (tools, description, best practices)
 </example>
 
 <constraints>

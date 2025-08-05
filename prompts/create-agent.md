@@ -13,14 +13,14 @@ Your task is to create a new agent based on {request}. If the request is empty o
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🤖 What is the agent's primary expertise area?
-	A. Technical implementation (coding, debugging, testing)
-	B. Project management (planning, documentation, workflows)
+    A. Technical implementation (coding, debugging, testing)
+    B. Project management (planning, documentation, workflows)
 </example>
 
 <constraints>

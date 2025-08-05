@@ -13,14 +13,14 @@ Your task is to create new project resources based on {request}. If the request 
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 📁 What type of resource are you creating?
-	A. File or document (code, config, markdown)
-	B. Directory structure or project component
+    A. File or document (code, config, markdown)
+    B. Directory structure or project component
 </example>
 
 <constraints>

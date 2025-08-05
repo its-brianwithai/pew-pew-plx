@@ -11,14 +11,14 @@ Your task is to iteratively create an implementation plan through a question-dri
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🛠️ Which story should we detail first?
-	A. Foundation story (sets up architecture/infrastructure)
-	B. Feature story (delivers user-visible functionality)
+    A. Foundation story (sets up architecture/infrastructure)
+    B. Feature story (delivers user-visible functionality)
 </example>
 
 <requirements>

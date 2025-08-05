@@ -11,14 +11,14 @@ Your task is to iteratively update an existing implementation plan through a que
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect of the implementation needs updating?
-	A. Technical approach (CRUD operations, architecture changes)
-	B. Acceptance criteria (test requirements, quality standards)
+    A. Technical approach (CRUD operations, architecture changes)
+    B. Acceptance criteria (test requirements, quality standards)
 </example>
 
 <requirements>

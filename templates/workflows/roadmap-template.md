@@ -98,6 +98,7 @@ instructions: Make sure that when you implement this template, you don't include
 
 ```
 <example>
+
 | Milestone/Story | Design | Refinement | Frontend | Backend | Operations | Core Total | QA (25%) | Testing (15%) | Subtotal | Risk | Delay Margin | Total Hours |
 |:----------------|:-------|:-----------|:---------|:--------|:-----------|:-----------|:---------|:--------------|:---------|:-----|:-------------|:------------|
 | **[[authentication-milestone]]** | | | | | | | | | | | | |
@@ -110,5 +111,6 @@ instructions: Make sure that when you implement this template, you don't include
 | **[[data-management-milestone]]** | | | | | | | | | | | | |
 | [Continue with next milestone] | | | | | | | | | | | | |
 | **TOTAL PROJECT** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | | **X** | **X** |
+
 </example>
 ```

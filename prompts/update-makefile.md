@@ -13,14 +13,14 @@ Your task is to update an existing Makefile based on {request}. If the request i
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔧 What aspect of the Makefile needs updating?
-	A. Build targets and rules (compilation, linking, dependencies)
-	B. Configuration and optimization (variables, flags, parallel builds)
+    A. Build targets and rules (compilation, linking, dependencies)
+    B. Configuration and optimization (variables, flags, parallel builds)
 </example>
 
 <constraints>

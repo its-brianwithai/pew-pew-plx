@@ -151,10 +151,12 @@ Phase 3: [Refinement Phase Name]
 > 💡 *Comprehensive strategies for handling failures and maintaining workflow integrity.*
 
 ### Error Classification
+
 | Error Type | Severity | Detection Method | Recovery Strategy |
 |:---------- |:-------- |:---------------- |:----------------- |
 | [Error Category] | [Critical/High/Medium/Low] | [How to detect] | [How to recover] |
 | [Error Category] | [Severity Level] | [Detection approach] | [Recovery method] |
+
 
 ### Circuit Breaker Patterns
 - **[Pattern Name]**: [When to halt execution to prevent cascade]
@@ -202,10 +204,12 @@ Phase 3: [Refinement Phase Name]
    [Continue with execution steps]
 
 ### Troubleshooting Guide
+
 | Symptom | Likely Cause | Resolution |
 |:------- |:------------ |:---------- |
 | [Problem description] | [Root cause] | [Fix steps] |
 | [Problem description] | [Root cause] | [Fix steps] |
+
 
 ## 🔮 Evolution & Versioning
 > 💡 *How this workflow adapts and improves over time.*

@@ -23,6 +23,7 @@
 | [`blocks/refinements/*`](../../../blocks/refinements/) | Added/Modified | New and updated refinement blocks (10 files) |
 | [`templates/review/pull-request-template.md`](../../../templates/review/pull-request-template.md) | Added | PR documentation template |
 
+
 ## 🎯 Implementation Overview
 > 💡 *High-level description of what was implemented and why*
 
@@ -44,7 +45,7 @@ Key achievements:
 Created the main orchestrator agent that coordinates the entire 6-phase workflow, managing phase transitions, quality gates, and delegating to specialist sub-agents.
 
 #### Code Examples
-```markdown
+```
 # Phase Execution Flow
 1. Analyze Current Context
    - Check for existing artifacts
@@ -85,7 +86,7 @@ The orchestrator pattern was chosen to:
 Created 6 specialized agents, each focusing on a specific phase of the workflow with deep expertise in their domain.
 
 #### Code Examples
-```markdown
+```
 # Agent Structure Pattern
 ---
 name: {phase}-agent
@@ -136,7 +137,7 @@ Specialized agents were created to:
 Created comprehensive templates for each phase's output, ensuring consistency and completeness across the workflow.
 
 #### Code Examples
-```markdown
+```
 # Template Structure Pattern
 ---
 name: {phase}-template
@@ -179,7 +180,7 @@ Structured templates ensure:
 Created a comprehensive prompt system with create/update pairs for each phase, enabling both fresh starts and iterative refinement.
 
 #### Code Examples
-```markdown
+```
 # Create Prompt Pattern
 ---
 name: create-{phase}
@@ -217,17 +218,19 @@ The dual prompt system:
 Created and enhanced refinement blocks to support the detailed refinement phase, providing reusable components for common patterns.
 
 #### Code Examples
-```markdown
+```
 # Refinement Block Example
 ## 🔧 Component Refinement: [Component Name]
 
 ### Properties
+
 | Property | Type | Required | Description |
 |:---------|:-----|:---------|:------------|
 | [prop1] | [type] | [Y/N] | [description] |
 
-### Behaviors
-1. **[Behavior Name]**
+
+### Behaviours
+1. **[Behaviour Name]**
    - Trigger: [When this happens]
    - Action: [What the component does]
    - Result: [Expected outcome]
@@ -293,16 +296,16 @@ graph TD
 > 💡 *Document any changes to business rules or domain logic*
 
 ### Workflow Execution Logic
-- **Previous Behavior:** Ad-hoc planning with no structured phases
-- **New Behavior:** Systematic 6-phase workflow with clear progression
+- **Previous Behaviour:** Ad-hoc planning with no structured phases
+- **New Behaviour:** Systematic 6-phase workflow with clear progression
 - **Impact:** All feature planning now follows a consistent, quality-controlled process
 - **Example:** User request "build a chat app" now produces discovery → requirements → refinement → roadmap → implementation plan → stories
 
 ### Agent Delegation Pattern
-- **Previous Behavior:** Single agents handling complex multi-step processes
-- **New Behavior:** Orchestrator delegates to phase-specific specialists
+- **Previous Behaviour:** Single agents handling complex multi-step processes
+- **New Behaviour:** Orchestrator delegates to phase-specific specialists
 - **Impact:** Better separation of concerns and expertise
-- **Example:** Refinement agent focuses solely on properties/behaviors/architecture
+- **Example:** Refinement agent focuses solely on properties/behaviours/architecture
 
 **Feedback:**
 
@@ -311,7 +314,7 @@ graph TD
 
 ### Claude Code Commands
 - **Visual Changes:** New `/plx:create-{phase}` and `/plx:update-{phase}` commands in command palette
-- **Behavioral Changes:** Commands now invoke specific phase agents rather than generic planning
+- **Behavioural Changes:** Commands now invoke specific phase agents rather than generic planning
 - **Accessibility Impact:** More discoverable workflow phases through explicit commands
 - **Screenshots:** N/A - command-line interface
 
@@ -360,7 +363,7 @@ graph TD
    - Verify: Agent asks for context or proceeds with available info
 2. Complete refinement process
    - Expected: Full refinement document created
-   - Verify: All properties, behaviors, and architecture defined
+   - Verify: All properties, behaviours, and architecture defined
 3. Jump to Phase 5: `/plx:create-implementation-plan`
    - Expected: Implementation agent works with refinement output
    - Verify: CRUD operations match refined components

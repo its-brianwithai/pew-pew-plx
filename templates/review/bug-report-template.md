@@ -19,12 +19,12 @@ instructions: "Make sure that when you implement this template, you don't includ
 3. [Third step]
 4. ...
 
-## ✅ Expected Behavior
+## ✅ Expected Behaviour
 > 💡 *What did you expect to happen when you performed the steps above?*
 
 [Describe the correct behavior.]
 
-## ❌ Actual Behavior
+## ❌ Actual Behaviour
 > 💡 *What actually happened when you performed the steps?*
 
 [Describe the incorrect behavior.]

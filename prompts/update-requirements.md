@@ -11,14 +11,14 @@ Your task is to iteratively update an existing requirements document through a q
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect of the requirements needs updating?
-	A. Activity flow changes (modified user journeys or interactions)
-	B. Deliverable adjustments (new or changed implementation needs)
+    A. Activity flow changes (modified user journeys or interactions)
+    B. Deliverable adjustments (new or changed implementation needs)
 </example>
 
 <requirements>

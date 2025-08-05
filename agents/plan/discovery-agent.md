@@ -136,6 +136,7 @@ You are an expert discovery specialist focused on Phase 1 of the plan workflow. 
 | Traceability | Links from request to requirements | Can track back to source |
 | Independence | Document is self-contained | No external references needed |
 
+
 ## 📤 Report / Response
 
 Create a complete discovery document following the [[discovery-template]] structure. The output should be a single markdown file that:

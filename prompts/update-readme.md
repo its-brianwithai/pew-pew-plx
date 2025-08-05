@@ -118,7 +118,7 @@ Generate the updated README with:
 
 <example>
 For a developer-focused library:
-```markdown
+```
 # ProjectName
 
 > One-line description of what this library does

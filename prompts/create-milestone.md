@@ -11,14 +11,14 @@ Your task is to iteratively create a milestone document through a question-drive
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🎯 What is the primary value this milestone delivers?
-	A. User-facing feature (new capability or improvement)
-	B. Technical foundation (infrastructure or architecture)
+    A. User-facing feature (new capability or improvement)
+    B. Technical foundation (infrastructure or architecture)
 </example>
 
 <requirements>

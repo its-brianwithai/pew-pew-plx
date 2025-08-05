@@ -13,14 +13,14 @@ Your task is to create a new documentation template based on {request}. If the r
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 📄 What type of documentation will this template support?
-	A. Technical documentation (architecture, API, implementation)
-	B. Project management (planning, tracking, reporting)
+    A. Technical documentation (architecture, API, implementation)
+    B. Project management (planning, tracking, reporting)
 </example>
 
 <constraints>

@@ -72,6 +72,7 @@ graph TD
 | 2.   | Enter a **valid** email and **correct** password.  | The user is successfully logged in and redirected to the dashboard. |
 | 3.   | Enter a **valid** email and **incorrect** password.| An error message "Invalid credentials" appears.                   |
 
+
 ## 🤔 Decisions & Trade-offs
 > 💡 *Document any significant decisions made during implementation that were not explicitly defined in the planning documents, including any trade-offs.*
 

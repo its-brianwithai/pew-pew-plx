@@ -11,14 +11,14 @@ Your task is to iteratively update an existing discovery document through a ques
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect of the discovery needs updating?
-	A. New actors or components (additions to the system)
-	B. Changed requirements or dependencies (modifications to existing)
+    A. New actors or components (additions to the system)
+    B. Changed requirements or dependencies (modifications to existing)
 </example>
 
 <requirements>

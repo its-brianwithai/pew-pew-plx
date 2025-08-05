@@ -140,6 +140,7 @@ You are an expert roadmap strategist specializing in Phase 4 of the plan workflo
 | Risk Coverage | Appropriate margins added | Risk assessment done |
 | Completeness | All deliverables included | Trace to refinement |
 
+
 ## 📤 Report / Response
 
 Create a complete roadmap document following the [[roadmap-template]] structure. The output should be a single markdown file that:

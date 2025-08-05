@@ -144,6 +144,7 @@ You are an expert Makefile specialist with deep knowledge of GNU Make and build 
 | Cleanliness | Clean target removes all artifacts | Run `make clean` and check with `git status` |
 | Documentation | Complex rules have comments | Review for clarity and maintenance notes |
 
+
 ## 📤 Report / Response
 
 When creating or reviewing Makefiles, provide:

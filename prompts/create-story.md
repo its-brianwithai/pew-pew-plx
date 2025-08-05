@@ -11,14 +11,14 @@ Your task is to iteratively create a user story through a question-driven proces
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🎯 Who is the primary user for this story?
-	A. End user (customer using the product)
-	B. Internal user (admin, support, operations)
+    A. End user (customer using the product)
+    B. Internal user (admin, support, operations)
 </example>
 
 <requirements>

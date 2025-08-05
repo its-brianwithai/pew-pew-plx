@@ -10,6 +10,6 @@
     - Behaviour 2: e.g., [[email-input-field]] must validate format against standard email regex.
 - [[another-object-name]]
     - Behaviour description
-    - Another behaviour description
+    - Another behavior description
 </example>
 ```

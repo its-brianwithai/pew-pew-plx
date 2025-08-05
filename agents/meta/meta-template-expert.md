@@ -146,6 +146,7 @@ The main content of the template, written in markdown. It should:
 | Self-Contained | No external references needed | Template works standalone |
 | Formatting | Proper emoji usage and markdown syntax | Visual inspection of output |
 
+
 ## 📤 Report / Response
 
 Write the complete template to `templates/<domain-type>-template.md` and provide:

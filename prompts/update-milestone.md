@@ -11,14 +11,14 @@ Your task is to iteratively update an existing milestone document through a ques
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 🔄 What aspect of the milestone needs updating?
-	A. Scope changes (deliverables or acceptance criteria)
-	B. Timeline adjustments (dates or dependencies)
+    A. Scope changes (deliverables or acceptance criteria)
+    B. Timeline adjustments (dates or dependencies)
 </example>
 
 <requirements>

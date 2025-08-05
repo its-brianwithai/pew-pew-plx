@@ -11,14 +11,14 @@ Your task is to iteratively create a roadmap document through a question-driven 
 
 <template>
 ## [Emoji] [Question]?
-	A. [Suggestion 1]
-	B. [Suggestion 2]
+    A. [Suggestion 1]
+    B. [Suggestion 2]
 </template>
 
 <example>
 ## 📅 How should we organize the milestones?
-	A. By technical dependencies (foundation → features → polish)
-	B. By user value (MVP → enhanced → advanced)
+    A. By technical dependencies (foundation → features → polish)
+    B. By user value (MVP → enhanced → advanced)
 </example>
 
 <requirements>

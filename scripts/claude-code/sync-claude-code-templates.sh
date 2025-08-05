@@ -24,7 +24,7 @@ echo "📋 Processing templates from $TEMPLATES_DIR to $CLAUDE_COMMANDS_USE_DIR.
 
 # Process each template file
 template_count=0
-for template_file in $(find "$TEMPLATES_DIR" -name "*-template.md" -type f); do
+while IFS= read -r -d '' template_file; do
     if [ -f "$template_file" ]; then
         # Keep the original filename
         basename=$(basename "$template_file")
@@ -68,6 +68,6 @@ for template_file in $(find "$TEMPLATES_DIR" -name "*-template.md" -type f); do
         
         ((template_count++))
     fi
-done
+done < <(find "$TEMPLATES_DIR" -name "*-template.md" -type f -print0)
 
 echo "✅ Successfully created $template_count template commands"
