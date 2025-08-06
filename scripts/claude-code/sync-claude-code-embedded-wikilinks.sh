@@ -93,8 +93,11 @@ extract_content() {
         ')
     fi
     
-    # Trim leading and trailing blank lines (macOS compatible)
-    content=$(echo "$content" | sed '/^[[:space:]]*$/d')
+    # Trim leading and trailing blank lines only (preserve internal blank lines)
+    # First, remove leading blank lines
+    content=$(echo "$content" | awk 'NF {p=1} p')
+    # Then, remove trailing blank lines
+    content=$(echo "$content" | awk '{lines[NR] = $0} END {while (NR > 0 && lines[NR] ~ /^[[:space:]]*$/) NR--; for (i=1; i<=NR; i++) print lines[i]}')
     
     # Cache the result
     echo "$content" > "$cache_file"
