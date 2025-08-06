@@ -13,12 +13,25 @@ Based on your request, I understand your goal is: [interpreted goal]
 
 I'll now create/update the questions document for you to review and answer."
 
+## File Naming Convention
+
+**CRITICAL: Single File Rule**
+- ALWAYS check if a questions file already exists in the current directory
+- If exists: UPDATE it (never create a second questions file)
+- If not exists: CREATE with proper naming based on parent folder:
+  - In `issues/active/` → `active-questions.md`
+  - In `issues/backlog/` → `backlog-questions.md`
+  - In `issues/[folder]/` → `[folder]-questions.md`
+  - In project root → `project-questions.md`
+- NEVER create multiple question files in the same directory
+- This matches PLX conventions: discovery-[context].md, requirements-[context].md, etc.
+
 ## Core Operation
 
-- Create OR update the single questions document following [[issue-creation-instructions]] naming patterns
-- Document filename: `[context]-questions.md` (ONLY ONE per context)
+- Create OR update the single questions document following strict naming convention above
 - **PREFER YES/NO QUESTIONS** to reduce cognitive load
-- Focus on maximum value in four key areas:
+- Focus on maximum value in five key areas:
+  - ✅ **Confirm**: Validate understanding from previous answers
   - 🔧 **Improve**: Enhance existing elements
   - ➕ **Add**: Introduce new features
   - ➖ **Remove**: Eliminate unnecessary items
@@ -26,9 +39,13 @@ I'll now create/update the questions document for you to review and answer."
 - Use multiple yes/no questions instead of complex multi-choice when possible
 - Use markdown checkboxes [ ] for all answers
 - Wait for user to say "done" before analyzing responses
-- After analysis, update content and UPDATE the same questions document:
-  - Move answered questions to archive section
-  - Add new questions to current iteration section
+- After analysis:
+  - First present understanding confirmation questions
+  - Wait for confirmation before proceeding with updates
+  - Update content based on confirmed understanding
+  - UPDATE the same questions document:
+    - Move answered questions to archive section
+    - Add new questions to current iteration section
 - Adapt questions based on previous responses and progress toward goal
 
 ## Questions Document Format
@@ -45,6 +62,26 @@ When you're done with a section, please reply with "done".
 
 ## 🎯 Current Questions - Iteration [Number]
 *[Mark complete when done: [ ]]*
+
+### ✅ Confirmation Questions
+*[For iterations 2+, confirm understanding from previous answers]*
+
+#### 📋 Context
+[Brief explanation of what was understood and why it matters]
+
+#### 💭 Reasoning
+Based on your previous answers, I understand that:
+- [Key understanding point 1 with implication]
+- [Key understanding point 2 with implication]
+- [Key understanding point 3 with implication]
+
+[ ] **Correct** - This understanding is accurate
+[ ] **Needs clarification** - Some points need adjustment
+
+#### Should I proceed with these interpretations?
+
+[ ] **Yes** - Go ahead with the updates
+[ ] **No** - Let me clarify first
 
 ### 🔧 Improvement Questions
 
@@ -112,12 +149,49 @@ Please provide any additional context or requirements:
 ## After User Responds
 
 1. Analyze all responses comprehensively
-2. Update the relevant content based on answers
-3. Present the updated content
-4. Update the same questions document:
+2. **Understanding Validation Phase:**
+   - Summarize key interpretations from the answers
+   - Create confirmation questions to validate understanding
+   - Present these as the first questions in the next iteration
+   - Wait for user confirmation before proceeding
+3. **If understanding confirmed:**
+   - Update the relevant content based on confirmed interpretations
+   - Present the updated content
+4. **If clarification needed:**
+   - Ask specific clarification questions
+   - Adjust understanding based on responses
+   - Re-confirm before proceeding
+5. Update the same questions document:
    - Move answered questions to the archive section with iteration number and date
-   - Add new questions to the current iteration section
+   - Add confirmation questions at the start of new iterations (except first)
+   - Add new exploration questions after confirmation questions
    - Preserve the complete history of all Q&A
-5. Continue until goal is achieved
+6. Continue until goal is achieved
 
-Remember: Maintain a single questions document, preserve all history, group related questions, include all relevant options, and always ensure questions drive toward the stated goal.
+## Visual Representations (When Applicable)
+
+For complex decision flows or multi-step processes, include Mermaid diagrams:
+- **Decision Trees**: When questions have branching implications
+- **Process Flows**: When showing sequential steps and outcomes
+- **State Diagrams**: When changes affect system state
+
+Example format:
+```mermaid
+graph TD
+    A[User Decision] --> B{Choice}
+    B -->|Option 1| C[Outcome 1]
+    B -->|Option 2| D[Outcome 2]
+    C --> E[Next Steps]
+    D --> F[Alternative Path]
+```
+
+Remember: 
+- Maintain a single questions document
+- Always confirm understanding before making changes (iterations 2+)
+- Include context and reasoning for significant questions
+- Add visual diagrams for complex flows (3+ decision points)
+- Preserve all history including confirmation validations
+- Group related questions logically
+- Include all relevant options
+- Ensure questions drive toward the stated goal
+- Validation prevents misaligned understanding and reduces rework

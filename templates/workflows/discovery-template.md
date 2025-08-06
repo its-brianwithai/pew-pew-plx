@@ -24,17 +24,47 @@ instructions: Make sure that when you implement this template, you don't include
 ---
 
 ## 🧩 Actors & Components (Who or what)
-> 💡 *Someone or something that can perform actions or be interacted with (examples include User, Button, Screen, Input Field, Message, System, API, Database, and they can be a person, service, visual or non-visual). What benefits from this? · Who maintains this? · What do users interact with? · What shows information? · What processes data? · What stores data? · What external systems are involved? · What needs to be monitored?*
+> 💡 *Entities that interact with or are part of the system, categorized by type for clarity. Human actors are people, system actors are external services, and components are internal parts of our system.*
 
-[List all actors and components in a hierarchical structure using wikilinks]
+### 👤 Human Actors
+> *People who interact with the system directly or indirectly*
+
+[List human actors with appropriate emoji and description]
 
 ```
 <example>
-- [[parent-actor-or-component]]
-- [[another-parent-component]]
-    - [[child-component-1]]
-    - [[child-component-2]]
-- [[third-actor-component]]
+- **Customer** 👤 - End user who purchases products
+- **Administrator** 👤 - System admin with full access
+- **Support Team** 👥 - Group handling customer issues
+</example>
+```
+
+### 🔌 System Actors
+> *External systems, services, or APIs that interact with our system*
+
+[List system actors with appropriate emoji and description]
+
+```
+<example>
+- **Payment Gateway** 🔌 - Stripe API for payment processing
+- **Email Service** 🌐 - SendGrid for transactional emails
+- **Partner System** 🏢 - Third-party inventory provider
+</example>
+```
+
+### ⚙️ Components
+> *Internal parts of our system (UI, services, data stores, infrastructure)*
+
+[List components hierarchically with appropriate emoji]
+
+```
+<example>
+- **Order Service** ⚙️ - Handles order processing
+    - **Order Validator** ⚙️ - Validates order data
+    - **Order Database** 📊 - Stores order information
+- **Customer Portal** 🖥️ - Web UI for customers
+    - **Order Form** 🖥️ - Order creation interface
+    - **Order History** 🖥️ - Past orders display
 </example>
 ```
 
