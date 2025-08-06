@@ -82,6 +82,3 @@ The PLX framework evolves through systematic feedback processing. Each meta agen
 5. Provide a summary of changes made and their rationale
 6. Mark feedback as processed
 </output_format>
-
-<example>
-User: /plx:process/feedback [[feedback-agent-flutter-developer-20241205]]</example>

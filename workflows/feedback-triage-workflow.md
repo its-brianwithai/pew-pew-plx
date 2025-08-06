@@ -97,7 +97,7 @@ Phase 5: Final Documentation
 
 #### Step 0.1: Progressive Connection Establishment
 - **Purpose**: Establish reliable MCP connection with mandatory retry logic
-- **Instructions**: Test `mcp__slack-teamroomy__conversations_history` with sleep retry loop
+- **Instructions**: Test `mcp__{{slack_mcp}}__conversations_history` with sleep retry loop
 - **Agent**: Human operator
 - **Success Criteria**: MCP tools respond successfully
 - **Critical Requirement**: NEVER proceed until MCP connection works
@@ -113,9 +113,9 @@ Phase 5: Final Documentation
 
 #### Quality Gate: MCP Tools Available
 - **Validation Criteria**:
-  - [ ] `mcp__slack-teamroomy__conversations_history` functional
-  - [ ] `mcp__slack-teamroomy__conversations_add_message` functional
-  - [ ] Channel access confirmed (`C08KGMN983H`)
+  - [ ] `mcp__{{slack_mcp}}__conversations_history` functional
+  - [ ] `mcp__{{slack_mcp}}__conversations_add_message` functional
+  - [ ] Channel access confirmed (`{{feedback_channel_id}`)
 - **Pass Actions**: Proceed to document creation
 - **Fail Actions**: Continue retry loop until connection works - NEVER proceed without working MCP
 
@@ -159,13 +159,13 @@ Phase 5: Final Documentation
 
 #### Step 2.1: Extract Slack Messages with Complete Metadata and Replies
 - **Purpose**: Retrieve all feedback messages with threading information, replies, and reaction data
-- **Instructions**: Use `mcp__slack-teamroomy__conversations_history` and `mcp__slack-teamroomy__conversations_replies` for comprehensive extraction
+- **Instructions**: Use `mcp__{{slack_mcp}}__conversations_history` and `mcp__{{slack_mcp}}__conversations_replies` for comprehensive extraction
 - **Agent**: Human operator with MCP tools
 - **MCP Tools**: 
-  - `mcp__slack-teamroomy__conversations_history`
-  - `mcp__slack-teamroomy__conversations_replies` (for each message)
+  - `mcp__{{slack_mcp}}__conversations_history`
+  - `mcp__{{slack_mcp}}__conversations_replies` (for each message)
 - **Parameters**:
-  - `channel_id`: `C08KGMN983H` (raw ID, no quotes)
+  - `channel_id`: `{{feedback_channel_id}` (raw ID, no quotes)
   - `limit`: `2d` (for comprehensive coverage)
 - **Critical Data Captured**:
   - **Message ID/timestamp** (for Slack threading)
@@ -357,7 +357,7 @@ Phase 5: Final Documentation
 - **Instructions**: Ask user for permission to post to specific channels
 - **Agent**: Human operator (user)
 - **Approval Process**:
-  1. **Ask**: "Post summary to #feedback channel (`C08KGMN983H`)? [Y/N]"
+  1. **Ask**: "Post summary to #feedback channel (`{{feedback_channel_id}`)? [Y/N]"
   2. **If approved**: Post summary to feedback channel
   3. **Ask**: "Post standup update to #standup channel (`C0996GRS1AN`)? [Y/N]" 
   4. **If approved**: Post standup summary to standup channel
@@ -422,17 +422,17 @@ Phase 5: Final Documentation
 > 💡 *Practical guidance for executing this workflow in production.*
 
 ### Entry Requirements
-- [ ] Slack MCP configured and tested (`slack-teamroomy` in `.mcp.json`)
+- [ ] Slack MCP configured and tested (`{{slack_mcp}}` in `.mcp.json`)
 - [ ] GitHub CLI authenticated with proper permissions
 - [ ] Write access to project repository for document creation
 - [ ] User availability for validation decisions
 - [ ] Previous day's feedback unprocessed
 
 ### Resource Requirements
-- **MCP Server**: `slack-teamroomy` with conversation and messaging tools
+- **MCP Server**: `{{slack_mcp}}` with conversation and messaging tools
 - **Tools**: GitHub CLI, text editor, grep/search capabilities
 - **Templates**: [[feedback-report-template]] for document structure
-- **Access**: Feedback channel (`C08KGMN983H`), GitHub repository, codebase
+- **Access**: Feedback channel (`{{feedback_channel_id}`), GitHub repository, codebase
 - **Time**: 2-4 hours depending on feedback volume and validation complexity
 - **Skills**: Code analysis, user communication, classification judgment
 

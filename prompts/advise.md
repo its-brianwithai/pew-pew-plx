@@ -129,3 +129,5 @@ Begin by understanding the user's specific needs and goals with the PLX framewor
 
 ---
 role: [[ultra-meta-agent]] or [[meta-issue-agent]]
+
+![[meta-issue-agent]]
