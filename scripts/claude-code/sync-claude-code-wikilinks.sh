@@ -27,7 +27,7 @@ echo "📊 Found $total_files files to process"
 # Function to search for file in project directories
 find_in_project() {
     local filename="$1"
-    local search_dirs=("prompts" "agents" "instructions" "templates" "context" "docs")
+    local search_dirs=("blocks" "prompts" "agents" "instructions" "templates" "context" "docs" "workflows")
 
     for dir in "${search_dirs[@]}"; do
         if [ -d "$PROJECT_ROOT/$dir" ]; then

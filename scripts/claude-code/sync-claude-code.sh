@@ -49,6 +49,9 @@ echo "🔄 Syncing workflows..."
 echo "📚 Syncing instructions..."
 "$SCRIPT_DIR/sync-claude-code-instructions.sh"
 
+echo "🔗 Processing embedded wikilinks..."
+"$SCRIPT_DIR/sync-claude-code-embedded-wikilinks.sh"
+
 echo "🔗 Processing wikilinks..."
 "$SCRIPT_DIR/sync-claude-code-wikilinks.sh"
 
