@@ -1,0 +1,1 @@
+// TODO(GPT-AGENT): 6 Aug 2025 : workflows are still synced to teh same .claude/commands/start but its [[workflow-template]] and [[meta-workflow-specialist]] should be updated - no more need for an orchestrator for the workflow or prompt and sub agent per step - a workflow is just a set of predefined steps structured however we like

@@ -1,7 +1,6 @@
 
 Een goede prompt bestaat uit:
 
-- End Goal
 - Persona
   - Expertise
   - Domain
@@ -15,7 +14,7 @@ Een goede prompt bestaat uit:
   - Interests
   - Background
   - Preferences
-- Request
+- Request & End Goal
 - Workflow
   - Steps
   - Deliverables

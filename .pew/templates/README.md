@@ -1,0 +1,1 @@
+// TODO(GPT-AGENT): 6 Aug 2025 : templates consist of blocks found in [[blocks]] folder found i this folder and the actual templates are found in the [[outputs]] folder - the tempaltes should still be synced to .claude/commands/use and the blocks also but with the [[block-command-block]] inserted instead of the [[template-command-block]]

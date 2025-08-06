@@ -1,0 +1,1 @@
+// TODO(GPT-AGENT): 6 Aug 2025 : meetings are not synced, they are a ne concept and are used to provide extra context in some cases and log decisions and events - they follow the [[meeting-template]] format
