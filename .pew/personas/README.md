@@ -1,1 +1,0 @@
-// TODO(GPT-AGENT): 6 Aug 2025 : personas are new and should be synced to .claude/commands/act - just like agents - they are usually part of agents and determine the role, expertise, background etc following [[persona-template]] ,  they should also get the [[persona-command-block]] inserted at the start like the other synced docs do for their own type

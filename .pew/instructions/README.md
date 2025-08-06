@@ -1,1 +1,0 @@
-// TODO(GPT-AGENT): 6 Aug 2025 : instructions should still be synced to .claude/commands/follow - these are sets of instructions that dictate how to behave in certain situations / when certain events arise - when.. this then that - when this - then follow these best practices, when this then follow these rules, when this then follow thes conventions

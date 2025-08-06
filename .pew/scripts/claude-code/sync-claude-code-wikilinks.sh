@@ -2,7 +2,7 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -27,7 +27,7 @@ echo "📊 Found $total_files files to process"
 # Function to search for file in project directories
 find_in_project() {
     local filename="$1"
-    local search_dirs=("blocks" "prompts" "agents" "instructions" "templates" "context" "docs" "workflows")
+    local search_dirs=(".pew/templates/blocks" ".pew/prompts" ".pew/agents" ".pew/instructions" ".pew/templates" ".pew/context" "docs" ".pew/workflows" ".pew/personas" ".pew/output-formats")
 
     for dir in "${search_dirs[@]}"; do
         if [ -d "$PROJECT_ROOT/$dir" ]; then

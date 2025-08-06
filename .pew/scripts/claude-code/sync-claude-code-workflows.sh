@@ -2,8 +2,8 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-WORKFLOWS_DIR="$PROJECT_ROOT/workflows"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+WORKFLOWS_DIR="$PROJECT_ROOT/.pew/workflows"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -41,7 +41,7 @@ for workflow_file in "$WORKFLOWS_DIR"/*.md; do
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/meta/workflow-command-block.md");
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/.pew/templates/blocks/workflow-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 
@@ -53,7 +53,7 @@ for workflow_file in "$WORKFLOWS_DIR"/*.md; do
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/meta/workflow-command-block.md"
+                cat "$PROJECT_ROOT/.pew/templates/blocks/workflow-command-block.md"
                 echo ""
                 cat "$workflow_file"
             } > "$temp_file"

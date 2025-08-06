@@ -3,7 +3,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 TEMP_DIR="/tmp/claude-sync-$$"
 
 # Cleanup function
@@ -48,6 +48,15 @@ echo "🔄 Syncing workflows..."
 
 echo "📚 Syncing instructions..."
 "$SCRIPT_DIR/sync-claude-code-instructions.sh"
+
+echo "🎭 Syncing personas..."
+"$SCRIPT_DIR/sync-claude-code-personas.sh"
+
+echo "📄 Syncing output formats..."
+"$SCRIPT_DIR/sync-claude-code-output-formats.sh"
+
+echo "🧱 Syncing blocks..."
+"$SCRIPT_DIR/sync-claude-code-blocks.sh"
 
 echo "🔗 Processing embedded wikilinks..."
 "$SCRIPT_DIR/sync-claude-code-embedded-wikilinks.sh"

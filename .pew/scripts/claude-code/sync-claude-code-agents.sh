@@ -2,8 +2,8 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-AGENTS_DIR="$PROJECT_ROOT/agents"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+AGENTS_DIR="$PROJECT_ROOT/.pew/agents"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -83,7 +83,7 @@ for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! 
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/meta/agent-command-block.md");
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/.pew/templates/blocks/agent-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 
@@ -95,7 +95,7 @@ for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! 
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/meta/agent-command-block.md"
+                cat "$PROJECT_ROOT/.pew/templates/blocks/agent-command-block.md"
                 echo ""
                 cat "$agent_file"
             } > "$temp_file"

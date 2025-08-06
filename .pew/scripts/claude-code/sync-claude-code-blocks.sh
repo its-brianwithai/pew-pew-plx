@@ -3,7 +3,7 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
-TEMPLATES_DIR="$PROJECT_ROOT/.pew/templates/outputs"
+BLOCKS_DIR="$PROJECT_ROOT/.pew/templates/blocks"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -12,36 +12,36 @@ else
     CLAUDE_COMMANDS_USE_DIR="$PROJECT_ROOT/.claude/commands/use"
 fi
 
-if [ ! -d "$TEMPLATES_DIR" ]; then
-    echo "❌ Error: Templates directory not found at $TEMPLATES_DIR"
+if [ ! -d "$BLOCKS_DIR" ]; then
+    echo "❌ Error: Blocks directory not found at $BLOCKS_DIR"
     exit 1
 fi
 
-echo "📋 Creating Claude use commands directory..."
+echo "🧱 Creating Claude block commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_USE_DIR"
 
-echo "📋 Processing templates from $TEMPLATES_DIR to $CLAUDE_COMMANDS_USE_DIR..."
+echo "🧱 Processing blocks from $BLOCKS_DIR to $CLAUDE_COMMANDS_USE_DIR..."
 
-# Process each template file
-template_count=0
-while IFS= read -r -d '' template_file; do
-    if [ -f "$template_file" ]; then
+# Process each block file (excluding command blocks)
+block_count=0
+for block_file in $(find "$BLOCKS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" ! -name "*command-block*"); do
+    if [ -f "$block_file" ]; then
         # Keep the original filename
-        basename=$(basename "$template_file")
+        basename=$(basename "$block_file")
         output_file="$CLAUDE_COMMANDS_USE_DIR/$basename"
         
         # Create a temporary file
         temp_file=$(mktemp)
         
         # Check if file has frontmatter
-        first_line=$(head -n 1 "$template_file")
+        first_line=$(head -n 1 "$block_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
             PROJECT_ROOT="$PROJECT_ROOT" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/.pew/templates/blocks/template-command-block.md");
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/.pew/templates/blocks/block-command-block.md");
                     print "";
                     print "````````````";
                     in_frontmatter = 0; 
@@ -51,23 +51,23 @@ while IFS= read -r -d '' template_file; do
                 in_frontmatter { print; next }
                 { print }
                 END { print "````````````" }
-            ' "$template_file" > "$temp_file"
+            ' "$block_file" > "$temp_file"
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/.pew/templates/blocks/template-command-block.md"
+                cat "$PROJECT_ROOT/.pew/templates/blocks/block-command-block.md"
                 echo ""
                 echo "\`\`\`\`\`\`\`\`\`\`"
-                cat "$template_file"
+                cat "$block_file"
                 echo "\`\`\`\`\`\`\`\`\`\`"
             } > "$temp_file"
         fi
         
         # Move processed file to final location
         mv "$temp_file" "$output_file"
-        
-        ((template_count++))
+        echo "✅ Created use/$basename"
+        ((block_count++))
     fi
-done < <(find "$TEMPLATES_DIR" -name "*-template.md" -type f -print0)
+done
 
-echo "✅ Successfully created $template_count template commands"
+echo "✅ Successfully processed $block_count block files"
