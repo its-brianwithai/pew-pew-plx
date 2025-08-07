@@ -6,16 +6,8 @@ Create a new issue following the issue workflow to break down requirements into 
 
 1. If the user has provided a clear request or requirement, proceed to create an issue based on that request
 2. If no clear request is provided, ask the user: "What would you like to create an issue about? Please describe the feature, bug, or improvement you need."
-3. Once you have a clear request, follow the issue workflow below to systematically decompose it into properly scoped work items
+3. Once you have a clear request, follow the issue workflow to systematically decompose it into properly scoped work items
 
 ## Issue Workflow
 
 ![[issue-workflow]]
-
-## Process
-
-- Start with Phase 1: Initial Issue Definition to identify actors and capabilities
-- Progress through each phase, applying the scope gate at Phase 3
-- Decompose any issues that exceed 3 story points
-- Document everything using the embedded template
-- Follow the embedded naming conventions exactly

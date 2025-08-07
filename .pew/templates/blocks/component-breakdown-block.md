@@ -1,31 +1,13 @@
 ## 🧩 Component Breakdown
-> 💡 *Detailed breakdown of high-level goals into concrete scenarios showing step-by-step actor interactions and responsible teams.*
+> 💡 *High-level breakdown of component behaviors. Only document what the user has explicitly specified - never invent or assume behaviors not mentioned in the requirements.*
 
-[Create a breakdown for each major component or goal using this structure]
+### Behaviours
+[Document how the component should operate based on the stated requirements. Consider validation rules, data handling, security needs, performance constraints, and error scenarios - but only include those actually relevant to this specific component.]
 
-```
-<example>
-### [Component/Goal Name]
-> [Brief description of what this component/goal achieves]
+### Critical Paths
+**What Must Always Work:** [Operations that cannot fail]  
+**What Could Go Wrong:** [Potential failure points]  
+**What Should Never Happen:** [Unacceptable states or behaviors]
 
-**Scenario 1: [Scenario Name]**
-- **Actor:** [[actor-name]]
-- **Steps:**
-  1. [[actor]] performs [[action]] on [[component]]
-  2. [[system]] responds with [[response]]
-  3. [[actor]] completes [[final-action]]
-- **Responsible Team:** [[team-name]]
-- **Dependencies:** [[dependency-1]], [[dependency-2]]
-
-**Scenario 2: [Another Scenario Name]**
-- **Actor:** [[another-actor]]
-- **Steps:**
-  1. Step description with [[actor]] and [[action]]
-  2. Another step with [[component]] interaction
-  3. Final step with [[outcome]]
-- **Responsible Team:** [[team-name]]
-- **Dependencies:** [[dependency-name]]
-</example>
-```
-
-[Repeat scenario structure as needed for each component]
+### Test Considerations
+[Based on the documented behaviors, identify key scenarios that should be validated]

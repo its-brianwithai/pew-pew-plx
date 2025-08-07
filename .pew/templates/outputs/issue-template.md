@@ -162,71 +162,94 @@ graph LR
 ---
 
 ## 🧩 Components
-> 💡 *All technical components needed for implementation.*
+> 💡 *All technical components needed for implementation, organized by architectural layer.*
 
-### UI Components
-[User interface elements required]
-- **[Component Name]**: [Description and purpose]
-  - Type: [Screen/Form/Modal/Widget]
-  - Complexity: [Simple/Medium/Complex]
-  
-### Frontend Logic
-[Client-side functionality]
-- **State Management**: [What state is managed]
-- **Validation Logic**: [Client-side rules]
-- **Event Handlers**: [User interactions]
-- **API Integration**: [Service calls]
+### Data Structures
+[Core data definitions and shared structures]
+- **Constants**: [Fixed values, configuration constants]
+- **Enums**: [Type definitions, status codes, categories]
+- **Models**: [Data models, entities, DTOs]
 
-### Backend Services
-[Server-side components]
-- **API Endpoints**:
+### Frontend Architecture
+[Client-side components and logic]
+- **Views**: [Screens, pages, layouts]
+- **Widgets**: [Reusable UI components]
+- **Forms**: [Input forms, validation forms]
+- **ViewModels**: [State management, business logic]
+- **Routes**: [Navigation paths, route definitions]
+- **Routers**: [Navigation handlers, route guards]
+
+### Backend Architecture
+[Server-side components and services]
+- **Endpoints**: [REST/GraphQL endpoints]
   - `[METHOD] /path`: [Purpose]
-  - `[METHOD] /path`: [Purpose]
-  
-- **Business Logic**:
-  - [Service/Function]: [Responsibility]
-  - [Service/Function]: [Responsibility]
-  
-- **Data Access**:
-  - [Repository/DAO]: [Data operations]
-  - [Repository/DAO]: [Data operations]
+- **APIs**: [External API integrations]
+- **Services**: [Business logic services]
+- **Utilities**: [Helper functions, shared logic]
+- **Requests**: [Request handlers, validators]
+- **Responses**: [Response formatters, transformers]
 
 ### Integration Points
-[How components connect]
-- **API Contracts**: [Request/Response formats]
-- **Events**: [Published/Subscribed events]
-- **Database Schema**: [Tables/Collections affected]
+[How components connect and communicate]
+- **API Contracts**: [Request/Response schemas]
+- **Events**: [Event emitters, listeners]
+- **Database Operations**: [CRUD operations]
 - **External Services**: [Third-party integrations]
-- **Auth/Security**: [Permission requirements]
+- **Authentication/Authorization**: [Security boundaries]
 
 ### Component Diagram
 ```mermaid
 graph TB
-    subgraph "UI Layer"
-        UI1[Component A]
-        UI2[Component B]
+    subgraph "Frontend"
+        V[Views]
+        W[Widgets]
+        F[Forms]
+        VM[ViewModels]
+        R[Routes/Routers]
     end
     
-    subgraph "Frontend Logic"
-        FL1[State Manager]
-        FL2[Validator]
+    subgraph "Shared"
+        C[Constants]
+        E[Enums]
+        M[Models]
     end
     
-    subgraph "Backend Services"
-        BS1[API Service]
-        BS2[Business Logic]
+    subgraph "Backend"
+        EP[Endpoints]
+        API[APIs]
+        S[Services]
+        U[Utilities]
+        REQ[Requests]
+        RES[Responses]
     end
     
-    subgraph "Data Layer"
+    subgraph "Data"
         DB[(Database)]
         Cache[(Cache)]
     end
     
-    UI1 --> FL1
-    UI2 --> FL2
-    FL1 --> BS1
-    FL2 --> BS1
-    BS1 --> BS2
-    BS2 --> DB
-    BS2 --> Cache
+    V --> VM
+    W --> VM
+    F --> VM
+    VM --> R
+    R --> EP
+    EP --> REQ
+    REQ --> S
+    S --> API
+    S --> U
+    S --> DB
+    S --> Cache
+    S --> RES
+    RES --> EP
+    
+    Frontend --> Shared
+    Backend --> Shared
 ```
+
+---
+
+![[component-breakdown-block]]
+
+---
+
+![[suggested-approach-block]]

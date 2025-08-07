@@ -63,13 +63,17 @@ node bin/plx.js sync claude
 8. **Workflows** (`.pew/workflows/`) → Synced to `.claude/commands/start/`
    - Available as `/start:{workflow-name}`
 
-9. **Context** (`.pew/context/`) → NOT synced (reference information only)
+9. **Modes** (`.pew/modes/`) → Synced to `.claude/commands/activate/`
+   - Available as `/activate:{mode-name}`
+   - Operational behaviors that change interaction patterns
 
-10. **Issues** (`.pew/issues/`) → NOT synced (local project management)
+10. **Context** (`.pew/context/`) → NOT synced (reference information only)
 
-11. **Meetings** (`.pew/meetings/`) → NOT synced (decision logging)
+11. **Issues** (`.pew/issues/`) → NOT synced (local project management)
 
-12. **Reports** (`.pew/reports/`) → NOT synced (analysis outputs)
+12. **Meetings** (`.pew/meetings/`) → NOT synced (decision logging)
+
+13. **Reports** (`.pew/reports/`) → NOT synced (analysis outputs)
 
 ### WikiLink Resolution System
 

@@ -85,6 +85,18 @@ Phase 5: Component Identification
 ├── Step 5.3: Backend Service Definition
 ├── Step 5.4: Integration Points
 └── Output: Component diagram
+
+Phase 6: Component Breakdown & Approach
+├── Step 6.1: Behavior Documentation
+├── Step 6.2: Critical Path Identification
+├── Step 6.3: Suggested Approach Development
+└── Output: Component breakdown and implementation approach
+
+Phase 7: Refinement Offering
+├── Step 7.1: Identify Gaps
+├── Step 7.2: Offer Refinement Options
+├── Step 7.3: Execute Selected Refinement
+└── Output: Refined issue or continuation
 ```
 
 ## 📊 Workflow Orchestration
@@ -348,6 +360,55 @@ Phase 5: Component Identification
 - **Pass Actions**: Requirement ready for development
 - **Fail Actions**: Revisit scope or clarify components
 
+### Phase 6: Component Breakdown & Approach
+> *Document behaviors and implementation approach based on explicit requirements*
+
+#### Step 6.1: Behavior Documentation
+- **Purpose**: Define how component operates
+- **Instructions**: Document only behaviors user specified
+- **Warning**: Never invent or assume behaviors
+- **Outputs**: Behavior specifications
+- **Success Criteria**: Accurate reflection of requirements
+
+#### Step 6.2: Critical Path Identification
+- **Purpose**: Define what must work and what could fail
+- **Instructions**: Identify critical operations and failure points
+- **Outputs**: Critical path analysis
+- **Success Criteria**: Test considerations clear
+
+#### Step 6.3: Suggested Approach Development
+- **Purpose**: Outline implementation approach
+- **Instructions**: Based on project conventions and patterns
+- **Outputs**: High-level implementation guide
+- **Success Criteria**: Clear path forward
+
+### Phase 7: Refinement Offering
+> *Ensure issue completeness through structured refinement*
+
+#### Step 7.1: Identify Gaps
+- **Purpose**: Find missing details or unclear requirements
+- **Instructions**: Review issue for completeness
+- **Outputs**: List of potential refinements
+
+#### Step 7.2: Offer Refinement Options
+- **Purpose**: Give user choice in refinement approach
+- **Instructions**: Present three options:
+  1. **Quick refinement** - Ask important questions one at a time in chat
+  2. **Structured refinement** - Create questions document using:
+     
+     ![[question-mode]]
+     
+  3. **Continue as-is** - Issue appears complete
+- **Outputs**: User selection
+
+#### Step 7.3: Execute Selected Refinement
+- **Purpose**: Gather missing information
+- **Instructions**: Based on user choice:
+  - Quick: Ask focused yes/no questions sequentially
+  - Structured: Generate comprehensive questions document
+  - Continue: Proceed to next task
+- **Outputs**: Refined issue or continuation
+
 ## 🛡️ Error Handling & Recovery
 > 💡 *Comprehensive strategies for handling failures and maintaining workflow integrity.*
 
@@ -438,9 +499,8 @@ Phase 5: Component Identification
 > 💡 *The structured template for documenting decomposed issues through all workflow phases.*
 
 ### Issue Creation Conventions
-Follow these conventions when creating and organizing issues:
 
-![[issue-creation-instructions]]
+![[issue-creation-conventions]]
 
 ### Template
 Use the following template to document issues as they progress through this workflow:
@@ -448,10 +508,10 @@ Use the following template to document issues as they progress through this work
 ![[issue-template]]
 
 ### Usage Notes
-- Create issues in `issues/[concept]/[issue-folder]/` structure
-- Follow naming pattern: `000-[CODE]-[descriptive-name]-[type]`
 - Fill out each phase section as you complete it in the workflow
 - Use the scope assessment checkpoint to decide on decomposition
 - Include all diagrams to provide visual clarity
+- Complete Component Breakdown based only on explicit user requirements
+- Develop Suggested Approach based on project conventions
 - Mark checklist items as issues are validated
 - The template ensures consistency across all decomposed issues

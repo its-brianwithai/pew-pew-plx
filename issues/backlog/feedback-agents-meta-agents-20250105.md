@@ -57,7 +57,7 @@
      - Use the PLX question-driven refinement process
      - Wait for user confirmation before proceeding
    - **Rationale:** Guarantees 1000% clarity as requested by user
-   - **Implementation Notes:** Reference [[activate-question-mode]] and [[create-questions-document]]
+   - **Implementation Notes:** Reference [[question-mode]] and [[create-questions-document]]
 
 3. **Add File Prioritization Strategy**
    - **Current State:** No systematic approach to determining which files to read

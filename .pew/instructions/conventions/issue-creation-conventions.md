@@ -8,27 +8,21 @@ description: "Standard instructions for creating and organizing issues in the pr
 
 ## 📁 Issue Organization
 
-All issues go in `issues/[concept]/[issue-folder]/`
-
-## 📝 Naming Pattern
-
+Issues follow this structure:
 ```
-000-[CODE]-[descriptive-name]-[type]
+issues/{core-concept}/{next-chronological-issue-nr}-{core-concept-code}-{descriptive-title}/{descriptive-description}-{type}.md
 ```
 
-- `000` - Sequential number
-- `[CODE]` - 3-letter concept code
-- `[descriptive-name]` - Kebab-case name
-- `[type]` - Issue type (feature, bug, chore, enhancement, feedback, backlog)
-
-## 📄 Document Naming
-
-Inside the issue folder, name documents:
+Example:
 ```
-[issue-folder-name]-[document-type].md
+issues/configuration/001-CFG-yaml-config-system/yaml-config-system-issue.md
 ```
 
-For multiple documents of same type:
-```
-[issue-folder-name]-[document-type]-[number]-[descriptor].md
-```
+## 📝 Naming Components
+
+- `{core-concept}` - Directory for grouping related issues (e.g., configuration, authentication, ui)
+- `{next-chronological-issue-nr}` - Three-digit sequential number (001, 002, 003)
+- `{core-concept-code}` - Three-letter uppercase code for the concept (CFG, AUTH, UI)
+- `{descriptive-title}` - Kebab-case short title for the folder
+- `{descriptive-description}` - Kebab-case full description for the file
+- `{type}` - Issue type: issue, bug, enhancement, chore, feedback

@@ -58,6 +58,9 @@ echo "📄 Syncing output formats..."
 echo "🧱 Syncing blocks..."
 "$SCRIPT_DIR/sync-claude-code-blocks.sh"
 
+echo "🎮 Syncing modes..."
+"$SCRIPT_DIR/sync-claude-code-modes.sh"
+
 echo "🔗 Processing embedded wikilinks..."
 "$SCRIPT_DIR/sync-claude-code-embedded-wikilinks.sh"
 

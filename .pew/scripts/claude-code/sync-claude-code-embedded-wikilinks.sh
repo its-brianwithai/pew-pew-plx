@@ -34,7 +34,7 @@ echo "📊 Found $total_files files to scan for embedded wikilinks"
 # Function to search for file in project directories
 find_in_project() {
     local filename="$1"
-    local search_dirs=(".pew/templates/blocks" ".pew/prompts" ".pew/agents" ".pew/instructions" ".pew/templates" ".pew/context" "docs" ".pew/workflows" ".pew/personas" ".pew/output-formats")
+    local search_dirs=(".pew/templates/blocks" ".pew/prompts" ".pew/agents" ".pew/instructions" ".pew/templates" ".pew/context" "docs" ".pew/workflows" ".pew/personas" ".pew/output-formats" ".pew/modes")
     
     for dir in "${search_dirs[@]}"; do
         if [ -d "$PROJECT_ROOT/$dir" ]; then

@@ -7,7 +7,7 @@ Create a new questions document for the current context and activate questions d
 2. Create a comprehensive questions document following [[issue-creation-instructions]] naming patterns
 3. Filename: `[context-name]-questions.md` (use appropriate context identifier)
 4. Structure the document with sections for different phases or topics
-5. After creating the document, activate [[activate-question-mode]] to begin the iterative refinement process
+5. After creating the document, activate [[question-mode]] to begin the iterative refinement process
 </instructions>
 
 <document-structure>
@@ -52,7 +52,7 @@ If you have any additional context or requirements not covered above, please add
 1. **Determine Context**: Identify the appropriate context name from the user's request
 2. **Create Document**: Write the questions document with initial high-value questions
 3. **Focus on Value**: Ensure questions target the most impactful decisions first
-4. **Activate Mode**: After creating, immediately activate [[activate-question-mode]]
+4. **Activate Mode**: After creating, immediately activate [[question-mode]]
 5. **Begin Iteration**: Start the question-answer-refine cycle
 </process>
 
