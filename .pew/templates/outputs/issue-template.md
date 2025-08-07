@@ -252,4 +252,12 @@ graph TB
 
 ---
 
+![[deliverables-block]]
+
+---
+
+![[acceptance-criteria-block]]
+
+---
+
 ![[suggested-approach-block]]
