@@ -69,7 +69,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 ## ⭐ Best Practices
 > 💡 *Industry standards and recommended approaches that should be followed.*
 
-- Study existing instructions like [[issue-creation-instructions]] and [[entity-implementation-rules]]
+- Study existing instructions like [[issue-creation-conventions]] and [[entity-implementation-rules]]
 - Use clear, imperative language for actionable steps
 - Provide rationale for rules to encourage compliance
 - Include both positive examples (do this) and negative examples (don't do this)
@@ -112,7 +112,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 ### 📚 Project Files & Code
 > 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
 
-- [[issue-creation-instructions]] - (Relevance: Example of process instructions with naming patterns)
+- [[issue-creation-conventions]] - (Relevance: Example of process instructions with naming patterns)
 - [[entity-implementation-rules]] - (Relevance: Meta-instructions for creating examples)
 - [[make-best-practices]] - (Relevance: Technical guideline format)
 - `instructions/` directory - (Relevance: Existing instruction patterns)

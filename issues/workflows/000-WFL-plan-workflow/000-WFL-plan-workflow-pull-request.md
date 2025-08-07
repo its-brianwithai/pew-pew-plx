@@ -60,7 +60,7 @@
 | [`blocks/refinements/analytics-block.md`](../../../blocks/refinements/analytics-block.md) | Modified | Updated analytics tracking |
 | [`blocks/refinements/test-focus.md`](../../../blocks/refinements/test-focus.md) | Added | Testing approach block |
 | [`blocks/refinements/impact-communication-block.md`](../../../blocks/refinements/impact-communication-block.md) | Modified | Enhanced impact documentation |
-| [`instructions/issue-creation-instructions.md`](../../../instructions/issue-creation-instructions.md) | Added | Standardized issue creation guide |
+| [`instructions/issue-creation-conventions.md`](../../../instructions/issue-creation-conventions.md) | Added | Standardized issue creation guide |
 | [`instructions/entity-implementation-rules.md`](../../../instructions/entity-implementation-rules.md) | Added | Example formatting standards |
 | [`scripts/claude-code/sync-claude-code-templates.sh`](../../../scripts/claude-code/sync-claude-code-templates.sh) | Modified | Fixed to handle subdirectories |
 | [`Makefile`](../../../Makefile) | Modified | Added external repo pulling, watch mode |

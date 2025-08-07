@@ -4,7 +4,7 @@ Create a new questions document for the current context and activate questions d
 
 <instructions>
 1. Analyze the current context and user's goals
-2. Create a comprehensive questions document following [[issue-creation-instructions]] naming patterns
+2. Create a comprehensive questions document following [[issue-creation-conventions]] naming patterns
 3. Filename: `[context-name]-questions.md` (use appropriate context identifier)
 4. Structure the document with sections for different phases or topics
 5. After creating the document, activate [[question-mode]] to begin the iterative refinement process

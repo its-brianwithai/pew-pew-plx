@@ -1,5 +1,5 @@
 ---
-name: issue-creation-instructions
+name: issue-creation-conventions
 description: "Standard instructions for creating and organizing issues in the project. Defines folder structure, naming conventions, and document organization for all issue types."
 ---
 # 📋 Issue Creation Instructions

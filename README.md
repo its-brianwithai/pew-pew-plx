@@ -362,10 +362,10 @@ Multi-agent orchestration for complex tasks:
 Automatic context loading:
 ```
 # In your documents:
-Follow [[issue-creation-instructions]] and use [[story-template]]
+Follow [[issue-creation-conventions]] and use [[story-template]]
 
 # Becomes after sync:
-Follow @instructions/issue-creation-instructions.md and use @templates/plan/story-template.md
+Follow @instructions/issue-creation-conventions.md and use @templates/plan/story-template.md
 ```
 
 
