@@ -24,7 +24,7 @@ Review our existing Maestro documentation files:
 - [[maestro-mcp-tools-instructions]] - MCP tools guide
 
 **Agent Documentation:**
-- [[maestro-test-engineer]] - Main testing agent
+- [[maestro-test-expert]] - Main testing agent
 
 **Draft/Collection Files:**
 - `.pew/drafts/maestro-relevant-docs.md` - Scraped documentation
@@ -93,7 +93,7 @@ After updating documentation:
 1. **Check consistency** across all files
 2. **Verify examples** work with current version
 3. **Test new commands** if possible with MCP tools
-4. **Update agent knowledge** in [[maestro-test-engineer]] if needed
+4. **Update agent knowledge** in [[maestro-test-expert]] if needed
 5. **Review wikilinks** to ensure all references are valid
 
 ### 7. Create Update Summary

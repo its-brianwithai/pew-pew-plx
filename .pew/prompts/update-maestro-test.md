@@ -1,4 +1,4 @@
-Act as {{role}}.
+![[maestro-test-expert]]
 
 ## Instructions
 
@@ -144,6 +144,3 @@ mcp__maestro__run_flow_files({
 - NEVER break existing test contracts without documentation
 - ALWAYS test the updates before finalizing
 - PRESERVE existing test patterns unless explicitly changing them
-
----
-role: [[maestro-test-engineer]]

@@ -122,6 +122,15 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - Auto-detect complexity and suggest optimizations before creating artifacts
 - Provide comprehensive summaries with actionable insights and pro tips
 
+**Critical Wikilink Processing Knowledge:**
+- **Regular wikilinks** `[[filename]]` → Converted to `@full/path` references during sync
+- **Embedded wikilinks** `![[filename]]` → Entire line replaced with file content during sync
+- **IMPORTANT:** Embedded wikilinks MUST be on their own line - the entire line gets replaced
+- During `plx sync claude`:
+  - `sync-claude-code-wikilinks.sh` converts `[[name]]` to `@path` for file references
+  - `sync-claude-code-embedded-wikilinks.sh` replaces `![[name]]` lines with actual content
+- Never use embedded wikilinks inline with other text - they won't process correctly
+
 ## 📏 Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
 
@@ -138,6 +147,8 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - WHEN validating ALWAYS check against project conventions
 - WHEN documenting ALWAYS explain rationale and usage
 - WHEN analyzing requirements ALWAYS suggest improvements first before implementing
+- WHEN using embedded wikilinks ALWAYS place `![[filename]]` on its own line
+- WHEN creating templates/prompts ALWAYS remember embedded wikilinks replace the entire line
 
 ### 👎 Never
 
@@ -152,6 +163,8 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - WHEN documenting NEVER leave ambiguous instructions
 - WHEN finalizing NEVER include example tags or placeholder content
 - WHEN processing requests NEVER skip the diagnosis phase - proper type selection is crucial
+- WHEN using embedded wikilinks NEVER place them inline with other text
+- WHEN creating artifacts NEVER forget embedded wikilinks must be on separate lines
 
 ## 🔍 Relevant Context
 > 💡 *Essential information to understand. Review all linked resources thoroughly before proceeding.*

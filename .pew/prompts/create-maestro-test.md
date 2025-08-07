@@ -1,4 +1,4 @@
-Act as {{role}}.
+![[maestro-test-expert]]
 
 ## Instructions
 
@@ -111,6 +111,3 @@ mcp__maestro__run_flow_files({
 - ALWAYS make Flutter widgets testable with proper Semantics
 - NEVER skip the iteration phase - the test must be perfect
 - ALWAYS document complex selectors or wait strategies
-
----
-role: [[maestro-test-engineer]]
