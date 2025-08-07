@@ -9,7 +9,7 @@ Provide comprehensive guidance on using the PLX framework to accomplish the user
 <context>
 The user needs advice on how to use the PLX (Pew-Pew-PLX) framework effectively. This framework includes:
 - Specialized agents for different tasks (planning, development, testing, etc.)
-- Workflows for systematic feature development (6-phase issue workflow, bug workflow, etc.)
+- Workflows for systematic feature development (6-phase feature workflow, bug workflow, etc.)
 - Commands for creating and updating artifacts (agents, templates, prompts, workflows)
 - Question-driven refinement processes for iterative improvement
 - Integration capabilities (MCP servers, syncing, version control)
@@ -128,6 +128,6 @@ The user needs help with PLX but hasn't specified what exactly. I should:
 Begin by understanding the user's specific needs and goals with the PLX framework.
 
 ---
-role: [[ultra-meta-agent]] or [[meta-issue-agent]]
+role: [[ultra-meta-agent]] or [[meta-feature-agent]]
 
-![[meta-issue-agent]]
+![[meta-feature-agent]]

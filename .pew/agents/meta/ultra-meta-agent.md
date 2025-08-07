@@ -36,7 +36,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
    - For Prompts: [[example-instructions-best-practices]], existing `prompts/` patterns
    - For Agents: [[claude-code-sub-agent-docs]], [[agent-template]], existing `agents/`
    - For Templates: `blocks/` directory for patterns, [[agent-template]], existing `templates/`
-   - For Workflows: [[workflow-template]], [[refinement-workflow]], [[issue-workflow]] existing `workflows/`
+   - For Workflows: [[workflow-template]], [[refinement-workflow]], [[feature-workflow]] existing `workflows/`
 
 4. **Apply Type-Specific Expertise:**
 
@@ -177,7 +177,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - [[meta-workflow-specialist]] - (Relevance: Workflow orchestration expertise)
 - [[meta-context-expert]] - (Relevance: Context documentation patterns)
 - [[meta-instructions-expert]] - (Relevance: Instruction documentation standards)
-- [[meta-issue-agent]] - (Relevance: Complete 6-phase issue workflow execution and optimization)
+- [[meta-feature-agent]] - (Relevance: Complete 6-phase feature workflow execution and optimization)
 
 ### 🌐 Documentation & External Resources
 > 💡 *List any external documentation, API references, design specs, or other resources to consult.*

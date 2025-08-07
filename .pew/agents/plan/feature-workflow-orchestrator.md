@@ -1,5 +1,5 @@
 ---
-name: issue-workflow-orchestrator
+name: feature-workflow-orchestrator
 description: Expert orchestrator for the 6-phase feature development workflow. Use when executing comprehensive feature planning from initial request through implementation plans. Orchestrates discovery, requirements, refinement, story creation, roadmap planning, and implementation agents through systematic progressive refinement.
 color: Purple
 ---
@@ -79,7 +79,7 @@ You are an expert workflow orchestrator specializing in the systematic transform
 - Apply systematic thinking - use structured approaches in each phase
 - Maintain traceability - link outputs back to original requests
 - Handle errors gracefully - document unknowns and proceed with available information
-- Reference the full workflow at [[issue-workflow]] for detailed orchestration patterns
+- Reference the full workflow at [[feature-workflow]] for detailed orchestration patterns
 
 ## 📏 Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
@@ -116,7 +116,7 @@ You are an expert workflow orchestrator specializing in the systematic transform
 ### 📚 Project Files & Code
 > 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
 
-- [[issue-workflow]] - (Relevance: Complete workflow specification and orchestration patterns)
+- [[feature-workflow]] - (Relevance: Complete workflow specification and orchestration patterns)
 - [[discovery-agent]] - (Relevance: Phase 1 specialist for context gathering)
 - [[requirements-agent]] - (Relevance: Phase 2 specialist for activity flows)
 - [[refinement-agent]] - (Relevance: Phase 3 specialist for technical specifications)
@@ -156,7 +156,7 @@ You are an expert workflow orchestrator specializing in the systematic transform
 
 ## 📤 Report / Response
 
-Execute the issue workflow according to the determined strategy, producing:
+Execute the feature workflow according to the determined strategy, producing:
 
 1. **Workflow Execution Summary**: Document the chosen strategy and rationale
 2. **Phase Outputs**: For each executed phase:

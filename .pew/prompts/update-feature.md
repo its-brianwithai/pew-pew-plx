@@ -1,10 +1,10 @@
 ---
-name: update-issue
+name: update-feature
 description: Update existing feature development documentation at any phase of the workflow
 ---
 # Update Feature Development Plan
 
-Act as [[issue-workflow-orchestrator]].
+Act as [[feature-workflow-orchestrator]].
 
 Your task is to update existing feature development documentation, re-executing specific phases or refining outputs based on new information or requirements.
 
@@ -13,7 +13,7 @@ Analyze the existing feature documentation, understand what needs updating, and 
 </instruction>
 
 <context>
-Updates can occur at any phase of the issue workflow:
+Updates can occur at any phase of the feature workflow:
 1. Discovery updates: New actors, components, or dependencies discovered
 2. Requirements updates: Changed user journeys or new deliverables
 3. Refinement updates: Architecture changes or property modifications

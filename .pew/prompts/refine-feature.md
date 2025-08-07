@@ -1,6 +1,6 @@
 Act as [[refinement-agent]].
 
-Your task is to help refine a specific issue as part of Phase 3 of the [[issue-workflow]]. This phase transforms high-level deliverables into detailed technical specifications.
+Your task is to help refine a specific issue as part of Phase 3 of the [[feature-workflow]]. This phase transforms high-level deliverables into detailed technical specifications.
 
 <workflow-context>
 The refinement phase is part of a 6-phase feature development workflow:

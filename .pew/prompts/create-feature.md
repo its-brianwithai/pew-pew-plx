@@ -1,19 +1,19 @@
 ---
-name: create-issue
+name: create-feature
 description: Start a comprehensive feature development workflow from initial request through implementation plans
 ---
 # Create Feature Development Plan
 
-Act as [[issue-workflow-orchestrator]].
+Act as [[feature-workflow-orchestrator]].
 
 Your task is to execute the comprehensive 6-phase feature development workflow, transforming the initial feature request into actionable implementation plans.
 
 <instruction>
-Execute the issue workflow using the strategy that best fits the user's needs. Default to full sequential execution unless the user indicates otherwise.
+Execute the feature workflow using the strategy that best fits the user's needs. Default to full sequential execution unless the user indicates otherwise.
 </instruction>
 
 <context>
-The issue workflow consists of 6 phases:
+The feature workflow consists of 6 phases:
 1. Discovery & Context Gathering
 2. Requirements Elaboration  
 3. Refinement & Architecture
