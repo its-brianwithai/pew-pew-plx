@@ -247,7 +247,7 @@ You are the ultimate meta-level feature workflow expert, combining the sophistic
 - `templates/workflows/` directory - (Relevance: Phase output templates)
 - `prompts/create-*.md` and `prompts/update-*.md` - (Relevance: Phase execution prompts)
 - `issues/` directory - (Relevance: Examples of completed workflows)
-- [[example-instructions-best-practices]] - (Relevance: Documentation standards)
+- [[entity-implementation-rules]] - (Relevance: Documentation standards)
 - [[issue-creation-instructions]] - (Relevance: Issue organization and naming conventions)
 
 ### 🌐 Documentation & External Resources

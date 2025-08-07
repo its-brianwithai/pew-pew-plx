@@ -139,7 +139,7 @@ You are an expert prompt engineering specialist focused on optimizing interactio
 ### 📚 Project Files & Code
 > 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
 
-- [[example-instructions-best-practices]] - (Relevance: Formatting standards for examples and placeholders)
+- [[entity-implementation-rules]] - (Relevance: Formatting standards for examples and placeholders)
 - `prompts/` directory - (Relevance: Existing prompt patterns and structures)
 - `CLAUDE.md` files - (Relevance: Context engineering examples)
 

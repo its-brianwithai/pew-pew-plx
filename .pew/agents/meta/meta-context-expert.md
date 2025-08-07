@@ -145,7 +145,7 @@ You are an expert Context Documentation Architect specializing in creating clear
 - `context/concepts/` directory - (Relevance: Concept documentation)
 - `context/features/` directory - (Relevance: Feature documentation)
 - `context/models/` directory - (Relevance: Model documentation)
-- [[example-instructions-best-practices]] - (Relevance: Formatting standards)
+- [[entity-implementation-rules]] - (Relevance: Formatting standards)
 
 ### 🌐 Documentation & External Resources
 > 💡 *List any external documentation, API references, design specs, or other resources to consult.*

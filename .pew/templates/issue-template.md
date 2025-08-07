@@ -1,9 +1,9 @@
 ---
 name: issue-template
-description: "Use this template when documenting a new issue following the 5-step requirements process"
+description: "Use this template when documenting a new issue following the complete requirements process"
 ---
 # 🎯 Issue: [Issue Name]
-> 💡 *Complete issue documentation following the 5-step process*
+> 💡 *Complete issue documentation following the systematic workflow process*
 
 [Brief description of the issue/requirement]
 
@@ -16,3 +16,7 @@ description: "Use this template when documenting a new issue following the 5-ste
 ![[data-flow-block]]
 
 ![[component-diagram-block]]
+
+![[deliverables-block]]
+
+![[acceptance-criteria-block]]

@@ -69,7 +69,7 @@ The main content of the template, written in markdown. It should:
 
 - Use blocks as inspiration for structure and patterns only - examine [[blocks]] directory for reusable sections
 - Write complete template content, not references - templates must be self-contained
-- Include detailed placeholder instructions using [[example-instructions-best-practices]] conventions
+- Include detailed placeholder instructions using [[entity-implementation-rules]] conventions
 - Maintain consistent formatting and emoji usage throughout templates
 - Follow established naming conventions: `<domain>-<type>-template.md`
 - Create self-contained, ready-to-use templates that require no external dependencies
@@ -114,7 +114,7 @@ The main content of the template, written in markdown. It should:
 
 - [[blocks]] directory - (Relevance: Contains reusable template sections and patterns)
 - [[templates]] directory - (Relevance: Existing templates showing established conventions)
-- [[example-instructions-best-practices]] - (Relevance: Placeholder and instruction formatting standards)
+- [[entity-implementation-rules]] - (Relevance: Placeholder and instruction formatting standards)
 - [[agent-template]] - (Relevance: Standard structure for all agent documentation)
 
 ### 🌐 Documentation & External Resources

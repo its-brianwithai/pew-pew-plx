@@ -90,7 +90,9 @@ Phase 6: Component Breakdown & Approach
 ├── Step 6.1: Behavior Documentation
 ├── Step 6.2: Critical Path Identification
 ├── Step 6.3: Suggested Approach Development
-└── Output: Component breakdown and implementation approach
+├── Step 6.4: Deliverables Definition
+├── Step 6.5: Acceptance Criteria Specification
+└── Output: Component breakdown, deliverables, and acceptance criteria
 
 Phase 7: Refinement Offering
 ├── Step 7.1: Identify Gaps
@@ -357,6 +359,9 @@ Phase 7: Refinement Offering
   - [ ] No missing technical pieces
   - [ ] Dependencies clear
   - [ ] Scope still ≤3 points
+  - [ ] Deliverables defined and sized appropriately
+  - [ ] Acceptance criteria are testable
+  - [ ] All outputs documented
 - **Pass Actions**: Requirement ready for development
 - **Fail Actions**: Revisit scope or clarify components
 
@@ -381,6 +386,18 @@ Phase 7: Refinement Offering
 - **Instructions**: Based on project conventions and patterns
 - **Outputs**: High-level implementation guide
 - **Success Criteria**: Clear path forward
+
+#### Step 6.4: Deliverables Definition
+- **Purpose**: Define concrete outputs organized by responsibility
+- **Instructions**: Break down into sub-deliverables (max 3 story points each)
+- **Outputs**: Structured deliverables list
+- **Success Criteria**: All outputs identified and sized appropriately
+
+#### Step 6.5: Acceptance Criteria Specification
+- **Purpose**: Define testable success conditions
+- **Instructions**: Create specific, measurable criteria
+- **Outputs**: Checkbox list of acceptance criteria
+- **Success Criteria**: Each criterion is independently testable
 
 ### Phase 7: Refinement Offering
 > *Ensure issue completeness through structured refinement*
@@ -512,6 +529,8 @@ Use the following template to document issues as they progress through this work
 - Use the scope assessment checkpoint to decide on decomposition
 - Include all diagrams to provide visual clarity
 - Complete Component Breakdown based only on explicit user requirements
+- Define Deliverables with clear sub-deliverable breakdown (max 3 story points each)
+- Create testable Acceptance Criteria that validate requirement completion
 - Develop Suggested Approach based on project conventions
 - Mark checklist items as issues are validated
 - The template ensures consistency across all decomposed issues

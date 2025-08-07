@@ -1,6 +1,6 @@
 # 📝 Feedback: Meta Agents Example Instructions Update
 
-> 💡 *Constructive feedback for improving meta agents to follow example-instructions-best-practices and enhance meta-prompt-engineer with role detection capabilities.*
+> 💡 *Constructive feedback for improving meta agents to follow entity-implementation-rules and enhance meta-prompt-engineer with role detection capabilities.*
 
 ## 🎯 Component Details
 > 💡 *Identify the specific component and its location within the PLX framework.*
@@ -13,9 +13,9 @@
 ## 📊 Context & Usage
 > 💡 *Describe how you were using this component when you identified areas for improvement.*
 
-**Use Case:** Creating prompts with proper role assignments and ensuring all meta agents follow the established example-instructions-best-practices
+**Use Case:** Creating prompts with proper role assignments and ensuring all meta agents follow the established entity-implementation-rules
 **Interaction Type:** Direct usage via /act commands
-**Related Components:** [[example-instructions-best-practices]], prompts that need role assignments
+**Related Components:** [[entity-implementation-rules]], prompts that need role assignments
 
 ## 🔍 Observations
 > 💡 *Document specific behaviours, outputs, or characteristics that prompted this feedback.*
@@ -26,7 +26,7 @@
 - Good use of wikilinks for referencing documentation
 
 ### Areas for Improvement
-- **Issue:** Meta agents don't follow [[example-instructions-best-practices]] for their examples
+- **Issue:** Meta agents don't follow [[entity-implementation-rules]] for their examples
   - **Example:** Examples contain actual content instead of type descriptions
   - **Impact:** Inconsistency with project standards, confusion about how to create examples
 - **Issue:** Meta-prompt-engineer doesn't check for or assign roles when creating prompts
@@ -39,7 +39,7 @@
 1. **Update All Meta Agent Examples**
    - **Current State:** Examples show actual content (e.g., "Use wikilinks [[document-name]]")
    - **Proposed Change:** Replace with type descriptions in example blocks
-   - **Rationale:** Maintains consistency with [[example-instructions-best-practices]]
+   - **Rationale:** Maintains consistency with [[entity-implementation-rules]]
    - **Implementation Notes:** Update all <example> blocks to use [type descriptions]
 
 2. **Enhance Meta-Prompt-Engineer Role Detection**
@@ -61,7 +61,7 @@
 ```
 
 ### Reference Implementation
-- Component: [[example-instructions-best-practices]]
+- Component: [[entity-implementation-rules]]
 - Relevant Pattern: All examples use type descriptions, not actual content
 
 ## 🚀 Priority & Impact Assessment
@@ -75,7 +75,7 @@
 ## 🔗 Related Feedback
 > 💡 *Link to any related feedback documents or issues.*
 
-- [[example-instructions-best-practices]] - The standard to follow
+- [[entity-implementation-rules]] - The standard to follow
 
 ## 📋 Meta Agent Assignment
 > 💡 *Indicate which meta agent should process this feedback.*
@@ -87,6 +87,6 @@
 > 💡 *Any other context, considerations, or information that might be helpful.*
 
 The user specifically wants:
-1. All meta agents updated to follow example-instructions-best-practices
+1. All meta agents updated to follow entity-implementation-rules
 2. Meta-prompt-engineer to search for applicable roles when creating/updating prompts
 3. Role assignment should check if the prompt needs a specific agent based on its purpose
