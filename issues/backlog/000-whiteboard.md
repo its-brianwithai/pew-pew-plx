@@ -5,7 +5,6 @@ Een goede prompt bestaat uit:
   - Expertise
   - Domain
   - Role
-  - Context
   - Knowledge
   - Experience
   - Skills
