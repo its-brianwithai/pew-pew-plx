@@ -22,8 +22,340 @@ plx init
 plx sync claude
 ```
 
-That's it! You now have access to 20+ specialized agents, 30+ prompt commands, and intelligent workflows in Claude Code.  
-  
+That's it! You now have access to 20+ specialized agents, 30+ prompt commands, and intelligent workflows in Claude Code.
+
+## 🎮 Commands
+
+The framework provides a comprehensive CLI for managing AI-powered project workflows:
+
+### Core Commands
+```bash
+# Initialize framework in your project
+plx init
+
+# Sync all components to Claude Code
+plx sync claude
+
+# Clean sync (removes then re-adds)
+plx sync claude clean
+
+# Pull latest framework updates
+plx pull main      # From main branch
+plx pull beta      # From beta branch
+
+# Watch mode for auto-sync during development
+plx watch claude
+```
+
+### How Commands Work in Claude Code
+
+After running `plx sync claude`, the framework creates specialized commands in Claude Code:
+
+- **🤖 Agent Commands (`/act`)** - Adopt specialized personas: `/act:flutter/developer`, `/act:workflow/specialist`
+- **🎯 Prompt Commands (`/plx`)** - Execute quick actions: `/plx:create/issue`, `/plx:review/code`  
+- **📋 Template Commands (`/use`)** - Apply structured formats: `/use:story-template`, `/use:epic-template`
+- **📚 Instruction Commands (`/follow`)** - Set conventions: `/follow:project-conventions`
+- **🌊 Workflow Commands (`/start`)** - Begin multi-step processes: `/start:issue-workflow`
+
+## 📋 Issue Management
+
+### Issue Philosophy
+
+The framework employs a **parallel AI working paths** methodology that enables maximum productivity through strategic work organization:
+
+#### Parallel AI Working Paths
+
+**Department / Team Structure:**
+- **Tech Team** - Development, architecture, and technical implementation
+- **Marketing Team** - Content, campaigns, and user engagement  
+- **Sales Team** - Customer relations, partnerships, and revenue generation
+
+**Subject-Based Parallel Work:**
+Within each team, subjects can be worked on in parallel without interrupting each other, each with its own dedicated backlog:
+
+- **Highly Controlled Improvement** - Each main subject is always improved one at a time using the best approach possible
+- **MVP Must-Have Mindset** - Focus on essential features with granular, small release strategy for full control
+- **Global Scale Productivity** - Work gets done on different levels within levels instead of one big subject with a single focus
+- **Non-Interrupting Workflow** - Teams can work simultaneously on separate subjects without blocking each other
+
+This approach ensures:
+- ✅ Maximum parallel productivity across teams and subjects
+- ✅ Granular control over each improvement cycle
+- ✅ MVP-focused deliverables with small, manageable releases
+- ✅ Reduced context switching and interruption
+- ✅ Clear ownership and accountability per subject area
+
+#### Context Folders
+
+The framework organizes project knowledge in specialized context folders:
+
+- **`.pew/context/teams/`** - Team structures and responsibilities
+- **`.pew/context/roles/`** - Individual role definitions and expertise areas
+- **`.pew/context/platforms/`** - External service integrations and configurations
+- **`.pew/context/docs/`** - Project documentation and knowledge base
+- **`.pew/context/collections/`** - Grouped resources and references
+
+These context folders feed into agents and workflows, ensuring every AI interaction has access to relevant project knowledge and conventions.
+
+## 🔗 Intro to High Reusability
+
+The framework's power comes from its **component reusability system** built on WikiLinks and intelligent content embedding:
+
+### WikiLinks - Transform to @links
+
+WikiLinks (`[[filename]]`) are automatically converted to `@path/to/file.md` during sync, **forcing a read upon activation**:
+
+```markdown
+# In your agent file:
+Follow the conventions in [[project-conventions]] and use [[story-template]].
+
+# After sync becomes:
+Follow the conventions in @instructions/project-conventions.md and use @templates/story-template.md.
+```
+
+When you use a command, **all referenced files are automatically loaded** into Claude's context.
+
+### Embedded WikiLinks - Insert Actual Content
+
+For more granular reuse, you can embed the actual content of referenced files directly:
+
+```markdown
+# Reference (loads on command activation):
+Use the workflow defined in [[issue-workflow]]
+
+# Embedded (content inserted during sync):
+![[issue-workflow]]
+```
+
+### How This Works
+
+1. **Write**: Use `[[filename]]` for references or `![[filename]]` for embedding
+2. **Sync**: The sync process resolves WikiLinks and embeds content
+3. **Load**: Claude automatically has access to all referenced context
+4. **Reuse**: Same components work across agents, prompts, templates, and workflows
+
+**Search Resolution Order:**
+1. Project directories: `.pew/prompts/`, `.pew/agents/`, `.pew/instructions/`, `.pew/templates/`, `.pew/context/`
+2. Claude directories: Recursively searches `.claude/`
+
+## 📝 A Good Prompt Consists Of
+
+Every effective prompt in the framework follows this structure, where each section is **optional and should only exist when it contributes to achieving the end goal**:
+
+### 🎯 End Goal
+A clean, focused end goal that determines whether any following sections provide value. Every section should improve chances of reaching the desired outcome exactly as intended.
+
+### 👤 Persona  
+The specialized role and expertise needed (when contributing to end goal):
+- **Role** - Specific position or function
+- **Expertise** - Domain knowledge and technical skills  
+- **Domain** - Area of specialization
+- **Knowledge** - Required information and understanding
+- **Experience** - Practical background and lessons learned
+- **Skills** - Technical and soft abilities
+- **Abilities** - What they can accomplish
+- **Responsibilities** - What they own and are accountable for
+- **Interests** - Areas of focus and motivation
+- **Background** - Professional and contextual history
+- **Preferences** - Working style and approach preferences
+- **Perspective** - Viewpoint and problem-solving approach
+- **Communication Style** - How they interact and share information
+
+### 🎯 Request Prompt
+Verb-first request to perform an activity with optional clear deliverables and acceptance criteria:
+- Start with action verbs (Create, Update, Review, Analyze, etc.)
+- Include specific deliverables when needed
+- Define acceptance criteria for completion
+- Specify constraints and requirements
+
+### 🔄 Workflow
+Atomic steps with deliverables and acceptance criteria:
+- Sequential, actionable steps
+- Clear inputs and outputs for each step
+- Validation criteria for step completion
+- Dependencies and prerequisites
+- Rollback procedures when needed
+
+### 📋 Instructions  
+Event-driven best practices, conventions, constraints and rules:
+- **When {scenario}** → **Then {list of related instructions}**
+- Contextual guidance based on specific situations
+- Project conventions and standards
+- Quality gates and validation rules
+- Error handling and edge cases
+
+### 📄 Output Format
+Template or format type instructions for delivering deliverables:
+- Structured formats (JSON, YAML, Markdown templates)
+- Response templates and examples
+- Formatting requirements and conventions
+- Validation schemas when applicable
+
+### 🔗 WikiLink Integration
+All of these components can and should be WikiLink embedded if you can isolate them individually and reuse them in several places. The sync process will parse their actual content when synced to Claude Code.
+
+**Example of Reusable Components:**
+```markdown
+# Reusable persona
+persona: [[flutter-developer]]
+
+# Reusable workflow  
+workflow: [[issue-workflow]]
+
+# Reusable instructions
+instructions: [[project-conventions]]
+
+# Reusable output format
+output_format: [[story-template]]
+```
+
+## 🤖 Agent Can Consist Of
+
+Agents are specialized AI personas built from reusable components:
+
+### Core Agent Components
+
+#### 👤 Persona
+The specialized role, expertise, and characteristics that define the agent's identity and capabilities. This includes role definition, domain expertise, communication style, and working preferences.
+
+#### 🔄 Workflow  
+The systematic process the agent follows to accomplish tasks. This includes atomic steps, validation criteria, and decision points that guide the agent's execution path.
+
+#### 📋 Instructions
+Event-driven rules, best practices, and conventions that govern the agent's behavior in different scenarios. These provide contextual guidance for handling various situations.
+
+#### 📄 Output Format
+Template and formatting specifications that define how the agent structures and delivers its results. This ensures consistent, professional outputs aligned with project standards.
+
+### Agent Composition Examples
+
+```markdown
+# Flutter Developer Agent
+persona: [[flutter-developer-persona]]
+workflow: [[development-workflow]] 
+instructions: [[flutter-conventions]]
+output_format: [[code-review-format]]
+
+# Story Creation Agent  
+persona: [[story-writer-persona]]
+workflow: [[story-creation-workflow]]
+instructions: [[agile-conventions]]
+output_format: [[story-template]]
+```
+
+The modular design allows agents to share components while maintaining their unique specializations.
+
+## 📋 Template
+
+Templates provide structured formats for consistent documentation and deliverables:
+
+### Template Types
+
+#### 📄 Output Templates (`.pew/templates/outputs/`)
+Complete document structures for specific deliverables:
+- **Planning**: `story-template.md`, `epic-template.md`, `milestone-template.md`
+- **Documentation**: `requirements-template.md`, `implementation-plan-template.md`  
+- **Review**: `bug-report-template.md`, `pull-request-template.md`
+- **Context**: `platform-template.md`, `role-template.md`, `team-template.md`
+
+#### 🧱 Blocks (`.pew/templates/blocks/`)
+Reusable content components that can be composed into larger documents:
+
+**Available Block Categories:**
+- **Context Blocks**: `access-config-block.md`, `capabilities-block.md`, `purpose-block.md`
+- **Instruction Blocks**: `best-practices-block.md`, `rules-block.md`, `quality-standards-block.md`  
+- **Meta Blocks**: `agent-command-block.md`, `prompt-command-block.md`, `workflow-command-block.md`
+- **Refinement Blocks**: 40+ specialized blocks for comprehensive requirements documentation
+- **Workflow Blocks**: `inputs-block.md`, `outputs-block.md`, `steps-block.md`, `orchestrator-block.md`
+
+### Block Composition Example
+
+```markdown
+# Using blocks in a template
+![[end-goal-block]]
+![[persona-role-block]]
+![[request-block]]
+![[steps-block]]
+![[deliverables-block]]
+```
+
+During sync, blocks are embedded directly into templates, creating comprehensive, structured documents.
+
+## 🔧 Each Component Is Defined Independently
+
+The framework's strength lies in its **component independence and mixing capability**:
+
+### Independent Definition
+- **Agents** exist in `.pew/agents/` with their own persona and logic
+- **Prompts** exist in `.pew/prompts/` with their own request handling
+- **Templates** exist in `.pew/templates/` with their own structure
+- **Workflows** exist in `.pew/workflows/` with their own orchestration
+- **Instructions** exist in `.pew/instructions/` with their own conventions
+- **Context** exists in `.pew/context/` with project knowledge
+
+### WikiLink Mixing
+Components reference each other through WikiLinks, creating a **web of reusable knowledge**:
+
+```markdown
+# Agent referencing multiple components
+Follow [[project-conventions]] when creating stories.
+Use [[story-template]] for output format.
+If complex, invoke [[issue-workflow]] for decomposition.
+For code-related tasks, collaborate with [[flutter-developer]].
+```
+
+### Benefits of Independence
+- ✅ **Single Source of Truth** - Update once, applies everywhere
+- ✅ **Consistent Application** - Same conventions across all agents
+- ✅ **Easy Maintenance** - Modify components without hunting through files
+- ✅ **Flexible Composition** - Mix and match components as needed
+- ✅ **Scalable Growth** - Add new components without touching existing ones
+
+This approach means you can define a convention once and have it automatically applied across dozens of agents, prompts, and templates.
+
+## 🔄 Upon Syncing All Becomes
+
+The sync process transforms the component-based structure into Claude Code's format:
+
+### WikiLinks Transform to @links
+References become auto-loading context:
+```markdown
+# Before Sync:
+Follow the conventions in [[project-conventions]]
+
+# After Sync:  
+Follow the conventions in @instructions/project-conventions.md
+```
+**Forces a read upon activation** - When you use a command, Claude automatically loads all referenced files.
+
+### Embedded WikiLinks Insert Actual Content
+Content embedding creates self-contained documents:
+```markdown
+# Before Sync:
+![[issue-workflow]]
+
+# After Sync:
+[Full content of issue-workflow.md is inserted here]
+```
+
+### Component Distribution
+The sync process creates organized command structures in `.claude/`:
+
+- **Agents** → `.claude/agents/` (sub-agents) + `.claude/commands/act/` (manual commands)
+- **Prompts** → `.claude/commands/plx/` (organized by verb-object patterns)
+- **Templates** → `.claude/commands/use/` (structured document formats)
+- **Instructions** → `.claude/commands/follow/` (convention setting)
+- **Workflows** → `.claude/commands/start/` (multi-step processes)
+- **Output Formats** → `.claude/commands/use/` (formatting specifications)
+- **Modes** → `.claude/commands/activate/` (behavioral modifications)
+
+### Result
+A comprehensive, interconnected system where:
+- Every command has automatic access to relevant context
+- Components maintain their independence while working together seamlessly  
+- Updates propagate automatically across the entire system
+- Claude Code becomes a powerful, context-aware development environment
+
 ## 🎯 What is Pew Pew Plx?
 
 Pew Pew Plx is an AI project management framework that enhances Claude Code with:
@@ -46,33 +378,92 @@ npm install -g .
 ### Requirements
 - Node.js >= 16.0.0
 - Claude Code
-- Make (for advanced commands)  
-  
-## 🎮 Core Commands
+- Make (for advanced commands)
 
-```bash
-# Initialize framework in your project
-plx init
+## 🏗️ Architecture
 
-# Sync all components to Claude Code
-plx sync claude
+### 🔧 Directory Structure
 
-# Clean sync (removes then re-adds)
-plx sync claude clean
-
-# Pull latest framework updates
-plx pull main      # From main branch
-plx pull beta      # From beta branch
-
-# Pull from any repository
-plx pull https://github.com/user/repo.git main
-plx pull git@github.com:user/repo.git develop
-
-# Watch mode for auto-sync
-plx watch claude
+```
+pew-pew-plx/
+├── .pew/            # All framework components
+│   ├── agents/      # AI agents organized by category
+│   │   ├── dev/     # Development agents
+│   │   ├── plan/    # Planning agents  
+│   │   ├── review/  # Quality & review agents
+│   │   ├── meta/    # Framework architects
+│   │   └── claude/  # Claude Code specialists
+│   ├── prompts/     # Quick-action commands
+│   ├── templates/   # Document templates and blocks
+│   │   ├── blocks/  # Reusable content blocks
+│   │   └── outputs/ # Complete templates
+│   ├── workflows/   # Multi-step processes
+│   ├── instructions/# Project conventions
+│   ├── output-formats/ # Response specifications  
+│   ├── modes/       # Behavioral modifications
+│   └── context/     # Project knowledge (not synced)
+│       ├── teams/   # Department structures
+│       ├── roles/   # Individual responsibilities
+│       └── platforms/ # External integrations
 ```
 
-## 🚀 How Commands Work in Claude Code
+### Sync Mechanism
+
+The framework syncs to Claude Code's configuration structure, transforming WikiLinks and distributing components across the appropriate command categories for optimal usability.
+
+## 💡 Key Features
+
+### 🤖 Specialized Agents
+Each agent is an expert in their domain with specific personas, workflows, and output formats.
+
+### 🎯 Smart Prompts  
+Quick-action commands that streamline common development tasks with built-in validation and guidance.
+
+### 📋 Structured Templates
+Consistent documentation formats using reusable blocks for comprehensive, professional deliverables.
+
+### 🔄 Intelligent Workflows
+Multi-agent orchestration for complex tasks like feature development and bug resolution.
+
+### 🔗 WikiLink Magic
+Automatic context loading and content embedding for seamless component reuse.
+
+## 🚦 Common Workflows
+
+### Starting a New Feature
+```bash
+# 1. Use the issue workflow to break down requirements
+/start:issue-workflow
+
+# 2. Create a user story
+/plx:create/story "User Authentication"
+
+# 3. Get specialized development help
+/act:flutter/developer
+```
+
+### Code Review Process
+```bash
+# 1. Comprehensive code analysis
+/plx:review/code
+
+# 2. Generate unit tests
+/act:unit/test/engineer  
+
+# 3. Update documentation
+/plx:update/readme
+```
+
+## 🔧 Advanced Features
+
+### 🎨 Blocks System
+40+ reusable content blocks for building comprehensive documentation covering all aspects of requirements, workflows, and deliverables.
+
+### 🛠️ Custom Make Commands
+Extend the CLI with project-specific commands through your Makefile.
+
+### 🔄 Watch Mode
+Auto-sync changes during development for continuous integration with Claude Code.
 
 After running `plx sync claude`, the framework creates specialized commands in Claude Code:
 
