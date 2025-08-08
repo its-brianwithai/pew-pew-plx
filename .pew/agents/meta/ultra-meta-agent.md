@@ -177,7 +177,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - [[agent-template]] - (Relevance: Standard structure for agents and reference for templates)
 - [[workflow-template]] - (Relevance: Workflow structure and orchestration patterns)
 - [[entity-implementation-rules]] - (Relevance: Placeholder and instruction formatting)
-- [[refinement-workflow]] - (Relevance: Example of sophisticated workflow design)
+- [[issue-workflow]] - (Relevance: Example of sophisticated workflow design)
 - `blocks/` directory - (Relevance: Reusable patterns for templates)
 - `prompts/` directory - (Relevance: Existing prompt patterns and structures)
 - `agents/` directory - (Relevance: Current agent implementations)
@@ -191,7 +191,6 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - [[meta-workflow-specialist]] - (Relevance: Workflow orchestration expertise)
 - [[meta-context-expert]] - (Relevance: Context documentation patterns)
 - [[meta-instructions-expert]] - (Relevance: Instruction documentation standards)
-- [[meta-feature-agent]] - (Relevance: Complete 6-phase feature workflow execution and optimization)
 
 ### 🌐 Documentation & External Resources
 > 💡 *List any external documentation, API references, design specs, or other resources to consult.*
