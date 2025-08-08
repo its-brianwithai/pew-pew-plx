@@ -51,7 +51,7 @@ plx watch claude
 
 After running `plx sync claude`, the framework creates specialized commands in Claude Code:
 
-- **🤖 Agent Commands (`/act`)** - Adopt specialized personas: `/act:flutter:developer`, `/act:workflow:specialist`
+- **👤 Agent Commands (`/act`)** - Adopt specialized personas: `/act:flutter:developer`, `/act:workflow:specialist`
 - **🎯 Prompt Commands (`/plx`)** - Execute quick actions: `/plx:create:issue`, `/plx:review:code`  
 - **📋 Template Commands (`/use`)** - Apply structured formats: `/use:story-template`, `/use:epic-template`
 - **📚 Instruction Commands (`/apply`)** - Set conventions: `/apply:project-conventions`
