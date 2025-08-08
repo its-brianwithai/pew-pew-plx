@@ -433,5 +433,17 @@ All examples and placeholders follow [[entity-implementation-rules]]:
 ## Reference
 This prompt follows: [[prompt-template]]
 
----
-role: [[ultra-meta-agent]]
+## Important Philosophy Notes
+
+**Why No Agent Reference:**
+This prompt intentionally does NOT reference an agent at the bottom. Following the create-anything philosophy:
+- Components are defined directly in the prompt (Persona, Workflow, Instructions)
+- These components COULD be extracted into separate files for reusability
+- If Persona + Workflow + Instructions prove valuable together, they COULD become an agent
+- But starting with an agent reference violates the decomposition → sharding → assembly pattern
+
+**Proper Evolution Path:**
+1. Start with components defined in the prompt (current state)
+2. Extract shareable components as they prove useful
+3. Create an agent only when components naturally align and need reuse
+4. Then future prompts can reference that agent via `![[agent-name]]`
