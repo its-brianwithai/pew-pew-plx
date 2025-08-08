@@ -57,8 +57,8 @@ node bin/plx.js sync claude
 6. **Output Formats** (`.pew/output-formats/`) → Synced to `.claude/commands/use/`
    - Available as `/use:{format-name}`
 
-7. **Instructions** (`.pew/instructions/`) → Synced to `.claude/commands/follow/`
-   - Available as `/follow:{instruction-name}`
+7. **Instructions** (`.pew/instructions/`) → Synced to `.claude/commands/apply/`
+   - Available as `/apply:{instruction-name}`
 
 8. **Workflows** (`.pew/workflows/`) → Synced to `.claude/commands/start/`
    - Available as `/start:{workflow-name}`

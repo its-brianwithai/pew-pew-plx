@@ -51,10 +51,10 @@ plx watch claude
 
 After running `plx sync claude`, the framework creates specialized commands in Claude Code:
 
-- **🤖 Agent Commands (`/act`)** - Adopt specialized personas: `/act:flutter/developer`, `/act:workflow/specialist`
-- **🎯 Prompt Commands (`/plx`)** - Execute quick actions: `/plx:create/issue`, `/plx:review/code`  
+- **🤖 Agent Commands (`/act`)** - Adopt specialized personas: `/act:flutter:developer`, `/act:workflow:specialist`
+- **🎯 Prompt Commands (`/plx`)** - Execute quick actions: `/plx:create:issue`, `/plx:review:code`  
 - **📋 Template Commands (`/use`)** - Apply structured formats: `/use:story-template`, `/use:epic-template`
-- **📚 Instruction Commands (`/follow`)** - Set conventions: `/follow:project-conventions`
+- **📚 Instruction Commands (`/apply`)** - Set conventions: `/apply:project-conventions`
 - **🌊 Workflow Commands (`/start`)** - Begin multi-step processes: `/start:issue-workflow`
 
 ## 📋 Issue Management
@@ -344,7 +344,7 @@ The sync process creates organized command structures in `.claude/`:
 - **Agents** → `.claude/agents/` (sub-agents) + `.claude/commands/act/` (manual commands)
 - **Prompts** → `.claude/commands/plx/` (organized by verb-object patterns)
 - **Templates** → `.claude/commands/use/` (structured document formats)
-- **Instructions** → `.claude/commands/follow/` (convention setting)
+- **Instructions** → `.claude/commands/apply/` (convention setting)
 - **Workflows** → `.claude/commands/start/` (multi-step processes)
 - **Output Formats** → `.claude/commands/use/` (formatting specifications)
 - **Modes** → `.claude/commands/activate/` (behavioral modifications)
@@ -497,14 +497,14 @@ Templates provide structured document formats for consistent documentation.
 
 **Usage**: Type `/use:story-template` to get a pre-formatted story document structure.
 
-### 📚 Instruction Commands (`/follow`)
+### 📚 Instruction Commands (`/apply`)
 Instructions set conventions and guidelines that Claude will follow throughout the conversation.
 
-**Structure**: Instructions are available as `/follow:{instruction-name}`
-- `project-conventions.md` → `/follow:project-conventions`
-- `code-style.md` → `/follow:code-style`
+**Structure**: Instructions are available as `/apply:{instruction-name}`
+- `project-conventions.md` → `/apply:project-conventions`
+- `code-style.md` → `/apply:code-style`
 
-**Usage**: Type `/follow:project-conventions` to have Claude adopt your project's specific conventions.
+**Usage**: Type `/apply:project-conventions` to have Claude adopt your project's specific conventions.
 
 ### 🌊 Workflow Commands (`/start`)
 Workflows orchestrate multi-step processes using multiple agents.
@@ -596,7 +596,7 @@ The framework syncs to Claude Code's configuration:
 - Agents → `.claude/agents/` (sub-agents) and `.claude/commands/act/` (commands)
 - Prompts → `.claude/commands/plx/{verb}/` or `.claude/commands/` (single-word)
 - Templates → `.claude/commands/use/` 
-- Instructions → `.claude/commands/follow/`
+- Instructions → `.claude/commands/apply/`
 - Workflows → `.claude/commands/start/`
   
 ### 🔧 Directory Structure

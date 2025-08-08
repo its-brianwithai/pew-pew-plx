@@ -49,7 +49,7 @@ This project refactors the existing sync system to implement a new organizationa
     *   .claude/commands/plx/{verb}/
     *   .claude/commands/use/
     *   .claude/commands/start/
-    *   .claude/follow/ (New)
+    *   .claude/apply/ (New)
 *   **Command Block Templates**
     *   blocks/meta/agent-command-block.md
     *   blocks/meta/prompt-command-block.md
@@ -104,7 +104,7 @@ This project refactors the existing sync system to implement a new organizationa
     *   Prompts: `{verb}-{object}.md` → `.claude/commands/plx/{verb}/{object}.md`
     *   Prompts: `{single-word}.md` → `.claude/commands/plx/{single-word}.md`
     *   Agents: `{name}.md` → `.claude/commands/act/{name}.md` (no as- prefix)
-    *   Instructions: `{name}.md` → `.claude/follow/{name}.md`
+    *   Instructions: `{name}.md` → `.claude/apply/{name}.md`
 *   **Command Block Injection**
     *   Blocks must be inserted after frontmatter if present
     *   Each file type gets its specific command block
@@ -159,7 +159,7 @@ This project refactors the existing sync system to implement a new organizationa
 - **Instructions:**
     1. Copy structure from existing sync scripts
     2. Source from `instructions/` directory
-    3. Target `.claude/follow/` directory
+    3. Target `.claude/apply/` directory
     4. Inject instruction command block
 
 #### Task 2.4: Update Templates Sync Script
@@ -199,7 +199,7 @@ This project refactors the existing sync system to implement a new organizationa
     - Update: `scripts/claude-code/sync-claude-code-wikilinks.sh`
 - **Instructions:**
     1. Add instructions/ to project search paths
-    2. Add .claude/follow/ to command directory checks
+    2. Add .claude/apply/ to command directory checks
 
 ### Phase 4: Update Main Sync Orchestrator
 > 💡 *Update the main sync script to include new scripts and ensure proper execution order.*

@@ -113,7 +113,7 @@ done
 echo -e "\n✅ Processed wikilinks in $total_files files"
 
 # Debug: Check test file after processing
-if [ -f "$CLAUDE_DIR/commands/follow/test-conventions.md" ]; then
+if [ -f "$CLAUDE_DIR/commands/apply/test-conventions.md" ]; then
     echo "🔍 Debug: test-conventions after wiki link processing:"
-    grep -n "meta-agent" "$CLAUDE_DIR/commands/follow/test-conventions.md" || true
+    grep -n "meta-agent" "$CLAUDE_DIR/commands/apply/test-conventions.md" || true
 fi

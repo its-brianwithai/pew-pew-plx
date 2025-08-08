@@ -7,9 +7,9 @@ INSTRUCTIONS_DIR="$PROJECT_ROOT/.pew/instructions"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    CLAUDE_FOLLOW_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/follow"
+    CLAUDE_FOLLOW_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/apply"
 else
-    CLAUDE_FOLLOW_DIR="$PROJECT_ROOT/.claude/commands/follow"
+    CLAUDE_FOLLOW_DIR="$PROJECT_ROOT/.claude/commands/apply"
 fi
 
 if [ ! -d "$INSTRUCTIONS_DIR" ]; then
@@ -17,7 +17,7 @@ if [ ! -d "$INSTRUCTIONS_DIR" ]; then
     exit 1
 fi
 
-echo "📚 Creating Claude follow directory..."
+echo "📚 Creating Claude apply directory..."
 mkdir -p "$CLAUDE_FOLLOW_DIR"
 
 echo "📚 Processing instructions from $INSTRUCTIONS_DIR to $CLAUDE_FOLLOW_DIR..."

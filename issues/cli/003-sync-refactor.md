@@ -33,7 +33,7 @@ are:
 - Constraints
 syncs:
 - FROM: instructions
-- TO: .claude/follow/{filename}.md (`/follow:project-conventions`)
+- TO: .claude/apply/{filename}.md (`/apply:project-conventions`)
 syncs:
 - FROM: agents
 - TO: .claude/agents/{filename}.md (sub agents)

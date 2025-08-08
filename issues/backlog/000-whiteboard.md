@@ -212,7 +212,7 @@ Agents:
                 - Rules
                 - Constraints
             sync to:
-                - .claude/follow/{filename}.md (`/follow:project-conventions`)
+                - .claude/apply/{filename}.md (`/apply:project-conventions`)
     sync to:
         - .claude/agents/{filename}.md (sub agents)
         - .claude/commands/act/as-{filename}.md (`/act:as-requirements-expert`)
