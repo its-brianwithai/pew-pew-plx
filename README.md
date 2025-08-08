@@ -5,7 +5,7 @@
 
 # 🔫 Pew Pew 💨 Plx 🙏
 
-> Advanced AI project management framework for Claude Code that transforms any desire to DO something into production-ready artifacts through systematic decomposition and intelligent component reuse.
+> Advanced AI project management framework for Claude Code that systematically transforms requirements into production-ready artifacts through intelligent decomposition and component reuse.
 
 ![Pew Pew Plx Hero](assets/hero.png)
 
@@ -24,200 +24,314 @@ plx sync claude
 
 That's it! You now have access to the complete artifact creation philosophy, specialized agents, smart templates, and intelligent workflows in Claude Code.
 
-## 🎨 Core Philosophy: Create Anything from Desire
+## 📝 A Good Prompt
 
-Every artifact in this framework stems from a **desire to DO something**. We systematically transform that desire into production-ready components through:
+The foundation of this framework is understanding what makes an effective prompt. Every prompt consists of modular components, each included only when it contributes to achieving the end goal:
 
-### 1️⃣ **Desire Discovery**
-What do you want to DO with this framework?
-- **Create** something new
-- **Update** existing artifacts  
-- **Make** transformations
-- **Shard** into reusable pieces
-
-### 2️⃣ **Component Decomposition**
-Break desires into modular, reusable components:
-- 🎯 **End Goal** - The measurable objective that determines value
-- 👤 **Persona** - Specialized expertise when needed
-- 📋 **Request** - Verb-first activity with deliverables
-- 🔄 **Workflow** - Atomic steps with acceptance criteria
-- 📏 **Instructions** - Event-driven conventions and rules
-- 📊 **Output Format** - Structured delivery templates
-
-### 3️⃣ **Progressive Sharding**
-Extract and share components for maximum reuse:
-```markdown
-# Start with components inline
-persona: Expert issue creator
-workflow: Step-by-step process
-instructions: When X, then Y
-
-# Extract shareable pieces
-persona: [[issue-expert-persona]]
-workflow: [[issue-creation-workflow]]
-instructions: [[issue-conventions]]
-
-# Eventually combine into agent
-![[issue-creator-agent]]
+```mermaid
+graph TD
+    EG[🎯 End Goal<br/>Measurable Objective]
+    
+    P[👤 Persona<br/>Optional Expertise]
+    R[📋 Request<br/>Verb-First Activity]
+    W[🔄 Workflow<br/>Optional Steps]
+    I[📏 Instructions<br/>Optional Rules]
+    O[📊 Output Format<br/>Optional Structure]
+    
+    EG --> P
+    EG --> R
+    EG --> W
+    EG --> I
+    EG --> O
+    
+    P -.->|Contributes to| EG
+    R -.->|Required for| EG
+    W -.->|Enhances| EG
+    I -.->|Guides toward| EG
+    O -.->|Structures| EG
+    
+    style EG fill:#663399,stroke:#fff,stroke-width:4px,color:#fff
+    style R fill:#2e5090,stroke:#fff,stroke-width:2px,color:#fff
+    style P fill:#4a5568,stroke:#fff,stroke-width:2px,color:#fff
+    style W fill:#4a5568,stroke:#fff,stroke-width:2px,color:#fff
+    style I fill:#4a5568,stroke:#fff,stroke-width:2px,color:#fff
+    style O fill:#4a5568,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
-### 4️⃣ **Question-Mode Refinement**
-Apply systematic YES/NO questioning at each step:
+### Core Components
+
+#### 🎯 **End Goal**
+The measurable objective that determines whether any following section provides value. This is your north star - every component should improve your chances of achieving this goal exactly as intended.
+
+#### 👤 **Persona** (Optional)
+Specialized expertise attributes included when they enhance outcomes:
+- Role, Expertise, Domain, Knowledge
+- Experience, Skills, Abilities, Responsibilities
+- Interests, Background, Preferences, Perspective
+- Communication Style
+
+#### 📋 **Request**
+Verb-first activity specification with optional deliverables and acceptance criteria. Always starts with an action: Create, Update, Analyze, Transform, etc.
+
+#### 🔄 **Workflow** (Optional)
+Atomic steps with specific deliverables and acceptance criteria for each phase. Used when multi-step processes are required.
+
+#### 📏 **Instructions** (Optional)
+Event-driven guidance following the pattern: "When {scenario} occurs, then {apply these instructions}". Includes best practices, conventions, constraints, and rules.
+
+#### 📊 **Output Format** (Optional)
+Specifications for how deliverables should be structured - templates, format types (JSON, YAML, Markdown), or specific structural requirements.
+
+### The Modular Approach
+
+Each component can and should be extracted and referenced via wikilinks when it can be reused:
+
+```mermaid
+graph LR
+    subgraph "1. Inline Phase"
+        I1[persona: Expert issue creator...]
+        I2[workflow: Step-by-step process...]
+        I3[instructions: When creating...]
+    end
+    
+    subgraph "2. Extraction Phase"
+        E1["persona: [[issue-expert-persona]]"]
+        E2["workflow: [[issue-creation-workflow]]"]
+        E3["instructions: [[issue-conventions]]"]
+    end
+    
+    subgraph "3. Embedding Phase"
+        EM1["![[issue-expert-persona]]"]
+        EM2["![[issue-creation-workflow]]"]
+        EM3["![[issue-conventions]]"]
+    end
+    
+    I1 -->|Extract| E1
+    I2 -->|Extract| E2
+    I3 -->|Extract| E3
+    
+    E1 -->|Embed| EM1
+    E2 -->|Embed| EM2
+    E3 -->|Embed| EM3
+    
+    style I1 fill:#8b4513,stroke:#fff,color:#fff
+    style I2 fill:#8b4513,stroke:#fff,color:#fff
+    style I3 fill:#8b4513,stroke:#fff,color:#fff
+    style E1 fill:#2e7d32,stroke:#fff,color:#fff
+    style E2 fill:#2e7d32,stroke:#fff,color:#fff
+    style E3 fill:#2e7d32,stroke:#fff,color:#fff
+    style EM1 fill:#1565c0,stroke:#fff,color:#fff
+    style EM2 fill:#1565c0,stroke:#fff,color:#fff
+    style EM3 fill:#1565c0,stroke:#fff,color:#fff
+```
+
+During sync, the framework:
+- Converts `[[references]]` to `@path/to/file.md` for dynamic loading
+- Replaces `![[embeds]]` with actual file content
+- Enables component reuse across all artifacts
+
+## 🤖 From Prompts to Agents
+
+When certain prompt components naturally align around a common purpose, they can be composed into agents:
+
+```mermaid
+graph TD
+    subgraph "Prompt Components"
+        P1[👤 Persona]
+        W1[🔄 Workflow]
+        I1[📏 Instructions]
+        O1[📊 Output Format]
+    end
+    
+    subgraph "Agent Composition"
+        A[🤖 Agent<br/>flutter-developer.md]
+    end
+    
+    subgraph "Reusable Everywhere"
+        PR1[📝 Prompt 1]
+        PR2[📝 Prompt 2]
+        PR3[📝 Prompt 3]
+    end
+    
+    P1 --> A
+    W1 --> A
+    I1 --> A
+    O1 --> A
+    
+    A -->|"Embed: ![[flutter-developer]]"| PR1
+    A -->|"Embed: ![[flutter-developer]]"| PR2
+    A -->|"Embed: ![[flutter-developer]]"| PR3
+    
+    style A fill:#663399,stroke:#fff,stroke-width:3px,color:#fff
+    style P1 fill:#4a5568,stroke:#fff,color:#fff
+    style W1 fill:#4a5568,stroke:#fff,color:#fff
+    style I1 fill:#4a5568,stroke:#fff,color:#fff
+    style O1 fill:#4a5568,stroke:#fff,color:#fff
+    style PR1 fill:#2e7d32,stroke:#fff,color:#fff
+    style PR2 fill:#2e7d32,stroke:#fff,color:#fff
+    style PR3 fill:#2e7d32,stroke:#fff,color:#fff
+```
+
+### Agent Composition
+An agent combines:
+- **Persona** - The expertise and characteristics
+- **Workflow** - The systematic process
+- **Instructions** - The rules and conventions
+- **Output Format** - The delivery structure
+
+## 📋 Templates and Blocks
+
+Templates provide structured formats, while blocks offer reusable content sections:
+
+### Templates
+Complete document structures in `.pew/templates/outputs/`:
+- Issue templates, story templates, epic templates
+- Bug reports, pull requests, documentation
+- Implementation plans, requirements, roadmaps
+
+### Blocks
+Reusable content sections in `.pew/templates/blocks/`:
+- Context blocks (capabilities, purpose, functions)
+- Instruction blocks (best practices, rules, standards)
+- Workflow blocks (steps, inputs, outputs)
+- 40+ specialized blocks for comprehensive documentation
+
+## 🎨 Core Philosophy: From Monolithic to Modular
+
+The framework's philosophy is based on natural evolution - we don't start by building components. We start by solving problems completely, then extract patterns:
+
+### 1️⃣ **Start with Complete Solutions**
+First, create a fully functional prompt with everything inline:
+- Write the complete prompt with all components defined directly
+- Focus on solving the immediate problem completely
+- Don't worry about reusability initially
+- Get it working first, optimize later
+
+### 2️⃣ **Identify Reusable Patterns**
+After creating several prompts, patterns emerge:
+- Notice repeated personas across prompts
+- Identify common workflows being duplicated
+- Spot recurring instructions and conventions
+- Recognize standard output formats
+
+### 3️⃣ **Extract and Modularize**
+Only after patterns prove their value:
+- Extract repeated components to separate files
+- Replace inline content with wikilink references
+- Create agents when persona + workflow + instructions naturally align
+- Build a library of reusable components from proven patterns
+
+### 4️⃣ **Systematic Refinement**
+Apply structured validation through targeted questioning:
 - 🔄 **Simplify** - Can we reduce complexity?
 - ❓ **Clarify** - Are requirements unambiguous?
 - 🔧 **Improve** - What enhancements add value?
 - ➕ **Expand** - What edge cases are missing?
 - ➖ **Reduce** - What can be deferred to MVP?
 
-## 🎮 The "Anything" Commands
+## 🎮 Universal Creation Commands
 
-After syncing, use these powerful creation commands:
+The framework provides comprehensive artifact management through systematic commands:
 
 ### 🎨 `/plx:create/anything`
-Transform any desire into the right artifact type:
+Intelligently generates the appropriate artifact type based on requirements:
 ```markdown
-User: "I want to easily identify all actors in my project"
-→ Creates: identify-actors.md prompt with:
+Example: "Identify all actors in the project"
+→ Generates: identify-actors.md prompt containing:
   - Actor identification workflow
   - Actor template output format
-  - Systematic discovery instructions
+  - Systematic discovery methodology
 ```
 
 ### 🔄 `/plx:update/anything`
-Enhance existing artifacts to current standards:
-- Analyzes current state vs best practices
+Enhances existing artifacts to meet current standards:
+- Analyzes current implementation against best practices
 - Identifies improvement opportunities
 - Applies modular enhancements
-- Extracts shareable components
+- Extracts reusable components
 
 ### 🔮 `/plx:make/anything`
-Transform any input into desired artifacts:
-- Text → Structured documentation
-- Ideas → Actionable components
+Transforms content between different formats:
+- Raw text → Structured documentation
+- Conceptual ideas → Actionable components
 - Requirements → Implementation plans
 - Conversations → Formal specifications
 
 ### 🧩 `/plx:shard/anything`
-Extract and modularize components:
+Decomposes monolithic artifacts into modular components:
 - Identifies reusable patterns
 - Creates standalone component files
-- Replaces with wikilinks
+- Implements wikilink references
 - Enables cross-artifact sharing
 
-## 🔗 WikiLink Architecture: High Reusability
+## 🔗 WikiLink Architecture: Component Reusability
 
-The framework's power comes from its **component reusability system**:
+The framework leverages a sophisticated component referencing system:
 
-### Standard WikiLinks → Force Reads
+```mermaid
+graph LR
+    subgraph "Development Time"
+        D1["Write: [[component]]"]
+        D2["Write: ![[component]]"]
+    end
+    
+    subgraph "Sync Process"
+        S1[plx sync claude]
+        S2[WikiLink Resolution]
+        S3[Content Embedding]
+    end
+    
+    subgraph "Runtime"
+        R1[@path/to/component.md<br/>Dynamic Loading]
+        R2[Actual Content<br/>Embedded Inline]
+    end
+    
+    D1 --> S1
+    D2 --> S1
+    S1 --> S2
+    S1 --> S3
+    S2 --> R1
+    S3 --> R2
+    
+    style D1 fill:#4a5568,stroke:#fff,color:#fff
+    style D2 fill:#4a5568,stroke:#fff,color:#fff
+    style S1 fill:#b8860b,stroke:#fff,stroke-width:2px,color:#fff
+    style S2 fill:#8b4513,stroke:#fff,color:#fff
+    style S3 fill:#8b4513,stroke:#fff,color:#fff
+    style R1 fill:#2e7d32,stroke:#fff,color:#fff
+    style R2 fill:#1565c0,stroke:#fff,color:#fff
+```
+
+### Standard WikiLinks: Dynamic Loading
 ```markdown
 # In your artifact:
 Follow [[project-conventions]] and use [[story-template]]
 
-# After sync becomes:
+# After sync transformation:
 Follow @instructions/project-conventions.md and use @templates/story-template.md
 
-# Result: Claude automatically loads all referenced files
+# Result: Claude automatically loads referenced files at runtime
 ```
 
-### Embedded WikiLinks → Insert Content
+### Embedded WikiLinks: Content Insertion
 ```markdown
-# Reference (loads on activation):
+# Reference mode (loads on activation):
 Use the workflow in [[issue-workflow]]
 
-# Embedded (content inserted during sync):
+# Embedding mode (content inserted during sync):
 ![[issue-workflow]]
 
-# CRITICAL: Embedded wikilinks MUST be on their own line
+# Note: Embedded wikilinks must occupy their own line
 ```
 
-### Component Evolution Path
+### Component Evolution Lifecycle
 ```markdown
-1. Define inline → Components in the prompt itself
-2. Extract to files → [[component-name]] references
-3. Create agent → Combine persona + workflow + instructions
-4. Embed agent → ![[agent-name]] in prompts
+1. Inline definition → Components defined within the artifact
+2. File extraction → [[component-name]] references to external files
+3. Agent composition → Combining persona, workflow, and instructions
+4. Agent embedding → ![[agent-name]] inclusion in prompts
 ```
 
-## 📝 Anatomy of a Good Prompt
-
-Every prompt follows this modular structure (include only what serves the end goal):
-
-### 🎯 End Goal
-The north star that determines whether any section provides value:
-```markdown
-## 🎯 End Goal
-Successfully create a production-ready artifact that:
-- Achieves the stated desire
-- Maximizes reusability
-- Follows all conventions
-- Can be immediately used
-```
-
-### 👤 Persona (Optional)
-Specialized expertise when it improves outcomes:
-- Role, Expertise, Domain, Knowledge
-- Experience, Skills, Abilities, Responsibilities
-- Interests, Background, Preferences, Perspective
-- Communication Style
-
-### 📋 Request
-Verb-first activity with clear expectations:
-```markdown
-## 📋 Request
-Guide the user through systematic creation by:
-1. Discovering their core desire
-2. Decomposing into components
-3. Identifying sharding opportunities
-4. Assembling the final artifact
-```
-
-### 🔄 Workflow (Optional)
-Atomic steps with measurable outcomes:
-```markdown
-### Step 1: Desire Discovery
-**Deliverable:** Clear understanding of intent
-**Acceptance Criteria:** Desire mapped to action verb
-```
-
-### 📏 Instructions (Optional)
-Event-driven guidance:
-```markdown
-### WHEN gathering requirements
-**Best Practices:** Start with user capabilities
-**Conventions:** Use **Actor** should format
-**Rules:** ALWAYS use testable conditions
-```
-
-### 📊 Output Format (Optional)
-Structured delivery specifications:
-```markdown
-### Format Type
-Markdown following [[issue-template]]
-
-### Structure Template
-![[issue-template]]
-```
-
-## 🤖 Agent Composition
-
-Agents combine reusable components:
-
-```markdown
-# Components that make an agent:
-Persona + Workflow + Instructions + Output Format
-
-# Example agent composition:
-persona: [[flutter-developer-persona]]
-workflow: [[development-workflow]]
-instructions: [[flutter-conventions]]
-output_format: [[code-review-format]]
-
-# When these align naturally, extract as agent:
-agents/flutter-developer.md
-
-# Then embed in prompts:
-![[flutter-developer]]
-```
 
 ## 📋 Issue Management Philosophy
 
@@ -306,32 +420,76 @@ pew-pew-plx/
 ```
 
 ### Sync Transformation
-```markdown
-# Components distribute to Claude Code:
-Agents → .claude/agents/ + .claude/commands/act/
-Prompts → .claude/commands/plx/
-Templates → .claude/commands/use/
-Instructions → .claude/commands/apply/
-Workflows → .claude/commands/start/
-Modes → .claude/commands/activate/
+
+```mermaid
+graph TD
+    subgraph ".pew/ Source"
+        A1[agents/]
+        P1[prompts/]
+        T1[templates/]
+        I1[instructions/]
+        W1[workflows/]
+        M1[modes/]
+    end
+    
+    subgraph "plx sync claude"
+        SYNC[Sync Process<br/>WikiLink Resolution<br/>Content Distribution]
+    end
+    
+    subgraph ".claude/ Destination"
+        A2[.claude/agents/<br/>+<br/>.claude/commands/act/]
+        P2[.claude/commands/plx/]
+        T2[.claude/commands/use/]
+        I2[.claude/commands/apply/]
+        W2[.claude/commands/start/]
+        M2[.claude/commands/activate/]
+    end
+    
+    A1 --> SYNC
+    P1 --> SYNC
+    T1 --> SYNC
+    I1 --> SYNC
+    W1 --> SYNC
+    M1 --> SYNC
+    
+    SYNC --> A2
+    SYNC --> P2
+    SYNC --> T2
+    SYNC --> I2
+    SYNC --> W2
+    SYNC --> M2
+    
+    style SYNC fill:#b8860b,stroke:#fff,stroke-width:3px,color:#fff
+    style A1 fill:#4a5568,stroke:#fff,color:#fff
+    style P1 fill:#4a5568,stroke:#fff,color:#fff
+    style T1 fill:#4a5568,stroke:#fff,color:#fff
+    style I1 fill:#4a5568,stroke:#fff,color:#fff
+    style W1 fill:#4a5568,stroke:#fff,color:#fff
+    style M1 fill:#4a5568,stroke:#fff,color:#fff
+    style A2 fill:#2e7d32,stroke:#fff,color:#fff
+    style P2 fill:#2e7d32,stroke:#fff,color:#fff
+    style T2 fill:#2e7d32,stroke:#fff,color:#fff
+    style I2 fill:#2e7d32,stroke:#fff,color:#fff
+    style W2 fill:#2e7d32,stroke:#fff,color:#fff
+    style M2 fill:#2e7d32,stroke:#fff,color:#fff
 ```
 
 ## 💡 Key Principles
 
-### 1. Everything Starts with Desire
-Don't ask "what artifact type?" Ask "what do you want to DO?"
+### 1. Requirement-Driven Development
+Begin with functional requirements rather than artifact types - understand the objective before selecting the implementation.
 
-### 2. Components Over Monoliths
-Define once, use everywhere through wikilinks
+### 2. Component Modularity
+Define components once and reference them throughout the system via wikilinks for consistency and maintainability.
 
 ### 3. Progressive Enhancement
-Inline → Extracted → Agent → Reusable everywhere
+Evolution path: inline implementation → extracted components → composed agents → universal reusability.
 
-### 4. Question Everything
-Use question-mode to refine at each step
+### 4. Systematic Validation
+Apply structured questioning methodology to validate and refine each component and decision.
 
-### 5. Agent Extraction Pattern
-When Persona + Workflow + Instructions naturally align, they become an agent
+### 5. Natural Agent Emergence
+When persona, workflow, and instructions align organically around a common purpose, they naturally form a reusable agent.
 
 ## 🚦 Example: Creating an Issue
 
