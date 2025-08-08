@@ -1,65 +1,55 @@
 ---
 name: issue-template
-description: "Use this template when applying the issue workflow to break down high-level issues into precisely scoped, developer-ready work items through progressive refinement and visual modeling."
+description: "Simple template for breaking down requirements into clear, actionable work items. Use when "
 ---
-# 📐 Issue: [Feature/Capability Name]
-> 💡 *Systematic decomposition of requirements into atomic, scoped work items that a single developer can complete in half a day or less (max 3 story points).*
+# [Fitting Emoji] Issue: [Feature Name]
 
-[Brief description of the feature or capability being decomposed]
-
----
-
-## 📝 Initial Requirements
-> 💡 *Actor-based capability statements that define what users or systems should be able to do or be.*
-
-### Actors Identified
-[List all actors involved in this requirement]
-- **[Actor Name]**: [Role/description]
-- **[Actor Name]**: [Role/description]
-
-### Capability Statements
-[Simple English sentences defining capabilities]
-
-1. **[Actor]** should be able to [action/capability]
-   - Scope estimate: [1-3 points]
-   - Pre-decomposition needed: [Yes/No]
-   
-2. **[Actor]** should be [state/condition]
-   - Scope estimate: [1-3 points]
-   - Pre-decomposition needed: [Yes/No]
-
-### Pre-emptive Decomposition
-[If any requirements obviously exceed scope, break them down here]
-
-#### Original: [Large requirement]
-Decomposed to:
-- [ ] [Sub-requirement 1]
-- [ ] [Sub-requirement 2]
-- [ ] [Sub-requirement 3]
+[Brief description of the feature or capability]
 
 ---
 
-## 🌊 Event Flows
-> 💡 *Sequential list of actor-verb-subject interactions that fulfill each requirement.*
+## 📝 Initial Requirement
+*What should the system/user be able to do or be?*
 
-### Requirement: [Capability statement from Phase 1]
+### Requirements
+[List specific capabilities as simple English sentences. Be as specific as possible, break down if needed]
 
-#### Event Sequence
 ```
-1. [Actor] → [verb] → [subject]
-2. [Actor] → [verb] → [subject]
-3. [Actor] → [verb] → [subject]
-4. [Actor] → [verb] → [subject]
-5. [Actor] → [verb] → [subject]
-```
-
-#### Error Paths
-```
-E1. If [condition], then [Actor] → [verb] → [subject]
-E2. If [error], then [System] → [verb] → [subject]
+<example>
+NOTE: These are example TYPES only - replace with actual requirements relevant to your specific issue
+1. **User** should be able to [authentication action, data entry action, navigation action]
+2. **System** should [automatic behavior, scheduled task, validation rule]
+3. **Admin** should be able to [management action, configuration change, monitoring task]
+- [More actor-based requirements as needed for the specific issue context]
+- [...]
+</example>
 ```
 
-#### Visual Flow Diagram
+---
+
+## 🌊 Actor Flow
+*How does this look in terms of sequential events?*
+
+### Event Sequence
+[Create a single list of events with actors using verb-subject pattern]
+
+```
+<example>
+NOTE: These are example TYPES only - replace with actual events relevant to your specific issue
+1. **User** → initiates → [login process, registration flow, data submission]
+   - Data: [user credentials, form inputs, file uploads]
+2. **System** → validates → [input data, user permissions, business rules]
+   - Data: [validation results, error messages, processed data]
+3. **System** → stores → [user data, transaction records, audit logs]
+   - Data: [database records, file storage, cache entries]
+4. **User** → receives → [confirmation message, result display, next steps]
+   - Data: [success indicators, processed results, navigation options]
+- [More sequential events as needed for the specific flow]
+- [...]
+</example>
+```
+
+### Flow Diagram
 ```mermaid
 sequenceDiagram
     participant U as User
@@ -74,190 +64,98 @@ sequenceDiagram
 
 ---
 
-## 🎯 Scope Assessment
-> 💡 *Critical checkpoint to ensure requirement fits within scope constraints (≤3 story points).*
+## 📦 Deliverables
+*Tangible components to create/update/delete per event*
 
-### Complexity Metrics
+[List what needs to be created, updated, or deleted for each event]
 
-| Metric | Count | Points Impact |
-|:-------|:------|:-------------|
-| Event Count | [number] | [0-1 points] |
-| Actors Involved | [number] | [0-1 points] |
-| Data Entities | [number] | [0-1 points] |
-| External Integrations | [number] | [0-1 points] |
-| **Total Story Points** | | **[sum]** |
-
-### Scope Decision
-- [ ] **PROCEED** - Requirement is ≤3 points
-- [ ] **DECOMPOSE** - Requirement exceeds 3 points
-
-### Decomposition Plan
-[If decomposition needed, define split points]
-
-#### Split Point Analysis
-- **Authentication vs Core**: [Separate login from main feature]
-- **CRUD Operations**: [Create, Read, Update, Delete as separate items]
-- **User Paths**: [Different flows for different user types]
-
-#### Resulting Sub-requirements
-1. **[Sub-requirement 1]**: [1-3 points]
-2. **[Sub-requirement 2]**: [1-3 points]
-3. **[Sub-requirement 3]**: [1-3 points]
-
----
-
-## 💾 Data Flow
-> 💡 *Map of how data moves and transforms through the system.*
-
-### Data Sources
-[Identify where data originates]
-- **User Input**: [Form fields, selections]
-- **Database**: [Tables/collections accessed]
-- **External API**: [Services called]
-- **System Generated**: [IDs, timestamps]
-
-### Data Transformations
-[Track how data changes]
 ```
-Input: [Raw data format]
-  ↓ [Validation]
-Validated: [Clean data]
-  ↓ [Calculation/Processing]
-Processed: [Business logic applied]
-  ↓ [Formatting]
-Output: [Final format]
+<example>
+NOTE: These are example TYPES only - replace with actual deliverables relevant to your specific issue
+### Event 1: [User authentication event, data submission event, navigation event]
+- **Create**: [new session object, user record, authentication token]
+- **Update**: [user status, last login timestamp, activity log]
+- **Delete**: [expired sessions, temporary data, old tokens]
+
+### Event 2: [System processing event, validation event, calculation event]
+- **Create**: [processing result, validation report, calculated values]
+- **Update**: [system state, processing queue, metrics]
+
+### Event 3: [Data storage event, notification event, completion event]
+- **Create**: [database record, notification entry, completion flag]
+
+[More events and their deliverables as needed for the specific issue]
+[...]
+</example>
 ```
 
-### Data Destinations
-[Where data ends up]
-- **Database Write**: [Table/collection and fields]
-- **API Response**: [Response structure]
-- **UI Update**: [Component state changes]
-- **Cache/Session**: [Temporary storage]
-
-### Data Flow Diagram
+### Component Connection Diagram
 ```mermaid
 graph LR
-    A[User Input] --> B[Validation]
-    B --> C[Business Logic]
-    C --> D[Database]
-    C --> E[Cache]
-    D --> F[API Response]
-    E --> F
-    F --> G[UI Update]
-```
-
-### Convention Compliance
-- [ ] Naming conventions followed
-- [ ] Validation patterns applied
-- [ ] Error handling implemented
-- [ ] Security requirements met
-
-### Scope Revalidation
-[Check if data complexity changes scope]
-- Data complexity: [Simple/Medium/Complex]
-- Scope impact: [None/Minor/Major]
-- Action: [Proceed/Decompose]
-
----
-
-## 🧩 Components
-> 💡 *All technical components needed for implementation, organized by architectural layer.*
-
-### Data Structures
-[Core data definitions and shared structures]
-- **Constants**: [Fixed values, configuration constants]
-- **Enums**: [Type definitions, status codes, categories]
-- **Models**: [Data models, entities, DTOs]
-
-### Frontend Architecture
-[Client-side components and logic]
-- **Views**: [Screens, pages, layouts]
-- **Widgets**: [Reusable UI components]
-- **Forms**: [Input forms, validation forms]
-- **ViewModels**: [State management, business logic]
-- **Routes**: [Navigation paths, route definitions]
-- **Routers**: [Navigation handlers, route guards]
-
-### Backend Architecture
-[Server-side components and services]
-- **Endpoints**: [REST/GraphQL endpoints]
-  - `[METHOD] /path`: [Purpose]
-- **APIs**: [External API integrations]
-- **Services**: [Business logic services]
-- **Utilities**: [Helper functions, shared logic]
-- **Requests**: [Request handlers, validators]
-- **Responses**: [Response formatters, transformers]
-
-### Integration Points
-[How components connect and communicate]
-- **API Contracts**: [Request/Response schemas]
-- **Events**: [Event emitters, listeners]
-- **Database Operations**: [CRUD operations]
-- **External Services**: [Third-party integrations]
-- **Authentication/Authorization**: [Security boundaries]
-
-### Component Diagram
-```mermaid
-graph TB
-    subgraph "Frontend"
-        V[Views]
-        W[Widgets]
-        F[Forms]
-        VM[ViewModels]
-        R[Routes/Routers]
-    end
-    
-    subgraph "Shared"
-        C[Constants]
-        E[Enums]
-        M[Models]
-    end
-    
-    subgraph "Backend"
-        EP[Endpoints]
-        API[APIs]
-        S[Services]
-        U[Utilities]
-        REQ[Requests]
-        RES[Responses]
-    end
-    
-    subgraph "Data"
-        DB[(Database)]
-        Cache[(Cache)]
-    end
-    
-    V --> VM
-    W --> VM
-    F --> VM
-    VM --> R
-    R --> EP
-    EP --> REQ
-    REQ --> S
-    S --> API
-    S --> U
-    S --> DB
-    S --> Cache
-    S --> RES
-    RES --> EP
-    
-    Frontend --> Shared
-    Backend --> Shared
+    E1[Event 1] --> C1[Component A]
+    E1 --> C2[Component B]
+    E2[Event 2] --> C2
+    E2 --> C3[Component C]
+    E3[Event 3] --> C3
+    E3 --> C4[Component D]
 ```
 
 ---
 
-![[component-breakdown-block]]
+## ✅ Acceptance Criteria
 
----
+### What should always go right?
+[List specific conditions that must always work correctly]
 
-![[deliverables-block]]
+```
+<example>
+NOTE: These are example TYPES only - replace with actual success conditions relevant to your specific issue
+- [ ] [User authentication success conditions, data validation passes, system responses]
+- [ ] [Data persistence guarantees, transaction completions, state consistency]
+- [ ] [Performance requirements, response times, availability metrics]
+- [ ] [More success conditions as needed based on the specific issue context]
+- [ ] [...]
+</example>
+```
 
----
+### What should never go wrong?
+[List failures that must be prevented]
 
-![[acceptance-criteria-block]]
+```
+<example>
+NOTE: These are example TYPES only - replace with actual failure conditions relevant to your specific issue
+- [ ] [Security breaches, unauthorized access, data leaks]
+- [ ] [Data corruption, loss of information, inconsistent states]
+- [ ] [System crashes, infinite loops, resource exhaustion]
+- [ ] [More failure conditions as needed based on the specific issue context]
+- [ ] [...]
+</example>
+```
 
----
+### What should always be?
+[List conditions that must always be true]
 
-![[suggested-approach-block]]
+```
+<example>
+NOTE: These are example TYPES only - replace with actual invariant conditions relevant to your specific issue
+- [ ] [System availability states, data integrity conditions, security postures]
+- [ ] [Performance baselines, compliance standards, quality metrics]
+- [ ] [User access controls, audit trails, backup states]
+- [ ] [More invariant conditions as needed based on the specific issue context]
+- [ ] [...]
+</example>
+```
+
+### What should never be?
+[List conditions that must always be false]
+
+```
+<example>
+NOTE: These are example TYPES only - replace with actual prohibited conditions relevant to your specific issue
+- [ ] [Invalid states, unauthorized conditions, data inconsistencies]
+- [ ] [Security vulnerabilities, performance degradations, compliance violations]
+- [ ] [Orphaned resources, dangling references, circular dependencies]
+- [ ] [More prohibited conditions as needed based on the specific issue context]
+- [ ] [...]
+</example>
+```
