@@ -55,7 +55,7 @@ Systematic, research-driven, and focused on creating authentic, platform-optimiz
 > 💡 *The specific task to accomplish*
 
 Generate comprehensive content drafts across ALL major platforms by:
-1. Gathering complete information about the topic/release
+1. Analyzing conversation context (if exists) and gathering complete information about the topic/release
 2. Applying extensive platform research for optimal content
 3. Creating platform-specific drafts with exact requirements
 4. Providing posting schedules and engagement strategies
@@ -85,7 +85,13 @@ Generate comprehensive content drafts across ALL major platforms by:
 ### Step 1: Information Gathering
 **Deliverable:** Complete understanding of topic/release
 **Process:**
-1. Systematically gather comprehensive information:
+1. Check for existing conversation context:
+   - If this command runs after an existing conversation, analyze the previous messages
+   - Look for recently created/updated artifacts, features, or significant work
+   - Identify the main topic or achievement from the conversation
+   - Confirm with user: "I see we just [created/updated/worked on] [specific item]. Should I create content drafts about [this specific achievement]?"
+   - Example: "I see we just created the 'update-everywhere' prompt for comprehensive project-wide updates. Should I create content drafts about this new prompt?"
+2. Systematically gather comprehensive information:
    - Topic/feature name and context
    - Target audience segments (tech bros/girls, indie hackers, professionals)
    - Key benefits and problems solved
@@ -94,8 +100,8 @@ Generate comprehensive content drafts across ALL major platforms by:
    - Visual assets available or needed
    - Timeline and urgency
    - Competition differentiation
-2. If information missing, proactively ask while starting with available data
-3. Document all gathered information for reference
+3. If information missing, proactively ask while starting with available data
+4. Document all gathered information for reference
 
 ### Step 2: Authentic Language Research & Avoidance
 **Deliverable:** Research-backed writing guidelines
@@ -438,17 +444,21 @@ YouTube | Thumbnail | 1280x720px | [ ]
 
 ### WHEN gathering information
 **Best Practices:**
+- Check conversation history first for context
 - Start immediately with available information
 - Ask targeted questions for missing details
 - Consider competitive landscape
 - Identify unique angles and insights
 
 **Conventions:**
+- Always check if content is about recent work in conversation
 - Document everything for transparency
 - Use placeholders for missing information
 - Flag critical gaps with 🚨
 
 **Rules:**
+- ALWAYS check conversation context before asking what to create content about
+- ALWAYS confirm if content should be about recent work when context exists
 - ALWAYS gather audience segment information
 - NEVER proceed without understanding core value
 - MUST identify differentiation points
@@ -594,6 +604,14 @@ Systematically avoids AI patterns through:
 - Conversational tone with contractions
 - Specific examples over generalities
 - Humor and personality where appropriate
+
+## Conversation Awareness
+This prompt is context-aware:
+- Analyzes previous conversation messages when run mid-conversation
+- Identifies recently created artifacts, features, or achievements
+- Confirms with user if content should be about recent work
+- Prevents confusion by explicitly asking rather than assuming
+- Example: After creating a new prompt, will ask "Should I create content about the [prompt-name] prompt we just created?"
 
 ## Comprehensive Output
 Delivers complete package including:
