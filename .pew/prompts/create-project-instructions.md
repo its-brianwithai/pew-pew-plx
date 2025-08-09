@@ -1,20 +1,21 @@
 ---
 name: create-project-instructions
-description: "Systematically discover, analyze, and document all project conventions, patterns, and architectural decisions as reusable instruction files, optionally creating a comprehensive developer agent."
+description: "Systematically discover and document ONLY existing project conventions as concise, factual instruction files with line-by-line code references. Context window optimization is critical."
 ---
 
-# 📚 Create Project Instructions: Document Conventions & Build Developer Agent
-> 💡 *Systematically analyze a codebase to extract all conventions, patterns, and architectural decisions into reusable instruction files, then optionally create a developer agent with complete project knowledge.*
+# 📚 Create Project Instructions: Document Existing Conventions Only
+> 💡 *Extract ONLY factual, existing conventions from the codebase into ultra-concise instruction files. NO speculation, NO philosophy, NO rationale. Maximum 100 lines per file.*
 
 ## 🎯 End Goal
 > 💡 *The clean, measurable objective that determines whether any following section provides value.*
 
-Successfully create comprehensive project instruction files that:
-- Document all project conventions, patterns, and architectural decisions
-- Provide reusable, modular instruction components
-- Can be referenced by any agent or prompt via wikilinks
-- Serve as the single source of truth for project standards
-- Enable developer agent creation via separate workflow
+Successfully create ultra-concise instruction files that:
+- Document ONLY patterns found in actual code with file:line references
+- Maximum 100 lines per file for context window optimization
+- NO explanations, rationale, or philosophical discussions
+- NO invented "best practices" not present in code
+- ONLY factual observations with concrete examples
+- Files under 2KB size limit
 
 ## 👤 Persona
 
@@ -36,14 +37,14 @@ Codebase analysis, pattern recognition, and developer documentation
 - Build systems and tooling configurations
 
 ### Skills
-- Pattern recognition across codebases
-- Convention extraction from examples
-- Clear technical documentation writing
-- Systematic analysis and categorization
-- Developer experience optimization
+- Pattern recognition with line-by-line verification
+- Factual extraction without interpretation
+- Ultra-concise documentation (100 lines max)
+- Evidence-based analysis only
+- Context window optimization
 
 ### Communication Style
-Thorough, systematic, and example-driven with emphasis on practical application
+Factual, concise, evidence-based. NO philosophy, NO explanations, ONLY documented patterns
 
 ## 📋 Request
 > 💡 *Verb-first activity request with deliverables and acceptance criteria*
@@ -80,9 +81,16 @@ Analyze the entire codebase to discover and document all conventions by:
 - Note testing frameworks and quality tools
 - Document project type (web app, mobile, library, etc.)
 
-### Step 2: Convention Discovery
-**Deliverable:** Comprehensive list of all conventions to document
-**Acceptance Criteria:** All convention categories identified with examples
+### Step 2: Deep Convention Analysis (CRITICAL)
+**Deliverable:** Thoroughly analyzed conventions with file:line references
+**Acceptance Criteria:** Every pattern verified against actual code
+
+**⚠️ MANDATORY DEEP-DIVE CHECKLIST:**
+- [ ] Read ALL source files in primary directories
+- [ ] Extract patterns that appear 3+ times with exact locations
+- [ ] Document ONLY what exists, never what "should" exist
+- [ ] Collect file:line references for every pattern
+- [ ] Verify no speculation or interpretation added
 
 Analyze these core categories:
 
@@ -203,40 +211,50 @@ Review and check the conventions you want documented for the developer agent.
 </function_calls>
 ```
 
+#### 🔴 CRITICAL CONSTRAINTS FOR ALL AGENTS
+**These constraints are NON-NEGOTIABLE for context window optimization:**
+- MAXIMUM 100 lines per file (enforce hard limit)
+- ONLY document patterns found in actual code
+- MUST include file:line references for every pattern
+- NO explanations, NO rationale, NO philosophy
+- NO "best practices" unless explicitly coded
+- NO interpretations or recommendations
+- Format: Pattern → Example → File:Line references ONLY
+
 #### Execute ALL Specialized Agents in Parallel
-Launch all agents SIMULTANEOUSLY in a single function_calls block for maximum efficiency:
+Launch all agents SIMULTANEOUSLY with STRICT BREVITY CONSTRAINTS:
 
 ```xml
 <function_calls>
   <invoke name="Task">
     <parameter name="subagent_type">pattern-instruction-creator</parameter>
     <parameter name="description">Create pattern docs</parameter>
-    <parameter name="prompt">CREATE pattern instruction files in .pew/instructions/patterns/ for ALL patterns discovered: file organization, naming conventions, state management, service patterns, API patterns, DTO patterns, component patterns. Use examples from: [list specific files/directories analyzed]</parameter>
+    <parameter name="prompt">CREATE pattern instruction files in .pew/instructions/patterns/ for patterns found in: [specific files]. CRITICAL CONSTRAINTS: MAXIMUM 100 lines per file. ONLY document what exists with file:line references. NO explanations, NO philosophy, NO rationale. Format: Pattern name, code example, file:line locations ONLY. Files must be under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">convention-instruction-creator</parameter>
     <parameter name="description">Create convention docs</parameter>
-    <parameter name="prompt">CREATE convention instruction files in .pew/instructions/conventions/ for ALL conventions: git conventions, documentation conventions, code comments, testing conventions, file naming. Document from: [specific areas]</parameter>
+    <parameter name="prompt">CREATE convention files in .pew/instructions/conventions/. CRITICAL: MAX 100 lines. ONLY factual patterns with file:line refs. NO explanations. Format: Convention, example, locations. Under 2KB limit.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">best-practice-instruction-creator</parameter>
     <parameter name="description">Create best practice docs</parameter>
-    <parameter name="prompt">CREATE best practice files in .pew/instructions/best-practices/ for: error handling, performance optimization, security measures, testing strategies, code organization. Extract from: [exemplary code locations]</parameter>
+    <parameter name="prompt">CREATE best practice files in .pew/instructions/best-practices/. CRITICAL: MAX 100 lines. ONLY practices actually found in code with file:line refs. NO invented practices. Under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">rule-instruction-creator</parameter>
     <parameter name="description">Create rule docs</parameter>
-    <parameter name="prompt">CREATE rule files in .pew/instructions/rules/ for ALL critical rules: code quality standards, naming requirements, structure mandates, dependency injection rules. Document from: [critical components]</parameter>
+    <parameter name="prompt">CREATE rule files in .pew/instructions/rules/. CRITICAL: MAX 100 lines. ONLY rules enforced in actual code with file:line refs. NO speculation. Under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">guideline-instruction-creator</parameter>
     <parameter name="description">Create guideline docs</parameter>
-    <parameter name="prompt">CREATE guideline files in .pew/instructions/guidelines/ for: UI design approach, responsive patterns, theme usage, form management. Based on: [UI/UX components]</parameter>
+    <parameter name="prompt">CREATE guideline files in .pew/instructions/guidelines/. CRITICAL: MAX 100 lines. ONLY guidelines evident in code with file:line refs. NO philosophy. Under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">standard-instruction-creator</parameter>
     <parameter name="description">Create standard docs</parameter>
-    <parameter name="prompt">CREATE standard files in .pew/instructions/standards/ for: code quality metrics, documentation requirements, testing coverage. From: [configuration and tooling]</parameter>
+    <parameter name="prompt">CREATE standard files in .pew/instructions/standards/. CRITICAL: MAX 100 lines. ONLY standards enforced in project with file:line refs. Under 2KB.</parameter>
   </invoke>
 </function_calls>
 ```
@@ -286,34 +304,50 @@ for file in .pew/instructions/patterns/*.md; do
 done
 ```
 
-#### Content Completeness Check
+#### 🔴 CRITICAL: File Size Validation (MANDATORY)
 ```bash
-# Check that files have actual content
+# ENFORCE 2KB size limit for context window optimization
 for dir in patterns conventions best-practices rules guidelines standards; do
   for file in .pew/instructions/$dir/*.md; do
     if [[ -f "$file" ]]; then
-      # Check file size (suspicious if too small)
       size=$(wc -c < "$file")
-      if [[ $size -lt 500 ]]; then
-        echo "Suspiciously small: $file ($size bytes)"
+      lines=$(wc -l < "$file")
+      
+      # REJECT files over 2KB or 100 lines
+      if [[ $size -gt 2048 ]]; then
+        echo "ERROR: File too large (${size} bytes): $file"
+        echo "ACTION: Must regenerate with stricter constraints"
       fi
-      # Check for placeholders
-      if grep -q "\[placeholder\]" "$file"; then
-        echo "Contains placeholders: $file"
+      
+      if [[ $lines -gt 100 ]]; then
+        echo "ERROR: File too long (${lines} lines): $file"
+        echo "ACTION: Must regenerate within 100 line limit"
+      fi
+      
+      # Check for philosophy/rationale (forbidden)
+      if grep -iE "(philosophy|rationale|should|ideal|recommend|best practice)" "$file"; then
+        echo "ERROR: Contains forbidden explanatory content: $file"
+        echo "ACTION: Must regenerate with facts only"
+      fi
+      
+      # Verify file:line references exist
+      if ! grep -E "[a-zA-Z0-9_/]+\.(dart|ts|js|py|go|rs|swift):[0-9]+" "$file"; then
+        echo "ERROR: Missing file:line references: $file"
+        echo "ACTION: Must include concrete code locations"
       fi
     fi
   done
 done
 ```
 
-#### Re-execute for Missing Files
-If any files are missing, re-run SPECIFIC agents with targeted prompts:
+#### Re-execute for Failed Validation
+If files fail size/content validation, re-run with STRICTER constraints:
 
 ```xml
 <function_calls>
   <invoke name="Task">
     <parameter name="subagent_type">[specific-agent-that-failed]</parameter>
-    <parameter name="prompt">CREATE these SPECIFIC missing files: [exact list of missing files with full paths]</parameter>
+    <parameter name="prompt">RECREATE files that failed validation. CRITICAL: MAXIMUM 50 lines, under 1KB. ONLY facts with file:line refs. NO explanations. Format: pattern → example → locations.</parameter>
   </invoke>
 </function_calls>
 ```
@@ -446,16 +480,18 @@ Document what was created:
 
 ### WHEN documenting conventions
 **Best Practices:**
-- Let specialized agents handle the documentation
-- Provide agents with real project examples
-- Ensure agents CREATE files, not just analyze
-- Verify deliverables exist after execution
+- Enforce 100 line maximum per file
+- Document only what exists in code
+- Include file:line references for everything
+- Reject files over 2KB immediately
 
 **Rules:**
-- ALWAYS use the specialized instruction-creator agents
-- MUST verify agents actually created files
-- NEVER accept analysis without file creation
-- ALWAYS provide specific paths and examples to agents
+- ALWAYS enforce size limits (100 lines, 2KB)
+- MUST verify file:line references exist
+- NEVER include explanations or rationale
+- NEVER document aspirational patterns
+- ALWAYS regenerate oversized files
+- MUST flag philosophy/recommendations for removal
 
 
 ## 📊 Output Format

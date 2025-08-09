@@ -155,9 +155,9 @@ Guide the user through systematic artifact creation by:
 **Deliverable:** Complete artifact with proper wikilink architecture
 **Acceptance Criteria:** Artifact ready for immediate use
 - Structure using appropriate template:
-  - Prompts → Follow [[prompt-template]]
-  - Agents → Follow [[agent-template]]
-  - Workflows → Follow [[workflow-template]]
+  - Prompts → Follow [[prompt-template]] structure
+  - Agents → Follow [[agent-template]] structure
+  - Workflows → Follow [[workflow-template]] structure
   - Templates → Include YAML frontmatter + markdown body
   - Instructions → Include name, description, actionable content
 - Implement wikilink architecture:
@@ -165,6 +165,7 @@ Guide the user through systematic artifact creation by:
   - Embedded `![[name]]` for content (line replaced during sync)
   - CRITICAL: Embedded wikilinks MUST be on their own line
 - Write to appropriate directory with correct naming convention
+- DO NOT add "Reference" sections unless the artifact actually uses/embeds that template
 
 ### Step 7: Next Steps Generation
 **Deliverable:** Actionable suggestions for enhancement
@@ -247,10 +248,11 @@ Guide the user through systematic artifact creation by:
 
 ### WHEN creating specific artifact types
 **For Prompts:**
-- Follow [[prompt-template]] structure exactly
+- Follow [[prompt-template]] structure for organization
 - Use verb-subject naming: `create-feature.md`, `identify-actors.md`
 - Include XML structuring for complex prompts
 - Apply chain-of-thought for reasoning tasks
+- NEVER add "Reference: This prompt follows [[template]]" unless it actually embeds/uses that template
 
 **For Agents:**
 - Follow [[agent-template]] with all required sections
@@ -429,9 +431,6 @@ All examples and placeholders follow [[entity-implementation-rules]]:
 - Double curly with backticks for variables: `{{var}}`
 - Examples describe types, not actual content
 - Structure is never recreated in examples
-
-## Reference
-This prompt follows: [[prompt-template]]
 
 ## Important Philosophy Notes
 

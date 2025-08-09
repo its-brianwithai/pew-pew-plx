@@ -31,123 +31,58 @@ CREATE guideline instruction files at `.pew/instructions/guidelines/` that docum
 3. GENERATE examples showing different approaches
 4. DOCUMENT when to apply each guideline
 
-### Phase 3: Documentation Structure
-Each guideline file MUST include:
+### Phase 3: Documentation Structure (MINIMAL)
+Each guideline file MUST use this ultra-concise format:
 ```markdown
 ---
 name: [topic]-guidelines
-description: "Guidelines for [what these guidelines assist with]"
+description: "[What this documents - factual only]"
 ---
 
-# 📚bfe0f [Topic] Guidelines
-> 💡 *[One-line description of what these guidelines help achieve]*
+# [Guideline Name]
 
-## 🎯 Purpose
-[Why these guidelines exist and how they help]
-
-## 📑 Core Guidelines
-
-### 📡 Guideline: [Guideline Name]
-**Recommendation**: [Clear statement of the guideline]
-**When to Apply**: [Contexts where this is helpful]
-**Flexibility**: HIGH | MEDIUM | LOW
-
-#### Recommended Approach
+## Guideline
 ```[language]
-[Example of recommended implementation]
+[Exact code showing the guideline]
 ```
 
-#### Alternative Approaches
-##### Option A: [Name]
-```[language]
-[Alternative implementation]
-```
-**When to Use**: [Specific scenarios]
-**Trade-offs**: [Pros and cons]
+## Found In
+- path/to/file.ext:123-126
+- path/to/other.ext:567-570
+- path/to/third.ext:89-92
+[List ALL occurrences with exact line numbers]
 
-##### Option B: [Name]
-```[language]
-[Another alternative]
-```
-**When to Use**: [Different scenarios]
-**Trade-offs**: [Different pros and cons]
-
-#### Decision Factors
-- **Consider [Factor 1]**: [How it affects choice]
-- **Consider [Factor 2]**: [How it affects choice]
-- **Consider [Factor 3]**: [How it affects choice]
-
-### 📢 Guideline: [Another Guideline]
-[Same structure as above]
-
-## 🌊 Context & Adaptation
-### When Guidelines Apply
-- [Scenario 1]: [Which guidelines are most relevant]
-- [Scenario 2]: [Different guidelines for different context]
-
-### When to Deviate
-- [Situation]: [Why you might not follow guideline]
-- [Constraint]: [What might override the guideline]
-
-## 🎯 Decision Framework
-```mermaid
-graph TD
-    A[Situation] --> B{Decision Point}
-    B -->|Condition 1| C[Use Approach 1]
-    B -->|Condition 2| D[Use Approach 2]
-    B -->|Condition 3| E[Use Approach 3]
-```
-
-## 📊 Experience & Lessons
-### What Works Well
-- [Successful pattern from codebase]
-- [Another successful pattern]
-
-### Common Challenges
-- [Challenge]: [How to address]
-- [Challenge]: [How to address]
-
-## 📖 Examples from Codebase
-### Successful Implementation
-```[language]
-[Real example that follows guidelines well]
-```
-**Why This Works**: [Analysis]
-
-### Room for Improvement
-```[language]
-[Example that could benefit from guidelines]
-```
-**Suggested Improvements**: [How to apply guidelines]
-
-## 🔍 Further Resources
-- [[related-guideline-1]]
-- [[related-guideline-2]]
-- [[relevant-best-practice]]
+## Usage
+[One line: where/when this guideline appears]
 ```
 
 ## ⭐ Best Practices
 
-- **CREATE files immediately** - Document guidelines as you find them
-- **Provide options** - Guidelines are flexible, show alternatives
-- **Explain trade-offs** - Help readers make informed decisions
-- **Use real examples** - Show guidelines applied in actual code
-- **Document context** - When guidelines apply and when they don't
+- **ENFORCE brevity** - Maximum 100 lines, under 2KB
+- **Facts only** - Document guidelines EVIDENT, not recommended
+- **Line references required** - Every guideline needs file:line proof
+- **No philosophy** - Zero explanations, trade-offs, or recommendations
+- **Verify size** - Check file size before saving
 
 ## 📏 Rules
 
 ### 👍 Always
+- ALWAYS enforce 100 line maximum
+- ALWAYS verify file size under 2KB
+- ALWAYS include file:line references for every guideline
+- ALWAYS document ONLY guidelines evident in actual code
+- ALWAYS use facts without interpretation
 - ALWAYS CREATE the file at `.pew/instructions/guidelines/`
-- ALWAYS provide multiple approach options
-- ALWAYS explain when to apply guidelines
-- ALWAYS use the provided template structure
 - ALWAYS name files with `-guidelines.md` suffix
 
 ### 👎 Never
-- NEVER present guidelines as absolute rules
-- NEVER omit alternative approaches
-- NEVER ignore context and trade-offs
-- NEVER just analyze without creating files
+- NEVER exceed 100 lines or 2KB
+- NEVER add explanations, trade-offs, or recommendations
+- NEVER document aspirational or suggested guidelines
+- NEVER include philosophy or "should" statements
+- NEVER speculate on guidelines not evident in code
+- NEVER create files outside the guidelines directory
+- NEVER leave placeholders
 
 ## 🔍 Relevant Context
 
