@@ -59,7 +59,6 @@ Analyze the entire codebase to discover and document all conventions by:
 - Discovery checklist in `.pew/drafts/convention-discovery-checklist.md`
 - Individual instruction files in `.pew/instructions/` subfolders
 - Complete documentation of all discovered conventions
-- Ready for developer agent creation via [[create-project-developer]]
 
 ### Acceptance Criteria
 - [ ] All major convention categories are discovered
@@ -175,13 +174,160 @@ Review and check the conventions you want documented for the developer agent.
 [Continue for all categories...]
 ```
 
-### Step 4: Document Approved Conventions
-**Deliverable:** Structured instruction files in `.pew/instructions/` with proper categorization
+### Step 4: Parallel Agent Execution for Documentation Creation
+**Deliverable:** All instruction files created simultaneously by specialized agents
 **Acceptance Criteria:** Each checked convention has detailed documentation in the correct subfolder
 
-Create instruction files in `.pew/instructions/` organized by instruction type:
+#### 📐 CRITICAL: Parallel Execution Pattern
+**This pattern enables TRUE parallel execution of multiple agents:**
+- Multiple independent tasks that don't depend on each other
+- Each task assigned to a specialized agent
+- Results aggregated after completion
+- Time-sensitive operations benefit from parallelization
 
-**Directory Structure:**
+**Implementation Structure:**
+```xml
+<!-- ALL agents MUST be in a SINGLE function_calls block for parallel execution -->
+<function_calls>
+  <invoke name="Task">
+    <parameter name="subagent_type">agent-type-1</parameter>
+    <parameter name="description">Brief description</parameter>
+    <parameter name="prompt">Detailed CREATE prompt</parameter>
+  </invoke>
+  <invoke name="Task">
+    <parameter name="subagent_type">agent-type-2</parameter>
+    <parameter name="description">Brief description</parameter>
+    <parameter name="prompt">Detailed CREATE prompt</parameter>
+  </invoke>
+  <!-- Continue for ALL agents in ONE block -->
+</function_calls>
+```
+
+#### Execute ALL Specialized Agents in Parallel
+Launch all agents SIMULTANEOUSLY in a single function_calls block for maximum efficiency:
+
+```xml
+<function_calls>
+  <invoke name="Task">
+    <parameter name="subagent_type">pattern-instruction-creator</parameter>
+    <parameter name="description">Create pattern docs</parameter>
+    <parameter name="prompt">CREATE pattern instruction files in .pew/instructions/patterns/ for ALL patterns discovered: file organization, naming conventions, state management, service patterns, API patterns, DTO patterns, component patterns. Use examples from: [list specific files/directories analyzed]</parameter>
+  </invoke>
+  <invoke name="Task">
+    <parameter name="subagent_type">convention-instruction-creator</parameter>
+    <parameter name="description">Create convention docs</parameter>
+    <parameter name="prompt">CREATE convention instruction files in .pew/instructions/conventions/ for ALL conventions: git conventions, documentation conventions, code comments, testing conventions, file naming. Document from: [specific areas]</parameter>
+  </invoke>
+  <invoke name="Task">
+    <parameter name="subagent_type">best-practice-instruction-creator</parameter>
+    <parameter name="description">Create best practice docs</parameter>
+    <parameter name="prompt">CREATE best practice files in .pew/instructions/best-practices/ for: error handling, performance optimization, security measures, testing strategies, code organization. Extract from: [exemplary code locations]</parameter>
+  </invoke>
+  <invoke name="Task">
+    <parameter name="subagent_type">rule-instruction-creator</parameter>
+    <parameter name="description">Create rule docs</parameter>
+    <parameter name="prompt">CREATE rule files in .pew/instructions/rules/ for ALL critical rules: code quality standards, naming requirements, structure mandates, dependency injection rules. Document from: [critical components]</parameter>
+  </invoke>
+  <invoke name="Task">
+    <parameter name="subagent_type">guideline-instruction-creator</parameter>
+    <parameter name="description">Create guideline docs</parameter>
+    <parameter name="prompt">CREATE guideline files in .pew/instructions/guidelines/ for: UI design approach, responsive patterns, theme usage, form management. Based on: [UI/UX components]</parameter>
+  </invoke>
+  <invoke name="Task">
+    <parameter name="subagent_type">standard-instruction-creator</parameter>
+    <parameter name="description">Create standard docs</parameter>
+    <parameter name="prompt">CREATE standard files in .pew/instructions/standards/ for: code quality metrics, documentation requirements, testing coverage. From: [configuration and tooling]</parameter>
+  </invoke>
+</function_calls>
+```
+
+**⚠️ CRITICAL RULES for Parallel Execution:**
+- ALWAYS use a single `function_calls` block for parallel execution
+- ALWAYS ensure agents are truly independent (no dependencies)
+- ALWAYS provide complete prompts (agents can't communicate)
+- ALWAYS verify results after parallel execution completes
+- NEVER chain dependent agents in parallel
+- NEVER use multiple separate function_calls for parallel work
+- NEVER assume all agents will succeed
+- NEVER skip verification of parallel results
+
+#### 🔄 Agent Verification Loop Pattern
+**Ensure agent deliverables are ACTUALLY created:**
+
+This pattern ensures agents don't just analyze but actually CREATE their deliverables through verification and retry loops.
+
+**Verification Flow:**
+```
+1. Execute agents (parallel)
+2. Verify deliverables exist
+3. Check deliverable quality
+4. Identify gaps
+5. Re-execute for missing items
+6. Repeat until complete or max retries
+```
+
+#### Verification After Parallel Execution
+After agents complete, VERIFY all files were created:
+
+```bash
+# Check each directory for created files
+ls -la .pew/instructions/patterns/
+ls -la .pew/instructions/conventions/
+ls -la .pew/instructions/best-practices/
+ls -la .pew/instructions/rules/
+ls -la .pew/instructions/guidelines/
+ls -la .pew/instructions/standards/
+
+# For each directory, verify files exist and have content
+for file in .pew/instructions/patterns/*.md; do
+  if [[ ! -s "$file" ]]; then
+    echo "Empty or missing: $file"
+  fi
+done
+```
+
+#### Content Completeness Check
+```bash
+# Check that files have actual content
+for dir in patterns conventions best-practices rules guidelines standards; do
+  for file in .pew/instructions/$dir/*.md; do
+    if [[ -f "$file" ]]; then
+      # Check file size (suspicious if too small)
+      size=$(wc -c < "$file")
+      if [[ $size -lt 500 ]]; then
+        echo "Suspiciously small: $file ($size bytes)"
+      fi
+      # Check for placeholders
+      if grep -q "\[placeholder\]" "$file"; then
+        echo "Contains placeholders: $file"
+      fi
+    fi
+  done
+done
+```
+
+#### Re-execute for Missing Files
+If any files are missing, re-run SPECIFIC agents with targeted prompts:
+
+```xml
+<function_calls>
+  <invoke name="Task">
+    <parameter name="subagent_type">[specific-agent-that-failed]</parameter>
+    <parameter name="prompt">CREATE these SPECIFIC missing files: [exact list of missing files with full paths]</parameter>
+  </invoke>
+</function_calls>
+```
+
+**⚠️ CRITICAL RULES for Verification:**
+- ALWAYS verify after agent execution
+- ALWAYS check both existence and content quality
+- ALWAYS be specific in retry prompts
+- ALWAYS set a maximum retry limit (3 attempts)
+- NEVER assume agents completed work without checking
+- NEVER skip verification for "simple" tasks
+- NEVER accept partial deliverables without documentation
+
+**Expected Directory Structure After Completion:**
 ```
 .pew/instructions/
 ├── patterns/
@@ -221,49 +367,40 @@ Create instruction files in `.pew/instructions/` organized by instruction type:
     └── testing-standards.md
 ```
 
-Each instruction file should follow this structure:
+**Note:** Each specialized agent has its own template structure - they will CREATE files with the appropriate format automatically.
+
+### Step 5: Final Validation & Integration
+**Deliverable:** Complete set of verified instruction files
+**Acceptance Criteria:** All conventions documented and cross-linked
+
+#### Content Validation
+For each created file:
+- Verify file has actual content (not empty)
+- Check includes real examples from codebase
+- Validate all required sections are complete
+- Ensure no placeholder text remains
+
+#### Cross-Linking
+- Add wikilinks between related instructions
+- Create index files if needed
+- Ensure navigation between related concepts
+
+#### Final Report
+Document what was created:
 ```markdown
----
-name: [convention-name]
-description: "[What this convention covers]"
----
+## Instruction Files Created
+- Patterns: [count] files
+- Conventions: [count] files  
+- Best Practices: [count] files
+- Rules: [count] files
+- Guidelines: [count] files
+- Standards: [count] files
 
-# [Convention Title]
-
-## Overview
-[Brief description of the convention and its purpose]
-
-## Rules
-- ALWAYS [required practice]
-- NEVER [prohibited practice]
-- MUST [critical requirement]
-
-## Patterns
-[Detailed explanation with examples from the actual project]
-
-## Examples
-### ✅ Correct Implementation
-```[language]
-[Actual example from project]
+## Coverage Report
+- [✓] All discovered patterns documented
+- [✓] Critical rules captured
+- [✓] Best practices extracted
 ```
-
-### ❌ Incorrect Implementation
-```[language]
-[Counter-example]
-```
-
-## Rationale
-[Why this convention exists and its benefits]
-```
-
-### Step 5: Validation & Testing
-**Deliverable:** Verified instruction files ready for use
-**Acceptance Criteria:** All conventions properly documented
-- Verify all instruction files created with proper naming
-- Check convention coverage is complete
-- Validate examples are from actual project
-- Test that file paths follow the pattern: `{type}/{name}-{type}.md`
-- Ensure all discovered patterns are documented
 
 ## 📏 Instructions
 > 💡 *Event-driven best practices, conventions, constraints and rules.*
@@ -294,18 +431,31 @@ description: "[What this convention covers]"
 - MUST organize hierarchically by category
 - NEVER include speculative patterns
 
-### WHEN documenting conventions
+### WHEN executing parallel agents
 **Best Practices:**
-- Use actual project examples
-- Explain the "why" behind conventions
-- Provide both correct and incorrect examples
-- Link related conventions together
+- Launch ALL agents in a SINGLE function_calls block
+- Provide complete context to each agent
+- Include specific file paths and examples
+- Make prompts action-oriented (CREATE, WRITE, GENERATE)
 
 **Rules:**
-- ALWAYS use real code from the project
-- MUST include rationale for each convention
-- NEVER document unused patterns
-- ALWAYS specify exceptions clearly
+- ALWAYS use parallel execution for multiple agents
+- ALWAYS verify file creation after execution
+- MUST re-run agents if files are missing
+- NEVER assume agents completed without checking
+
+### WHEN documenting conventions
+**Best Practices:**
+- Let specialized agents handle the documentation
+- Provide agents with real project examples
+- Ensure agents CREATE files, not just analyze
+- Verify deliverables exist after execution
+
+**Rules:**
+- ALWAYS use the specialized instruction-creator agents
+- MUST verify agents actually created files
+- NEVER accept analysis without file creation
+- ALWAYS provide specific paths and examples to agents
 
 
 ## 📊 Output Format
@@ -366,6 +516,53 @@ The prompt automatically adapts to:
 ## Key Success Factors
 - Thorough initial analysis
 - User involvement in selection
+- **PARALLEL AGENT EXECUTION** - All 6 agents run simultaneously
+- **VERIFICATION LOOPS** - Ensure files are actually created
+- **ACTION-ORIENTED PROMPTS** - Agents must CREATE, not analyze
 - Real examples from codebase
 - Clear documentation structure
-- Comprehensive agent creation
+
+## Specialized Agents Used
+This prompt orchestrates these specialized agents in parallel:
+- `pattern-instruction-creator` - Creates pattern documentation
+- `convention-instruction-creator` - Creates convention documentation
+- `best-practice-instruction-creator` - Creates best practice guides
+- `rule-instruction-creator` - Creates rule documentation
+- `guideline-instruction-creator` - Creates guideline documentation
+- `standard-instruction-creator` - Creates standard specifications
+
+## Parallel Execution Pattern
+The workflow uses true parallel execution:
+1. ALL agents launch in ONE function_calls block
+2. Agents work simultaneously, not sequentially
+3. Verification happens AFTER all agents complete
+4. Re-execution targets only missing deliverables
+
+## Complete Orchestration Flow
+```mermaid
+graph TD
+    A[Orchestrator] -->|Parallel Launch| B[Pattern Creator]
+    A -->|Parallel Launch| C[Convention Creator]
+    A -->|Parallel Launch| D[Best Practice Creator]
+    A -->|Parallel Launch| E[Rule Creator]
+    A -->|Parallel Launch| F[Guideline Creator]
+    A -->|Parallel Launch| G[Standard Creator]
+    
+    B -->|Creates| H[Pattern Files]
+    C -->|Creates| I[Convention Files]
+    D -->|Creates| J[Best Practice Files]
+    E -->|Creates| K[Rule Files]
+    F -->|Creates| L[Guideline Files]
+    G -->|Creates| M[Standard Files]
+    
+    H --> N[Verification]
+    I --> N
+    J --> N
+    K --> N
+    L --> N
+    M --> N
+    
+    N -->|Gaps Found| O[Re-execute Specific Agents]
+    O -->|Retry| A
+    N -->|Complete| P[Integration]
+```
