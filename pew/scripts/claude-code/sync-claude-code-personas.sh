@@ -6,10 +6,10 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    PERSONAS_DIR="$CLAUDE_SYNC_TEMP_DIR/.pew/personas"
+    PERSONAS_DIR="$CLAUDE_SYNC_TEMP_DIR/pew/personas"
     CLAUDE_COMMANDS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/act"
 else
-    PERSONAS_DIR="$PROJECT_ROOT/.pew/personas"
+    PERSONAS_DIR="$PROJECT_ROOT/pew/personas"
     CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands/act"
 fi
 
@@ -44,7 +44,7 @@ for persona_file in $(find "$PERSONAS_DIR" -name "*.md" -type f ! -name "README*
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/.pew/templates/blocks/persona-command-block.md");
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/pew/templates/blocks/persona-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 
@@ -56,7 +56,7 @@ for persona_file in $(find "$PERSONAS_DIR" -name "*.md" -type f ! -name "README*
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/.pew/templates/blocks/persona-command-block.md"
+                cat "$PROJECT_ROOT/pew/templates/blocks/persona-command-block.md"
                 echo ""
                 cat "$persona_file"
             } > "$temp_file"

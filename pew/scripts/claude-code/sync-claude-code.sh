@@ -26,18 +26,18 @@ fi
 
 echo "🔄 Starting Claude Code synchronization..."
 
-# Create temp sync directory and copy .pew content
+# Create temp sync directory and copy pew content
 echo "📁 Creating temporary sync directory..."
 rm -rf "$TEMP_DIR"
 mkdir -p "$TEMP_DIR"
 
-# Copy entire .pew folder to temp directory for safe processing
-if [ -d "$PROJECT_ROOT/.pew" ]; then
-    echo "📂 Copying .pew to temporary sync folder..."
-    cp -r "$PROJECT_ROOT/.pew" "$TEMP_DIR/.pew"
+# Copy entire pew folder to temp directory for safe processing
+if [ -d "$PROJECT_ROOT/pew" ]; then
+    echo "📂 Copying pew to temporary sync folder..."
+    cp -r "$PROJECT_ROOT/pew" "$TEMP_DIR/pew"
 else
-    echo "⚠️  No .pew directory found, creating empty structure..."
-    mkdir -p "$TEMP_DIR/.pew"
+    echo "⚠️  No pew directory found, creating empty structure..."
+    mkdir -p "$TEMP_DIR/pew"
 fi
 
 # Create Claude structure in temp

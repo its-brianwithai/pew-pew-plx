@@ -6,13 +6,13 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/.pew/modes"
+    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/pew/modes"
     OUTPUT_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/activate"
-    BLOCKS_DIR="$CLAUDE_SYNC_TEMP_DIR/.pew/templates/blocks"
+    BLOCKS_DIR="$CLAUDE_SYNC_TEMP_DIR/pew/templates/blocks"
 else
-    SOURCE_DIR="$PROJECT_ROOT/.pew/modes"
+    SOURCE_DIR="$PROJECT_ROOT/pew/modes"
     OUTPUT_DIR="$PROJECT_ROOT/.claude/commands/activate"
-    BLOCKS_DIR="$PROJECT_ROOT/.pew/templates/blocks"
+    BLOCKS_DIR="$PROJECT_ROOT/pew/templates/blocks"
 fi
 
 echo "🎮 Syncing modes..."
