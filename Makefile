@@ -5,10 +5,10 @@ sync:
 ifeq ($(word 2,$(MAKECMDGOALS)),claude)
 ifeq ($(word 3,$(MAKECMDGOALS)),clean)
 	@echo "Syncing Claude Code with clean..."
-	@./pew/scripts/claude-code/sync-claude-code.sh --clean
+	@./scripts/claude-code/sync-claude-code.sh --clean
 else
 	@echo "Syncing Claude Code..."
-	@./pew/scripts/claude-code/sync-claude-code.sh
+	@./scripts/claude-code/sync-claude-code.sh
 endif
 else
 	@echo "Usage: make sync claude [clean]"
@@ -49,21 +49,11 @@ ifneq ($(word 2,$(MAKECMDGOALS)),)
 	fi; \
 	echo "📁 Updating project files..."; \
 	cd "$$extracted_dir" && \
-	if [ -d pew ] && [ ! -d .pew ]; then \
-		echo "📂 Converting pew to .pew..."; \
-		if [ -d ../.pew ]; then \
-			echo "📁 Merging with existing .pew folder..."; \
-			cp -R pew/* ../.pew/ 2>/dev/null || true; \
-			cp -R pew/.[^.]* ../.pew/ 2>/dev/null || true; \
-		else \
-			cp -R pew ../.pew; \
-		fi; \
-		rm -rf pew; \
-	fi; \
 	if [ -f .plxignore ]; then \
-		rsync -av --exclude-from=.plxignore --exclude=pew . ../ ; \
+		rsync -av --exclude-from=.plxignore . ../ ; \
 	else \
-		find . -maxdepth 1 ! -name pew ! -name . -exec cp -R {} ../ \; ; \
+		cp -R * ../ ; \
+		cp -R .[^.]* ../ 2>/dev/null || true ; \
 	fi; \
 	cd ..; \
 	echo "🧹 Cleaning up..."; \
@@ -84,8 +74,8 @@ endif
 # Watch for changes and auto-sync
 watch:
 ifeq ($(word 2,$(MAKECMDGOALS)),claude)
-	@echo "👀 Watching for changes in .pew/agents/ and .pew/prompts/ directories..."
-	@./pew/scripts/claude-code/watch-claude-code.sh
+	@echo "👀 Watching for changes in agents/ and prompts/ directories..."
+	@./scripts/claude-code/watch-claude-code.sh
 else
 	@echo "Usage: make watch claude"
 endif

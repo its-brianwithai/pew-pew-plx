@@ -4,7 +4,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
-TEMP_DIR="$PROJECT_ROOT/.pew-temp-sync"
+TEMP_DIR="$PROJECT_ROOT/tmp/pew/"
 
 # Cleanup function
 cleanup() {

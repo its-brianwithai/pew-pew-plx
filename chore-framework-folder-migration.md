@@ -12,9 +12,9 @@ Migrate framework from hidden `.pew` folder to public `pew` folder while maintai
 1. **Repository** should use public `pew` folder for framework source components
 2. **System** should pull `pew` folder content into local `.pew` folder during `plx init` or `plx pull {branch}`
 3. **System** should merge framework `pew` content with existing local `.pew` content (overwriting framework files)
-4. **System** should create `.pew-temp-sync` folder for safe WikiLink processing
-5. **System** should process all WikiLinks in `.pew-temp-sync` folder before Claude sync
-6. **System** should move processed content from `.pew-temp-sync` to `.claude` folders after sync completion
+4. **System** should create `tmp/pew/` folder for safe WikiLink processing
+5. **System** should process all WikiLinks in `tmp/pew/` folder before Claude sync
+6. **System** should move processed content from `tmp/pew/` to `.claude` folders after sync completion
 7. **System** should continue syncing to hidden `.claude` directory for Claude Code compatibility
 8. **System** should automatically create missing directories during sync operations
 9. **User** should be able to run `plx init` with new workflow
@@ -38,17 +38,17 @@ Migrate framework from hidden `.pew` folder to public `pew` folder while maintai
    - Data: existing .pew content, merged file tree
 4. **User** → executes → plx sync claude
    - Data: sync command, optional flags
-5. **System** → copies → .pew content to .pew-temp-sync
+5. **System** → copies → .pew content to tmp/pew/
    - Data: all .pew files, temporary working directory
 6. **System** → checks → source directories existence
    - Data: directory paths, existence status
 7. **System** → creates → missing directories if needed
    - Data: directory paths, creation status
-8. **System** → processes → WikiLinks in .pew-temp-sync
+8. **System** → processes → WikiLinks in tmp/pew/
    - Data: markdown files, resolved link paths
 9. **System** → moves → processed content to .claude directory
    - Data: processed files, target paths
-10. **System** → cleans → .pew-temp-sync folder
+10. **System** → cleans → tmp/pew/ folder
     - Data: temporary files removal
 11. **System** → reports → sync completion status
     - Data: success/error messages, synced component counts
@@ -67,7 +67,7 @@ sequenceDiagram
     S->>FS: Merge to .pew
     
     U->>S: plx sync claude
-    S->>FS: Copy .pew to .pew-temp-sync
+    S->>FS: Copy .pew to tmp/pew/
     S->>FS: Check directories
     alt Directory missing
         S->>FS: Create directory
@@ -89,7 +89,7 @@ sequenceDiagram
 - **Merge**: pew content into local .pew folder
 
 ### Event 2: Temporary sync folder creation
-- **Create**: .pew-temp-sync directory
+- **Create**: tmp/pew/ directory
 - **Copy**: Full .pew content to temp folder
 - **Update**: Working directory references
 
@@ -99,7 +99,7 @@ sequenceDiagram
 - **Delete**: None
 
 ### Event 4: WikiLink processing
-- **Update**: All markdown files in .pew-temp-sync
+- **Update**: All markdown files in tmp/pew/
 - **Resolve**: WikiLink paths to absolute references
 - **Validate**: Link target existence
 
@@ -110,9 +110,9 @@ sequenceDiagram
 - **Update**: Makefile target paths
 
 ### Event 6: Final sync operations
-- **Move**: Processed content from .pew-temp-sync to .claude
+- **Move**: Processed content from tmp/pew/ to .claude
 - **Create**: .claude directory structure (hidden)
-- **Delete**: .pew-temp-sync folder after successful move
+- **Delete**: tmp/pew/ folder after successful move
 
 ### Component Connection Diagram
 ```mermaid
@@ -120,7 +120,7 @@ graph LR
     E1[plx init/pull] --> C1[repo pew]
     C1 --> C2[local .pew]
     E2[plx sync] --> C2
-    C2 --> C3[.pew-temp-sync]
+    C2 --> C3[tmp/pew/]
     E3[WikiLink process] --> C3
     C3 --> C4[.claude folder]
     E4[directory check] --> C3
@@ -135,9 +135,9 @@ graph LR
 - [ ] Repository maintains public pew folder with framework components
 - [ ] plx init/pull successfully fetches pew content from repository
 - [ ] Framework pew content merges correctly into local .pew folder
-- [ ] .pew-temp-sync folder creation succeeds before sync
+- [ ] tmp/pew/ folder creation succeeds before sync
 - [ ] WikiLinks process correctly in temp folder without affecting originals
-- [ ] plx sync claude successfully moves from .pew-temp-sync to .claude
+- [ ] plx sync claude successfully moves from tmp/pew/ to .claude
 - [ ] Missing directories are automatically created during sync
 - [ ] All existing plx commands work with new workflow
 - [ ] Temp folder cleanup happens after successful sync
@@ -157,8 +157,8 @@ graph LR
 - [ ] Framework source in repository's public pew folder
 - [ ] User working files in local hidden .pew folder
 - [ ] Claude Code components in hidden .claude folder
-- [ ] Temp sync operations in .pew-temp-sync folder
-- [ ] Clear separation between source (repo pew), working (.pew), temp (.pew-temp-sync), and target (.claude)
+- [ ] Temp sync operations in tmp/pew/ folder
+- [ ] Clear separation between source (repo pew), working (.pew), temp (tmp/pew/), and target (.claude)
 - [ ] Backward compatibility during transition period
 - [ ] Consistent path handling across all scripts
 - [ ] WikiLink processing isolated to temp folder
@@ -171,4 +171,4 @@ graph LR
 - [ ] Mixed usage of pew and .pew in same installation for same purpose
 - [ ] Hardcoded paths that can't adapt to workflow
 - [ ] User confusion about which folder to edit (always edit .pew locally)
-- [ ] Leftover .pew-temp-sync folders after sync completion
+- [ ] Leftover tmp/pew/ folders after sync completion

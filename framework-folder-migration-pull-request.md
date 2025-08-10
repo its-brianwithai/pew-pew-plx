@@ -9,7 +9,7 @@
 | [`lib/init.js`](lib/init.js) | Modified | Updated to handle `pew` → `.pew` conversion and merging |
 | [`Makefile`](Makefile) | Modified | Updated paths and pull logic for new structure |
 | [`chore-framework-folder-migration.md`](chore-framework-folder-migration.md) | Added | Issue documentation for the migration |
-| [`.pew/scripts/claude-code/sync-claude-code.sh`](.pew/scripts/claude-code/sync-claude-code.sh) | Modified | Main sync script using `.pew-temp-sync` folder |
+| [`.pew/scripts/claude-code/sync-claude-code.sh`](.pew/scripts/claude-code/sync-claude-code.sh) | Modified | Main sync script using `tmp/pew/` folder |
 | [`.pew/scripts/claude-code/sync-claude-code-agents.sh`](.pew/scripts/claude-code/sync-claude-code-agents.sh) | Modified | Updated to use temp directory and auto-create |
 | [`.pew/scripts/claude-code/sync-claude-code-personas.sh`](.pew/scripts/claude-code/sync-claude-code-personas.sh) | Modified | Updated to use temp directory and auto-create |
 | [`.pew/scripts/claude-code/sync-claude-code-prompts.sh`](.pew/scripts/claude-code/sync-claude-code-prompts.sh) | Modified | Updated to use temp directory and auto-create |
@@ -29,7 +29,7 @@ This implementation migrates the Pew Pew PLX framework from using a hidden `.pew
 The key architectural change is the introduction of a three-stage folder system:
 1. **Repository**: `pew/` (public, framework source)
 2. **User Local**: `.pew/` (hidden, user's working directory) 
-3. **Processing**: `.pew-temp-sync/` (temporary, for safe WikiLink processing)
+3. **Processing**: `tmp/pew//` (temporary, for safe WikiLink processing)
 4. **Claude Code**: `.claude/` (hidden, final synced destination)
 
 This ensures that:
@@ -113,7 +113,7 @@ This approach was chosen because:
 ### Sync Script System (`.pew/scripts/claude-code/`)
 
 #### What Changed
-All sync scripts were updated to use a temporary `.pew-temp-sync` folder for processing and to auto-create missing directories instead of failing.
+All sync scripts were updated to use a temporary `tmp/pew/` folder for processing and to auto-create missing directories instead of failing.
 
 #### Code Examples
 ```bash
@@ -121,7 +121,7 @@ All sync scripts were updated to use a temporary `.pew-temp-sync` folder for pro
 TEMP_DIR="/tmp/claude-sync-$$"
 
 # After
-TEMP_DIR="$PROJECT_ROOT/.pew-temp-sync"
+TEMP_DIR="$PROJECT_ROOT/tmp/pew/"
 
 # Copy entire .pew folder to temp directory for safe processing
 if [ -d "$PROJECT_ROOT/.pew" ]; then
@@ -244,7 +244,7 @@ graph TD
     
     subgraph "User Project"
         B[.pew/ - Hidden Working Dir]
-        C[.pew-temp-sync/ - Temp Processing]
+        C[tmp/pew// - Temp Processing]
         D[.claude/ - Claude Code]
     end
     
@@ -266,7 +266,7 @@ pew/               .pew/           (working directory)
     
                    ↓ plx sync claude
                    
-                   .pew-temp-sync/ (temporary)
+                   tmp/pew// (temporary)
                    └── .pew/       (copy for processing)
                    
                    ↓ Process WikiLinks
@@ -287,7 +287,7 @@ pew/               .pew/           (working directory)
 
 ### Sync Processing Model
 - **Previous Behaviour:** WikiLinks processed directly in `.pew` folder
-- **New Behaviour:** WikiLinks processed in isolated `.pew-temp-sync` folder
+- **New Behaviour:** WikiLinks processed in isolated `tmp/pew/` folder
 - **Impact:** No risk of corrupting original files during sync
 - **Example:** Failed sync no longer leaves `.pew` folder in inconsistent state
 
@@ -359,7 +359,7 @@ pew/               .pew/           (working directory)
    - Verify: `grep "test-reference" .pew/test.md`
 2. Run `plx sync claude`
    - Expected: Temp folder created and cleaned
-   - Verify: During sync, `.pew-temp-sync/` exists
+   - Verify: During sync, `tmp/pew//` exists
 3. Check original file unchanged
    - Expected: Original `.pew/test.md` still has WikiLink
    - Verify: `grep "\[\[test-reference\]\]" .pew/test.md`
