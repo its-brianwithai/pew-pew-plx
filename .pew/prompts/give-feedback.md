@@ -15,7 +15,7 @@ Follow these steps:
    - What worked well and what could be improved
    - Any specific suggestions they have
 
-2. **Create Feedback Document**: Use the [[feedback-template]] to create a comprehensive feedback document in the `feedback/` directory with the filename pattern: `feedback-[component-type]-[component-name]-[YYYYMMDD].md`
+2. **Create Feedback Document**: Use the [[feedback-template]] to create a comprehensive feedback document following [[issue-creation-conventions]]. If the feedback relates to an existing issue, save it in that issue's folder. Otherwise, save it in the appropriate subject's backlog folder with the filename pattern: `feedback-[component-type]-[component-name]-[YYYYMMDD].md`
 
 3. **Determine Meta Agent**: Based on the component type, identify which meta agent should process this feedback:
    - Agents → [[meta-sub-agent-architect]]
@@ -37,7 +37,7 @@ The PLX framework is continuously evolving based on user feedback. Each componen
 </context>
 
 <output_format>
-1. Create a feedback document using [[feedback-template]] in `feedback/` directory
+1. Create a feedback document using [[feedback-template]] following [[issue-creation-conventions]]
 2. Confirm the feedback has been captured with a brief summary
 3. Continue with the conversation, applying any immediate learnings from the feedback
 </output_format>

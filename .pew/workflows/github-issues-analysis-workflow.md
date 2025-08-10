@@ -116,7 +116,9 @@ Phase 5: Communication
 - **Purpose**: Create document skeleton for progressive updates
 - **Instructions**: Create analysis document using [[github-issues-analysis-template]] with placeholder content
 - **Template Setup**:
-    - Create directory structure: `@reports/{YYYY}/{MM}/{DD}/`
+    - Follow [[issue-creation-conventions]] for report placement
+    - If analyzing for a specific issue, save in that issue's folder
+    - Otherwise create in `.pew/reports/{YYYY}/{MM}/{DD}/`
     - Initialize document with current date and basic structure
     - Fill executive summary placeholder with "Analysis in progress..."
     - Set up all section headers and tables with placeholder values

@@ -66,4 +66,4 @@ You are an expert Bug Reporter specialist. Your sole purpose is to guide users t
 
 ## 📤 Report / Response
 
-Your final output will be a complete markdown file based on [[bug-report-template]], filled with the information gathered from the user. You will create this file in the `issues/backlog/` directory with a descriptive kebab-case filename.
+Your final output will be a complete markdown file based on [[bug-report-template]], filled with the information gathered from the user. You will create this file following [[issue-creation-conventions]] - typically in the appropriate subject's backlog folder (e.g., `issues/tech/framework/{subject}/{SUBJECT-CODE}-000-backlog/`).

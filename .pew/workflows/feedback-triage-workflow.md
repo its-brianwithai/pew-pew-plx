@@ -127,7 +127,9 @@ Phase 5: Final Documentation
 - **Instructions**: Create document using [[feedback-report-template]] structure
 - **Agent**: Human operator
 - **Inputs**: Current date, triage session scope
-- **Outputs**: Initial tracking document at `reports/{YYYY}/{MM}/{DD}/feedback-triage-report.md`
+- **Outputs**: Initial tracking document following [[issue-creation-conventions]]
+  - If related to specific issue: save in issue folder as `{SUBJECT-CODE}-feedback-triage.md`
+  - Otherwise: `.pew/reports/{YYYY}/{MM}/{DD}/feedback-triage-report.md`
 - **Success Criteria**: Document created with proper structure and ready for updates
 - **Template Sections**:
   - Summary (to be updated)

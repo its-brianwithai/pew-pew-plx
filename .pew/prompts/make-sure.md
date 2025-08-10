@@ -89,7 +89,9 @@ Investigate the entire project to verify pattern/convention conformance, then se
 - Identify all directories requiring investigation
 - Catalog file types and their distributions
 - Map component relationships and dependencies
-- Save structure analysis to `.pew/reports/conformance-structure-{{timestamp}}.md`
+- Save structure analysis following [[issue-creation-conventions]]
+- If related to a specific issue, save in that issue's folder as `{SUBJECT-CODE}-conformance-structure.md`
+- Otherwise save to `.pew/reports/conformance-structure-{{timestamp}}.md`
 
 ### Step 3: Design Investigation Strategy
 **Deliverable:** Systematic research plan with parallel execution paths
@@ -103,7 +105,9 @@ Investigate the entire project to verify pattern/convention conformance, then se
 ### Step 4: Initialize Investigation Reports
 **Deliverable:** Report structure for comprehensive findings
 **Acceptance Criteria:** Reports ready for parallel investigation data
-- Create `.pew/reports/conformance-investigation-{{timestamp}}.md`
+- Create investigation report following [[issue-creation-conventions]]
+- If related to a specific issue, save as `{SUBJECT-CODE}-conformance-investigation.md` in issue folder
+- Otherwise create `.pew/reports/conformance-investigation-{{timestamp}}.md`
 - Add sections for conforming instances
 - Add sections for violation instances
 - Include investigation methodology documentation
@@ -278,7 +282,9 @@ Investigate the entire project to verify pattern/convention conformance, then se
 > 💡 *How to structure and deliver the output.*
 
 ### Format Type
-Markdown reports in `.pew/reports/` directory
+Markdown reports following [[issue-creation-conventions]]:
+- Issue-related reports: Save in the issue's folder
+- General reports: Save in `.pew/reports/` directory
 
 ### Structure Template
 ```markdown
@@ -348,7 +354,9 @@ Markdown reports in `.pew/reports/` directory
 ```
 
 ### Delivery Instructions
-- Save all reports to `.pew/reports/` directory
+- Follow [[issue-creation-conventions]] for report placement
+- Issue-related reports go in the issue folder
+- General project-wide reports go to `.pew/reports/` directory
 - Create separate investigation and correction reports
 - Include all evidence and reasoning
 - Ensure reports are auditable and complete

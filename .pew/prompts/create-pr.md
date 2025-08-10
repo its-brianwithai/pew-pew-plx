@@ -92,10 +92,10 @@ Before creating the PR, verify:
      - `git log {{target_branch}}..HEAD --format=fuller` for detailed commit info
    
    - **Create comprehensive PR report:**
-     - Identify the issue folder in `issues/[concept]/[issue-folder]/`
+     - Follow [[issue-creation-conventions]] to locate the correct issue folder
      - Create PR report using [[pull-request-template]] 
-     - Save as: `[issue-folder-name]-pull-request.md`
-     - Example: For issue folder `000-WFL-plan-workflow`, save as `000-WFL-plan-workflow-pull-request.md`
+     - Save in the SAME folder as the issue: `{SUBJECT-CODE}-{document-type}.md`
+     - Example: For issue `ESS-001-set-up-template`, save as `ESS-001-pull-request.md` in the same folder
      - When documenting file changes, use wikilinks for referencing: [[agent-name]] not `agents/agent-name.md`
    
    - **MANDATORY content for the report:**
