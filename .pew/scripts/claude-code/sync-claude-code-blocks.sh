@@ -3,7 +3,14 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
-BLOCKS_DIR="$PROJECT_ROOT/.pew/templates/blocks"
+
+# Use temp directory if available, otherwise use project directory
+if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
+    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/.pew/blocks"
+else
+    SOURCE_DIR="$PROJECT_ROOT/.pew/blocks"
+fi
+# Removed old path
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -12,19 +19,19 @@ else
     CLAUDE_COMMANDS_USE_DIR="$PROJECT_ROOT/.claude/commands/add"
 fi
 
-if [ ! -d "$BLOCKS_DIR" ]; then
-    echo "❌ Error: Blocks directory not found at $BLOCKS_DIR"
-    exit 1
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating blocks directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
 fi
 
 echo "🧱 Creating Claude block commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_USE_DIR"
 
-echo "🧱 Processing blocks from $BLOCKS_DIR to $CLAUDE_COMMANDS_USE_DIR..."
+echo "🧱 Processing blocks from $SOURCE_DIR to $CLAUDE_COMMANDS_USE_DIR..."
 
 # Process each block file (excluding command blocks)
 block_count=0
-for block_file in $(find "$BLOCKS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" ! -name "*command-block*"); do
+for block_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" ! -name "*command-block*"); do
     if [ -f "$block_file" ]; then
         # Keep the original filename
         basename=$(basename "$block_file")
