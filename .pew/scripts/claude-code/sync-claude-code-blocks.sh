@@ -7,9 +7,9 @@ BLOCKS_DIR="$PROJECT_ROOT/.pew/templates/blocks"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    CLAUDE_COMMANDS_USE_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/use"
+    CLAUDE_COMMANDS_USE_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/add"
 else
-    CLAUDE_COMMANDS_USE_DIR="$PROJECT_ROOT/.claude/commands/use"
+    CLAUDE_COMMANDS_USE_DIR="$PROJECT_ROOT/.claude/commands/add"
 fi
 
 if [ ! -d "$BLOCKS_DIR" ]; then
