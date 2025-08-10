@@ -292,12 +292,19 @@ Markdown following [[issue-template]] structure
 
 ### Delivery Instructions
 **CRITICAL: CREATE THE ACTUAL FILE - DO NOT PRESENT IN CHAT**
-- **ACTION**: Use the Write tool to save the completed issue as `[issue-type]-[feature-name].md`
-- **LOCATION**: Save in the appropriate directory:
-  - Active issues: `issues/active/`
-  - Backlog issues: `issues/backlog/`
-  - Done issues: `issues/done/`
-- **VERIFICATION**: After creating the file, confirm file creation with path
+- **ACTION**: Use the Write tool to save the completed issue following the proper naming convention
+- **STRUCTURE**: `issues/{department}/{team}/{subject}/{SUBJECT-CODE}-{PRIORITY-NUMBER}-{descriptive-ticket-name}/{SUBJECT-CODE}-{ticket-type}.md`
+- **EXAMPLE**: `issues/tech/app/essentials/ESS-001-set-up-template/ESS-001-issue.md`
+- **COMPONENTS**:
+  - **department**: tech, business, design, etc.
+  - **team**: app, framework, backend, frontend, etc.
+  - **subject**: Feature area (e.g., essentials, authentication, payments)
+  - **SUBJECT-CODE**: 3-letter uppercase code (e.g., ESS, AUTH, PAY)
+  - **PRIORITY-NUMBER**: 3-digit number (001, 002, etc.) or 000 for backlog
+  - **descriptive-ticket-name**: Kebab-case description
+  - **ticket-type**: issue, story, bug, pull-request, etc.
+- **BACKLOG**: Use `{SUBJECT-CODE}-000-backlog/` for unrefined items
+- **VERIFICATION**: After creating the file, confirm file creation with full path
 - Ensure all sections are complete
 - Verify examples are replaced with actual content
 - Check mermaid syntax is valid
