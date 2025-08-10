@@ -47,7 +47,7 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
 
 ### Deliverables
 - Complete tree structure analysis
-- Parallel investigation reports in `.pew/reports/`
+- Parallel investigation reports in `reports/`
 - Consolidated master report of all changes
 - Updated files with all references changed
 - Verification report confirming no broken references
@@ -75,7 +75,7 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
 **Deliverable:** Complete project structure map
 **Acceptance Criteria:** All directories and files are catalogued
 - Run `tree -I 'node_modules|.git|build|dist|coverage' -a` to get full structure
-- Save tree output to `.pew/reports/project-tree-{{timestamp}}.txt`
+- Save tree output to `reports/project-tree-{{timestamp}}.txt`
 - Identify all directories that need investigation
 - Group directories into logical chunks for parallel processing
 
@@ -90,7 +90,7 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
 ### Step 4: Initialize Investigation Report
 **Deliverable:** Shared report file for all sub-agents
 **Acceptance Criteria:** Report structure ready for parallel updates
-- Create `.pew/reports/update-everywhere-{{timestamp}}.md`
+- Create `reports/update-everywhere-{{timestamp}}.md`
 - Add sections for each parallel investigation area
 - Include placeholders for findings from each sub-agent
 - Set up change tracking structure
@@ -107,7 +107,7 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
   - Write findings to assigned section in shared report
   - Follow [[create-report]] methodology for documentation
   ```
-- Each sub-agent works on their section of `.pew/reports/update-everywhere-{{timestamp}}.md`
+- Each sub-agent works on their section of `reports/update-everywhere-{{timestamp}}.md`
 - Monitor progress of all parallel tasks
 
 ### Step 6: Consolidate and Review Findings
@@ -145,7 +145,7 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
 - List any issues encountered and how they were resolved
 - Provide before/after examples
 - Include verification results
-- Save as `.pew/reports/update-everywhere-final-{{timestamp}}.md`
+- Save as `reports/update-everywhere-final-{{timestamp}}.md`
 
 ## 📏 Instructions
 > 💡 *Event-driven best practices, conventions, constraints and rules.*
@@ -219,7 +219,7 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
 > 💡 *How to structure and deliver the output.*
 
 ### Format Type
-Markdown reports in `.pew/reports/` directory
+Markdown reports in `reports/` directory
 
 ### Structure Template
 ```markdown
@@ -276,7 +276,7 @@ Markdown reports in `.pew/reports/` directory
 ```
 
 ### Delivery Instructions
-- Save all reports to `.pew/reports/` directory
+- Save all reports to `reports/` directory
 - Use timestamp in filenames for versioning
 - Create both investigation and final reports
 - Ensure reports are self-contained and complete

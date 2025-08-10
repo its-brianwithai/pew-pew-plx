@@ -161,8 +161,8 @@ Identify and extract:
 - Any component used multiple places
 
 Create separate files and replace with wikilinks:
-- Standard: `[[component-name]]` for references
-- Embedded: `![[component-name]]` for inclusion
+- Standard: `[[component-name-example-wiki-link]]` for references
+- Embedded: `![[component-name-example-wiki-link]]` for inclusion
 
 ### Step 6: Integration Testing
 **Deliverable:** Validated updated artifact

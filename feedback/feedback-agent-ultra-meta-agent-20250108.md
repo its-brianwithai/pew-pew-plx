@@ -6,7 +6,7 @@
 
 **Component Type:** Agent
 **Component Name:** ultra-meta-agent
-**File Path:** `.pew/agents/meta/ultra-meta-agent.md`
+**File Path:** `agents/meta/ultra-meta-agent.md`
 **Version/Last Modified:** January 2025
 
 ## 📊 Context & Usage
@@ -68,7 +68,7 @@ More text here.
 ```
 
 ### Reference Implementation
-- Component: All existing prompts in `.pew/prompts/`
+- Component: All existing prompts in `prompts/`
 - Relevant Pattern: They correctly use embedded wikilinks on separate lines
 
 ## 🚀 Priority & Impact Assessment

@@ -1,7 +1,7 @@
 ---
 name: roadmap-template
 description: Use this template when in Phase 4 of the plan workflow to create a project roadmap that organizes deliverables into milestones and create user stories with effort estimates.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path.
 ---
 # 🗺️ Roadmap: [Project Name]
 > 💡 *Project roadmap that organizes deliverables into releasable milestones and detailed user stories. This document provides the complete implementation timeline and effort breakdown.*

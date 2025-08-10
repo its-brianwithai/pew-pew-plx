@@ -1,7 +1,7 @@
 ---
 name: refinement-template
 description: Use this template when in Phase 3 of the plan workflow to define exact properties, behaviours, and architecture of all components that need to be created or updated.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path.
 ---
 # 🔧 Refinement & Architecture: [Project Name]
 > 💡 *Detailed refinement phase that defines exact properties, behaviours, and system architecture. This document provides the technical blueprint for implementation.*
@@ -17,7 +17,7 @@ instructions: Make sure that when you implement this template, you don't include
 
 ```
 <example>
-### [[component-name]]
+### [[component-name-example-wiki-link]]
 
 #### Properties
 **Identity Properties**

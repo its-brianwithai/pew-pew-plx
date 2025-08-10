@@ -49,19 +49,19 @@ Methodical, thorough, and focused on completeness
 
 Create a comprehensive developer agent by:
 1. Verifying all project instructions are documented
-2. Scanning `.pew/instructions/` for all instruction files
+2. Scanning `instructions/` for all instruction files
 3. Following the [[create-anything]] workflow
 4. Building agent with embedded instruction wikilinks
 5. Validating agent completeness
 
 ### Deliverables
-- Complete developer agent in `.pew/agents/developer.md`
+- Complete developer agent in `agents/developer.md`
 - All instruction files properly referenced via wikilinks
 - Agent following [[agent-template]] structure
 - Validation report of included instructions
 
 ### Acceptance Criteria
-- [ ] All instruction files in `.pew/instructions/` are discovered
+- [ ] All instruction files in `instructions/` are discovered
 - [ ] Agent includes all instructions via embedded wikilinks
 - [ ] Proper subfolder paths used in wikilinks
 - [ ] Agent structure follows template requirements
@@ -84,7 +84,7 @@ If instructions haven't been created yet, run the above workflow first.
 **Deliverable:** Complete list of all instruction files
 **Acceptance Criteria:** Every instruction file identified with correct path
 
-Scan `.pew/instructions/` directory structure:
+Scan `instructions/` directory structure:
 - List all files in each subfolder:
     - `patterns/*.md`
     - `conventions/*.md`
@@ -117,7 +117,7 @@ Follow [[create-anything]] workflow:
 **Deliverable:** Complete developer agent file
 **Acceptance Criteria:** Agent properly structured with all wikilinks
 
-Create `.pew/agents/developer.md`:
+Create `agents/developer.md`:
 
 ```markdown
 ---
@@ -168,37 +168,37 @@ All project conventions, patterns, and standards are embedded below. These instr
 
 [IMPORTANT: Insert discovered instruction files here with embedded wikilinks]
 <!-- Each instruction file should be on its own line -->
-<!-- Format: ![[filename]] (no path needed) -->
+<!-- Format: ![[filename-example-wiki-link]] (no path needed) -->
 <!-- Example structure shown below - replace with actual discovered files -->
 
 #### Patterns
-![[file-organization-patterns]]
-![[naming-convention-patterns]]
+![[file-organization-patterns-example-wiki-link]]
+![[naming-convention-patterns-example-wiki-link]]
 [Continue with all discovered pattern files...]
 
 #### Conventions
-![[git-conventions]]
-![[documentation-conventions]]
+![[git-conventions-example-wiki-link]]
+![[documentation-conventions-example-wiki-link]]
 [Continue with all discovered convention files...]
 
 #### Best Practices
-![[error-handling-best-practices]]
-![[performance-best-practices]]
+![[error-handling-best-practices-example-wiki-link]]
+![[performance-best-practices-example-wiki-link]]
 [Continue with all discovered best-practice files...]
 
 #### Rules
-![[critical-code-rules]]
-![[quality-standard-rules]]
+![[critical-code-rules-example-wiki-link]]
+![[quality-standard-rules-example-wiki-link]]
 [Continue with all discovered rule files...]
 
 #### Guidelines
-![[ui-design-guidelines]]
-![[responsive-design-guidelines]]
+![[ui-design-guidelines-example-wiki-link]]
+![[responsive-design-guidelines-example-wiki-link]]
 [Continue with all discovered guideline files...]
 
 #### Standards
-![[code-quality-standards]]
-![[documentation-standards]]
+![[code-quality-standards-example-wiki-link]]
+![[documentation-standards-example-wiki-link]]
 [Continue with all discovered standard files...]
 
 ## 📊 Quality Standards
@@ -243,7 +243,7 @@ Validate the agent:
 
 **Rules:**
 - MUST have completed [[create-project-instructions]] first
-- MUST verify `.pew/instructions/` directory exists
+- MUST verify `instructions/` directory exists
 - NEVER proceed without instruction files
 
 ### WHEN discovering instructions
@@ -300,7 +300,7 @@ Markdown file with YAML frontmatter
 8. **Report/Response**: Output format
 
 ### Delivery Instructions
-- Save as `.pew/agents/developer.md`
+- Save as `agents/developer.md`
 - Ensure all wikilinks use proper paths
 - Include every instruction file found
 - Organize by instruction type
@@ -325,9 +325,9 @@ The agent references instructions organized by type:
 ## Wikilink Format
 All instruction files are embedded using the format:
 ```
-![[name-type]]
+![[name-type-example-wiki-link]]
 ```
-Example: `![[naming-convention-patterns]]`
+Example: `![[naming-convention-patterns-example-wiki-link]]`
 Note: Wikilinks use filename only, not the path
 
 ## Agent Invocation

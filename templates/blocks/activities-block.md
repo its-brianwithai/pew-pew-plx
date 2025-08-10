@@ -5,7 +5,7 @@
 
 ```
 <example>
-- [[actor-name]] or [[component-name]]
+- [[actor-name]] or [[component-name-example-wiki-link]]
     - Activity 1 for this Actor/Component
     - Activity 2 for this Actor/Component
 - [[another-actor-name]]

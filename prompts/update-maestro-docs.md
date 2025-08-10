@@ -27,8 +27,8 @@ Review our existing Maestro documentation files:
 - [[maestro-test-expert]] - Main testing agent
 
 **Draft/Collection Files:**
-- `.pew/drafts/maestro-relevant-docs.md` - Scraped documentation
-- `.pew/context/collections/all-maestro-commands.md` - Command compilation
+- `drafts/maestro-relevant-docs.md` - Scraped documentation
+- `context/collections/all-maestro-commands.md` - Command compilation
 
 ### 3. Identify Changes
 

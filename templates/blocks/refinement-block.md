@@ -5,7 +5,7 @@
 
 ```
 <example>
-### [[component-name]]
+### [[component-name-example-wiki-link]]
 
 #### Properties
 - [Identity properties: unique identifiers, names]

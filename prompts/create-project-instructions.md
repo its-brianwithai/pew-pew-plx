@@ -59,8 +59,8 @@ Analyze the entire codebase to discover and document all conventions by:
 **CRITICAL: Steps 1-3 MUST be done by YOU, not delegated to agents!**
 
 ### Deliverables
-- Discovery checklist in `.pew/drafts/convention-discovery-checklist.md`
-- Individual instruction files in `.pew/instructions/` subfolders
+- Discovery checklist in `drafts/convention-discovery-checklist.md`
+- Individual instruction files in `instructions/` subfolders
 - Complete documentation of all discovered conventions
 
 ### Acceptance Criteria
@@ -186,7 +186,7 @@ Analyze these core categories:
 **Deliverable:** User-reviewable checklist of all discovered conventions
 **Acceptance Criteria:** Clear, organized checklist ready for user review
 
-Create `.pew/drafts/convention-discovery-checklist.md`:
+Create `drafts/convention-discovery-checklist.md`:
 ```markdown
 # 📋 Convention Discovery Checklist
 
@@ -256,32 +256,32 @@ Launch all agents SIMULTANEOUSLY with STRICT BREVITY CONSTRAINTS:
   <invoke name="Task">
     <parameter name="subagent_type">pattern-instruction-creator</parameter>
     <parameter name="description">Create pattern docs</parameter>
-    <parameter name="prompt">CREATE pattern instruction files in .pew/instructions/patterns/ for patterns found in: [specific files]. CRITICAL CONSTRAINTS: MAXIMUM 100 lines per file. ONLY document what exists with file:line references. NO explanations, NO philosophy, NO rationale. Format: Pattern name, code example, file:line locations ONLY. Files must be under 2KB.</parameter>
+    <parameter name="prompt">CREATE pattern instruction files in instructions/patterns/ for patterns found in: [specific files]. CRITICAL CONSTRAINTS: MAXIMUM 100 lines per file. ONLY document what exists with file:line references. NO explanations, NO philosophy, NO rationale. Format: Pattern name, code example, file:line locations ONLY. Files must be under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">convention-instruction-creator</parameter>
     <parameter name="description">Create convention docs</parameter>
-    <parameter name="prompt">CREATE convention files in .pew/instructions/conventions/. CRITICAL: MAX 100 lines. ONLY factual patterns with file:line refs. NO explanations. Format: Convention, example, locations. Under 2KB limit.</parameter>
+    <parameter name="prompt">CREATE convention files in instructions/conventions/. CRITICAL: MAX 100 lines. ONLY factual patterns with file:line refs. NO explanations. Format: Convention, example, locations. Under 2KB limit.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">best-practice-instruction-creator</parameter>
     <parameter name="description">Create best practice docs</parameter>
-    <parameter name="prompt">CREATE best practice files in .pew/instructions/best-practices/. CRITICAL: MAX 100 lines. ONLY practices actually found in code with file:line refs. NO invented practices. Under 2KB.</parameter>
+    <parameter name="prompt">CREATE best practice files in instructions/best-practices/. CRITICAL: MAX 100 lines. ONLY practices actually found in code with file:line refs. NO invented practices. Under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">rule-instruction-creator</parameter>
     <parameter name="description">Create rule docs</parameter>
-    <parameter name="prompt">CREATE rule files in .pew/instructions/rules/. CRITICAL: MAX 100 lines. ONLY rules enforced in actual code with file:line refs. NO speculation. Under 2KB.</parameter>
+    <parameter name="prompt">CREATE rule files in instructions/rules/. CRITICAL: MAX 100 lines. ONLY rules enforced in actual code with file:line refs. NO speculation. Under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">guideline-instruction-creator</parameter>
     <parameter name="description">Create guideline docs</parameter>
-    <parameter name="prompt">CREATE guideline files in .pew/instructions/guidelines/. CRITICAL: MAX 100 lines. ONLY guidelines evident in code with file:line refs. NO philosophy. Under 2KB.</parameter>
+    <parameter name="prompt">CREATE guideline files in instructions/guidelines/. CRITICAL: MAX 100 lines. ONLY guidelines evident in code with file:line refs. NO philosophy. Under 2KB.</parameter>
   </invoke>
   <invoke name="Task">
     <parameter name="subagent_type">standard-instruction-creator</parameter>
     <parameter name="description">Create standard docs</parameter>
-    <parameter name="prompt">CREATE standard files in .pew/instructions/standards/. CRITICAL: MAX 100 lines. ONLY standards enforced in project with file:line refs. Under 2KB.</parameter>
+    <parameter name="prompt">CREATE standard files in instructions/standards/. CRITICAL: MAX 100 lines. ONLY standards enforced in project with file:line refs. Under 2KB.</parameter>
   </invoke>
 </function_calls>
 ```
@@ -316,15 +316,15 @@ After agents complete, VERIFY all files were created:
 
 ```bash
 # Check each directory for created files
-ls -la .pew/instructions/patterns/
-ls -la .pew/instructions/conventions/
-ls -la .pew/instructions/best-practices/
-ls -la .pew/instructions/rules/
-ls -la .pew/instructions/guidelines/
-ls -la .pew/instructions/standards/
+ls -la instructions/patterns/
+ls -la instructions/conventions/
+ls -la instructions/best-practices/
+ls -la instructions/rules/
+ls -la instructions/guidelines/
+ls -la instructions/standards/
 
 # For each directory, verify files exist and have content
-for file in .pew/instructions/patterns/*.md; do
+for file in instructions/patterns/*.md; do
   if [[ ! -s "$file" ]]; then
     echo "Empty or missing: $file"
   fi
@@ -335,7 +335,7 @@ done
 ```bash
 # ENFORCE 2KB size limit for context window optimization
 for dir in patterns conventions best-practices rules guidelines standards; do
-  for file in .pew/instructions/$dir/*.md; do
+  for file in instructions/$dir/*.md; do
     if [[ -f "$file" ]]; then
       size=$(wc -c < "$file")
       lines=$(wc -l < "$file")
@@ -390,7 +390,7 @@ If files fail size/content validation, re-run with STRICTER constraints:
 
 **Expected Directory Structure After Completion:**
 ```
-.pew/instructions/
+instructions/
 ├── patterns/
 │   ├── file-organization-patterns.md
 │   ├── naming-convention-patterns.md
@@ -531,12 +531,12 @@ Document what was created:
 Markdown files with YAML frontmatter
 
 ### Structure Template
-1. **Discovery Checklist** (`.pew/drafts/convention-discovery-checklist.md`)
-2. **Instruction Files** (`.pew/instructions/[type]/[name]-[type].md`)
+1. **Discovery Checklist** (`drafts/convention-discovery-checklist.md`)
+2. **Instruction Files** (`instructions/[type]/[name]-[type].md`)
    - File naming: `{specific-name}-{instruction-type}.md`
    - Organized by type: `patterns/`, `conventions/`, `best-practices/`, `rules/`, `guidelines/`, `standards/`
    - Examples: `naming-convention-patterns.md`, `error-handling-best-practices.md`, `git-conventions.md`
-3. **Developer Agent** (`.pew/agents/developer.md`)
+3. **Developer Agent** (`agents/developer.md`)
    - References all instruction files via wikilinks with type subfolder paths
 
 ### Delivery Instructions

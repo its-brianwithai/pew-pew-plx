@@ -6,13 +6,13 @@
 
 **Component Type:** Prompt
 **Component Name:** create-issue
-**File Path:** `.pew/prompts/create-issue.md`
+**File Path:** `prompts/create-issue.md`
 **Version/Last Modified:** Current version as of 2025-01-07
 
 ## 📊 Context & Usage
 > 💡 *Describe how you were using this component when you identified areas for improvement.*
 
-**Use Case:** Creating an issue for implementing a configuration system (`.pew/config.yaml`)
+**Use Case:** Creating an issue for implementing a configuration system (`config.yaml`)
 **Interaction Type:** Direct usage via `/plx:create:issue` command
 **Related Components:** Issue workflow template, issue creation instructions
 

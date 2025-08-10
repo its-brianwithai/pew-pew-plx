@@ -2,13 +2,13 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/pew/instructions"
+    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/instructions"
 else
-    SOURCE_DIR="$PROJECT_ROOT/pew/instructions"
+    SOURCE_DIR="$PROJECT_ROOT/instructions"
 fi
 # Removed old path
 
@@ -47,7 +47,7 @@ for instruction_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "READM
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/pew/templates/blocks/instruction-command-block.md");
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/templates/blocks/instruction-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 
@@ -59,7 +59,7 @@ for instruction_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "READM
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/pew/templates/blocks/instruction-command-block.md"
+                cat "$PROJECT_ROOT/templates/blocks/instruction-command-block.md"
                 echo ""
                 cat "$instruction_file"
             } > "$temp_file"

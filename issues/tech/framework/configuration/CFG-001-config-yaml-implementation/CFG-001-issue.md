@@ -1,12 +1,12 @@
 # 🎯 Issue: Configuration System Implementation
 > 💡 *Complete issue documentation following the 5-step process*
 
-Implement a centralized configuration system using `.pew/config.yaml` to manage framework component locations, sync targets, and cleanup operations.
+Implement a centralized configuration system using `config.yaml` to manage framework component locations, sync targets, and cleanup operations.
 
 ## 📋 Initial Requirement
 > 💡 *What the system or user should be able to do or be*
 
-- System should read configuration from `.pew/config.yaml`
+- System should read configuration from `config.yaml`
 - System should use config to determine where to save pulled framework components
 - System should use config to determine sync target directories
 - System should use config to specify directories to delete before/after sync operations
@@ -25,7 +25,7 @@ sequenceDiagram
     participant SS as Sync Scripts
     
     U->>CLI: plx sync claude
-    CLI->>CF: Read .pew/config.yaml
+    CLI->>CF: Read config.yaml
     CF->>CLI: Return config values
     CLI->>SS: Execute sync with config
     SS->>CF: Get delete_before_sync_targets
@@ -71,7 +71,7 @@ flowchart LR
 ```mermaid
 graph TB
     subgraph Config[Configuration Components]
-        C1[.pew/config.yaml]
+        C1[config.yaml]
         C2[Config Parser]
         C3[Default Values]
     end
@@ -96,18 +96,18 @@ graph TB
 
 ### Config File Structure
 ```yaml
-# .pew/config.yaml
+# config.yaml
 core_targets:
-  agents: .pew/agents
-  context: .pew/context
-  drafts: .pew/drafts
-  instructions: .pew/instructions
-  output-formats: .pew/output-formats
-  personas: .pew/personas
-  prompts: .pew/prompts
-  scripts: .pew/scripts
-  templates: .pew/templates
-  workflows: .pew/workflows
+  agents: agents
+  context: context
+  drafts: drafts
+  instructions: instructions
+  output-formats: output-formats
+  personas: personas
+  prompts: prompts
+  scripts: scripts
+  templates: templates
+  workflows: workflows
   issues: issues
 
 delete_before_sync_targets:
@@ -137,7 +137,7 @@ sync_targets:
 ```
 
 ### Implementation Tasks
-- [ ] Create `.pew/config.yaml` with default values
+- [ ] Create `config.yaml` with default values
 - [ ] Update sync scripts to read config
 - [ ] Implement config parser in shell scripts
 - [ ] Update Makefile to remove 'clean' flag

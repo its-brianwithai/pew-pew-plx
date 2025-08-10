@@ -11,7 +11,7 @@ Update an existing issue by refining it through the issue workflow phases.
 
 ## Issue Workflow
 
-![[issue-workflow]]
+![[issue-workflow-example-wiki-link]]
 
 ## Process
 

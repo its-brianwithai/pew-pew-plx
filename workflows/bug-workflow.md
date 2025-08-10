@@ -1,7 +1,7 @@
 ---
 name: bug-workflow
 description: "A systematic workflow for reporting, triaging, planning, and verifying software bugs to ensure efficient and effective resolution."
-instructions: "Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path."
+instructions: "Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path."
 ---
 # 🌊 Bug Workflow: From Report to Resolution
 > 💡 *A systematic 4-phase workflow for managing the entire lifecycle of a software bug, from initial discovery to verified fix.*

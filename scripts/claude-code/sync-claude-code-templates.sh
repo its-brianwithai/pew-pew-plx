@@ -2,13 +2,13 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/pew/templates"
+    SOURCE_DIR="$PROJECT_ROOT/templates"
 else
-    SOURCE_DIR="$PROJECT_ROOT/pew/templates"
+    SOURCE_DIR="$PROJECT_ROOT/templates"
 fi
 # Removed old path
 
@@ -48,7 +48,7 @@ while IFS= read -r -d '' template_file; do
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/pew/templates/blocks/template-command-block.md");
+                    system("cat " ENVIRON["PROJECT_ROOT"] "/templates/blocks/template-command-block.md");
                     print "";
                     print "````````````";
                     in_frontmatter = 0; 
@@ -62,7 +62,7 @@ while IFS= read -r -d '' template_file; do
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/pew/templates/blocks/template-command-block.md"
+                cat "$PROJECT_ROOT/templates/blocks/template-command-block.md"
                 echo ""
                 echo "\`\`\`\`\`\`\`\`\`\`"
                 cat "$template_file"

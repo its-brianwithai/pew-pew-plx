@@ -1,7 +1,7 @@
 ---
 name: work-log-template
 description: Use this template to log the work completed for a ticket or story, providing a comprehensive overview of all changes made.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path.
 ---
 # 📋 Work Log: [Title of Task/Story]
 > 💡 *This report details the implementation of the work described in a specific ticket or story. It provides a comprehensive overview of all changes, the reasoning behind them, and a guide for verification, giving any stakeholder a complete understanding of the work done.*

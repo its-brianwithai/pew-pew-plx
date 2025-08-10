@@ -151,10 +151,10 @@ Every section and subsection is **optional** and should only exist if it directl
 
 ## WikiLink Embedding
 Sections can be extracted and embedded as reusable components:
-- `![[persona-name]]` - Embed a reusable persona
-- `![[workflow-name]]` - Embed a standard workflow
-- `![[instructions-name]]` - Embed common instructions
-- `![[output-format-name]]` - Embed standard output format
+- `![[persona-name-example-wiki-link]]` - Embed a reusable persona
+- `![[workflow-name-example-wiki-link]]` - Embed a standard workflow
+- `![[instructions-name-example-wiki-link]]` - Embed common instructions
+- `![[output-format-name-example-wiki-link]]` - Embed standard output format
 
 **Important:** WikiLinks must be on their own line - the entire line gets replaced during sync.
 
@@ -185,7 +185,7 @@ Create comprehensive unit tests covering all authentication functions
 Create production-ready Flutter widget tests with 100% coverage
 
 ## 👤 Persona
-![[flutter-test-engineer-persona]]
+![[flutter-test-engineer-persona-example-wiki-link]]
 
 ## 📋 Request
 Design and implement widget tests for the shopping cart feature
@@ -196,7 +196,7 @@ Design and implement widget tests for the shopping cart feature
 - Performance metrics
 
 ## 🔄 Workflow
-![[widget-testing-workflow]]
+![[widget-testing-workflow-example-wiki-link]]
 
 ## 📏 Instructions
 ### WHEN writing test code
@@ -221,7 +221,7 @@ Design and implement widget tests for the shopping cart feature
 - Set appropriate timeouts
 
 ## 📊 Output Format
-![[flutter-test-output-format]]
+![[flutter-test-output-format-example-wiki-link]]
 ```
 
 ## Quality Checklist

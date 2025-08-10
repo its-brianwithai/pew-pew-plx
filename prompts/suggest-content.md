@@ -68,7 +68,7 @@ Generate comprehensive content drafts across ALL major platforms by:
 4. Posting schedule recommendations per platform
 5. Engagement strategy notes
 6. Cross-promotion plan
-7. Comprehensive review document in `.pew/drafts/`
+7. Comprehensive review document in `drafts/`
 
 ### Acceptance Criteria
 - [ ] Content avoids all AI-sounding phrases and patterns
@@ -251,7 +251,7 @@ Generate comprehensive content drafts across ALL major platforms by:
 ### Step 5: Comprehensive Review Document
 **Deliverable:** Structured markdown document
 **Process:**
-1. Create file: `.pew/drafts/content-{{date}}.md`
+1. Create file: `drafts/content-{{date}}.md`
 2. Use comprehensive structure:
 
 ```markdown
@@ -556,7 +556,7 @@ YouTube | Thumbnail | 1280x720px | [ ]
 > 💡 *Structure for the comprehensive review document*
 
 ### Review Document Format
-- **Location:** `.pew/drafts/content-{{timestamp}}.md`
+- **Location:** `drafts/content-{{timestamp}}.md`
 - **Structure:** Platform sections with checkboxes for selection
 - **Metadata:** Character counts, timing, visual requirements
 - **Updates:** Maintain version history within document

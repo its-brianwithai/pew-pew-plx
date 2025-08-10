@@ -37,7 +37,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
    - For Prompts: existing `prompts/` patterns
    - For Agents: [[claude-code-sub-agent-docs]], [[agent-template]], existing `agents/`
    - For Templates: `blocks/` directory for patterns, [[agent-template]], existing `templates/`
-   - For Workflows: [[workflow-template]], [[refinement-workflow]], [[issue-workflow]] existing `workflows/`
+   - For Workflows: [[workflow-template]], [[refinement-workflow]], [[issue-workflow-example-wiki-link]] existing `workflows/`
 
 4. **Apply Type-Specific Expertise:**
 
@@ -124,12 +124,12 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - Provide comprehensive summaries with actionable insights and pro tips
 
 **Critical Wikilink Processing Knowledge:**
-- **Regular wikilinks** `[[filename]]` → Converted to `@full/path` references during sync
-- **Embedded wikilinks** `![[filename]]` → Entire line replaced with file content during sync
+- **Regular wikilinks** `[[filename-example-wiki-link]]` → Converted to `@full/path` references during sync
+- **Embedded wikilinks** `![[filename-example-wiki-link]]` → Entire line replaced with file content during sync
 - **IMPORTANT:** Embedded wikilinks MUST be on their own line - the entire line gets replaced
 - During `plx sync claude`:
-  - `sync-claude-code-wikilinks.sh` converts `[[name]]` to `@path` for file references
-  - `sync-claude-code-embedded-wikilinks.sh` replaces `![[name]]` lines with actual content
+  - `sync-claude-code-wikilinks.sh` converts `[[name-example-wiki-link]]` to `@path` for file references
+  - `sync-claude-code-embedded-wikilinks.sh` replaces `![[name-example-wiki-link]]` lines with actual content
 - Never use embedded wikilinks inline with other text - they won't process correctly
 
 ## 📏 Rules
@@ -148,7 +148,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - WHEN validating ALWAYS check against project conventions
 - WHEN documenting ALWAYS explain rationale and usage
 - WHEN analyzing requirements ALWAYS suggest improvements first before implementing
-- WHEN using embedded wikilinks ALWAYS place `![[filename]]` on its own line
+- WHEN using embedded wikilinks ALWAYS place `![[filename-example-wiki-link]]` on its own line
 - WHEN creating templates/prompts ALWAYS remember embedded wikilinks replace the entire line
 
 ### 👎 Never
@@ -177,7 +177,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - [[agent-template]] - (Relevance: Standard structure for agents and reference for templates)
 - [[workflow-template]] - (Relevance: Workflow structure and orchestration patterns)
 - [[entity-implementation-rules]] - (Relevance: Placeholder and instruction formatting)
-- [[issue-workflow]] - (Relevance: Example of sophisticated workflow design)
+- [[issue-workflow-example-wiki-link]] - (Relevance: Example of sophisticated workflow design)
 - `blocks/` directory - (Relevance: Reusable patterns for templates)
 - `prompts/` directory - (Relevance: Existing prompt patterns and structures)
 - `agents/` directory - (Relevance: Current agent implementations)

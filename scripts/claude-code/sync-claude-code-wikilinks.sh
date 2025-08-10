@@ -2,7 +2,7 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -27,7 +27,7 @@ echo "📊 Found $total_files files to process"
 # Function to search for file in project directories
 find_in_project() {
     local filename="$1"
-    local search_dirs=("pew/templates/blocks" "pew/prompts" "pew/agents" "pew/instructions" "pew/templates" "pew/context" "docs" "pew/workflows" "pew/personas" "pew/output-formats" "pew/modes")
+    local search_dirs=("templates/blocks" "prompts" "agents" "instructions" "templates" "context" "docs" "workflows" "personas" "output-formats" "modes")
 
     for dir in "${search_dirs[@]}"; do
         if [ -d "$PROJECT_ROOT/$dir" ]; then
@@ -74,6 +74,11 @@ find "$CLAUDE_DIR" -name "*.md" -type f | while read -r file; do
             # Extract filename from wikilink
             filename=$(echo "$wikilink" | sed 's/\[\[\(.*\)\]\]/\1/')
             base_filename="${filename%.md}"
+            
+            # Skip example WikiLinks
+            if [[ "$base_filename" == *"-example-wiki-link" ]]; then
+                continue
+            fi
 
             # Find the actual location
             replacement=""

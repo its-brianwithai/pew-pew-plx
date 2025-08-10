@@ -1,7 +1,7 @@
 ---
 name: story-template
 description: Use this template to document a user story, addressing a user's need with clear acceptance criteria, technical details, and implementation path.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path.
 ---
 # 📒 Story: [Title]
 > 💡 *A user story for a feature or capability, addressing a specific user's need to accomplish a goal. It structures requirements from the user's perspective with clear acceptance criteria and technical details.*
@@ -145,7 +145,7 @@ When 100% of the tests pass, we should be able to guarantee that:
 - **Related Issues:** [[issue-123]], [[issue-456]] that should be considered
 - **Dependencies:** [[backend-api]] must be deployed before this can go live
 - **Out of Scope:** [[feature-name]] will be addressed in a future iteration
-- **Caution:** Changes to [[component-name]] may affect [[dependent-system]]
+- **Caution:** Changes to [[component-name-example-wiki-link]] may affect [[dependent-system]]
 - **Notes:** [Any additional context, warnings, or information]
 - **Follow-up:** After deployment, monitor [[metric-name]] for performance impact
 - **Known Limitations:** [Document any known issues or constraints]

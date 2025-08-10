@@ -1,7 +1,7 @@
 ---
 name: implementation-plan-template
 description: Use this template when in Phase 5 of the plan workflow to create detailed implementation plans with acceptance criteria, CRUD operations, and step-by-step action plans for each user story.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path.
 ---
 # 🛠️ Implementation Plan: [Project Name]
 > 💡 *Detailed implementation planning that provides developers with clear, actionable steps for each user story. This document ensures consistent and complete implementation.*

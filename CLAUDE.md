@@ -29,56 +29,56 @@ plx init
 node bin/plx.js sync claude
 
 # Test specific sync scripts
-./.pew/scripts/claude-code/sync-claude-code-agents.sh
-./.pew/scripts/claude-code/sync-claude-code-prompts.sh
+./scripts/claude-code/sync-claude-code-agents.sh
+./scripts/claude-code/sync-claude-code-prompts.sh
 ```
 
 ## Architecture Overview
 
 ### Component Types and Sync Behaviour
 
-1. **Agents** (`.pew/agents/`) → Synced as both:
+1. **Agents** (`agents/`) → Synced as both:
    - Sub-agents in `.claude/agents/` (for automatic delegation)
    - Commands in `.claude/commands/act/` (for manual invocation via `/act:`)
 
-2. **Personas** (`.pew/personas/`) → Synced to `.claude/commands/act/`
+2. **Personas** (`personas/`) → Synced to `.claude/commands/act/`
    - Available as `/act:{persona-name}`
 
-3. **Prompts** (`.pew/prompts/`) → Synced to `.claude/commands/plx/`:
+3. **Prompts** (`prompts/`) → Synced to `.claude/commands/plx/`:
    - Verb-object patterns create subdirectories (e.g., `create-issue.md` → `/plx:create/issue`)
    - Single-word prompts go directly to plx directory
 
-4. **Templates** (`.pew/templates/outputs/`) → Synced to `.claude/commands/use/`
+4. **Templates** (`templates/outputs/`) → Synced to `.claude/commands/use/`
    - Available as `/use:{template-name}`
 
-5. **Blocks** (`.pew/templates/blocks/`) → Synced to `.claude/commands/use/`
+5. **Blocks** (`templates/blocks/`) → Synced to `.claude/commands/use/`
    - Available as `/use:{block-name}`
 
-6. **Output Formats** (`.pew/output-formats/`) → Synced to `.claude/commands/use/`
+6. **Output Formats** (`output-formats/`) → Synced to `.claude/commands/use/`
    - Available as `/use:{format-name}`
 
-7. **Instructions** (`.pew/instructions/`) → Synced to `.claude/commands/apply/`
+7. **Instructions** (`instructions/`) → Synced to `.claude/commands/apply/`
    - Available as `/apply:{instruction-name}`
 
-8. **Workflows** (`.pew/workflows/`) → Synced to `.claude/commands/start/`
+8. **Workflows** (`workflows/`) → Synced to `.claude/commands/start/`
    - Available as `/start:{workflow-name}`
 
-9. **Modes** (`.pew/modes/`) → Synced to `.claude/commands/activate/`
+9. **Modes** (`modes/`) → Synced to `.claude/commands/activate/`
    - Available as `/activate:{mode-name}`
    - Operational behaviors that change interaction patterns
 
-10. **Context** (`.pew/context/`) → NOT synced (reference information only)
+10. **Context** (`context/`) → NOT synced (reference information only)
 
-11. **Issues** (`.pew/issues/`) → NOT synced (local project management)
+11. **Issues** (`issues/`) → NOT synced (local project management)
 
-12. **Meetings** (`.pew/meetings/`) → NOT synced (decision logging)
+12. **Meetings** (`meetings/`) → NOT synced (decision logging)
 
-13. **Reports** (`.pew/reports/`) → NOT synced (analysis outputs)
+13. **Reports** (`reports/`) → NOT synced (analysis outputs)
 
 ### WikiLink Resolution System
 
-The framework automatically resolves WikiLinks (`[[filename]]`) to absolute paths during sync:
-- Search order: project directories first (`.pew/prompts/`, `.pew/agents/`, etc.), then `.claude/` recursively
+The framework automatically resolves WikiLinks (`[[filename-example-wiki-link]]`) to absolute paths during sync:
+- Search order: project directories first (`prompts/`, `agents/`, etc.), then `.claude/` recursively
 - Converted to `@path/to/file.md` format for Claude Code
 - Enables automatic context loading when commands are used
 
@@ -97,32 +97,31 @@ Each component type has specific headers that instruct Claude's behavior:
 - `lib/init.js` handles project initialization
 
 ### Sync Scripts
-- Master script: `.pew/scripts/claude-code/sync-claude-code.sh`
+- Master script: `scripts/claude-code/sync-claude-code.sh`
 - Component-specific scripts handle different file types
 - WikiLink resolution: `sync-claude-code-wikilinks.sh`
 - Uses temporary directory for atomic operations
 
 ### Directory Structure
 ```
-pew-pew-plx/
-├── .pew/            # All framework components
-│   ├── agents/      # AI agents organized by category
-│   ├── personas/    # Persona definitions
-│   ├── prompts/     # Quick-action commands
-│   ├── templates/   # Document templates and blocks
-│   │   ├── blocks/  # Reusable content blocks
-│   │   └── outputs/ # Complete templates
-│   ├── output-formats/  # Response format specifications
-│   ├── instructions/    # Convention documents
-│   ├── workflows/       # Multi-step processes
-│   ├── context/         # Project information (not synced)
-│   ├── issues/          # Local project management (not synced)
-│   ├── meetings/        # Decision logs (not synced)
-│   ├── reports/         # Analysis outputs (not synced)
-│   └── scripts/         # Sync and utility scripts
-│       └── claude-code/ # Claude Code sync scripts
-├── lib/             # Core JavaScript modules
-└── bin/             # CLI executable
+pew-pew-plx/     # All framework components
+├── agents/      # AI agents organized by category
+├── personas/    # Persona definitions
+├── prompts/     # Quick-action commands
+├── templates/   # Document templates and blocks
+│   ├── blocks/  # Reusable content blocks
+│   └── outputs/ # Complete templates
+├── output-formats/  # Response format specifications
+├── instructions/    # Convention documents
+├── workflows/       # Multi-step processes
+├── context/         # Project information (not synced)
+├── issues/          # Local project management (not synced)
+├── meetings/        # Decision logs (not synced)
+├── reports/         # Analysis outputs (not synced)
+└── scripts/         # Sync and utility scripts
+    └── claude-code/ # Claude Code sync scripts
+lib/             # Core JavaScript modules
+bin/             # CLI executable
 ```
 
 ### Agent Naming Convention
@@ -134,13 +133,13 @@ Agent filenames are parsed to extract personas:
 ## Development Guidelines
 
 ### Adding New Components
-1. Create file in appropriate directory (`.pew/agents/`, `.pew/prompts/`, etc.)
+1. Create file in appropriate directory (`agents/`, `prompts/`, etc.)
 2. Include proper header for Claude Code behavior
 3. Use WikiLinks for cross-references
 4. Run `plx sync claude` to make available
 
 ### Modifying Sync Behaviour
-- Sync scripts are in `.pew/scripts/claude-code/`
+- Sync scripts are in `scripts/claude-code/`
 - Each component type has its own sync script
 - WikiLink resolution happens after initial sync
 
@@ -156,4 +155,4 @@ Agent filenames are parsed to extract personas:
 - All paths must be absolute in final output
 - Temporary sync directory ensures atomic operations
 - Clean flag removes existing `.claude/` directories before sync
-- Watch mode monitors `.pew/agents/` and `.pew/prompts/` directories only
+- Watch mode monitors `agents/` and `prompts/` directories only

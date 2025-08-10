@@ -135,7 +135,7 @@ Guide the user through systematic artifact creation by:
 - Determine agent extraction opportunity:
   - If Persona + Workflow + Instructions align → create agent
   - Agent becomes: `agents/[agent-name].md`
-  - Then embed in prompt: `![[agent-name]]`
+  - Then embed in prompt: `![[agent-name-example-wiki-link]]`
 
 ### Step 5: Question-Mode Refinement
 **Deliverable:** Refined understanding through systematic questioning
@@ -161,8 +161,8 @@ Guide the user through systematic artifact creation by:
   - Templates → Include YAML frontmatter + markdown body
   - Instructions → Include name, description, actionable content
 - Implement wikilink architecture:
-  - Standard `[[name]]` for references (→ @path after sync)
-  - Embedded `![[name]]` for content (line replaced during sync)
+  - Standard `[[name-example-wiki-link]]` for references (→ @path after sync)
+  - Embedded `![[name-example-wiki-link]]` for content (line replaced during sync)
   - CRITICAL: Embedded wikilinks MUST be on their own line
 - Write to appropriate directory with correct naming convention
 - DO NOT add "Reference" sections unless the artifact actually uses/embeds that template
@@ -215,8 +215,8 @@ Guide the user through systematic artifact creation by:
 
 ### WHEN implementing wikilinks
 **Requirements:**
-- Standard wikilinks `[[name]]` transform to @path references
-- Embedded wikilinks `![[name]]` replace entire line with content
+- Standard wikilinks `[[name-example-wiki-link]]` transform to @path references
+- Embedded wikilinks `![[name-example-wiki-link]]` replace entire line with content
 - Wikilinks enable modular, reusable architecture
 
 **Constraints:**
@@ -343,7 +343,7 @@ description: "[purpose]"
 ## 📏 Instructions (if needed)
 ## 📊 Output Format (if needed)
 ---
-role: [[agent-name]] (if applicable)
+role: [[agent-name-example-wiki-link]] (if applicable)
 
 # For Agents (follow agent-template.md):
 ---
@@ -407,15 +407,15 @@ Every creation follows the pattern:
 5. Refinement → Apply question-mode throughout
 
 ## WikiLink Architecture
-- Standard `[[name]]` → Becomes @path reference after sync
-- Embedded `![[name]]` → Content inserted during sync
+- Standard `[[name-example-wiki-link]]` → Becomes @path reference after sync
+- Embedded `![[name-example-wiki-link]]` → Content inserted during sync
 - Enables maximum reusability and modularity
 
 ## Agent Extraction Pattern
 When Persona + Workflow + Instructions align:
 1. Create agent with combined components
 2. Save as `agents/[name].md`
-3. Embed in prompts via `![[agent-name]]`
+3. Embed in prompts via `![[agent-name-example-wiki-link]]`
 4. Agent becomes reusable across artifacts
 
 ## Question-Mode Integration
@@ -445,4 +445,4 @@ This prompt intentionally does NOT reference an agent at the bottom. Following t
 1. Start with components defined in the prompt (current state)
 2. Extract shareable components as they prove useful
 3. Create an agent only when components naturally align and need reuse
-4. Then future prompts can reference that agent via `![[agent-name]]`
+4. Then future prompts can reference that agent via `![[agent-name-example-wiki-link]]`

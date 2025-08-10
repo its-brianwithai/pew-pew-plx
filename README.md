@@ -184,13 +184,13 @@ An agent combines:
 Templates provide structured formats, while blocks offer reusable content sections:
 
 ### Templates
-Complete document structures in `.pew/templates/outputs/`:
+Complete document structures in `templates/outputs/`:
 - Issue templates, story templates, epic templates
 - Bug reports, pull requests, documentation
 - Implementation plans, requirements, roadmaps
 
 ### Blocks
-Reusable content sections in `.pew/templates/blocks/`:
+Reusable content sections in `templates/blocks/`:
 - Context blocks (capabilities, purpose, functions)
 - Instruction blocks (best practices, rules, standards)
 - Workflow blocks (steps, inputs, outputs)
@@ -272,7 +272,7 @@ The framework leverages a sophisticated component referencing system:
 graph LR
     subgraph "Development Time"
         D1["Write: [[component]]"]
-        D2["Write: ![[component]]"]
+        D2["Write: ![[component-example-wiki-link]]"]
     end
     
     subgraph "Sync Process"
@@ -316,10 +316,10 @@ Follow @instructions/project-conventions.md and use @templates/story-template.md
 ### Embedded WikiLinks: Content Insertion
 ```markdown
 # Reference mode (loads on activation):
-Use the workflow in [[issue-workflow]]
+Use the workflow in [[issue-workflow-example-wiki-link]]
 
 # Embedding mode (content inserted during sync):
-![[issue-workflow]]
+![[issue-workflow-example-wiki-link]]
 
 # Note: Embedded wikilinks must occupy their own line
 ```
@@ -327,9 +327,9 @@ Use the workflow in [[issue-workflow]]
 ### Component Evolution Lifecycle
 ```markdown
 1. Inline definition → Components defined within the artifact
-2. File extraction → [[component-name]] references to external files
+2. File extraction → [[component-name-example-wiki-link]] references to external files
 3. Agent composition → Combining persona, workflow, and instructions
-4. Agent embedding → ![[agent-name]] inclusion in prompts
+4. Agent embedding → ![[agent-name-example-wiki-link]] inclusion in prompts
 ```
 
 
@@ -393,7 +393,7 @@ plx pull main         # Update framework
 - `/act:code/reviewer` - Code analysis
 
 #### Workflow Commands
-- `/start:issue-workflow` - 6-phase feature development
+- `/start:feature-workflow` - 6-phase feature development
 - `/start:refinement-workflow` - 5-layer decomposition
 - `/start:bug-workflow` - 4-phase bug resolution
 
@@ -402,28 +402,55 @@ plx pull main         # Update framework
 ### Directory Structure
 ```
 pew-pew-plx/
-├── .pew/            # All framework components
-│   ├── agents/      # Specialized AI agents
-│   ├── prompts/     # Quick-action commands
-│   │   ├── create-anything.md
-│   │   ├── update-anything.md
-│   │   ├── make-anything.md
-│   │   └── shard-anything.md
-│   ├── templates/   # Document templates
-│   │   ├── outputs/ # Complete templates
-│   │   └── blocks/  # Reusable sections
-│   ├── workflows/   # Multi-step processes
-│   ├── instructions/# Conventions and rules
-│   ├── modes/       # Behavioral modifications
-│   │   └── question-mode.md
-│   └── context/     # Project knowledge
+├── agents/          # Specialized AI agents organized by category
+│   ├── claude/      # Claude Code specialists
+│   ├── dev/         # Development experts
+│   ├── discovery/   # Research specialists
+│   ├── meta/        # Meta-framework agents
+│   ├── plan/        # Planning and orchestration
+│   └── review/      # Quality assurance agents
+├── prompts/         # Quick-action commands
+│   ├── create-anything.md
+│   ├── update-anything.md
+│   ├── make-anything.md
+│   ├── shard-anything.md
+│   └── 90+ specialized prompts
+├── templates/       # Document templates
+│   ├── outputs/     # Complete templates (30+ files)
+│   └── blocks/      # Reusable sections (80+ blocks)
+├── workflows/       # Multi-step processes
+│   ├── bug-workflow.md
+│   ├── feature-workflow.md
+│   ├── refinement-workflow.md
+│   └── feedback-triage-workflow.md
+├── instructions/    # Conventions and rules
+│   ├── best-practices/
+│   ├── conventions/
+│   └── rules/
+├── modes/           # Behavioral modifications
+│   └── question-mode.md
+├── context/         # Project knowledge (not synced)
+│   ├── collections/ # Reference collections
+│   ├── docs/        # Documentation
+│   ├── platforms/   # Platform contexts
+│   ├── roles/       # Role definitions
+│   └── teams/       # Team structures
+├── issues/          # Issue management (not synced)
+│   ├── configuration/
+│   ├── tech/
+│   └── workflows/
+├── output-formats/  # Response format specifications
+├── drafts/          # Work in progress (not synced)
+├── feedback/        # Framework feedback (not synced)
+└── scripts/         # Sync and utility scripts
+    └── claude-code/ # Claude Code sync scripts
 ```
 
 ### Sync Transformation
 
 ```mermaid
 graph TD
-    subgraph ".pew/ Source"
+    subgraph "Root Source"
         A1[agents/]
         P1[prompts/]
         T1[templates/]
@@ -511,11 +538,14 @@ Each method leverages the same modular components, demonstrating the framework's
 
 ## 📚 Documentation
 
-- **Prompts**: See `.pew/prompts/` for all creation commands
-- **Agents**: See `.pew/agents/` for specialized expertise
-- **Templates**: See `.pew/templates/` for structured formats
-- **Workflows**: See `.pew/workflows/` for orchestrated processes
-- **Instructions**: See `.pew/instructions/` for conventions
+- **Prompts**: See `prompts/` for all creation commands (94 files)
+- **Agents**: See `agents/` for specialized expertise (38 agents across 6 categories)
+- **Templates**: See `templates/` for structured formats (30 outputs + 80+ blocks)
+- **Workflows**: See `workflows/` for orchestrated processes (5 workflows)
+- **Instructions**: See `instructions/` for conventions and rules
+- **Output Formats**: See `output-formats/` for response specifications
+- **Modes**: See `modes/` for behavioral modifications
+- **Context**: See `context/` for project knowledge and references
 
 ## 🤝 Contributing
 

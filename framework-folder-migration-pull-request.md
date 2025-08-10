@@ -9,16 +9,16 @@
 | [`lib/init.js`](lib/init.js) | Modified | Updated to handle `pew` → `.pew` conversion and merging |
 | [`Makefile`](Makefile) | Modified | Updated paths and pull logic for new structure |
 | [`chore-framework-folder-migration.md`](chore-framework-folder-migration.md) | Added | Issue documentation for the migration |
-| [`.pew/scripts/claude-code/sync-claude-code.sh`](.pew/scripts/claude-code/sync-claude-code.sh) | Modified | Main sync script using `tmp/pew/` folder |
-| [`.pew/scripts/claude-code/sync-claude-code-agents.sh`](.pew/scripts/claude-code/sync-claude-code-agents.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-personas.sh`](.pew/scripts/claude-code/sync-claude-code-personas.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-prompts.sh`](.pew/scripts/claude-code/sync-claude-code-prompts.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-templates.sh`](.pew/scripts/claude-code/sync-claude-code-templates.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-workflows.sh`](.pew/scripts/claude-code/sync-claude-code-workflows.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-instructions.sh`](.pew/scripts/claude-code/sync-claude-code-instructions.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-output-formats.sh`](.pew/scripts/claude-code/sync-claude-code-output-formats.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-blocks.sh`](.pew/scripts/claude-code/sync-claude-code-blocks.sh) | Modified | Updated to use temp directory and auto-create |
-| [`.pew/scripts/claude-code/sync-claude-code-modes.sh`](.pew/scripts/claude-code/sync-claude-code-modes.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code.sh`](scripts/claude-code/sync-claude-code.sh) | Modified | Main sync script using `tmp/pew/` folder |
+| [`scripts/claude-code/sync-claude-code-agents.sh`](scripts/claude-code/sync-claude-code-agents.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-personas.sh`](scripts/claude-code/sync-claude-code-personas.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-prompts.sh`](scripts/claude-code/sync-claude-code-prompts.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-templates.sh`](scripts/claude-code/sync-claude-code-templates.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-workflows.sh`](scripts/claude-code/sync-claude-code-workflows.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-instructions.sh`](scripts/claude-code/sync-claude-code-instructions.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-output-formats.sh`](scripts/claude-code/sync-claude-code-output-formats.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-blocks.sh`](scripts/claude-code/sync-claude-code-blocks.sh) | Modified | Updated to use temp directory and auto-create |
+| [`scripts/claude-code/sync-claude-code-modes.sh`](scripts/claude-code/sync-claude-code-modes.sh) | Modified | Updated to use temp directory and auto-create |
 | [`pew/`](pew/) | Added | 318 new files - entire framework structure moved to public folder |
 
 ## 🎯 Implementation Overview
@@ -28,7 +28,7 @@ This implementation migrates the Pew Pew PLX framework from using a hidden `.pew
 
 The key architectural change is the introduction of a three-stage folder system:
 1. **Repository**: `pew/` (public, framework source)
-2. **User Local**: `.pew/` (hidden, user's working directory) 
+2. **User Local**: `` (hidden, user's working directory) 
 3. **Processing**: `tmp/pew//` (temporary, for safe WikiLink processing)
 4. **Claude Code**: `.claude/` (hidden, final synced destination)
 
@@ -110,7 +110,7 @@ This approach was chosen because:
 
 **Feedback:**
 
-### Sync Script System (`.pew/scripts/claude-code/`)
+### Sync Script System (`scripts/claude-code/`)
 
 #### What Changed
 All sync scripts were updated to use a temporary `tmp/pew/` folder for processing and to auto-create missing directories instead of failing.
@@ -149,8 +149,8 @@ fi
 ```
 
 #### File References
-- [`.pew/scripts/claude-code/sync-claude-code.sh:7-48`](.pew/scripts/claude-code/sync-claude-code.sh#L7) - Main sync orchestrator
-- [`.pew/scripts/claude-code/sync-claude-code-agents.sh:7-22`](.pew/scripts/claude-code/sync-claude-code-agents.sh#L7) - Agent sync updates
+- [`scripts/claude-code/sync-claude-code.sh:7-48`](scripts/claude-code/sync-claude-code.sh#L7) - Main sync orchestrator
+- [`scripts/claude-code/sync-claude-code-agents.sh:7-22`](scripts/claude-code/sync-claude-code-agents.sh#L7) - Agent sync updates
 - All other sync scripts follow the same pattern
 
 #### Reasoning
@@ -164,12 +164,12 @@ fi
 ### Makefile Updates
 
 #### What Changed
-Updated all script paths from `.pew/scripts` to `pew/scripts` and modified the pull functionality to handle `pew` → `.pew` conversion.
+Updated all script paths from `scripts` to `pew/scripts` and modified the pull functionality to handle `pew` → `.pew` conversion.
 
 #### Code Examples
 ```makefile
 # Before
-@./.pew/scripts/claude-code/sync-claude-code.sh
+@./scripts/claude-code/sync-claude-code.sh
 
 # After
 @./pew/scripts/claude-code/sync-claude-code.sh
@@ -181,8 +181,8 @@ if [ -d pew ] && [ ! -d .pew ]; then \
     echo "📂 Converting pew to .pew..."; \
     if [ -d ../.pew ]; then \
         echo "📁 Merging with existing .pew folder..."; \
-        cp -R pew/* ../.pew/ 2>/dev/null || true; \
-        cp -R pew/.[^.]* ../.pew/ 2>/dev/null || true; \
+        cp -R pew/* ../ 2>/dev/null || true; \
+        cp -R pew/.[^.]* ../ 2>/dev/null || true; \
     else \
         cp -R pew ../.pew; \
     fi; \
@@ -205,7 +205,7 @@ fi; \
 ### Framework Content Migration (`pew/`)
 
 #### What Changed
-Entire framework structure (318 files) moved from `.pew/` to `pew/`:
+Entire framework structure (318 files) moved from `` to `pew/`:
 - 39 agents across multiple categories (claude, dev, discovery, meta, plan, review)
 - 94 prompts for various commands
 - 30 templates (outputs)
@@ -243,7 +243,7 @@ graph TD
     end
     
     subgraph "User Project"
-        B[.pew/ - Hidden Working Dir]
+        B[ - Hidden Working Dir]
         C[tmp/pew// - Temp Processing]
         D[.claude/ - Claude Code]
     end
@@ -258,7 +258,7 @@ graph TD
 ```
 Repository          User's Project
 ─────────          ──────────────
-pew/               .pew/           (working directory)
+pew/                          (working directory)
 ├── agents/        ├── agents/
 ├── prompts/       ├── prompts/
 ├── templates/     ├── templates/
@@ -267,7 +267,7 @@ pew/               .pew/           (working directory)
                    ↓ plx sync claude
                    
                    tmp/pew// (temporary)
-                   └── .pew/       (copy for processing)
+                   └──        (copy for processing)
                    
                    ↓ Process WikiLinks
                    
@@ -283,7 +283,7 @@ pew/               .pew/           (working directory)
 - **Previous Behaviour:** Framework distributed with hidden `.pew` folder
 - **New Behaviour:** Framework distributed with public `pew` folder, converted to `.pew` locally
 - **Impact:** Users see no change in their workflow, but contributors can now easily see framework structure
-- **Example:** Running `plx init` now converts `pew/` to `.pew/` automatically
+- **Example:** Running `plx init` now converts `pew/` to `` automatically
 
 ### Sync Processing Model
 - **Previous Behaviour:** WikiLinks processed directly in `.pew` folder
@@ -305,18 +305,18 @@ pew/               .pew/           (working directory)
 
 **Steps:**
 1. Clone the repository with new structure
-   - Expected: Repository contains `pew/` folder (not `.pew/`)
+   - Expected: Repository contains `pew/` folder (not ``)
    - Verify: `ls -la | grep pew` shows only `pew`
 2. Run `plx init`
-   - Expected: Creates `.pew/` folder in user project
+   - Expected: Creates `` folder in user project
    - Verify: `ls -la | grep pew` shows `.pew`
 3. Check folder contents
-   - Expected: `.pew/` contains all framework files
-   - Verify: `ls .pew/` shows agents, prompts, templates, etc.
+   - Expected: `` contains all framework files
+   - Verify: `ls ` shows agents, prompts, templates, etc.
 
 **Success Criteria:**
 - [ ] Repository has public `pew/` folder
-- [ ] User project has hidden `.pew/` folder
+- [ ] User project has hidden `` folder
 - [ ] All framework files properly converted
 
 **Feedback:**
@@ -325,13 +325,13 @@ pew/               .pew/           (working directory)
 **Objective:** Verify sync creates missing directories
 
 **Prerequisites:**
-- Project with `.pew/` folder
-- Remove some subdirectories (e.g., `rm -rf .pew/personas`)
+- Project with `` folder
+- Remove some subdirectories (e.g., `rm -rf personas`)
 
 **Steps:**
-1. Remove personas directory: `rm -rf .pew/personas`
+1. Remove personas directory: `rm -rf personas`
    - Expected: Directory removed
-   - Verify: `ls .pew/ | grep personas` returns nothing
+   - Verify: `ls  | grep personas` returns nothing
 2. Run `plx sync claude`
    - Expected: Sync completes without errors
    - Verify: Output shows "📁 Creating personas directory"
@@ -350,19 +350,19 @@ pew/               .pew/           (working directory)
 **Objective:** Verify WikiLinks processed safely in temp folder
 
 **Prerequisites:**
-- Project with `.pew/` folder containing WikiLinks
+- Project with `` folder containing WikiLinks
 - Monitor filesystem during sync
 
 **Steps:**
-1. Add WikiLink to a file: `echo "See [[test-reference]]" >> .pew/test.md`
+1. Add WikiLink to a file: `echo "See [[test-reference]]" >> test.md`
    - Expected: File contains WikiLink
-   - Verify: `grep "test-reference" .pew/test.md`
+   - Verify: `grep "test-reference" test.md`
 2. Run `plx sync claude`
    - Expected: Temp folder created and cleaned
    - Verify: During sync, `tmp/pew//` exists
 3. Check original file unchanged
-   - Expected: Original `.pew/test.md` still has WikiLink
-   - Verify: `grep "\[\[test-reference\]\]" .pew/test.md`
+   - Expected: Original `test.md` still has WikiLink
+   - Verify: `grep "\[\[test-reference\]\]" test.md`
 4. Check processed file
    - Expected: `.claude/` version has resolved path
    - Verify: Processed file has absolute path
@@ -378,16 +378,16 @@ pew/               .pew/           (working directory)
 **Objective:** Verify existing `.pew` installations continue working
 
 **Prerequisites:**
-- Project with existing `.pew/` folder
-- Custom files in `.pew/` not in framework
+- Project with existing `` folder
+- Custom files in `` not in framework
 
 **Steps:**
-1. Create custom file: `echo "custom" > .pew/custom.txt`
+1. Create custom file: `echo "custom" > custom.txt`
    - Expected: Custom file created
-   - Verify: `cat .pew/custom.txt` shows "custom"
+   - Verify: `cat custom.txt` shows "custom"
 2. Run `make pull main`
    - Expected: Framework updates, custom file preserved
-   - Verify: `cat .pew/custom.txt` still shows "custom"
+   - Verify: `cat custom.txt` still shows "custom"
 3. Run `plx sync claude`
    - Expected: Sync works normally
    - Verify: Sync completes without errors

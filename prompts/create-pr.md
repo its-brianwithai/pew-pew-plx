@@ -96,7 +96,7 @@ Before creating the PR, verify:
      - Create PR report using [[pull-request-template]] 
      - Save as: `[issue-folder-name]-pull-request.md`
      - Example: For issue folder `000-WFL-plan-workflow`, save as `000-WFL-plan-workflow-pull-request.md`
-     - When documenting file changes, use wikilinks for referencing: [[agent-name]] not `agents/agent-name.md`
+     - When documenting file changes, use wikilinks for referencing: [[agent-name-example-wiki-link]] not `agents/agent-name.md`
    
    - **MANDATORY content for the report:**
      - Complete table of ALL changed files with clickable links (no exceptions)
@@ -156,7 +156,7 @@ Before creating the PR, verify:
 <documentation_guidelines>
 - **CRITICAL**: Read and document EVERY single changed file - NO EXCEPTIONS
 - If there are too many files to handle directly, use sub-agents to analyze groups
-- When referencing project files in the PR report, use wikilinks: [[filename]] not paths
+- When referencing project files in the PR report, use wikilinks: [[filename-example-wiki-link]] not paths
 - In the changes table, use actual file paths for clickable GitHub links
 - For EVERY file, explain:
   - What the file does

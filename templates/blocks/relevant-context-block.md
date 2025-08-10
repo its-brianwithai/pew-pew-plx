@@ -10,7 +10,7 @@
 <example>
 - [[wikilink]] - (Relevance: [Description of why this file is important])
 - [[wikilink]] - (Relevance: [Description of code relevance])
-- [[component-name]] - (Relevance: [How this relates to the task])
+- [[component-name-example-wiki-link]] - (Relevance: [How this relates to the task])
 </example>
 ```
 

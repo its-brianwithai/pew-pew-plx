@@ -1,7 +1,7 @@
 ---
 name: meeting-template
 description: Use this template when documenting comprehensive meeting notes and project discussions. This captures decisions, action items, open questions, and ensures proper follow-up on project milestones and deliverables.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path.
 ---
 # 📋 Meeting Notes: [Meeting Title/Topic]
 > 💡 *Comprehensive documentation of meeting discussions, decisions, and outcomes. This serves as the official record for project alignment and accountability.*
@@ -92,9 +92,9 @@ instructions: Make sure that when you implement this template, you don't include
 **Next Steps:** [Immediate actions needed]
 
 ### Key Components Status
-- **[[component-name]]:** [Status and brief update]
-- **[[component-name]]:** [Status and brief update]
-- **[[component-name]]:** [Status and brief update]
+- **[[component-name-example-wiki-link]]:** [Status and brief update]
+- **[[component-name-example-wiki-link]]:** [Status and brief update]
+- **[[component-name-example-wiki-link]]:** [Status and brief update]
 
 ---
 

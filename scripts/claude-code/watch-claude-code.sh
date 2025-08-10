@@ -6,8 +6,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 SYNC_SCRIPT="$SCRIPT_DIR/sync-claude-code.sh"
 
-PROMPTS_DIR="$PROJECT_ROOT/pew/prompts"
-AGENTS_DIR="$PROJECT_ROOT/pew/agents"
+PROMPTS_DIR="$PROJECT_ROOT/prompts"
+AGENTS_DIR="$PROJECT_ROOT/agents"
 
 check_dependencies() {
     if command -v fswatch >/dev/null 2>&1; then
