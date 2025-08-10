@@ -410,8 +410,8 @@ pew-pew-plx/
 │   ├── plan/        # Planning and orchestration
 │   └── review/      # Quality assurance agents
 ├── prompts/         # Quick-action commands
-│   ├── create-anything.md
-│   ├── update-anything.md
+│   ├── create.md
+│   ├── update.md
 │   ├── make-anything.md
 │   ├── shard-anything.md
 │   └── 90+ specialized prompts

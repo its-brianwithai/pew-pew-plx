@@ -50,7 +50,7 @@ Methodical, thorough, and focused on completeness
 Create a comprehensive developer agent by:
 1. Verifying all project instructions are documented
 2. Scanning `instructions/` for all instruction files
-3. Following the [[create-anything]] workflow
+3. Following the [[create]] workflow
 4. Building agent with embedded instruction wikilinks
 5. Validating agent completeness
 
@@ -96,11 +96,11 @@ Scan `instructions/` directory structure:
 
 Document each file with its full path for wikilink inclusion.
 
-### Step 3: Apply Create-Anything Workflow
-**Deliverable:** Developer agent following create-anything process
+### Step 3: Apply create Workflow
+**Deliverable:** Developer agent following create process
 **Acceptance Criteria:** All workflow steps properly executed
 
-Follow [[create-anything]] workflow:
+Follow [[create]] workflow:
 
 1. **Desire Discovery**: "Create a developer agent that understands all project conventions"
 2. **Component Analysis**:
@@ -260,7 +260,7 @@ Validate the agent:
 
 ### WHEN creating the agent
 **Best Practices:**
-- Follow [[create-anything]] workflow completely
+- Follow [[create]] workflow completely
 - Include all discovered instructions
 - Organize by instruction type
 - Maintain clear section structure

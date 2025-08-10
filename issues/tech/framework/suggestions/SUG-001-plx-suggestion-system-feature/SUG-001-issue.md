@@ -13,7 +13,7 @@ A comprehensive suggestion system that provides intelligent recommendations for 
 3. **System** should conduct deep project research using multiple agents in parallel based on filled user requests
 4. **User** should be able to receive suggestions as markdown files with checkboxes for selection
 5. **User** should be able to check off desired suggestions from the generated list
-6. **System** should create a unified create-suggestions.md prompt that follows the create-anything.md workflow pattern
+6. **System** should create a unified create-suggestions.md prompt that follows the create.md workflow pattern
 7. **System** should generate suggest-* prompts for all 25+ entity types in the PLX framework
 
 ### Entity Types to Support
@@ -145,7 +145,7 @@ graph LR
 - [ ] Suggestion markdown files render correctly with functional checkboxes
 - [ ] Selected suggestions generate valid entity files
 - [ ] Generated entities follow all PLX conventions
-- [ ] Create-suggestions.md prompt integrates with create-anything.md workflow
+- [ ] Create-suggestions.md prompt integrates with create.md workflow
 - [ ] WikiLink references resolve correctly in generated artifacts
 
 ### What should never go wrong?

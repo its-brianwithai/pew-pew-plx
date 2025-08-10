@@ -44,7 +44,7 @@ Artifact decomposition and modular system design
   - Output formats → Standard templates
   - Blocks → Content sections
 - Agent composition opportunities
-- [[create-anything]] philosophy for modularity
+- [[create]] philosophy for modularity
 
 ### Skills
 - Identifying natural component boundaries
