@@ -50,11 +50,13 @@ Factual, concise, evidence-based. NO philosophy, NO explanations, ONLY documente
 > 💡 *Verb-first activity request with deliverables and acceptance criteria*
 
 Analyze the entire codebase to discover and document all conventions by:
-1. Scanning all relevant project files and structures
-2. Identifying patterns and conventions across different aspects
-3. Creating a discovery checklist for user confirmation
-4. Documenting approved conventions in structured instruction files
+1. **YOU PERSONALLY** scanning all relevant project files and structures
+2. **YOU PERSONALLY** identifying patterns and conventions across different aspects
+3. **YOU PERSONALLY** creating a discovery checklist for user confirmation
+4. **THEN AND ONLY THEN** using agents to document approved conventions
 5. Validating completeness and accuracy
+
+**CRITICAL: Steps 1-3 MUST be done by YOU, not delegated to agents!**
 
 ### Deliverables
 - Discovery checklist in `.pew/drafts/convention-discovery-checklist.md`
@@ -72,25 +74,46 @@ Analyze the entire codebase to discover and document all conventions by:
 ## 🔄 Workflow
 > 💡 *Atomic steps that systematically achieve the end goal.*
 
-### Step 1: Initial Project Analysis
+### ⚠️⚠️⚠️ CRITICAL WARNING ⚠️⚠️⚠️
+**DO NOT DELEGATE INITIAL RESEARCH TO SUB-AGENTS!**
+- Steps 1-3 MUST be done by YOU (the orchestrator) PERSONALLY
+- Sub-agents lack context and will miss critical patterns
+- Only use agents in Step 4 AFTER you've done the analysis
+- If you try to delegate discovery, YOU WILL FAIL
+### ⚠️⚠️⚠️ END WARNING ⚠️⚠️⚠️
+
+### Step 1: Initial Project Analysis (DO IT YOURSELF)
 **Deliverable:** Understanding of project structure and technology stack
 **Acceptance Criteria:** Core technologies and frameworks identified
-- Scan project root for configuration files (package.json, pubspec.yaml, Cargo.toml, etc.)
-- Identify primary language and framework
-- Detect build tools and dependency managers
-- Note testing frameworks and quality tools
-- Document project type (web app, mobile, library, etc.)
 
-### Step 2: Deep Convention Analysis (CRITICAL)
+**🔴 YOU (THE ORCHESTRATOR) MUST DO THIS YOURSELF:**
+- YOU scan project root for configuration files (package.json, pubspec.yaml, Cargo.toml, etc.)
+- YOU identify primary language and framework
+- YOU detect build tools and dependency managers
+- YOU note testing frameworks and quality tools
+- YOU document project type (web app, mobile, library, etc.)
+
+**DO NOT create sub-tasks for this initial analysis!**
+
+### Step 2: Deep Convention Analysis (CRITICAL - DO IT YOURSELF)
 **Deliverable:** Thoroughly analyzed conventions with file:line references
 **Acceptance Criteria:** Every pattern verified against actual code
 
-**⚠️ MANDATORY DEEP-DIVE CHECKLIST:**
-- [ ] Read ALL source files in primary directories
-- [ ] Extract patterns that appear 3+ times with exact locations
-- [ ] Document ONLY what exists, never what "should" exist
-- [ ] Collect file:line references for every pattern
-- [ ] Verify no speculation or interpretation added
+**🔴 CRITICAL: YOU MUST DO THIS ANALYSIS YOURSELF - NO SUB-AGENTS!**
+**The orchestrator (YOU) must personally:**
+1. READ the actual source files yourself using Read/Grep/Glob tools
+2. ANALYZE the patterns yourself by examining the code
+3. EXTRACT conventions yourself with file:line references
+4. DOCUMENT findings yourself before ANY agent execution
+
+**⚠️ MANDATORY DEEP-DIVE CHECKLIST (DO YOURSELF):**
+- [ ] YOU read ALL source files in primary directories
+- [ ] YOU extract patterns that appear 3+ times with exact locations
+- [ ] YOU document ONLY what exists, never what "should" exist
+- [ ] YOU collect file:line references for every pattern
+- [ ] YOU verify no speculation or interpretation added
+
+**NEVER delegate initial analysis to sub-agents - they lack context!**
 
 Analyze these core categories:
 
@@ -186,6 +209,9 @@ Review and check the conventions you want documented for the developer agent.
 **Deliverable:** All instruction files created simultaneously by specialized agents
 **Acceptance Criteria:** Each checked convention has detailed documentation in the correct subfolder
 
+**🔴 PREREQUISITE: You MUST have completed Steps 1-3 YOURSELF before this step!**
+**Agents can ONLY document what YOU have already discovered and analyzed.**
+
 #### 📐 CRITICAL: Parallel Execution Pattern
 **This pattern enables TRUE parallel execution of multiple agents:**
 - Multiple independent tasks that don't depend on each other
@@ -212,6 +238,7 @@ Review and check the conventions you want documented for the developer agent.
 ```
 
 #### 🔴 CRITICAL CONSTRAINTS FOR ALL AGENTS
+**IMPORTANT: Only use agents AFTER you've done the deep analysis yourself!**
 **These constraints are NON-NEGOTIABLE for context window optimization:**
 - MAXIMUM 100 lines per file (enforce hard limit)
 - ONLY document patterns found in actual code
@@ -441,16 +468,19 @@ Document what was created:
 
 ### WHEN discovering conventions
 **Best Practices:**
+- **DO IT YOURSELF** - Never delegate initial discovery to agents
 - Look for patterns that appear 3+ times
 - Check both explicit rules and implicit patterns
 - Examine recent code for current practices
 - Review configuration files for standards
 
 **Rules:**
+- ALWAYS do the initial analysis YOURSELF using Read/Grep/Glob
 - ALWAYS provide real examples from the project
 - ALWAYS note exceptions to patterns
+- NEVER delegate discovery to sub-agents (they miss context)
 - NEVER assume conventions without evidence
-- MUST verify patterns across multiple files
+- MUST verify patterns across multiple files YOURSELF
 
 ### WHEN creating the checklist
 **Best Practices:**
@@ -550,12 +580,13 @@ The prompt automatically adapts to:
 - Existing documentation
 
 ## Key Success Factors
-- Thorough initial analysis
+- **PERSONAL INITIAL ANALYSIS** - YOU must do Steps 1-3 yourself
+- Thorough discovery by the orchestrator (not sub-agents)
 - User involvement in selection
-- **PARALLEL AGENT EXECUTION** - All 6 agents run simultaneously
+- **PARALLEL AGENT EXECUTION** - All 6 agents run simultaneously (AFTER your analysis)
 - **VERIFICATION LOOPS** - Ensure files are actually created
-- **ACTION-ORIENTED PROMPTS** - Agents must CREATE, not analyze
-- Real examples from codebase
+- **ACTION-ORIENTED PROMPTS** - Agents must CREATE based on YOUR discoveries
+- Real examples from codebase that YOU found
 - Clear documentation structure
 
 ## Specialized Agents Used
