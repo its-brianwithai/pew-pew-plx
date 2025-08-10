@@ -177,12 +177,12 @@ Replace extracted components:
 
 **For Reference (read the file):**
 ```markdown
-See [[component-name-example-wiki-link]] for details
+See [[component-name]] for details
 ```
 
 **For Embedding (insert content):**
 ```markdown
-![[component-name-example-wiki-link]]
+![[component-name]]
 ```
 
 Critical rules:
@@ -301,12 +301,12 @@ description: "[purpose]"
 ### WHEN implementing wikilinks
 **Reference Pattern** (for context):
 ```markdown
-For more details, see [[component-name-example-wiki-link]]
+For more details, see [[component-name]]
 ```
 
 **Embed Pattern** (for inclusion):
 ```markdown
-![[component-name-example-wiki-link]]
+![[component-name]]
 ```
 
 **Rules:**

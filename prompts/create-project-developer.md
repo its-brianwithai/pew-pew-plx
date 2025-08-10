@@ -50,7 +50,7 @@ Methodical, thorough, and focused on completeness
 Create a comprehensive developer agent by:
 1. Verifying all project instructions are documented
 2. Scanning `instructions/` for all instruction files
-3. Following the [[create]] workflow
+3. Following the [[create-anything]] workflow
 4. Building agent with embedded instruction wikilinks
 5. Validating agent completeness
 
@@ -96,11 +96,11 @@ Scan `instructions/` directory structure:
 
 Document each file with its full path for wikilink inclusion.
 
-### Step 3: Apply create Workflow
-**Deliverable:** Developer agent following create process
+### Step 3: Apply Create-Anything Workflow
+**Deliverable:** Developer agent following create-anything process
 **Acceptance Criteria:** All workflow steps properly executed
 
-Follow [[create]] workflow:
+Follow [[create-anything]] workflow:
 
 1. **Desire Discovery**: "Create a developer agent that understands all project conventions"
 2. **Component Analysis**:
@@ -168,37 +168,37 @@ All project conventions, patterns, and standards are embedded below. These instr
 
 [IMPORTANT: Insert discovered instruction files here with embedded wikilinks]
 <!-- Each instruction file should be on its own line -->
-<!-- Format: ![[filename-example-wiki-link]] (no path needed) -->
+<!-- Format: ![[filename]] (no path needed) -->
 <!-- Example structure shown below - replace with actual discovered files -->
 
 #### Patterns
-![[file-organization-patterns-example-wiki-link]]
-![[naming-convention-patterns-example-wiki-link]]
+![[file-organization-patterns]]
+![[naming-convention-patterns]]
 [Continue with all discovered pattern files...]
 
 #### Conventions
-![[git-conventions-example-wiki-link]]
-![[documentation-conventions-example-wiki-link]]
+![[git-conventions]]
+![[documentation-conventions]]
 [Continue with all discovered convention files...]
 
 #### Best Practices
-![[error-handling-best-practices-example-wiki-link]]
-![[performance-best-practices-example-wiki-link]]
+![[error-handling-best-practices]]
+![[performance-best-practices]]
 [Continue with all discovered best-practice files...]
 
 #### Rules
-![[critical-code-rules-example-wiki-link]]
-![[quality-standard-rules-example-wiki-link]]
+![[critical-code-rules]]
+![[quality-standard-rules]]
 [Continue with all discovered rule files...]
 
 #### Guidelines
-![[ui-design-guidelines-example-wiki-link]]
-![[responsive-design-guidelines-example-wiki-link]]
+![[ui-design-guidelines]]
+![[responsive-design-guidelines]]
 [Continue with all discovered guideline files...]
 
 #### Standards
-![[code-quality-standards-example-wiki-link]]
-![[documentation-standards-example-wiki-link]]
+![[code-quality-standards]]
+![[documentation-standards]]
 [Continue with all discovered standard files...]
 
 ## 📊 Quality Standards
@@ -260,7 +260,7 @@ Validate the agent:
 
 ### WHEN creating the agent
 **Best Practices:**
-- Follow [[create]] workflow completely
+- Follow [[create-anything]] workflow completely
 - Include all discovered instructions
 - Organize by instruction type
 - Maintain clear section structure
@@ -325,9 +325,9 @@ The agent references instructions organized by type:
 ## Wikilink Format
 All instruction files are embedded using the format:
 ```
-![[name-type-example-wiki-link]]
+![[name-type]]
 ```
-Example: `![[naming-convention-patterns-example-wiki-link]]`
+Example: `![[naming-convention-patterns]]`
 Note: Wikilinks use filename only, not the path
 
 ## Agent Invocation

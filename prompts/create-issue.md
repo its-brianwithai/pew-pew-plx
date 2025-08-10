@@ -55,9 +55,10 @@ Guide the user through systematic issue creation by:
 2. Gathering initial feature information
 3. Facilitating section completion based on chosen mode
 4. Applying refinement through question-mode
-5. Producing a complete issue following the template
+5. **CREATING THE ACTUAL FILE** - Writing the complete issue to disk using the Write tool
 
 ### Deliverables
+- **ACTUAL FILE CREATED**: Issue saved as `[issue-type]-[feature-name].md` in appropriate directory
 - Complete issue document following [[issue-template]]
 - All sections populated with relevant content
 - Mermaid diagrams for flows and connections
@@ -70,6 +71,7 @@ Guide the user through systematic issue creation by:
 - [ ] Actor flows show clear event sequences
 - [ ] Deliverables map to each event
 - [ ] Acceptance criteria cover success, failure, and invariants
+- [ ] **FILE IS CREATED ON DISK** - Not just presented in chat
 
 ## 🔄 Workflow
 > 💡 *Atomic steps that systematically achieve the end goal.*
@@ -164,15 +166,17 @@ Apply question-mode to refine:
 - **➕ Expand**: What edge cases need coverage?
 - **➖ Reduce**: What's out of scope for this issue?
 
-### Step 5: Final Assembly
-**Deliverable:** Complete issue ready for assignment
-**Acceptance Criteria:** Issue follows template exactly
+### Step 5: Final Assembly and File Creation
+**Deliverable:** Complete issue file created on disk
+**Acceptance Criteria:** Issue follows template exactly and is saved as a file
 
 - Ensure all sections are populated
 - Verify internal consistency
 - Add mermaid diagrams
 - Format acceptance criteria as checklists
 - Apply final polish
+- **CREATE THE FILE**: Use Write tool to save as `[issue-type]-[feature-name].md` in appropriate directory
+- **CONFIRM CREATION**: Report the file path to user after successful creation
 
 ## 📏 Instructions
 > 💡 *Event-driven best practices, conventions, constraints and rules.*
@@ -287,7 +291,9 @@ Markdown following [[issue-template]] structure
 ![[issue-template]]
 
 ### Delivery Instructions
-- Save as `[issue-type]-[feature-name].md` in appropriate directory
+**CRITICAL: CREATE THE ACTUAL FILE - DO NOT PRESENT IN CHAT**
+- **ACTION**: Use the Write tool to save the completed issue following [[issue-creation-conventions]]
+- **VERIFICATION**: After creating the file, confirm file creation with full path
 - Ensure all sections are complete
 - Verify examples are replaced with actual content
 - Check mermaid syntax is valid

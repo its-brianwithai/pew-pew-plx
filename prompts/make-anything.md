@@ -1,10 +1,10 @@
 ---
 name: make-anything
-description: "Use this prompt to systematically transform any input (text, requirements, ideas, existing artifacts) into a desired artifact type using the create philosophy."
+description: "Use this prompt to systematically transform any input (text, requirements, ideas, existing artifacts) into a desired artifact type using the create-anything philosophy."
 ---
 
 # 🔮 Make Anything: Systematic Transformation Through Intelligent Decomposition
-> 💡 *Transform any input material into production-ready artifacts by extracting intent, mapping to components, and assembling through the create philosophy.*
+> 💡 *Transform any input material into production-ready artifacts by extracting intent, mapping to components, and assembling through the create-anything philosophy.*
 
 ## 🎯 End Goal
 > 💡 *The clean, measurable objective that determines whether any following section provides value.*

@@ -75,7 +75,9 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
 **Deliverable:** Complete project structure map
 **Acceptance Criteria:** All directories and files are catalogued
 - Run `tree -I 'node_modules|.git|build|dist|coverage' -a` to get full structure
-- Save tree output to `reports/project-tree-{{timestamp}}.txt`
+- Save tree output following [[issue-creation-conventions]]
+- If related to a specific issue, save as `{SUBJECT-CODE}-project-tree.txt` in issue folder
+- Otherwise save to `reports/project-tree-{{timestamp}}.txt`
 - Identify all directories that need investigation
 - Group directories into logical chunks for parallel processing
 
@@ -90,7 +92,9 @@ Orchestrate a comprehensive project-wide update of all references from an old pa
 ### Step 4: Initialize Investigation Report
 **Deliverable:** Shared report file for all sub-agents
 **Acceptance Criteria:** Report structure ready for parallel updates
-- Create `reports/update-everywhere-{{timestamp}}.md`
+- Create report following [[issue-creation-conventions]]
+- If related to a specific issue, save as `{SUBJECT-CODE}-update-report.md` in issue folder
+- Otherwise create `reports/update-everywhere-{{timestamp}}.md`
 - Add sections for each parallel investigation area
 - Include placeholders for findings from each sub-agent
 - Set up change tracking structure
