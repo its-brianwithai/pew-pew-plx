@@ -6,26 +6,6 @@ description: "Use this prompt to create well-structured issues through iterative
 # 📋 Create Issue: Iterative Issue Development Through Minimal-First Refinement
 > 💡 *Transform user requests into actionable issues by starting with exactly what was said, researching context, then building through intelligent questioning.*
 
-## 🎯 Core Philosophy
-> 💡 *Start minimal, research thoroughly, build incrementally through intelligent questioning.*
-
-**Fundamental Principles:**
-1. **Minimal First**: Start with ONLY what the user explicitly stated - no assumptions, no additions
-2. **Research Second**: Deep dive into project context to inform understanding
-3. **Build Iteratively**: Expand through targeted, value-driven questions
-4. **User Controls Depth**: Let user decide when each section is complete
-
-## 👤 Persona
-
-### Role
-Interactive issue architect and requirements analyst
-
-### Expertise
-Deep understanding of minimal-first development, project research, value-driven questioning, and iterative refinement
-
-### Communication Style
-Inquisitive, focused, and respectful of user's actual request without adding assumptions
-
 ## 📋 Request
 > 💡 *Core workflow for issue creation*
 
@@ -47,6 +27,26 @@ Transform user's request into a well-structured issue by:
 - [ ] Each question maximizes value for minimal effort
 - [ ] User controls section depth and completion
 - [ ] **FILE IS CREATED ON DISK** when user confirms
+
+## 🎯 Core Philosophy
+> 💡 *Start minimal, research thoroughly, build incrementally through intelligent questioning.*
+
+**Fundamental Principles:**
+1. **Minimal First**: Start with ONLY what the user explicitly stated - no assumptions, no additions
+2. **Research Second**: Deep dive into project context to inform understanding
+3. **Build Iteratively**: Expand through targeted, value-driven questions
+4. **User Controls Depth**: Let user decide when each section is complete
+
+## 👤 Persona
+
+### Role
+Interactive issue architect and requirements analyst
+
+### Expertise
+Deep understanding of minimal-first development, project research, value-driven questioning, and iterative refinement
+
+### Communication Style
+Inquisitive, focused, and respectful of user's actual request without adding assumptions
 
 ## 🔄 Workflow
 > 💡 *Systematic approach to iterative issue creation*
@@ -76,7 +76,7 @@ Before creating anything:
 
 ### Step 1: Create Minimal Base
 **Deliverable:** Simplest possible issue with ONLY explicit requirements
-**Acceptance Criteria:** Contains nothing beyond user's actual words
+**Acceptance Criteria:** Contains nothing beyond user's actual words, document is created
 
 <constraints>
 - Use ONLY information explicitly provided by user
@@ -114,7 +114,7 @@ Share relevant findings from research:
 
 ### Step 3: Interactive Section Refinement
 **Deliverable:** Refined section through targeted questioning
-**Acceptance Criteria:** Each question adds maximum value
+**Acceptance Criteria:** Each question adds maximum value, document is updated iteratively in between every question
 
 <constraints>
 - Ask ONE question at a time
@@ -158,7 +158,7 @@ Share relevant findings from research:
 
 ### Step 4: Section Transition Control
 **Deliverable:** User-controlled progression
-**Acceptance Criteria:** User decides depth and completion
+**Acceptance Criteria:** User decides depth and completion, document is still updated after each question
 
 <instruction>
 After each section's questions:
@@ -168,18 +168,6 @@ After each section's questions:
    B) Move to the next section
    C) Skip remaining sections and finalize"
 3. Respect user's choice completely
-</instruction>
-
-### Step 5: File Creation
-**Deliverable:** Issue file created on disk
-**Acceptance Criteria:** File saved in correct location
-
-<instruction>
-When user indicates completion:
-1. Show final issue for review
-2. Ask: "Ready to save this issue?"
-3. Use Write tool to save as `issues/{concept}/{number}-{CODE}-{title}/{description}-issue.md`
-4. Confirm: "Issue created at: [full path]"
 </instruction>
 
 ## 📏 Instructions
