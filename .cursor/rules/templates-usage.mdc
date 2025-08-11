@@ -1,0 +1,28 @@
+---
+globs: **/*.md
+description: Guide on when to use blocks, outputs, prompts, and context templates
+---
+### Templates and prompts usage
+
+- **Blocks**
+  - Reusable content units in `templates/blocks/`; names end with `-block.md`
+  - Compose larger documents by including relevant blocks
+  - Example: [templates/blocks/title-block.md](mdc:templates/blocks/title-block.md)
+
+- **Outputs**
+  - Final artifact templates in `templates/outputs/`
+  - Example: [templates/outputs/agent-template.md](mdc:templates/outputs/agent-template.md)
+
+- **Context templates**
+  - Structural definitions in `templates/context/` (e.g., feature, role, actor)
+  - Example: [templates/context/feature-template.md](mdc:templates/context/feature-template.md)
+
+- **Prompts**
+  - Action-oriented helpers in `prompts/` used to perform operations
+  - Examples: [prompts/create-feature.md](mdc:prompts/create-feature.md), [prompts/update-template.md](mdc:prompts/update-template.md)
+
+- **Agents**
+  - Reusable compositions combining persona, workflows, instructions, and output formats
+  - Used across prompts; can be embedded with `![[agent-name]]`
+  - Example: [agents/dev/lead-developer.md](mdc:agents/dev/lead-developer.md)
+

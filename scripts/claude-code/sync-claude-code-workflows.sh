@@ -3,6 +3,7 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -14,9 +15,22 @@ fi
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    CLAUDE_COMMANDS_START_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/start"
+    BASE_ROOT="$CLAUDE_SYNC_TEMP_DIR"
 else
-    CLAUDE_COMMANDS_START_DIR="$PROJECT_ROOT/.claude/commands/start"
+    BASE_ROOT="$PROJECT_ROOT"
+fi
+
+# Derive targets from config if available
+START_DIR_DEFAULT=".claude/commands/start"
+if command -v node >/dev/null 2>&1; then
+    first_target=$($CONFIG_BIN list sync_targets.workflows 2>/dev/null | sed -n '1p' || true)
+    if [ -n "$first_target" ]; then
+        CLAUDE_COMMANDS_START_DIR="$BASE_ROOT/${first_target%/}"
+    else
+        CLAUDE_COMMANDS_START_DIR="$BASE_ROOT/$START_DIR_DEFAULT"
+    fi
+else
+    CLAUDE_COMMANDS_START_DIR="$BASE_ROOT/$START_DIR_DEFAULT"
 fi
 
 if [ ! -d "$SOURCE_DIR" ]; then

@@ -1,17 +1,12 @@
-.PHONY: sync claude pull main watch clean
+.PHONY: sync claude pull main watch
 
 # Sync Claude Code
 sync:
 ifeq ($(word 2,$(MAKECMDGOALS)),claude)
-ifeq ($(word 3,$(MAKECMDGOALS)),clean)
-	@echo "Syncing Claude Code with clean..."
-	@./scripts/claude-code/sync-claude-code.sh --clean
-else
 	@echo "Syncing Claude Code..."
 	@./scripts/claude-code/sync-claude-code.sh
-endif
 else
-	@echo "Usage: make sync claude [clean]"
+	@echo "Usage: make sync claude"
 endif
 
 # Pull latest from any branch or repository
@@ -85,9 +80,6 @@ main:
 	@:
 
 claude:
-	@:
-
-clean:
 	@:
 
 # Allow any word to be used as a target (for branch names and URLs)

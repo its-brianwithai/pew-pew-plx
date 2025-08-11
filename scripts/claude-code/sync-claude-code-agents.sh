@@ -3,16 +3,36 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    AGENTS_DIR="$PROJECT_ROOT/agents"
-    CLAUDE_AGENTS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/agents"
-    CLAUDE_COMMANDS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/act"
+    BASE_ROOT="$CLAUDE_SYNC_TEMP_DIR"
 else
-    AGENTS_DIR="$PROJECT_ROOT/agents"
-    CLAUDE_AGENTS_DIR="$PROJECT_ROOT/.claude/agents"
-    CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands/act"
+    BASE_ROOT="$PROJECT_ROOT"
+fi
+
+AGENTS_DIR="$PROJECT_ROOT/agents"
+
+# Derive targets from config if available
+CLAUDE_AGENTS_DIR_DEFAULT=".claude/agents"
+CLAUDE_COMMANDS_DIR_DEFAULT=".claude/commands/act"
+if command -v node >/dev/null 2>&1; then
+    first_target=$($CONFIG_BIN list sync_targets.agents 2>/dev/null | sed -n '1p' || true)
+    second_target=$($CONFIG_BIN list sync_targets.agents 2>/dev/null | sed -n '2p' || true)
+    if [ -n "$first_target" ]; then
+        CLAUDE_AGENTS_DIR="$BASE_ROOT/${first_target%/}"
+    else
+        CLAUDE_AGENTS_DIR="$BASE_ROOT/$CLAUDE_AGENTS_DIR_DEFAULT"
+    fi
+    if [ -n "$second_target" ]; then
+        CLAUDE_COMMANDS_DIR="$BASE_ROOT/${second_target%/}"
+    else
+        CLAUDE_COMMANDS_DIR="$BASE_ROOT/$CLAUDE_COMMANDS_DIR_DEFAULT"
+    fi
+else
+    CLAUDE_AGENTS_DIR="$BASE_ROOT/$CLAUDE_AGENTS_DIR_DEFAULT"
+    CLAUDE_COMMANDS_DIR="$BASE_ROOT/$CLAUDE_COMMANDS_DIR_DEFAULT"
 fi
 
 # Create agents directory if it doesn't exist

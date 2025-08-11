@@ -16,12 +16,18 @@ cleanup() {
 # Set trap to cleanup on exit
 trap cleanup EXIT
 
-# Check for --clean flag
-if [[ "$1" == "--clean" ]]; then
-    echo "🧹 Cleaning .claude directories..."
-    rm -rf "$PROJECT_ROOT/.claude/agents"
-    rm -rf "$PROJECT_ROOT/.claude/commands"
-    echo "✅ Clean complete!"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
+
+# Pre-sync cleanup from config
+if command -v node >/dev/null 2>&1; then
+    if [ -f "$PROJECT_ROOT/config.yaml" ] || [ -f "$PROJECT_ROOT/lib/config.yaml" ]; then
+        echo "🧹 Pre-sync cleanup per config..."
+        while IFS= read -r target; do
+            [ -z "$target" ] && continue
+            echo "  Removing $target"
+            rm -rf "$PROJECT_ROOT/$target"
+        done < <($CONFIG_BIN list delete_before_sync_targets || true)
+    fi
 fi
 
 echo "🔄 Starting Claude Code synchronization..."
@@ -82,3 +88,15 @@ mv "$TEMP_DIR/.claude/agents" "$PROJECT_ROOT/.claude/"
 mv "$TEMP_DIR/.claude/commands" "$PROJECT_ROOT/.claude/"
 
 echo "✅ Claude Code synchronization complete!"
+
+# Post-sync cleanup from config
+if command -v node >/dev/null 2>&1; then
+    if [ -f "$PROJECT_ROOT/config.yaml" ] || [ -f "$PROJECT_ROOT/lib/config.yaml" ]; then
+        echo "🧹 Post-sync cleanup per config..."
+        while IFS= read -r target; do
+            [ -z "$target" ] && continue
+            echo "  Removing $target"
+            rm -rf "$PROJECT_ROOT/$target"
+        done < <($CONFIG_BIN list delete_after_sync_targets || true)
+    fi
+fi

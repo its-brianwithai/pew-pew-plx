@@ -3,14 +3,28 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    PERSONAS_DIR="$CLAUDE_SYNC_TEMP_DIR/personas"
-    CLAUDE_COMMANDS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/act"
+    BASE_ROOT="$CLAUDE_SYNC_TEMP_DIR"
 else
-    PERSONAS_DIR="$PROJECT_ROOT/personas"
-    CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands/act"
+    BASE_ROOT="$PROJECT_ROOT"
+fi
+
+PERSONAS_DIR="$PROJECT_ROOT/personas"
+
+# Derive targets from config if available
+ACT_DIR_DEFAULT=".claude/commands/act"
+if command -v node >/dev/null 2>&1; then
+    first_target=$($CONFIG_BIN list sync_targets.personas 2>/dev/null | sed -n '1p' || true)
+    if [ -n "$first_target" ]; then
+        CLAUDE_COMMANDS_DIR="$BASE_ROOT/${first_target%/}"
+    else
+        CLAUDE_COMMANDS_DIR="$BASE_ROOT/$ACT_DIR_DEFAULT"
+    fi
+else
+    CLAUDE_COMMANDS_DIR="$BASE_ROOT/$ACT_DIR_DEFAULT"
 fi
 
 # Create personas directory if it doesn't exist

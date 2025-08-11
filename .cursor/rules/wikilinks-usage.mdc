@@ -1,0 +1,23 @@
+---
+globs: **/*.md
+description: Usage of wikilinks ([[ref]] and ![[embed]]) aligned with README
+---
+### Wikilinks usage
+
+- **Standard wikilinks**
+  - `[[component]]` resolves to dynamic loading at runtime after sync
+  - Prefer for reusable references (e.g., instructions, workflows, templates)
+
+- **Embedded wikilinks**
+  - `![[component]]` inserts actual file content during sync
+  - Must occupy their own line
+  - Use when inline content is required in the artifact
+
+- **Transformation (per README)**
+  - `[[component]]` → `@path/to/component.md` for dynamic loading
+  - `![[component]]` → inlined file content
+
+- **Rule file links**
+  - Use `mdc:` links only inside Cursor rule files to point at repo files
+  - In normal docs, prefer wikilinks over raw paths
+

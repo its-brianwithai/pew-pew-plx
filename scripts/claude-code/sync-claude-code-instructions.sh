@@ -3,6 +3,7 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -14,9 +15,22 @@ fi
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    CLAUDE_FOLLOW_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/apply"
+    BASE_ROOT="$CLAUDE_SYNC_TEMP_DIR"
 else
-    CLAUDE_FOLLOW_DIR="$PROJECT_ROOT/.claude/commands/apply"
+    BASE_ROOT="$PROJECT_ROOT"
+fi
+
+# Derive targets from config if available
+APPLY_DIR_DEFAULT=".claude/commands/apply"
+if command -v node >/dev/null 2>&1; then
+    first_target=$($CONFIG_BIN list sync_targets.instructions 2>/dev/null | sed -n '1p' || true)
+    if [ -n "$first_target" ]; then
+        CLAUDE_FOLLOW_DIR="$BASE_ROOT/${first_target%/}"
+    else
+        CLAUDE_FOLLOW_DIR="$BASE_ROOT/$APPLY_DIR_DEFAULT"
+    fi
+else
+    CLAUDE_FOLLOW_DIR="$BASE_ROOT/$APPLY_DIR_DEFAULT"
 fi
 
 if [ ! -d "$SOURCE_DIR" ]; then

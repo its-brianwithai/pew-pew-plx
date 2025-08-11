@@ -5,9 +5,24 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 SYNC_SCRIPT="$SCRIPT_DIR/sync-claude-code.sh"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
-PROMPTS_DIR="$PROJECT_ROOT/prompts"
-AGENTS_DIR="$PROJECT_ROOT/agents"
+# Build watch list from config sync_sources (fallback to core_targets)
+WATCH_DIRS=()
+if command -v node >/dev/null 2>&1; then
+    if $CONFIG_BIN json | grep -q 'sync_sources'; then
+        while IFS= read -r p; do WATCH_DIRS+=("$PROJECT_ROOT/$p"); done < <($CONFIG_BIN sources | awk -F': ' '{print $2}')
+    else
+        while IFS= read -r dir; do
+            [ -z "$dir" ] && continue
+            WATCH_DIRS+=("$PROJECT_ROOT/$dir")
+        done < <($CONFIG_BIN list core_targets || true)
+    fi
+fi
+# Fallbacks if config/tool unavailable
+if [ ${#WATCH_DIRS[@]} -eq 0 ]; then
+    WATCH_DIRS=("$PROJECT_ROOT/agents" "$PROJECT_ROOT/prompts")
+fi
 
 check_dependencies() {
     if command -v fswatch >/dev/null 2>&1; then
@@ -22,15 +37,16 @@ check_dependencies() {
 
 watch_with_fswatch() {
     echo "👀 Watching directories with fswatch (5s throttling):"
-    echo "   - $PROMPTS_DIR"
-    echo "   - $AGENTS_DIR"
+    for d in "${WATCH_DIRS[@]}"; do
+        echo "   - $d"
+    done
     echo ""
     echo "Press Ctrl+C to stop watching..."
     
     local sync_pid=""
     local last_change_time=0
     
-    fswatch -r -e ".*" -i "\.md$" "$PROMPTS_DIR" "$AGENTS_DIR" | while read file; do
+    fswatch -r -e ".*" -i "\.md$" "${WATCH_DIRS[@]}" | while read file; do
         echo "📝 File changed: $file"
         
         current_time=$(date +%s)
@@ -58,40 +74,39 @@ watch_with_fswatch() {
 
 watch_with_polling() {
     echo "👀 Watching directories with polling (5s interval + 5s throttling):"
-    echo "   - $PROMPTS_DIR"
-    echo "   - $AGENTS_DIR"
+    for d in "${WATCH_DIRS[@]}"; do
+        echo "   - $d"
+    done
     echo ""
     echo "Press Ctrl+C to stop watching..."
     
-    last_prompts_hash=""
-    last_agents_hash=""
+    declare -A last_hashes
     last_change_time=0
     sync_scheduled=false
     
     while true; do
-        if [ -d "$PROMPTS_DIR" ]; then
-            current_prompts_hash=$(find "$PROMPTS_DIR" -name "*.md" -type f -exec stat -f "%m %N" {} \; 2>/dev/null | sort | md5)
-        else
-            current_prompts_hash=""
-        fi
-        
-        if [ -d "$AGENTS_DIR" ]; then
-            current_agents_hash=$(find "$AGENTS_DIR" -name "*.md" -type f -exec stat -f "%m %N" {} \; 2>/dev/null | sort | md5)
-        else
-            current_agents_hash=""
-        fi
+        change_detected=false
+        for dir in "${WATCH_DIRS[@]}"; do
+            if [ -d "$dir" ]; then
+                current_hash=$(find "$dir" -name "*.md" -type f -exec stat -f "%m %N" {} \; 2>/dev/null | sort | md5)
+            else
+                current_hash=""
+            fi
+            if [ "${last_hashes[$dir]}" != "$current_hash" ]; then
+                if [ -n "${last_hashes[$dir]}" ]; then
+                    change_detected=true
+                fi
+                last_hashes[$dir]="$current_hash"
+            fi
+        done
         
         current_time=$(date +%s)
         
-        if [ "$current_prompts_hash" != "$last_prompts_hash" ] || [ "$current_agents_hash" != "$last_agents_hash" ]; then
-            if [ -n "$last_prompts_hash" ] || [ -n "$last_agents_hash" ]; then
-                echo "📝 Changes detected in watched directories"
-                last_change_time=$current_time
-                sync_scheduled=true
-                echo "⏳ Sync scheduled in 5 seconds (throttled)..."
-            fi
-            last_prompts_hash="$current_prompts_hash"
-            last_agents_hash="$current_agents_hash"
+        if [ "$change_detected" = true ]; then
+            echo "📝 Changes detected in watched directories"
+            last_change_time=$current_time
+            sync_scheduled=true
+            echo "⏳ Sync scheduled in 5 seconds (throttled)..."
         fi
         
         if [ "$sync_scheduled" = true ] && [ $((current_time - last_change_time)) -ge 5 ]; then

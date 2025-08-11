@@ -1,0 +1,27 @@
+---
+globs: **/*.js
+description: JavaScript coding style and structure guidance for this repository
+---
+### JavaScript style guide
+
+- **Naming**
+  - Use meaningful, descriptive names; avoid 1–2 character identifiers
+  - Functions use verb/verb-phrase names; variables use noun/noun-phrase names
+  - Prefer full words over abbreviations
+
+- **Control flow**
+  - Use guard clauses and handle error/edge cases early
+  - Avoid deep nesting beyond 2–3 levels
+
+- **Comments**
+  - Write comments only where they add value; explain "why", not "how"
+  - Do not add narration comments inside code
+
+- **Formatting**
+  - Match existing style; prefer multi-line over dense one-liners
+  - Keep lines reasonably short and readable
+
+- **CLI files**
+  - Ensure CLI entry files include a shebang `#!/usr/bin/env node` and are executable
+  - Main CLI: [bin/plx.js](mdc:bin/plx.js)
+

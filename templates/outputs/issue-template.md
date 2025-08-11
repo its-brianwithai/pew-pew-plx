@@ -159,3 +159,56 @@ NOTE: These are example TYPES only - replace with actual prohibited conditions r
 - [ ] [...]
 </example>
 ```
+
+---
+
+## 🎯 Implementation Checkpoints
+*Break down deliverables into testable, deployable increments*
+
+### Checkpoint Planning
+[Identify natural breaking points where work can be committed, tested, and potentially released]
+
+```
+<example>
+NOTE: These are example checkpoint types - replace with actual checkpoints for your issue
+### Checkpoint 1: [Foundation/MVP]
+**Scope:** [Minimal working implementation]
+**Events:** [Which events from Actor Flow are included]
+**Deliverables:** [Subset of deliverables from this checkpoint]
+**Can ship:** Yes/No
+**Acceptance:**
+- [ ] [Specific testable criteria for this checkpoint]
+- [ ] [System stable at this point]
+- [ ] [Ready for PR/commit]
+
+### Checkpoint 2: [Core Feature]
+**Scope:** [Main functionality]
+**Events:** [Additional events included]
+**Deliverables:** [Additional deliverables]
+**Can ship:** Yes/No
+**Acceptance:**
+- [ ] [Specific criteria for this checkpoint]
+- [ ] [Integration with CP1 verified]
+- [ ] [Ready for feedback]
+
+### Checkpoint 3: [Polish/Complete]
+**Scope:** [Edge cases, optimizations, final touches]
+**Events:** [Remaining events]
+**Deliverables:** [Final deliverables]
+**Can ship:** Yes
+**Acceptance:**
+- [ ] [All requirements met]
+- [ ] [Production ready]
+- [ ] [Documentation complete]
+</example>
+```
+
+### Checkpoint Dependencies
+```mermaid
+graph LR
+    CP1[Checkpoint 1] -->|Required| CP2[Checkpoint 2]
+    CP2 -->|Required| CP3[Checkpoint 3]
+    CP1 -.->|Can PR| PR1[PR/Commit]
+    CP2 -.->|Can PR| PR2[PR/Commit]
+    CP3 -.->|Can PR| PR3[PR/Commit]
+```

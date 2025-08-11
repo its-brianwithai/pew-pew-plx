@@ -3,17 +3,31 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$PROJECT_ROOT/prompts"
-    CLAUDE_COMMANDS_PLX_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/plx"
-    CLAUDE_COMMANDS_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands"
+    BASE_ROOT="$CLAUDE_SYNC_TEMP_DIR"
 else
-    SOURCE_DIR="$PROJECT_ROOT/prompts"
-    CLAUDE_COMMANDS_PLX_DIR="$PROJECT_ROOT/.claude/commands/plx"
-    CLAUDE_COMMANDS_DIR="$PROJECT_ROOT/.claude/commands"
+    BASE_ROOT="$PROJECT_ROOT"
 fi
+
+SOURCE_DIR="$PROJECT_ROOT/prompts"
+
+# Derive targets from config if available
+PLX_DIR_DEFAULT=".claude/commands/plx"
+if command -v node >/dev/null 2>&1; then
+    first_target=$($CONFIG_BIN list sync_targets.prompts 2>/dev/null | sed -n '1p' || true)
+    if [ -n "$first_target" ]; then
+        CLAUDE_COMMANDS_PLX_DIR="$BASE_ROOT/${first_target%/}"
+    else
+        CLAUDE_COMMANDS_PLX_DIR="$BASE_ROOT/$PLX_DIR_DEFAULT"
+    fi
+else
+    CLAUDE_COMMANDS_PLX_DIR="$BASE_ROOT/$PLX_DIR_DEFAULT"
+fi
+
+CLAUDE_COMMANDS_DIR="$BASE_ROOT/.claude/commands"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "📁 Creating prompts directory at $SOURCE_DIR"

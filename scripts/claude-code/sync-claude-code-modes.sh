@@ -3,16 +3,29 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/modes"
-    OUTPUT_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/activate"
-    BLOCKS_DIR="$CLAUDE_SYNC_TEMP_DIR/templates/blocks"
+    BASE_ROOT="$CLAUDE_SYNC_TEMP_DIR"
 else
-    SOURCE_DIR="$PROJECT_ROOT/modes"
-    OUTPUT_DIR="$PROJECT_ROOT/.claude/commands/activate"
-    BLOCKS_DIR="$PROJECT_ROOT/templates/blocks"
+    BASE_ROOT="$PROJECT_ROOT"
+fi
+
+SOURCE_DIR="$PROJECT_ROOT/modes"
+BLOCKS_DIR="$PROJECT_ROOT/templates/blocks"
+
+# Derive targets from config if available
+ACTIVATE_DIR_DEFAULT=".claude/commands/activate"
+if command -v node >/dev/null 2>&1; then
+    first_target=$($CONFIG_BIN list sync_targets.modes 2>/dev/null | sed -n '1p' || true)
+    if [ -n "$first_target" ]; then
+        OUTPUT_DIR="$BASE_ROOT/${first_target%/}"
+    else
+        OUTPUT_DIR="$BASE_ROOT/$ACTIVATE_DIR_DEFAULT"
+    fi
+else
+    OUTPUT_DIR="$BASE_ROOT/$ACTIVATE_DIR_DEFAULT"
 fi
 
 echo "🎮 Syncing modes..."

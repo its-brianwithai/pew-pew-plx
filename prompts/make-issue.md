@@ -211,7 +211,27 @@ Generate criteria from goals:
    - To: "✓ No files > 10MB accepted"
         "✓ No executable files allowed"
 
-### Step 6: Gap Identification
+### Step 6: Checkpoint Extraction
+**Deliverable:** Implementation milestones identified
+**Acceptance Criteria:** Natural PR/commit points found
+
+Extract checkpoints from content:
+1. **Identify Natural Breaks**
+   - Look for "first", "then", "after that" language
+   - Find independent functionality
+   - Spot foundation vs enhancement
+
+2. **Map to Progressive Milestones**
+   - Checkpoint 1: Minimum viable piece
+   - Checkpoint 2: Core functionality
+   - Checkpoint 3: Polish and edge cases
+
+3. **Assign Events and Deliverables**
+   - Which events belong to each checkpoint?
+   - What deliverables for each?
+   - Can it ship independently?
+
+### Step 7: Gap Identification
 **Deliverable:** List of clarifications needed
 **Acceptance Criteria:** All gaps documented
 
@@ -230,7 +250,7 @@ Mark with placeholders:
 [TODO: Define error message format]
 ```
 
-### Step 7: Issue Assembly
+### Step 8: Issue Assembly
 **Deliverable:** Complete issue document
 **Acceptance Criteria:** Template followed exactly
 
@@ -240,7 +260,8 @@ Assemble into [[issue-template]]:
 3. Populate all sections
 4. Add mermaid diagrams
 5. Format acceptance criteria as checklists
-6. Include clarification needs
+6. Add implementation checkpoints
+7. Include clarification needs
 
 ## 📏 Instructions
 > 💡 *Event-driven best practices, conventions, constraints and rules.*

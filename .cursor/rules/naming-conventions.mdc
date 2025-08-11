@@ -1,0 +1,24 @@
+---
+globs: **/*.md
+description: Naming conventions and content rules applied to Markdown content
+---
+### Naming conventions and content rules
+
+- **Blocks**
+  - Files in `templates/blocks/` must be suffixed with `-block.md`
+  - Use dash-based bullet lists and dash-based checkbox lists
+  - Avoid using the word "for" in instructional steps; prefer concise imperative phrasing
+
+- **Wikilinks**
+   - Use `[[reference]]` for dynamic loading and `![[embed]]` when inline content insertion is desired
+   - Embedded wikilinks must occupy their own line
+   - Use `mdc:` links only inside Cursor rule files; in normal docs, prefer wikilinks per README guidance
+
+- **Agents and prompts**
+  - `agents/` are reusable compositions (persona + workflows + instructions + output formats); role-first and not task-bounded
+  - `prompts/` are action-oriented invocations that may embed agents and blocks via wikilinks
+
+- **Issues and workflows**
+  - `issues/**` content should reference templates in `templates/outputs/` where applicable
+  - `workflows/**` should align with `instructions/**` conventions
+

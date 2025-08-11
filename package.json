@@ -5,7 +5,8 @@
   "type": "module",
   "main": "lib/index.js",
   "bin": {
-    "plx": "bin/plx.js"
+    "plx": "bin/plx.js",
+    "plx-config": "bin/plx-config.js"
   },
   "homepage": "https://pewpewprompts.com",
   "repository": {

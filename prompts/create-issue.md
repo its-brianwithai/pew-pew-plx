@@ -154,7 +154,15 @@ Share relevant findings from research:
 2. **Failure Prevention**: "What failures must we prevent?"
 3. **Invariants**: "What must always be true?"
 4. **Prohibited States**: "What should never happen?"
-5. **User Control**: "Additional criteria, or is the issue complete?"
+5. **User Control**: "Additional criteria, or move to checkpoints?"
+
+#### 3.5 Implementation Checkpoints Section Refinement
+**Question Selection Strategy:**
+1. **Natural Breaks**: "Where could we pause and create a PR/commit?"
+2. **MVP Definition**: "What's the absolute minimum that works?"
+3. **Progressive Enhancement**: "What builds on the foundation?"
+4. **Dependencies**: "Which parts must come before others?"
+5. **User Control**: "More checkpoints, or is the issue complete?"
 
 ### Step 4: Section Transition Control
 **Deliverable:** User-controlled progression
@@ -244,6 +252,7 @@ Start minimal, build only what user confirms:
 3. Actor Flow (if user provides)
 4. Deliverables (if user wants)
 5. Acceptance Criteria (if user continues)
+6. Implementation Checkpoints (if user wants to break down work)
 
 ## ✅ Critical Success Factors
 

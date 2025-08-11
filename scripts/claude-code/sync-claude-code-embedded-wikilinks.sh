@@ -3,6 +3,7 @@
 set -e
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+CONFIG_BIN="node $PROJECT_ROOT/bin/plx-config.js"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -31,14 +32,35 @@ done
 
 echo "📊 Found $total_files files to scan for embedded wikilinks"
 
+# Build search directories from config
+build_search_dirs() {
+    SEARCH_DIRS=()
+    if command -v node >/dev/null 2>&1; then
+        # Prefer sync_sources; fallback to core_targets
+        if $CONFIG_BIN json | grep -q 'sync_sources'; then
+            while IFS= read -r p; do [ -n "$p" ] && SEARCH_DIRS+=("$p"); done < <($CONFIG_BIN sources | awk -F': ' '{print $2}' | sed '/^$/d')
+        else
+            while IFS= read -r dir; do
+                [ -z "$dir" ] && continue
+                SEARCH_DIRS+=("$dir")
+            done < <($CONFIG_BIN list core_targets || true)
+        fi
+    fi
+    # Ensure templates/blocks is included if templates exists
+    if [ -d "$PROJECT_ROOT/templates/blocks" ]; then
+        SEARCH_DIRS+=("templates/blocks")
+    fi
+    # Fallbacks
+    SEARCH_DIRS+=("docs")
+}
+
+build_search_dirs
+
 # Function to search for file in project directories
 find_in_project() {
     local filename="$1"
-    local search_dirs=("templates/blocks" "prompts" "agents" "instructions" "templates" "context" "docs" "workflows" "personas" "output-formats" "modes")
-    
-    for dir in "${search_dirs[@]}"; do
+    for dir in "${SEARCH_DIRS[@]}"; do
         if [ -d "$PROJECT_ROOT/$dir" ]; then
-            # Search recursively in the directory
             local found=$(find "$PROJECT_ROOT/$dir" -name "$filename.md" -type f | head -1)
             if [ -n "$found" ]; then
                 echo "$found"
@@ -46,7 +68,6 @@ find_in_project() {
             fi
         fi
     done
-    
     return 1
 }
 

@@ -1,0 +1,56 @@
+---
+globs: prompts/create-issue.md
+description: Guidance and constraints for the Create Issue prompt
+---
+### Create Issue prompt rules
+
+- **Source**: [prompts/create-issue.md](mdc:prompts/create-issue.md)
+
+- **Core philosophy**
+  - Minimal first
+  - Research second
+  - Build iteratively through single, high-value questions
+  - User controls depth and completion
+
+- **Step 0 research**
+  - Parse user request to extract only explicit statements
+  - Search repository to find similar issues, related components, conventions
+  - Understand domain and technical context
+  - Do not add requirements from research; use findings to inform questions
+
+- **Workflow requirements**
+  - Step 1: Create minimal base with only explicit user input
+  - Step 2: Present research findings without adding requirements
+  - Step 3: Interactive refinement using one question at a time; after 3–5 questions ask whether to continue
+  - Step 4: Section transition control with explicit A/B/C choice
+
+- **Deliverables**
+  - Minimal initial issue based on exact user request
+  - Research findings
+  - Iteratively refined sections
+  - Actual file created on disk upon user confirmation
+
+- **Acceptance criteria**
+  - Initial issue contains only explicit requirements
+  - Research informs questions without introducing assumptions
+  - Single-question cadence with periodic continuation check
+  - File created on disk when user confirms
+
+- **Output format**
+  - Format type: Markdown following `[[issue-template]]`
+  - File location: `issues/{concept}/{number}-{CODE}-{title}/{description}-issue.md`
+  - Conventions: `[[issue-creation-conventions]]`
+  - Progressive structure: Title/description → Requirements → Actor Flow → Deliverables → Acceptance Criteria (only as user proceeds)
+
+- **Must do**
+  - Start with the minimum from the user’s words
+  - Research the project before creating content
+  - Ask single, high-value questions
+  - Create the file when confirmed
+
+- **Must not do**
+  - Add requirements not mentioned by the user
+  - Assume complex features without confirmation
+  - Skip the research phase
+  - Present the entire issue only in chat instead of creating the file
+
