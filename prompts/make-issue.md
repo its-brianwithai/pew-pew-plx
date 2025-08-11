@@ -352,6 +352,22 @@ Assemble into [[issue-template]]:
 - MUST be verifiable
 - NEVER use subjective measures
 
+### WHEN extracting checkpoints
+**Best Practices:**
+- Look for sequential dependencies
+- Identify independent pieces
+- Find natural commit points
+
+**Extraction Patterns:**
+- "First do X" → Checkpoint 1
+- "Then add Y" → Checkpoint 2
+- "Finally polish Z" → Checkpoint 3
+
+**Rules:**
+- ALWAYS make each checkpoint testable
+- MUST be able to PR independently
+- NEVER create artificial breaks
+
 ### WHEN identifying gaps
 **Best Practices:**
 - Note all assumptions made
