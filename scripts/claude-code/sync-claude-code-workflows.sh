@@ -2,17 +2,9 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
-CONFIG_BIN="node $REPO_ROOT/bin/plx-config.js"
-
-# Use temp directory if available, otherwise use project directory
-if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$PROJECT_ROOT/workflows"
-else
-    SOURCE_DIR="$PROJECT_ROOT/workflows"
-fi
-# Removed old path
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -21,18 +13,25 @@ else
     BASE_ROOT="$PROJECT_ROOT"
 fi
 
-# Derive targets from config if available
-START_DIR_DEFAULT=".claude/commands/start"
-if command -v node >/dev/null 2>&1; then
-    first_target=$($CONFIG_BIN list sync_targets.workflows 2>/dev/null | sed -n '1p' || true)
-    if [ -n "$first_target" ]; then
-        CLAUDE_COMMANDS_START_DIR="$BASE_ROOT/${first_target%/}"
-    else
-        CLAUDE_COMMANDS_START_DIR="$BASE_ROOT/$START_DIR_DEFAULT"
-    fi
-else
-    CLAUDE_COMMANDS_START_DIR="$BASE_ROOT/$START_DIR_DEFAULT"
+# Get source directories from YAML config
+WORKFLOWS_SOURCE=$("$YAML_PARSER" get_sources workflows | head -1)
+if [ -z "$WORKFLOWS_SOURCE" ]; then
+    WORKFLOWS_SOURCE="workflows"  # Default fallback
 fi
+SOURCE_DIR="$PROJECT_ROOT/$WORKFLOWS_SOURCE"
+
+# Get target directories from YAML config
+WORKFLOW_TARGETS=()
+while IFS= read -r line; do
+    WORKFLOW_TARGETS+=("$line")
+done < <("$YAML_PARSER" get_targets workflows)
+if [ ${#WORKFLOW_TARGETS[@]} -eq 0 ]; then
+    # Fallback to defaults if no targets found
+    WORKFLOW_TARGETS=(".claude/commands/start/")
+fi
+
+# Set primary target
+CLAUDE_COMMANDS_START_DIR="$BASE_ROOT/${WORKFLOW_TARGETS[0]%/}"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "📁 Creating workflows directory at $SOURCE_DIR"

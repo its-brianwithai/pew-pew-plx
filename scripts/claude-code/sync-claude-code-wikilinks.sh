@@ -3,9 +3,9 @@
 # Be tolerant of unresolved links; do not fail sync due to missing optional references
 set +e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
-CONFIG_BIN="node $REPO_ROOT/bin/plx-config.js"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -27,39 +27,47 @@ done
 
 echo "📊 Found $total_files files to process"
 
-# Build search directories from config core_targets
+# Build search directories from config
 build_search_dirs() {
     SEARCH_DIRS=()
-    if command -v node >/dev/null 2>&1; then
-        # Prefer sync_sources; fallback to core_targets
-        if $CONFIG_BIN json | grep -q 'sync_sources'; then
-            while IFS= read -r p; do
-                [ -z "$p" ] && continue
-                if [ -d "$REPO_ROOT/$p" ]; then
-                    SEARCH_DIRS+=("$REPO_ROOT/$p")
-                elif [ -d "$PROJECT_ROOT/$p" ]; then
-                    SEARCH_DIRS+=("$PROJECT_ROOT/$p")
-                else
-                    SEARCH_DIRS+=("$REPO_ROOT/$p")
-                fi
-            done < <($CONFIG_BIN sources | awk -F': ' '{print $2}' | sed '/^$/d')
-        else
-            while IFS= read -r dir; do
-                [ -z "$dir" ] && continue
-                if [ -d "$REPO_ROOT/$dir" ]; then
-                    SEARCH_DIRS+=("$REPO_ROOT/$dir")
-                elif [ -d "$PROJECT_ROOT/$dir" ]; then
-                    SEARCH_DIRS+=("$PROJECT_ROOT/$dir")
-                else
-                    SEARCH_DIRS+=("$REPO_ROOT/$dir")
-                fi
-            done < <($CONFIG_BIN list core_targets || true)
+    
+    # Get source directories from YAML if parser available
+    if [ -f "$YAML_PARSER" ]; then
+        for type in $("$YAML_PARSER" list_source_types); do
+            while IFS= read -r source; do
+                [ -z "$source" ] && continue
+                local dir="$PROJECT_ROOT/$source"
+                [ -d "$dir" ] && SEARCH_DIRS+=("$dir")
+            done < <("$YAML_PARSER" get_sources "$type")
+        done
+    fi
+    
+    # Add default search directories
+    local default_dirs=(
+        "$PROJECT_ROOT/blocks"
+        "$PROJECT_ROOT/agents"
+        "$PROJECT_ROOT/instructions"
+        "$PROJECT_ROOT/prompts"
+        "$PROJECT_ROOT/workflows"
+        "$PROJECT_ROOT/templates"
+        "$PROJECT_ROOT/personas"
+        "$PROJECT_ROOT/output-formats"
+        "$PROJECT_ROOT/modes"
+    )
+    
+    for dir in "${default_dirs[@]}"; do
+        if [ -d "$dir" ]; then
+            # Check if not already in SEARCH_DIRS
+            local found=0
+            for existing in "${SEARCH_DIRS[@]}"; do
+                [ "$existing" = "$dir" ] && found=1 && break
+            done
+            [ $found -eq 0 ] && SEARCH_DIRS+=("$dir")
         fi
-    fi
-    if [ -d "$REPO_ROOT/pew-pew-workspace/blocks" ]; then
-        SEARCH_DIRS+=("$REPO_ROOT/pew-pew-workspace/blocks")
-    fi
-    [ -d "$REPO_ROOT/docs" ] && SEARCH_DIRS+=("$REPO_ROOT/docs")
+    done
+    
+    # Add docs if exists
+    [ -d "$PROJECT_ROOT/docs" ] && SEARCH_DIRS+=("$PROJECT_ROOT/docs")
 }
 
 build_search_dirs

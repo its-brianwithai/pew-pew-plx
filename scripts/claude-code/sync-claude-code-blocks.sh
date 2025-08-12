@@ -2,22 +2,36 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/blocks"
+    BASE_ROOT="$CLAUDE_SYNC_TEMP_DIR"
 else
-    SOURCE_DIR="$PROJECT_ROOT/blocks"
+    BASE_ROOT="$PROJECT_ROOT"
 fi
-# Removed old path
 
-# Use temp directory if available, otherwise use project directory
-if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    CLAUDE_COMMANDS_USE_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude/commands/use"
-else
-    CLAUDE_COMMANDS_USE_DIR="$PROJECT_ROOT/.claude/commands/use"
+# Get source directories from YAML config
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
 fi
+SOURCE_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
+# Get target directories from YAML config
+BLOCK_TARGETS=()
+while IFS= read -r line; do
+    BLOCK_TARGETS+=("$line")
+done < <("$YAML_PARSER" get_targets blocks)
+if [ ${#BLOCK_TARGETS[@]} -eq 0 ]; then
+    # Fallback to default if no targets found
+    BLOCK_TARGETS=(".claude/commands/add/")
+fi
+
+# Set primary target - blocks should go to commands/add based on YAML
+CLAUDE_COMMANDS_ADD_DIR="$BASE_ROOT/${BLOCK_TARGETS[0]%/}"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "📁 Creating blocks directory at $SOURCE_DIR"
@@ -25,9 +39,9 @@ if [ ! -d "$SOURCE_DIR" ]; then
 fi
 
 echo "🧱 Creating Claude block commands directory..."
-mkdir -p "$CLAUDE_COMMANDS_USE_DIR"
+mkdir -p "$CLAUDE_COMMANDS_ADD_DIR"
 
-echo "🧱 Processing blocks from $SOURCE_DIR to $CLAUDE_COMMANDS_USE_DIR..."
+echo "🧱 Processing blocks from $SOURCE_DIR to $CLAUDE_COMMANDS_ADD_DIR..."
 
 # Process each block file (excluding command blocks)
 block_count=0
@@ -35,7 +49,7 @@ for block_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" ! 
     if [ -f "$block_file" ]; then
         # Keep the original filename
         basename=$(basename "$block_file")
-        output_file="$CLAUDE_COMMANDS_USE_DIR/$basename"
+        output_file="$CLAUDE_COMMANDS_ADD_DIR/$basename"
         
         # Create a temporary file
         temp_file=$(mktemp)
@@ -72,7 +86,7 @@ for block_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" ! 
         
         # Move processed file to final location
         mv "$temp_file" "$output_file"
-        echo "✅ Created use/$basename"
+        echo "✅ Created add/$basename"
         ((block_count++))
     fi
 done

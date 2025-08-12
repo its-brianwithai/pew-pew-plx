@@ -2,17 +2,9 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
-CONFIG_BIN="node $REPO_ROOT/bin/plx-config.js"
-
-# Use temp directory if available, otherwise use project directory
-if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$PROJECT_ROOT/templates"
-else
-    SOURCE_DIR="$PROJECT_ROOT/templates"
-fi
-# Removed old path
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -21,18 +13,25 @@ else
     BASE_ROOT="$PROJECT_ROOT"
 fi
 
-# Derive targets from config if available
-USE_DIR_DEFAULT=".claude/commands/use"
-if command -v node >/dev/null 2>&1; then
-    first_target=$($CONFIG_BIN list sync_targets.templates 2>/dev/null | sed -n '1p' || true)
-    if [ -n "$first_target" ]; then
-        CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/${first_target%/}"
-    else
-        CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/$USE_DIR_DEFAULT"
-    fi
-else
-    CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/$USE_DIR_DEFAULT"
+# Get source directories from YAML config
+TEMPLATES_SOURCE=$("$YAML_PARSER" get_sources templates | head -1)
+if [ -z "$TEMPLATES_SOURCE" ]; then
+    TEMPLATES_SOURCE="templates"  # Default fallback
 fi
+SOURCE_DIR="$PROJECT_ROOT/$TEMPLATES_SOURCE"
+
+# Get target directories from YAML config
+TEMPLATE_TARGETS=()
+while IFS= read -r line; do
+    TEMPLATE_TARGETS+=("$line")
+done < <("$YAML_PARSER" get_targets templates)
+if [ ${#TEMPLATE_TARGETS[@]} -eq 0 ]; then
+    # Fallback to defaults if no targets found
+    TEMPLATE_TARGETS=(".claude/commands/use/")
+fi
+
+# Set primary target
+CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/${TEMPLATE_TARGETS[0]%/}"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "📁 Creating templates directory at $SOURCE_DIR"

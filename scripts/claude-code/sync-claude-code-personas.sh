@@ -2,9 +2,9 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
-CONFIG_BIN="node $REPO_ROOT/bin/plx-config.js"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -13,20 +13,25 @@ else
     BASE_ROOT="$PROJECT_ROOT"
 fi
 
-PERSONAS_DIR="$PROJECT_ROOT/personas"
-
-# Derive targets from config if available
-ACT_DIR_DEFAULT=".claude/commands/act"
-if command -v node >/dev/null 2>&1; then
-    first_target=$($CONFIG_BIN list sync_targets.personas 2>/dev/null | sed -n '1p' || true)
-    if [ -n "$first_target" ]; then
-        CLAUDE_COMMANDS_DIR="$BASE_ROOT/${first_target%/}"
-    else
-        CLAUDE_COMMANDS_DIR="$BASE_ROOT/$ACT_DIR_DEFAULT"
-    fi
-else
-    CLAUDE_COMMANDS_DIR="$BASE_ROOT/$ACT_DIR_DEFAULT"
+# Get source directories from YAML config
+PERSONAS_SOURCE=$("$YAML_PARSER" get_sources personas | head -1)
+if [ -z "$PERSONAS_SOURCE" ]; then
+    PERSONAS_SOURCE="personas"  # Default fallback
 fi
+PERSONAS_DIR="$PROJECT_ROOT/$PERSONAS_SOURCE"
+
+# Get target directories from YAML config
+PERSONA_TARGETS=()
+while IFS= read -r line; do
+    PERSONA_TARGETS+=("$line")
+done < <("$YAML_PARSER" get_targets personas)
+if [ ${#PERSONA_TARGETS[@]} -eq 0 ]; then
+    # Fallback to defaults if no targets found
+    PERSONA_TARGETS=(".claude/commands/act/")
+fi
+
+# Set primary target
+CLAUDE_COMMANDS_DIR="$BASE_ROOT/${PERSONA_TARGETS[0]%/}"
 
 # Create personas directory if it doesn't exist
 if [ ! -d "$PERSONAS_DIR" ]; then

@@ -2,17 +2,9 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
-CONFIG_BIN="node $REPO_ROOT/bin/plx-config.js"
-
-# Use temp directory if available, otherwise use project directory
-if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/output-formats"
-else
-    SOURCE_DIR="$PROJECT_ROOT/output-formats"
-fi
-# Removed old path
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -21,18 +13,25 @@ else
     BASE_ROOT="$PROJECT_ROOT"
 fi
 
-# Derive targets from config if available
-USE_DIR_DEFAULT=".claude/commands/use"
-if command -v node >/dev/null 2>&1; then
-    first_target=$($CONFIG_BIN list sync_targets.output-formats 2>/dev/null | sed -n '1p' || true)
-    if [ -n "$first_target" ]; then
-        CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/${first_target%/}"
-    else
-        CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/$USE_DIR_DEFAULT"
-    fi
-else
-    CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/$USE_DIR_DEFAULT"
+# Get source directories from YAML config
+OUTPUT_FORMATS_SOURCE=$("$YAML_PARSER" get_sources output-formats | head -1)
+if [ -z "$OUTPUT_FORMATS_SOURCE" ]; then
+    OUTPUT_FORMATS_SOURCE="output-formats"  # Default fallback
 fi
+SOURCE_DIR="$PROJECT_ROOT/$OUTPUT_FORMATS_SOURCE"
+
+# Get target directories from YAML config
+OUTPUT_FORMAT_TARGETS=()
+while IFS= read -r line; do
+    OUTPUT_FORMAT_TARGETS+=("$line")
+done < <("$YAML_PARSER" get_targets output-formats)
+if [ ${#OUTPUT_FORMAT_TARGETS[@]} -eq 0 ]; then
+    # Fallback to defaults if no targets found - yaml shows output not use
+    OUTPUT_FORMAT_TARGETS=(".claude/commands/output/")
+fi
+
+# Set primary target  
+CLAUDE_COMMANDS_OUTPUT_DIR="$BASE_ROOT/${OUTPUT_FORMAT_TARGETS[0]%/}"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "📁 Creating output-formats directory at $SOURCE_DIR"
@@ -40,9 +39,9 @@ if [ ! -d "$SOURCE_DIR" ]; then
 fi
 
 echo "📄 Creating Claude output format commands directory..."
-mkdir -p "$CLAUDE_COMMANDS_USE_DIR"
+mkdir -p "$CLAUDE_COMMANDS_OUTPUT_DIR"
 
-echo "📄 Processing output formats from $SOURCE_DIR to $CLAUDE_COMMANDS_USE_DIR..."
+echo "📄 Processing output formats from $SOURCE_DIR to $CLAUDE_COMMANDS_OUTPUT_DIR..."
 
 # Process each output format file
 format_count=0
@@ -50,7 +49,7 @@ for format_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" !
     if [ -f "$format_file" ]; then
         # Keep the original filename
         basename=$(basename "$format_file")
-        output_file="$CLAUDE_COMMANDS_USE_DIR/$basename"
+        output_file="$CLAUDE_COMMANDS_OUTPUT_DIR/$basename"
         
         # Create a temporary file
         temp_file=$(mktemp)
@@ -83,7 +82,7 @@ for format_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" !
         
         # Move processed file to final location
         mv "$temp_file" "$output_file"
-        echo "✅ Created use/$basename"
+        echo "✅ Created output/$basename"
         ((format_count++))
     fi
 done

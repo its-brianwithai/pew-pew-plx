@@ -4,7 +4,7 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 TEMP_DIR="$PROJECT_ROOT/tmp/claude-sync/"
 
 # Cleanup function
@@ -17,18 +17,14 @@ cleanup() {
 # Set trap to cleanup on exit
 trap cleanup EXIT
 
-CONFIG_BIN="node $REPO_ROOT/bin/plx-config.js"
-
-# Pre-sync cleanup from config
-if command -v node >/dev/null 2>&1; then
-    if [ -f "$PROJECT_ROOT/config.yaml" ] || [ -f "$PROJECT_ROOT/lib/config.yaml" ]; then
-        echo "🧹 Pre-sync cleanup per config..."
-        while IFS= read -r target; do
-            [ -z "$target" ] && continue
-            echo "  Removing $target"
-            rm -rf "$PROJECT_ROOT/$target"
-        done < <($CONFIG_BIN list delete_before_sync_targets || true)
-    fi
+# Pre-sync cleanup from YAML config
+if [ -f "$PROJECT_ROOT/plx.yaml" ]; then
+    echo "🧹 Pre-sync cleanup per config..."
+    while IFS= read -r target; do
+        [ -z "$target" ] && continue
+        echo "  Removing $PROJECT_ROOT/$target"
+        rm -rf "$PROJECT_ROOT/$target"
+    done < <("$YAML_PARSER" get_delete_before || true)
 fi
 
 echo "🔄 Starting Claude Code synchronization..."
@@ -90,14 +86,12 @@ mv "$TEMP_DIR/.claude/commands" "$PROJECT_ROOT/.claude/"
 
 echo "✅ Claude Code synchronization complete!"
 
-# Post-sync cleanup from config
-if command -v node >/dev/null 2>&1; then
-    if [ -f "$PROJECT_ROOT/config.yaml" ] || [ -f "$PROJECT_ROOT/lib/config.yaml" ]; then
-        echo "🧹 Post-sync cleanup per config..."
-        while IFS= read -r target; do
-            [ -z "$target" ] && continue
-            echo "  Removing $target"
-            rm -rf "$PROJECT_ROOT/$target"
-        done < <($CONFIG_BIN list delete_after_sync_targets || true)
-    fi
+# Post-sync cleanup from YAML config
+if [ -f "$PROJECT_ROOT/plx.yaml" ]; then
+    echo "🧹 Post-sync cleanup per config..."
+    while IFS= read -r target; do
+        [ -z "$target" ] && continue
+        echo "  Removing $PROJECT_ROOT/$target"
+        rm -rf "$PROJECT_ROOT/$target"
+    done < <("$YAML_PARSER" get_delete_after || true)
 fi

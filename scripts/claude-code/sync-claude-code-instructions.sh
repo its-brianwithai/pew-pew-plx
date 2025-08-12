@@ -2,17 +2,9 @@
 
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
-CONFIG_BIN="node $REPO_ROOT/bin/plx-config.js"
-
-# Use temp directory if available, otherwise use project directory
-if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
-    SOURCE_DIR="$CLAUDE_SYNC_TEMP_DIR/instructions"
-else
-    SOURCE_DIR="$PROJECT_ROOT/instructions"
-fi
-# Removed old path
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
@@ -21,18 +13,25 @@ else
     BASE_ROOT="$PROJECT_ROOT"
 fi
 
-# Derive targets from config if available
-APPLY_DIR_DEFAULT=".claude/commands/apply"
-if command -v node >/dev/null 2>&1; then
-    first_target=$($CONFIG_BIN list sync_targets.instructions 2>/dev/null | sed -n '1p' || true)
-    if [ -n "$first_target" ]; then
-        CLAUDE_FOLLOW_DIR="$BASE_ROOT/${first_target%/}"
-    else
-        CLAUDE_FOLLOW_DIR="$BASE_ROOT/$APPLY_DIR_DEFAULT"
-    fi
-else
-    CLAUDE_FOLLOW_DIR="$BASE_ROOT/$APPLY_DIR_DEFAULT"
+# Get source directories from YAML config
+INSTRUCTIONS_SOURCE=$("$YAML_PARSER" get_sources instructions | head -1)
+if [ -z "$INSTRUCTIONS_SOURCE" ]; then
+    INSTRUCTIONS_SOURCE="instructions"  # Default fallback
 fi
+SOURCE_DIR="$PROJECT_ROOT/$INSTRUCTIONS_SOURCE"
+
+# Get target directories from YAML config
+INSTRUCTION_TARGETS=()
+while IFS= read -r line; do
+    INSTRUCTION_TARGETS+=("$line")
+done < <("$YAML_PARSER" get_targets instructions)
+if [ ${#INSTRUCTION_TARGETS[@]} -eq 0 ]; then
+    # Fallback to defaults if no targets found
+    INSTRUCTION_TARGETS=(".claude/commands/apply/")
+fi
+
+# Set primary target
+CLAUDE_FOLLOW_DIR="$BASE_ROOT/${INSTRUCTION_TARGETS[0]%/}"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "📁 Creating instructions directory at $SOURCE_DIR"

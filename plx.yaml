@@ -15,6 +15,8 @@ sync_sources:
     - workflows
   modes:
     - modes
+  blocks:
+    - blocks
 
 delete_before_sync_targets:
   - .claude/agents
@@ -40,3 +42,5 @@ sync_targets:
     - .claude/commands/apply/
   workflows:
     - .claude/commands/start/
+  modes:
+    - .claude/commands/activate/
