@@ -1,4 +1,4 @@
-# 📋 Result Report: {Title of Task/Story}
+# 📋 Work Log: {Title of Task/Story}
 
 > This report details the implementation of the work described in `{Ticket/Story ID}`. It provides a comprehensive overview of all changes, the reasoning behind them, and a guide for manual verification. The goal is to give any stakeholder a complete understanding of the work done.
 

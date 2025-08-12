@@ -1,5 +1,4 @@
 # ✅ Best Practices for: {Topic}
-
 > A curated list of best practices for {Topic}. This document serves as a guide to ensure we produce a high-quality, maintainable, and robust outcome. Adhering to these practices will help us avoid common pitfalls and align on a consistent approach.
 
 ## Practice 1: [Name of the Best Practice]
