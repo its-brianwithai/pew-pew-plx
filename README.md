@@ -96,7 +96,9 @@ Specifications for how deliverables should be structured - templates, format typ
 
 ### The Modular Approach
 
-Each component can and should be extracted and referenced via wikilinks when it can be reused:
+Each component can and should be extracted and referenced via wikilinks when it can be reused. During sync:
+- `[[wikilinks]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
+- `![[embedded-wikilinks]]` are replaced with the actual file content inline
 
 ```mermaid
 graph LR
