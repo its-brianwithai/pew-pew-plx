@@ -13,16 +13,7 @@
 Add the Pew Pew framework to any existing project with a single command:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/its-brianwithai/pew-pew-workspace/main/install.sh | bash
-```
-
-Or manually download and set up:
-
-```bash
-# Download framework files to your current project
-curl -L https://github.com/its-brianwithai/pew-pew-workspace/archive/main.tar.gz | \
-tar -xz --strip-components=1 pew-pew-workspace-main/{agents,prompts,templates,workflows,instructions,modes,blocks,output-formats,personas,scripts,plx.yaml} && \
-./scripts/claude-code/sync-claude-code.sh
+git clone --depth 1 https://github.com/codaveto/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && cp -r /tmp/pew-pew/{agents,prompts,templates,workflows,instructions,modes,blocks,output-formats,personas,scripts,plx.yaml} . && ./scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
 ```
 
 This will:
