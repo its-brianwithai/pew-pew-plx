@@ -41,6 +41,12 @@ fi
 echo "🔄 Creating Claude workflow commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_START_DIR"
 
+# Create source directory if it doesn't exist
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating workflows directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
+fi
+
 echo "🔄 Processing workflows from $SOURCE_DIR to $CLAUDE_COMMANDS_START_DIR..."
 
 # Process each workflow file

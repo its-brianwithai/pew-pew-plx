@@ -41,6 +41,12 @@ fi
 echo "📚 Creating Claude apply directory..."
 mkdir -p "$CLAUDE_FOLLOW_DIR"
 
+# Create source directory if it doesn't exist
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating instructions directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
+fi
+
 echo "📚 Processing instructions from $SOURCE_DIR to $CLAUDE_FOLLOW_DIR..."
 
 # Process each instruction file

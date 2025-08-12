@@ -42,6 +42,12 @@ if [ ! -d "$SOURCE_DIR" ]; then
     mkdir -p "$SOURCE_DIR"
 fi
 
+# Create source directory if it doesn't exist
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating modes directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
+fi
+
 # Create output directory
 mkdir -p "$OUTPUT_DIR"
 

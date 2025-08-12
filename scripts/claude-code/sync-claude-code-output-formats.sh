@@ -41,6 +41,12 @@ fi
 echo "📄 Creating Claude output format commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_OUTPUT_DIR"
 
+# Create source directory if it doesn't exist
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating output-formats directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
+fi
+
 echo "📄 Processing output formats from $SOURCE_DIR to $CLAUDE_COMMANDS_OUTPUT_DIR..."
 
 # Process each output format file

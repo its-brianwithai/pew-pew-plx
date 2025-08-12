@@ -49,6 +49,12 @@ echo "📋 Creating Claude agents and commands directories..."
 mkdir -p "$CLAUDE_AGENTS_DIR"
 mkdir -p "$CLAUDE_COMMANDS_DIR"
 
+# Create source directory if it doesn't exist
+if [ ! -d "$AGENTS_DIR" ]; then
+    echo "📁 Creating agents directory at $AGENTS_DIR"
+    mkdir -p "$AGENTS_DIR"
+fi
+
 echo "📋 Copying agents from $AGENTS_DIR to $CLAUDE_AGENTS_DIR..."
 
 # Copy all .md files from all subdirectories to the root of CLAUDE_AGENTS_DIR (flat copy)

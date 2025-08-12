@@ -41,6 +41,12 @@ fi
 echo "🧱 Creating Claude block commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_ADD_DIR"
 
+# Create source directory if it doesn't exist
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating blocks directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
+fi
+
 echo "🧱 Processing blocks from $SOURCE_DIR to $CLAUDE_COMMANDS_ADD_DIR..."
 
 # Process each block file (excluding command blocks)

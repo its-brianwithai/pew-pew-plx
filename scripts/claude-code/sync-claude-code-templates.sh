@@ -41,6 +41,12 @@ fi
 echo "📋 Creating Claude use commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_USE_DIR"
 
+# Create source directory if it doesn't exist
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating templates directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
+fi
+
 echo "📋 Processing templates from $SOURCE_DIR to $CLAUDE_COMMANDS_USE_DIR..."
 
 # Process each template file

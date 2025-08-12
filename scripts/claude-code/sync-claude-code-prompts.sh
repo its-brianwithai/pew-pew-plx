@@ -43,6 +43,12 @@ fi
 echo "🎯 Creating Claude plx commands directory..."
 mkdir -p "$CLAUDE_COMMANDS_PLX_DIR"
 
+# Create source directory if it doesn't exist
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "📁 Creating prompts directory at $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR"
+fi
+
 echo "🎯 Processing prompts from $SOURCE_DIR to $CLAUDE_COMMANDS_PLX_DIR..."
 
 # Process all .md files from prompts directory
