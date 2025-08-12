@@ -420,48 +420,25 @@ updates:
 ### Directory Structure
 ```
 pew-pew-plx/
-├── agents/          # Specialized AI agents organized by category
-│   ├── claude/      # Claude Code specialists
-│   ├── dev/         # Development experts
-│   ├── discovery/   # Research specialists
-│   ├── meta/        # Meta-framework agents
-│   ├── plan/        # Planning and orchestration
-│   └── review/      # Quality assurance agents
-├── prompts/         # Quick-action commands
-│   ├── create.md
-│   ├── update.md
-│   ├── make-anything.md
-│   ├── shard-anything.md
-│   └── 90+ specialized prompts
-├── templates/       # Document templates
-│   ├── outputs/     # Complete templates (30+ files)
-│   └── blocks/      # Reusable sections (80+ blocks)
-├── workflows/       # Multi-step processes
-│   ├── bug-workflow.md
-│   ├── feature-workflow.md
-│   ├── refinement-workflow.md
-│   └── feedback-triage-workflow.md
-├── instructions/    # Conventions and rules
+├── pew-pew-workspace/  # Primary source content for sync
+│   ├── agents/         # Specialized AI agents organized by category
+│   ├── prompts/        # Quick-action commands
+│   ├── templates/      # Document templates (outputs + blocks)
+│   ├── workflows/      # Multi-step processes
+│   ├── output-formats/ # Response format specifications
+│   └── scripts/        # Sync and utility scripts (claude-code/*)
+├── pew-pew-teams/      # Upstream team content (00-…-07…, 100-all-teams)
+├── instructions/       # Conventions and rules
 │   ├── best-practices/
 │   ├── conventions/
 │   └── rules/
-├── modes/           # Behavioral modifications
+├── modes/              # Behavioral modifications
 │   └── question-mode.md
-├── context/         # Project knowledge (not synced)
-│   ├── collections/ # Reference collections
-│   ├── docs/        # Documentation
-│   ├── platforms/   # Platform contexts
-│   ├── roles/       # Role definitions
-│   └── teams/       # Team structures
-├── issues/          # Issue management (not synced)
+├── issues/             # Issue management (not synced)
 │   ├── configuration/
 │   ├── tech/
 │   └── workflows/
-├── output-formats/  # Response format specifications
-├── drafts/          # Work in progress (not synced)
-├── feedback/        # Framework feedback (not synced)
-└── scripts/         # Sync and utility scripts
-    └── claude-code/ # Claude Code sync scripts
+└── plx.yaml            # Sync/configuration root
 ```
 
 ### Sync Transformation
@@ -556,14 +533,14 @@ Each method leverages the same modular components, demonstrating the framework's
 
 ## 📚 Documentation
 
-- **Prompts**: See `prompts/` for all creation commands (94 files)
-- **Agents**: See `agents/` for specialized expertise (38 agents across 6 categories)
-- **Templates**: See `templates/` for structured formats (30 outputs + 80+ blocks)
-- **Workflows**: See `workflows/` for orchestrated processes (5 workflows)
-- **Instructions**: See `instructions/` for conventions and rules
-- **Output Formats**: See `output-formats/` for response specifications
-- **Modes**: See `modes/` for behavioral modifications
-- **Context**: See `context/` for project knowledge and references
+- **Prompts**: See `pew-pew-workspace/prompts/`
+- **Agents**: See `pew-pew-workspace/agents/`
+- **Templates**: See `pew-pew-workspace/templates/`
+- **Workflows**: See `pew-pew-workspace/workflows/`
+- **Output Formats**: See `pew-pew-workspace/output-formats/`
+- **Instructions**: See `instructions/`
+- **Modes**: See `modes/`
+- **Teams**: See `pew-pew-teams/` for team-organized materials
 
 ## 🤝 Contributing
 
@@ -582,9 +559,9 @@ MIT License - see [LICENSE](LICENSE) for details
 ## 🔗 Links
 
 - **Website**: [pewpewprompts.com](https://pewpewprompts.com)
-- **Repository**: [GitHub](https://github.com/its-brianwithai/pew-pew-projects)
+- **Repository**: [GitHub](https://github.com/its-brianwithai/pew-pew-plx)
 - **npm Package**: [pew-pew-plx](https://www.npmjs.com/package/pew-pew-plx)
-- **Issues**: [GitHub Issues](https://github.com/its-brianwithai/pew-pew-projects/issues)
+- **Issues**: [GitHub Issues](https://github.com/its-brianwithai/pew-pew-plx/issues)
 
 ---
 

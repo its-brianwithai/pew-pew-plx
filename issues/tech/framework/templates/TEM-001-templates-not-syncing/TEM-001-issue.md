@@ -6,7 +6,7 @@ This PR fixes a critical issue where templates were not being synced to Claude C
 
 ### Files Changed
 
-- [`scripts/claude-code/sync-claude-code-templates.sh`](../scripts/claude-code/sync-claude-code-templates.sh) - Modified template discovery logic
+- [`pew-pew-workspace/scripts/claude-code/sync-claude-code-templates.sh`](../pew-pew-workspace/scripts/claude-code/sync-claude-code-templates.sh) - Modified template discovery logic
 
 ### Related Issue
 
@@ -98,7 +98,7 @@ done
 
 ### Why This Solution
 
-1. **Consistency with Other Scripts**: The agents sync script ([`sync-claude-code-agents.sh`](../scripts/claude-code/sync-claude-code-agents.sh)) already uses `find` for recursive search:
+1. **Consistency with Other Scripts**: The agents sync script ([`sync-claude-code-agents.sh`](../pew-pew-workspace/scripts/claude-code/sync-claude-code-agents.sh)) already uses `find` for recursive search:
    ```bash
    find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*" -exec cp {} "$CLAUDE_AGENTS_DIR/" \;
    ```

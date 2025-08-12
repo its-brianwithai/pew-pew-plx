@@ -1,6 +1,6 @@
 # 🧩 Issue: Merge three repos and unify prompts + CLI
 
-Merge this repo with `pew-pew-cli` (content-only import), keep `ultra-wide-turbo-workspace` as its own Git repo with history. Pause content moves for now; use `workspace/` as-is.
+Merge this repo with `pew-pew-cli` (content-only import), keep `ultra-wide-turbo-workspace` as its own Git repo with history. Pause content moves for now; use `pew-pew-teams/` as-is.
 
 ---
 
@@ -8,8 +8,8 @@ Merge this repo with `pew-pew-cli` (content-only import), keep `ultra-wide-turbo
 
 ### Requirements
 1. Remove the git link from this repo. Keep ultra-wide-turbo-workspace Git intact.
-2. Do not move/reshape content now; keep `workspace/00-freelancers`…`100-all-teams` as-is.
-3. Copy all logic from `pew-pew-cli` and build a proper CLI here following its conventions, README, commands, and logic.
+2. Do not move/reshape content now; keep `pew-pew-teams/00-freelancers`…`100-all-teams` as-is.
+3. Copy all logic from `pew-pew-cli` and build a proper CLI here following its conventions, README, commands, and logic. Project content previously under `agents/`, `prompts/`, `templates/`, `workflows/`, `output-formats/` now lives under `pew-pew-workspace/`.
 4. Config discovery: use nearest ancestor config when walking up from CWD; else use the user root `~/plx/plx.yaml`; else bundled default. Sync uses that config.
 
 ---
@@ -26,7 +26,7 @@ Merge this repo with `pew-pew-cli` (content-only import), keep `ultra-wide-turbo
 
 ### Event Sequence
 1. Developer → initiates → remove git link for current repo (keep UWTW separate)
-2. Developer → catalogs → `workspace/` content (no moves)
+2. Developer → catalogs → `pew-pew-teams/` content (no moves)
 3. System → loads → config via discovery (ancestor `plx.yaml` → `~/plx/plx.yaml` → bundled)
 4. Developer → executes → unify CLI plan (map pew commands to `plx` verbs)
 5. System → performs → pull+sync as verbs (`plx pull repo` → confirm → copy; `plx sync repo` → pull then sync)

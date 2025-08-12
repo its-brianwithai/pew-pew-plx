@@ -1,4 +1,5 @@
 import assert from 'assert';
+import { describe, it } from 'node:test';
 import { promises as fs } from 'fs';
 import { join } from 'path';
 import { loadConfig } from '../lib/config.js';

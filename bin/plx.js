@@ -36,7 +36,8 @@ async function confirmOrExit(message, yesFlag) {
 
 function runSyncScript() {
   return new Promise((resolve, reject) => {
-    const scriptPath = join(__dirname, '..', 'scripts', 'claude-code', 'sync-claude-code.sh');
+    // Scripts relocated under pew-pew-workspace/scripts/claude-code/
+    const scriptPath = join(__dirname, '..', 'pew-pew-workspace', 'scripts', 'claude-code', 'sync-claude-code.sh');
     const p = spawn(scriptPath, [], { stdio: 'inherit' });
     p.on('error', reject);
     p.on('exit', (code) => code === 0 ? resolve() : reject(new Error(`sync exited with code ${code}`)));

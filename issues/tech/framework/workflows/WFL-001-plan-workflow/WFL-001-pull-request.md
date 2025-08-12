@@ -62,7 +62,7 @@
 | [`blocks/refinements/impact-communication-block.md`](../../../blocks/refinements/impact-communication-block.md) | Modified | Enhanced impact documentation |
 | [`instructions/issue-creation-conventions.md`](../../../instructions/issue-creation-conventions.md) | Added | Standardized issue creation guide |
 | [`instructions/entity-implementation-rules.md`](../../../instructions/entity-implementation-rules.md) | Added | Example formatting standards |
-| [`scripts/claude-code/sync-claude-code-templates.sh`](../../../scripts/claude-code/sync-claude-code-templates.sh) | Modified | Fixed to handle subdirectories |
+| [`pew-pew-workspace/scripts/claude-code/sync-claude-code-templates.sh`](../../../pew-pew-workspace/scripts/claude-code/sync-claude-code-templates.sh) | Modified | Fixed to handle subdirectories |
 | [`Makefile`](../../../Makefile) | Modified | Added external repo pulling, watch mode |
 | [`issues/workflows/000-WFL-plan-workflow/000-WFL-feature-workflow-initial-draft.md`](../../../issues/workflows/000-WFL-plan-workflow/000-WFL-feature-workflow-initial-draft.md) | Added | Initial workflow planning |
 | [`issues/workflows/000-WFL-plan-workflow/000-WFL-feature-workflow-summary.md`](../../../issues/workflows/000-WFL-plan-workflow/000-WFL-feature-workflow-summary.md) | Modified | Implementation tracking |

@@ -1,18 +1,18 @@
 sync_sources:
   agents:
-    - agents
+    - pew-pew-workspace/agents
   instructions:
     - instructions
   output-formats:
-    - output-formats
+    - pew-pew-workspace/output-formats
   personas:
-    - personas
+    - pew-pew-workspace/personas
   prompts:
-    - prompts
+    - pew-pew-workspace/prompts
   templates:
-    - templates
+    - pew-pew-workspace/templates
   workflows:
-    - workflows
+    - pew-pew-workspace/workflows
   modes:
     - modes
 
