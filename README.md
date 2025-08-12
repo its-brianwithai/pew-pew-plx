@@ -142,7 +142,10 @@ graph LR
 
 ## 🤖 From Prompts to Agents
 
-When certain prompt components naturally align around a common purpose, they can be composed into agents:
+When certain prompt components naturally align around a common purpose, they can be composed into agents. Benefits:
+- Use as **sub-agents** for specific tasks within larger workflows
+- Activate directly via **`/act:<agent-name>`** commands
+- **Reusable expertise** across all your prompts and projects
 
 ```mermaid
 graph TD
