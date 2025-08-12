@@ -22,6 +22,21 @@ delete_before_sync_targets:
 
 delete_after_sync_targets: []
 
+tasks:
+  # Where task-related commands read/write by default
+  target:
+    primary: ""   # REQUIRED: main checklist file path
+    paste: ""     # OPTIONAL: default file to paste clipboard into (falls back to primary if empty)
+  # Additional files to consider (in order) when advancing with `plx next task`
+  sources:
+    next: []       # e.g., ["team/qa.md", "docs/release.md"]
+  # Current-task marker used by `plx next task` and `plx reset tasks`
+  marker: "👉"
+
+updates:
+  # Epoch millis of last CLI self-update check; used to throttle `plx update cli` polling
+  lastUpdateCheckTimestamp: 0
+
 sync_targets:
   agents:
     - .claude/agents/
@@ -40,4 +55,3 @@ sync_targets:
     - .claude/commands/follow/
   workflows:
     - .claude/commands/start/
-

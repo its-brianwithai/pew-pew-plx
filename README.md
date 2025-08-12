@@ -15,11 +15,10 @@
 # Install globally via npm
 npm install -g pew-pew-plx
 
-# Initialize in your project
-plx init
-
-# Sync with Claude Code
-plx sync claude
+# From your project root (with plx.yaml discovered via ancestor or ~/plx/plx.yaml)
+plx sync                 # Syncs using discovered config
+# or pull then sync in one go
+plx sync repo --repo https://github.com/user/repo.git --branch main --yes
 ```
 
 That's it! You now have access to the complete artifact creation philosophy, specialized agents, smart templates, and intelligent workflows in Claude Code.
@@ -276,7 +275,7 @@ graph LR
     end
     
     subgraph "Sync Process"
-        S1[plx sync claude]
+        S1[plx sync]
         S2[WikiLink Resolution]
         S3[Content Embedding]
     end
@@ -362,13 +361,32 @@ Systematic refinement through YES/NO questions:
 
 ## 🎮 Commands
 
-### Core Framework Commands
+### Core Framework Commands (CLI)
 ```bash
-plx init              # Initialize framework
-plx sync claude       # Sync to Claude Code
-plx sync claude clean # Clean sync
-plx watch claude      # Auto-sync during development
-plx pull main         # Update framework
+plx pull repo --repo <url> --branch main [--yes]   # Pull files into CWD (asks to confirm unless --yes)
+plx sync                                          # Sync using discovered config (alias of `plx sync repo`)
+plx sync repo --repo <url> --branch main [--yes]  # Pull (optional) then sync
+plx set tasks --field tasks.target.primary --value path/to/tasks.md [--global]
+plx set tasks --field tasks.sources.next --value path/to/extra.md,another.md [--global]
+plx set tasks --field tasks.target.paste --value path/to/tasks.md [--global]
+plx paste tasks [--overwrite|--append|--insert] [--path <file>]
+plx next task
+plx reset tasks
+```
+
+### Tasks configuration (plx.yaml)
+```yaml
+tasks:
+  target:
+    primary: "path/to/tasks.md"   # REQUIRED: default checklist file
+    paste: "path/to/tasks.md"     # OPTIONAL: default paste target (falls back to primary)
+  sources:
+    next:                          # when advancing, consider these files in order
+      - path/to/extra.md
+      - another.md
+  marker: "👉"                      # current-task marker
+updates:
+  lastUpdateCheckTimestamp: 0       # epoch millis to throttle CLI self-update checks
 ```
 
 ### Claude Code Commands (After Sync)
@@ -459,7 +477,7 @@ graph TD
         M1[modes/]
     end
     
-    subgraph "plx sync claude"
+    subgraph "plx sync"
         SYNC[Sync Process<br/>WikiLink Resolution<br/>Content Distribution]
     end
     
