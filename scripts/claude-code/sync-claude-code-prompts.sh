@@ -35,6 +35,13 @@ CLAUDE_COMMANDS_PLX_DIR="$BASE_ROOT/${PROMPT_TARGETS[0]%/}"
 
 CLAUDE_COMMANDS_DIR="$BASE_ROOT/.claude/commands"
 
+# Get blocks source directory from YAML config
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
+fi
+BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "📁 Creating prompts directory at $SOURCE_DIR"
     mkdir -p "$SOURCE_DIR"
@@ -64,11 +71,11 @@ for prompt_file in "$SOURCE_DIR"/*.md; do
         first_line=$(head -n 1 "$prompt_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
-            PROJECT_ROOT="$PROJECT_ROOT" awk '
+            PROJECT_ROOT="$PROJECT_ROOT" BLOCKS_DIR="$BLOCKS_DIR" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/prompt-command-block.md");
+                    system("cat " ENVIRON["BLOCKS_DIR"] "/prompt-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 
@@ -80,7 +87,7 @@ for prompt_file in "$SOURCE_DIR"/*.md; do
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/prompt-command-block.md"
+                cat "$BLOCKS_DIR/prompt-command-block.md"
                 echo ""
                 cat "$prompt_file"
             } > "$temp_file"

@@ -20,6 +20,13 @@ if [ -z "$TEMPLATES_SOURCE" ]; then
 fi
 SOURCE_DIR="$PROJECT_ROOT/$TEMPLATES_SOURCE"
 
+# Get blocks source directory from YAML config
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
+fi
+BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
 # Get target directories from YAML config
 TEMPLATE_TARGETS=()
 while IFS= read -r line; do
@@ -82,7 +89,7 @@ while IFS= read -r -d '' template_file; do
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/template-command-block.md"
+                cat "$BLOCKS_DIR/template-command-block.md"
                 echo ""
                 echo "\`\`\`\`\`\`\`\`\`\`"
                 cat "$template_file"

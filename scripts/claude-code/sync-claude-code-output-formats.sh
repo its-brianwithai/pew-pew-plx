@@ -20,6 +20,13 @@ if [ -z "$OUTPUT_FORMATS_SOURCE" ]; then
 fi
 SOURCE_DIR="$PROJECT_ROOT/$OUTPUT_FORMATS_SOURCE"
 
+# Get blocks source directory from YAML config
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
+fi
+BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
 # Get target directories from YAML config
 OUTPUT_FORMAT_TARGETS=()
 while IFS= read -r line; do
@@ -80,7 +87,7 @@ for format_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" !
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/output-format-command-block.md"
+                cat "$BLOCKS_DIR/output-format-command-block.md"
                 echo ""
                 cat "$format_file"
             } > "$temp_file"

@@ -82,7 +82,7 @@ for block_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" ! 
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/block-command-block.md"
+                cat "$BLOCKS_DIR/block-command-block.md"
                 echo ""
                 echo "\`\`\`\`\`\`\`\`\`\`"
                 cat "$block_file"

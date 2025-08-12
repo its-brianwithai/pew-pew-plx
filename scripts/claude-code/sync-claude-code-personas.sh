@@ -76,7 +76,7 @@ for persona_file in $(find "$PERSONAS_DIR" -name "*.md" -type f ! -name "README*
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/persona-command-block.md"
+                cat "$BLOCKS_DIR/persona-command-block.md"
                 echo ""
                 cat "$persona_file"
             } > "$temp_file"

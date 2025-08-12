@@ -127,7 +127,7 @@ for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! 
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/agent-command-block.md"
+                cat "$BLOCKS_DIR/agent-command-block.md"
                 echo ""
                 cat "$agent_file"
             } > "$temp_file"

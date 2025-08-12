@@ -20,6 +20,13 @@ if [ -z "$INSTRUCTIONS_SOURCE" ]; then
 fi
 SOURCE_DIR="$PROJECT_ROOT/$INSTRUCTIONS_SOURCE"
 
+# Get blocks source directory from YAML config
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
+fi
+BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
 # Get target directories from YAML config
 INSTRUCTION_TARGETS=()
 while IFS= read -r line; do
@@ -79,7 +86,7 @@ for instruction_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "READM
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/instruction-command-block.md"
+                cat "$BLOCKS_DIR/instruction-command-block.md"
                 echo ""
                 cat "$instruction_file"
             } > "$temp_file"

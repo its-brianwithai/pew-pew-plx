@@ -20,6 +20,13 @@ if [ -z "$WORKFLOWS_SOURCE" ]; then
 fi
 SOURCE_DIR="$PROJECT_ROOT/$WORKFLOWS_SOURCE"
 
+# Get blocks source directory from YAML config
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
+fi
+BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
 # Get target directories from YAML config
 WORKFLOW_TARGETS=()
 while IFS= read -r line; do
@@ -80,7 +87,7 @@ for workflow_file in "$SOURCE_DIR"/*.md; do
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$PROJECT_ROOT/blocks/workflow-command-block.md"
+                cat "$BLOCKS_DIR/workflow-command-block.md"
                 echo ""
                 cat "$workflow_file"
             } > "$temp_file"
