@@ -25,7 +25,9 @@ This will:
 
 ## 📝 A Good Prompt
 
-The foundation of this framework is understanding what makes an effective prompt. Every prompt consists of modular components, each included only when it contributes to achieving the end goal:
+The foundation of this framework is understanding what makes an effective prompt. Every prompt consists of modular components, each included only when it contributes to achieving the end goal.
+
+**Claude Commands:** `/plx:create` (new), `/plx:update` (enhance), `/plx:make` (transform)
 
 ```mermaid
 graph TD
@@ -69,11 +71,17 @@ Specialized expertise attributes included when they enhance outcomes:
 - Interests, Background, Preferences, Perspective
 - Communication Style
 
+**Claude Command:** `/act:<persona-name>` - Activate this persona directly
+**In Files:** `[[persona-name]]` to reference, `![[persona-name]]` to embed content
+
 #### 📋 **Request**
 Verb-first activity specification with optional deliverables and acceptance criteria. Always starts with an action: Create, Update, Analyze, Transform, etc.
 
 #### 🔄 **Workflow** (Optional)
 Atomic steps with specific deliverables and acceptance criteria for each phase. Used when multi-step processes are required.
+
+**Claude Command:** `/start:<workflow-name>` - Launch this workflow
+**In Files:** `[[workflow-name]]` to reference, `![[workflow-name]]` to embed content
 
 #### 📏 **Instructions** (Optional)
 Event‑driven guidance following the pattern: "When {scenario} occurs, then {apply these instructions}".
@@ -91,14 +99,22 @@ Instruction categories and naming rules:
 3) Rename file to match suffix exactly
 4) Place in the correct folder under `instructions/`
 
+**Claude Command:** `/apply:<instruction-name>` - Apply these instructions
+**In Files:** `[[instruction-name]]` to reference, `![[instruction-name]]` to embed content
+
 #### 📊 **Output Format** (Optional)
 Specifications for how deliverables should be structured - templates, format types (JSON, YAML, Markdown), or specific structural requirements.
+
+**Claude Command:** `/output:<format-name>` - Apply this output format
+**In Files:** `[[format-name]]` to reference, `![[format-name]]` to embed content
 
 ### The Modular Approach
 
 Each component can and should be extracted and referenced via wikilinks when it can be reused. During sync:
 - `[[wikilinks]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
 - `![[embedded-wikilinks]]` are replaced with the actual file content inline
+
+⚠️ **Important:** The `@path/to/file.md` references inside command files auto-load when you use slash commands (e.g., `/use:template-file` will automatically read all `@` references inside that template). However, if you just type `@template-file` directly in chat, Claude only sees the path - no automatic reading occurs.
 
 ```mermaid
 graph LR
@@ -202,12 +218,26 @@ Complete document structures in `templates/`:
 - Bug reports, pull requests, documentation
 - Implementation plans, requirements, roadmaps
 
+**Claude Command:** `/use:<template-name>` - Use this template
+**In Files:** `[[template-name]]` to reference, `![[template-name]]` to embed content
+
 ### Blocks
 Reusable content sections in `blocks/`:
 - Context blocks (capabilities, purpose, functions)
 - Instruction blocks (best practices, rules, standards)
 - Workflow blocks (steps, inputs, outputs)
 - 40+ specialized blocks for comprehensive documentation
+
+**Claude Command:** `/add:<block-name>` - Insert this block
+**In Files:** `[[block-name]]` to reference, `![[block-name]]` to embed content
+
+### Modes
+Operational contexts in `modes/`:
+- Different working modes for various scenarios
+- Context-specific behaviors and rules
+- Switchable operational states
+
+**Claude Command:** `/activate:<mode-name>` - Switch to this mode
 
 ## 🎨 Core Philosophy: From Monolithic to Modular
 
