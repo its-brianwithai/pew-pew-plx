@@ -11,7 +11,7 @@
 
 ## 🚀 Quick Start
 
-Add the Pew Pew framework to any existing project with a single command:
+Add the latest files of the Pew Pew framework to any existing project with a single command:
 
 ```bash
 rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts; do mkdir -p "$dir" && cp -r /tmp/pew-pew/"$dir"/* "$dir"/ 2>/dev/null || true; done && cp /tmp/pew-pew/plx.yaml . && ./scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
@@ -22,6 +22,17 @@ This will:
 2. Preserve your existing project files
 3. Add the `.claude/` directory with all synced artifacts
 4. Enable all `/plx:` commands in your project
+5. Create `plx.yaml` configuration file for customization
+
+### Configuration (plx.yaml)
+
+After installation, customize the sync behavior in `plx.yaml`:
+- **sync_sources**: Which directories to sync from
+- **sync_targets**: Where to sync files to
+- **delete_before_sync_targets**: Directories to clean before syncing
+- **delete_after_sync_targets**: Directories to clean after syncing
+
+Example: Add your own custom content directories, change target paths, or exclude certain file types from sync.
 
 ## 📝 A Good Prompt
 
