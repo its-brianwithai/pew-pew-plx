@@ -13,7 +13,7 @@
 Add the Pew Pew framework to any existing project with a single command:
 
 ```bash
-git clone --depth 1 https://github.com/codaveto/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && cp -r /tmp/pew-pew/{agents,prompts,templates,workflows,instructions,modes,blocks,output-formats,personas,scripts,plx.yaml} . && ./scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
+git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && cp -r /tmp/pew-pew/{agents,prompts,templates,workflows,instructions,modes,blocks,output-formats,personas,scripts,plx.yaml} . && ./scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
 ```
 
 This will:
