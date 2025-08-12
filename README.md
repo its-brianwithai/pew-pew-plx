@@ -302,8 +302,8 @@ graph LR
     end
     
     subgraph "Runtime"
-        R1[@path/to/component.md<br/>Dynamic Loading]
-        R2[Actual Content<br/>Embedded Inline]
+        R1["@path/to/component.md<br/>Dynamic Loading"]
+        R2["Actual Content<br/>Embedded Inline"]
     end
     
     D1 --> S1
