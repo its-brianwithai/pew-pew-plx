@@ -8,6 +8,29 @@
 
 ![Pew Pew Plx Hero](.assets/hero.png)
 
+## 🚀 Quick Start
+
+Add the Pew Pew framework to any existing project with a single command:
+
+```bash
+curl -sL https://raw.githubusercontent.com/yourusername/pew-pew-workspace/main/install.sh | bash
+```
+
+Or manually download and set up:
+
+```bash
+# Download framework files to your current project
+curl -L https://github.com/yourusername/pew-pew-workspace/archive/main.tar.gz | \
+tar -xz --strip-components=1 pew-pew-workspace-main/{agents,prompts,templates,workflows,instructions,modes,blocks,output-formats,personas,scripts,plx.yaml} && \
+./scripts/claude-code/sync-claude-code.sh
+```
+
+This will:
+1. Download all framework components into your current directory
+2. Preserve your existing project files
+3. Add the `.claude/` directory with all synced artifacts
+4. Enable all `/plx:` commands in your project
+
 ## 📝 A Good Prompt
 
 The foundation of this framework is understanding what makes an effective prompt. Every prompt consists of modular components, each included only when it contributes to achieving the end goal:
