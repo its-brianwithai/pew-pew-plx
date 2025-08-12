@@ -1,7 +1,7 @@
 todo/
 
-# Local plx.yaml configuration
-.pew/plx.yaml
+# Local plx.yaml override (never commit)
+.pew/plx.local.yaml
 
 # Ignore credentials folders for all roles
 **/credentials/

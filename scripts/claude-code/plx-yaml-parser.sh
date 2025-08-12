@@ -5,13 +5,13 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-# Check for .pew/plx.yaml first, then fallback to root plx.yaml
-if [ -f "$PROJECT_ROOT/.pew/plx.yaml" ]; then
+# Check for .pew/plx.local.yaml override first, then use .pew/plx.yaml
+if [ -f "$PROJECT_ROOT/.pew/plx.local.yaml" ]; then
+    YAML_FILE="$PROJECT_ROOT/.pew/plx.local.yaml"
+elif [ -f "$PROJECT_ROOT/.pew/plx.yaml" ]; then
     YAML_FILE="$PROJECT_ROOT/.pew/plx.yaml"
-elif [ -f "$PROJECT_ROOT/plx.yaml" ]; then
-    YAML_FILE="$PROJECT_ROOT/plx.yaml"
 else
-    echo "Error: plx.yaml not found at $PROJECT_ROOT/.pew/plx.yaml or $PROJECT_ROOT/plx.yaml" >&2
+    echo "Error: plx.yaml not found at $PROJECT_ROOT/.pew/plx.yaml" >&2
     exit 1
 fi
 
