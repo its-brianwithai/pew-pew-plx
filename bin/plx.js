@@ -94,6 +94,54 @@ program
     }
   });
 
+// Init command: bootstrap plx.yaml in CWD from user root or bundled default
+program
+  .command('init')
+  .description('Initialize plx.yaml in current directory from user root or bundled default')
+  .option('--force', 'Overwrite existing plx.yaml if present', false)
+  .action(async (opts) => {
+    try {
+      const fs = await import('fs');
+      const home = process.env.HOME || process.env.USERPROFILE || '';
+      const cwdPlx = join(process.cwd(), 'plx.yaml');
+      const exists = await fs.promises
+        .access(cwdPlx)
+        .then(() => true)
+        .catch(() => false);
+      if (exists && !opts.force) {
+        console.error(chalk.red('plx.yaml already exists here. Use --force to overwrite.'));
+        process.exit(1);
+      }
+
+      const readIfExists = async (p) => {
+        try { return await fs.promises.readFile(p, 'utf8'); } catch { return null; }
+      };
+
+      // Prefer user root config
+      const userPlx = join(home, 'plx', 'plx.yaml');
+      const userCfg = join(home, 'plx', 'config.yaml');
+      let sourceContent = (await readIfExists(userPlx)) || (await readIfExists(userCfg));
+
+      // Fallback to bundled defaults in repo
+      if (!sourceContent) {
+        const bundledPlx = join(__dirname, '..', 'plx.yaml');
+        const bundledCfg = join(__dirname, '..', 'config.yaml');
+        sourceContent = (await readIfExists(bundledPlx)) || (await readIfExists(bundledCfg));
+      }
+
+      if (!sourceContent) {
+        console.error(chalk.red('No source config found (~/plx/plx.yaml or bundled plx.yaml).'));
+        process.exit(1);
+      }
+
+      await fs.promises.writeFile(cwdPlx, sourceContent, 'utf8');
+      console.log(chalk.green(`✅ Initialized ${cwdPlx}`));
+    } catch (e) {
+      console.error(chalk.red('✗ Init failed:'), e.message);
+      process.exit(1);
+    }
+  });
+
 // Pew task commands (migrated)
 program
   .command('set')
