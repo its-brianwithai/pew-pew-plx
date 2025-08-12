@@ -13,14 +13,14 @@
 Add the Pew Pew framework to any existing project with a single command:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/yourusername/pew-pew-workspace/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/its-brianwithai/pew-pew-workspace/main/install.sh | bash
 ```
 
 Or manually download and set up:
 
 ```bash
 # Download framework files to your current project
-curl -L https://github.com/yourusername/pew-pew-workspace/archive/main.tar.gz | \
+curl -L https://github.com/its-brianwithai/pew-pew-workspace/archive/main.tar.gz | \
 tar -xz --strip-components=1 pew-pew-workspace-main/{agents,prompts,templates,workflows,instructions,modes,blocks,output-formats,personas,scripts,plx.yaml} && \
 ./scripts/claude-code/sync-claude-code.sh
 ```
@@ -145,10 +145,6 @@ graph LR
     style EM3 fill:#1565c0,stroke:#fff,color:#fff
 ```
 
-During sync, the framework:
-- Converts `[[references]]` to `@path/to/file.md` for dynamic loading
-- Replaces `![[embeds]]` with actual file content
-- Enables component reuse across all artifacts
 
 ## 🤖 From Prompts to Agents
 
@@ -218,71 +214,13 @@ Reusable content sections in `blocks/`:
 
 ## 🎨 Core Philosophy: From Monolithic to Modular
 
-The framework's philosophy is based on natural evolution - we don't start by building components. We start by solving problems completely, then extract patterns:
+**Evolution Path:** Inline → Extract → Modularize → Reuse
 
-### 1️⃣ **Start with Complete Solutions**
-First, create a fully functional prompt with everything inline:
-- Write the complete prompt with all components defined directly
-- Focus on solving the immediate problem completely
-- Don't worry about reusability initially
-- Get it working first, optimize later
+1. **Start Complete** - Solve the problem with everything inline first
+2. **Identify Patterns** - Notice what gets repeated across solutions  
+3. **Extract Components** - Move patterns to reusable files with wikilinks
+4. **Systematic Refinement** - Simplify, Clarify, Improve, Expand, Reduce
 
-### 2️⃣ **Identify Reusable Patterns**
-After creating several prompts, patterns emerge:
-- Notice repeated personas across prompts
-- Identify common workflows being duplicated
-- Spot recurring instructions and conventions
-- Recognize standard output formats
-
-### 3️⃣ **Extract and Modularize**
-Only after patterns prove their value:
-- Extract repeated components to separate files
-- Replace inline content with wikilink references
-- Create agents when persona + workflow + instructions naturally align
-- Build a library of reusable components from proven patterns
-
-### 4️⃣ **Systematic Refinement**
-Apply structured validation through targeted questioning:
-- 🔄 **Simplify** - Can we reduce complexity?
-- ❓ **Clarify** - Are requirements unambiguous?
-- 🔧 **Improve** - What enhancements add value?
-- ➕ **Expand** - What edge cases are missing?
-- ➖ **Reduce** - What can be deferred to MVP?
-
-## 🎮 Universal Creation Commands
-
-The framework provides comprehensive artifact management through systematic commands:
-
-### 🎨 `/plx:create`
-Intelligently generates the appropriate artifact type based on requirements:
-```markdown
-Example: "Identify all actors in the project"
-→ Generates: identify-actors.md prompt containing:
-  - Actor identification workflow
-  - Actor template output format
-  - Systematic discovery methodology
-```
-
-### 🔄 `/plx:update`
-Enhances existing artifacts to meet current standards:
-- Analyzes current implementation against best practices
-- Identifies improvement opportunities
-- Applies modular enhancements
-- Extracts reusable components
-
-### 🔮 `/plx:make`
-Transforms content between different formats:
-- Raw text → Structured documentation
-- Conceptual ideas → Actionable components
-- Requirements → Implementation plans
-- Conversations → Formal specifications
-
-### 🧩 `/plx:shard`
-Decomposes monolithic artifacts into modular components:
-- Identifies reusable patterns
-- Creates standalone component files
-- Implements wikilink references
-- Enables cross-artifact sharing
 
 ## 🔗 WikiLink Architecture: Component Reusability
 
@@ -353,36 +291,11 @@ Use the workflow in [[issue-workflow-example-wiki-link]]
 ```
 
 
-## 📋 Issue Management Philosophy
 
-### Parallel AI Working Paths
 
-Enable maximum productivity through strategic organization:
+## 🎮 Commands & Usage
 
-#### Team Structure
-- **Tech** - Development and architecture
-- **Marketing** - Content and engagement
-- **Sales** - Customer relations and revenue
-
-#### Subject-Based Parallel Work
-Within each team, subjects advance independently:
-- Each subject improves one at a time
-- MVP must-have mindset for granular releases
-- Global scale productivity across levels
-- Non-interrupting workflows
-
-### Question Mode Integration
-
-Systematic refinement through YES/NO questions:
-- **Simplify** - Reduce complexity suggestions
-- **Clarify** - Validate understanding
-- **Improve** - Enhancement opportunities
-- **Expand** - Missing requirements
-- **Reduce** - MVP analysis
-
-## 🎮 Commands
-
-### Core Framework Commands
+### Core Setup & Sync
 ```bash
 # The sync process uses plx.yaml configuration for all paths
 ./scripts/claude-code/sync-claude-code.sh       # Sync to Claude Code
@@ -398,40 +311,14 @@ Systematic refinement through YES/NO questions:
 
 ### Claude Code Commands (After Sync)
 
-#### Creation Suite
-- `/plx:create` - Transform desires into artifacts
-- `/plx:create:issue` - Systematic issue documentation
-- `/plx:create:story` - User stories with criteria
-- `/plx:create:agent` - New AI agents
-- `/plx:create:workflow` - Multi-step processes
-- [...]
-
-#### Transformation Suite
-- `/plx:update` - Enhance existing artifacts
-- `/plx:make` - Transform content types
-- `/plx:shard` - Extract components
-- `/plx:update:issue` - Refine existing issues
-- `/plx:make:issue` - Convert content to issues
-- [...]
-
-#### Agent Commands
-- `/act:flutter:developer` - Flutter expertise
-- `/act:story:agent` - Story creation
-- `/act:code:reviewer` - Code analysis
-- [...]
-
-#### Workflow Commands
-- `/start:feature-workflow` - 6-phase feature development
-- `/start:refinement-workflow` - 5-layer decomposition
-- `/start:bug-workflow` - 4-phase bug resolution
-- [...]
-
-#### Additional Commands
-- `/add:<block-name>` - Insert reusable blocks
-- `/output:<format-name>` - Apply output formats
-- `/activate:<mode-name>` - Activate operational modes
-- `/apply:<instruction-name>` - Apply instructions
-- `/use:<template-name>` - Use templates
+| Command Type | Examples | Purpose |
+|:------------|:---------|:--------|
+| **Creation** | `/plx:create`, `/plx:create:issue` | Generate new artifacts from requirements |
+| **Transformation** | `/plx:update`, `/plx:make`, `/plx:shard` | Modify and convert existing content |
+| **Agents** | `/act:flutter:developer`, `/act:story:agent` | Activate specialized AI personas |
+| **Workflows** | `/start:feature-workflow`, `/start:bug-workflow` | Launch multi-phase processes |
+| **Components** | `/add:`, `/output:`, `/apply:`, `/use:` | Insert blocks, formats, instructions, templates |
+| **Modes** | `/activate:<mode-name>` | Switch operational contexts |
 
 ### Sync Transformation
 
@@ -523,36 +410,7 @@ Apply structured questioning methodology to validate and refine each component a
 ### 5. Natural Agent Emergence
 When persona, workflow, and instructions align organically around a common purpose, they naturally form a reusable agent.
 
-## 🚦 Example: Creating an Issue
 
-```bash
-# Method 1: Direct creation
-/plx:create:issue
-
-# Method 2: Transform from notes
-/plx:make:issue "Turn my meeting notes into an issue"
-
-# Method 3: Update existing
-/plx:update:issue "Enhance my draft issue"
-
-# Method 4: From desire
-/plx:create "I want to track a new feature"
-```
-
-Each method leverages the same modular components, demonstrating the framework's flexibility.
-
-## 📚 Documentation
-
-- **Prompts**: See `prompts/`
-- **Agents**: See `agents/`
-- **Templates**: See `templates/`
-- **Workflows**: See `workflows/`
-- **Output Formats**: See `output-formats/`
-- **Instructions**: See `instructions/`
-- **Modes**: See `modes/`
-- **Blocks**: See `blocks/`
-- **Personas**: See `personas/`
-- **Configuration**: See `plx.yaml` for sync configuration
 
 ## 🔧 Configuration: plx.yaml
 
@@ -665,64 +523,12 @@ pew-pew-workspace/
 └── 100-all-teams/        # [Legacy] Single-file team compilations
 ```
 
-## 🏛️ Legacy Teams Structure (Being Refined)
+## 🏛️ Legacy Teams Structure
 
-The repository contains a comprehensive teams-based structure from the previous iteration, which serves as valuable input for refining the current modular approach. This structure demonstrates a complete project lifecycle management system:
-
-### The 7-Phase Team Model
-
-The legacy structure organized AI agents into seven specialized teams that guide projects through distinct phases:
-
-```mermaid
-graph TD
-    A[Phase 1: Discovery] --> B[Phase 2: Context]
-    B --> C[Phase 3: Requirements]
-    C --> D[Phase 4: Refinement]
-    D --> E[Phase 5: Plan]
-    E --> F[Phase 6: Act]
-    F --> G[Phase 7: Review]
-    G --> F
-```
-
-#### Teams Overview:
-
-1. **`01-discovery-team`** - Idea clarification, brainstorming, and research
-   - Agents: brainstorm-agent, idea-agent, prompt-engineer-agent, proposal-agent, research-agent
-
-2. **`02-context-team`** - Gathering project context and best practices
-   - Agents: bad-examples-agent, best-practices-agent, collection-agent, good-examples-agent, personal-preferences-agent, suggested-approach-agent
-
-3. **`03-requirements-team`** - Detailed requirements specification
-   - Agents: activities-agent, actors-components-agent, behaviours-agent, properties-agent, scenarios-agent
-
-4. **`04-refinement-team`** - Creating PRDs and architecture documents
-   - Agents: architecture-agent, prd-agent, ui-ux-design-agent
-
-5. **`05-plan-team`** - Breaking down requirements into actionable plans
-   - Agents: dev-plan-agent, epic-agent, roadmap-agent, story-agent, task-agent
-
-6. **`06-act-team`** - Executing the development plan
-   - Agents: acceptance-test-agent, lead-developer-agent, result-report-agent, ui-ux-implementation-agent, unit-test-agent
-
-7. **`07-review-team`** - Quality assurance and review
-   - Agents: acceptance-criteria-agent, code-review-agent, feedback-agent, quality-standards-agent, restrictions-agent, rules-agent
-
-### Freelancer Specialists
-
-The **`00-freelancers`** directory contains individual specialist agents for ad-hoc tasks:
-- architect, aso-expert, brainstormer, business-analyst
-- content-creator, developer, mvp-expert, project-manager
-- prompt-engineer, proposal-expert, researcher, tester, uiux-expert
-
-### Integration with Current System
-
-These team structures are being integrated into the current modular framework through:
-- Extracting reusable agent definitions into `agents/`
-- Converting team workflows into `workflows/`
-- Extracting templates and output formats
-- Creating modular, composable components from monolithic team definitions
-
-The goal is to maintain the sophisticated orchestration capabilities while enabling greater flexibility through the component-based approach described in this document.
+The `00-freelancers/` through `07-review-team/` directories contain the previous 7-phase team model:
+- **Discovery → Context → Requirements → Refinement → Plan → Act → Review**
+- Being extracted into modular components in the current framework
+- Provides proven patterns for comprehensive project lifecycle management
 
 ## 📄 License
 
