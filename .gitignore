@@ -48,13 +48,6 @@ yarn-error.log*
 **/*.swo
 **/*~
 
-.pew
-.pew/config/secrets.yaml
-.pew/.logs/
-
-.idea
-.vscode
-
 .obsidian
 
 # Private files
@@ -67,5 +60,15 @@ yarn-error.log*
 docs/repo/
 
 .idea/
-.claude
 .mason
+
+drafts/**/*
+feedback/**/*
+issues/**/*
+meta/**/*
+reports/**/*
+
+CLAUDE.md
+LICENSE
+README.md
+lead-orchestrator-agent.md

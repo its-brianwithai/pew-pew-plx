@@ -1,0 +1,42 @@
+sync_sources:
+  agents:
+    - agents
+  instructions:
+    - instructions
+  output-formats:
+    - output-formats
+  personas:
+    - personas
+  prompts:
+    - prompts
+  templates:
+    - templates
+  workflows:
+    - workflows
+  modes:
+    - modes
+
+delete_before_sync_targets:
+  - .claude/agents
+  - .claude/commands
+
+delete_after_sync_targets: []
+
+sync_targets:
+  agents:
+    - .claude/agents/
+    - .claude/commands/act/
+  personas:
+    - .claude/commands/act/
+  prompts:
+    - .claude/commands/plx/
+  templates:
+    - .claude/commands/use/
+  blocks:
+    - .claude/commands/add/
+  output-formats:
+    - .claude/commands/output/
+  instructions:
+    - .claude/commands/apply/
+  workflows:
+    - .claude/commands/start/
