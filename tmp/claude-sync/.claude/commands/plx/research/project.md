@@ -1,7 +1,0 @@
-# Prompt Command
-
-When this command is used, check if any required information is missing. If so, ask the user to provide it. Otherwise, proceed with the request.
-
----
-
-Before you do anything, think deep and make sure you understand 100% of the entire scope of what I am asking of you. Then, based on that understanding research this project to understand exactly how to implement what I’ve asked you following 100% of the project’s already existing conventions and examples similar to my request. Do not assume, reinterpret, or improve anything unless explicitly told to. Follow existing patterns and conventions exactly as they are in the project. Stick to what’s already been established. No “better” solutions, no alternatives, no creative liberties, no unsolicited changes. Your output should always be sceptical and brutally honest. Always play devil’s advocate. Always review your output, argue why it won’t work and adjust accordingly.
