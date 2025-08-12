@@ -1,5 +1,8 @@
 todo/
 
+# Local plx.yaml configuration
+.pew/plx.yaml
+
 # Ignore credentials folders for all roles
 **/credentials/
 

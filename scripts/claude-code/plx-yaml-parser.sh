@@ -4,11 +4,14 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-YAML_FILE="$PROJECT_ROOT/plx.yaml"
 
-# Check if YAML file exists
-if [ ! -f "$YAML_FILE" ]; then
-    echo "Error: plx.yaml not found at $YAML_FILE" >&2
+# Check for .pew/plx.yaml first, then fallback to root plx.yaml
+if [ -f "$PROJECT_ROOT/.pew/plx.yaml" ]; then
+    YAML_FILE="$PROJECT_ROOT/.pew/plx.yaml"
+elif [ -f "$PROJECT_ROOT/plx.yaml" ]; then
+    YAML_FILE="$PROJECT_ROOT/plx.yaml"
+else
+    echo "Error: plx.yaml not found at $PROJECT_ROOT/.pew/plx.yaml or $PROJECT_ROOT/plx.yaml" >&2
     exit 1
 fi
 
