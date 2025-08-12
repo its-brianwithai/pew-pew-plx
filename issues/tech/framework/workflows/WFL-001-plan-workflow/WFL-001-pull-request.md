@@ -7,47 +7,47 @@
 | File | Type | Description |
 |:-----|:-----|:------------|
 | [`agents/feature-workflow-orchestrator.md`](issue-workflow-orchestrator.md) | Added | Master orchestrator coordinating all 6 workflow phases |
-| [`agents/meta/workflow-specialist.md`](../../../agents/meta/meta-workflow-specialist) | Modified | Enhanced with sophisticated workflow design capabilities |
-| [`agents/plan/discovery-agent.md`](../../../agents/plan/discovery-agent.md) | Added | Phase 1 specialist for context gathering |
-| [`agents/plan/requirements-agent.md`](../../../agents/plan/requirements-agent.md) | Added | Phase 2 specialist for requirements elaboration |
-| [`agents/plan/refinement-agent.md`](../../../agents/plan/refinement-agent.md) | Added | Phase 3 specialist for technical refinement |
-| [`agents/plan/story-agent.md`](../../../agents/plan/story-agent.md) | Added | Phase 4 specialist for user story creation |
-| [`agents/plan/roadmap-agent.md`](../../../agents/plan/roadmap-agent.md) | Added | Phase 5 specialist for milestone planning |
-| [`agents/plan/implementation-agent.md`](../../../agents/plan/implementation-agent.md) | Added | Phase 6 specialist for implementation planning |
+| [`agents/meta/workflow-specialist.md`](../../../pew-pew-workspace/agents/meta/meta-workflow-specialist.md) | Modified | Enhanced with sophisticated workflow design capabilities |
+| [`agents/plan/discovery-agent.md`](../../../pew-pew-workspace/agents/plan/discovery-agent.md) | Added | Phase 1 specialist for context gathering |
+| [`agents/plan/requirements-agent.md`](../../../pew-pew-workspace/agents/plan/requirements-agent.md) | Added | Phase 2 specialist for requirements elaboration |
+| [`agents/plan/refinement-agent.md`](../../../pew-pew-workspace/agents/plan/refinement-agent.md) | Added | Phase 3 specialist for technical refinement |
+| [`agents/plan/story-agent.md`](../../../pew-pew-workspace/agents/plan/story-agent.md) | Added | Phase 4 specialist for user story creation |
+| [`agents/plan/roadmap-agent.md`](../../../pew-pew-workspace/agents/plan/roadmap-agent.md) | Added | Phase 5 specialist for milestone planning |
+| [`agents/plan/implementation-agent.md`](../../../pew-pew-workspace/agents/plan/implementation-agent.md) | Added | Phase 6 specialist for implementation planning |
 | [`workflows/feature-workflow.md`](issue-workflow.md) | Added | Comprehensive 800+ line workflow documentation |
-| [`workflows/refinement-workflow.md`](../../../workflows/refinement-workflow.md) | Added | 5-layer systematic refinement approach |
-| [`templates/workflows/discovery-template.md`](../../../templates/workflows/discovery-template.md) | Added | Phase 1 output template |
-| [`templates/workflows/requirements-template.md`](../../../templates/workflows/requirements-template.md) | Added | Phase 2 output template |
-| [`templates/workflows/refinement-template.md`](../../../templates/workflows/refinement-template.md) | Added | Phase 3 output template |
-| [`templates/workflows/roadmap-template.md`](../../../templates/workflows/roadmap-template.md) | Added | Phase 4 output template |
-| [`templates/workflows/milestone-template.md`](../../../templates/workflows/milestone-template.md) | Added | Individual milestone documentation template |
-| [`templates/workflows/implementation-plan-template.md`](../../../templates/workflows/implementation-plan-template.md) | Added | Phase 5 output template |
-| [`templates/review/pull-request-template.md`](../../../templates/review/pull-request-template.md) | Added | Comprehensive PR documentation template |
-| [`templates/plan/story-template.md`](../../../templates/plan/story-template.md) | Modified | Enhanced with analytics, effort breakdowns |
-| [`templates/plan/proposal-template.md`](../../../templates/plan/proposal-template.md) | Modified | Updated for business proposals |
-| [`templates/act/workflow-template.md`](../../../templates/act/workflow-template.md) | Modified | Enhanced with orchestration patterns |
-| [`prompts/create-discovery.md`](../../../prompts/create-discovery.md) | Added | Create Phase 1 documents |
-| [`prompts/update-discovery.md`](../../../prompts/update-discovery.md) | Added | Update Phase 1 documents |
-| [`prompts/create-requirements.md`](../../../prompts/create-requirements.md) | Added | Create Phase 2 documents |
-| [`prompts/update-requirements.md`](../../../prompts/update-requirements.md) | Added | Update Phase 2 documents |
-| [`prompts/create-refinement.md`](../../../prompts/create-refinement.md) | Added | Create Phase 3 documents |
-| [`prompts/update-refinement.md`](../../../prompts/update-refinement.md) | Added | Update Phase 3 documents |
-| [`prompts/create-story.md`](../../../prompts/create-story.md) | Added | Create user stories |
-| [`prompts/update-story.md`](update-story.md) | Added | Update user stories |
-| [`prompts/create-roadmap.md`](../../../prompts/create-roadmap.md) | Added | Create Phase 4 documents |
-| [`prompts/update-roadmap.md`](../../../prompts/update-roadmap.md) | Added | Update Phase 4 documents |
-| [`prompts/create-milestone.md`](../../../prompts/create-milestone.md) | Added | Create milestone documents |
-| [`prompts/update-milestone.md`](../../../prompts/update-milestone.md) | Added | Update milestone documents |
-| [`prompts/create-implementation-plan.md`](../../../prompts/create-implementation-plan.md) | Added | Create Phase 5 documents |
-| [`prompts/update-implementation-plan.md`](../../../prompts/update-implementation-plan.md) | Added | Update Phase 5 documents |
-| [`prompts/create-feature.md`](create-issue.md) | Added | Orchestrate full issue workflow |
-| [`prompts/update-feature.md`](update-issue.md) | Added | Update existing issue workflow |
-| [`prompts/create-pr.md`](../../../prompts/create-pr.md) | Added | Create comprehensive pull requests |
-| [`prompts/update-pr.md`](../../../prompts/update-pr.md) | Added | Update existing pull requests |
-| [`prompts/push.md`](../../../prompts/push.md) | Added | Git push with documentation updates |
-| [`prompts/create-workflow.md`](../../../prompts/create-workflow.md) | Modified | Updated for new workflow patterns |
-| [`prompts/update-workflow.md`](../../../prompts/update-workflow.md) | Modified | Updated for new workflow patterns |
-| [`prompts/improve.md`](../../../prompts/improve.md) | Modified | Enhanced with question-driven approach |
+| [`workflows/refinement-workflow.md`](../../../pew-pew-workspace/workflows/refinement-workflow.md) | Added | 5-layer systematic refinement approach |
+| [`templates/workflows/discovery-template.md`](../../../pew-pew-workspace/templates/workflows/discovery-template.md) | Added | Phase 1 output template |
+| [`templates/workflows/requirements-template.md`](../../../pew-pew-workspace/templates/workflows/requirements-template.md) | Added | Phase 2 output template |
+| [`templates/workflows/refinement-template.md`](../../../pew-pew-workspace/templates/workflows/refinement-template.md) | Added | Phase 3 output template |
+| [`templates/workflows/roadmap-template.md`](../../../pew-pew-workspace/templates/workflows/roadmap-template.md) | Added | Phase 4 output template |
+| [`templates/workflows/milestone-template.md`](../../../pew-pew-workspace/templates/workflows/milestone-template.md) | Added | Individual milestone documentation template |
+| [`templates/workflows/implementation-plan-template.md`](../../../pew-pew-workspace/templates/workflows/implementation-plan-template.md) | Added | Phase 5 output template |
+| [`templates/review/pull-request-template.md`](../../../pew-pew-workspace/templates/review/pull-request-template.md) | Added | Comprehensive PR documentation template |
+| [`templates/plan/story-template.md`](../../../pew-pew-workspace/templates/plan/story-template.md) | Modified | Enhanced with analytics, effort breakdowns |
+| [`templates/plan/proposal-template.md`](../../../pew-pew-workspace/templates/plan/proposal-template.md) | Modified | Updated for business proposals |
+| [`templates/act/workflow-template.md`](../../../pew-pew-workspace/templates/act/workflow-template.md) | Modified | Enhanced with orchestration patterns |
+| [`prompts/create-discovery.md`](../../../pew-pew-workspace/prompts/create-discovery.md) | Added | Create Phase 1 documents |
+| [`prompts/update-discovery.md`](../../../pew-pew-workspace/prompts/update-discovery.md) | Added | Update Phase 1 documents |
+| [`prompts/create-requirements.md`](../../../pew-pew-workspace/prompts/create-requirements.md) | Added | Create Phase 2 documents |
+| [`prompts/update-requirements.md`](../../../pew-pew-workspace/prompts/update-requirements.md) | Added | Update Phase 2 documents |
+| [`prompts/create-refinement.md`](../../../pew-pew-workspace/prompts/create-refinement.md) | Added | Create Phase 3 documents |
+| [`prompts/update-refinement.md`](../../../pew-pew-workspace/prompts/update-refinement.md) | Added | Update Phase 3 documents |
+| [`prompts/create-story.md`](../../../pew-pew-workspace/prompts/create-story.md) | Added | Create user stories |
+| [`prompts/update-story.md`](../../../pew-pew-workspace/prompts/update-story.md) | Added | Update user stories |
+| [`prompts/create-roadmap.md`](../../../pew-pew-workspace/prompts/create-roadmap.md) | Added | Create Phase 4 documents |
+| [`prompts/update-roadmap.md`](../../../pew-pew-workspace/prompts/update-roadmap.md) | Added | Update Phase 4 documents |
+| [`prompts/create-milestone.md`](../../../pew-pew-workspace/prompts/create-milestone.md) | Added | Create milestone documents |
+| [`prompts/update-milestone.md`](../../../pew-pew-workspace/prompts/update-milestone.md) | Added | Update Phase 4 documents |
+| [`prompts/create-implementation-plan.md`](../../../pew-pew-workspace/prompts/create-implementation-plan.md) | Added | Create Phase 5 documents |
+| [`prompts/update-implementation-plan.md`](../../../pew-pew-workspace/prompts/update-implementation-plan.md) | Added | Update Phase 5 documents |
+| [`prompts/create-feature.md`](../../../pew-pew-workspace/prompts/create-feature.md) | Added | Orchestrate full issue workflow |
+| [`prompts/update-feature.md`](../../../pew-pew-workspace/prompts/update-feature.md) | Added | Update existing issue workflow |
+| [`prompts/create-pr.md`](../../../pew-pew-workspace/prompts/create-pr.md) | Added | Create comprehensive pull requests |
+| [`prompts/update-pr.md`](../../../pew-pew-workspace/prompts/update-pr.md) | Added | Update existing pull requests |
+| [`prompts/push.md`](../../../pew-pew-workspace/prompts/push.md) | Added | Git push with documentation updates |
+| [`prompts/create-workflow.md`](../../../pew-pew-workspace/prompts/create-workflow.md) | Modified | Updated for new workflow patterns |
+| [`prompts/update-workflow.md`](../../../pew-pew-workspace/prompts/update-workflow.md) | Modified | Updated for new workflow patterns |
+| [`prompts/improve.md`](../../../pew-pew-workspace/prompts/improve.md) | Modified | Enhanced with question-driven approach |
 | [`blocks/refinements/activity-flows-block.md`](../../../blocks/refinements/activity-flows-block.md) | Added | Activity flow documentation block |
 | [`blocks/refinements/architecture-diagram-block.md`](../../../blocks/refinements/architecture-diagram-block.md) | Added | Architecture visualization block |
 | [`blocks/refinements/refinement-block.md`](../../../blocks/refinements/refinement-block.md) | Added | Component refinement block |
@@ -69,11 +69,11 @@
 | [`issues/workflows/000-WFL-plan-workflow/000-WFL-plan-workflow-pull-request.md`](../../../issues/workflows/000-WFL-plan-workflow/000-WFL-plan-workflow-pull-request.md) | Added | This PR documentation |
 | [`issues/templates/000-TEM-templates-not-syncing-to-claude-commands.md`](../../../issues/templates/000-TEM-templates-not-syncing-to-claude-commands.md) | Added | Template sync bug fix documentation |
 | [`issues/backlog/000-whiteboard.md`](../../../issues/backlog/000-whiteboard.md) | Added | Framework evolution ideas |
-| [`templates/plan/dev-plan-template.md`](../../../templates/plan/dev-plan-template.md) | Deleted | Replaced by implementation-plan-template |
-| [`templates/plan/feature-template.md`](../../../templates/plan/feature-template.md) | Deleted | Functionality absorbed into story template |
-| [`templates/plan/milestone-template.md`](../../../templates/plan/milestone-template.md) | Deleted | Moved to workflows directory |
-| [`templates/plan/requirements-template.md`](../../../templates/plan/requirements-template.md) | Deleted | Moved to workflows directory |
-| [`templates/plan/scenarios-template.md`](../../../templates/plan/scenarios-template.md) | Deleted | Out of scope for current workflow |
+| [`templates/plan/dev-plan-template.md`](../../../pew-pew-workspace/templates/plan/dev-plan-template.md) | Deleted | Replaced by implementation-plan-template |
+| [`templates/plan/feature-template.md`](../../../pew-pew-workspace/templates/plan/feature-template.md) | Deleted | Functionality absorbed into story template |
+| [`templates/plan/milestone-template.md`](../../../pew-pew-workspace/templates/plan/milestone-template.md) | Deleted | Moved to workflows directory |
+| [`templates/plan/requirements-template.md`](../../../pew-pew-workspace/templates/plan/requirements-template.md) | Deleted | Moved to workflows directory |
+| [`templates/plan/scenarios-template.md`](../../../pew-pew-workspace/templates/plan/scenarios-template.md) | Deleted | Out of scope for current workflow |
 | [`prompts/plan.md`](../../../prompts/plan.md) | Deleted | Replaced by phase-specific prompts |
 | [`blocks/refinements/high-level-plan-block.md`](../../../blocks/refinements/high-level-plan-block.md) | Deleted | Replaced by more specific blocks |
 

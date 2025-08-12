@@ -7,19 +7,19 @@
 | File | Type | Description |
 |:-----|:-----|:------------|
 | [`agents/feature-workflow-orchestrator.md`](issue-workflow-orchestrator.md) | Added | Main orchestrator agent for the entire workflow |
-| [`agents/plan/discovery-agent.md`](../../../agents/plan/discovery-agent.md) | Added | Phase 1 discovery and context gathering specialist |
-| [`agents/plan/requirements-agent.md`](../../../agents/plan/requirements-agent.md) | Added | Phase 2 requirements elaboration specialist |
-| [`agents/plan/refinement-agent.md`](../../../agents/plan/refinement-agent.md) | Added | Phase 3 refinement and architecture specialist |
-| [`agents/plan/roadmap-agent.md`](../../../agents/plan/roadmap-agent.md) | Added | Phase 4 milestone and roadmap planning specialist |
-| [`agents/plan/story-agent.md`](../../../agents/plan/story-agent.md) | Added | Story creation specialist from milestone deliverables |
-| [`agents/plan/implementation-agent.md`](../../../agents/plan/implementation-agent.md) | Added | Phase 5 implementation planning specialist |
+| [`agents/plan/discovery-agent.md`](../../../pew-pew-workspace/agents/plan/discovery-agent.md) | Added | Phase 1 discovery and context gathering specialist |
+| [`agents/plan/requirements-agent.md`](../../../pew-pew-workspace/agents/plan/requirements-agent.md) | Added | Phase 2 requirements elaboration specialist |
+| [`agents/plan/refinement-agent.md`](../../../pew-pew-workspace/agents/plan/refinement-agent.md) | Added | Phase 3 refinement and architecture specialist |
+| [`agents/plan/roadmap-agent.md`](../../../pew-pew-workspace/agents/plan/roadmap-agent.md) | Added | Phase 4 milestone and roadmap planning specialist |
+| [`agents/plan/story-agent.md`](../../../pew-pew-workspace/agents/plan/story-agent.md) | Added | Story creation specialist from milestone deliverables |
+| [`agents/plan/implementation-agent.md`](../../../pew-pew-workspace/agents/plan/implementation-agent.md) | Added | Phase 5 implementation planning specialist |
 | [`workflows/feature-workflow.md`](issue-workflow.md) | Added | Complete workflow documentation and orchestration guide |
-| [`templates/workflows/*`](../../../templates/workflows/) | Added | All phase-specific templates (6 files) |
-| [`prompts/create-*.md`](../../../prompts/) | Added | Creation prompts for each workflow phase (8 files) |
-| [`prompts/update-*.md`](../../../prompts/) | Added | Update prompts for each workflow phase (8 files) |
-| [`prompts/create-pr.md`](../../../prompts/create-pr.md) | Added | Pull request creation prompt |
-| [`prompts/update-pr.md`](../../../prompts/update-pr.md) | Added | Pull request update prompt |
-| [`prompts/push.md`](../../../prompts/push.md) | Added | Git push prompt |
+| [`templates/workflows/*`](../../../pew-pew-workspace/templates/workflows/) | Added | All phase-specific templates (6 files) |
+| [`prompts/create-*.md`](../../../pew-pew-workspace/prompts/) | Added | Creation prompts for each workflow phase (8 files) |
+| [`prompts/update-*.md`](../../../pew-pew-workspace/prompts/) | Added | Update prompts for each workflow phase (8 files) |
+| [`prompts/create-pr.md`](../../../pew-pew-workspace/prompts/create-pr.md) | Added | Pull request creation prompt |
+| [`prompts/update-pr.md`](../../../pew-pew-workspace/prompts/update-pr.md) | Added | Pull request update prompt |
+| [`prompts/push.md`](../../../pew-pew-workspace/prompts/push.md) | Added | Git push prompt |
 | [`blocks/refinements/*`](../../../blocks/refinements/) | Added/Modified | New and updated refinement blocks (10 files) |
 | [`templates/review/pull-request-template.md`](../../../templates/review/pull-request-template.md) | Added | PR documentation template |
 
@@ -114,12 +114,12 @@ color: "#unique-color"
 ```
 
 #### File References
-- [`agents/plan/discovery-agent.md`](../../../agents/plan/discovery-agent.md) - Phase 1 specialist
-- [`agents/plan/requirements-agent.md`](../../../agents/plan/requirements-agent.md) - Phase 2 specialist
-- [`agents/plan/refinement-agent.md`](../../../agents/plan/refinement-agent.md) - Phase 3 specialist
-- [`agents/plan/roadmap-agent.md`](../../../agents/plan/roadmap-agent.md) - Phase 4 specialist
-- [`agents/plan/implementation-agent.md`](../../../agents/plan/implementation-agent.md) - Phase 5 specialist
-- [`agents/plan/story-agent.md`](../../../agents/plan/story-agent.md) - Story creation specialist
+- [`agents/plan/discovery-agent.md`](../../../pew-pew-workspace/agents/plan/discovery-agent.md) - Phase 1 specialist
+- [`agents/plan/requirements-agent.md`](../../../pew-pew-workspace/agents/plan/requirements-agent.md) - Phase 2 specialist
+- [`agents/plan/refinement-agent.md`](../../../pew-pew-workspace/agents/plan/refinement-agent.md) - Phase 3 specialist
+- [`agents/plan/roadmap-agent.md`](../../../pew-pew-workspace/agents/plan/roadmap-agent.md) - Phase 4 specialist
+- [`agents/plan/implementation-agent.md`](../../../pew-pew-workspace/agents/plan/implementation-agent.md) - Phase 5 specialist
+- [`agents/plan/story-agent.md`](../../../pew-pew-workspace/agents/plan/story-agent.md) - Story creation specialist
 
 #### Reasoning
 Specialized agents were created to:
@@ -157,12 +157,12 @@ instructions: "Implementation guidance..."
 ```
 
 #### File References
-- [`templates/workflows/discovery-template.md`](../../../templates/workflows/discovery-template.md) - Phase 1 output
-- [`templates/workflows/requirements-template.md`](../../../templates/workflows/requirements-template.md) - Phase 2 output
-- [`templates/workflows/refinement-template.md`](../../../templates/workflows/refinement-template.md) - Phase 3 output
-- [`templates/workflows/roadmap-template.md`](../../../templates/workflows/roadmap-template.md) - Phase 4 output
-- [`templates/workflows/milestone-template.md`](../../../templates/workflows/milestone-template.md) - Milestone documentation
-- [`templates/workflows/implementation-plan-template.md`](../../../templates/workflows/implementation-plan-template.md) - Phase 5 output
+- [`templates/workflows/discovery-template.md`](../../../pew-pew-workspace/templates/workflows/discovery-template.md) - Phase 1 output
+- [`templates/workflows/requirements-template.md`](../../../pew-pew-workspace/templates/workflows/requirements-template.md) - Phase 2 output
+- [`templates/workflows/refinement-template.md`](../../../pew-pew-workspace/templates/workflows/refinement-template.md) - Phase 3 output
+- [`templates/workflows/roadmap-template.md`](../../../pew-pew-workspace/templates/workflows/roadmap-template.md) - Phase 4 output
+- [`templates/workflows/milestone-template.md`](../../../pew-pew-workspace/templates/workflows/milestone-template.md) - Milestone documentation
+- [`templates/workflows/implementation-plan-template.md`](../../../pew-pew-workspace/templates/workflows/implementation-plan-template.md) - Phase 5 output
 
 #### Reasoning
 Structured templates ensure:
