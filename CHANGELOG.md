@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to Pew Pew Workspace will be documented in this file.
 
-## [Unreleased]
+## [v0.5.0] - 2025-08-13
 
 ### 🔄 Breaking Changes:
 - **Framework Structure Migration**: All framework files moved from root to `.pew/` directory
