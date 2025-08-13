@@ -14,7 +14,7 @@
 Add the latest files of the Pew Pew framework to any existing project with a single command:
 
 ```bash
-rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts; do mkdir -p ".pew/$dir" && cp -r /tmp/pew-pew/"$dir"/* ".pew/$dir"/ 2>/dev/null || true; done && cp -r /tmp/pew-pew/scripts . && cp /tmp/pew-pew/.pew/plx.yaml .pew/plx.yaml && ./scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
+rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts Makefile install.sh; do if [ -f "/tmp/pew-pew/.pew/$dir" ]; then cp "/tmp/pew-pew/.pew/$dir" ".pew/$dir"; elif [ -d "/tmp/pew-pew/.pew/$dir" ]; then mkdir -p ".pew/$dir" && cp -r "/tmp/pew-pew/.pew/$dir"/* ".pew/$dir"/ 2>/dev/null || true; fi; done && cp /tmp/pew-pew/.pew/plx.yaml .pew/plx.yaml && ./.pew/scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
 ```
 
 This will:
@@ -339,9 +339,12 @@ Use the workflow in [[issue-workflow-example-wiki-link]]
 ### Core Setup & Sync
 ```bash
 # The sync process uses plx.yaml configuration for all paths
-./scripts/claude-code/sync-claude-code.sh       # Sync to Claude Code
-./scripts/claude-code/test-sync.sh              # Test sync in isolated environment
-./scripts/claude-code/watch-claude-code.sh      # Auto-sync during development
+./.pew/scripts/claude-code/sync-claude-code.sh       # Sync to Claude Code
+./.pew/scripts/claude-code/test-sync.sh              # Test sync in isolated environment
+./.pew/scripts/claude-code/watch-claude-code.sh      # Auto-sync during development
+# OR using make from root:
+make -f .pew/Makefile sync claude                    # Sync to Claude Code
+make -f .pew/Makefile watch claude                   # Auto-sync during development
 
 # YAML configuration controls:
 # - Source directories (sync_sources)
@@ -533,13 +536,19 @@ pew-pew-workspace/
 ├── blocks/               # Reusable content blocks
 ├── output-formats/       # Output format specifications
 ├── personas/             # Role definitions
-├── scripts/              # Sync and utility scripts
-│   └── claude-code/
-│       ├── plx-yaml-parser.sh      # YAML configuration parser
-│       ├── sync-claude-code.sh     # Main sync script
-│       ├── test-sync.sh            # Test runner
-│       └── sync-claude-code-*.sh   # Component sync scripts
-├── .claude/              # Synced Claude Code artifacts
+├── .pew/                 # All framework files and configuration
+│   ├── plx.yaml          # Sync configuration
+│   ├── plx.local.yaml    # Optional local override (gitignored)
+│   ├── Makefile          # Make commands for sync operations
+│   ├── install.sh        # Installation script
+│   ├── scripts/          # Sync and utility scripts
+│   │   └── claude-code/
+│   │       ├── plx-yaml-parser.sh      # YAML configuration parser
+│   │       ├── sync-claude-code.sh     # Main sync script
+│   │       ├── test-sync.sh            # Test runner
+│   │       └── sync-claude-code-*.sh   # Component sync scripts
+│   └── [component dirs]  # Copies of framework components
+├── .claude/              # Synced Claude Code artifacts (auto-generated)
 │   ├── agents/
 │   └── commands/
 │       ├── act/          # Agent & persona commands
@@ -550,7 +559,6 @@ pew-pew-workspace/
 │       ├── apply/        # Instruction commands
 │       ├── start/        # Workflow commands
 │       └── activate/     # Mode commands
-├── plx.yaml              # Sync configuration
 ├── README.md             # This file
 │
 ├── 00-freelancers/       # [Legacy] Individual specialist agents

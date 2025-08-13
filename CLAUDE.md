@@ -11,20 +11,20 @@ Pew Pew Workspace is an AI project management framework that transforms requirem
 ### Sync and Build Commands
 ```bash
 # Main sync command - transforms WikiLinks and syncs to .claude/
-./scripts/claude-code/sync-claude-code.sh
+./.pew/scripts/claude-code/sync-claude-code.sh
 
 # Sync with clean (removes .claude/ first)
-./scripts/claude-code/sync-claude-code.sh --clean
+./.pew/scripts/claude-code/sync-claude-code.sh --clean
 # OR
-make sync claude clean
+make -f .pew/Makefile sync claude clean
 
 # Watch for changes and auto-sync
-./scripts/claude-code/watch-claude-code.sh
+./.pew/scripts/claude-code/watch-claude-code.sh
 # OR
-make watch claude
+make -f .pew/Makefile watch claude
 
 # Test sync in isolated environment
-./scripts/claude-code/test-sync.sh
+./.pew/scripts/claude-code/test-sync.sh
 
 # Pull latest updates from repository
 make pull main                        # Pull main branch
@@ -35,7 +35,7 @@ make pull https://github.com/user/repo.git main  # Pull from any repository
 ### Quick Setup for New Projects
 ```bash
 # Add Pew Pew framework to any existing project
-rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts; do mkdir -p ".pew/$dir" && cp -r /tmp/pew-pew/"$dir"/* ".pew/$dir"/ 2>/dev/null || true; done && cp -r /tmp/pew-pew/scripts . && cp /tmp/pew-pew/.pew/plx.yaml .pew/plx.yaml && ./scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
+rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts Makefile install.sh; do if [ -f "/tmp/pew-pew/.pew/$dir" ]; then cp "/tmp/pew-pew/.pew/$dir" ".pew/$dir"; elif [ -d "/tmp/pew-pew/.pew/$dir" ]; then mkdir -p ".pew/$dir" && cp -r "/tmp/pew-pew/.pew/$dir"/* ".pew/$dir"/ 2>/dev/null || true; fi; done && cp /tmp/pew-pew/.pew/plx.yaml .pew/plx.yaml && ./.pew/scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
 ```
 
 ## High-Level Architecture
@@ -48,25 +48,35 @@ The project uses a WikiLink architecture where components reference each other u
 ### Directory Structure
 ```
 pew-pew-workspace/
-├── .pew/                    # Main configuration directory (for distribution projects)
+├── .pew/                    # ALL framework files and configuration
 │   ├── plx.yaml            # Sync configuration (committed)
 │   ├── plx.local.yaml      # Local override config (gitignored)
-│   └── [component dirs]    # Copies of framework components
-├── agents/                 # AI agent definitions (personas + workflows + instructions)
-├── prompts/                # Reusable prompt templates (/plx: commands)
-├── templates/              # Document templates (/use: commands)
-├── workflows/              # Multi-phase processes (/start: commands)
-├── instructions/           # Rules and conventions (/apply: commands)
-│   ├── conventions/        # *-conventions.md files
-│   ├── best-practices/     # *-best-practices.md files
-│   ├── rules/              # *-rules.md files (always/never)
-│   └── [tool-specific]/    # Tool-specific instructions
-├── modes/                  # Operational modes (/activate: commands)
-├── blocks/                 # Reusable content blocks (/add: commands)
-├── output-formats/         # Output specifications (/output: commands)
-├── personas/               # Role definitions (/act: commands)
-├── scripts/                # Sync and utility scripts
-│   └── claude-code/        # All sync-related scripts
+│   ├── Makefile            # Make commands for sync operations
+│   ├── install.sh          # Installation script
+│   ├── scripts/            # Sync and utility scripts
+│   │   └── claude-code/    # All sync-related scripts
+│   ├── agents/             # AI agent definitions (personas + workflows + instructions)
+│   ├── prompts/            # Reusable prompt templates (/plx: commands)
+│   ├── templates/          # Document templates (/use: commands)
+│   ├── workflows/          # Multi-phase processes (/start: commands)
+│   ├── instructions/       # Rules and conventions (/apply: commands)
+│   │   ├── conventions/    # *-conventions.md files
+│   │   ├── best-practices/ # *-best-practices.md files
+│   │   ├── rules/          # *-rules.md files (always/never)
+│   │   └── [tool-specific]/ # Tool-specific instructions
+│   ├── modes/              # Operational modes (/activate: commands)
+│   ├── blocks/             # Reusable content blocks (/add: commands)
+│   ├── output-formats/     # Output specifications (/output: commands)
+│   └── personas/           # Role definitions (/act: commands)
+├── agents/                 # Source agent definitions (used during development)
+├── prompts/                # Source prompts (used during development)
+├── templates/              # Source templates (used during development)
+├── workflows/              # Source workflows (used during development)
+├── instructions/           # Source instructions (used during development)
+├── modes/                  # Source modes (used during development)
+├── blocks/                 # Source blocks (used during development)
+├── output-formats/         # Source output formats (used during development)
+├── personas/               # Source personas (used during development)
 └── .claude/                # AUTO-GENERATED - Synced Claude Code artifacts
     ├── agents/             # Processed agent files
     └── commands/           # Slash command directories
@@ -138,7 +148,7 @@ pew-pew-workspace/
 ### Testing Changes
 ```bash
 # Test sync in isolated environment
-./scripts/claude-code/test-sync.sh
+./.pew/scripts/claude-code/test-sync.sh
 
 # Check sync results
 ls -la .claude/commands/
