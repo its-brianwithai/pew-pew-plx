@@ -1,7 +1,28 @@
 # Changelog
-All notable changes to Ultra Wide Turbo Workspace will be documented in this file.
+All notable changes to Pew Pew Workspace will be documented in this file.
 
 ## [Unreleased]
+
+### 🔄 Breaking Changes:
+- **Framework Structure Migration**: All framework files moved from root to `.pew/` directory
+  - Makefile now located at `.pew/Makefile` (use `make -f .pew/Makefile` for commands)
+  - Scripts relocated to `.pew/scripts/claude-code/`
+  - Installation script moved to `.pew/install.sh`
+  - Root directory now contains only user project files
+  - No backwards compatibility - requires reinstallation for existing projects
+
+### 🛠️ Improvements:
+- **Command Updates**: 
+  - Replaced `plx` commands with `make -f .pew/Makefile` throughout documentation
+  - Updated sync command: `make -f .pew/Makefile sync claude`
+  - Updated clean sync: `make -f .pew/Makefile sync claude clean`
+  - Updated watch command: `make -f .pew/Makefile watch claude`
+- **Documentation Enhancements**:
+  - Updated CLAUDE.md with new command patterns
+  - Fixed Quick Start installation command for new structure
+  - Updated all script paths in documentation
+
+## [v0.4.0] - 2025-08-12
 
 ### ✨ Features:
 - **Agent YAML Frontmatter**: Added YAML frontmatter to all agent files with:
@@ -16,6 +37,10 @@ All notable changes to Ultra Wide Turbo Workspace will be documented in this fil
   - Agents now look for `context.yaml` in the current project directory
   - Users can customize context per project by adding their own `context.yaml`
   - Removed old context folders from all team directories
+- **WikiLink Architecture**: 
+  - Established comprehensive WikiLink-based component referencing system
+  - Enhanced sync process with embedded WikiLink resolution
+  - Improved component modularity and reusability
 
 ## [v0.2.0] - 2025-07-15
 
