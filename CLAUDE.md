@@ -11,25 +11,26 @@ Pew Pew Workspace is an AI project management framework that transforms requirem
 ### Sync and Build Commands
 ```bash
 # Main sync command - transforms WikiLinks and syncs to .claude/
-./.pew/scripts/claude-code/sync-claude-code.sh
+make -f .pew/Makefile sync claude
 
 # Sync with clean (removes .claude/ first)
-./.pew/scripts/claude-code/sync-claude-code.sh --clean
-# OR
 make -f .pew/Makefile sync claude clean
 
 # Watch for changes and auto-sync
-./.pew/scripts/claude-code/watch-claude-code.sh
-# OR
 make -f .pew/Makefile watch claude
 
-# Test sync in isolated environment
+# Test sync in isolated environment (direct script call)
 ./.pew/scripts/claude-code/test-sync.sh
 
 # Pull latest updates from repository
-make pull main                        # Pull main branch
-make pull beta                        # Pull beta branch
-make pull https://github.com/user/repo.git main  # Pull from any repository
+make -f .pew/Makefile pull main                        # Pull main branch
+make -f .pew/Makefile pull beta                        # Pull beta branch
+make -f .pew/Makefile pull https://github.com/user/repo.git main  # Pull from any repository
+
+# Alternative: Direct script execution (if needed)
+./.pew/scripts/claude-code/sync-claude-code.sh
+./.pew/scripts/claude-code/sync-claude-code.sh --clean
+./.pew/scripts/claude-code/watch-claude-code.sh
 ```
 
 ### Quick Setup for New Projects
