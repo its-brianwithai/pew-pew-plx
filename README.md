@@ -5,7 +5,7 @@
 [![Brought to you by pewpewprompts.com](https://img.shields.io/badge/Brought%20to%20you%20by-pewpewprompts.com-blue)](https://pewpewprompts.com)
 
 
-> AI project management framework that systematically transforms requirements into production-ready artifacts through intelligent decomposition and component reuse.
+> AI-powered project management framework based on an opinionated view on effective prompts and a highly modular approach to building effective agents, workflows, templates, prompts and context documents.
 
 ![Pew Pew Plx Hero](.assets/hero.png)
 
