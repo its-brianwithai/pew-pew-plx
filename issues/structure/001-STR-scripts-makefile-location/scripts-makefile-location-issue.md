@@ -2,6 +2,9 @@
 
 Scripts and Makefile should reside in .pew instead of root directory
 
+**GitHub Issue:** #4  
+**Pull Request:** (pending creation)
+
 ---
 
 ## 📝 Initial Requirement
