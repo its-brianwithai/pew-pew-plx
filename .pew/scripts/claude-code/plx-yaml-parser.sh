@@ -3,7 +3,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 
 # Check for .pew/plx.local.yaml override first, then use .pew/plx.yaml
 if [ -f "$PROJECT_ROOT/.pew/plx.local.yaml" ]; then

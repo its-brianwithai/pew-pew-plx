@@ -15,7 +15,7 @@ echo ""
 
 # Setup paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 TEST_ROOT="/tmp/plx-sync-test-$(date +%s)"
 TEST_WORKSPACE="$TEST_ROOT/test-workspace"
 
