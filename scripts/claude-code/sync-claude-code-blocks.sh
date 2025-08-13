@@ -64,11 +64,11 @@ for block_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" ! 
         first_line=$(head -n 1 "$block_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
-            PROJECT_ROOT="$PROJECT_ROOT" awk '
+            SOURCE_DIR="$SOURCE_DIR" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/block-command-block.md");
+                    system("cat " ENVIRON["SOURCE_DIR"] "/block-command-block.md");
                     print "";
                     print "````````````";
                     in_frontmatter = 0; 
@@ -82,7 +82,7 @@ for block_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" ! 
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$BLOCKS_DIR/block-command-block.md"
+                cat "$SOURCE_DIR/block-command-block.md"
                 echo ""
                 echo "\`\`\`\`\`\`\`\`\`\`"
                 cat "$block_file"

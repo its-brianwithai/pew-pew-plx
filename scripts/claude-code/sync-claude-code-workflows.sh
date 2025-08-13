@@ -71,11 +71,11 @@ for workflow_file in "$SOURCE_DIR"/*.md; do
         first_line=$(head -n 1 "$workflow_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
-            PROJECT_ROOT="$PROJECT_ROOT" awk '
+            BLOCKS_DIR="$BLOCKS_DIR" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/workflow-command-block.md");
+                    system("cat " ENVIRON["BLOCKS_DIR"] "/workflow-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 

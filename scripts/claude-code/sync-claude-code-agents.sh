@@ -20,6 +20,13 @@ if [ -z "$AGENTS_SOURCE" ]; then
 fi
 AGENTS_DIR="$PROJECT_ROOT/$AGENTS_SOURCE"
 
+# Get blocks source directory from YAML config
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
+fi
+BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
 # Get target directories from YAML config
 AGENT_TARGETS=()
 while IFS= read -r line; do
@@ -111,11 +118,11 @@ for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f ! -name "README*" ! 
         first_line=$(head -n 1 "$agent_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends
-            PROJECT_ROOT="$PROJECT_ROOT" awk '
+            BLOCKS_DIR="$BLOCKS_DIR" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/agent-command-block.md");
+                    system("cat " ENVIRON["BLOCKS_DIR"] "/agent-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 

@@ -71,11 +71,11 @@ while IFS= read -r -d '' template_file; do
         first_line=$(head -n 1 "$template_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
-            PROJECT_ROOT="$PROJECT_ROOT" awk '
+            BLOCKS_DIR="$BLOCKS_DIR" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/template-command-block.md");
+                    system("cat " ENVIRON["BLOCKS_DIR"] "/template-command-block.md");
                     print "";
                     print "````````````";
                     in_frontmatter = 0; 

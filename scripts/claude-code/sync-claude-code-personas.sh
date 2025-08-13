@@ -20,6 +20,13 @@ if [ -z "$PERSONAS_SOURCE" ]; then
 fi
 PERSONAS_DIR="$PROJECT_ROOT/$PERSONAS_SOURCE"
 
+# Get blocks source directory from YAML config (for command blocks only)
+BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
+if [ -z "$BLOCKS_SOURCE" ]; then
+    BLOCKS_SOURCE="blocks"  # Default fallback
+fi
+BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
+
 # Get target directories from YAML config
 PERSONA_TARGETS=()
 while IFS= read -r line; do
@@ -60,11 +67,11 @@ for persona_file in $(find "$PERSONAS_DIR" -name "*.md" -type f ! -name "README*
         first_line=$(head -n 1 "$persona_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends
-            PROJECT_ROOT="$PROJECT_ROOT" awk '
+            BLOCKS_DIR="$BLOCKS_DIR" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["PROJECT_ROOT"] "/blocks/persona-command-block.md");
+                    system("cat " ENVIRON["BLOCKS_DIR"] "/persona-command-block.md");
                     print "";
                     in_frontmatter = 0; 
                     found_end = 1; 
