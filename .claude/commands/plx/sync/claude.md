@@ -1,3 +1,9 @@
+# Prompt Command
+
+When this command is used, check if any required information is missing. If so, ask the user to provide it. Otherwise, proceed with the request.
+
+---
+
 You are about to sync your project with Claude Code.
 
 You have two options:

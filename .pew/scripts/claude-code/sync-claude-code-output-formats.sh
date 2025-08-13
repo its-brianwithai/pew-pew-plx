@@ -3,7 +3,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 
 # Use temp directory if available, otherwise use project directory
@@ -14,11 +14,11 @@ else
 fi
 
 # Get source directories from YAML config
-TEMPLATES_SOURCE=$("$YAML_PARSER" get_sources templates | head -1)
-if [ -z "$TEMPLATES_SOURCE" ]; then
-    TEMPLATES_SOURCE="templates"  # Default fallback
+OUTPUT_FORMATS_SOURCE=$("$YAML_PARSER" get_sources output-formats | head -1)
+if [ -z "$OUTPUT_FORMATS_SOURCE" ]; then
+    OUTPUT_FORMATS_SOURCE="output-formats"  # Default fallback
 fi
-SOURCE_DIR="$PROJECT_ROOT/$TEMPLATES_SOURCE"
+SOURCE_DIR="$PROJECT_ROOT/$OUTPUT_FORMATS_SOURCE"
 
 # Get blocks source directory from YAML config
 BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
@@ -28,80 +28,76 @@ fi
 BLOCKS_DIR="$PROJECT_ROOT/$BLOCKS_SOURCE"
 
 # Get target directories from YAML config
-TEMPLATE_TARGETS=()
+OUTPUT_FORMAT_TARGETS=()
 while IFS= read -r line; do
-    TEMPLATE_TARGETS+=("$line")
-done < <("$YAML_PARSER" get_targets templates)
-if [ ${#TEMPLATE_TARGETS[@]} -eq 0 ]; then
-    # Fallback to defaults if no targets found
-    TEMPLATE_TARGETS=(".claude/commands/use/")
+    OUTPUT_FORMAT_TARGETS+=("$line")
+done < <("$YAML_PARSER" get_targets output-formats)
+if [ ${#OUTPUT_FORMAT_TARGETS[@]} -eq 0 ]; then
+    # Fallback to defaults if no targets found - yaml shows output not use
+    OUTPUT_FORMAT_TARGETS=(".claude/commands/output/")
 fi
 
-# Set primary target
-CLAUDE_COMMANDS_USE_DIR="$BASE_ROOT/${TEMPLATE_TARGETS[0]%/}"
+# Set primary target  
+CLAUDE_COMMANDS_OUTPUT_DIR="$BASE_ROOT/${OUTPUT_FORMAT_TARGETS[0]%/}"
 
 if [ ! -d "$SOURCE_DIR" ]; then
-    echo "📁 Creating templates directory at $SOURCE_DIR"
+    echo "📁 Creating output-formats directory at $SOURCE_DIR"
     mkdir -p "$SOURCE_DIR"
 fi
 
-echo "📋 Creating Claude use commands directory..."
-mkdir -p "$CLAUDE_COMMANDS_USE_DIR"
+echo "📄 Creating Claude output format commands directory..."
+mkdir -p "$CLAUDE_COMMANDS_OUTPUT_DIR"
 
 # Create source directory if it doesn't exist
 if [ ! -d "$SOURCE_DIR" ]; then
-    echo "📁 Creating templates directory at $SOURCE_DIR"
+    echo "📁 Creating output-formats directory at $SOURCE_DIR"
     mkdir -p "$SOURCE_DIR"
 fi
 
-echo "📋 Processing templates from $SOURCE_DIR to $CLAUDE_COMMANDS_USE_DIR..."
+echo "📄 Processing output formats from $SOURCE_DIR to $CLAUDE_COMMANDS_OUTPUT_DIR..."
 
-# Process each template file
-template_count=0
-while IFS= read -r -d '' template_file; do
-    if [ -f "$template_file" ]; then
+# Process each output format file
+format_count=0
+for format_file in $(find "$SOURCE_DIR" -name "*.md" -type f ! -name "README*" ! -name "readme*"); do
+    if [ -f "$format_file" ]; then
         # Keep the original filename
-        basename=$(basename "$template_file")
-        output_file="$CLAUDE_COMMANDS_USE_DIR/$basename"
+        basename=$(basename "$format_file")
+        output_file="$CLAUDE_COMMANDS_OUTPUT_DIR/$basename"
         
         # Create a temporary file
         temp_file=$(mktemp)
         
         # Check if file has frontmatter
-        first_line=$(head -n 1 "$template_file")
+        first_line=$(head -n 1 "$format_file")
         if [[ "$first_line" == "---" ]]; then
             # File has frontmatter, find where it ends and insert header after
             BLOCKS_DIR="$BLOCKS_DIR" awk '
                 BEGIN { in_frontmatter = 1; found_end = 0 }
                 in_frontmatter && /^---$/ && NR > 1 { 
                     print; 
-                    system("cat " ENVIRON["BLOCKS_DIR"] "/template-command-block.md");
+                    system("cat " ENVIRON["BLOCKS_DIR"] "/output-format-command-block.md");
                     print "";
-                    print "````````````";
                     in_frontmatter = 0; 
                     found_end = 1; 
                     next 
                 }
                 in_frontmatter { print; next }
                 { print }
-                END { print "````````````" }
-            ' "$template_file" > "$temp_file"
+            ' "$format_file" > "$temp_file"
         else
             # No frontmatter, add header at the beginning
             {
-                cat "$BLOCKS_DIR/template-command-block.md"
+                cat "$BLOCKS_DIR/output-format-command-block.md"
                 echo ""
-                echo "\`\`\`\`\`\`\`\`\`\`"
-                cat "$template_file"
-                echo "\`\`\`\`\`\`\`\`\`\`"
+                cat "$format_file"
             } > "$temp_file"
         fi
         
         # Move processed file to final location
         mv "$temp_file" "$output_file"
-        
-        ((template_count++))
+        echo "✅ Created output/$basename"
+        ((format_count++))
     fi
-done < <(find "$SOURCE_DIR" -name "*-template.md" -type f -print0)
+done
 
-echo "✅ Successfully created $template_count template commands"
+echo "✅ Successfully processed $format_count output format files"

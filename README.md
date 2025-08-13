@@ -14,7 +14,7 @@
 Add the latest files of the Pew Pew framework to any existing project with a single command:
 
 ```bash
-rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts; do mkdir -p ".pew/$dir" && cp -r /tmp/pew-pew/"$dir"/* ".pew/$dir"/ 2>/dev/null || true; done && cp -r /tmp/pew-pew/scripts . && cp /tmp/pew-pew/.pew/plx.yaml .pew/plx.yaml && ./scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
+rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts Makefile install.sh; do if [ -f "/tmp/pew-pew/.pew/$dir" ]; then cp "/tmp/pew-pew/.pew/$dir" ".pew/$dir"; elif [ -d "/tmp/pew-pew/.pew/$dir" ]; then mkdir -p ".pew/$dir" && cp -r "/tmp/pew-pew/.pew/$dir"/* ".pew/$dir"/ 2>/dev/null || true; fi; done && cp /tmp/pew-pew/.pew/plx.yaml .pew/plx.yaml && ./.pew/scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
 ```
 
 This will:
@@ -339,9 +339,12 @@ Use the workflow in [[issue-workflow-example-wiki-link]]
 ### Core Setup & Sync
 ```bash
 # The sync process uses plx.yaml configuration for all paths
-./scripts/claude-code/sync-claude-code.sh       # Sync to Claude Code
-./scripts/claude-code/test-sync.sh              # Test sync in isolated environment
-./scripts/claude-code/watch-claude-code.sh      # Auto-sync during development
+./.pew/scripts/claude-code/sync-claude-code.sh       # Sync to Claude Code
+./.pew/scripts/claude-code/test-sync.sh              # Test sync in isolated environment
+./.pew/scripts/claude-code/watch-claude-code.sh      # Auto-sync during development
+# OR using make from root:
+make -f .pew/Makefile sync claude                    # Sync to Claude Code
+make -f .pew/Makefile watch claude                   # Auto-sync during development
 
 # YAML configuration controls:
 # - Source directories (sync_sources)
@@ -514,12 +517,135 @@ sync_targets:
 - **Error Handling**: Comprehensive error handling with automatic cleanup
 - **Temporary Directory Management**: Auto-removes empty tmp directories after sync
 
+## 🎯 Most Valuable Project Management (MVPM)
+
+We determine directories by their ability to be worked on in parallel - this enables both humans and AI agents to work simultaneously on different parts of the project without conflicts. Each directory represents an independent work stream that can progress without blocking others.
+
+### Issue Organization Structure
+
+Issues follow the MVPM structure:
+```
+issues/{department}/{company-concept}/{most-valuable-milestone}/{most-valuable-step}/{team-folders(optional)}/{issue-folder}/{documents}.md
+```
+
+### Structure Flow Diagram
+
+```mermaid
+graph TD
+    A[issues/] --> B[department/]
+    B --> C[company-concept/]
+    C --> D[000-backlog/]
+    C --> E[001-most-valuable-milestone/]
+    E --> F[000-backlog/]
+    E --> G[001-most-valuable-step/]
+    G --> H[000-backlog/]
+    G --> I{team-folders?}
+    I -->|Optional| J[team-name/]
+    I -->|Direct| K[issue-folder/]
+    J --> K
+    K --> L[documents.md]
+    
+    style A fill:#37474f,color:#fff
+    style D fill:#b71c1c,color:#fff
+    style F fill:#b71c1c,color:#fff
+    style H fill:#b71c1c,color:#fff
+    style L fill:#1565c0,color:#fff
+```
+
+### Parallel Work Visualization
+
+```mermaid
+graph LR
+    A[Company] --> B[Engineering Dept]
+    A --> C[Marketing Dept]
+    A --> D[Sales Dept]
+    
+    B --> B1[Infrastructure Concept]
+    B --> B2[Authentication Concept]
+    C --> C1[Campaigns Concept]
+    D --> D1[Leads Concept]
+    D --> D2[Infrastructure Concept]
+    
+    B1 --> B3[001-cloud-migration MVM]
+    B2 --> B4[001-user-auth MVM]
+    C1 --> C2[001-summer-launch MVM]
+    D1 --> D3[001-q4-targets MVM]
+    D2 --> D4[001-cloud-migration MVM]
+    
+    style B fill:#1e3a5f,color:#fff
+    style C fill:#4a148c,color:#fff
+    style D fill:#1b5e20,color:#fff
+    
+    style B3 fill:#0d47a1,color:#fff
+    style B4 fill:#0d47a1,color:#fff
+    style C2 fill:#6a1b9a,color:#fff
+    style D3 fill:#2e7d32,color:#fff
+    style D4 fill:#2e7d32,color:#fff
+```
+
+Note: Departments can work on the same milestone (e.g., Engineering and Sales both working on cloud-migration) or completely different milestones based on their priorities.
+
+### When Overwhelmed: Start with MVS
+
+If it feels overwhelming to define the whole structure, start with the next MVS (Most Valuable Step) to reduce cognitive overload.
+
+### Workflow Decision Tree
+
+```mermaid
+flowchart TD
+    A[What needs to be done?] --> B[Define MVS: set-up-flutter-app]
+    B --> C{What concept?}
+    C --> D[essentials]
+    D --> E{Which department?}
+    E --> F[tech department]
+    F --> G{Build hierarchy}
+    G --> H[tech/essentials/001-initial-setup/001-set-up-flutter-app]
+    H --> I{Teams needed?}
+    I -->|Yes| J[Create team folders]
+    I -->|No| K[Create issue folders directly]
+    J --> L[team-app/<br/>team-backend]
+    L --> K
+    K --> M[APP-001-flutter-setup/]
+    M --> N[Create documents:<br/>- requirements.md<br/>- story.md<br/>- pr.md]
+    
+    style A fill:#263238,color:#fff
+    style B fill:#2e7d32,color:#fff
+    style N fill:#1565c0,color:#fff
+```
+
+### Issue Evolution Timeline
+
+```mermaid
+timeline
+    title Issue Document Evolution
+    
+    AUTH-001 : requirements.md created
+            : Initial requirements documented
+    
+    AUTH-001 : story.md added
+            : User story defined
+    
+    AUTH-001 : pr.md added
+            : Pull request documentation
+            : Implementation complete
+```
+
 ## 📂 File Structure Overview
 
 The repository follows a clear modular structure:
 
 ```
 pew-pew-workspace/
+├── issues/               # MVPM-structured project issues
+│   └── {department}/
+│       └── {company-concept}/
+│           ├── 000-backlog/
+│           └── {001-most-valuable-milestone}/
+│               ├── 000-backlog/
+│               └── {001-most-valuable-step}/
+│                   ├── 000-backlog/
+│                   └── {issue-folder}/
+│                       └── {documents}.md
 ├── agents/               # AI agent definitions
 ├── prompts/              # Reusable prompts
 ├── templates/            # Document templates
@@ -533,13 +659,19 @@ pew-pew-workspace/
 ├── blocks/               # Reusable content blocks
 ├── output-formats/       # Output format specifications
 ├── personas/             # Role definitions
-├── scripts/              # Sync and utility scripts
-│   └── claude-code/
-│       ├── plx-yaml-parser.sh      # YAML configuration parser
-│       ├── sync-claude-code.sh     # Main sync script
-│       ├── test-sync.sh            # Test runner
-│       └── sync-claude-code-*.sh   # Component sync scripts
-├── .claude/              # Synced Claude Code artifacts
+├── .pew/                 # All framework files and configuration
+│   ├── plx.yaml          # Sync configuration
+│   ├── plx.local.yaml    # Optional local override (gitignored)
+│   ├── Makefile          # Make commands for sync operations
+│   ├── install.sh        # Installation script
+│   ├── scripts/          # Sync and utility scripts
+│   │   └── claude-code/
+│   │       ├── plx-yaml-parser.sh      # YAML configuration parser
+│   │       ├── sync-claude-code.sh     # Main sync script
+│   │       ├── test-sync.sh            # Test runner
+│   │       └── sync-claude-code-*.sh   # Component sync scripts
+│   └── [component dirs]  # Copies of framework components
+├── .claude/              # Synced Claude Code artifacts (auto-generated)
 │   ├── agents/
 │   └── commands/
 │       ├── act/          # Agent & persona commands
@@ -550,7 +682,6 @@ pew-pew-workspace/
 │       ├── apply/        # Instruction commands
 │       ├── start/        # Workflow commands
 │       └── activate/     # Mode commands
-├── plx.yaml              # Sync configuration
 ├── README.md             # This file
 │
 ├── 00-freelancers/       # [Legacy] Individual specialist agents

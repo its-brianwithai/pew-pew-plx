@@ -5,10 +5,10 @@ sync:
 ifeq ($(word 2,$(MAKECMDGOALS)),claude)
 ifeq ($(word 3,$(MAKECMDGOALS)),clean)
 	@echo "Syncing Claude Code with clean..."
-	@./scripts/claude-code/sync-claude-code.sh --clean
+	@./.pew/scripts/claude-code/sync-claude-code.sh --clean
 else
 	@echo "Syncing Claude Code..."
-	@./scripts/claude-code/sync-claude-code.sh
+	@./.pew/scripts/claude-code/sync-claude-code.sh
 endif
 else
 	@echo "Usage: make sync claude [clean]"
@@ -75,7 +75,7 @@ endif
 watch:
 ifeq ($(word 2,$(MAKECMDGOALS)),claude)
 	@echo "👀 Watching for changes in agents/ and prompts/ directories..."
-	@./scripts/claude-code/watch-claude-code.sh
+	@./.pew/scripts/claude-code/watch-claude-code.sh
 else
 	@echo "Usage: make watch claude"
 endif
