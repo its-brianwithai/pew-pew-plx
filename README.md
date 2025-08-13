@@ -517,12 +517,135 @@ sync_targets:
 - **Error Handling**: Comprehensive error handling with automatic cleanup
 - **Temporary Directory Management**: Auto-removes empty tmp directories after sync
 
+## 🎯 Most Valuable Project Management (MVPM)
+
+We determine directories by their ability to be worked on in parallel - this enables both humans and AI agents to work simultaneously on different parts of the project without conflicts. Each directory represents an independent work stream that can progress without blocking others.
+
+### Issue Organization Structure
+
+Issues follow the MVPM structure:
+```
+issues/{department}/{company-concept}/{most-valuable-milestone}/{most-valuable-step}/{team-folders(optional)}/{issue-folder}/{documents}.md
+```
+
+### Structure Flow Diagram
+
+```mermaid
+graph TD
+    A[issues/] --> B[department/]
+    B --> C[company-concept/]
+    C --> D[000-backlog/]
+    C --> E[001-most-valuable-milestone/]
+    E --> F[000-backlog/]
+    E --> G[001-most-valuable-step/]
+    G --> H[000-backlog/]
+    G --> I{team-folders?}
+    I -->|Optional| J[team-name/]
+    I -->|Direct| K[issue-folder/]
+    J --> K
+    K --> L[documents.md]
+    
+    style A fill:#37474f,color:#fff
+    style D fill:#b71c1c,color:#fff
+    style F fill:#b71c1c,color:#fff
+    style H fill:#b71c1c,color:#fff
+    style L fill:#1565c0,color:#fff
+```
+
+### Parallel Work Visualization
+
+```mermaid
+graph LR
+    A[Company] --> B[Engineering Dept]
+    A --> C[Marketing Dept]
+    A --> D[Sales Dept]
+    
+    B --> B1[Infrastructure Concept]
+    B --> B2[Authentication Concept]
+    C --> C1[Campaigns Concept]
+    D --> D1[Leads Concept]
+    D --> D2[Infrastructure Concept]
+    
+    B1 --> B3[001-cloud-migration MVM]
+    B2 --> B4[001-user-auth MVM]
+    C1 --> C2[001-summer-launch MVM]
+    D1 --> D3[001-q4-targets MVM]
+    D2 --> D4[001-cloud-migration MVM]
+    
+    style B fill:#1e3a5f,color:#fff
+    style C fill:#4a148c,color:#fff
+    style D fill:#1b5e20,color:#fff
+    
+    style B3 fill:#0d47a1,color:#fff
+    style B4 fill:#0d47a1,color:#fff
+    style C2 fill:#6a1b9a,color:#fff
+    style D3 fill:#2e7d32,color:#fff
+    style D4 fill:#2e7d32,color:#fff
+```
+
+Note: Departments can work on the same milestone (e.g., Engineering and Sales both working on cloud-migration) or completely different milestones based on their priorities.
+
+### When Overwhelmed: Start with MVS
+
+If it feels overwhelming to define the whole structure, start with the next MVS (Most Valuable Step) to reduce cognitive overload.
+
+### Workflow Decision Tree
+
+```mermaid
+flowchart TD
+    A[What needs to be done?] --> B[Define MVS: set-up-flutter-app]
+    B --> C{What concept?}
+    C --> D[essentials]
+    D --> E{Which department?}
+    E --> F[tech department]
+    F --> G{Build hierarchy}
+    G --> H[tech/essentials/001-initial-setup/001-set-up-flutter-app]
+    H --> I{Teams needed?}
+    I -->|Yes| J[Create team folders]
+    I -->|No| K[Create issue folders directly]
+    J --> L[team-app/<br/>team-backend]
+    L --> K
+    K --> M[APP-001-flutter-setup/]
+    M --> N[Create documents:<br/>- requirements.md<br/>- story.md<br/>- pr.md]
+    
+    style A fill:#263238,color:#fff
+    style B fill:#2e7d32,color:#fff
+    style N fill:#1565c0,color:#fff
+```
+
+### Issue Evolution Timeline
+
+```mermaid
+timeline
+    title Issue Document Evolution
+    
+    AUTH-001 : requirements.md created
+            : Initial requirements documented
+    
+    AUTH-001 : story.md added
+            : User story defined
+    
+    AUTH-001 : pr.md added
+            : Pull request documentation
+            : Implementation complete
+```
+
 ## 📂 File Structure Overview
 
 The repository follows a clear modular structure:
 
 ```
 pew-pew-workspace/
+├── issues/               # MVPM-structured project issues
+│   └── {department}/
+│       └── {company-concept}/
+│           ├── 000-backlog/
+│           └── {001-most-valuable-milestone}/
+│               ├── 000-backlog/
+│               └── {001-most-valuable-step}/
+│                   ├── 000-backlog/
+│                   └── {issue-folder}/
+│                       └── {documents}.md
 ├── agents/               # AI agent definitions
 ├── prompts/              # Reusable prompts
 ├── templates/            # Document templates
