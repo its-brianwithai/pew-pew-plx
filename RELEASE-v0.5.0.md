@@ -98,5 +98,5 @@ Thanks to all contributors and users who provided feedback on the framework stru
 
 ---
 
-*Release Date: [To be added when PR is merged]*
+*Release Date: January 13, 2025*
 *Version: v0.5.0*
