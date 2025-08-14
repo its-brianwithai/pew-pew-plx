@@ -23,6 +23,19 @@ This will:
 3. Add the `.claude/` directory with all synced artifacts
 4. Enable all `/plx:` commands in your project
 
+### After Installation: Sync Anytime
+
+Once installed, sync all docs from your project root with:
+
+```bash
+make -f .pew/Makefile sync claude
+```
+
+Or directly:
+```bash
+./.pew/scripts/claude-code/sync-claude-code.sh
+```
+
 ### Configuration (.pew/plx.yaml)
 
 The sync process uses `.pew/plx.yaml` as the main configuration:
