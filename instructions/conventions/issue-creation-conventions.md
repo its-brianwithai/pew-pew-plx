@@ -43,12 +43,37 @@ graph TD
     - Chronologically ordered (earlier numbers must be considered first)
     - Zero-padded to 3 digits total
     - Each MVM folder may contain a `000-backlog` folder
-- `{most-valuable-step}` - MVS - Format: `{CONCEPT}-{3-digit-number}-{description}-{type}.md`
+- `{most-valuable-step}` - MVS - Format: `{CONCEPT}-{number}-{description}-{type}.md`
     - `{CONCEPT}` - Max 4 character identifier (e.g., ESS for essentials, AUTH for authentication)
-    - `{3-digit-number}` - Chronologically ordered by importance
+    - `{number}` - **Flexible numbering options:**
+        - **Local chronological:** 001, 002, 003 (per MVS folder)
+        - **Milestone-wide:** Continue numbering across entire milestone
+        - **External system ID:** Use GitHub (#123), Jira (PROJ-456), or Linear (ENG-789) issue numbers
+        - **Your choice:** Create a system that works for your workflow
     - `{description}` - Kebab-case descriptive name  
     - `{type}` - Document type (issue, story, plan, etc.)
     - Each MVS folder may contain a `000-backlog` folder
+
+### 🎯 Important: This Is Your Local Workspace
+
+> ⚠️ **This system does NOT replace your GitHub Projects, Jira boards, Linear workspace, or other project management tools!**
+
+This is your **local project management workspace** where you:
+- **Prepare** issues with full context before creating them in external systems
+- **Record** progress and implementation details during development
+- **Provide** both humans and AI with the context needed for local development
+- **Document** decisions, changes, and outcomes for future reference
+
+Think of it as your **staging area** for project management - where ideas become well-defined issues ready for your actual tracking system.
+
+### 📊 Typical Workflow: Local → External → Local
+
+1. **Create locally** → `AUTH-draft-oauth-setup-story.md` (use "draft" for unnumbered)
+2. **Refine locally** → Add requirements, acceptance criteria, technical details
+3. **Push to external** → Create in GitHub/Jira/Linear, get issue number
+4. **Rename locally** → `AUTH-156-oauth-setup-story.md` (with external ID)
+5. **Track progress** → Update local file with implementation notes, decisions
+6. **Complete cycle** → Local file becomes documentation of what was built
 
 ## 🎯 Most Valuable Project Management (MVPM)
 
@@ -144,6 +169,124 @@ Note: Company concepts can be nested or arranged in any order that enables paral
         ├── CONC-002-description-type.md
         └── CONC-003-description-type.md
 ```
+
+## 🎓 Gradual Complexity Examples
+
+> 💡 **Key Principle:** Start simple, add structure only when parallel work demands it. Keep cognitive overhead minimal.
+
+### Quick Decision Guide
+- **1-3 developers?** → Level 1 (simple concept/MVM/MVS)
+- **Multiple features?** → Level 2 (add feature separation)
+- **Cross-functional?** → Level 3 (add departments)
+- **10+ developers?** → Level 4 (consider team folders)
+- **Enterprise scale?** → Level 5 (full hierarchy)
+
+**Remember:** You can always restructure later. Start simple!
+
+### Level 1: Simplest Structure (Solo Developer / Small Team)
+```
+authentication/                    # Company concept only
+├── 000-backlog/
+└── 001-user-login/                # MVM
+    ├── AUTH-001-setup-jwt-story.md           # Local numbering
+    ├── AUTH-002-validate-tokens-issue.md     # Local numbering
+    └── AUTH-003-refresh-logic-plan.md        # Local numbering
+```
+✅ **Use when:** Single developer or small team working sequentially
+
+**Alternative with external IDs:**
+```
+authentication/
+└── 001-user-login/
+    ├── AUTH-42-setup-jwt-story.md            # GitHub issue #42
+    ├── AUTH-43-validate-tokens-issue.md      # GitHub issue #43
+    └── AUTH-PROJ-156-refresh-logic-plan.md   # Jira PROJ-156
+```
+
+### Level 2: Adding Feature Separation (Multiple Features)
+```
+001-mvp-release/                   # MVM at root
+├── 001-authentication/             # MVS (feature 1)
+│   ├── AUTH-001-jwt-setup-story.md
+│   └── AUTH-002-oauth-integration-plan.md
+└── 002-payments/                   # MVS (feature 2)
+    ├── PAY-001-stripe-setup-story.md
+    └── PAY-002-webhook-handler-issue.md
+```
+✅ **Use when:** Multiple features being developed in parallel
+
+### Level 3: Department Organization (Cross-functional Teams)
+```
+engineering/                        # Department (optional)
+└── 001-mvp-release/               # MVM
+    ├── 001-backend-api/           # MVS
+    │   ├── API-001-rest-setup-story.md
+    │   └── API-002-graphql-migration-plan.md
+    └── 002-frontend-app/          # MVS
+        ├── APP-001-react-setup-story.md
+        └── APP-002-state-management-issue.md
+```
+✅ **Use when:** Different departments need clear separation
+
+### Level 4: Team Folders (Large Teams, Complex Features)
+```
+engineering/
+└── payments/                      # Company concept
+    └── 001-checkout-flow/         # MVM
+        └── 001-cart-implementation/ # MVS
+            ├── frontend/          # Team folder (optional)
+            │   ├── CART-001-ui-components-story.md
+            │   └── CART-002-state-logic-issue.md
+            └── backend/           # Team folder (optional)
+                ├── CART-003-api-endpoints-story.md
+                └── CART-004-database-schema-plan.md
+```
+✅ **Use when:** Multiple teams work on same MVS with clear boundaries
+
+### Level 5: Full Hierarchy (Enterprise Scale)
+```
+issues/
+├── engineering/
+│   └── infrastructure/
+│       └── 001-cloud-migration/
+│           └── 001-aws-setup/
+│               ├── devops/
+│               │   └── INF-001-terraform-config-story.md
+│               └── security/
+│                   └── INF-002-iam-policies-plan.md
+├── marketing/
+│   └── campaigns/
+│       └── 001-product-launch/
+│           └── 001-content-creation/
+│               └── MKT-001-blog-series-plan.md
+└── finance/
+    └── budgeting/
+        └── 001-q1-planning/
+            └── 001-cost-analysis/
+                └── FIN-001-aws-costs-story.md
+```
+✅ **Use when:** Large organization with many parallel work streams
+
+### 🚨 Complexity Warning Signs
+
+**Too Simple** (add structure when you see):
+- Developers stepping on each other's work
+- Difficulty finding relevant issues
+- No clear ownership boundaries
+
+**Too Complex** (simplify when you see):
+- Empty folders everywhere
+- Confusion about where to create issues
+- Deep nesting making navigation painful
+- Teams spending time discussing structure instead of working
+
+### 📌 Best Practices
+
+1. **Start with Level 1-2** for most projects
+2. **Add one layer at a time** as complexity grows
+3. **Review quarterly** - can you simplify?
+4. **Document your choice** in README
+5. **Prioritize findability** over perfect categorization
 
 Examples:
 
