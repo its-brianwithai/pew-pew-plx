@@ -1,6 +1,6 @@
 ---
 name: make-file-best-practices
-description: "// TODO(GPT-AGENT): 6 Aug 2025 : Natural language description of when to use this template, starting with "Use this template when"."
+description: "Use these best practices when creating or maintaining Makefiles to ensure they are clean, maintainable, and follow GNU Make standards."
 ---
 # Makefile Best Practices
 

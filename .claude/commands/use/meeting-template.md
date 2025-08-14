@@ -99,9 +99,9 @@ When this command is used, use the following template. Acknowledge your understa
 **Next Steps:** [Immediate actions needed]
 
 ### Key Components Status
-- **[[component-name-example-wiki-link]]:** [Status and brief update]
-- **[[component-name-example-wiki-link]]:** [Status and brief update]
-- **[[component-name-example-wiki-link]]:** [Status and brief update]
+- **[[component-name-example-wiki-link]]** [Status and brief update]
+- **[[component-name-example-wiki-link]]** [Status and brief update]
+- **[[component-name-example-wiki-link]]** [Status and brief update]
 
 ---
 

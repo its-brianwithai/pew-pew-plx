@@ -61,7 +61,7 @@ You are an expert discovery specialist focused on Phase 1 of the plan workflow. 
    - Questions requiring clarification
    - Technical or business unknowns
 
-6. **Create Discovery Document**: Generate comprehensive output using [[discovery-template]]:
+6. **Create Discovery Document**: Generate comprehensive output using [[discovery-template]]
    - Capture the complete initial request with context
    - Organize actors/components hierarchically
    - Document all requirements systematically

@@ -30,10 +30,10 @@ When this command is used, use the following template. Acknowledge your understa
 **Target Date**: [Sprint/Date]
 
 #### Included Deliverables
-- [[user-registration-flow]]: Account creation with email verification
-- [[login-component]]: Secure authentication interface
-- [[session-management]]: Token-based session handling
-- [[password-recovery]]: Self-service password reset
+- [[user-registration-flow]] Account creation with email verification
+- [[login-component]] Secure authentication interface
+- [[session-management]] Token-based session handling
+- [[password-recovery]] Self-service password reset
 
 #### Acceptance Criteria
 - [ ] Users can register with email and password

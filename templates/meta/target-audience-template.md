@@ -121,9 +121,9 @@ instructions: Make sure that when you implement this template, you don't include
 
 ```
 <example>
-- [[persona-name]]: Detailed persona representing this audience segment
-- [[user-journey]]: Mapped journey for this audience type
-- [[use-cases]]: Specific use cases for this audience
-- [[requirements]]: Requirements gathered from this audience
+- [[persona-name]] Detailed persona representing this audience segment
+- [[user-journey]] Mapped journey for this audience type
+- [[use-cases]] Specific use cases for this audience
+- [[requirements]] Requirements gathered from this audience
 </example>
 ```

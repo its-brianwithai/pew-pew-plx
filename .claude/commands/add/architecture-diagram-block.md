@@ -28,10 +28,10 @@ When this command is used, use the following block. Acknowledge your understandi
             └─────────────────┘   └─────────────────┘
 
 ### Component Relationships
-- [[frontend-app]] → [[api-gateway]]: REST API calls
-- [[api-gateway]] → [[auth-service]]: Authentication verification
-- [[auth-service]] → [[database]]: User data queries
-- [[auth-service]] → [[cache-layer]]: Session caching
+- [[frontend-app]] → [[api-gateway]] REST API calls
+- [[api-gateway]] → [[auth-service]] Authentication verification
+- [[auth-service]] → [[database]] User data queries
+- [[auth-service]] → [[cache-layer]] Session caching
 </example>
 ```
 ``````````

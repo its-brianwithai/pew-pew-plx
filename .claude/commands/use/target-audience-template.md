@@ -128,9 +128,9 @@ When this command is used, use the following template. Acknowledge your understa
 
 ```
 <example>
-- [[persona-name]]: Detailed persona representing this audience segment
-- [[user-journey]]: Mapped journey for this audience type
-- [[use-cases]]: Specific use cases for this audience
+- [[persona-name]] Detailed persona representing this audience segment
+- [[user-journey]] Mapped journey for this audience type
+- [[use-cases]] Specific use cases for this audience
 - @.claude/commands/plx/update/requirements.md: Requirements gathered from this audience
 </example>
 ```

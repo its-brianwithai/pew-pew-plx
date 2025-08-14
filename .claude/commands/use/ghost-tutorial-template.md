@@ -1,4 +1,5 @@
 ---
+ghost_id: 
 title: ""
 slug: ""
 feature_image: ""
@@ -48,7 +49,7 @@ When this command is used, use the following template. Acknowledge your understa
 ```
 
 ## 🧠 Theory
-> 💡 *How it actually works under the hood.*
+> 💡 *How it works under the hood.*
 
 [Explain the core mechanism in great detail. Add diagrams, tables, code examples wherever they help clarify and sensible to do so. Keep target audience and end goal in mind - no fluff - neutral documentation / tutorial writing style.]
 

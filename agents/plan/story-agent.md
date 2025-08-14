@@ -55,7 +55,7 @@ You are an expert story architect specializing in transforming milestone deliver
    - Apply QA (25%) and Testing (15%) ratios
    - Add risk-based delay margins
 
-7. **Create Story Document**: Generate output using [[story-template]]:
+7. **Create Story Document**: Generate output using [[story-template]]
    - Complete all template sections
    - Ensure story is actionable
    - Keep within 3 story points

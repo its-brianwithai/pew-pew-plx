@@ -26,11 +26,11 @@ instructions: Make sure that when you implement this template, you don't include
 
 ```
 <example>
-- [[login-screen]]: User authentication interface
-- [[auth-service]]: Backend authentication logic
-- [[session-management]]: Token-based session handling
-- [[password-recovery-flow]]: Self-service password reset
-- [[user-profile-component]]: Basic user profile display
+- [[login-screen]] User authentication interface
+- [[auth-service]] Backend authentication logic
+- [[session-management]] Token-based session handling
+- [[password-recovery-flow]] Self-service password reset
+- [[user-profile-component]] Basic user profile display
 </example>
 ```
 
@@ -105,14 +105,14 @@ instructions: Make sure that when you implement this template, you don't include
 ```
 <example>
 ### Technical Dependencies
-- [[design-system]]: UI components library (Available)
-- [[auth-library]]: Authentication framework (Need to select)
-- [[email-service]]: Email delivery system (In progress)
+- [[design-system]] UI components library (Available)
+- [[auth-library]] Authentication framework (Need to select)
+- [[email-service]] Email delivery system (In progress)
 
 ### Resource Dependencies
-- [[frontend-team]]: 2 developers allocated
-- [[backend-team]]: 1 developer allocated
-- [[design-team]]: Mockups completed
+- [[frontend-team]] 2 developers allocated
+- [[backend-team]] 1 developer allocated
+- [[design-team]] Mockups completed
 
 ### Blockers
 - [ ] Waiting for security audit approval

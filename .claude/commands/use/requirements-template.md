@@ -53,28 +53,28 @@ When this command is used, use the following template. Acknowledge your understa
 
 #### Step 1: [[actor]] opens [[component]]
 **Deliverables needed:**
-- [[navigation-component]]: Link/button to access the component
+- [[navigation-component]] Link/button to access the component
   - Owner: [[frontend-team]]
   - Size: 1 story point
   - Dependencies: [[design-system]]
 
-- [[route-handler]]: Backend endpoint for component data
+- [[route-handler]] Backend endpoint for component data
   - Owner: [[backend-team]]
   - Size: 2 story points
   - Dependencies: [[api-gateway]]
 
 #### Step 2: [[component]] displays [data]
 **Deliverables needed:**
-- [[display-component]]: UI component to show data
+- [[display-component]] UI component to show data
   - Owner: [[frontend-team]]
   - Size: 2 story points
   - Dependencies: [[data-model]]
 
 ### Sub-deliverables Breakdown
 - [[parent-deliverable]]
-  - [[sub-deliverable-1]]: [Description] (1 point)
-  - [[sub-deliverable-2]]: [Description] (2 points)
-  - [[sub-deliverable-3]]: [Description] (1 point)
+  - [[sub-deliverable-1]] [Description] (1 point)
+  - [[sub-deliverable-2]] [Description] (2 points)
+  - [[sub-deliverable-3]] [Description] (1 point)
 </example>
 ```
 ````````````

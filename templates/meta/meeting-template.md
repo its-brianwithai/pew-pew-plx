@@ -92,9 +92,9 @@ instructions: Make sure that when you implement this template, you don't include
 **Next Steps:** [Immediate actions needed]
 
 ### Key Components Status
-- **[[component-name-example-wiki-link]]:** [Status and brief update]
-- **[[component-name-example-wiki-link]]:** [Status and brief update]
-- **[[component-name-example-wiki-link]]:** [Status and brief update]
+- **[[component-name-example-wiki-link]]** [Status and brief update]
+- **[[component-name-example-wiki-link]]** [Status and brief update]
+- **[[component-name-example-wiki-link]]** [Status and brief update]
 
 ---
 

@@ -1,9 +1,23 @@
 ---
 ghost_id: 
-name: ""
-color: ""
-slug: ""
-description: ""
+email: 
+password: 
+role: 
+full_name: 
+slug: 
+location: 
+bio: 
+website: 
+cover_image: 
+x: 
+facebook: 
+linkedin: 
+bluesky: 
+threads: 
+mastodon: 
+tiktok: 
+youtube: 
+instagram: 
 ---
 # Template Command
 

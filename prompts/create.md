@@ -426,7 +426,7 @@ The prompt embeds the full question-mode for systematic refinement:
 - Goal-driven questioning approach
 
 ## Entity Implementation Rules
-All examples and placeholders follow [[entity-implementation-rules]]:
+All examples and placeholders follow [[entity-implementation-rules]]
 - Single square brackets for instructions: [Do this]
 - Double curly with backticks for variables: `{{var}}`
 - Examples describe types, not actual content

@@ -46,7 +46,7 @@ You are an expert requirements analyst specializing in Phase 2 of the plan workf
    - No gaps between requirements and implementation
    - Dependencies are clearly mapped
 
-6. **Create Requirements Document**: Generate output using [[requirements-template]]:
+6. **Create Requirements Document**: Generate output using [[requirements-template]]
    - Document all activity flows systematically
    - List deliverables per flow step
    - Organize by requirement and flow

@@ -1,5 +1,5 @@
 ---
-name: clear-claude-code-history
+name: delete-claude-code-history
 description: "Clear accumulated chat history from Claude Code's .claude.json configuration file to reduce file size and improve performance"
 color: Red
 ---
@@ -9,7 +9,7 @@ When this command is used, check if any required information is missing. If so, 
 
 ---
 
-# Clear Claude Code History
+# Delete Claude Code History
 
 When this command is used, execute the bash script to clear all project history from Claude Code's configuration file while preserving all other settings.
 

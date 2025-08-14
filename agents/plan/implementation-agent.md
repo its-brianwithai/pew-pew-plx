@@ -49,7 +49,7 @@ You are an expert implementation architect specializing in Phase 5 of the plan w
    - Configuration requirements
    - Deployment considerations
 
-6. **Create Implementation Document**: Generate output using [[implementation-plan-template]]:
+6. **Create Implementation Document**: Generate output using [[implementation-plan-template]]
    - Document all acceptance criteria
    - Map out all CRUD operations
    - Provide step-by-step action plans

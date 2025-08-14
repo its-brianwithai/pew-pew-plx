@@ -10,9 +10,9 @@
 **Value**: [User or business value delivered]
 
 #### Included Deliverables
-- [[deliverable-1]]: [Brief description]
-- [[deliverable-2]]: [Brief description]
-- [[deliverable-3]]: [Brief description]
+- [[deliverable-1]] [Brief description]
+- [[deliverable-2]] [Brief description]
+- [[deliverable-3]] [Brief description]
 
 #### Acceptance Criteria
 - [ ] [Testable condition that must be met]

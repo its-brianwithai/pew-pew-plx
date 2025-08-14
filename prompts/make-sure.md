@@ -282,7 +282,7 @@ Investigate the entire project to verify pattern/convention conformance, then se
 > 💡 *How to structure and deliver the output.*
 
 ### Format Type
-Markdown reports following [[most-valuable-project-management-conventions]]:
+Markdown reports following [[most-valuable-project-management-conventions]]
 - Issue-related reports: Save in the issue's folder
 - General reports: Save in `reports/` directory
 
