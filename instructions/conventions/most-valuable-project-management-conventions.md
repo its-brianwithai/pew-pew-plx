@@ -1,12 +1,23 @@
 ---
-name: issue-creation-conventions
-description: "Standard instructions for creating and organizing issues in the project. Defines folder structure, naming conventions, and document organization for all issue types."
+name: most-valuable-project-management-conventions
+description: Most Valuable Project Management (MVPM) system for organizing work by priority and enabling parallel execution through flexible structure.
 ---
-# 📋 Issue Creation Instructions
+# 🎯 Most Valuable Project Management Conventions
 
-> 💡 *Standard guidelines for creating and organizing issues across all workflows*
+> 💡 *Organize work by priority and enable parallel execution through flexible, scalable structure*
 
-## 📁 Issue Organization
+## What is MVPM?
+
+**Most Valuable Project Management (MVPM)** is a flexible organizational system that:
+- **Prioritizes work** by what delivers the most value first (MVM → MVS)
+- **Enables parallel execution** through company concepts that can be worked on simultaneously
+- **Scales naturally** from solo developers to enterprise teams
+- **Integrates seamlessly** with existing tools (GitHub, Jira, Linear)
+- **Provides context** for both humans and AI during development
+
+The core principle: **Start with what's most valuable, structure only what enables parallel work.**
+
+## 📁 Core Organization Structure
 
 Flexible structure based on parallel work:
 ```
@@ -54,7 +65,25 @@ graph TD
     - `{type}` - Document type (issue, story, plan, etc.)
     - Each MVS folder may contain a `000-backlog` folder
 
-### 🎯 Important: This Is Your Local Workspace
+### 📌 Important: Same Issue, Multiple Documents
+
+**The same issue can and should have multiple document types with the SAME number:**
+
+```
+001-authentication/
+├── AUTH-042-oauth-integration-story.md      # User story document
+├── AUTH-042-oauth-integration-plan.md       # Technical plan document
+├── AUTH-042-oauth-integration-bug.md        # Bug found during implementation
+└── AUTH-042-oauth-integration-pr.md         # Pull request documentation
+```
+
+This approach:
+- **Maintains traceability** - All documents for issue #042 are clearly linked
+- **Shows evolution** - See how an issue progresses from story → plan → bug → PR
+- **Enables parallel work** - Different team members can work on different document types
+- **Preserves context** - All related work stays together with the same identifier
+
+## 🎯 Important: This Is Your Local Workspace
 
 > ⚠️ **This system does NOT replace your GitHub Projects, Jira boards, Linear workspace, or other project management tools!**
 
@@ -66,16 +95,19 @@ This is your **local project management workspace** where you:
 
 Think of it as your **staging area** for project management - where ideas become well-defined issues ready for your actual tracking system.
 
-### 📊 Typical Workflow: Local → External → Local
+## 📊 Typical Workflow: Local → External → Local
 
 1. **Create locally** → `AUTH-draft-oauth-setup-story.md` (use "draft" for unnumbered)
 2. **Refine locally** → Add requirements, acceptance criteria, technical details
-3. **Push to external** → Create in GitHub/Jira/Linear, get issue number
+3. **Push to external** → Create in GitHub/Jira/Linear, get issue number (e.g., #156)
 4. **Rename locally** → `AUTH-156-oauth-setup-story.md` (with external ID)
-5. **Track progress** → Update local file with implementation notes, decisions
-6. **Complete cycle** → Local file becomes documentation of what was built
+5. **Add related docs** → `AUTH-156-oauth-setup-plan.md`, `AUTH-156-oauth-setup-bug.md` (same number!)
+6. **Track progress** → Update files with implementation notes, decisions
+7. **Complete cycle** → All `AUTH-156-*` files become documentation of what was built
 
-## 🎯 Most Valuable Project Management (MVPM)
+**Remember:** One issue number can have many document types - they all work together to tell the complete story!
+
+## 🏗️ Philosophy & Principles
 
 We determine directories by their ability to be worked on in parallel - this enables both humans and AI agents to work simultaneously on different parts of the project without conflicts. Each directory represents an independent work stream that can progress without blocking others.
 
@@ -124,8 +156,8 @@ If it feels overwhelming to define the whole structure, start with the next MVS 
 3. **Which department?** → Add above or below → tech/essentials/set-up-flutter-app OR essentials/tech/set-up-flutter-app
 4. **Build the hierarchy** → Work backwards to establish MVM and company concept
 5. **Any teams needed?** → Inside the closest categorizer combo (essentials & tech) → team-app/team-backend
-6. **What should they do?** → Create issue folders
-7. **Create documents** → Add evolving documents within issue folders
+6. **What should they do?** → Create MVS files
+7. **Create MVS files** → Add MVS documents like ESS-001-flutter-setup-story.md
 
 ### Workflow Decision Tree
 
@@ -198,10 +230,14 @@ authentication/                    # Company concept only
 ```
 authentication/
 └── 001-user-login/
-    ├── AUTH-42-setup-jwt-story.md            # GitHub issue #42
+    ├── AUTH-42-setup-jwt-story.md            # GitHub issue #42 - Story
+    ├── AUTH-42-setup-jwt-plan.md             # GitHub issue #42 - Technical plan
+    ├── AUTH-42-setup-jwt-pr.md               # GitHub issue #42 - PR documentation
     ├── AUTH-43-validate-tokens-issue.md      # GitHub issue #43
     └── AUTH-PROJ-156-refresh-logic-plan.md   # Jira PROJ-156
 ```
+
+💡 **Note:** Issue #42 has three documents (story, plan, PR) - all sharing the same number to maintain traceability!
 
 ### Level 2: Adding Feature Separation (Multiple Features)
 ```

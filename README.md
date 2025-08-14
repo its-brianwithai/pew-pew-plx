@@ -519,37 +519,52 @@ sync_targets:
 
 ## 🎯 Most Valuable Project Management (MVPM)
 
-We determine directories by their ability to be worked on in parallel - this enables both humans and AI agents to work simultaneously on different parts of the project without conflicts. Each directory represents an independent work stream that can progress without blocking others.
+**Most Valuable Project Management (MVPM)** is a flexible organizational system that:
+- **Prioritizes work** by what delivers the most value first (MVM → MVS)
+- **Enables parallel execution** through company concepts that can be worked on simultaneously
+- **Scales naturally** from solo developers to enterprise teams
+- **Integrates seamlessly** with existing tools (GitHub, Jira, Linear)
+- **Provides context** for both humans and AI during development
 
-### Issue Organization Structure
+The core principle: **Start with what's most valuable, structure only what enables parallel work.**
 
-Issues follow the MVPM structure:
+### Core Organization Structure
+
+Flexible structure based on parallel work:
 ```
-issues/{department}/{company-concept}/{most-valuable-milestone}/{most-valuable-step}/{team-folders(optional)}/{issue-folder}/{documents}.md
+{company-concept}/{most-valuable-milestone}/{most-valuable-step}.md
 ```
+Company concepts can be inserted anywhere to enable parallel work.
+
+**Key Principle:** The same issue can have multiple document types with the SAME number:
+```
+AUTH-042-oauth-integration-story.md    # User story
+AUTH-042-oauth-integration-plan.md     # Technical plan  
+AUTH-042-oauth-integration-bug.md      # Bug report
+AUTH-042-oauth-integration-pr.md       # Pull request
+```
+This maintains traceability - all work for issue #042 stays connected!
 
 ### Structure Flow Diagram
 
 ```mermaid
 graph TD
-    A[issues/] --> B[department/]
-    B --> C[company-concept/]
+    A[company-concept/] --> B[000-backlog/]
+    A --> C[001-most-valuable-milestone/]
     C --> D[000-backlog/]
-    C --> E[001-most-valuable-milestone/]
+    C --> E[001-most-valuable-step/]
     E --> F[000-backlog/]
-    E --> G[001-most-valuable-step/]
-    G --> H[000-backlog/]
-    G --> I{team-folders?}
-    I -->|Optional| J[team-name/]
-    I -->|Direct| K[issue-folder/]
-    J --> K
-    K --> L[documents.md]
+    E --> G[CONC-001-description-type.md]
+    E --> H[CONC-002-description-type.md]
+    E --> I[CONC-003-description-type.md]
     
     style A fill:#37474f,color:#fff
+    style B fill:#b71c1c,color:#fff
     style D fill:#b71c1c,color:#fff
     style F fill:#b71c1c,color:#fff
-    style H fill:#b71c1c,color:#fff
-    style L fill:#1565c0,color:#fff
+    style G fill:#1565c0,color:#fff
+    style H fill:#1565c0,color:#fff
+    style I fill:#1565c0,color:#fff
 ```
 
 ### Parallel Work Visualization
@@ -602,32 +617,31 @@ flowchart TD
     G --> H[tech/essentials/001-initial-setup/001-set-up-flutter-app]
     H --> I{Teams needed?}
     I -->|Yes| J[Create team folders]
-    I -->|No| K[Create issue folders directly]
+    I -->|No| K[Create MVS files directly]
     J --> L[team-app/<br/>team-backend]
     L --> K
-    K --> M[APP-001-flutter-setup/]
-    M --> N[Create documents:<br/>- requirements.md<br/>- story.md<br/>- pr.md]
+    K --> M[Create MVS files]
+    M --> N[ESS-001-flutter-setup-story.md<br/>ESS-002-configure-db-plan.md<br/>ESS-003-deploy-pipeline-issue.md]
     
     style A fill:#263238,color:#fff
     style B fill:#2e7d32,color:#fff
     style N fill:#1565c0,color:#fff
 ```
 
-### Issue Evolution Timeline
+### MVS Evolution Timeline
 
 ```mermaid
 timeline
-    title Issue Document Evolution
+    title MVS Evolution Over Time
     
-    AUTH-001 : requirements.md created
-            : Initial requirements documented
+    Day 1 : AUTH-001-create-jwt-story.md
+          : Initial story created
     
-    AUTH-001 : story.md added
-            : User story defined
+    Day 3 : AUTH-002-token-validation-issue.md
+          : Validation issue identified
     
-    AUTH-001 : pr.md added
-            : Pull request documentation
-            : Implementation complete
+    Day 5 : AUTH-003-refresh-logic-plan.md
+          : Refresh mechanism planned
 ```
 
 ## 📂 File Structure Overview
@@ -637,15 +651,16 @@ The repository follows a clear modular structure:
 ```
 pew-pew-workspace/
 ├── issues/               # MVPM-structured project issues
-│   └── {department}/
-│       └── {company-concept}/
+│   └── {company-concept}/
+│       ├── 000-backlog/
+│       └── {001-most-valuable-milestone}/
 │           ├── 000-backlog/
-│           └── {001-most-valuable-milestone}/
+│           └── {001-most-valuable-step}/
 │               ├── 000-backlog/
-│               └── {001-most-valuable-step}/
-│                   ├── 000-backlog/
-│                   └── {issue-folder}/
-│                       └── {documents}.md
+│               ├── CONC-001-feature-story.md     # Same issue #001
+│               ├── CONC-001-feature-plan.md      # Same issue #001
+│               ├── CONC-001-feature-pr.md        # Same issue #001
+│               └── CONC-002-bugfix-issue.md      # Different issue #002
 ├── agents/               # AI agent definitions
 ├── prompts/              # Reusable prompts
 ├── templates/            # Document templates

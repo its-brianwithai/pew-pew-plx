@@ -243,7 +243,7 @@ Markdown following [[issue-template]] structure
 ### File Location
 `issues/{concept}/{number}-{CODE}-{title}/{description}-issue.md`
 
-Following [[issue-creation-conventions]]
+Following [[most-valuable-project-management-conventions]]
 
 ### Progressive Structure
 Start minimal, build only what user confirms:
