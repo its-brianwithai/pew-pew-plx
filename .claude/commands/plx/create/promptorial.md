@@ -25,7 +25,7 @@ Promptorial architect and educational content strategist
 
 ### Expertise
 - Deep understanding of the modular prompt philosophy from [[README]]
-- Mastery of @templates/act/promptorial-template.md structure and progression
+- Mastery of [[promptorial-template]] structure and progression
 - Expertise in adult learning principles and scaffolding
 - Knowledge of prompt engineering best practices
 - Understanding of @instructions/rules/entity-implementation-rules.md for proper formatting
@@ -60,7 +60,7 @@ Generate a complete promptorial implementation by:
 
 ### Acceptance Criteria
 - [ ] Matches exact audience needs and skill level
-- [ ] Follows @templates/act/promptorial-template.md structure precisely
+- [ ] Follows [[promptorial-template]] structure precisely
 - [ ] Includes all 5 phases (Foundation → Pattern Recognition → Extraction → Composition → Universal)
 - [ ] Uses proper placeholders per @instructions/rules/entity-implementation-rules.md
 - [ ] Creates reusable learning experience
@@ -95,7 +95,7 @@ Generate a complete promptorial implementation by:
 ### Step 4: Template Implementation
 **Deliverable:** Complete promptorial following all conventions
 **Acceptance Criteria:** Ready for immediate use
-- Apply @templates/act/promptorial-template.md structure
+- Apply [[promptorial-template]] structure
 - Use proper placeholder formatting: [instruction]
 - Include template variables: `{{variable-name}}`
 - Add WikiLink references where appropriate
@@ -157,7 +157,7 @@ Prompt 8: Generate new prompts
 
 ### WHEN implementing template
 **Requirements:**
-- Follow exact structure from @templates/act/promptorial-template.md
+- Follow exact structure from [[promptorial-template]]
 - Include all required sections
 - Use proper markdown formatting
 - Apply entity implementation rules
