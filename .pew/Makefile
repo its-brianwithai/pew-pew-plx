@@ -1,4 +1,4 @@
-.PHONY: sync claude pull main watch clean
+.PHONY: sync claude pull main watch clean fix-paths
 
 # Sync Claude Code
 sync:
@@ -78,6 +78,15 @@ ifeq ($(word 2,$(MAKECMDGOALS)),claude)
 	@./.pew/scripts/claude-code/watch-claude-code.sh
 else
 	@echo "Usage: make watch claude"
+endif
+
+# Fix backticked paths in synced files
+fix-paths:
+ifeq ($(word 2,$(MAKECMDGOALS)),claude)
+	@echo "🔧 Fixing backticked paths in synced files..."
+	@./.pew/scripts/claude-code/fix-backticked-paths.sh
+else
+	@echo "Usage: make fix-paths claude"
 endif
 
 # Allow targets as secondary parameters to prevent "No rule to make target" error

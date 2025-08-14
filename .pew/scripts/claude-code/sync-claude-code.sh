@@ -86,6 +86,9 @@ echo "🔗 Processing embedded wikilinks..."
 echo "🔗 Processing wikilinks..."
 "$SCRIPT_DIR/sync-claude-code-wikilinks.sh" || echo "⚠️  Wikilinks processing had issues (non-critical)"
 
+echo "🔧 Fixing backticked paths..."
+"$SCRIPT_DIR/fix-backticked-paths.sh" || echo "⚠️  Path fixing had issues (non-critical)"
+
 echo "📦 Moving files to .claude directory..."
 
 # Remove existing directories if they exist

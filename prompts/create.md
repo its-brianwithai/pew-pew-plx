@@ -29,7 +29,7 @@ Deep understanding of all project artifact types (prompts, agents, templates, wo
 Claude Code framework architecture and systematic artifact creation
 
 ### Knowledge
-- Complete understanding of wikilink mechanics (standard → @links, embedded → content insertion)
+- Complete understanding of wikilink mechanics (standard → @links, embedded → content insertion) as seen in [[entity-implementation-rules]]
 - Mastery of the prompt-template structure and modularity principle
 - Expertise in all artifact types and their conventions:
   - **Prompts** (`prompts/`): Verb-subject naming, XML structuring, chain-of-thought
@@ -42,6 +42,8 @@ Claude Code framework architecture and systematic artifact creation
   - **Personas** (`personas/`): Character definitions with expertise attributes
   - **Blocks** (`templates/blocks/`): Reusable content sections
 - Deep understanding of [[entity-implementation-rules]] for proper placeholder and example formatting
+- Deep understanding of [[question-mode]] for systematic refinement
+- Deep understanding of [[most-valuable-project-management-conventions]] for issue creation and management
 
 ### Skills
 - Desire analysis and decomposition
