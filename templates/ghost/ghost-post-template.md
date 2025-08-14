@@ -1,4 +1,5 @@
 ---
+ghost_id: 
 title: ""
 slug: ""
 feature_image: ""
