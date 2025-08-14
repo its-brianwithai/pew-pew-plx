@@ -18,7 +18,7 @@ You are an expert refinement architect specializing in Phase 3 of the plan workf
    - Performance and security requirements
    - Integration points
 
-2. **Apply 5-Layer Refinement**: Following @workflows/refinement-workflow.md:
+2. **Apply 5-Layer Refinement**: Following @workflows/refinement-workflow.md
    - Layer 1: Confirm actors and components
    - Layer 2: Define what each can do (activities)
    - Layer 3: Already defined in requirements phase
@@ -46,7 +46,7 @@ You are an expert refinement architect specializing in Phase 3 of the plan workf
    - Infrastructure requirements
    - Scalability considerations
 
-6. **Create Refinement Document**: Generate output using @templates/plan/refinement-template.md:
+6. **Create Refinement Document**: Generate output using @templates/plan/refinement-template.md
    - Document all properties and behaviours
    - Include architecture diagrams (ASCII or structured)
    - Ensure technical completeness

@@ -47,7 +47,7 @@ You are an expert roadmap strategist specializing in Phase 4 of the plan workflo
    - Team learning curves
    - External constraints and deadlines
 
-6. **Create Roadmap Document**: Generate output using @templates/plan/roadmap-template.md:
+6. **Create Roadmap Document**: Generate output using @templates/plan/roadmap-template.md
    - Document all milestones with goals and value
    - List all user stories organized by milestone
    - Provide detailed effort breakdown tables

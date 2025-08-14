@@ -63,73 +63,72 @@ facebook_description: ""
 </example>
 ```
 
-## 🚶 Workflow Promptorial
-> 💡 *How to what, when and where.*
+## 🚶 Prompt It Yourself
+> 💡 *Step-by-step instructions to implement this yourself.*
 
-[Lead with action - each step should be immediately actionable. Add diagrams, tables, code examples wherever they help clarify and sensible to do so. Keep target audience and end goal in mind - no fluff - neutral documentation / tutorial writing style.]
+[Lead with action - each step should be immediately actionable. Include actual prompts, commands, or code snippets the reader can use. Add diagrams, tables, code examples wherever they help clarify and sensible to do so. Keep target audience and end goal in mind - no fluff - neutral documentation / tutorial writing style.]
 
-``````
 ### 🎯 Goals
-> 💡 *Clear definition(s) of what this workflow aims to accomplish. What are the desired outcomes?*
+> 💡 *What you'll achieve by following this tutorial.*
 
-- <!-- Goal 1: e.g., To streamline the process of X. -->
-- <!-- Goal 2: e.g., To ensure consistency in Y. -->
-- <!-- Add more goals as needed -->
+[List the specific outcomes the reader will accomplish. Be concrete and measurable.]
 
-### 📏 Rules
-> 💡 *Guidelines, constraints, and principles to follow when creating, using, or modifying this workflow.*
+```
+<example>
+- [Primary achievement type, measurable outcome type, capability gained type]
+- [Secondary objectives, skills developed, problems solved]
+- [...]
+</example>
+```
 
-- <!-- Rule 1: e.g., Treat each new workflow iteration as an MVP. -->
-- <!-- Rule 2: e.g., Improve only one aspect at a time. -->
-- <!-- Add more rules as needed -->
+### 📏 Instructions
+> 💡 *Guidelines and constraints to follow during implementation.*
 
-### 🔭 Scope
-> 💡 *Define the boundaries of this workflow. What is included, and what is explicitly excluded?*
+[List any rules, principles, or constraints that apply throughout the tutorial.]
 
-**In Scope:**
-- <!-- e.g., Creating and maintaining workflow documentation. -->
-- <!-- Add more in-scope items -->
-
-**Out of Scope:**
-- <!-- e.g., Hosting or deployment of the workflow itself. -->
-- <!-- Add more out-of-scope items -->
+```
+<example>
+- [Best practice types, security consideration types, performance guideline types, compatibility requirement types]
+- [Additional instruction categories if needed]
+- [...]
+</example>
+```
 
 ### 🪜 Steps
-> 💡 *The heart of every workflow. All activities, procedures, and results in chronological order.*
+> 💡 *The actual implementation process from start to finish.*
 
-#### 📋 Pre-requisites
-> 💡 *What needs to be in place or understood before starting the steps? (e.g., tools, access, knowledge)*
+[Detailed step-by-step instructions with real examples the reader can use.]
 
-- [ ] <!-- Prerequisite 1: e.g., Access to the XYZ tool. -->
-- [ ] <!-- Prerequisite 2: e.g., Understanding of ABC concept. -->
-- <!-- Add more pre-requisites as needed -->
+```
+<example>
+1. [First action type]: [Description of what this action does]
+   - [Prompt, command, or code snippet type]
+   - [Expected output or result type]
+2. [Second action type]: [Description of what this action does]
+   - [Configuration or setup type]
+   - [Verification step type]
+3. [Third action type]: [Description of what this action does]
+   - [Implementation detail type]
+   - [Testing or validation type]
+[...]
+</example>
+```
 
-#### 👣 Activity Flow
-> 💡 *Detail each step involved in executing this workflow from start to finish.*
+## 💡 Insights
+> 💡 *Observations and lessons learned from this implementation.*
 
-1.  **Step 1: [Action Verb + Task]**
-    - <!-- Description or sub-steps for Step 1 -->
-    - <!-- Expected result of Step 1 -->
-2.  **Step 2: [Action Verb + Task]**
-    - <!-- Description or sub-steps for Step 2 -->
-    - <!-- Expected result of Step 2 -->
-- <!-- Add more steps as needed, following the same format -->
+[Share discoveries, gotchas, and learnings that emerged during development or usage.]
 
-### 💡 Insights
-> 💡 *Observations, lessons learned, and ideas for improvement gathered while developing or using the workflow.*
+```
+<example>
+- [Discovery types, gotcha types, performance observation types, alternative approach types]
+- [Additional insight categories if needed]
+- [...]
+</example>
+```
 
-- <!-- Insight 1: e.g., Noticed that Step X is often a bottleneck. -->
-- <!-- Insight 2: e.g., Users frequently ask about Y, consider adding it to the description. -->
-- <!-- Add more insights as they arise -->
-
-### 🎙️ Final Remarks
-> 💡 *Anything else worth mentioning that hasn't been covered? (e.g., disclaimers, acknowledgements, tips)*
-
-<!-- Add any concluding thoughts, important notes, or disclaimers here. -->
-``````
-
-## 👉 Wrap Up
-> 💡 *What you accomplished and where to go next.*
+## 🎙️ Final Remarks
+> 💡 *What we learned and where to go next.*
 
 [One paragraph summary of what was learned and immediate next actions. Add diagrams, tables, code examples wherever they help clarify and sensible to do so. Keep target audience and end goal in mind - no fluff - neutral documentation / tutorial writing style.]
 

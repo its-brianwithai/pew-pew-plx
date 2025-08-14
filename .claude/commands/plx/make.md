@@ -1,5 +1,5 @@
 ---
-name: make-anything
+name: make
 description: "Use this prompt to systematically transform any input (text, requirements, ideas, existing artifacts) into a desired artifact type using the create-anything philosophy."
 ---
 # Prompt Command

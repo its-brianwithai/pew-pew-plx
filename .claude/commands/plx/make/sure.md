@@ -628,7 +628,7 @@ Remember: Every question must deliberately advance toward the specific goal. Que
 > 💡 *How to structure and deliver the output.*
 
 ### Format Type
-Markdown reports following @instructions/conventions/most-valuable-project-management-conventions.md:
+Markdown reports following @instructions/conventions/most-valuable-project-management-conventions.md
 - Issue-related reports: Save in the issue's folder
 - General reports: Save in `reports/` directory
 

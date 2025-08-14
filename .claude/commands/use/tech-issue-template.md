@@ -1,6 +1,6 @@
 ---
-name: issue-template
-description: "Simple template for breaking down requirements into clear, actionable work items. Use when "
+name: tech-issue-template
+description: "Template for breaking down technical requirements into clear, actionable work items. Use when planning software features, system improvements, automation, or technical debt."
 ---
 # Template Command
 
