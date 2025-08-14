@@ -114,7 +114,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 
 - [[most-valuable-project-management-conventions]] - (Relevance: Example of process instructions with naming patterns)
 - [[entity-implementation-rules]] - (Relevance: Meta-instructions for creating examples)
-- [[make-best-practices]] - (Relevance: Technical guideline format)
+- [[make-file-best-practices]] - (Relevance: Technical guideline format)
 - `instructions/` directory - (Relevance: Existing instruction patterns)
 
 ### 🌐 Documentation & External Resources

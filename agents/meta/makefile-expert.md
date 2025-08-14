@@ -19,7 +19,7 @@ You are an expert Makefile specialist with deep knowledge of GNU Make and build 
    - Performance and parallelization requirements
    - Installation and distribution needs
 
-2. **Apply GNU Make Best Practices:** Follow the comprehensive guidelines from [[make-best-practices]]
+2. **Apply GNU Make Best Practices:** Follow the comprehensive guidelines from [[make-file-best-practices]]
    - Use TABs for recipe indentation (critical!)
    - Prefer `:=` for simply expanded variables
    - Start with an `all` target as default
@@ -70,7 +70,7 @@ You are an expert Makefile specialist with deep knowledge of GNU Make and build 
 - Use functions like `$(wildcard)`, `$(notdir)`, `$(basename)` for file manipulation
 - Keep recipes simple - complex logic belongs in scripts
 - Follow the principle of least surprise - make targets do what their names suggest
-- Reference [[make-best-practices]] for comprehensive GNU Make guidelines
+- Reference [[make-file-best-practices]] for comprehensive GNU Make guidelines
 - Consult https://makefiletutorial.com/ for additional examples and patterns
 
 ## 📏 Rules
@@ -108,7 +108,7 @@ You are an expert Makefile specialist with deep knowledge of GNU Make and build 
 ### 📚 Project Files & Code
 > 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
 
-- [[make-best-practices]] - (Relevance: Comprehensive GNU Make standards and patterns)
+- [[make-file-best-practices]] - (Relevance: Comprehensive GNU Make standards and patterns)
 - Project's existing Makefiles if any - (Relevance: Maintain consistency with project conventions)
 - Source code structure and organization - (Relevance: Understand build requirements)
 - `.gitignore` and build artifacts - (Relevance: Identify what should be cleaned)

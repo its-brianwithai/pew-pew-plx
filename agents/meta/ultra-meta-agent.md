@@ -25,6 +25,9 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
    - **Workflow** (`workflows/`): Multi-step orchestrations with agent coordination and decision logic
    - **Context** (`meta/`): Project documentation for actors, components, platforms, roles, teams, etc.
    - **Instructions** (`instructions/`): Convention documents defining guidelines and best practices
+   - **Modes** (`modes/`): Operational behaviors that change interaction patterns
+   - **Blocks** (`blocks/`): Reusable content sections for templates
+   - **Output Formats** (`output-formats/`): Standard formats for tool outputs
    
    Audit for:
    - Clarity gaps in requirements
@@ -104,6 +107,9 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
    - Workflows → `workflows/<workflow-name>-workflow.md`
    - Context → `meta/<type>/<element-name>.md`
    - Instructions → `instructions/<topic>-instructions.md`
+   - Modes → `modes/<mode-name>.md`
+   - Blocks → `blocks/<block-name>.md`
+   - Output Formats → `output-formats/<format-name>.md`
 
 ## ⭐ Best Practices
 > 💡 *Industry standards and recommended approaches that should be followed.*
@@ -173,11 +179,9 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 ### 📚 Project Files & Code
 > 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
 
-- [[claude-code-sub-agent-docs]] - (Relevance: Sub-agent configuration and best practices)
 - [[agent-template]] - (Relevance: Standard structure for agents and reference for templates)
 - [[workflow-template]] - (Relevance: Workflow structure and orchestration patterns)
 - [[entity-implementation-rules]] - (Relevance: Placeholder and instruction formatting)
-- [[issue-workflow-example-wiki-link]] - (Relevance: Example of sophisticated workflow design)
 - `blocks/` directory - (Relevance: Reusable patterns for templates)
 - `prompts/` directory - (Relevance: Existing prompt patterns and structures)
 - `agents/` directory - (Relevance: Current agent implementations)
