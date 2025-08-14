@@ -8,53 +8,47 @@ description: "Standard instructions for creating and organizing issues in the pr
 
 ## 📁 Issue Organization
 
-Issues follow the MVPM structure:
+Flexible structure based on parallel work:
 ```
-issues/{department}/{company-concept}/{most-valuable-milestone}/{most-valuable-step}/{team-folders(optional)}/{issue-folder}/{documents}.md
+{company-concept}/{most-valuable-milestone}/{most-valuable-step}.md
 ```
+Company concepts can be inserted anywhere to enable parallel work.
 
 ### Structure Flow Diagram
 
 ```mermaid
 graph TD
-    A[issues/] --> B[department/]
-    B --> C[company-concept/]
+    A[company-concept/] --> B[000-backlog/]
+    A --> C[001-most-valuable-milestone/]
     C --> D[000-backlog/]
-    C --> E[001-most-valuable-milestone/]
+    C --> E[001-most-valuable-step/]
     E --> F[000-backlog/]
-    E --> G[001-most-valuable-step/]
-    G --> H[000-backlog/]
-    G --> I{team-folders?}
-    I -->|Optional| J[team-name/]
-    I -->|Direct| K[issue-folder/]
-    J --> K
-    K --> L[documents.md]
+    E --> G[CONC-001-description-type.md]
+    E --> H[CONC-002-description-type.md]
+    E --> I[CONC-003-description-type.md]
     
     style A fill:#37474f,color:#fff
+    style B fill:#b71c1c,color:#fff
     style D fill:#b71c1c,color:#fff
     style F fill:#b71c1c,color:#fff
-    style H fill:#b71c1c,color:#fff
-    style L fill:#1565c0,color:#fff
+    style G fill:#1565c0,color:#fff
+    style H fill:#1565c0,color:#fff
+    style I fill:#1565c0,color:#fff
 ```
 
 ## 📝 Naming Components
 
-- `{department}` - Top-level organizational unit (e.g., tech, marketing, sales, operations)
-- `{company-concept}` - Core business concept or domain area
-- `{most-valuable-milestone}` - MVM - Format: `{number}-{description}` (e.g., 001-user-auth, 002-payment-system)
-    - Numbered in priority order (001 is most important)
-    - Each MVM folder should contain a `000-backlog` folder for future items
-- `{most-valuable-step}` - MVS - Format: `{number}-{description}` (e.g., 001-jwt-implementation, 002-session-management)
-    - Numbered in priority order within the milestone
-    - Each MVS folder should contain a `000-backlog` folder for future items
-- `{team-folders}` - Optional team folders for parallel work (only when teams need clear separation)
-- `{issue-folder}` - Folder named: `{company-concept-code}-{number}-{description}`
-    - `{company-concept-code}` - Uppercase 3-letter abbreviation for the company concept (e.g., AUTH for authentication, PAY for payments)
-    - `{number}` - Zero-padded three-digit GitHub issue number (001, 002, 003)
-    - `{description}` - Kebab-case description of the issue
-- `{documents}` - Document files within the issue folder: `{company-concept-code}-{number}-{description}-{type}.md`
-    - `{type}` - Local document type (requirements, story, epic, pr, bug, enhancement, etc.)
-    - Note: Each document uses the same GitHub issue number, allowing chronological tracking within the folder
+- `{company-concept}` - Any concept that can be worked on in parallel (can be inserted anywhere in hierarchy)
+- `{most-valuable-milestone}` - MVM - Format: `{3-digit-number}-{description}` (e.g., 001-user-auth, 002-payment-system)
+    - Chronologically ordered (earlier numbers must be considered first)
+    - Zero-padded to 3 digits total
+    - Each MVM folder may contain a `000-backlog` folder
+- `{most-valuable-step}` - MVS - Format: `{CONCEPT}-{3-digit-number}-{description}-{type}.md`
+    - `{CONCEPT}` - Max 4 character identifier (e.g., ESS for essentials, AUTH for authentication)
+    - `{3-digit-number}` - Chronologically ordered by importance
+    - `{description}` - Kebab-case descriptive name  
+    - `{type}` - Document type (issue, story, plan, etc.)
+    - Each MVS folder may contain a `000-backlog` folder
 
 ## 🎯 Most Valuable Project Management (MVPM)
 
@@ -124,8 +118,8 @@ flowchart TD
     I -->|No| K[Create issue folders directly]
     J --> L[team-app/<br/>team-backend]
     L --> K
-    K --> M[APP-001-flutter-setup/]
-    M --> N[Create documents:<br/>- requirements.md<br/>- story.md<br/>- pr.md]
+    K --> M[Create MVS files]
+    M --> N[ESS-001-flutter-setup-story.md<br/>ESS-002-configure-db-plan.md<br/>ESS-003-deploy-pipeline-issue.md]
     
     style A fill:#263238,color:#fff
     style B fill:#2e7d32,color:#fff
@@ -134,24 +128,21 @@ flowchart TD
 
 ### Hierarchy Pattern:
 ```
-{department} / {company-concept} / {most-valuable-milestone} / {most-valuable-step} / {team-folders(optional)} / {issue-folder} / {documents}
+{company-concept} / {most-valuable-milestone} / {most-valuable-step}
 ```
+Note: Company concepts can be nested or arranged in any order that enables parallel work.
 
 **Tree representation:**
 ```
-issues/
-└── {department}/
-    └── {company-concept}/
-        ├── 000-backlog/                    # Backlog for future milestones
-        └── {001-most-valuable-milestone}/
-            ├── 000-backlog/                # Backlog for future steps in this milestone
-            └── {001-most-valuable-step}/
-                ├── 000-backlog/            # Backlog for future issues in this step
-                └── {team-folders}/         # Optional
-                    └── {issue-folder}/     # e.g., AUTH-001-jwt-service/
-                        ├── {document-1}    # e.g., AUTH-001-jwt-service-requirements.md
-                        ├── {document-2}    # e.g., AUTH-001-jwt-service-story.md
-                        └── {document-3}    # e.g., AUTH-001-jwt-service-pr.md
+{company-concept}/
+├── 000-backlog/                    # Backlog for future milestones
+└── {001-most-valuable-milestone}/
+    ├── 000-backlog/                # Backlog for future steps in this milestone
+    └── {001-most-valuable-step}/
+        ├── 000-backlog/            # Backlog for future MVS files
+        ├── CONC-001-description-type.md
+        ├── CONC-002-description-type.md
+        └── CONC-003-description-type.md
 ```
 
 Examples:
@@ -160,17 +151,16 @@ Examples:
 
 ```mermaid
 timeline
-    title Issue Document Evolution
+    title MVS Evolution Over Time
     
-    AUTH-001 : requirements.md created
-            : Initial requirements documented
+    Day 1 : AUTH-001-create-jwt-story.md
+          : Initial story created
     
-    AUTH-001 : story.md added
-            : User story defined
+    Day 3 : AUTH-002-token-validation-issue.md
+          : Validation issue identified
     
-    AUTH-001 : pr.md added
-            : Pull request documentation
-            : Implementation complete
+    Day 5 : AUTH-003-refresh-logic-plan.md
+          : Refresh mechanism planned
 ```
 
 **Full hierarchy tree:**
@@ -183,16 +173,9 @@ issues/
             ├── 000-backlog/              # Future steps
             └── 001-jwt-implementation/   # MVS (highest priority)
                 ├── 000-backlog/          # Future issues
-                └── backend/              # Team (optional)
-                    ├── AUTH-001-create-jwt-service/
-                    │   ├── AUTH-001-create-jwt-service-requirements.md
-                    │   ├── AUTH-001-create-jwt-service-story.md
-                    │   └── AUTH-001-create-jwt-service-pr.md
-                    ├── AUTH-002-token-validation/
-                    │   └── AUTH-002-token-validation-issue.md
-                    └── AUTH-003-refresh-logic/
-                        ├── AUTH-003-refresh-logic-story.md
-                        └── AUTH-003-refresh-logic-pr.md
+                ├── AUTH-001-create-jwt-service-story.md
+                ├── AUTH-002-token-validation-issue.md
+                └── AUTH-003-refresh-logic-plan.md
 ```
 
 **Department-level parallelization tree:**
@@ -203,16 +186,20 @@ issues/
 │       └── 001-cloud-migration/          # MVM
 │           ├── 000-backlog/
 │           └── 001-aws-setup/            # MVS (engineering working on AWS)
+│               ├── INF-001-vpc-configuration-story.md
+│               └── INF-002-security-groups-plan.md
 ├── finance/
 │   └── infrastructure/                   # Company concept
 │       └── 001-cloud-migration/          # MVM
 │           ├── 000-backlog/
 │           └── 001-cost-analysis/        # MVS (finance working on costs)
+│               └── FIN-001-budget-forecast-story.md
 └── security/
     └── infrastructure/                   # Company concept
         └── 001-cloud-migration/          # MVM
             ├── 000-backlog/
             └── 001-compliance-check/     # MVS (security working on compliance)
+                └── SEC-001-gdpr-audit-plan.md
 ```
 
 **Team-level parallelization tree:**
@@ -225,21 +212,10 @@ issues/
             ├── 000-backlog/
             └── 001-payment-processing/   # MVS
                 ├── 000-backlog/
-                ├── frontend/              # Teams working in parallel
-                │   ├── PAY-001-cart-component/
-                │   │   └── PAY-001-cart-component-story.md
-                │   └── PAY-002-payment-form/
-                │       ├── PAY-002-payment-form-requirements.md
-                │       └── PAY-002-payment-form-issue.md
-                ├── backend/
-                │   ├── PAY-003-stripe-integration/
-                │   │   ├── PAY-003-stripe-integration-story.md
-                │   │   └── PAY-003-stripe-integration-pr.md
-                │   └── PAY-004-webhook-handler/
-                │       └── PAY-004-webhook-handler-bug.md
-                └── qa/
-                    ├── PAY-005-e2e-tests/
-                    │   └── PAY-005-e2e-tests-chore.md
-                    └── PAY-006-load-testing/
-                        └── PAY-006-load-testing-enhancement.md
+                ├── PAY-001-cart-component-story.md
+                ├── PAY-002-payment-form-issue.md
+                ├── PAY-003-stripe-integration-story.md
+                ├── PAY-004-webhook-handler-bug.md
+                ├── PAY-005-e2e-tests-chore.md
+                └── PAY-006-load-testing-enhancement.md
 ```
