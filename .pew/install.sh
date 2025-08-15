@@ -34,11 +34,15 @@ if [ -d "$PEW_DIR" ]; then
     echo -e "${YELLOW}⚠️  .pew/ directory already exists.${NC}"
     echo -e "${YELLOW}This will override all existing framework files.${NC}"
     echo
-    read -p "Continue? (y/N): " -n 1 -r
+    echo -e "${BLUE}💡 If you just want to sync existing files, run:${NC}"
+    echo -e "${BLUE}   make -f .pew/Makefile sync claude${NC}"
+    echo
+    read -p "Continue with installation? (y/N): " -r < /dev/tty
     echo
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        echo -e "${RED}❌ Installation cancelled${NC}"
-        exit 1
+        echo -e "${BLUE}ℹ️  Installation cancelled. To sync existing framework files, run:${NC}"
+        echo -e "${BLUE}   make -f .pew/Makefile sync claude${NC}"
+        exit 0
     fi
     echo -e "${YELLOW}🗑️  Removing existing .pew/ directory...${NC}"
     rm -rf "$PEW_DIR"
