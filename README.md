@@ -76,8 +76,6 @@ Customize sync behavior in `.pew/plx.yaml`:
 
 The foundation of this framework is understanding what makes an effective prompt. Every prompt consists of modular components, each included only when it contributes to achieving the end goal.
 
-**Claude Commands:** `/plx:create` (new), `/plx:update` (enhance), `/plx:make` (transform)
-
 ```mermaid
 graph TD
     EG[🎯 End Goal<br/>Achievement Objective]
