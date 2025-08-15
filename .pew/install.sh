@@ -38,9 +38,9 @@ if [ -d "$PEW_DIR" ]; then
     echo -e "${BLUE}   make -f .pew/Makefile sync claude${NC}"
     echo
     
-    # Use exec to redirect stdin from tty for piped execution
-    exec < /dev/tty
-    read -p "Continue with installation? (y/N): " -r
+    # Force interactive input by redirecting from tty
+    printf "Continue with installation? (y/N): "
+    read -r REPLY < /dev/tty
     echo
     
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
