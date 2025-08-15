@@ -4,6 +4,11 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### ✨ Features:
+- **Interaction System**: New interaction framework for describing reusable actions that actors can perform
+  - Added `create-interaction` prompt for generating interaction documents
+  - Added `interaction-template` for structured interaction documentation
+  - Organized interactions by concept categories (commerce, content, engagement, operations, planning)
+- **Project Sync Workflow**: New `sync-to-ppw` prompt for copying artifacts from project `.pew/` folder to main repository
 - **Scope Integrity Concept**: New concept to prevent AI over-engineering by ensuring agents create exactly what's requested without assumptions or unsolicited improvements
 - **Enhanced GitHub Release Workflow**: Comprehensive `create-github-release` prompt that handles documentation validation, changelog versioning, tagging, and release creation
 - **Pull-Sync-Claude Prompt**: New workflow combining framework updates with Claude sync in one command
@@ -11,6 +16,7 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 - **Single-Verb Prompt Routing**: YAML configuration now supports separate routing for single-verb vs verb-subject prompts
 
 ### 🛠️ Improvements:
+- **Template Enhancements**: Updated numerous templates with improved structure and WikiLink references across meta, plan, and agent templates
 - **Enhanced Commit Workflow**: Updated commit prompt with comprehensive pre-commit documentation review including README validation and changelog updates
 - **Simplified Sync Prompts**: Removed clean sync concept since it's now handled automatically by plx.yaml configuration
 - **Dynamic Project Key Detection**: GitHub release workflow now detects project key from commit history instead of hardcoding

@@ -2,8 +2,6 @@
 ---
 name: achievement-framework
 description: Use this template to break down any goal or project into actionable components and create a step-by-step execution plan. This framework helps you decompose complex objectives into manageable deliverables with clear acceptance criteria.
-wikilinks: When referencing other documents, use [[filename-wl-example]] format. Do not include the file extension or path.
-important: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter.
 ---
 
 # 🎯 Plan Prep: [Project/Goal Name]
