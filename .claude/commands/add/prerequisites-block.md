@@ -12,7 +12,7 @@ When this command is used, use the following block. Acknowledge your understandi
 
 ```
 <example>
-- [[component-name-wikilink-example]] must be implemented and tested
+- [[component-name-wl-example]] must be implemented and tested
 - [[api-endpoint]] needs to be available and documented
 - Design mockups must be approved by stakeholders
 - [[database-migration]] needs to be completed

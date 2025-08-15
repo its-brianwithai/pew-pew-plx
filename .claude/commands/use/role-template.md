@@ -1,7 +1,7 @@
 ---
 name: role-template
 description: Use this template to describe a role within this project responsible for specific activities as creators. These individuals are not the users of this project; rather, they are the people actively working on it. Roles can exist across different teams, and the specific responsibilities may vary depending on the team context and technology stack being used.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-wikilink-example]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-wl-example]] to reference them. Do not include the file extension or path.
 ---
 # Template Command
 

@@ -17,6 +17,10 @@ sync_sources:
     - .pew/modes
   blocks:
     - .pew/blocks
+  collections:
+    - .pew/collections
+  concepts:
+    - .pew/concepts
 
 delete_before_sync_targets:
   - .claude/agents
@@ -44,3 +48,7 @@ sync_targets:
     - .claude/commands/start/
   modes:
     - .claude/commands/activate/
+  collections:
+    - .claude/commands/collect/
+  concepts:
+    - .claude/commands/understand/

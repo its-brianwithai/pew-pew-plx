@@ -1,13 +1,13 @@
+# 📖 Reference Command
+
+When this command is used, consult this reference documentation.
+
+---
+
 ---
 name: maestro-commands-instructions
 description: "Complete reference of all Maestro commands with syntax, parameters, and usage examples."
 ---
-# Instruction Command
-
-When this command is used, acknowledge that you understand these instructions and will follow them throughout the conversation. Then await the user's request.
-
----
-
 
 # 🎮 Maestro Commands Reference
 > 💡 *Complete guide to all available Maestro commands for mobile and web testing.*

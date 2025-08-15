@@ -69,7 +69,7 @@ Development assistant specialized in code review and project maintenance
 </project_docs>
 
 <todo_pattern>
-- // TODO(GPT-AGENT):
+- TODO(GPT-AGENT)
 </todo_pattern>
 
 <project_rules>

@@ -60,7 +60,7 @@ Specialized expertise attributes included when they enhance outcomes:
 - Communication Style
 
 **Claude Command:** `/act:<persona-name>` - Activate this persona directly
-**In Files:** `[[persona-name]]` to reference, `![[persona-name]]` to embed content
+**In Files:** `[[persona-name-wl-example]]` to reference, `![[persona-name-wl-example]]` to embed content
 
 #### 📋 **Request**
 Verb-first activity specification with optional deliverables and acceptance criteria. Always starts with an action: Create, Update, Analyze, Transform, etc.
@@ -75,7 +75,7 @@ Multi-phase processes with clear deliverables and acceptance criteria. Each work
 - Quality gates and decision points
 
 **Claude Command:** `/start:<workflow-name>` - Launch this workflow
-**In Files:** `[[workflow-name]]` to reference, `![[workflow-name]]` to embed content
+**In Files:** `[[workflow-name-wl-example]]` to reference, `![[workflow-name-wl-example]]` to embed content
 
 #### 📏 **Instructions** (Optional)
 Event‑driven guidance following the pattern: "When {scenario} occurs, then {apply these instructions}".
@@ -94,19 +94,19 @@ Instruction categories and naming rules:
 4) Place in the correct folder under `instructions/`
 
 **Claude Command:** `/apply:<instruction-name>` - Apply these instructions
-**In Files:** `[[instruction-name-wikilink-example]]` to reference, `![[instruction-name-wikilink-example]]` to embed content
+**In Files:** `[[instruction-name-wl-example]]` to reference, `![[instruction-name-wl-example]]` to embed content
 
 #### 📊 **Output Format** (Optional)
 Specifications for how deliverables should be structured - templates, format types (JSON, YAML, Markdown), or specific structural requirements.
 
 **Claude Command:** `/output:<format-name>` - Apply this output format
-**In Files:** `[[format-name]]` to reference, `![[format-name]]` to embed content
+**In Files:** `[[format-name-wl-example]]` to reference, `![[format-name-wl-example]]` to embed content
 
 ### The Modular Approach
 
 Each component can and should be extracted and referenced via wikilinks when it can be reused. During sync:
-- `[[wikilinks-wikilink-example]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
-- `![[embedded-wikilinks]]` are replaced with the actual file content inline
+- `[[wikilinks-wl-example]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
+- `![[embedded-wikilinks-wl-example]]` are replaced with the actual file content inline
 
 ⚠️ **Important:** The `@path/to/file.md` references inside command files auto-load when you use slash commands (e.g., `/use:template-file` will automatically read all `@` references inside that template). However, if you just type `@template-file` directly in chat, Claude only sees the path - no automatic reading occurs.
 
@@ -119,15 +119,15 @@ graph LR
     end
     
     subgraph "2. Extraction Phase"
-        E1["persona: [[issue-expert-persona]]"]
-        E2["workflow: [[issue-creation-workflow]]"]
-        E3["instructions: [[issue-conventions]]"]
+        E1["persona: [[issue-expert-persona-wl-example]]"]
+        E2["workflow: [[issue-creation-workflow-wl-example]]"]
+        E3["instructions: [[issue-conventions-wl-example]]"]
     end
     
     subgraph "3. Embedding Phase"
-        EM1["![[issue-expert-persona]]"]
-        EM2["![[issue-creation-workflow]]"]
-        EM3["![[issue-conventions]]"]
+        EM1["![[issue-expert-persona-wl-example]]"]
+        EM2["![[issue-creation-workflow-wl-example]]"]
+        EM3["![[issue-conventions-wl-example]]"]
     end
     
     I1 -->|Extract| E1
@@ -187,9 +187,9 @@ graph TD
     I1 --> A
     O1 --> A
     
-    A -->|"Embed: ![[flutter-developer]]"| PR1
-    A -->|"Embed: ![[flutter-developer]]"| PR2
-    A -->|"Embed: ![[flutter-developer]]"| PR3
+    A -->|"Embed: ![[flutter-developer-wl-example]]"| PR1
+    A -->|"Embed: ![[flutter-developer-wl-example]]"| PR2
+    A -->|"Embed: ![[flutter-developer-wl-example]]"| PR3
     
     style MG fill:#663399,stroke:#fff,stroke-width:3px,color:#fff
     style PR fill:#663399,stroke:#fff,stroke-width:3px,color:#fff

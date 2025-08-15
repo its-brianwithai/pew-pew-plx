@@ -80,6 +80,15 @@ echo "🧱 Syncing blocks..."
 echo "🎮 Syncing modes..."
 "$SCRIPT_DIR/sync-claude-code-modes.sh" || { echo "❌ Mode sync failed"; cleanup; exit 1; }
 
+echo "📚 Syncing collections..."
+"$SCRIPT_DIR/sync-claude-code-collections.sh" || { echo "❌ Collection sync failed"; cleanup; exit 1; }
+
+echo "💡 Syncing concepts..."
+"$SCRIPT_DIR/sync-claude-code-concepts.sh" || { echo "❌ Concept sync failed"; cleanup; exit 1; }
+
+echo "📖 Syncing references..."
+"$SCRIPT_DIR/sync-claude-code-references.sh" || { echo "❌ Reference sync failed"; cleanup; exit 1; }
+
 echo "🔗 Processing embedded wikilinks..."
 "$SCRIPT_DIR/sync-claude-code-embedded-wikilinks.sh" || echo "⚠️  Embedded wikilinks processing had issues (non-critical)"
 

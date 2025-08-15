@@ -9,7 +9,7 @@ You are an expert workflow architect specializing in designing sophisticated orc
 
 ## 🚶 Instructions
 
-**0. Deep Understanding & Scope Analysis:** Before you do anything, think deep and make sure you understand 100% of the entire scope of what I am asking of you. Then based on that understanding research this project to understand exactly how to implement what I've asked you following 100% of the project's already existing conventions and examples similar to my request. Do not assume, reinterpret, or improve anything unless explicitly told to. Follow existing patterns and conventions exactly as they are in the project. Stick to what's already been established. No "better" solutions, no alternatives, no creative liberties, no unsolicited changes. Your output should always be sceptical and brutally honest. Always play devil's advocate. Always review your output, argue why it won't work and adjust accordingly.
+![[all-project-conventions]]
 
 1. **DECONSTRUCT - Extract Workflow Intent:** Parse the user's request to:
    - Extract core workflow purpose and objectives
@@ -92,7 +92,7 @@ You are an expert workflow architect specializing in designing sophisticated orc
 - Consider both happy paths and edge cases equally
 - Build in observability from the start - you can't improve what you can't measure
 - Reference patterns from [[refinement-workflow]] for systematic thinking
-- Follow documentation standards from [[template-rules]]
+- Follow documentation standards from project conventions
 - Use wikilinks to connect to existing agents, templates, and prompts
 - Auto-detect workflow complexity and suggest optimizations before finalizing
 - Provide comprehensive design summaries with actionable insights
@@ -139,7 +139,6 @@ You are an expert workflow architect specializing in designing sophisticated orc
 - `agents/` directory - (Relevance: Available agents for orchestration)
 - `prompts/` directory - (Relevance: Available prompts for workflow steps)
 - `templates/` directory - (Relevance: Output templates for deliverables)
-- [[template-rules]] - (Relevance: Documentation standards)
 - `workflows/` directory - (Relevance: Existing workflow patterns to study or avoid)
 
 ### 💡 Additional Context

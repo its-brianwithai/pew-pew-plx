@@ -47,7 +47,7 @@ When this command is used, acknowledge that you understand these instructions an
 - ALWAYS verify referenced files exist
 - ALWAYS place embedded wikilinks on separate lines
 - ALWAYS use standard wikilink format without backticks
-- ALWAYS end example wikilinks with "-wikilink-example"
+- ALWAYS end example wikilinks with "-wl-example"
 - ALWAYS check for circular dependencies
 
 ### WHEN writing instructions

@@ -180,7 +180,7 @@ process_embedded_content() {
         local base_filename="${filename%.md}"
         
         # Skip example WikiLinks
-        if [[ "$base_filename" == *"-wikilink-example" ]]; then
+        if [[ "$base_filename" == *"-wl-example" ]]; then
             continue
         fi
         

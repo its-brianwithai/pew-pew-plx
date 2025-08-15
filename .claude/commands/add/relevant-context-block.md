@@ -15,9 +15,9 @@ When this command is used, use the following block. Acknowledge your understandi
 
 ```
 <example>
-- [[wikilink-wikilink-example]] - (Relevance: [Description of why this file is important])
-- [[wikilink-wikilink-example]] - (Relevance: [Description of code relevance])
-- [[component-name-wikilink-example]] - (Relevance: [How this relates to the task])
+- [[wikilink-wl-example]] - (Relevance: [Description of why this file is important])
+- [[wikilink-wl-example]] - (Relevance: [Description of code relevance])
+- [[component-name-wl-example]] - (Relevance: [How this relates to the task])
 </example>
 ```
 
@@ -28,7 +28,7 @@ When this command is used, use the following block. Acknowledge your understandi
 
 ```
 <example>
-- [[wikilink-wikilink-example]] - (Relevance: [Description of relevance])
+- [[wikilink-wl-example]] - (Relevance: [Description of relevance])
 - [External URL] - (Relevance: [Description of relevance])
 - [API Documentation] - (Relevance: [Specific endpoints or features needed])
 </example>

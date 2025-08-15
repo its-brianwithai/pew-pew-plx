@@ -108,14 +108,14 @@ agents/
 
 ### WHEN referencing other documents in agents
 **Reference Patterns:**
-- Use `[[document-name-wikilink-example]]` for references (no path needed)
-- Use `![[document-name-wikilink-example]]` for embedding content (must be on own line)
-- End example wikilinks with `-wikilink-example`
+- Use `[[document-name-wl-example]]` for references (no path needed)
+- Use `![[document-name-wl-example]]` for embedding content (must be on own line)
+- End example wikilinks with `-wl-example`
 
 **Common References:**
 - `[[agent-template]]` - Reference to agent template
 - `[[workflow-name]]` - Reference to workflows
-- `[[instruction-name-wikilink-example]]` - Reference to instructions
+- `[[instruction-name-wl-example]]` - Reference to instructions
 - `![[agent-workflow]]` - Embed entire workflow
 
 **Rules:**

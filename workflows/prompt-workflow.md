@@ -36,7 +36,7 @@ This workflow exists to transform vague desires into precise, modular prompts th
 ### Workflow Patterns
 - **Decomposition Pattern**: Break desires into standard component types
 - **Extraction Pattern**: Move inline content to reusable files
-- **Embedding Pattern**: Include content via `![[wikilinks-wikilink-example]]` on separate lines
+- **Embedding Pattern**: Include content via `![[wikilinks-wl-example]]` on separate lines
 - **Validation Pattern**: Test each component against End Goal contribution
 
 ## 🔄 Systematic Methodology
@@ -323,7 +323,7 @@ Phase 5: Integration & Extraction
 
 #### Step 5.3: Implement WikiLinks
 - **Purpose**: Connect prompt to extracted components
-- **Instructions**: Replace inline content with `![[component-wikilink-example]]` on separate lines
+- **Instructions**: Replace inline content with `![[component-wl-example]]` on separate lines
 - **Agent**: [[meta-prompt-engineer]]
 - **Inputs**: Component file names
 - **Outputs**: Prompt with wikilinks

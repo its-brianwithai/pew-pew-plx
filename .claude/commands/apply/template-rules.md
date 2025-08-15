@@ -85,36 +85,36 @@ Even if the actual content has bullets, sub-bullets, multiple levels, categories
 
 - WHEN referencing project documents ALWAYS use wikilinks WITHOUT backticks to reference other relevant project documents.
   - Example: [[relevant-document]]
-- WHEN creating example wikilinks that don't reference real files ALWAYS end them with "-wikilink-example".
-  - Example: [[filename-wikilink-example]]
-  - Example: ![[embedded-content-wikilink-example]]
-- WHEN using embedded wikilinks ALWAYS place `![[filename-wikilink-example]]` on its own line.
+- WHEN creating example wikilinks that don't reference real files ALWAYS end them with "-wl-example".
+  - Example: [[filename-wl-example]]
+  - Example: ![[embedded-content-wl-example]]
+- WHEN using embedded wikilinks ALWAYS place `![[filename-wl-example]]` on its own line.
   - The entire line gets replaced with file content during sync
 - WHEN creating templates/prompts ALWAYS remember embedded wikilinks replace the entire line.
 
 ### 👎 Never
 
 - WHEN creating wikilinks NEVER use backticks around wikilinks.
-  - Wrong: `[[document-wikilink-example]]`
-  - Right: [[document-wikilink-example]]
+  - Wrong: `[[document-wl-example]]`
+  - Right: [[document-wl-example]]
 - WHEN using embedded wikilinks NEVER place them inline with other text.
-  - Wrong: Some text ![[embedded-content-wikilink-example]] more text
+  - Wrong: Some text ![[embedded-content-wl-example]] more text
   - Right: 
     ```
     Some text
-    ![[embedded-content-wikilink-example]]
+    ![[embedded-content-wl-example]]
     More text
     ```
 - WHEN creating artifacts NEVER forget embedded wikilinks must be on separate lines.
 
 ### 🔄 WikiLink Processing Details
 
-**Regular wikilinks** `[[filename-wikilink-example]]`:
+**Regular wikilinks** `[[filename-wl-example]]`:
 - Converted to `@full/path` references during sync
 - Used for referencing other documents
 - Processed by `sync-claude-code-wikilinks.sh`
 
-**Embedded wikilinks** `![[filename-wikilink-example]]`:
+**Embedded wikilinks** `![[filename-wl-example]]`:
 - Entire line replaced with file content during sync
 - Used for including content from another file
 - Processed by `sync-claude-code-embedded-wikilinks.sh`
@@ -134,7 +134,7 @@ The @instructions/rules/template-rules.md define formatting standards.
 
 Follow these core instructions:
 
-![[standard-instructions-wikilink-example]]
+![[standard-instructions-wl-example]]
 
 Additional project-specific steps:
 1. [First step]
@@ -155,12 +155,12 @@ See @templates/agents/agent-template.md for details.
 #### Never Use Embedded WikiLinks Inline
 ```markdown
 # Wrong
-The instructions are: ![[standard-instructions-wikilink-example]] and then continue.
+The instructions are: ![[standard-instructions-wl-example]] and then continue.
 
 # Right
 The instructions are:
 
-![[standard-instructions-wikilink-example]]
+![[standard-instructions-wl-example]]
 
 And then continue.
 ```

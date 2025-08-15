@@ -5,15 +5,15 @@
 
 ```
 <example>
-- Follow naming conventions defined in [[naming-conventions-wikilink-example]]
-- Use the component patterns from [[component-library-wikilink-example]]
-- API design must follow [[api-style-guide-wikilink-example]]
-- Database schemas follow patterns in [[database-conventions-wikilink-example]]
-- State management approach detailed in [[state-management-guide-wikilink-example]]
+- Follow naming conventions defined in [[naming-conventions-wl-example]]
+- Use the component patterns from [[component-library-wl-example]]
+- API design must follow [[api-style-guide-wl-example]]
+- Database schemas follow patterns in [[database-conventions-wl-example]]
+- State management approach detailed in [[state-management-guide-wl-example]]
 - All new features require documentation updates
-- Follow [[pr-template-wikilink-example]] for pull requests
-- Refer to [[folder-structure-guide-wikilink-example]] for project organization
-- Follow [[git-workflow-conventions-wikilink-example]] for version control
-- Apply [[documentation-standards-wikilink-example]] for all documentation
+- Follow [[pr-template-wl-example]] for pull requests
+- Refer to [[folder-structure-guide-wl-example]] for project organization
+- Follow [[git-workflow-conventions-wl-example]] for version control
+- Apply [[documentation-standards-wl-example]] for all documentation
 </example>
 ```

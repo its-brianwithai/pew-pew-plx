@@ -8,7 +8,7 @@
 - Capability 1: Description of what this enables or provides
 - Capability 2: Another key feature with [[related-component]] integration
 - Capability 3: Service or action that supports [[specific-workflow]]
-- Capability 4: Feature that enables [[actor-name-wikilink-example]] to perform specific tasks
+- Capability 4: Feature that enables [[actor-name-wl-example]] to perform specific tasks
 - Capability 5: Integration point with [[external-system]] or [[internal-service]]
 </example>
 ```

@@ -212,12 +212,12 @@ All project conventions, patterns, and standards are embedded below. These instr
 
 [IMPORTANT: Insert discovered instruction files here with embedded wikilinks]
 <!-- Each instruction file should be on its own line -->
-<!-- Format: ![[filename-wikilink-example]] (no path needed) -->
+<!-- Format: ![[filename-wl-example]] (no path needed) -->
 <!-- Example structure shown below - replace with actual discovered files -->
 
 #### Patterns
-![[file-organization-patterns-wikilink-example]]
-![[naming-convention-patterns-wikilink-example]]
+![[file-organization-patterns-wl-example]]
+![[naming-convention-patterns-wl-example]]
 [Continue with all discovered pattern files...]
 
 #### Conventions
@@ -274,27 +274,27 @@ All project conventions, patterns, and standards are embedded below. These instr
 2. Check `git log --oneline -5` to understand project commit patterns
 3. Apply commit guidelines and follow the strict commit message format
 4. Double-check that all guidelines are followed before finalizing
-![[documentation-conventions-wikilink-example]]
+![[documentation-conventions-wl-example]]
 [Continue with all discovered convention files...]
 
 #### Best Practices
-![[error-handling-best-practices-wikilink-example]]
-![[performance-best-practices-wikilink-example]]
+![[error-handling-best-practices-wl-example]]
+![[performance-best-practices-wl-example]]
 [Continue with all discovered best-practice files...]
 
 #### Rules
-![[critical-code-rules-wikilink-example]]
-![[quality-standard-rules-wikilink-example]]
+![[critical-code-rules-wl-example]]
+![[quality-standard-rules-wl-example]]
 [Continue with all discovered rule files...]
 
 #### Guidelines
-![[ui-design-guidelines-wikilink-example]]
-![[responsive-design-guidelines-wikilink-example]]
+![[ui-design-guidelines-wl-example]]
+![[responsive-design-guidelines-wl-example]]
 [Continue with all discovered guideline files...]
 
 #### Standards
-![[code-quality-standards-wikilink-example]]
-![[documentation-standards-wikilink-example]]
+![[code-quality-standards-wl-example]]
+![[documentation-standards-wl-example]]
 [Continue with all discovered standard files...]
 
 ## 📊 Quality Standards
@@ -421,9 +421,9 @@ The agent references instructions organized by type:
 ## Wikilink Format
 All instruction files are embedded using the format:
 ```
-![[name-type-wikilink-example]]
+![[name-type-wl-example]]
 ```
-Example: `![[naming-convention-patterns-wikilink-example]]`
+Example: `![[naming-convention-patterns-wl-example]]`
 Note: Wikilinks use filename only, not the path
 
 ## Agent Invocation

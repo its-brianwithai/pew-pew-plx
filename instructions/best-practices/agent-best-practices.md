@@ -59,7 +59,7 @@ description: "Best practices for designing effective, reusable agents that enhan
 ### WHEN combining agents with other components
 **WikiLink Strategy:**
 - Reference existing workflows with `[[workflow-name]]`
-- Embed reusable instructions with `![[instruction-name-wikilink-example]]`
+- Embed reusable instructions with `![[instruction-name-wl-example]]`
 - Link to templates for output formats
 - Connect to related agents for orchestration
 

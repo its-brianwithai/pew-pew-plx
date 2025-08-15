@@ -14,7 +14,7 @@
 Add the latest files of the Pew Pew framework to any existing project with a single command:
 
 ```bash
-rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && cp -r /tmp/pew-pew/.pew/* .pew/ 2>/dev/null || true && for dir in agents prompts templates workflows instructions modes blocks output-formats personas; do if [ -d "/tmp/pew-pew/$dir" ]; then mkdir -p ".pew/$dir" && cp -r "/tmp/pew-pew/$dir"/* ".pew/$dir"/ 2>/dev/null || true; fi; done && ./.pew/scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
+rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && cp -r /tmp/pew-pew/.pew/* .pew/ 2>/dev/null || true && for dir in agents prompts templates workflows instructions modes blocks output-formats personas collections concepts; do if [ -d "/tmp/pew-pew/$dir" ]; then mkdir -p ".pew/$dir" && cp -r "/tmp/pew-pew/$dir"/* ".pew/$dir"/ 2>/dev/null || true; fi; done && ./.pew/scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
 ```
 
 This will:
@@ -109,7 +109,7 @@ Specialized expertise attributes included when they enhance outcomes:
 - Communication Style
 
 **Claude Command:** `/act:<persona-name>` - Activate this persona directly
-**In Files:** `[[persona-name]]` to reference, `![[persona-name]]` to embed content
+**In Files:** `[[persona-name-wl-example]]` to reference, `![[persona-name-wl-example]]` to embed content
 
 #### 📋 **Request**
 Verb-first activity specification with optional deliverables and acceptance criteria. Always starts with an action: Create, Update, Analyze, Transform, etc.
@@ -124,7 +124,7 @@ Multi-phase processes with clear deliverables and acceptance criteria. Each work
 - Quality gates and decision points
 
 **Claude Command:** `/start:<workflow-name>` - Launch this workflow
-**In Files:** `[[workflow-name]]` to reference, `![[workflow-name]]` to embed content
+**In Files:** `[[workflow-name-wl-example]]` to reference, `![[workflow-name-wl-example]]` to embed content
 
 #### 📏 **Instructions** (Optional)
 Event‑driven guidance following the pattern: "When {scenario} occurs, then {apply these instructions}".
@@ -143,19 +143,19 @@ Instruction categories and naming rules:
 4) Place in the correct folder under `instructions/`
 
 **Claude Command:** `/apply:<instruction-name>` - Apply these instructions
-**In Files:** `[[instruction-name-wikilink-example]]` to reference, `![[instruction-name-wikilink-example]]` to embed content
+**In Files:** `[[instruction-name-wl-example]]` to reference, `![[instruction-name-wl-example]]` to embed content
 
 #### 📊 **Output Format** (Optional)
 Specifications for how deliverables should be structured - templates, format types (JSON, YAML, Markdown), or specific structural requirements.
 
 **Claude Command:** `/output:<format-name>` - Apply this output format
-**In Files:** `[[format-name]]` to reference, `![[format-name]]` to embed content
+**In Files:** `[[format-name-wl-example]]` to reference, `![[format-name-wl-example]]` to embed content
 
 ### The Modular Approach
 
 Each component can and should be extracted and referenced via wikilinks when it can be reused. During sync:
-- `[[wikilinks-wikilink-example]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
-- `![[embedded-wikilinks]]` are replaced with the actual file content inline
+- `[[wikilinks-wl-example]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
+- `![[embedded-wikilinks-wl-example]]` are replaced with the actual file content inline
 
 ⚠️ **Important:** The `@path/to/file.md` references inside command files auto-load when you use slash commands (e.g., `/use:template-file` will automatically read all `@` references inside that template). However, if you just type `@template-file` directly in chat, Claude only sees the path - no automatic reading occurs.
 
@@ -168,15 +168,15 @@ graph LR
     end
     
     subgraph "2. Extraction Phase"
-        E1["persona: [[issue-expert-persona]]"]
-        E2["workflow: [[issue-creation-workflow]]"]
-        E3["instructions: [[issue-conventions]]"]
+        E1["persona: [[issue-expert-persona-wl-example]]"]
+        E2["workflow: [[issue-creation-workflow-wl-example]]"]
+        E3["instructions: [[issue-conventions-wl-example]]"]
     end
     
     subgraph "3. Embedding Phase"
-        EM1["![[issue-expert-persona]]"]
-        EM2["![[issue-creation-workflow]]"]
-        EM3["![[issue-conventions]]"]
+        EM1["![[issue-expert-persona-wl-example]]"]
+        EM2["![[issue-creation-workflow-wl-example]]"]
+        EM3["![[issue-conventions-wl-example]]"]
     end
     
     I1 -->|Extract| E1
@@ -237,9 +237,9 @@ graph TD
     I1 --> A
     O1 --> A
     
-    A -->|"Embed: ![[flutter-developer]]"| PR1
-    A -->|"Embed: ![[flutter-developer]]"| PR2
-    A -->|"Embed: ![[flutter-developer]]"| PR3
+    A -->|"Embed: ![[flutter-developer-wl-example]]"| PR1
+    A -->|"Embed: ![[flutter-developer-wl-example]]"| PR2
+    A -->|"Embed: ![[flutter-developer-wl-example]]"| PR3
     
     style MG fill:#663399,stroke:#fff,stroke-width:3px,color:#fff
     style PR fill:#663399,stroke:#fff,stroke-width:3px,color:#fff
@@ -273,7 +273,7 @@ Complete document structures in `templates/`:
 - Implementation plans, requirements, roadmaps
 
 **Claude Command:** `/use:<template-name>` - Use this template
-**In Files:** `[[template-name]]` to reference, `![[template-name]]` to embed content
+**In Files:** `[[template-name-wl-example]]` to reference, `![[template-name-wl-example]]` to embed content
 
 ### Blocks
 Reusable content sections in `blocks/`:
@@ -284,7 +284,7 @@ Reusable content sections in `blocks/`:
 - 40+ specialized blocks for comprehensive documentation
 
 **Claude Command:** `/add:<block-name>` - Insert this block
-**In Files:** `[[block-name]]` to reference, `![[block-name]]` to embed content
+**In Files:** `[[block-name-wl-example]]` to reference, `![[block-name-wl-example]]` to embed content
 
 ### Modes
 Operational contexts in `modes/`:
@@ -311,8 +311,8 @@ The framework leverages a sophisticated component referencing system:
 ```mermaid
 graph LR
     subgraph "Development Time"
-        D1["Write: [[component-wikilink-example]]"]
-        D2["Write: ![[component-wikilink-example]]"]
+        D1["Write: [[component-wl-example]]"]
+        D2["Write: ![[component-wl-example]]"]
     end
     
     subgraph "Sync Process"
@@ -345,7 +345,7 @@ graph LR
 ### Standard WikiLinks: Dynamic Loading
 ```markdown
 # In your artifact:
-Follow [[project-conventions]] and use [[story-template]]
+Follow [[project-conventions-wl-example]] and use [[story-template-wl-example]]
 
 # After sync transformation:
 Follow @instructions/project-conventions.md and use @templates/story-template.md
@@ -356,10 +356,10 @@ Follow @instructions/project-conventions.md and use @templates/story-template.md
 ### Embedded WikiLinks: Content Insertion
 ```markdown
 # Reference mode (loads on activation):
-Use the workflow in [[issue-workflow-wikilink-example]]
+Use the workflow in [[issue-workflow-wl-example]]
 
 # Embedding mode (content inserted during sync):
-![[issue-workflow-wikilink-example]]
+![[issue-workflow-wl-example]]
 
 # Note: Embedded wikilinks must occupy their own line
 ```
@@ -367,9 +367,9 @@ Use the workflow in [[issue-workflow-wikilink-example]]
 ### Component Evolution Lifecycle
 ```markdown
 1. Inline definition → Components defined within the artifact
-2. File extraction → [[component-name-wikilink-example]] references to external files
+2. File extraction → [[component-name-wl-example]] references to external files
 3. Agent composition → Combining persona, workflow, and instructions
-4. Agent embedding → ![[agent-name-wikilink-example]] inclusion in prompts
+4. Agent embedding → ![[agent-name-wl-example]] inclusion in prompts
 ```
 
 
@@ -564,8 +564,8 @@ sync_targets:
 ### Sync Features
 
 - **Automatic Cleanup**: Removes old `.claude/` directories before sync
-- **WikiLink Resolution**: Converts `[[references]]` to `@path/to/file.md`
-- **Content Embedding**: Replaces `![[embeds]]` with actual file content
+- **WikiLink Resolution**: Converts `[[references-wl-example]]` to `@path/to/file.md`
+- **Content Embedding**: Replaces `![[embeds-wl-example]]` with actual file content
 - **Error Handling**: Comprehensive error handling with automatic cleanup
 - **Temporary Directory Management**: Auto-removes empty tmp directories after sync
 
@@ -726,6 +726,8 @@ pew-pew-workspace/
 ├── blocks/               # Reusable content blocks
 ├── output-formats/       # Output format specifications
 ├── personas/             # Role definitions
+├── collections/          # Curated lists and compilations
+├── concepts/             # Core ideas and principles
 ├── .pew/                 # All framework files and configuration
 │   ├── plx.yaml          # Sync configuration
 │   ├── plx.local.yaml    # Optional local override (gitignored)
@@ -748,7 +750,9 @@ pew-pew-workspace/
 │       ├── output/       # Output format commands
 │       ├── apply/        # Instruction commands
 │       ├── start/        # Workflow commands
-│       └── activate/     # Mode commands
+│       ├── activate/     # Mode commands
+│       ├── collect/      # Collection commands
+│       └── understand/   # Concept commands
 ├── README.md             # This file
 │
 ├── 00-freelancers/       # [Legacy] Individual specialist agents

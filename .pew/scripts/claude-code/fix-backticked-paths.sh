@@ -52,6 +52,9 @@ ARTIFACT_TYPES=(
     "blocks"
     "personas"
     "output-formats"
+    "collections"
+    "concepts"
+    "references"
 )
 
 # Build the sed replacement commands

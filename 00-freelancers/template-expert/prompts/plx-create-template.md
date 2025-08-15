@@ -10,7 +10,7 @@ A block at the very top of the file, enclosed by `---`. This block provides inst
 
 -   `name`: 	Unique identifier using lowercase letters and hyphens.
 -   `description`: Natural language description of when to use this template.
--   `wikilinks`: An instruction on how to use internal links. Use this **exact text**: `When referencing other documents, use [[filename-wikilink-example]] format. Do not include the file extension or path.`
+-   `wikilinks`: An instruction on how to use internal links. Use this **exact text**: `When referencing other documents, use [[filename-wl-example]] format. Do not include the file extension or path.`
 -   `important`: A critical warning. Use this **exact text**: `Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter.`
 
 ### **Part 2: Markdown Body**
@@ -31,7 +31,7 @@ The main content of the template, written in markdown. It should:
 ```markdown
 ---
 instructions: We use this template to describe a specific actor within the project. An actor is a person or system that can perform actions or assume certain states.
-wikilinks: When referencing other documents, use [[filename-wikilink-example]] format. Do not include the file extension or path.
+wikilinks: When referencing other documents, use [[filename-wl-example]] format. Do not include the file extension or path.
 important: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter.
 ---
 # [Fitting Emoji] Actor: [Name]
@@ -48,7 +48,7 @@ important: Make sure that when you implement this template, you don't include th
 ```markdown
 ---
 instructions: We use this template to indicate certain platforms within the project. It's important that we don't put specific project details in this template, so we can also use this platform description elsewhere. We need to focus purely on what the platform does, what the possibilities are, and how you get access to the platform.
-wikilinks: When referencing other documents, use [[filename-wikilink-example]] format. Do not include the file extension or path.
+wikilinks: When referencing other documents, use [[filename-wl-example]] format. Do not include the file extension or path.
 important: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter.
 ---
 # [Fitting Emoji] Platform: [Name]

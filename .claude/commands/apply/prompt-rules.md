@@ -59,8 +59,8 @@ When this command is used, acknowledge that you understand these instructions an
 ### WHEN implementing WikiLinks
 - ALWAYS verify the target file exists
 - ALWAYS use exact file names without extensions
-- ALWAYS place embedded wikilinks `![[name-wikilink-example]]` on their own line
-- ALWAYS use standard wikilinks `[[name-wikilink-example]]` for references
+- ALWAYS place embedded wikilinks `![[name-wl-example]]` on their own line
+- ALWAYS use standard wikilinks `[[name-wl-example]]` for references
 - ALWAYS test wikilink resolution before committing
 
 ### WHEN extracting components

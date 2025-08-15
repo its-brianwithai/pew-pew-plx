@@ -53,6 +53,9 @@ build_search_dirs() {
         "$PROJECT_ROOT/personas"
         "$PROJECT_ROOT/output-formats"
         "$PROJECT_ROOT/modes"
+        "$PROJECT_ROOT/collections"
+        "$PROJECT_ROOT/concepts"
+        "$PROJECT_ROOT/references"
     )
     
     for dir in "${default_dirs[@]}"; do
@@ -120,7 +123,7 @@ find "$CLAUDE_DIR" -name "*.md" -type f | while read -r file; do
             base_filename="${filename%.md}"
             
             # Skip example WikiLinks
-            if [[ "$base_filename" == *"-wikilink-example" ]]; then
+            if [[ "$base_filename" == *"-wl-example" ]]; then
                 continue
             fi
 

@@ -53,8 +53,8 @@ prompts/
 Follow the standard progression:
 1. **Inline**: Define all components within the prompt
 2. **Extract**: Move reusable parts to separate files
-3. **Reference**: Use `[[wikilinks-wikilink-example]]` for references
-4. **Embed**: Use `![[wikilinks-wikilink-example]]` for content inclusion
+3. **Reference**: Use `[[wikilinks-wl-example]]` for references
+4. **Embed**: Use `![[wikilinks-wl-example]]` for content inclusion
 
 ### Extraction Criteria
 Extract a component when:

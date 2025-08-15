@@ -162,7 +162,7 @@ Before creating the PR, verify:
 <documentation_guidelines>
 - **CRITICAL**: Read and document EVERY single changed file - NO EXCEPTIONS
 - If there are too many files to handle directly, use sub-agents to analyze groups
-- When referencing project files in the PR report, use wikilinks: [[filename-wikilink-example]] not paths
+- When referencing project files in the PR report, use wikilinks: [[filename-wl-example]] not paths
 - In the changes table, use actual file paths for clickable GitHub links
 - For EVERY file, explain:
   - What the file does

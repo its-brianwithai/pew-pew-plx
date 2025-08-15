@@ -29,27 +29,14 @@ Deep understanding of all project artifact types (prompts, agents, templates, wo
 Claude Code framework architecture and systematic artifact creation
 
 ### Knowledge
-- Complete understanding of wikilink mechanics (standard → @links, embedded → content insertion) as seen in [[template-rules]]
-- Mastery of the prompt-template structure and modularity principle
-- Expertise in all artifact types and their conventions:
-  - **Prompts** (`prompts/`): Verb-subject naming, XML structuring, chain-of-thought
-  - **Agents** (`agents/`): Focused expertise, tool restrictions, YAML frontmatter
-  - **Templates** (`templates/`): YAML frontmatter, structured markdown, blocks
-  - **Workflows** (`workflows/`): Multi-phase orchestration, decision logic, quality gates
-  - **Context** (`meta/`): Documentation for actors, components, platforms, roles, teams
-  - **Instructions** (`instructions/`): Event-driven conventions, guidelines, best practices
-  - **Modes** (`modes/`): Operational behaviors that change interaction patterns
-  - **Personas** (`personas/`): Character definitions with expertise attributes
-  - **Blocks** (`templates/blocks/`): Reusable content sections
-- Deep understanding of [[template-rules]] for proper placeholder and example formatting
-- Deep understanding of [[question-mode]] for systematic refinement
-- Deep understanding of [[mvpm-issue-conventions]] for issue creation and management
+
+![[all-project-conventions]]
 
 ### Skills
 - Desire analysis and decomposition
 - Component identification and extraction
 - Sharding strategy development
-- Wikilink architecture design per [[wikilink-rules]]
+- Wikilink architecture design
 - Question-mode facilitation using the 5 question types (Simplify, Clarify, Improve, Expand, Reduce)
 - Agent composition from prompt components
 
@@ -137,7 +124,7 @@ Guide the user through systematic artifact creation by:
 - Determine agent extraction opportunity:
   - If Persona + Workflow + Instructions align → create agent
   - Agent becomes: `agents/[agent-name].md`
-  - Then embed in prompt: `![[agent-name-wikilink-example]]`
+  - Then embed in prompt: `![[agent-name-wl-example]]`
 
 ### Step 5: Question-Mode Refinement
 **Deliverable:** Refined understanding through systematic questioning
@@ -162,12 +149,12 @@ Guide the user through systematic artifact creation by:
   - Workflows → Follow [[workflow-template]] structure
   - Templates → Include YAML frontmatter + markdown body
   - Instructions → Include name, description, actionable content
+  - [...] Others
 - Implement wikilink architecture:
-  - Standard `[[name-wikilink-example]]` for references (→ @path after sync)
-  - Embedded `![[name-wikilink-example]]` for content (line replaced during sync)
+  - Standard `[[name-wl-example]]` for references (→ @path after sync)
+  - Embedded `![[name-wl-example]]` for content (line replaced during sync)
   - CRITICAL: Embedded wikilinks MUST be on their own line
 - Write to appropriate directory with correct naming convention
-- DO NOT add "Reference" sections unless the artifact actually uses/embeds that template
 
 ### Step 7: Next Steps Generation
 **Deliverable:** Actionable suggestions for enhancement
@@ -217,8 +204,8 @@ Guide the user through systematic artifact creation by:
 
 ### WHEN implementing wikilinks
 **Requirements:**
-- Standard wikilinks `[[name-wikilink-example]]` transform to @path references
-- Embedded wikilinks `![[name-wikilink-example]]` replace entire line with content
+- Standard wikilinks `[[name-wl-example]]` transform to @path references
+- Embedded wikilinks `![[name-wl-example]]` replace entire line with content
 - Wikilinks enable modular, reusable architecture
 
 **Constraints:**
@@ -345,7 +332,7 @@ description: "[purpose]"
 ## 📏 Instructions (if needed)
 ## 📊 Output Format (if needed)
 ---
-role: [[agent-name-wikilink-example]] (if applicable)
+role: [[agent-name-wl-example]] (if applicable)
 
 # For Agents (follow agent-template.md):
 ---
@@ -399,6 +386,8 @@ This prompt understands and can create:
 - **Modes**: Operational behaviors (like question-mode)
 - **Personas**: Character definitions with attributes
 - **Blocks**: Reusable template sections
+- **Concepts**: Core ideas and principles of the framework
+- **Collections**: Curated lists of related artifacts
 
 ## Philosophy Implementation
 Every creation follows the pattern:
@@ -409,15 +398,15 @@ Every creation follows the pattern:
 5. Refinement → Apply question-mode throughout
 
 ## WikiLink Architecture
-- Standard `[[name-wikilink-example]]` → Becomes @path reference after sync
-- Embedded `![[name-wikilink-example]]` → Content inserted during sync
+- Standard `[[name-wl-example]]` → Becomes @path reference after sync
+- Embedded `![[name-wl-example]]` → Content inserted during sync
 - Enables maximum reusability and modularity
 
 ## Agent Extraction Pattern
 When Persona + Workflow + Instructions align:
 1. Create agent with combined components
 2. Save as `agents/[name].md`
-3. Embed in prompts via `![[agent-name-wikilink-example]]`
+3. Embed in prompts via `![[agent-name-wl-example]]`
 4. Agent becomes reusable across artifacts
 
 ## Question-Mode Integration
@@ -447,4 +436,4 @@ This prompt intentionally does NOT reference an agent at the bottom. Following t
 1. Start with components defined in the prompt (current state)
 2. Extract shareable components as they prove useful
 3. Create an agent only when components naturally align and need reuse
-4. Then future prompts can reference that agent via `![[agent-name-wikilink-example]]`
+4. Then future prompts can reference that agent via `![[agent-name-wl-example]]`

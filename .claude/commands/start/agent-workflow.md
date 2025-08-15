@@ -374,7 +374,7 @@ Phase 5: Deliver Agent
 
 #### Step 5.2: Verify WikiLinks
 - **Purpose**: Ensure all references resolve correctly
-- **Instructions**: Check that all [[wikilinks-wikilink-example]] point to existing files
+- **Instructions**: Check that all [[wikilinks-wl-example]] point to existing files
 - **Agent**: @agents/meta/meta-sub-agent-architect.md - Expert in wikilink validation
 - **Inputs**: Agent file content
 - **Outputs**: WikiLink validation report

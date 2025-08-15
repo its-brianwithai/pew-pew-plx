@@ -416,7 +416,7 @@ Phase 5: Deliver Agent
 
 #### Step 5.2: Verify WikiLinks
 - **Purpose**: Ensure all references resolve correctly
-- **Instructions**: Check that all [[wikilinks-wikilink-example]] point to existing files
+- **Instructions**: Check that all [[wikilinks-wl-example]] point to existing files
 - **Agent**: @agents/meta/meta-sub-agent-architect.md - Expert in wikilink validation
 - **Inputs**: Agent file content
 - **Outputs**: WikiLink validation report
@@ -648,14 +648,14 @@ agents/
 
 ### WHEN referencing other documents in agents
 **Reference Patterns:**
-- Use `[[document-name-wikilink-example]]` for references (no path needed)
-- Use `![[document-name-wikilink-example]]` for embedding content (must be on own line)
-- End example wikilinks with `-wikilink-example`
+- Use `[[document-name-wl-example]]` for references (no path needed)
+- Use `![[document-name-wl-example]]` for embedding content (must be on own line)
+- End example wikilinks with `-wl-example`
 
 **Common References:**
 - `@templates/agents/agent-template.md` - Reference to agent template
 - `[[workflow-name]]` - Reference to workflows
-- `[[instruction-name-wikilink-example]]` - Reference to instructions
+- `[[instruction-name-wl-example]]` - Reference to instructions
 # 🌊 Agent Workflow: Systematic Sub-Agent Creation
 > 💡 *Transform requirements into focused, single-purpose agents through systematic decomposition and validation.*
 
@@ -1026,7 +1026,7 @@ Phase 5: Deliver Agent
 
 #### Step 5.2: Verify WikiLinks
 - **Purpose**: Ensure all references resolve correctly
-- **Instructions**: Check that all [[wikilinks-wikilink-example]] point to existing files
+- **Instructions**: Check that all [[wikilinks-wl-example]] point to existing files
 - **Agent**: @agents/meta/meta-sub-agent-architect.md - Expert in wikilink validation
 - **Inputs**: Agent file content
 - **Outputs**: WikiLink validation report
@@ -1267,7 +1267,7 @@ tools: "Read, Write, Edit"
 ### WHEN combining agents with other components
 **WikiLink Strategy:**
 - Reference existing workflows with `[[workflow-name]]`
-- Embed reusable instructions with `![[instruction-name-wikilink-example]]`
+- Embed reusable instructions with `![[instruction-name-wl-example]]`
 - Link to templates for output formats
 - Connect to related agents for orchestration
 
@@ -1468,7 +1468,7 @@ tools: "Read, Write, Edit"
 - ALWAYS verify referenced files exist
 - ALWAYS place embedded wikilinks on separate lines
 - ALWAYS use standard wikilink format without backticks
-- ALWAYS end example wikilinks with "-wikilink-example"
+- ALWAYS end example wikilinks with "-wl-example"
 - ALWAYS check for circular dependencies
 
 ### WHEN writing instructions
