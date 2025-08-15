@@ -60,6 +60,9 @@ build_search_dirs() {
         "$PROJECT_ROOT/personas"
         "$PROJECT_ROOT/output-formats"
         "$PROJECT_ROOT/modes"
+        "$PROJECT_ROOT/references"
+        "$PROJECT_ROOT/collections"
+        "$PROJECT_ROOT/concepts"
     )
     
     for dir in "${default_dirs[@]}"; do
