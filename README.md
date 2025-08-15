@@ -1,6 +1,6 @@
 # ⚡ Pew Pew 🏗️ Workspace
 
-[![Version](https://img.shields.io/badge/Version-v0.5.1-green)](https://github.com/its-brianwithai/pew-pew-workspace/releases/tag/v0.5.1)
+[![Version](https://img.shields.io/badge/Version-v0.6.0-green)](https://github.com/its-brianwithai/pew-pew-workspace/releases/tag/v0.6.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Brought to you by pewpewprompts.com](https://img.shields.io/badge/Brought%20to%20you%20by-pewpewprompts.com-blue)](https://pewpewprompts.com)
 
@@ -14,7 +14,7 @@
 Add the latest files of the Pew Pew framework to any existing project with a single command:
 
 ```bash
-rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && cp -r /tmp/pew-pew/.pew/* .pew/ 2>/dev/null || true && for dir in agents prompts templates workflows instructions modes blocks output-formats personas collections concepts; do if [ -d "/tmp/pew-pew/$dir" ]; then mkdir -p ".pew/$dir" && cp -r "/tmp/pew-pew/$dir"/* ".pew/$dir"/ 2>/dev/null || true; fi; done && ./.pew/scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
+rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pew-pew-workspace.git /tmp/pew-pew && cd "$(pwd)" && mkdir -p .pew && for dir in agents prompts templates workflows instructions modes blocks output-formats personas scripts Makefile install.sh; do if [ -f "/tmp/pew-pew/.pew/$dir" ]; then cp "/tmp/pew-pew/.pew/$dir" ".pew/$dir"; elif [ -d "/tmp/pew-pew/.pew/$dir" ]; then mkdir -p ".pew/$dir" && cp -r "/tmp/pew-pew/.pew/$dir"/* ".pew/$dir"/ 2>/dev/null || true; fi; done && cp /tmp/pew-pew/.pew/plx.yaml .pew/plx.yaml && ./.pew/scripts/claude-code/sync-claude-code.sh && rm -rf /tmp/pew-pew
 ```
 
 This will:
@@ -49,6 +49,28 @@ Customize sync behavior in `.pew/plx.yaml`:
 - **delete_after_sync_targets**: Directories to clean after syncing
 
 **Local Override:** Create `.pew/plx.local.yaml` to override settings without modifying the main config. This file is gitignored and perfect for personal customizations.
+
+## ✨ What's New in v0.6.0
+
+### 🚀 Enhanced Modular Architecture
+- **Improved WikiLink System**: Better component referencing with cleaner template integration
+- **Streamlined Template Organization**: Ghost CMS templates and business issue routing
+- **Enhanced Sync Process**: Backticked path correction and improved error handling
+
+### 📋 New Templates & Components
+- **Business Issue Templates**: Smart routing for operations, marketing, sales, finance, and people issues
+- **Ghost CMS Integration**: Author templates with `ghost_id` field support and tutorial formats
+- **Meta Documentation**: Enhanced context documentation with proper template linking
+
+### 🛠️ Developer Experience Improvements
+- **Template-Linked Agents**: Meta context expert now uses WikiLink template references instead of inline duplication
+- **Better Sync Commands**: Enhanced make commands with watch capabilities
+- **Project Alignment**: Improved documentation and convention adherence
+
+### 🔧 Architecture Enhancements
+- **Collections & Concepts**: New component types for curated lists and core principles
+- **Reference Commands**: New `/collect:` and `/understand:` command types
+- **Improved Modularity**: Better separation of concerns with template-driven patterns
 
 ## 📝 A Good Prompt
 
@@ -403,6 +425,9 @@ make -f .pew/Makefile watch claude                   # Auto-sync during developm
 | **Agents** | `/act:flutter:developer`, `/act:story:agent` | Activate specialized AI personas |
 | **Workflows** | `/start:feature-workflow`, `/start:bug-workflow` | Launch multi-phase processes |
 | **Components** | `/add:`, `/output:`, `/apply:`, `/use:` | Insert blocks, formats, instructions, templates |
+| **Collections** | `/collect:<collection-name>` | Access curated lists and compilations |
+| **Concepts** | `/understand:<concept-name>` | Access core principles and ideas |
+| **References** | `/refer:<reference-name>` | Access reference documentation |
 | **Modes** | `/activate:<mode-name>` | Switch operational contexts |
 
 ### Sync Transformation
@@ -419,6 +444,9 @@ graph TD
         B1[blocks/]
         O1[output-formats/]
         PE1[personas/]
+        CO1[collections/]
+        CN1[concepts/]
+        R1[references/]
     end
     
     subgraph "plx.yaml sync"
@@ -435,6 +463,9 @@ graph TD
         B2[.claude/commands/add/]
         O2[.claude/commands/output/]
         PE2[.claude/commands/act/]
+        CO2[.claude/commands/collect/]
+        CN2[.claude/commands/understand/]
+        R2[.claude/commands/refer/]
     end
     
     A1 --> SYNC
@@ -446,6 +477,9 @@ graph TD
     B1 --> SYNC
     O1 --> SYNC
     PE1 --> SYNC
+    CO1 --> SYNC
+    CN1 --> SYNC
+    R1 --> SYNC
     
     SYNC --> A2
     SYNC --> P2
@@ -456,6 +490,9 @@ graph TD
     SYNC --> B2
     SYNC --> O2
     SYNC --> PE2
+    SYNC --> CO2
+    SYNC --> CN2
+    SYNC --> R2
     
     style SYNC fill:#b8860b,stroke:#fff,stroke-width:3px,color:#fff
     style A1 fill:#4a5568,stroke:#fff,color:#fff
@@ -728,6 +765,7 @@ pew-pew-workspace/
 ├── personas/             # Role definitions
 ├── collections/          # Curated lists and compilations
 ├── concepts/             # Core ideas and principles
+├── references/           # Reference documentation
 ├── .pew/                 # All framework files and configuration
 │   ├── plx.yaml          # Sync configuration
 │   ├── plx.local.yaml    # Optional local override (gitignored)
@@ -752,7 +790,8 @@ pew-pew-workspace/
 │       ├── start/        # Workflow commands
 │       ├── activate/     # Mode commands
 │       ├── collect/      # Collection commands
-│       └── understand/   # Concept commands
+│       ├── understand/   # Concept commands
+│       └── refer/        # Reference commands
 ├── README.md             # This file
 │
 ├── 00-freelancers/       # [Legacy] Individual specialist agents
