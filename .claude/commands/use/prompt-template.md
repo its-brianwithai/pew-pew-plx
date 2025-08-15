@@ -14,9 +14,33 @@ When this command is used, use the following template. Acknowledge your understa
 > 💡 *[One-line description of what this prompt achieves and its transformative purpose]*
 
 ## 🎯 End Goal
-> 💡 *The clean, measurable objective that determines whether any following section provides value. This is the north star for inclusion decisions.*
+> 💡 *The measurable objective that determines whether any following section provides value. This is the north star for inclusion decisions.*
 
 [Clear, specific statement of what success looks like - this determines whether any section below should exist]
+
+### Deliverables
+[What this prompt must produce]
+
+```
+<example>
+- [Specific output or artifact]
+- [Document or analysis]
+- [Solution or recommendation]
+- [Code or configuration]
+</example>
+```
+
+### Acceptance Criteria
+[How to verify the prompt achieved its goal]
+
+```
+<example>
+- [ ] [Condition that confirms success]
+- [ ] [Quality standard met]
+- [ ] [Requirement satisfied]
+- [ ] [Output validated]
+</example>
+```
 
 ## 👤 Persona
 > 💡 *Optional: Include only attributes that directly contribute to achieving the end goal. Each attribute should improve the quality or accuracy of the output.*

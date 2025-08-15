@@ -9,123 +9,218 @@ name: `{{generated-agent-name}}`
 description: "[Describe expertise]. [Describe when to delegate tasks to this agent]."
 color: `{{selected-color}}`
 ---
-# 🎯 Purpose & Role
+# 🎯 Main Goal
+> 💡 *The behavioral objective that determines whether any following section provides value. This is the north star - every component should directly contribute to achieving this goal.*
 
-[Clear role statement and expertise description in 1-2 paragraphs]
+[Clear, measurable behavioral objective that defines what this agent consistently does. Should be specific enough to validate achievement and guide all decisions about what to include or exclude]
 
-## 🚶 Instructions
-
-**0. Deep Understanding & Scope Analysis:** Before you do anything, think deep and make sure you understand 100% of the entire scope of what I am asking of you. Then based on that understanding research this project to understand exactly how to implement what I've asked you following 100% of the project's already existing conventions and examples similar to my request. Do not assume, reinterpret, or improve anything unless explicitly told to. Follow existing patterns and conventions exactly as they are in the project. Stick to what's already been established. No "better" solutions, no alternatives, no creative liberties, no unsolicited changes. Your output should always be sceptical and brutally honest. Always play devil's advocate. Always review your output, argue why it won't work and adjust accordingly.
+### Deliverables
+[What this agent must produce or accomplish]
 
 ```
 <example>
-1. [First action type]: [Description of what this action does]
-   - [Sub-step type if needed]
-   - [Another sub-step type if needed]
-2. [Second action type]: [Description of what this action does]
-3. [More action types as needed]
-[...]
+- [Specific artifact or output the agent creates]
+- [Document or code the agent generates]
+- [Analysis or report the agent produces]
+- [Decision or recommendation the agent provides]
 </example>
 ```
 
-## ⭐ Best Practices
+### Acceptance Criteria
+[How to verify this agent has achieved its goal]
+
+```
+<example>
+- [ ] [Specific condition that confirms success]
+- [ ] [Quality metric that must be met]
+- [ ] [Performance threshold achieved]
+- [ ] [Stakeholder requirement satisfied]
+</example>
+```
+
+## 👤 Persona
+> 💡 *Optional: Include only expertise attributes that directly contribute to achieving the main goal. Each attribute should improve the quality or accuracy of the output.*
+
+### Role
+[Only if role expertise impacts outcome quality]
+
+### Expertise
+[Only if specific domain knowledge is required]
+
+### Domain
+[Only if domain context affects approach]
+
+### Knowledge
+[Only if specialized knowledge improves results]
+
+### Experience
+[Only if past experience patterns matter]
+
+### Skills
+[Only if specific skills are needed]
+
+### Abilities
+[Only if unique abilities enhance output]
+
+### Responsibilities
+[Only if understanding responsibilities shapes behavior]
+
+### Interests
+[Only if interests influence approach or quality]
+
+### Background
+[Only if background context improves understanding]
+
+### Preferences
+[Only if preferences affect delivery style]
+
+### Perspective
+[Only if viewpoint shapes analysis]
+
+### Communication Style
+[Only if style impacts effectiveness]
+
+## 📋 Request
+> 💡 *Verb-first specification of what this agent does*
+
+[Verb] [specific activity description with clear scope defining what this agent does]
+
+### Deliverables (Optional)
+- [Specific output 1]
+- [Specific output 2]
+- [Additional outputs as needed]
+
+### Acceptance Criteria (Optional)
+- [ ] [Measurable success criterion 1]
+- [ ] [Measurable success criterion 2]
+- [ ] [Additional criteria as needed]
+
+## 🔄 Workflow
+> 💡 *Optional: Multi-step process that systematically achieves the main goal. Include only if multiple steps improve outcome.*
+
+### Step 1: [Action Name]
+**Deliverable:** [What this step produces]
+**Acceptance Criteria:** [How to verify completion]
+- [Specific action]
+- [Follow-up action if needed]
+
+### Step 2: [Action Name]
+**Deliverable:** [What this step produces]
+**Acceptance Criteria:** [How to verify completion]
+- [Specific action]
+- [Follow-up action if needed]
+
+### Step N: [Action Name]
+**Deliverable:** [What this step produces]
+**Acceptance Criteria:** [How to verify completion]
+- [Specific action]
+- [Follow-up action if needed]
+
+## 📏 Instructions
+> 💡 *Optional: Event-driven guidance. Include only subsections that prevent failure or ensure quality. Each subsection is optional and should only exist if it contributes to the main goal.*
+
+### Best Practices
 > 💡 *Industry standards and recommended approaches that should be followed.*
 
 [List best practices with references to relevant documentation]
 
 ```
 <example>
-- [Domain-specific best practice type with wikilink reference]
-- [Project convention type with documentation reference]
-- [Quality practice type with standards reference]
-- [Performance consideration type with guide reference]
-- [Security practice type with guidelines reference]
-- [Testing approach type with standards reference]
-- [...]
+- [Domain-specific best practice with reference]
+- [Project convention with documentation reference]
+- [Quality practice with standards reference]
+- [Performance consideration with guide reference]
+- [...] 
 </example>
 ```
 
-## 📏 Rules
+### Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
 
-### 👍 Always
-
+#### Always
 ```
 <example>
-- WHEN [event type] ALWAYS [behavior type]
+- WHEN [event] ALWAYS [behavior]
 - WHEN referencing project documents ALWAYS use wikilinks without backticks
-- [More ALWAYS rule types if needed]
+- [More ALWAYS rules if needed]
 - [...]
 </example>
 ```
 
-### 👎 Never
-
+#### Never
 ```
 <example>
-- WHEN [event type] NEVER [prohibited behavior type]
+- WHEN [event] NEVER [prohibited behavior]
 - WHEN working with security NEVER violate documented security policies
-- [More NEVER rule types if needed]
+- [More NEVER rules if needed]
 - [...]
 </example>
 ```
 
-## 🔍 Relevant Context
-> 💡 *Essential information to understand. Review all linked resources thoroughly before proceeding.*
+### Conventions
+> 💡 *Project-specific conventions and patterns to follow.*
 
-### 📚 Project Files & Code
-> 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
-
-[List project files with their relevance]
+[List conventions that must be followed]
 
 ```
 <example>
-- [Wikilink to relevant file type] - (Relevance: [Description of why this is important])
-- [Wikilink to project documentation type] - (Relevance: [Description of relevance])
-- [Wikilink to related component type] - (Relevance: [Description of integration])
+- [Naming convention with pattern]
+- [File structure convention]
+- [Code style convention]
 - [...]
 </example>
 ```
 
-### 🌐 Documentation & External Resources
-> 💡 *List any external documentation, API references, design specs, or other resources to consult.*
+### References
+> 💡 *Essential resources and documentation to consult.*
 
-[List external resources with their relevance]
+[List all project files, documentation, and resources that must be understood]
 
 ```
 <example>
-- [Wikilink to API documentation type] - (Relevance: [Description of endpoints needed])
-- [Wikilink to design spec type] - (Relevance: [Description of requirements])
-- [External documentation URL type] - (Relevance: [Description of external resource])
+- [Wikilink to relevant file] - (Relevance: [Why this is important])
+- [Wikilink to project documentation] - (Relevance: [Description of relevance])
+- [External documentation URL] - (Relevance: [Description of external resource])
 - [...]
 </example>
 ```
 
-### 💡 Additional Context
-> 💡 *Include any other critical context, constraints, or considerations.*
+## 📊 Output Format
+> 💡 *Optional: How to structure and deliver the output. Include only if specific format improves usability or integration.*
 
-[List additional context points]
+### Format Type
+[Specify format: Markdown, JSON, YAML, XML, Plain Text, Code, etc.]
 
+### Structure Template
+```[format]
+[Exact structure showing how output should be formatted]
+[Include placeholders for dynamic content]
+[Show nesting and organization]
 ```
-<example>
-- [Architectural decision types, limitation types, constraint types, dependency types, performance consideration types, and other critical context types]
-- [Additional context categories if needed]
-- [...]
-</example>
-```
 
-## 📊 Quality Standards
-> 💡 *Clear quality standards that define what "good" looks like for this work.*
+### Delivery Instructions
+- [Where to save/output]
+- [Naming conventions]
+- [Any post-processing required]
 
-| Category | Standard | How to Verify |
-|:---------|:---------|:--------------|
-| [Category type] | [Standard description type] | [Verification method type] |
-| [Another category type] | [Another standard type] | [Another verification type] |
-| [More categories as needed] | [More standards as needed] | [More verification methods] |
-| [...] | [...] | [...] |
+---
 
+# Usage Notes
 
-## 📤 Report / Response
+## Modularity Principle
+Every section and subsection is **optional** and should only exist if it directly contributes to achieving the Main Goal. Before including any section, ask: "Does this improve our chances of reaching the desired behavioral outcome?"
 
-[Clear description of the expected output format and structure. Specify if the agent should create files, provide structured responses, or format output in a particular way]
+## Section Guidelines
+- **Main Goal**: ALWAYS required - defines the behavioral focus
+- **Persona**: Include only attributes that enhance expertise for the goal
+- **Request**: Define what the agent does (verb-first)
+- **Workflow**: Only for multi-step processes
+- **Instructions**: Include only subsections that guide behavior
+  - Best Practices: Only if industry standards apply
+  - Rules: Only if ALWAYS/NEVER constraints needed
+  - Conventions: Only if project patterns must be followed
+  - References: Only if external resources required
+- **Output Format**: Only if specific structure needed
+
+Remember: Agents are behavioral - they define HOW to consistently perform tasks, not just WHAT to achieve.
 ``````````

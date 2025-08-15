@@ -1,7 +1,6 @@
 ---
 name: workflow-template
-description: "Use this template when creating sophisticated multi-agent orchestrations that require hierarchical thinking, decision points, quality gates, and comprehensive error handling."
-instructions: "Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-wikilink-example]] to reference them. Do not include the file extension or path."
+description: "Use this template when creating multi-step workflows that require clear phases, deliverables, and acceptance criteria."
 ---
 # Template Command
 
@@ -10,228 +9,164 @@ When this command is used, use the following template. Acknowledge your understa
 ---
 
 ````````````
-# 🌊 [Workflow Name]: [Sophisticated Process Title]
-> 💡 *[One-line description that captures the workflow's transformative purpose and intellectual foundation]*
+# 🌊 [Workflow Name]
+> 💡 *[One-line description of what this workflow accomplishes]*
 
-[Opening paragraph that establishes the workflow's significance, its place in the larger system architecture, and the fundamental problem it solves. This should inspire understanding of why this orchestration matters.]
+[Brief paragraph explaining the workflow's purpose and value]
 
-## 🎯 Philosophical Foundations
-> 💡 *The deeper purpose and guiding principles that inform every decision in this workflow.*
+## 🎯 Main Goal
+> 💡 *The measurable objective that determines whether any following section provides value. This is the north star for this workflow.*
 
-### Core Purpose
-[Define the fundamental reason this workflow exists - what transformation does it enable? What value does it create? How does it advance the system's goals?]
-
-### Guiding Principles
-1. **[Principle Name]**: [Description of how this principle shapes the workflow]
-2. **[Principle Name]**: [Description of how this principle influences decisions]
-3. **[Principle Name]**: [Description of how this principle ensures quality]
-   [Add more principles as needed to capture the workflow's philosophical framework]
+[Clear, measurable objective that defines success. Every phase and step should directly contribute to achieving this goal]
 
 ### Success Criteria
-- [Measurable outcome that defines workflow success]
-- [Quality metric that must be achieved]
-- [Performance indicator that validates the approach]
-- [Business or technical goal that justifies the workflow]
+[List the specific conditions that indicate the workflow has achieved its goal]
 
-## 🧩 Core Concepts
-> 💡 *Essential ideas and patterns that power this workflow's systematic approach.*
-
-### Key Abstractions
-- **[Concept Name]**: [Definition and role in the workflow]
-- **[Concept Name]**: [Definition and relationship to other concepts]
-- **[Concept Name]**: [Definition and importance to the system]
-
-### Workflow Patterns
-- **[Pattern Type]**: [How this pattern is applied in the workflow]
-- **[Pattern Type]**: [Where this pattern provides value]
-- **[Pattern Type]**: [Why this pattern was chosen]
-
-## 🔄 Systematic Methodology
-> 💡 *The structured approach that transforms inputs into desired outcomes through repeatable, testable steps.*
-
-### Overview
-[Describe the high-level methodology - how does this workflow systematically achieve its goals? What makes it reliable and repeatable?]
-
-### Phase Architecture
 ```
 <example>
-Phase 1: [Foundation Phase Name]
-├── Step 1.1: [Preparation Step]
-├── Step 1.2: [Analysis Step]
-└── Quality Gate: [Validation Criteria]
-
-Phase 2: [Construction Phase Name]
-├── Parallel Block A:
-│   ├── Step 2.1a: [Parallel Task]
-│   └── Step 2.2a: [Parallel Task]
-├── Parallel Block B:
-│   ├── Step 2.1b: [Parallel Task]
-│   └── Step 2.2b: [Parallel Task]
-└── Synchronization Point: [Merge Criteria]
-
-Phase 3: [Refinement Phase Name]
-├── Decision Point: [Branching Logic]
-├── Branch A: [Condition Met Path]
-│   └── Step 3.1a: [Specialized Step]
-├── Branch B: [Alternative Path]
-│   └── Step 3.1b: [Alternative Step]
-└── Quality Gate: [Final Validation]
+- [Measurable outcome that must be achieved]
+- [Quality standard that must be met]
+- [Performance threshold that must be reached]
+- [Business or technical goal that must be satisfied]
 </example>
 ```
 
-## 📊 Workflow Orchestration
-> 💡 *Detailed execution plan with agent coordination, decision logic, and quality controls.*
+## 📋 Workflow Overview
+> 💡 *High-level view of the phases and their relationships*
 
-### Phase 1: [Foundation Phase Name]
-> *[Phase purpose and why it must come first]*
+```
+<example>
+Phase 1: [Foundation Phase] → Phase 2: [Build Phase] → Phase 3: [Delivery Phase]
+                           ↘                        ↗
+                            Phase 2b: [Alternative Path]
+</example>
+```
 
-#### Prerequisites
-- [What must be true before this phase can begin]
-- [Required inputs or conditions]
-- [Dependencies that must be satisfied]
+## 🔄 Phase 1: [Phase Name]
+> 💡 *[Brief description of this phase's purpose and role in achieving the main goal]*
 
-#### Step 1.1: [Descriptive Step Name]
-- **Purpose**: [Why this step is necessary]
-- **Instructions**: [Specific actions or [[prompt-name]] to execute]
-- **Agent**: [[specialized-agent-name]] - [Why this agent is chosen]
-- **Inputs**: [What information or artifacts are needed]
-- **Outputs**: [Expected deliverables or [[template-name]]]
-- **Success Criteria**: [How to verify step completion]
-- **Error Handling**:
-    - **Likely Failures**: [Common failure modes]
-    - **Recovery Strategy**: [How to recover or retry]
-    - **Escalation Path**: [When to seek intervention]
-- **Timing**: [Expected duration or constraints]
+### Deliverables
+[What this phase must produce]
 
-#### Step 1.2: [Next Step Name]
-[Repeat the detailed structure for each step]
+```
+<example>
+- [Specific artifact or output]
+- [Document or configuration]
+- [Decision or approval]
+</example>
+```
 
-#### Quality Gate: [Phase Validation Name]
-- **Validation Criteria**:
-    - [ ] [Specific check that must pass]
-    - [ ] [Another validation requirement]
-    - [ ] [Quality metric that must be met]
-- **Pass Actions**: [What happens on success]
-- **Fail Actions**: [Recovery or rollback procedures]
+### Acceptance Criteria
+[How to verify this phase is complete and successful]
 
-### Phase 2: [Construction Phase Name]
-> *[Phase purpose and its relationship to previous phase]*
+```
+<example>
+- [ ] [Specific condition that must be met]
+- [ ] [Quality check that must pass]
+- [ ] [Stakeholder approval obtained]
+</example>
+```
 
-#### Parallel Execution Block
-> *[Why these steps can and should run in parallel]*
+### Steps
 
-##### Branch A: [Parallel Path Name]
-###### Step 2.1a: [Parallel Step Name]
-[Full step details as above]
+#### Step 1.1: [Step Name]
+**Purpose**: [Why this step is necessary]
 
-##### Branch B: [Parallel Path Name]
-###### Step 2.1b: [Parallel Step Name]
-[Full step details as above]
+**Deliverables**:
+- [What this step produces]
 
-#### Synchronization Point: [Merge Name]
-- **Merge Conditions**: [When parallel paths can rejoin]
-- **Conflict Resolution**: [How to handle conflicting outputs]
-- **Combined Output**: [What the merged result looks like]
+**Acceptance Criteria**:
+- [ ] [How to verify step completion]
 
-### Phase 3: [Decision Phase Name]
-> *[Phase purpose and critical decisions made here]*
+**Instructions**:
+1. [Specific action to take]
+2. [Next action]
+3. [Continue as needed]
 
-#### Decision Point: [Decision Name]
-- **Decision Criteria Matrix**:
-  ```
-  <example>
-  | Condition A | Condition B | Condition C | Route To    |
-  |:----------- |:----------- |:----------- |:----------- |
-  | True        | True        | Any         | Branch Alpha |
-  | True        | False       | True        | Branch Beta  |
-  | False       | Any         | False       | Branch Gamma |
-  | Any         | Any         | Any         | Fallback     |
-  </example>
-  ```
-- **Evaluation Logic**: [How conditions are assessed]
-- **Default Path**: [What happens if no conditions match]
+#### Step 1.2: [Step Name]
+[Repeat structure for each step]
 
-#### Branch Routes
-[Define each possible branch with full step details]
+## 🔄 Phase 2: [Phase Name]
+> 💡 *[Brief description of this phase's purpose and role in achieving the main goal]*
 
-## 🛡️ Error Handling & Recovery
-> 💡 *Comprehensive strategies for handling failures and maintaining workflow integrity.*
+### Deliverables
+[What this phase must produce]
 
-### Error Classification
+### Acceptance Criteria
+[How to verify this phase is complete and successful]
 
-| Error Type | Severity | Detection Method | Recovery Strategy |
-|:---------- |:-------- |:---------------- |:----------------- |
-| [Error Category] | [Critical/High/Medium/Low] | [How to detect] | [How to recover] |
-| [Error Category] | [Severity Level] | [Detection approach] | [Recovery method] |
+### Steps
+[Continue with step structure]
 
+## 🔄 Phase 3: [Phase Name]
+> 💡 *[Brief description of this phase's purpose and role in achieving the main goal]*
 
-### Circuit Breaker Patterns
-- **[Pattern Name]**: [When to halt execution to prevent cascade]
-- **[Pattern Name]**: [Conditions for automatic recovery]
+### Deliverables
+[What this phase must produce]
 
-### Rollback Procedures
-1. **Phase-Level Rollback**: [How to undo completed phases]
-2. **Step-Level Rollback**: [How to reverse individual steps]
-3. **Data Rollback**: [How to restore data consistency]
+### Acceptance Criteria
+[How to verify this phase is complete and successful]
 
-## 📈 Monitoring & Optimization
-> 💡 *How to observe, measure, and improve workflow performance.*
+### Steps
+[Continue with step structure]
 
-### Key Metrics
-- **[Metric Name]**: [What it measures and target values]
-- **[Metric Name]**: [How to calculate and interpret]
-- **[Metric Name]**: [Threshold values and alerts]
+## 🚦 Decision Points
+> 💡 *Critical decisions that affect workflow path*
 
-### Optimization Opportunities
-- **[Optimization Area]**: [How to improve performance]
-- **[Optimization Area]**: [Potential efficiency gains]
+### Decision: [Decision Name]
+**When**: [When this decision occurs]
+**Criteria**: [What determines the decision]
 
-### Learning Loops
-- **[Feedback Type]**: [How to incorporate learnings]
-- **[Improvement Process]**: [How to evolve the workflow]
+| Condition | Action |
+|:----------|:-------|
+| [If this is true] | [Do this] |
+| [If that is true] | [Do that] |
+| [Default] | [Fallback action] |
 
-## 🚀 Implementation Guide
-> 💡 *Practical guidance for executing this workflow in production.*
+## ⚠️ Error Handling
+> 💡 *How to handle common problems*
 
-### Entry Requirements
-- [ ] [Specific precondition that must be met]
-- [ ] [Resource that must be available]
-- [ ] [Permission or approval needed]
+| Error | Recovery Action |
+|:------|:---------------|
+| [Common error type] | [How to recover] |
+| [Another error type] | [Recovery steps] |
 
-### Resource Requirements
-- **Agents**: [List of required agents and their roles]
-- **Tools**: [Technical tools or services needed]
-- **Time**: [Expected duration for full execution]
-- **Skills**: [Human expertise required for oversight]
+## 📊 Quality Gates
+> 💡 *Checkpoints that ensure quality before proceeding*
 
-### Execution Checklist
-1. [ ] [First preparation step]
-2. [ ] [Second preparation step]
-3. [ ] [Begin Phase 1]
-   [Continue with execution steps]
+### Gate: [Gate Name]
+**After**: [Which phase/step]
+**Checks**:
+- [ ] [Quality check]
+- [ ] [Validation requirement]
+- [ ] [Approval needed]
 
-### Troubleshooting Guide
+**If Failed**: [What to do if gate fails]
 
-| Symptom | Likely Cause | Resolution |
-|:------- |:------------ |:---------- |
-| [Problem description] | [Root cause] | [Fix steps] |
-| [Problem description] | [Root cause] | [Fix steps] |
+## 🎬 Final Validation
+> 💡 *Confirm the main goal has been achieved*
 
+### Final Deliverables
+[Complete list of what the workflow produces]
 
-## 🔮 Evolution & Versioning
-> 💡 *How this workflow adapts and improves over time.*
+```
+<example>
+- [Major deliverable with location/format]
+- [Supporting artifact with details]
+- [Documentation or reports]
+</example>
+```
 
-### Version History
-- **v1.0**: [Initial version scope and limitations]
-- **vNext**: [Planned improvements and extensions]
+### Final Acceptance Criteria
+[Comprehensive checklist confirming success]
 
-### Modification Triggers
-- [Condition that requires workflow update]
-- [Metric threshold that triggers optimization]
-- [External change that necessitates revision]
-
-### Deprecation Strategy
-- [How to phase out obsolete paths]
-- [Migration plan for active executions]
-- [Backward compatibility considerations]
+```
+<example>
+- [ ] Main goal achieved as defined
+- [ ] All phase deliverables complete
+- [ ] Quality standards met
+- [ ] Stakeholder approval obtained
+- [ ] Documentation complete
+</example>
+```
 ````````````

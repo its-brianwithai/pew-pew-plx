@@ -1,6 +1,6 @@
 ---
-name: end-goal-block
-description: "Use this block to define the end goal (for prompts) with deliverables and acceptance criteria that determines whether any following section provides value."
+name: main-goal-block
+description: "Use this block to define the main measurable goal with deliverables and acceptance criteria that determines whether any following section provides value."
 ---
 # Block Command
 
@@ -9,7 +9,7 @@ When this command is used, use the following block. Acknowledge your understandi
 ---
 
 ````````````
-## 🎯 End Goal
+## 🎯 Main Goal
 > 💡 *The measurable objective that determines whether any following section provides value. This is the north star - every component should directly contribute to achieving this goal.*
 
 [Clear, measurable objective that defines success. Should be specific enough to validate achievement and guide all decisions about what to include or exclude]
