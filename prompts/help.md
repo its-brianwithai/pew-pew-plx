@@ -22,7 +22,7 @@ Organize your response with:
 </output_format>
 
 <constraints>
-- Reference specific agents, prompts, and workflows with [[wikilinks]]
+- Reference specific agents, prompts, and workflows with [[wikilinks-wikilink-example]]
 - Mention both standard and clean sync options
 - Guide users toward appropriate tools for their needs
 - Be helpful and encouraging

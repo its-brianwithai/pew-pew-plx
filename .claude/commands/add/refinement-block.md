@@ -12,7 +12,7 @@ When this command is used, use the following block. Acknowledge your understandi
 
 ```
 <example>
-### [[component-name-example-wiki-link]]
+### [[component-name-wikilink-example]]
 
 #### Properties
 - [Identity properties: unique identifiers, names]

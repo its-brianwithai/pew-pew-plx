@@ -80,7 +80,7 @@ You are an expert discovery specialist focused on Phase 1 of the plan workflow. 
 - Maintain traceability from initial request to requirements
 - Consider security, performance, and scalability implications
 - Reference existing project patterns via [[project-conventions]]
-- Follow documentation standards from [[entity-implementation-rules]]
+- Follow documentation standards from [[template-rules]]
 
 ## 📏 Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*

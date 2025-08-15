@@ -42,8 +42,8 @@ rm -rf /tmp/pew-pew && git clone --depth 1 https://github.com/its-brianwithai/pe
 ## High-Level Architecture
 
 ### Core Architecture: WikiLink System
-The project uses a WikiLink architecture where components reference each other using `[[component-name]]` syntax. During sync:
-- `[[wikilinks]]` → transformed to `@path/to/file.md` for dynamic loading
+The project uses a WikiLink architecture where components reference each other using `[[component-wikilink-example]]` syntax. During sync:
+- `[[wikilinks-wikilink-example]]` → transformed to `@path/to/file.md` for dynamic loading
 - `![[embedded-wikilinks]]` → replaced with actual file content inline
 
 ### Directory Structure
@@ -111,8 +111,8 @@ pew-pew-workspace/
 ## Key Development Patterns
 
 ### WikiLink Usage
-- **Reference**: `[[component-name]]` - Creates dynamic reference
-- **Embed**: `![[component-name]]` - Embeds content inline (must be on own line)
+- **Reference**: `[[component-wikilink-example]]` - Creates dynamic reference
+- **Embed**: `![[component-wikilink-example]]` - Embeds content inline (must be on own line)
 - **After sync**: References become `@path/to/file.md` for Claude to load
 
 ### Naming Conventions
@@ -128,7 +128,7 @@ pew-pew-workspace/
 ### Component Evolution Pattern
 1. **Inline**: Start with everything in one file
 2. **Extract**: Move reusable parts to separate files
-3. **Reference**: Use `[[wikilinks]]` to reference components
+3. **Reference**: Use `[[wikilinks-wikilink-example]]` to reference components
 4. **Compose**: Combine into agents for complex behaviors
 5. **Embed**: Use `![[embeds]]` for content inclusion
 
@@ -171,6 +171,6 @@ grep -r "@" .claude/commands/ | head -5
 - **DO NOT** commit `.pew/plx.local.yaml` - it's for personal overrides
 - **ALWAYS** run sync after modifying components to update Claude commands
 - **WikiLinks** must match exact filenames (without .md extension)
-- **Embedded WikiLinks** (`![[name]]`) must be on their own line
+- **Embedded WikiLinks** (`![[name-wikilink-example]]`) must be on their own line
 - The `.pew/` directory structure is for projects using Pew Pew as a dependency
 - Legacy team directories (`00-freelancers/` through `07-review-team/`) contain older 7-phase model components being extracted into the modular framework

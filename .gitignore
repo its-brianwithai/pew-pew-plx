@@ -48,6 +48,7 @@ yarn-error.log*
 
 # Temporary files
 **/*.swp
+**/tmp/
 **/*.swo
 **/*~
 

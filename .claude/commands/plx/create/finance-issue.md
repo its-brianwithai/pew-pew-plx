@@ -110,7 +110,7 @@ Save to: `issues/finance/[initiative-name]/finance-issue.md`
 Markdown following @templates/business/finance-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 

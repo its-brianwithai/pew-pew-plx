@@ -1,6 +1,6 @@
 ---
-name: template-implementation-rules
-description: "Use when creating workflow, agent, prompt and template implementations."
+name: template-rules
+description: "Rules for creating templates, placeholders, variables, and examples in documentation."
 ---
 ## 📏 Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
@@ -9,8 +9,6 @@ description: "Use when creating workflow, agent, prompt and template implementat
 
 - WHEN placing instruction placeholders ALWAYS use single square brackets for placeholder instructions.
   - Example: [Replace this with actual content]
-- WHEN referencing project documents ALWAYS use wikilinks WITHOUT backticks to reference other relevant project documents.
-  - Example: [[relevant-document]
 - WHEN creating template variables ALWAYS use double curly brackets WITH backticks to indicate template variables.
     - Example: `{{variable-name}}`
 - WHEN referencing parts of the document ALWAYS use template variables.
@@ -28,7 +26,6 @@ description: "Use when creating workflow, agent, prompt and template implementat
 
 ### 👎 Never
 
-- WHEN creating examples NEVER use backticks around wikilinks.
 - WHEN creating examples NEVER use actual content, only describe the types of examples.
 - WHEN creating examples NEVER use multiple lines for the example types.
 
@@ -74,3 +71,5 @@ Even if the actual content has bullets, sub-bullets, multiple levels, categories
 [...]
 </example>
 ```
+
+![[wikilink-rules]]

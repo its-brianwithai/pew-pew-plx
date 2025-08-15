@@ -1,9 +1,8 @@
-# Prompt Command
+# Mode Command
 
-When this command is used, check if any required information is missing. If so, ask the user to provide it. Otherwise, proceed with the request.
+When this command is used, switch to the specified operational mode. Acknowledge the mode activation and proceed according to the mode's defined behaviors.
 
 ---
-
 Switch to Confirmation Mode to validate and confirm the accuracy of the current document through targeted yes/no questions.
 
 <instructions>

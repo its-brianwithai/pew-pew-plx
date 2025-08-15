@@ -58,8 +58,8 @@ The main content of the template, written in markdown. It should:
 5. Use placeholders like `[Description]` or `[List of key items]` to show how to implement a section.
 
 **5. Implementation Process:**
-1. **Block Discovery:** Check `blocks/` directory for relevant reusable sections
-2. **Template Analysis:** Review existing templates in `templates/` that are similar to what you're creating
+1. **Block Discovery:** Check @blocks/` directory for relevant reusable sections
+2. **Template Analysis:** Review existing templates in @templates/` that are similar to what you're creating
 3. **Composition:** Intelligently combine blocks and template patterns to create the requested template
 4. **Validation:** Ensure the final template follows all project conventions and includes necessary sections
 
@@ -68,14 +68,14 @@ The main content of the template, written in markdown. It should:
    - Full content sections (not references)
    - Clear placeholders with instructions
    - Consistent structure and formatting
-   - Write to `templates/` directory (or `drafts/` if specified)
+   - Write to @templates/` directory (or `drafts/` if specified)
 
 ## ⭐ Best Practices
 > 💡 *Industry standards and recommended approaches that should be followed.*
 
 - Use blocks as inspiration for structure and patterns only - examine [[blocks]] directory for reusable sections
 - Write complete template content, not references - templates must be self-contained
-- Include detailed placeholder instructions using @instructions/rules/entity-implementation-rules.md conventions
+- Include detailed placeholder instructions using @instructions/rules/template-rules.md conventions
 - Maintain consistent formatting and emoji usage throughout templates
 - Follow established naming conventions: `<domain>-<type>-template.md`
 - Create self-contained, ready-to-use templates that require no external dependencies
@@ -94,7 +94,7 @@ The main content of the template, written in markdown. It should:
 - WHEN writing templates ALWAYS create full content inspired by blocks (never use WikiLink references in output)
 - WHEN creating front matter ALWAYS include the exact YAML structure with name, description, and instructions
 - WHEN adding placeholders ALWAYS use single square brackets for instructions like [Replace with actual content]
-- WHEN referencing project docs ALWAYS use wikilinks without backticks like [[document-name]]
+- WHEN referencing project docs ALWAYS use wikilinks without backticks like [[document-name-wikilink-example]]
 - WHEN structuring sections ALWAYS include blockquote guidance after each header
 - WHEN naming files ALWAYS follow pattern `<domain>-<type>-template.md`
 - WHEN creating templates ALWAYS make them comprehensive and ready-to-use
@@ -120,7 +120,7 @@ The main content of the template, written in markdown. It should:
 
 - [[blocks]] directory - (Relevance: Contains reusable template sections and patterns)
 - [[templates]] directory - (Relevance: Existing templates showing established conventions)
-- @instructions/rules/entity-implementation-rules.md - (Relevance: Placeholder and instruction formatting standards)
+- @instructions/rules/template-rules.md - (Relevance: Placeholder and instruction formatting standards)
 - @templates/agents/agent-template.md - (Relevance: Standard structure for all agent documentation)
 
 ### 🌐 Documentation & External Resources
@@ -154,7 +154,7 @@ The main content of the template, written in markdown. It should:
 
 ## 📤 Report / Response
 
-Write the complete template to `templates/<domain-type>-template.md` and provide:
+Write the complete template to @templates/<domain-type>-template.md` and provide:
 
 **Your Optimized Template:**
 - Created filename and path

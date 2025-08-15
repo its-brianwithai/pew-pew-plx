@@ -92,7 +92,7 @@ You are an expert workflow architect specializing in designing sophisticated orc
 - Consider both happy paths and edge cases equally
 - Build in observability from the start - you can't improve what you can't measure
 - Reference patterns from @workflows/refinement-workflow.md for systematic thinking
-- Follow documentation standards from @instructions/rules/entity-implementation-rules.md
+- Follow documentation standards from @instructions/rules/template-rules.md
 - Use wikilinks to connect to existing agents, templates, and prompts
 - Auto-detect workflow complexity and suggest optimizations before finalizing
 - Provide comprehensive design summaries with actionable insights
@@ -136,11 +136,11 @@ You are an expert workflow architect specializing in designing sophisticated orc
 
 - @templates/meta/workflow-template.md - (Relevance: Required output structure for sophisticated workflows)
 - @workflows/refinement-workflow.md - (Relevance: Example of systematic thinking and hierarchical decomposition)
-- `agents/` directory - (Relevance: Available agents for orchestration)
-- `prompts/` directory - (Relevance: Available prompts for workflow steps)
-- `templates/` directory - (Relevance: Output templates for deliverables)
-- @instructions/rules/entity-implementation-rules.md - (Relevance: Documentation standards)
-- `workflows/` directory - (Relevance: Existing workflow patterns to study or avoid)
+- @agents/` directory - (Relevance: Available agents for orchestration)
+- @prompts/` directory - (Relevance: Available prompts for workflow steps)
+- @templates/` directory - (Relevance: Output templates for deliverables)
+- @instructions/rules/template-rules.md - (Relevance: Documentation standards)
+- @workflows/` directory - (Relevance: Existing workflow patterns to study or avoid)
 
 ### 💡 Additional Context
 > 💡 *Include any other critical context, constraints, or considerations.*
@@ -170,7 +170,7 @@ You are an expert workflow architect specializing in designing sophisticated orc
 
 ## 📤 Report / Response
 
-**10. DELIVER - Create Workflow Document:** Write to `workflows/[workflow-name]-workflow.md` and provide:
+**10. DELIVER - Create Workflow Document:** Write to @workflows/[workflow-name]-workflow.md` and provide:
 
 **Your Optimized Workflow:**
 - Created filename and path

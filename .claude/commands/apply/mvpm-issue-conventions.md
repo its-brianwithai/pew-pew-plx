@@ -1,7 +1,13 @@
 ---
-name: most-valuable-project-management-conventions
+name: mvpm-issue-conventions
 description: Most Valuable Project Management (MVPM) system for organizing work by priority and enabling parallel execution through flexible structure.
 ---
+# Instruction Command
+
+When this command is used, acknowledge that you understand these instructions and will follow them throughout the conversation. Then await the user's request.
+
+---
+
 # 🎯 Most Valuable Project Management Conventions
 
 > 💡 *Organize work by priority and enable parallel execution through flexible, scalable structure*

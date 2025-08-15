@@ -69,7 +69,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 ## ⭐ Best Practices
 > 💡 *Industry standards and recommended approaches that should be followed.*
 
-- Study existing instructions like [[most-valuable-project-management-conventions]] and [[entity-implementation-rules]]
+- Study existing instructions like [[mvpm-issue-conventions]] and [[template-rules]]
 - Use clear, imperative language for actionable steps
 - Provide rationale for rules to encourage compliance
 - Include both positive examples (do this) and negative examples (don't do this)
@@ -93,7 +93,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 - WHEN referencing formats ALWAYS use code blocks for clarity
 - WHEN creating titles ALWAYS use descriptive names ending in "-instructions"
 - WHEN structuring content ALWAYS use consistent heading levels
-- WHEN providing examples ALWAYS follow [[entity-implementation-rules]]
+- WHEN providing examples ALWAYS follow [[template-rules]]
 
 ### 👎 Never
 
@@ -112,8 +112,8 @@ You are an expert Instructions Documentation Architect specializing in creating 
 ### 📚 Project Files & Code
 > 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
 
-- [[most-valuable-project-management-conventions]] - (Relevance: Example of process instructions with naming patterns)
-- [[entity-implementation-rules]] - (Relevance: Meta-instructions for creating examples)
+- [[mvpm-issue-conventions]] - (Relevance: Example of process instructions with naming patterns)
+- [[template-rules]] - (Relevance: Meta-instructions for creating examples)
 - [[make-file-best-practices]] - (Relevance: Technical guideline format)
 - `instructions/` directory - (Relevance: Existing instruction patterns)
 

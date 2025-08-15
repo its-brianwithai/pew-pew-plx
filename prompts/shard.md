@@ -34,8 +34,8 @@ Artifact decomposition and modular system design
 - Reusability assessment techniques
 - Dependency analysis and management
 - Wikilink mechanics and patterns:
-  - Standard `[[name-example-wiki-link]]` for references
-  - Embedded `![[name-example-wiki-link]]` for content inclusion
+  - Standard `[[name-wikilink-example]]` for references
+  - Embedded `![[name-wikilink-example]]` for content inclusion
 - Single responsibility principle
 - Component extraction patterns:
   - Personas → Reusable expertise
@@ -177,12 +177,12 @@ Replace extracted components:
 
 **For Reference (read the file):**
 ```markdown
-See [[component-name]] for details
+See [[component-wikilink-example]] for details
 ```
 
 **For Embedding (insert content):**
 ```markdown
-![[component-name]]
+![[component-wikilink-example]]
 ```
 
 Critical rules:
@@ -301,12 +301,12 @@ description: "[purpose]"
 ### WHEN implementing wikilinks
 **Reference Pattern** (for context):
 ```markdown
-For more details, see [[component-name]]
+For more details, see [[component-wikilink-example]]
 ```
 
 **Embed Pattern** (for inclusion):
 ```markdown
-![[component-name]]
+![[component-wikilink-example]]
 ```
 
 **Rules:**

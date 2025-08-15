@@ -9,10 +9,10 @@ YAML_PARSER="$SCRIPT_DIR/plx-yaml-parser.sh"
 # Use temp directory if available, otherwise use project directory
 if [ -n "$CLAUDE_SYNC_TEMP_DIR" ]; then
     CLAUDE_DIR="$CLAUDE_SYNC_TEMP_DIR/.claude"
-    echo "🔧 Fixing backticked paths in temp directory..."
+    echo "🔧 Fixing backticked paths to @ syntax..."
 else
     CLAUDE_DIR="$PROJECT_ROOT/.claude"
-    echo "🔧 Fixing backticked paths in .claude directory..."
+    echo "🔧 Fixing backticked paths to @ syntax..."
 fi
 
 # Check if Claude directory exists
@@ -70,17 +70,17 @@ for type in "${ARTIFACT_TYPES[@]}"; do
         fi
         
         # Build sed commands for different patterns
-        # Pattern 1: `type/` → `source_path/`
-        SED_COMMANDS="${SED_COMMANDS}s|\(\`\)${match_pattern}/|\1${source_path}/|g;"
+        # Pattern 1: `type/` → @source_path/
+        SED_COMMANDS="${SED_COMMANDS}s|\`${match_pattern}/|@${source_path}/|g;"
         
-        # Pattern 2: `type/<filename>` → `source_path/<filename>`
+        # Pattern 2: `type/<filename>` → @source_path/<filename>
         # This handles paths like `prompts/create.md`
-        SED_COMMANDS="${SED_COMMANDS}s|\(\`\)${match_pattern}/\([^/\`]*\)|\1${source_path}/\2|g;"
+        SED_COMMANDS="${SED_COMMANDS}s|\`${match_pattern}/\([^/\`]*\)\`|@${source_path}/\1|g;"
         
         # Pattern 3: Handle subdirectories like `templates/blocks/`
-        SED_COMMANDS="${SED_COMMANDS}s|\(\`\)${match_pattern}/\([^/]*/\)|\1${source_path}/\2|g;"
+        SED_COMMANDS="${SED_COMMANDS}s|\`${match_pattern}/\([^/]*/\)|@${source_path}/\1|g;"
         
-        echo "  📁 Mapping: \`${match_pattern}/\` → \`${source_path}/\`"
+        echo "  📁 Mapping: \`${match_pattern}/\` → @${source_path}/"
     fi
 done
 
@@ -117,10 +117,10 @@ find "$CLAUDE_DIR" -name "*.md" -type f | while read -r file; do
     fi
 done
 
-echo -e "\n✅ Fixed backticked paths in $total_files files"
+echo -e "\n✅ Fixed backticked paths to @ syntax in $total_files files"
 
 # Debug: Show a sample of the changes
 if [ -f "$CLAUDE_DIR/agents/meta-prompt-engineer.md" ]; then
     echo "🔍 Sample result from meta-prompt-engineer.md:"
-    grep -m 3 '`[^`]*prompts/[^`]*`' "$CLAUDE_DIR/agents/meta-prompt-engineer.md" 2>/dev/null || echo "  (no backticked prompts paths found)"
+    grep -m 3 '@[^@]*prompts/[^@]*' "$CLAUDE_DIR/agents/meta-prompt-engineer.md" 2>/dev/null || echo "  (no @ prompts paths found)"
 fi

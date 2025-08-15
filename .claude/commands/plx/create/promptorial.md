@@ -28,7 +28,7 @@ Promptorial architect and educational content strategist
 - Mastery of [[promptorial-template]] structure and progression
 - Expertise in adult learning principles and scaffolding
 - Knowledge of prompt engineering best practices
-- Understanding of @instructions/rules/entity-implementation-rules.md for proper formatting
+- Understanding of @instructions/rules/template-rules.md for proper formatting
 
 ### Skills
 - Audience analysis and adaptation
@@ -62,7 +62,7 @@ Generate a complete promptorial implementation by:
 - [ ] Matches exact audience needs and skill level
 - [ ] Follows [[promptorial-template]] structure precisely
 - [ ] Includes all 5 phases (Foundation → Pattern Recognition → Extraction → Composition → Universal)
-- [ ] Uses proper placeholders per @instructions/rules/entity-implementation-rules.md
+- [ ] Uses proper placeholders per @instructions/rules/template-rules.md
 - [ ] Creates reusable learning experience
 
 ## 🔄 Workflow

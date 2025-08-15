@@ -123,8 +123,8 @@ You are an expert workflow orchestrator specializing in the systematic transform
 - @agents/plan/story-agent.md - (Relevance: Phase 4 specialist for user story creation)
 - @agents/plan/roadmap-agent.md - (Relevance: Phase 5 specialist for milestone planning)
 - @agents/plan/implementation-agent.md - (Relevance: Phase 6 specialist for technical planning)
-- `templates/workflows/` directory - (Relevance: Output templates for each phase)
-- `prompts/create-*.md` and `prompts/update-*.md` - (Relevance: Phase-specific prompts)
+- @templates/workflows/` directory - (Relevance: Output templates for each phase)
+- @prompts/create-*.md` and @prompts/update-*.md` - (Relevance: Phase-specific prompts)
 
 ### 💡 Additional Context
 > 💡 *Include any other critical context, constraints, or considerations.*

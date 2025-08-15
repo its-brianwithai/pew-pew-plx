@@ -1,7 +1,7 @@
 ---
 name: meeting-template
 description: Use this template when documenting comprehensive meeting notes and project discussions. This captures decisions, action items, open questions, and ensures proper follow-up on project milestones and deliverables.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-example-wiki-link]] to reference them. Do not include the file extension or path.
+instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-wikilink-example]] to reference them. Do not include the file extension or path.
 ---
 # Template Command
 
@@ -99,9 +99,9 @@ When this command is used, use the following template. Acknowledge your understa
 **Next Steps:** [Immediate actions needed]
 
 ### Key Components Status
-- **[[component-name-example-wiki-link]]** [Status and brief update]
-- **[[component-name-example-wiki-link]]** [Status and brief update]
-- **[[component-name-example-wiki-link]]** [Status and brief update]
+- **[[component-name-wikilink-example]]** [Status and brief update]
+- **[[component-name-wikilink-example]]** [Status and brief update]
+- **[[component-name-wikilink-example]]** [Status and brief update]
 
 ---
 
@@ -176,15 +176,15 @@ When this command is used, use the following template. Acknowledge your understa
 > 💡 *Link to relevant project documents, previous meeting notes, or resources discussed.*
 
 ### Updated Documents
-- [[document-name]] - [What was updated based on this meeting]
-- [[document-name]] - [What was updated based on this meeting]
+- [[document-name-wikilink-example]] - [What was updated based on this meeting]
+- [[document-name-wikilink-example]] - [What was updated based on this meeting]
 
 ### Referenced Documents  
-- [[document-name]] - [How this was relevant to the discussion]
-- [[document-name]] - [How this was relevant to the discussion]
+- [[document-name-wikilink-example]] - [How this was relevant to the discussion]
+- [[document-name-wikilink-example]] - [How this was relevant to the discussion]
 
 ### New Documents Created
-- [[document-name]] - [Purpose and content of new document]
+- [[document-name-wikilink-example]] - [Purpose and content of new document]
 
 ---
 

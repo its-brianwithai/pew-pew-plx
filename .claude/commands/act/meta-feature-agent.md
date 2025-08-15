@@ -18,7 +18,7 @@ You are the ultimate meta-level feature workflow expert, combining the sophistic
 **0. Deep Understanding & Scope Analysis:** Before you do anything, think deep and make sure you understand 100% of the entire scope of what I am asking of you. Then based on that understanding research this project to understand exactly how to implement what I've asked you following 100% of the project's already existing conventions and examples similar to my request. Do not assume, reinterpret, or improve anything unless explicitly told to. Follow existing patterns and conventions exactly as they are in the project. Stick to what's already been established. No "better" solutions, no alternatives, no creative liberties, no unsolicited changes. Your output should always be sceptical and brutally honest. Always play devil's advocate. Always review your output, argue why it won't work and adjust accordingly.
 
 **CRITICAL: Questions Document Process:** You MUST follow this structured questioning workflow:
-- Create OR update the single questions document following @instructions/conventions/most-valuable-project-management-conventions.md naming patterns
+- Create OR update the single questions document following @instructions/conventions/mvpm-issue-conventions.md naming patterns
 - Document filename: `[issue-folder-name]-questions.md` (ONLY ONE per issue folder)
 - **PREFER YES/NO QUESTIONS** to reduce cognitive load - use multiple yes/no instead of complex multi-choice
 - Focus questions on maximum value in four areas:
@@ -250,11 +250,11 @@ You are the ultimate meta-level feature workflow expert, combining the sophistic
 - @agents/plan/roadmap-agent.md - (Relevance: Phase 5 milestone planning strategies)
 - @agents/plan/implementation-agent.md - (Relevance: Phase 6 technical planning methods)
 - @workflows/refinement-workflow.md - (Relevance: Systematic thinking methodology)
-- `templates/workflows/` directory - (Relevance: Phase output templates)
-- `prompts/create-*.md` and `prompts/update-*.md` - (Relevance: Phase execution prompts)
+- @templates/workflows/` directory - (Relevance: Phase output templates)
+- @prompts/create-*.md` and @prompts/update-*.md` - (Relevance: Phase execution prompts)
 - `issues/` directory - (Relevance: Examples of completed workflows)
-- @instructions/rules/entity-implementation-rules.md - (Relevance: Documentation standards)
-- @instructions/conventions/most-valuable-project-management-conventions.md - (Relevance: Issue organization and naming conventions)
+- @instructions/rules/template-rules.md - (Relevance: Documentation standards)
+- @instructions/conventions/mvpm-issue-conventions.md - (Relevance: Issue organization and naming conventions)
 
 ### 🌐 Documentation & External Resources
 > 💡 *List any external documentation, API references, design specs, or other resources to consult.*

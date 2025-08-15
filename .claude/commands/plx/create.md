@@ -19,7 +19,7 @@ Successfully create a production-ready artifact that:
 - Achieves the user's stated desire through systematic decomposition
 - Maximizes reusability through component sharding
 - Integrates seamlessly with existing project artifacts
-- Follows all project conventions and patterns from @instructions/rules/entity-implementation-rules.md
+- Follows all project conventions and patterns from @instructions/rules/template-rules.md
 - Can be refined through question-mode at each step
 - Leverages wikilinks for modular assembly
 
@@ -35,27 +35,27 @@ Deep understanding of all project artifact types (prompts, agents, templates, wo
 Claude Code framework architecture and systematic artifact creation
 
 ### Knowledge
-- Complete understanding of wikilink mechanics (standard → @links, embedded → content insertion) as seen in @instructions/rules/entity-implementation-rules.md
+- Complete understanding of wikilink mechanics (standard → @links, embedded → content insertion) as seen in @instructions/rules/template-rules.md
 - Mastery of the prompt-template structure and modularity principle
 - Expertise in all artifact types and their conventions:
-  - **Prompts** (`prompts/`): Verb-subject naming, XML structuring, chain-of-thought
-  - **Agents** (`agents/`): Focused expertise, tool restrictions, YAML frontmatter
-  - **Templates** (`templates/`): YAML frontmatter, structured markdown, blocks
-  - **Workflows** (`workflows/`): Multi-phase orchestration, decision logic, quality gates
+  - **Prompts** (@prompts/`): Verb-subject naming, XML structuring, chain-of-thought
+  - **Agents** (@agents/`): Focused expertise, tool restrictions, YAML frontmatter
+  - **Templates** (@templates/`): YAML frontmatter, structured markdown, blocks
+  - **Workflows** (@workflows/`): Multi-phase orchestration, decision logic, quality gates
   - **Context** (`meta/`): Documentation for actors, components, platforms, roles, teams
-  - **Instructions** (`instructions/`): Event-driven conventions, guidelines, best practices
-  - **Modes** (`modes/`): Operational behaviors that change interaction patterns
-  - **Personas** (`personas/`): Character definitions with expertise attributes
-  - **Blocks** (`templates/blocks/`): Reusable content sections
-- Deep understanding of @instructions/rules/entity-implementation-rules.md for proper placeholder and example formatting
+  - **Instructions** (@instructions/`): Event-driven conventions, guidelines, best practices
+  - **Modes** (@modes/`): Operational behaviors that change interaction patterns
+  - **Personas** (@personas/`): Character definitions with expertise attributes
+  - **Blocks** (@templates/blocks/`): Reusable content sections
+- Deep understanding of @instructions/rules/template-rules.md for proper placeholder and example formatting
 - Deep understanding of @modes/question-mode.md for systematic refinement
-- Deep understanding of @instructions/conventions/most-valuable-project-management-conventions.md for issue creation and management
+- Deep understanding of @instructions/conventions/mvpm-issue-conventions.md for issue creation and management
 
 ### Skills
 - Desire analysis and decomposition
 - Component identification and extraction
 - Sharding strategy development
-- Wikilink architecture design
+- Wikilink architecture design per @instructions/rules/wikilink-rules.md
 - Question-mode facilitation using the 5 question types (Simplify, Clarify, Improve, Expand, Reduce)
 - Agent composition from prompt components
 
@@ -89,7 +89,7 @@ Guide the user through systematic artifact creation by:
 - [ ] Question-mode refinement is applied at each step
 - [ ] Final artifact follows all project conventions
 - [ ] Wikilinks are properly structured for sync
-- [ ] All examples follow @instructions/rules/entity-implementation-rules.md
+- [ ] All examples follow @instructions/rules/template-rules.md
 
 ## 🔄 Workflow
 > 💡 *Atomic steps that systematically achieve the end goal.*
@@ -121,14 +121,14 @@ Guide the user through systematic artifact creation by:
 **Deliverable:** List of reusable existing components
 **Acceptance Criteria:** All relevant artifacts identified and evaluated
 - Search patterns by artifact type:
-  - `agents/**/*[topic]*.md` for existing expertise
-  - `workflows/*[process]*.md` for established processes
-  - `prompts/*[verb]*.md` for similar actions
-  - `templates/**/*[type]*.md` for output formats
-  - `instructions/*[convention]*.md` for rules
-  - `modes/*[behavior]*.md` for interaction patterns
-  - `personas/*[role]*.md` for character definitions
-  - `templates/blocks/*[section]*.md` for content sections
+  - @agents/**/*[topic]*.md` for existing expertise
+  - @workflows/*[process]*.md` for established processes
+  - @prompts/*[verb]*.md` for similar actions
+  - @templates/**/*[type]*.md` for output formats
+  - @instructions/*[convention]*.md` for rules
+  - @modes/*[behavior]*.md` for interaction patterns
+  - @personas/*[role]*.md` for character definitions
+  - @templates/blocks/*[section]*.md` for content sections
 - Document which existing artifacts can be reused via wikilinks
 
 ### Step 4: Sharding Strategy Development
@@ -137,13 +137,13 @@ Guide the user through systematic artifact creation by:
 - Identify shareable components:
   - End goals → `goals/[goal-name].md` (if broadly applicable)
   - Personas → Consider agent creation opportunity
-  - Workflows → `workflows/[workflow-name]-workflow.md`
-  - Instructions → `instructions/[topic]-instructions.md`
-  - Output formats → `templates/[format]-template.md`
+  - Workflows → @workflows/[workflow-name]-workflow.md`
+  - Instructions → @instructions/[topic]-instructions.md`
+  - Output formats → @templates/[format]-template.md`
 - Determine agent extraction opportunity:
   - If Persona + Workflow + Instructions align → create agent
-  - Agent becomes: `agents/[agent-name].md`
-  - Then embed in prompt: `![[agent-name-example-wiki-link]]`
+  - Agent becomes: @agents/[agent-name].md`
+  - Then embed in prompt: `![[agent-name-wikilink-example]]`
 
 ### Step 5: Question-Mode Refinement
 **Deliverable:** Refined understanding through systematic questioning
@@ -169,8 +169,8 @@ Guide the user through systematic artifact creation by:
   - Templates → Include YAML frontmatter + markdown body
   - Instructions → Include name, description, actionable content
 - Implement wikilink architecture:
-  - Standard `[[name-example-wiki-link]]` for references (→ @path after sync)
-  - Embedded `![[name-example-wiki-link]]` for content (line replaced during sync)
+  - Standard `[[name-wikilink-example]]` for references (→ @path after sync)
+  - Embedded `![[name-wikilink-example]]` for content (line replaced during sync)
   - CRITICAL: Embedded wikilinks MUST be on their own line
 - Write to appropriate directory with correct naming convention
 - DO NOT add "Reference" sections unless the artifact actually uses/embeds that template
@@ -223,8 +223,8 @@ Guide the user through systematic artifact creation by:
 
 ### WHEN implementing wikilinks
 **Requirements:**
-- Standard wikilinks `[[name-example-wiki-link]]` transform to @path references
-- Embedded wikilinks `![[name-example-wiki-link]]` replace entire line with content
+- Standard wikilinks `[[name-wikilink-example]]` transform to @path references
+- Embedded wikilinks `![[name-wikilink-example]]` replace entire line with content
 - Wikilinks enable modular, reusable architecture
 
 **Constraints:**
@@ -237,7 +237,7 @@ Guide the user through systematic artifact creation by:
 - NEVER use backticks around wikilinks
 - MUST use embedded wikilinks for content inclusion
 
-### WHEN following entity-implementation-rules
+### WHEN following template-rules
 **Requirements:**
 - Use single square brackets for placeholder instructions: [Replace this with actual content]
 - Use double curly brackets WITH backticks for template variables: `{{variable-name}}`
@@ -250,7 +250,7 @@ Guide the user through systematic artifact creation by:
 - Never recreate structure in examples - only list content types
 
 **Rules:**
-- ALWAYS follow @instructions/rules/entity-implementation-rules.md for all placeholders
+- ALWAYS follow @instructions/rules/template-rules.md for all placeholders
 - ALWAYS describe example types on single lines
 - NEVER show actual structure in examples
 
@@ -691,7 +691,7 @@ description: "[purpose]"
 ## 📏 Instructions (if needed)
 ## 📊 Output Format (if needed)
 ---
-role: [[agent-name-example-wiki-link]] (if applicable)
+role: [[agent-name-wikilink-example]] (if applicable)
 
 # For Agents (follow agent-template.md):
 ---
@@ -728,7 +728,7 @@ color: [color]
 - Use correct naming conventions for each type
 - Ensure wikilinks resolve to actual files
 - Verify artifact achieves stated end goal
-- Apply @instructions/rules/entity-implementation-rules.md to all examples
+- Apply @instructions/rules/template-rules.md to all examples
 
 ---
 
@@ -755,15 +755,15 @@ Every creation follows the pattern:
 5. Refinement → Apply question-mode throughout
 
 ## WikiLink Architecture
-- Standard `[[name-example-wiki-link]]` → Becomes @path reference after sync
-- Embedded `![[name-example-wiki-link]]` → Content inserted during sync
+- Standard `[[name-wikilink-example]]` → Becomes @path reference after sync
+- Embedded `![[name-wikilink-example]]` → Content inserted during sync
 - Enables maximum reusability and modularity
 
 ## Agent Extraction Pattern
 When Persona + Workflow + Instructions align:
 1. Create agent with combined components
-2. Save as `agents/[name].md`
-3. Embed in prompts via `![[agent-name-example-wiki-link]]`
+2. Save as @agents/[name].md`
+3. Embed in prompts via `![[agent-name-wikilink-example]]`
 4. Agent becomes reusable across artifacts
 
 ## Question-Mode Integration
@@ -774,7 +774,7 @@ The prompt embeds the full question-mode for systematic refinement:
 - Goal-driven questioning approach
 
 ## Entity Implementation Rules
-All examples and placeholders follow @instructions/rules/entity-implementation-rules.md
+All examples and placeholders follow @instructions/rules/template-rules.md
 - Single square brackets for instructions: [Do this]
 - Double curly with backticks for variables: `{{var}}`
 - Examples describe types, not actual content
@@ -793,4 +793,4 @@ This prompt intentionally does NOT reference an agent at the bottom. Following t
 1. Start with components defined in the prompt (current state)
 2. Extract shareable components as they prove useful
 3. Create an agent only when components naturally align and need reuse
-4. Then future prompts can reference that agent via `![[agent-name-example-wiki-link]]`
+4. Then future prompts can reference that agent via `![[agent-name-wikilink-example]]`

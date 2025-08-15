@@ -287,7 +287,7 @@ What specific default email is currently being used incorrectly?
 Markdown following @templates/plan/tech-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 
@@ -449,7 +449,7 @@ Save to: `issues/operations/[process-name]-improvement/operations-issue.md`
 Markdown following @templates/business/operations-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 
@@ -604,7 +604,7 @@ Save to: `issues/marketing/[campaign-name]/marketing-issue.md`
 Markdown following @templates/business/marketing-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 
@@ -760,7 +760,7 @@ Save to: `issues/sales/[initiative-name]/sales-issue.md`
 Markdown following @templates/business/sales-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 
@@ -916,7 +916,7 @@ Save to: `issues/finance/[initiative-name]/finance-issue.md`
 Markdown following @templates/business/finance-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 
@@ -1072,7 +1072,7 @@ Save to: `issues/people/[initiative-name]/people-issue.md`
 Markdown following @templates/business/people-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 

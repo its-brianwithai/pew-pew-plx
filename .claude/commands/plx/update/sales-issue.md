@@ -124,7 +124,7 @@ Save to: `issues/sales/[initiative-name]/sales-issue.md`
 Markdown following @templates/business/sales-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 

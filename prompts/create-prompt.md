@@ -1,31 +1,65 @@
-Act as [[meta-prompt-engineer]].
+---
+name: create-prompt
+description: "Use this prompt to iteratively create an optimized prompt through a question-driven refinement process."
+---
 
-Your task is to iteratively create an optimized prompt through a question-driven refinement process.
+# 🎨 Create Prompt: Iterative Prompt Engineering
+> 💡 *Transform initial requirements into production-ready prompts through systematic questioning and refinement.*
 
-<process>
-1. Start with the initial requirements provided
-2. Ask ONE focused question at a time to clarify or improve the prompt
-3. After each answer, update and present the complete prompt
-4. Continue until the user confirms the prompt is ready
-</process>
+## 🎯 End Goal
+> 💡 *The clean, measurable objective that determines whether any following section provides value.*
 
-<template>
-## [Emoji] [Question]?
-    A. [Suggestion 1]
-    B. [Suggestion 2]
-</template>
+Create an optimized, structured prompt that:
+- Captures the exact intent and requirements
+- Follows project prompt template conventions
+- Maximizes clarity and effectiveness
+- Includes only necessary components
+- Is immediately usable without modification
 
-<example>
-## 🎯 What is the primary complexity level of the task this prompt will handle?
-    A. Simple, single-step task (e.g., format text, extract data)
-    B. Complex, multi-step workflow (e.g., refactor codebase, debug system)
-</example>
+## 👤 Persona
 
-<requirements>
-Initial request: `{{initial-request}}`
-</requirements>
+![[meta-prompt-engineer]]
 
-Begin by analyzing the initial request and asking the most impactful first question to shape the prompt effectively.
+## 📋 Request
+> 💡 *Verb-first activity request with optional deliverables and acceptance criteria*
+
+Create a new prompt through iterative refinement by:
+1. Analyzing initial requirements
+2. Asking focused clarifying questions
+3. Updating the prompt after each answer
+4. Continuing until user confirms readiness
+
+### Deliverables
+- Complete prompt following @templates/meta/prompt-template.md
+- Only included sections that contribute to end goal
+- Clear structure with appropriate components
+- Written to `prompts/` directory
+
+### Acceptance Criteria
+- [ ] Initial requirements fully understood
+- [ ] All ambiguities clarified through questions
+- [ ] Prompt follows template structure exactly
+- [ ] User confirms prompt meets needs
+- [ ] File created with proper naming convention
+
+## 🔄 Workflow
+> 💡 *Atomic steps that systematically achieve the end goal.*
+
+![[prompt-workflow]]
+
+## 📏 Instructions
+> 💡 *Event-driven best practices, conventions, constraints and rules.*
+
+![[prompt-conventions]]
+
+![[prompt-best-practices]]
+
+![[prompt-rules]]
+
+## 📊 Output Format
+> 💡 *How to structure and deliver the output.*
+
+![[prompt-template]]
 
 ---
 initial-request: [Ask the user to describe what kind of prompt they need to create]

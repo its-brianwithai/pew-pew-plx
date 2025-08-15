@@ -106,7 +106,7 @@ Before updating the PR, verify:
        - New architectural decisions
        - Updated test cases
        - Clear separation of original PR content vs updates
-     - When documenting file changes, use wikilinks: [[agent-name]] not `agents/agent-name.md`
+     - When documenting file changes, use wikilinks: [[agent-name]] not @agents/agent-name.md`
 
 6. **Update Pull Request**
    - Update the PR with the comprehensive updated report:
@@ -161,7 +161,7 @@ Before updating the PR, verify:
 <documentation_guidelines>
 - **CRITICAL**: Read and document EVERY single changed file - NO EXCEPTIONS
 - If there are too many files to handle directly, use sub-agents to analyze groups
-- When referencing project files in the PR report, use wikilinks: [[filename]] not paths
+- When referencing project files in the PR report, use wikilinks: [[filename-wikilink-example]] not paths
 - In the changes table, use actual file paths for clickable GitHub links
 - Clearly mark sections with "**[NEW]**" or "**[UPDATED]**" tags
 - For EVERY file in the PR, explain:

@@ -38,7 +38,7 @@ Enable [[actor]] to [[primary-action]] so they can [[desired-outcome]]
 - **GIVEN** [[actor]] is in [[initial-state]] 
 - **AND** [[precondition]] exists
 - **WHEN** [[actor]] performs [[action]]
-- **AND** [[actor]] interacts with [[component]]
+- **AND** [[actor]] interacts with [[component-wikilink-example]]
 - **THEN** [[expected-outcome]] occurs
 - **AND** [[system-actor]] responds with [[system-response]]
 

@@ -12,7 +12,7 @@ When this command is used, use the following block. Acknowledge your understandi
 
 ```
 <example>
-- [[actor-name]] or [[component-name-example-wiki-link]]
+- [[actor-name-wikilink-example]] or [[component-name-wikilink-example]]
     - Activity 1 for this Actor/Component
     - Activity 2 for this Actor/Component
 - [[another-actor-name]]

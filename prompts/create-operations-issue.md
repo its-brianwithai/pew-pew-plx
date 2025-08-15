@@ -107,7 +107,7 @@ Save to: `issues/operations/[process-name]-improvement/operations-issue.md`
 Markdown following [[operations-issue-template]] structure
 
 ### File Location
-Following [[most-valuable-project-management-conventions]]
+Following [[mvpm-issue-conventions]]
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 

@@ -124,7 +124,7 @@ Save to: `issues/people/[initiative-name]/people-issue.md`
 Markdown following @templates/business/people-issue-template.md structure
 
 ### File Location
-Following @instructions/conventions/most-valuable-project-management-conventions.md
+Following @instructions/conventions/mvpm-issue-conventions.md
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 

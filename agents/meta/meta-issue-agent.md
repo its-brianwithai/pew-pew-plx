@@ -120,7 +120,7 @@ You are an expert Issue Management Architect specializing in creating, transform
     - Sales → `issues/sales/[initiative-name]/sales-issue.md`
     - Finance → `issues/finance/[initiative-name]/finance-issue.md`
     - People → `issues/people/[initiative-name]/people-issue.md`
-    - Follow [[most-valuable-project-management-conventions]] for naming
+    - Follow [[mvpm-issue-conventions]] for naming
 
 ## ⭐ Best Practices
 > 💡 *Industry standards and recommended approaches that should be followed.*
@@ -182,8 +182,8 @@ You are an expert Issue Management Architect specializing in creating, transform
 - `prompts/create-*.md` files - (Relevance: Issue creation workflows)
 - `prompts/make-*.md` files - (Relevance: Content transformation workflows)
 - `prompts/update-*.md` files - (Relevance: Issue update workflows)
-- [[most-valuable-project-management-conventions]] - (Relevance: File naming and organization)
-- [[entity-implementation-rules]] - (Relevance: Documentation standards)
+- [[mvpm-issue-conventions]] - (Relevance: File naming and organization)
+- [[template-rules]] - (Relevance: Documentation standards)
 - `issues/` directory - (Relevance: Existing issue patterns and examples)
 
 ### 🌐 Documentation & External Resources

@@ -60,7 +60,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
    - Confirm instructions achieve their stated purpose
 
 7. **DELIVER - Write Instruction File:** Create the complete instruction document:
-   - Write to `instructions/<instruction-name>-instructions.md`
+   - Write to @instructions/<instruction-name>-instructions.md`
    - Include comprehensive YAML frontmatter
    - Structure content for easy scanning and reference
    - Provide clear examples and patterns
@@ -69,7 +69,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 ## ⭐ Best Practices
 > 💡 *Industry standards and recommended approaches that should be followed.*
 
-- Study existing instructions like @instructions/conventions/most-valuable-project-management-conventions.md and @instructions/rules/entity-implementation-rules.md
+- Study existing instructions like @instructions/conventions/mvpm-issue-conventions.md and @instructions/rules/template-rules.md
 - Use clear, imperative language for actionable steps
 - Provide rationale for rules to encourage compliance
 - Include both positive examples (do this) and negative examples (don't do this)
@@ -93,7 +93,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 - WHEN referencing formats ALWAYS use code blocks for clarity
 - WHEN creating titles ALWAYS use descriptive names ending in "-instructions"
 - WHEN structuring content ALWAYS use consistent heading levels
-- WHEN providing examples ALWAYS follow @instructions/rules/entity-implementation-rules.md
+- WHEN providing examples ALWAYS follow @instructions/rules/template-rules.md
 
 ### 👎 Never
 
@@ -112,10 +112,10 @@ You are an expert Instructions Documentation Architect specializing in creating 
 ### 📚 Project Files & Code
 > 💡 *List all project files, code snippets, or directories that must be read and understood. Include paths and relevance notes.*
 
-- @instructions/conventions/most-valuable-project-management-conventions.md - (Relevance: Example of process instructions with naming patterns)
-- @instructions/rules/entity-implementation-rules.md - (Relevance: Meta-instructions for creating examples)
-- [[make-best-practices]] - (Relevance: Technical guideline format)
-- `instructions/` directory - (Relevance: Existing instruction patterns)
+- @instructions/conventions/mvpm-issue-conventions.md - (Relevance: Example of process instructions with naming patterns)
+- @instructions/rules/template-rules.md - (Relevance: Meta-instructions for creating examples)
+- @instructions/best-practices/make-file-best-practices.md - (Relevance: Technical guideline format)
+- @instructions/` directory - (Relevance: Existing instruction patterns)
 
 ### 🌐 Documentation & External Resources
 > 💡 *List any external documentation, API references, design specs, or other resources to consult.*
@@ -148,7 +148,7 @@ You are an expert Instructions Documentation Architect specializing in creating 
 
 ## 📤 Report / Response
 
-Write the complete instruction document to `instructions/<name>-instructions.md` and provide:
+Write the complete instruction document to @instructions/<name>-instructions.md` and provide:
 
 **Your Instruction Document:**
 - Created filename and path

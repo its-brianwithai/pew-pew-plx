@@ -98,11 +98,11 @@ Before creating the PR, verify:
      - `git log {{target_branch}}..HEAD --format=fuller` for detailed commit info
    
    - **Create comprehensive PR report:**
-     - Follow @instructions/conventions/most-valuable-project-management-conventions.md to locate the correct issue folder
+     - Follow @instructions/conventions/mvpm-issue-conventions.md to locate the correct issue folder
      - Create PR report using @templates/review/pull-request-template.md 
      - Save in the SAME folder as the issue: `{SUBJECT-CODE}-{document-type}.md`
      - Example: For issue `ESS-001-set-up-template`, save as `ESS-001-pull-request.md` in the same folder
-     - When documenting file changes, use wikilinks for referencing: [[agent-name]] not `agents/agent-name.md`
+     - When documenting file changes, use wikilinks for referencing: [[agent-name]] not @agents/agent-name.md`
    
    - **MANDATORY content for the report:**
      - Complete table of ALL changed files with clickable links (no exceptions)
@@ -162,7 +162,7 @@ Before creating the PR, verify:
 <documentation_guidelines>
 - **CRITICAL**: Read and document EVERY single changed file - NO EXCEPTIONS
 - If there are too many files to handle directly, use sub-agents to analyze groups
-- When referencing project files in the PR report, use wikilinks: [[filename-example-wiki-link]] not paths
+- When referencing project files in the PR report, use wikilinks: [[filename-wikilink-example]] not paths
 - In the changes table, use actual file paths for clickable GitHub links
 - For EVERY file, explain:
   - What the file does

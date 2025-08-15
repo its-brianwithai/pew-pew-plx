@@ -40,8 +40,8 @@ Artifact decomposition and modular system design
 - Reusability assessment techniques
 - Dependency analysis and management
 - Wikilink mechanics and patterns:
-  - Standard `[[name-example-wiki-link]]` for references
-  - Embedded `![[name-example-wiki-link]]` for content inclusion
+  - Standard `[[name-wikilink-example]]` for references
+  - Embedded `![[name-wikilink-example]]` for content inclusion
 - Single responsibility principle
 - Component extraction patterns:
   - Personas → Reusable expertise
@@ -163,12 +163,12 @@ For each component to extract:
    ```
 
 2. **Choose Correct Directory**
-   - Personas → `personas/[name].md`
-   - Workflows → `workflows/[name]-workflow.md`
-   - Instructions → `instructions/[topic]-instructions.md`
-   - Templates → `templates/[type]-template.md`
-   - Blocks → `templates/blocks/[name]-block.md`
-   - Output formats → `templates/outputs/[format].md`
+   - Personas → @personas/[name].md`
+   - Workflows → @workflows/[name]-workflow.md`
+   - Instructions → @instructions/[topic]-instructions.md`
+   - Templates → @templates/[type]-template.md`
+   - Blocks → @templates/blocks/[name]-block.md`
+   - Output formats → @templates/outputs/[format].md`
 
 3. **Ensure Self-Containment**
    - Add necessary context
@@ -183,12 +183,12 @@ Replace extracted components:
 
 **For Reference (read the file):**
 ```markdown
-See [[component-name]] for details
+See [[component-wikilink-example]] for details
 ```
 
 **For Embedding (insert content):**
 ```markdown
-![[component-name]]
+![[component-wikilink-example]]
 ```
 
 Critical rules:
@@ -307,12 +307,12 @@ description: "[purpose]"
 ### WHEN implementing wikilinks
 **Reference Pattern** (for context):
 ```markdown
-For more details, see [[component-name]]
+For more details, see [[component-wikilink-example]]
 ```
 
 **Embed Pattern** (for inclusion):
 ```markdown
-![[component-name]]
+![[component-wikilink-example]]
 ```
 
 **Rules:**
@@ -722,13 +722,13 @@ Sharded artifact with extraction documentation
 ## 🧩 Extracted Components
 
 ### Personas
-- `personas/[name].md` - [Purpose] - Used in [X] places
+- @personas/[name].md` - [Purpose] - Used in [X] places
 
 ### Workflows  
-- `workflows/[name]-workflow.md` - [Purpose] - Reusable for [contexts]
+- @workflows/[name]-workflow.md` - [Purpose] - Reusable for [contexts]
 
 ### Instructions
-- `instructions/[topic]-instructions.md` - [Guidelines for X]
+- @instructions/[topic]-instructions.md` - [Guidelines for X]
 
 ### Other Components
 - `[type]/[name].md` - [Purpose]

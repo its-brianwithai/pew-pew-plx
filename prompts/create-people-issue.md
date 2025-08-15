@@ -104,7 +104,7 @@ Save to: `issues/people/[initiative-name]/people-issue.md`
 Markdown following [[people-issue-template]] structure
 
 ### File Location
-Following [[most-valuable-project-management-conventions]]
+Following [[mvpm-issue-conventions]]
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 

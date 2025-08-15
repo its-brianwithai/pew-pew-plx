@@ -120,7 +120,7 @@ find "$CLAUDE_DIR" -name "*.md" -type f | while read -r file; do
             base_filename="${filename%.md}"
             
             # Skip example WikiLinks
-            if [[ "$base_filename" == *"-example-wiki-link" ]]; then
+            if [[ "$base_filename" == *"-wikilink-example" ]]; then
                 continue
             fi
 

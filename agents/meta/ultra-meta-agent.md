@@ -36,11 +36,11 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
    - Potential type mismatches
 
 3. **DEVELOP - Research and Apply Expertise:** Based on artifact type, examine:
-   - For Everything: [[entity-implementation-rules]]
+   - For Everything: [[template-rules]]
    - For Prompts: existing `prompts/` patterns
    - For Agents: [[claude-code-sub-agent-docs]], [[agent-template]], existing `agents/`
    - For Templates: `blocks/` directory for patterns, [[agent-template]], existing `templates/`
-   - For Workflows: [[workflow-template]], [[refinement-workflow]], [[issue-workflow-example-wiki-link]] existing `workflows/`
+   - For Workflows: [[workflow-template]], [[refinement-workflow]], [[issue-workflow-wikilink-example]] existing `workflows/`
 
 4. **Apply Type-Specific Expertise:**
 
@@ -88,8 +88,8 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 
 5. **Cross-Artifact Considerations:**
    - Maintain consistency with project-wide conventions
-   - Use wikilinks [[document]] to connect related artifacts
-   - Follow [[entity-implementation-rules]] for all placeholders
+   - Use wikilinks [[document-wikilink-example]] to connect related artifacts
+   - Follow [[template-rules]] for all placeholders
    - Ensure compatibility with existing project components
    - Consider how artifacts might work together
 
@@ -130,12 +130,12 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - Provide comprehensive summaries with actionable insights and pro tips
 
 **Critical Wikilink Processing Knowledge:**
-- **Regular wikilinks** `[[filename-example-wiki-link]]` → Converted to `@full/path` references during sync
-- **Embedded wikilinks** `![[filename-example-wiki-link]]` → Entire line replaced with file content during sync
+- **Regular wikilinks** `[[filename-wikilink-example]]` → Converted to `@full/path` references during sync
+- **Embedded wikilinks** `![[filename-wikilink-example]]` → Entire line replaced with file content during sync
 - **IMPORTANT:** Embedded wikilinks MUST be on their own line - the entire line gets replaced
 - During `plx sync claude`:
-  - `sync-claude-code-wikilinks.sh` converts `[[name-example-wiki-link]]` to `@path` for file references
-  - `sync-claude-code-embedded-wikilinks.sh` replaces `![[name-example-wiki-link]]` lines with actual content
+  - `sync-claude-code-wikilinks.sh` converts `[[name-wikilink-example]]` to `@path` for file references
+  - `sync-claude-code-embedded-wikilinks.sh` replaces `![[name-wikilink-example]]` lines with actual content
 - Never use embedded wikilinks inline with other text - they won't process correctly
 
 ## 📏 Rules
@@ -146,7 +146,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - WHEN analyzing requests ALWAYS determine the optimal artifact type first
 - WHEN creating artifacts ALWAYS follow type-specific templates exactly
 - WHEN researching ALWAYS examine existing examples in the project
-- WHEN using placeholders ALWAYS follow [[entity-implementation-rules]]
+- WHEN using placeholders ALWAYS follow [[template-rules]]
 - WHEN referencing documents ALWAYS use wikilinks without backticks
 - WHEN naming files ALWAYS follow established patterns for each type
 - WHEN structuring content ALWAYS include all required sections
@@ -154,7 +154,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 - WHEN validating ALWAYS check against project conventions
 - WHEN documenting ALWAYS explain rationale and usage
 - WHEN analyzing requirements ALWAYS suggest improvements first before implementing
-- WHEN using embedded wikilinks ALWAYS place `![[filename-example-wiki-link]]` on its own line
+- WHEN using embedded wikilinks ALWAYS place `![[filename-wikilink-example]]` on its own line
 - WHEN creating templates/prompts ALWAYS remember embedded wikilinks replace the entire line
 
 ### 👎 Never
@@ -181,7 +181,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 
 - [[agent-template]] - (Relevance: Standard structure for agents and reference for templates)
 - [[workflow-template]] - (Relevance: Workflow structure and orchestration patterns)
-- [[entity-implementation-rules]] - (Relevance: Placeholder and instruction formatting)
+- [[template-rules]] - (Relevance: Placeholder and instruction formatting)
 - `blocks/` directory - (Relevance: Reusable patterns for templates)
 - `prompts/` directory - (Relevance: Existing prompt patterns and structures)
 - `agents/` directory - (Relevance: Current agent implementations)

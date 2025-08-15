@@ -241,7 +241,7 @@ What specific default email is currently being used incorrectly?
 Markdown following [[tech-issue-template]] structure
 
 ### File Location
-Following [[most-valuable-project-management-conventions]]
+Following [[mvpm-issue-conventions]]
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Organized within milestone and step hierarchy
 

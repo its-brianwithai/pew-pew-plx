@@ -92,7 +92,7 @@ Before creating the PR, verify:
      - `git log {{target_branch}}..HEAD --format=fuller` for detailed commit info
    
    - **Create comprehensive PR report:**
-     - Follow [[most-valuable-project-management-conventions]] to locate the correct issue folder
+     - Follow [[mvpm-issue-conventions]] to locate the correct issue folder
      - Create PR report using [[pull-request-template]] 
      - Save in the SAME folder as the issue: `{SUBJECT-CODE}-{document-type}.md`
      - Example: For issue `ESS-001-set-up-template`, save as `ESS-001-pull-request.md` in the same folder
@@ -156,7 +156,7 @@ Before creating the PR, verify:
 <documentation_guidelines>
 - **CRITICAL**: Read and document EVERY single changed file - NO EXCEPTIONS
 - If there are too many files to handle directly, use sub-agents to analyze groups
-- When referencing project files in the PR report, use wikilinks: [[filename-example-wiki-link]] not paths
+- When referencing project files in the PR report, use wikilinks: [[filename-wikilink-example]] not paths
 - In the changes table, use actual file paths for clickable GitHub links
 - For EVERY file, explain:
   - What the file does

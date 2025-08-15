@@ -127,7 +127,7 @@ Instruction categories and naming rules:
 4) Place in the correct folder under `instructions/`
 
 **Claude Command:** `/apply:<instruction-name>` - Apply these instructions
-**In Files:** `[[instruction-name]]` to reference, `![[instruction-name]]` to embed content
+**In Files:** `[[instruction-name-wikilink-example]]` to reference, `![[instruction-name-wikilink-example]]` to embed content
 
 #### 📊 **Output Format** (Optional)
 Specifications for how deliverables should be structured - templates, format types (JSON, YAML, Markdown), or specific structural requirements.
@@ -138,7 +138,7 @@ Specifications for how deliverables should be structured - templates, format typ
 ### The Modular Approach
 
 Each component can and should be extracted and referenced via wikilinks when it can be reused. During sync:
-- `[[wikilinks]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
+- `[[wikilinks-wikilink-example]]` are transformed to `@path/to/file.md` for dynamic loading by Claude
 - `![[embedded-wikilinks]]` are replaced with the actual file content inline
 
 ⚠️ **Important:** The `@path/to/file.md` references inside command files auto-load when you use slash commands (e.g., `/use:template-file` will automatically read all `@` references inside that template). However, if you just type `@template-file` directly in chat, Claude only sees the path - no automatic reading occurs.
@@ -283,8 +283,8 @@ The framework leverages a sophisticated component referencing system:
 ```mermaid
 graph LR
     subgraph "Development Time"
-        D1["Write: [[component]]"]
-        D2["Write: ![[component-example-wiki-link]]"]
+        D1["Write: [[component-wikilink-example]]"]
+        D2["Write: ![[component-wikilink-example]]"]
     end
     
     subgraph "Sync Process"
@@ -328,10 +328,10 @@ Follow @instructions/project-conventions.md and use @templates/story-template.md
 ### Embedded WikiLinks: Content Insertion
 ```markdown
 # Reference mode (loads on activation):
-Use the workflow in [[issue-workflow-example-wiki-link]]
+Use the workflow in [[issue-workflow-wikilink-example]]
 
 # Embedding mode (content inserted during sync):
-![[issue-workflow-example-wiki-link]]
+![[issue-workflow-wikilink-example]]
 
 # Note: Embedded wikilinks must occupy their own line
 ```
@@ -339,9 +339,9 @@ Use the workflow in [[issue-workflow-example-wiki-link]]
 ### Component Evolution Lifecycle
 ```markdown
 1. Inline definition → Components defined within the artifact
-2. File extraction → [[component-name-example-wiki-link]] references to external files
+2. File extraction → [[component-name-wikilink-example]] references to external files
 3. Agent composition → Combining persona, workflow, and instructions
-4. Agent embedding → ![[agent-name-example-wiki-link]] inclusion in prompts
+4. Agent embedding → ![[agent-name-wikilink-example]] inclusion in prompts
 ```
 
 

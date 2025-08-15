@@ -267,7 +267,7 @@ Connect to existing project:
 - Incomplete → Complete
 
 **Rules:**
-- ALWAYS follow [[entity-implementation-rules]]
+- ALWAYS follow [[template-rules]]
 - MUST use correct formatting
 - NEVER skip required sections
 

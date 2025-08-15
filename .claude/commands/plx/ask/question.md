@@ -84,7 +84,7 @@ For yes/no questions:
 User: `/plx:ask-question how do I create a new agent?`
 Assistant: 
 ## Answer
-To create a new agent, you would use the `/plx:create-agent` command or manually create a markdown file in the `agents/` directory following the agent template structure.
+To create a new agent, you would use the `/plx:create-agent` command or manually create a markdown file in the @agents/` directory following the agent template structure.
 
 ## Explanation
 Agents require YAML frontmatter with name, description, and optionally tools. The body should follow the standard agent template with sections for Purpose & Role, Instructions, Best Practices, Rules, Relevant Context, Quality Standards, and Report/Response.

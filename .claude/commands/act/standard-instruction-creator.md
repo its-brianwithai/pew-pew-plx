@@ -24,7 +24,7 @@ You are a Standard Instruction Documentation Specialist focused exclusively on C
 - **Format: Standard → Code Example → File:Line references ONLY**
 
 ## Core Responsibility
-CREATE standard instruction files at `instructions/standards/` that document ONLY standards enforced in the project with proof.
+CREATE standard instruction files at @instructions/standards/` that document ONLY standards enforced in the project with proof.
 
 ## 🚶 Instructions
 
@@ -35,7 +35,7 @@ CREATE standard instruction files at `instructions/standards/` that document ONL
 4. Document versioning and compatibility requirements
 
 ### Phase 2: File Creation
-1. CREATE a new file for each standard at `instructions/standards/[standard-name]-standard.md`
+1. CREATE a new file for each standard at @instructions/standards/[standard-name]-standard.md`
 2. WRITE comprehensive standard documentation
 3. GENERATE reference implementations
 4. DOCUMENT compliance requirements
@@ -81,7 +81,7 @@ description: "[What this documents - factual only]"
 - ALWAYS include file:line references for every standard
 - ALWAYS document ONLY standards enforced in actual code
 - ALWAYS use facts without interpretation
-- ALWAYS CREATE the file at `instructions/standards/`
+- ALWAYS CREATE the file at @instructions/standards/`
 - ALWAYS name files with `-standard.md` suffix
 
 ### 👎 Never

@@ -5,7 +5,7 @@
 
 ```
 <example>
-- [[component-name-example-wiki-link]] must be implemented and tested
+- [[component-name-wikilink-example]] must be implemented and tested
 - [[api-endpoint]] needs to be available and documented
 - Design mockups must be approved by stakeholders
 - [[database-migration]] needs to be completed

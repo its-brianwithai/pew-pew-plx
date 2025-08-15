@@ -89,7 +89,7 @@ Investigate the entire project to verify pattern/convention conformance, then se
 - Identify all directories requiring investigation
 - Catalog file types and their distributions
 - Map component relationships and dependencies
-- Save structure analysis following [[most-valuable-project-management-conventions]]
+- Save structure analysis following [[mvpm-issue-conventions]]
 - If related to a specific issue, save in that issue's folder as `{SUBJECT-CODE}-conformance-structure.md`
 - Otherwise save to `reports/conformance-structure-{{timestamp}}.md`
 
@@ -105,7 +105,7 @@ Investigate the entire project to verify pattern/convention conformance, then se
 ### Step 4: Initialize Investigation Reports
 **Deliverable:** Report structure for comprehensive findings
 **Acceptance Criteria:** Reports ready for parallel investigation data
-- Create investigation report following [[most-valuable-project-management-conventions]]
+- Create investigation report following [[mvpm-issue-conventions]]
 - If related to a specific issue, save as `{SUBJECT-CODE}-conformance-investigation.md` in issue folder
 - Otherwise create `reports/conformance-investigation-{{timestamp}}.md`
 - Add sections for conforming instances
@@ -282,7 +282,7 @@ Investigate the entire project to verify pattern/convention conformance, then se
 > 💡 *How to structure and deliver the output.*
 
 ### Format Type
-Markdown reports following [[most-valuable-project-management-conventions]]
+Markdown reports following [[mvpm-issue-conventions]]
 - Issue-related reports: Save in the issue's folder
 - General reports: Save in `reports/` directory
 
@@ -354,7 +354,7 @@ Markdown reports following [[most-valuable-project-management-conventions]]
 ```
 
 ### Delivery Instructions
-- Follow [[most-valuable-project-management-conventions]] for report placement
+- Follow [[mvpm-issue-conventions]] for report placement
 - Issue-related reports go in the issue folder
 - General project-wide reports go to `reports/` directory
 - Create separate investigation and correction reports

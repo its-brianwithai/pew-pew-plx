@@ -2,14 +2,14 @@
 > 💡 *Essential information for the AI agent to understand and execute this ticket effectively. Review all linked resources thoroughly before proceeding.*
 
 ### 📚 Relevant Project Files & Code
-> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance. Use the [[filename-example-wiki-link]] format.*
+> 💡 *List all project files, code snippets, or directories that the AI agent **must read and understand** to effectively complete the tasks. Include paths relative to the project root and a brief note on their relevance. Use the [[filename-wikilink-example]] format.*
 
 [List project files with their relevance using the specified format]
 
 ```
 <example>
-- [[filename-example-wiki-link]] - (Relevance: Description of why this file is important)
-- [[filename-example-wiki-link]] - (Relevance: Description of code relevance)
+- [[filename-wikilink-example]] - (Relevance: Description of why this file is important)
+- [[filename-wikilink-example]] - (Relevance: Description of code relevance)
 </example>
 ```
 
@@ -20,7 +20,7 @@
 
 ```
 <example>
-- [[document-name]] - (Relevance: Description of relevance)
+- [[document-name-wikilink-example]] - (Relevance: Description of relevance)
 - [External URL] - (Relevance: Description of relevance)
 </example>
 ```

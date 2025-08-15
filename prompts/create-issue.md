@@ -103,7 +103,7 @@ Once the issue type is determined:
 4. **Maintain consistency**: Follow the exact template for that type
 
 ### File Locations
-Files are saved following [[most-valuable-project-management-conventions]]
+Files are saved following [[mvpm-issue-conventions]]
 - Location determined by project structure (MVMs and MVSs)
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Same format for ALL issue types (tech, operations, marketing, sales, finance, people)

@@ -8,9 +8,9 @@
 
 ```
 <example>
-- [[wikilink]] - (Relevance: [Description of why this file is important])
-- [[wikilink]] - (Relevance: [Description of code relevance])
-- [[component-name-example-wiki-link]] - (Relevance: [How this relates to the task])
+- [[wikilink-wikilink-example]] - (Relevance: [Description of why this file is important])
+- [[wikilink-wikilink-example]] - (Relevance: [Description of code relevance])
+- [[component-name-wikilink-example]] - (Relevance: [How this relates to the task])
 </example>
 ```
 
@@ -21,7 +21,7 @@
 
 ```
 <example>
-- [[wikilink]] - (Relevance: [Description of relevance])
+- [[wikilink-wikilink-example]] - (Relevance: [Description of relevance])
 - [External URL] - (Relevance: [Description of relevance])
 - [API Documentation] - (Relevance: [Specific endpoints or features needed])
 </example>

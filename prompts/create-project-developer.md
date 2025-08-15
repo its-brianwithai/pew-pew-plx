@@ -168,37 +168,37 @@ All project conventions, patterns, and standards are embedded below. These instr
 
 [IMPORTANT: Insert discovered instruction files here with embedded wikilinks]
 <!-- Each instruction file should be on its own line -->
-<!-- Format: ![[filename]] (no path needed) -->
+<!-- Format: ![[filename-wikilink-example]] (no path needed) -->
 <!-- Example structure shown below - replace with actual discovered files -->
 
 #### Patterns
-![[file-organization-patterns]]
-![[naming-convention-patterns]]
+![[file-organization-patterns-wikilink-example]]
+![[naming-convention-patterns-wikilink-example]]
 [Continue with all discovered pattern files...]
 
 #### Conventions
 ![[git-conventions]]
-![[documentation-conventions]]
+![[documentation-conventions-wikilink-example]]
 [Continue with all discovered convention files...]
 
 #### Best Practices
-![[error-handling-best-practices]]
-![[performance-best-practices]]
+![[error-handling-best-practices-wikilink-example]]
+![[performance-best-practices-wikilink-example]]
 [Continue with all discovered best-practice files...]
 
 #### Rules
-![[critical-code-rules]]
-![[quality-standard-rules]]
+![[critical-code-rules-wikilink-example]]
+![[quality-standard-rules-wikilink-example]]
 [Continue with all discovered rule files...]
 
 #### Guidelines
-![[ui-design-guidelines]]
-![[responsive-design-guidelines]]
+![[ui-design-guidelines-wikilink-example]]
+![[responsive-design-guidelines-wikilink-example]]
 [Continue with all discovered guideline files...]
 
 #### Standards
-![[code-quality-standards]]
-![[documentation-standards]]
+![[code-quality-standards-wikilink-example]]
+![[documentation-standards-wikilink-example]]
 [Continue with all discovered standard files...]
 
 ## 📊 Quality Standards
@@ -325,9 +325,9 @@ The agent references instructions organized by type:
 ## Wikilink Format
 All instruction files are embedded using the format:
 ```
-![[name-type]]
+![[name-type-wikilink-example]]
 ```
-Example: `![[naming-convention-patterns]]`
+Example: `![[naming-convention-patterns-wikilink-example]]`
 Note: Wikilinks use filename only, not the path
 
 ## Agent Invocation

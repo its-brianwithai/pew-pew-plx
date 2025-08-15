@@ -95,7 +95,7 @@ Investigate the entire project to verify pattern/convention conformance, then se
 - Identify all directories requiring investigation
 - Catalog file types and their distributions
 - Map component relationships and dependencies
-- Save structure analysis following @instructions/conventions/most-valuable-project-management-conventions.md
+- Save structure analysis following @instructions/conventions/mvpm-issue-conventions.md
 - If related to a specific issue, save in that issue's folder as `{SUBJECT-CODE}-conformance-structure.md`
 - Otherwise save to `reports/conformance-structure-{{timestamp}}.md`
 
@@ -111,7 +111,7 @@ Investigate the entire project to verify pattern/convention conformance, then se
 ### Step 4: Initialize Investigation Reports
 **Deliverable:** Report structure for comprehensive findings
 **Acceptance Criteria:** Reports ready for parallel investigation data
-- Create investigation report following @instructions/conventions/most-valuable-project-management-conventions.md
+- Create investigation report following @instructions/conventions/mvpm-issue-conventions.md
 - If related to a specific issue, save as `{SUBJECT-CODE}-conformance-investigation.md` in issue folder
 - Otherwise create `reports/conformance-investigation-{{timestamp}}.md`
 - Add sections for conforming instances
@@ -628,7 +628,7 @@ Remember: Every question must deliberately advance toward the specific goal. Que
 > 💡 *How to structure and deliver the output.*
 
 ### Format Type
-Markdown reports following @instructions/conventions/most-valuable-project-management-conventions.md
+Markdown reports following @instructions/conventions/mvpm-issue-conventions.md
 - Issue-related reports: Save in the issue's folder
 - General reports: Save in `reports/` directory
 
@@ -700,7 +700,7 @@ Markdown reports following @instructions/conventions/most-valuable-project-manag
 ```
 
 ### Delivery Instructions
-- Follow @instructions/conventions/most-valuable-project-management-conventions.md for report placement
+- Follow @instructions/conventions/mvpm-issue-conventions.md for report placement
 - Issue-related reports go in the issue folder
 - General project-wide reports go to `reports/` directory
 - Create separate investigation and correction reports

@@ -273,7 +273,7 @@ Connect to existing project:
 - Incomplete → Complete
 
 **Rules:**
-- ALWAYS follow @instructions/rules/entity-implementation-rules.md
+- ALWAYS follow @instructions/rules/template-rules.md
 - MUST use correct formatting
 - NEVER skip required sections
 
