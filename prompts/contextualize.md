@@ -50,8 +50,6 @@ PLX framework architecture, document relationships, and contextual integration p
 
 ![[all-project-conventions]]
 
-![[scope-integrity]]
-
 ### Skills
 - Systematic project exploration and pattern discovery
 - Cross-referencing and relationship identification
@@ -71,18 +69,6 @@ Guide the comprehensive contextualization of any source document by:
 5. Updating the source document with enhanced contextual understanding
 6. Ensuring seamless integration with the project ecosystem
 
-### Deliverables
-- Updated source document(s) with comprehensive context
-- Identified cross-references and relationships
-- Integration with project patterns and conventions
-- Enhanced understanding of the document's role in the framework
-
-### Acceptance Criteria
-- [ ] Source analysis is complete and accurate
-- [ ] Project research covers all relevant artifact types
-- [ ] Question-mode refinement identifies all gaps
-- [ ] Source document is enhanced, not replaced
-- [ ] All conventions and patterns are properly applied
 
 ## 🔄 Workflow
 
@@ -169,8 +155,6 @@ Guide the comprehensive contextualization of any source document by:
 - NEVER make assumptions about document purpose or needs
 - MUST identify document type and classification exactly
 - ALWAYS preserve existing valuable content without modification
-- NEVER add context that wasn't explicitly requested through research
-- MUST follow [[scope-integrity]] principles throughout
 
 ### WHEN conducting project research
 **Best Practices:**
@@ -226,21 +210,10 @@ Guide the comprehensive contextualization of any source document by:
 - NEVER create new headers or structural elements
 - MUST preserve exact document structure and hierarchy
 - ALWAYS integrate context within existing explanations only
-- NEVER add improvements or features not explicitly found through research
-- MUST follow [[scope-integrity]] - enhance only what exists, nothing more
 
 ### WHEN following template and convention rules
-**Requirements:**
-- Apply all [[template-rules]] for examples and placeholders
-- Use single brackets for instructions: [Replace this]
-- Use double curly with backticks for variables: `{{variable-name}}`
-- Describe example types, never use actual content in examples
 
-**Rules:**
-- ALWAYS follow [[template-rules]] exactly
-- NEVER violate established wikilink patterns
-- MUST ensure embedded wikilinks are on separate lines
-- ALWAYS use proper example formatting
+![[template-rules]]
 
 ## 📊 Output Format
 

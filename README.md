@@ -409,6 +409,10 @@ Use the workflow in [[issue-workflow-wl-example]]
 make -f .pew/Makefile sync claude                    # Sync to Claude Code
 make -f .pew/Makefile watch claude                   # Auto-sync during development
 
+# Pull latest framework updates and sync:
+make -f .pew/Makefile pull main                      # Pull latest framework updates
+make -f .pew/Makefile sync claude                    # Then sync with Claude
+
 # YAML configuration controls:
 # - Source directories (sync_sources)
 # - Target directories (sync_targets)
@@ -422,6 +426,8 @@ make -f .pew/Makefile watch claude                   # Auto-sync during developm
 |:------------|:---------|:--------|
 | **Creation** | `/plx:create`, `/plx:create:issue` | Generate new artifacts from requirements |
 | **Transformation** | `/plx:update`, `/plx:make`, `/plx:shard` | Modify and convert existing content |
+| **Git & Release** | `/plx:commit`, `/plx:create-github-release` | Handle commits with documentation checks and create releases |
+| **Sync & Framework** | `/plx:sync-claude`, `/plx:pull-sync-claude` | Sync with Claude Code and update framework |
 | **Agents** | `/act:flutter:developer`, `/act:story:agent` | Activate specialized AI personas |
 | **Workflows** | `/start:feature-workflow`, `/start:bug-workflow` | Launch multi-phase processes |
 | **Components** | `/add:`, `/output:`, `/apply:`, `/use:` | Insert blocks, formats, instructions, templates |
