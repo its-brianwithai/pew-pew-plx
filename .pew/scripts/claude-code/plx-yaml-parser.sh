@@ -92,6 +92,42 @@ get_delete_after_targets() {
     ' "$YAML_FILE"
 }
 
+# Function to get prompt single_verb target
+get_prompt_single_verb_target() {
+    awk '
+    BEGIN { in_sync_targets = 0; in_prompts = 0; found = 0 }
+    /^sync_targets:/ { in_sync_targets = 1; next }
+    in_sync_targets && /^[a-z]/ && /^[^ ]/ { in_sync_targets = 0 }
+    in_sync_targets && /^  prompts:/ { in_prompts = 1; next }
+    in_prompts && /^  [a-z]/ && /^  [^ ]/ { in_prompts = 0 }
+    in_prompts && /^    single_verb:/ { 
+        gsub(/^    single_verb: /, "")
+        print
+        found = 1
+        exit 0
+    }
+    END { exit !found }
+    ' "$YAML_FILE"
+}
+
+# Function to get prompt verb_subject target
+get_prompt_verb_subject_target() {
+    awk '
+    BEGIN { in_sync_targets = 0; in_prompts = 0; found = 0 }
+    /^sync_targets:/ { in_sync_targets = 1; next }
+    in_sync_targets && /^[a-z]/ && /^[^ ]/ { in_sync_targets = 0 }
+    in_sync_targets && /^  prompts:/ { in_prompts = 1; next }
+    in_prompts && /^  [a-z]/ && /^  [^ ]/ { in_prompts = 0 }
+    in_prompts && /^    verb_subject:/ { 
+        gsub(/^    verb_subject: /, "")
+        print
+        found = 1
+        exit 0
+    }
+    END { exit !found }
+    ' "$YAML_FILE"
+}
+
 # Function to list all sync source types
 list_sync_source_types() {
     awk '
@@ -128,6 +164,12 @@ case "${1:-}" in
     get_targets)
         get_sync_targets "$2"
         ;;
+    get_prompt_single_verb_target)
+        get_prompt_single_verb_target
+        ;;
+    get_prompt_verb_subject_target)
+        get_prompt_verb_subject_target
+        ;;
     get_delete_before)
         get_delete_before_targets
         ;;
@@ -141,15 +183,17 @@ case "${1:-}" in
         list_sync_target_types
         ;;
     *)
-        echo "Usage: $0 {get_sources|get_targets|get_delete_before|get_delete_after|list_source_types|list_target_types} [type]"
+        echo "Usage: $0 {get_sources|get_targets|get_prompt_single_verb_target|get_prompt_verb_subject_target|get_delete_before|get_delete_after|list_source_types|list_target_types} [type]"
         echo ""
         echo "Commands:"
-        echo "  get_sources <type>      Get source directories for a content type"
-        echo "  get_targets <type>      Get target directories for a content type"
-        echo "  get_delete_before       Get directories to delete before sync"
-        echo "  get_delete_after        Get directories to delete after sync"
-        echo "  list_source_types       List all available source types"
-        echo "  list_target_types       List all available target types"
+        echo "  get_sources <type>              Get source directories for a content type"
+        echo "  get_targets <type>              Get target directories for a content type"
+        echo "  get_prompt_single_verb_target   Get target for single-verb prompts"
+        echo "  get_prompt_verb_subject_target  Get target for verb-subject prompts"
+        echo "  get_delete_before               Get directories to delete before sync"
+        echo "  get_delete_after                Get directories to delete after sync"
+        echo "  list_source_types               List all available source types"
+        echo "  list_target_types               List all available target types"
         exit 1
         ;;
 esac

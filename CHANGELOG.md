@@ -7,11 +7,15 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 - **Scope Integrity Concept**: New concept to prevent AI over-engineering by ensuring agents create exactly what's requested without assumptions or unsolicited improvements
 - **Enhanced GitHub Release Workflow**: Comprehensive `create-github-release` prompt that handles documentation validation, changelog versioning, tagging, and release creation
 - **Pull-Sync-Claude Prompt**: New workflow combining framework updates with Claude sync in one command
+- **Clean Sync with Backup**: New `plx-pull-sync-claude-clean` prompt that backs up current `.pew`, performs pull-sync, and restores on failure
+- **Single-Verb Prompt Routing**: YAML configuration now supports separate routing for single-verb vs verb-subject prompts
 
 ### 🛠️ Improvements:
 - **Enhanced Commit Workflow**: Updated commit prompt with comprehensive pre-commit documentation review including README validation and changelog updates
 - **Simplified Sync Prompts**: Removed clean sync concept since it's now handled automatically by plx.yaml configuration
 - **Dynamic Project Key Detection**: GitHub release workflow now detects project key from commit history instead of hardcoding
+- **Modular Prompt Architecture**: Aligned sync prompts with proper embedding hierarchy for better maintainability
+- **Backward Compatible Sync**: Updated sync scripts maintain compatibility with old YAML configurations
 
 ## [v0.5.0] - 2025-08-13
 

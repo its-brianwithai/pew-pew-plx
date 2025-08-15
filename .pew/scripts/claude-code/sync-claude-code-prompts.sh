@@ -21,19 +21,40 @@ fi
 SOURCE_DIR="$PROJECT_ROOT/$PROMPTS_SOURCE"
 
 # Get target directories from YAML config
-PROMPT_TARGETS=()
-while IFS= read -r line; do
-    PROMPT_TARGETS+=("$line")
-done < <("$YAML_PARSER" get_targets prompts)
-if [ ${#PROMPT_TARGETS[@]} -eq 0 ]; then
-    # Fallback to defaults if no targets found
-    PROMPT_TARGETS=(".claude/commands/plx/")
+SINGLE_VERB_TARGET=$("$YAML_PARSER" get_prompt_single_verb_target)
+VERB_SUBJECT_TARGET=$("$YAML_PARSER" get_prompt_verb_subject_target)
+
+# Set fallbacks if not found - default to verb_subject for backward compatibility
+if [ -z "$SINGLE_VERB_TARGET" ] && [ -z "$VERB_SUBJECT_TARGET" ]; then
+    # Old config format - use legacy get_targets approach
+    LEGACY_TARGETS=()
+    while IFS= read -r line; do
+        LEGACY_TARGETS+=("$line")
+    done < <("$YAML_PARSER" get_targets prompts 2>/dev/null || true)
+    
+    if [ ${#LEGACY_TARGETS[@]} -gt 0 ]; then
+        # Use legacy target for both (backward compatibility)
+        VERB_SUBJECT_TARGET="${LEGACY_TARGETS[0]}"
+        SINGLE_VERB_TARGET="${LEGACY_TARGETS[0]}"
+        echo "📋 Using legacy configuration - both single-verb and verb-subject prompts go to: $VERB_SUBJECT_TARGET"
+    else
+        # Ultimate fallback
+        SINGLE_VERB_TARGET=".claude/commands/"
+        VERB_SUBJECT_TARGET=".claude/commands/plx/"
+    fi
+else
+    # New config format - set individual fallbacks
+    if [ -z "$SINGLE_VERB_TARGET" ]; then
+        SINGLE_VERB_TARGET=".claude/commands/"
+    fi
+    if [ -z "$VERB_SUBJECT_TARGET" ]; then
+        VERB_SUBJECT_TARGET=".claude/commands/plx/"
+    fi
 fi
 
-# Set primary target
-CLAUDE_COMMANDS_PLX_DIR="$BASE_ROOT/${PROMPT_TARGETS[0]%/}"
-
-CLAUDE_COMMANDS_DIR="$BASE_ROOT/.claude/commands"
+# Set target directories
+CLAUDE_COMMANDS_DIR="$BASE_ROOT/${SINGLE_VERB_TARGET%/}"
+CLAUDE_COMMANDS_PLX_DIR="$BASE_ROOT/${VERB_SUBJECT_TARGET%/}"
 
 # Get blocks source directory from YAML config
 BLOCKS_SOURCE=$("$YAML_PARSER" get_sources blocks | head -1)
@@ -47,7 +68,8 @@ if [ ! -d "$SOURCE_DIR" ]; then
     mkdir -p "$SOURCE_DIR"
 fi
 
-echo "🎯 Creating Claude plx commands directory..."
+echo "🎯 Creating Claude commands directories..."
+mkdir -p "$CLAUDE_COMMANDS_DIR"
 mkdir -p "$CLAUDE_COMMANDS_PLX_DIR"
 
 # Create source directory if it doesn't exist
@@ -93,25 +115,26 @@ for prompt_file in "$SOURCE_DIR"/*.md; do
             } > "$temp_file"
         fi
         
-        # Check if filename contains a hyphen (verb-object pattern)
+        # Check if filename contains a hyphen (verb-subject pattern)
         if [[ "$base_name" == *"-"* ]]; then
-            # Extract verb and object
+            # Multi-word prompt (verb-subject) - goes to plx directory
+            # Extract verb and subject
             verb="${base_name%%-*}"
-            object="${base_name#*-}"
+            subject="${base_name#*-}"
             
-            # Create verb subdirectory
+            # Create verb subdirectory in plx
             verb_dir="$CLAUDE_COMMANDS_PLX_DIR/$verb"
             mkdir -p "$verb_dir"
             
-            # Move processed file to verb directory with object name only
-            output_file="$verb_dir/$object.md"
+            # Move processed file to verb directory with subject name only
+            output_file="$verb_dir/$subject.md"
             mv "$temp_file" "$output_file"
-            echo "✅ Created $verb/$object.md"
+            echo "✅ Created plx/$verb/$subject.md"
         else
-            # Single word prompt - move to plx directory
-            output_file="$CLAUDE_COMMANDS_PLX_DIR/$base_name.md"
+            # Single verb prompt - goes to commands root directory
+            output_file="$CLAUDE_COMMANDS_DIR/$base_name.md"
             mv "$temp_file" "$output_file"
-            echo "✅ Created plx/$base_name.md"
+            echo "✅ Created $base_name.md (single verb)"
         fi
         
         ((prompt_count++))

@@ -35,7 +35,8 @@ sync_targets:
   personas:
     - .claude/commands/act/
   prompts:
-    - .claude/commands/plx/
+    single_verb: .claude/commands/
+    verb_subject: .claude/commands/plx/
   templates:
     - .claude/commands/use/
   blocks:

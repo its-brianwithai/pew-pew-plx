@@ -1,6 +1,6 @@
 ---
-name: create
-description: "Use this prompt to systematically create any type of artifact by decomposing desires into modular components and assembling them through the framework's wikilink architecture."
+name: update
+description: "Use this prompt to systematically update any type of artifact by decomposing desires into modular components and assembling them through the framework's wikilink architecture."
 ---
 # Prompt Command
 
@@ -9,13 +9,13 @@ When this command is used, check if any required information is missing. If so, 
 ---
 
 
-# 🎨 Create Anything: Systematic Artifact Creation Through Progressive Decomposition
-> 💡 *Transform any desire to create, do, or update into production-ready artifacts by decomposing intentions into reusable components and assembling them through intelligent sharding and wikilink architecture.*
+# 🎨 Update Anything: Systematic Artifact Creation Through Progressive Decomposition
+> 💡 *Transform any desire to update, do, or update into production-ready artifacts by decomposing intentions into reusable components and assembling them through intelligent sharding and wikilink architecture.*
 
 ## 🎯 End Goal
 > 💡 *The clean, measurable objective that determines whether any following section provides value. This is the north star for inclusion decisions.*
 
-Successfully create a production-ready artifact that:
+Successfully update a production-ready artifact that:
 - Achieves the user's stated desire through systematic decomposition
 - Maximizes reusability through component sharding
 - Integrates seamlessly with existing project artifacts
@@ -480,6 +480,39 @@ Context Rot Awareness is about making sure that everything in a document—wheth
 Also, don’t repeat things. For example, if you explain a rule and say something must **always** happen, you don’t need to also say the opposite must **never** happen. Saying it once is enough.
 
 We do this mainly to prevent agents from getting useless info and to avoid wasting tokens on information that’s already known or irrelevant.
+
+# 💡 Concept: Scope Integrity
+> 💡 *The principle of creating exactly what was requested - nothing more, nothing less - based solely on explicit requirements and existing project patterns.*
+
+Scope Integrity ensures that agents maintain absolute fidelity to the user's request without making assumptions, adding unrequested features, or applying "improvements" that weren't explicitly asked for. This prevents the common problem of AI over-engineering by enforcing disciplined adherence to the actual scope of work.
+
+## Core Requirements
+
+**Deep Understanding First:** Before taking any action, agents must fully comprehend 100% of the request scope. This means analyzing what was explicitly asked for, what wasn't mentioned, and the boundaries of the work.
+
+**Project Research:** Agents must thoroughly research existing project conventions, patterns, and examples similar to the request. This ensures implementation follows established approaches exactly as they exist in the project.
+
+**Exact Replication:** When following existing patterns, agents must replicate them precisely. No "better" solutions, alternatives, or creative liberties unless the user explicitly requests improvements.
+
+## What This Prevents
+
+- Adding features or information not explicitly requested
+- Making assumptions about what the user "probably" wants
+- Applying personal preferences or "best practices" not established in the project
+- Over-engineering solutions beyond the stated requirements
+- Reinterpreting requests to fit preconceived notions
+- Including "helpful" additions that weren't asked for
+
+## Implementation Guidelines
+
+1. **Parse the Request:** Identify exactly what action was requested and what deliverables are expected
+2. **Define Boundaries:** Clearly understand what was NOT requested or mentioned
+3. **Research Context:** Study how similar requests have been handled in this project
+4. **Follow Patterns:** Use existing conventions and approaches without modification
+5. **Stick to Scope:** Create only what was explicitly requested
+6. **No Assumptions:** If something is unclear, ask for clarification rather than guessing
+
+This principle ensures that users get exactly what they asked for, following the project's established way of doing things, without unwanted additions or interpretations.
 
 ## 📏 Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
@@ -1004,52 +1037,52 @@ Guide the user through systematic artifact creation by:
 **Deliverable:** Clear understanding of what the user wants to DO
 **Acceptance Criteria:** Desire mapped to specific action verb and outcome
 - Ask: "What do you want to do with this framework?"
-- Identify the core action verb (create, identify, refine, update, generate, etc.)
+- Identify the core action verb (update, identify, refine, update, generate, etc.)
 - Map to concrete examples:
-  - "identify actors" → need identification workflow + actor template
-  - "refine issues" → need refinement process + issue conventions
-  - "create feature" → need feature workflow + templates
+    - "identify actors" → need identification workflow + actor template
+    - "refine issues" → need refinement process + issue conventions
+    - "update feature" → need feature workflow + templates
 - Document the transformation from desire to required components
 
 ### Step 2: Component Analysis
 **Deliverable:** Complete component breakdown following prompt-template structure
 **Acceptance Criteria:** Each component evaluated for contribution to end goal
 - Analyze which components are needed:
-  - **End Goal**: Always required - the measurable success criterion
-  - **Persona**: Include if specialized expertise improves outcome
-  - **Request**: Always required - the verb-first action
-  - **Workflow**: Include if multi-step process needed
-  - **Instructions**: Include if conventions/rules prevent failure
-  - **Output Format**: Include if specific structure required
+    - **End Goal**: Always required - the measurable success criterion
+    - **Persona**: Include if specialized expertise improves outcome
+    - **Request**: Always required - the verb-first action
+    - **Workflow**: Include if multi-step process needed
+    - **Instructions**: Include if conventions/rules prevent failure
+    - **Output Format**: Include if specific structure required
 - Document why each component is included/excluded
 
 ### Step 3: Search Existing Artifacts
 **Deliverable:** List of reusable existing components
 **Acceptance Criteria:** All relevant artifacts identified and evaluated
 - Search patterns by artifact type:
-  - @agents/**/*[topic]*.md` for existing expertise
-  - @workflows/*[process]*.md` for established processes
-  - @prompts/*[verb]*.md` for similar actions
-  - @templates/**/*[type]*.md` for output formats
-  - @instructions/*[convention]*.md` for rules
-  - @modes/*[behavior]*.md` for interaction patterns
-  - @personas/*[role]*.md` for character definitions
-  - @templates/blocks/*[section]*.md` for content sections
+    - @agents/**/*[topic]*.md` for existing expertise
+    - @workflows/*[process]*.md` for established processes
+    - @prompts/*[verb]*.md` for similar actions
+    - @templates/**/*[type]*.md` for output formats
+    - @instructions/*[convention]*.md` for rules
+    - @modes/*[behavior]*.md` for interaction patterns
+    - @personas/*[role]*.md` for character definitions
+    - @templates/blocks/*[section]*.md` for content sections
 - Document which existing artifacts can be reused via wikilinks
 
 ### Step 4: Sharding Strategy Development
 **Deliverable:** Plan for extracting reusable components
 **Acceptance Criteria:** Maximum reusability achieved
 - Identify shareable components:
-  - End goals → `goals/[goal-name].md` (if broadly applicable)
-  - Personas → Consider agent creation opportunity
-  - Workflows → @workflows/[workflow-name]-workflow.md`
-  - Instructions → @instructions/[topic]-instructions.md`
-  - Output formats → @templates/[format]-template.md`
+    - End goals → `goals/[goal-name].md` (if broadly applicable)
+    - Personas → Consider agent creation opportunity
+    - Workflows → @workflows/[workflow-name]-workflow.md`
+    - Instructions → @instructions/[topic]-instructions.md`
+    - Output formats → @templates/[format]-template.md`
 - Determine agent extraction opportunity:
-  - If Persona + Workflow + Instructions align → create agent
-  - Agent becomes: @agents/[agent-name].md`
-  - Then embed in prompt: `![[agent-name-wl-example]]`
+    - If Persona + Workflow + Instructions align → update agent
+    - Agent becomes: @agents/[agent-name].md`
+    - Then embed in prompt: `![[agent-name-wl-example]]`
 
 ### Step 5: Question-Mode Refinement
 **Deliverable:** Refined understanding through systematic questioning
@@ -1057,11 +1090,11 @@ Guide the user through systematic artifact creation by:
 - Activate question-mode for overall desire
 - Establish specific, measurable goal first
 - Apply the 5 question types systematically:
-  - **🔄 Simplify**: Can we combine or reduce complexity?
-  - **❓ Clarify**: Are requirements unambiguous?
-  - **🔧 Improve**: What enhancements would increase quality?
-  - **➕ Expand**: What edge cases or features are missing?
-  - **➖ Reduce**: What can be deferred to MVP?
+    - **🔄 Simplify**: Can we combine or reduce complexity?
+    - **❓ Clarify**: Are requirements unambiguous?
+    - **🔧 Improve**: What enhancements would increase quality?
+    - **➕ Expand**: What edge cases or features are missing?
+    - **➖ Reduce**: What can be deferred to MVP?
 - Use Batch-5 mode for comprehensive coverage (one of each type)
 - Document all decisions in refinement log
 
@@ -1069,27 +1102,27 @@ Guide the user through systematic artifact creation by:
 **Deliverable:** Complete artifact with proper wikilink architecture
 **Acceptance Criteria:** Artifact ready for immediate use
 - Structure using appropriate template:
-  - Prompts → Follow @templates/meta/prompt-template.md structure
-  - Agents → Follow @templates/agents/agent-template.md structure
-  - Workflows → Follow @templates/meta/workflow-template.md structure
-  - Templates → Include YAML frontmatter + markdown body
-  - Instructions → Include name, description, actionable content
-  - [...] Others
+    - Prompts → Follow @templates/meta/prompt-template.md structure
+    - Agents → Follow @templates/agents/agent-template.md structure
+    - Workflows → Follow @templates/meta/workflow-template.md structure
+    - Templates → Include YAML frontmatter + markdown body
+    - Instructions → Include name, description, actionable content
+    - [...] Others
 - Implement wikilink architecture:
-  - Standard `[[name-wl-example]]` for references (→ @path after sync)
-  - Embedded `![[name-wl-example]]` for content (line replaced during sync)
-  - CRITICAL: Embedded wikilinks MUST be on their own line
+    - Standard `[[name-wl-example]]` for references (→ @path after sync)
+    - Embedded `![[name-wl-example]]` for content (line replaced during sync)
+    - CRITICAL: Embedded wikilinks MUST be on their own line
 - Write to appropriate directory with correct naming convention
 
 ### Step 7: Next Steps Generation
 **Deliverable:** Actionable suggestions for enhancement
 **Acceptance Criteria:** User has clear path forward
 - Suggest optimizations:
-  - Extract additional shareable components
-  - Create specialized agents from components
-  - Develop complementary artifacts
-  - Apply further refinement
-  - Test artifact effectiveness
+    - Extract additional shareable components
+    - Update specialized agents from components
+    - Develop complementary artifacts
+    - Apply further refinement
+    - Test artifact effectiveness
 - Let user choose direction
 
 ## 📏 Instructions
@@ -1153,7 +1186,7 @@ Guide the user through systematic artifact creation by:
 **Constraints:**
 - Never use actual content in examples, only describe types
 - Never use multiple lines for example types
-- Never recreate structure in examples - only list content types
+- Never reupdate structure in examples - only list content types
 
 **Rules:**
 - ALWAYS follow @instructions/rules/template-rules.md for all placeholders
@@ -1163,7 +1196,7 @@ Guide the user through systematic artifact creation by:
 ### WHEN creating specific artifact types
 **For Prompts:**
 - Follow @templates/meta/prompt-template.md structure for organization
-- Use verb-subject naming: `create-feature.md`, `identify-actors.md`
+- Use verb-subject naming: `update-feature.md`, `identify-actors.md`
 - Include XML structuring for complex prompts
 - Apply chain-of-thought for reasoning tasks
 - NEVER add "Reference: This prompt follows @.claude/commands/plx/update/template.md" unless it actually embeds/uses that template
@@ -1641,7 +1674,7 @@ color: [color]
 # Usage Notes
 
 ## Complete Artifact Coverage
-This prompt understands and can create:
+This prompt understands and can update:
 - **Prompts**: Reusable instructions with XML structure
 - **Agents**: Specialized sub-agents with focused expertise
 - **Templates**: Documentation templates with YAML frontmatter
@@ -1669,7 +1702,7 @@ Every creation follows the pattern:
 
 ## Agent Extraction Pattern
 When Persona + Workflow + Instructions align:
-1. Create agent with combined components
+1. Update agent with combined components
 2. Save as @agents/[name].md`
 3. Embed in prompts via `![[agent-name-wl-example]]`
 4. Agent becomes reusable across artifacts
@@ -1686,12 +1719,12 @@ All examples and placeholders follow @instructions/rules/template-rules.md
 - Single square brackets for instructions: [Do this]
 - Double curly with backticks for variables: `{{var}}`
 - Examples describe types, not actual content
-- Structure is never recreated in examples
+- Structure is never reupdated in examples
 
 ## Important Philosophy Notes
 
 **Why No Agent Reference:**
-This prompt intentionally does NOT reference an agent at the bottom. Following the create philosophy:
+This prompt intentionally does NOT reference an agent at the bottom. Following the update philosophy:
 - Components are defined directly in the prompt (Persona, Workflow, Instructions)
 - These components COULD be extracted into separate files for reusability
 - If Persona + Workflow + Instructions prove valuable together, they COULD become an agent
@@ -1700,5 +1733,5 @@ This prompt intentionally does NOT reference an agent at the bottom. Following t
 **Proper Evolution Path:**
 1. Start with components defined in the prompt (current state)
 2. Extract shareable components as they prove useful
-3. Create an agent only when components naturally align and need reuse
+3. Update an agent only when components naturally align and need reuse
 4. Then future prompts can reference that agent via `![[agent-name-wl-example]]`

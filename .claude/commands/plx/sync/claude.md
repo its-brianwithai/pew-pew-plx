@@ -6,9 +6,6 @@ When this command is used, check if any required information is missing. If so, 
 
 You are about to sync your project with Claude Code.
 
-You have two options:
-1.  **Standard Sync**: Updates agents and commands. This is the most common option.
-2.  **Clean Sync**: Deletes all existing agents and commands from your `.claude` directory before running a fresh sync. Use this if you suspect issues or have removed files locally.
+This will update your agents and commands based on the configuration in `.pew/plx.yaml`. The sync automatically handles cleaning and updating your `.claude` directory as needed.
 
-If the user provided `clean` as an argument, run `make -f .pew/Makefile sync claude clean`.
-Otherwise, ask the user which option they would like to proceed with. Once they choose, run either `make -f .pew/Makefile sync claude` for standard or `make -f .pew/Makefile sync claude clean` for clean.
+Run `make -f .pew/Makefile sync claude` from the project root.
