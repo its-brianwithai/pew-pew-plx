@@ -199,7 +199,7 @@ graph LR
 ```
 
 
-## 🤖 From Prompts to Agents
+### 🎩 A Good Agent
 
 When certain prompt components naturally align around a common purpose and main goal, they can be composed into agents. Benefits:
 - Use as **sub-agents** for specific tasks within larger workflows
