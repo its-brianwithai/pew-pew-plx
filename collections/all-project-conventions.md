@@ -13,6 +13,8 @@
 
 ![[context-rot-awareness]]
 
+![[scope-integrity]]
+
 ![[wikilink-rules]]
 
 ![[feedback-strategies]]
