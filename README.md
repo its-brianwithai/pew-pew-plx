@@ -422,10 +422,11 @@ make -f .pew/Makefile sync claude                    # Then sync with Claude
 
 | Command Type | Examples | Purpose |
 |:------------|:---------|:--------|
-| **Creation** | `/plx:create`, `/plx:create:issue` | Generate new artifacts from requirements |
-| **Transformation** | `/plx:update`, `/plx:make`, `/plx:shard` | Modify and convert existing content |
-| **Git & Release** | `/plx:commit`, `/plx:create-github-release` | Handle commits with documentation checks and create releases |
-| **Sync & Framework** | `/plx:sync-claude`, `/plx:pull-sync-claude`, `/plx:pull-sync-claude-clean` | Sync with Claude Code, update framework, and clean sync with backup |
+| **Single Verb Commands** | `/create`, `/update`, `/commit` | Single-verb prompts for common actions |
+| **Creation** | `/plx:create-issue`, `/plx:create-agent` | Generate new artifacts from requirements |
+| **Transformation** | `/plx:update-agent`, `/plx:make-issue`, `/plx:shard-task-complex` | Modify and convert existing content |
+| **Git & Release** | `/commit`, `/plx:create-github-release` | Handle commits with documentation checks and create releases |
+| **Sync & Framework** | `/plx:sync-claude`, `/plx:pull-sync-claude` | Sync with Claude Code, update framework, and clean sync with backup |
 | **Agents** | `/act:flutter:developer`, `/act:story:agent` | Activate specialized AI personas |
 | **Workflows** | `/start:feature-workflow`, `/start:bug-workflow` | Launch multi-phase processes |
 | **Components** | `/add:`, `/output:`, `/apply:`, `/use:` | Insert blocks, formats, instructions, templates |
@@ -459,7 +460,7 @@ graph TD
     
     subgraph ".claude/ Destination"
         A2[.claude/agents/<br/>+<br/>.claude/commands/act/]
-        P2[.claude/commands/plx/]
+        P2[.claude/commands/ (single-verb)<br/>+<br/>.claude/commands/plx/ (verb-subject)]
         T2[.claude/commands/use/]
         I2[.claude/commands/apply/]
         W2[.claude/commands/start/]
@@ -587,7 +588,8 @@ sync_targets:
   personas:
     - .claude/commands/act/
   prompts:
-    - .claude/commands/plx/
+    single_verb: .claude/commands/
+    verb_subject: .claude/commands/plx/
   templates:
     - .claude/commands/use/
   blocks:
