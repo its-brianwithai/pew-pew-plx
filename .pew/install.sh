@@ -29,26 +29,8 @@ echo -e "${BLUE}🚀 Pew Pew Framework Installer${NC}"
 echo "Installing into: $PROJECT_ROOT"
 echo
 
-# Check if .pew directory already exists
+# Check if .pew directory already exists and remove it
 if [ -d "$PEW_DIR" ]; then
-    echo -e "${YELLOW}⚠️  .pew/ directory already exists.${NC}"
-    echo -e "${YELLOW}This will override all existing framework files.${NC}"
-    echo
-    echo -e "${BLUE}💡 If you just want to sync existing files, run:${NC}"
-    echo -e "${BLUE}   make -f .pew/Makefile sync claude${NC}"
-    echo
-    
-    # Force interactive input by redirecting from tty
-    printf "Continue with installation? (y/N): "
-    read -r REPLY < /dev/tty
-    echo
-    
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        echo -e "${BLUE}ℹ️  Installation cancelled. To sync existing framework files, run:${NC}"
-        echo -e "${BLUE}   make -f .pew/Makefile sync claude${NC}"
-        exit 0
-    fi
-    
     echo -e "${YELLOW}🗑️  Removing existing .pew/ directory...${NC}"
     rm -rf "$PEW_DIR"
 fi
