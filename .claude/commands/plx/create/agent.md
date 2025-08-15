@@ -1654,7 +1654,7 @@ If any rule must be violated:
 
 ### WHEN researching existing patterns
 **Requirements:**
-- Read [[claude-code-sub-agent-docs]]
+- Read [[claude-code-sub-agents-reference]]
 - Review agents in similar domains
 - Study successful agent patterns
 - Check for potential overlaps

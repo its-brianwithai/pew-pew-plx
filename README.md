@@ -58,7 +58,7 @@ The foundation of this framework is understanding what makes an effective prompt
 
 ```mermaid
 graph TD
-    EG[🎯 End Goal<br/>Measurable Objective]
+    EG[🎯 End Goal<br/>Achievement Objective]
     
     P[👤 Persona<br/>Optional Expertise]
     R[📋 Request<br/>Verb-First Activity]
@@ -88,8 +88,18 @@ graph TD
 
 ### Core Components
 
-#### 🎯 **End Goal**
+#### 🎯 **End Goal** (Prompts) / **Main Goal** (Agents & Workflows)
 The measurable objective that determines whether any following section provides value. This is your north star - every component should improve your chances of achieving this goal exactly as intended.
+
+- **Prompts** define **End Goal**: Achievement-focused objective
+- **Agents** define **Main Goal**: Behavioral-focused objective  
+- **Workflows** define **Main Goal**: Process-focused objective
+
+**Required subsections:**
+- **Deliverables**: What must be produced or accomplished
+- **Acceptance Criteria**: How to verify the goal has been achieved
+
+Every section and component must align with and contribute to these goals to ensure clear, measurable success.
 
 #### 👤 **Persona** (Optional)
 Specialized expertise attributes included when they enhance outcomes:
@@ -105,7 +115,13 @@ Specialized expertise attributes included when they enhance outcomes:
 Verb-first activity specification with optional deliverables and acceptance criteria. Always starts with an action: Create, Update, Analyze, Transform, etc.
 
 #### 🔄 **Workflow** (Optional)
-Atomic steps with specific deliverables and acceptance criteria for each phase. Used when multi-step processes are required.
+Multi-phase processes with clear deliverables and acceptance criteria. Each workflow must define its main goal, and every phase must specify what it delivers and how to verify success.
+
+**Key Elements:**
+- Main Goal with success criteria
+- Phases with deliverables and acceptance criteria
+- Steps with purpose and instructions
+- Quality gates and decision points
 
 **Claude Command:** `/start:<workflow-name>` - Launch this workflow
 **In Files:** `[[workflow-name]]` to reference, `![[workflow-name]]` to embed content
@@ -185,13 +201,18 @@ graph LR
 
 ## 🤖 From Prompts to Agents
 
-When certain prompt components naturally align around a common purpose, they can be composed into agents. Benefits:
+When certain prompt components naturally align around a common purpose and main goal, they can be composed into agents. Benefits:
 - Use as **sub-agents** for specific tasks within larger workflows
 - Activate directly via **`/act:<agent-name>`** commands
 - **Reusable expertise** across all your prompts and projects
 
 ```mermaid
 graph TD
+    subgraph "Agent Core"
+        MG[🎯 Main Goal]
+        PR[🎯 Purpose & Role]
+    end
+    
     subgraph "Prompt Components"
         P1[👤 Persona]
         W1[🔄 Workflow]
@@ -209,6 +230,8 @@ graph TD
         PR3[📝 Prompt 3]
     end
     
+    MG --> A
+    PR --> A
     P1 --> A
     W1 --> A
     I1 --> A
@@ -218,6 +241,8 @@ graph TD
     A -->|"Embed: ![[flutter-developer]]"| PR2
     A -->|"Embed: ![[flutter-developer]]"| PR3
     
+    style MG fill:#663399,stroke:#fff,stroke-width:3px,color:#fff
+    style PR fill:#663399,stroke:#fff,stroke-width:3px,color:#fff
     style A fill:#663399,stroke:#fff,stroke-width:3px,color:#fff
     style P1 fill:#4a5568,stroke:#fff,color:#fff
     style W1 fill:#4a5568,stroke:#fff,color:#fff
@@ -229,11 +254,13 @@ graph TD
 ```
 
 ### Agent Composition
-An agent combines:
-- **Persona** - The expertise and characteristics
-- **Workflow** - The systematic process
-- **Instructions** - The rules and conventions
-- **Output Format** - The delivery structure
+Agents reuse the same modular components as prompts, but with behavioral focus:
+- **Main Goal** - The behavioral objective with deliverables and acceptance criteria (replaces End Goal)
+- **Persona** - Specialized expertise attributes (optional, only if enhances goal)
+- **Request** - What the agent does, verb-first specification
+- **Workflow** - Multi-step process (optional, only if needed)
+- **Instructions** - All guidance including best practices, rules, conventions, references (optional subsections, only what contributes to goal)
+- **Output Format** - How the agent delivers results (optional, only if specific format needed)
 
 ## 📋 Templates and Blocks
 
@@ -250,9 +277,10 @@ Complete document structures in `templates/`:
 
 ### Blocks
 Reusable content sections in `blocks/`:
-- Context blocks (capabilities, purpose, functions)
-- Instruction blocks (best practices, rules, standards)
-- Workflow blocks (steps, inputs, outputs)
+- **Goal blocks** (main-goal-block with deliverables and acceptance criteria)
+- **Workflow blocks** (deliverables, acceptance criteria, steps)
+- **Context blocks** (capabilities, purpose, functions)
+- **Instruction blocks** (best practices, rules, standards)
 - 40+ specialized blocks for comprehensive documentation
 
 **Claude Command:** `/add:<block-name>` - Insert this block
@@ -452,20 +480,31 @@ graph TD
 
 ## 💡 Key Principles
 
-### 1. Requirement-Driven Development
+### 1. Goal as North Star
+Artifacts define clear, measurable goals:
+- **End Goal** (Prompts): Achievement-focused objective
+- **Main Goal** (Agents/Workflows): Behavioral/process-focused objective
+
+Each goal requires:
+- **Deliverables**: Specific outputs to be produced
+- **Acceptance Criteria**: Checkable conditions for success
+
+All sections and components must align with and contribute to achieving these goals. Without clear deliverables and acceptance criteria, success cannot be measured.
+
+### 2. Requirement-Driven Development
 Begin with functional requirements rather than artifact types - understand the objective before selecting the implementation.
 
-### 2. Component Modularity
+### 3. Component Modularity
 Define components once and reference them throughout the system via wikilinks for consistency and maintainability.
 
-### 3. Progressive Enhancement
+### 4. Progressive Enhancement
 Evolution path: inline implementation → extracted components → composed agents → universal reusability.
 
-### 4. Systematic Validation
+### 5. Systematic Validation
 Apply structured questioning methodology to validate and refine each component and decision.
 
-### 5. Natural Agent Emergence
-When persona, workflow, and instructions align organically around a common purpose, they naturally form a reusable agent.
+### 6. Natural Agent Emergence
+When persona, workflow, and instructions align organically around a common purpose and main goal (behavioral focus), they naturally form a reusable agent.
 
 
 

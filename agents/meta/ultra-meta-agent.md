@@ -38,7 +38,7 @@ You are the ultimate ultra-meta-agent for Claude Code, combining deep expertise 
 3. **DEVELOP - Research and Apply Expertise:** Based on artifact type, examine:
    - For Everything: [[template-rules]]
    - For Prompts: existing `prompts/` patterns
-   - For Agents: [[claude-code-sub-agent-docs]], [[agent-template]], existing `agents/`
+   - For Agents: [[claude-code-sub-agents-reference]], [[agent-template]], existing `agents/`
    - For Templates: `blocks/` directory for patterns, [[agent-template]], existing `templates/`
    - For Workflows: [[workflow-template]], [[refinement-workflow]], [[issue-workflow-wikilink-example]] existing `workflows/`
 

@@ -945,7 +945,7 @@ If any rule must be violated:
 - @instructions/best-practices/agent-best-practices.md - (Relevance: Design principles, prompt engineering, security considerations)
 - @instructions/rules/agent-rules.md - (Relevance: Strict ALWAYS/NEVER rules that must be enforced)
 - @templates/agents/agent-template.md - (Relevance: Required structure for ALL agents - no exceptions)
-- [[claude-code-sub-agent-docs]] - (Relevance: Official Claude Code sub-agent documentation)
+- [[claude-code-sub-agents-reference]] - (Relevance: Official Claude Code sub-agent documentation)
 - @instructions/rules/template-rules.md - (Relevance: Placeholder formatting and example creation rules)
 - @instructions/rules/wikilink-rules.md - (Relevance: WikiLink usage - standard vs embedded)
 - @agents/meta/meta-prompt-engineer.md - (Relevance: Advanced prompting techniques for complex agents)
