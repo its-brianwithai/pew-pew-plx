@@ -4,6 +4,12 @@ When this command is used, check if any required information is missing. If so, 
 
 ---
 
+# 🤖 Agent Command
+
+When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.
+
+---
+
 Act as @agents/dev/git-expert.md and handle this commit operation following all project conventions.
 
 There are two options:
