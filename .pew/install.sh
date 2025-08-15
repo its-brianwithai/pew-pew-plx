@@ -37,13 +37,18 @@ if [ -d "$PEW_DIR" ]; then
     echo -e "${BLUE}💡 If you just want to sync existing files, run:${NC}"
     echo -e "${BLUE}   make -f .pew/Makefile sync claude${NC}"
     echo
-    read -p "Continue with installation? (y/N): " -r < /dev/tty
+    
+    # Use exec to redirect stdin from tty for piped execution
+    exec < /dev/tty
+    read -p "Continue with installation? (y/N): " -r
     echo
+    
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         echo -e "${BLUE}ℹ️  Installation cancelled. To sync existing framework files, run:${NC}"
         echo -e "${BLUE}   make -f .pew/Makefile sync claude${NC}"
         exit 0
     fi
+    
     echo -e "${YELLOW}🗑️  Removing existing .pew/ directory...${NC}"
     rm -rf "$PEW_DIR"
 fi
