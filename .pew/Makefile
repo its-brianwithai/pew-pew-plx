@@ -47,18 +47,21 @@ ifneq ($(word 2,$(MAKECMDGOALS)),)
 		unzip -q .fetched_repo.zip || { echo "❌ Failed to extract files."; rm -f .fetched_repo.zip; exit 1; }; \
 		extracted_dir="pew-pew-workspace-$$branch"; \
 	fi; \
-	echo "📁 Updating project files..."; \
+	echo "📁 Updating framework files inside .pew/ directory..."; \
 	cd "$$extracted_dir" && \
-	if [ -f .plxignore ]; then \
-		rsync -av --exclude-from=.plxignore . ../ ; \
-	else \
-		cp -R * ../ ; \
-		cp -R .[^.]* ../ 2>/dev/null || true ; \
+	if [ -d ".pew" ]; then \
+		cp -R .pew/* ../.pew/ 2>/dev/null || true; \
 	fi; \
+	for dir in agents prompts templates workflows instructions modes blocks output-formats personas; do \
+		if [ -d "$$dir" ]; then \
+			mkdir -p "../.pew/$$dir" && cp -R "$$dir"/* "../.pew/$$dir/" 2>/dev/null || true; \
+		fi; \
+	done; \
 	cd ..; \
 	echo "🧹 Cleaning up..."; \
 	rm -rf "$$extracted_dir" .fetched_repo.zip; \
-	echo "✅ Pull complete!"
+	echo "✅ Pull complete! Framework files updated inside .pew/."; \
+	echo "🔄 Run 'make -f .pew/Makefile sync claude' to apply changes."
 else
 	@echo "Usage:"
 	@echo "  make pull <branch>                    # Pull from pew-pew-workspace repository"
