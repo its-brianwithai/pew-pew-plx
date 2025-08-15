@@ -1,7 +1,6 @@
 ---
 name: requirements-template
 description: Use this template when in Phase 2 of the plan workflow to expand high-level requirements into detailed activity flows and identify all deliverables needed for implementation.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-wl-example]] to reference them. Do not include the file extension or path.
 ---
 # Template Command
 
@@ -27,9 +26,9 @@ When this command is used, use the following template. Acknowledge your understa
 ### Requirement: [[requirement-name]]
 
 #### Happy Flow
-1. [[actor]] opens [[component-wl-example]]
+1. @.claude/commands/plx/create/actor.md opens [[component-wl-example]]
 2. [[component-wl-example]] displays [what is shown]
-3. [[actor]] selects [option/action]
+3. @.claude/commands/plx/create/actor.md selects [option/action]
 4. [[system]] validates [what is validated]
 5. [[component-wl-example]] updates to show [new state]
 6. [[system]] stores [what is persisted]
@@ -51,7 +50,7 @@ When this command is used, use the following template. Acknowledge your understa
 <example>
 ### Flow: [[activity-flow-name]]
 
-#### Step 1: [[actor]] opens [[component-wl-example]]
+#### Step 1: @.claude/commands/plx/create/actor.md opens [[component-wl-example]]
 **Deliverables needed:**
 - [[navigation-component]] Link/button to access the component
   - Owner: [[frontend-team]]

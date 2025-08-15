@@ -21,6 +21,8 @@ sync_sources:
     - .pew/collections
   concepts:
     - .pew/concepts
+  references:
+    - .pew/references
 
 delete_before_sync_targets:
   - .claude/agents
@@ -53,3 +55,5 @@ sync_targets:
     - .claude/commands/collect/
   concepts:
     - .claude/commands/understand/
+  references:
+    - .claude/commands/refer/

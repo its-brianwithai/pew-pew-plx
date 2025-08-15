@@ -14,7 +14,7 @@ When this command is used, use the following block. Acknowledge your understandi
 
 ```
 <example>
-Enable [[actor]] to [[primary-action]] so they can [[desired-outcome]]
+Enable @.claude/commands/plx/create/actor.md to [[primary-action]] so they can [[desired-outcome]]
 </example>
 ```
 
@@ -35,23 +35,23 @@ Enable [[actor]] to [[primary-action]] so they can [[desired-outcome]]
 ```
 <example>
 **Happy Flow:**
-- **GIVEN** [[actor]] is in [[initial-state]] 
+- **GIVEN** @.claude/commands/plx/create/actor.md is in [[initial-state]] 
 - **AND** [[precondition]] exists
-- **WHEN** [[actor]] performs [[action]]
-- **AND** [[actor]] interacts with [[component-wl-example]]
+- **WHEN** @.claude/commands/plx/create/actor.md performs [[action]]
+- **AND** @.claude/commands/plx/create/actor.md interacts with [[component-wl-example]]
 - **THEN** [[expected-outcome]] occurs
 - **AND** [[system-actor]] responds with [[system-response]]
 
 **Alternative Flow ([Alternative Name]):**
-- **GIVEN** [[actor]] is in [[alternative-state]]
-- **WHEN** [[actor]] chooses [[alternative-action]]
+- **GIVEN** @.claude/commands/plx/create/actor.md is in [[alternative-state]]
+- **WHEN** @.claude/commands/plx/create/actor.md chooses [[alternative-action]]
 - **THEN** [[alternative-outcome]] occurs
 
 **Error Flow ([Error Type]):**
-- **GIVEN** [[actor]] encounters [[error-condition]]
-- **WHEN** [[actor]] attempts [[failed-action]]
+- **GIVEN** @.claude/commands/plx/create/actor.md encounters [[error-condition]]
+- **WHEN** @.claude/commands/plx/create/actor.md attempts [[failed-action]]
 - **THEN** [[error-message]] is displayed
-- **AND** [[actor]] can [[recovery-action]]
+- **AND** @.claude/commands/plx/create/actor.md can [[recovery-action]]
 </example>
 ```
 

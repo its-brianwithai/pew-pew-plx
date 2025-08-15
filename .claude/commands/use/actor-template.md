@@ -1,7 +1,6 @@
 ---
 name: actor-template
 description: Use this template to describe a specific actor within this project. An actor is a person or system that can perform actions or assume certain states.
-instructions: Make sure that when you implement this template, you don't include these instructions or any other front matter from this template in your work. Output should always and only be the markdown part outside of the front matter. Never include any tags like <example>, <commentary>, or similar tags - these serve only to increase clarity about implementation. Always use single [ ] brackets to indicate instructions the implementer should follow. When referencing other documents from this project, use wikilinks format [[filename-wl-example]] to reference them. Do not include the file extension or path.
 ---
 # Template Command
 
@@ -20,10 +19,11 @@ When this command is used, use the following template. Acknowledge your understa
 
 [One-liner that summarizes the core purpose of the actor.]
 
-## 🔑 Key Interactions
-> 💡 *What are the main ways this actor interacts with the system or project?*
+## 🎭 Key Roles
+> 💡 *What are the main roles this actor can assume or perform? Reference role documents when available using wikilinks.*
 
-- [Interaction 1, e.g., Creates new prompts using the framework]
-- [Interaction 2, e.g., Executes workflows to generate plans]
-- [Interaction 3, e.g., Contributes new agents to the framework]
+- [[role-name-wl-example]] - [Brief context of how this actor fulfills this role]
+- [[another-role-wl-example]] - [Brief context of how this actor fulfills this role]
+- [Direct role description if no role document exists yet]
+- [...]
 ````````````

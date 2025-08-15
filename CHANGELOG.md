@@ -4,10 +4,10 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### ✨ Features:
-- **Interaction System**: New interaction framework for describing reusable actions that actors can perform
-  - Added `create-interaction` prompt for generating interaction documents
-  - Added `interaction-template` for structured interaction documentation
-  - Organized interactions by concept categories (commerce, content, engagement, operations, planning)
+- **Activity System**: New activity framework for describing reusable actions that actors can perform
+  - Added `create-activity` prompt for generating activity documents
+  - Added `activity-template` for structured activity documentation
+  - Organized activities by concept categories (commerce, content, engagement, operations, planning)
 - **Project Sync Workflow**: New `sync-to-ppw` prompt for copying artifacts from project `.pew/` folder to main repository
 - **Scope Integrity Concept**: New concept to prevent AI over-engineering by ensuring agents create exactly what's requested without assumptions or unsolicited improvements
 - **Enhanced GitHub Release Workflow**: Comprehensive `create-github-release` prompt that handles documentation validation, changelog versioning, tagging, and release creation
@@ -22,6 +22,12 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 - **Dynamic Project Key Detection**: GitHub release workflow now detects project key from commit history instead of hardcoding
 - **Modular Prompt Architecture**: Aligned sync prompts with proper embedding hierarchy for better maintainability
 - **Backward Compatible Sync**: Updated sync scripts maintain compatibility with old YAML configurations
+
+### 🐛 Bug fixes:
+- **References Sync**: Fixed "folder-structure-reference not found" error during `make sync claude` by:
+  - Added references configuration to `.pew/plx.yaml` sync sources and targets
+  - Updated install script to copy references to `.pew/references` instead of project root
+  - Ensured embedded wikilinks can resolve references during sync process
 
 ## [v0.5.0] - 2025-08-13
 

@@ -13,12 +13,19 @@ You are about to pull the latest framework updates and sync with Claude Code.
 
 This command will:
 1. **Pull Latest Framework**: Download the latest updates from the main branch of pew-pew-workspace
-2. **Sync with Claude**: Apply those updates to your `.claude` directory based on the configuration in `.pew/plx.yaml`
+2. **Sync with Claude**: Apply those updates to your `.claude` directory
 
-The sync automatically handles cleaning and updating your `.claude` directory as needed.
+## Step 1: Pull Latest Framework Updates
 
-Run the following commands from the project root:
+Run the following command from the project root:
 ```bash
 make -f .pew/Makefile pull main
-make -f .pew/Makefile sync claude
 ```
+
+## Step 2: Sync with Claude Code
+
+You are about to sync your project with Claude Code.
+
+This will update your agents and commands based on the configuration in `.pew/plx.yaml`. The sync automatically handles cleaning and updating your `.claude` directory as needed.
+
+Run `make -f .pew/Makefile sync claude` from the project root.

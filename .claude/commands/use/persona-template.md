@@ -1,6 +1,6 @@
 ---
-instructions: We use this template to describe a specific persona within the project. A persona is a fictional character created to represent a user type that might use a site, brand, or product in a similar way. Personas are useful in considering the goals, desires, and limitations of users in order to help guide decisions about a service, product or interaction space such as features, interactions, and visual design of a website.
-
+name: persona-template
+description: Use this template to create a detailed persona that represents a user archetype. This helps in understanding user needs, goals, and frustrations within the context of your project.
 ---
 # Template Command
 

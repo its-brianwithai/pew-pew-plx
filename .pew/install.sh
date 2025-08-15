@@ -75,11 +75,11 @@ else
     done
 fi
 
-# Copy references directory (not in sync_sources, goes to project root)
+# Copy references directory to .pew/references for sync compatibility
 if [ -d "$TEMP_DIR/references" ]; then
     echo "  Copying references..."
-    mkdir -p "$PROJECT_ROOT/references"
-    cp -r "$TEMP_DIR/references"/* "$PROJECT_ROOT/references"/ 2>/dev/null || true
+    mkdir -p "$PEW_DIR/references"
+    cp -r "$TEMP_DIR/references"/* "$PEW_DIR/references"/ 2>/dev/null || true
 fi
 
 echo -e "${BLUE}🔄 Running initial sync...${NC}"
