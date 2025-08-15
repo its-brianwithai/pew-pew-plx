@@ -47,22 +47,39 @@ if [ -d "$TEMP_DIR/.pew" ]; then
     cp -r "$TEMP_DIR/.pew"/* "$PEW_DIR"/
 fi
 
-echo -e "${BLUE}📋 Copying framework content...${NC}"
-# Copy framework content from root directories to .pew subdirectories
-for dir in agents prompts templates workflows instructions modes blocks output-formats personas collections concepts; do
-    if [ -d "$TEMP_DIR/$dir" ]; then
-        echo "  Copying $dir..."
-        mkdir -p "$PEW_DIR/$dir"
-        cp -r "$TEMP_DIR/$dir"/* "$PEW_DIR/$dir"/ 2>/dev/null || true
-    fi
-done
+echo -e "${BLUE}📋 Copying framework content based on YAML config...${NC}"
+# Use YAML parser to get source directories and copy them properly
+YAML_PARSER="$PEW_DIR/scripts/claude-code/plx-yaml-parser.sh"
+if [ -f "$YAML_PARSER" ]; then
+    for type in $("$YAML_PARSER" list_source_types); do
+        while IFS= read -r source; do
+            [ -z "$source" ] && continue
+            # Remove .pew/ prefix to get the actual directory name
+            source_dir=$(echo "$source" | sed 's|^\.pew/||')
+            if [ -d "$TEMP_DIR/$source_dir" ]; then
+                echo "  Copying $source_dir to $source..."
+                mkdir -p "$PROJECT_ROOT/$source"
+                cp -r "$TEMP_DIR/$source_dir"/* "$PROJECT_ROOT/$source"/ 2>/dev/null || true
+            fi
+        done < <("$YAML_PARSER" get_sources "$type")
+    done
+else
+    echo "⚠️  YAML parser not found, using fallback copy method"
+    # Fallback: copy to .pew/ subdirectories
+    for dir in agents prompts templates workflows instructions modes blocks output-formats personas collections concepts; do
+        if [ -d "$TEMP_DIR/$dir" ]; then
+            echo "  Copying $dir..."
+            mkdir -p "$PEW_DIR/$dir"
+            cp -r "$TEMP_DIR/$dir"/* "$PEW_DIR/$dir"/ 2>/dev/null || true
+        fi
+    done
+fi
 
-# Copy references if they exist
-if [ -d "$PROJECT_ROOT/references" ]; then
-    echo "  Found existing references directory, keeping it..."
-elif [ -d "$TEMP_DIR/references" ]; then
+# Copy references directory (not in sync_sources, goes to project root)
+if [ -d "$TEMP_DIR/references" ]; then
     echo "  Copying references..."
-    cp -r "$TEMP_DIR/references" "$PROJECT_ROOT/"
+    mkdir -p "$PROJECT_ROOT/references"
+    cp -r "$TEMP_DIR/references"/* "$PROJECT_ROOT/references"/ 2>/dev/null || true
 fi
 
 echo -e "${BLUE}🔄 Running initial sync...${NC}"
