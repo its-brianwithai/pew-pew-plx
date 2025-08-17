@@ -4,6 +4,11 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### ✨ Features:
+- **Pew Prompt**: Ultimate starting point prompt for any task in any project
+  - Systematically discovers user requirements through iterative questioning
+  - Assembles perfect modular prompts from reusable components
+  - Works across any project with or without existing framework components
+  - Applies context rot awareness to maintain clean, focused outputs
 - **Parallel Execution System**: New `run-in-parallel` prompt for coordinating multiple simultaneous tasks
 - **Flutter Team Workflow**: New `flutter-team-workflow` for organizing Flutter development teams and processes
 - **Activity System**: New activity framework for describing reusable actions that actors can perform
