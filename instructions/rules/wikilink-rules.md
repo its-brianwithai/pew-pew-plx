@@ -2,13 +2,13 @@
 name: wikilink-rules
 description: "Rules for using wikilinks and embedded wikilinks in documentation."
 ---
-## 📏 Rules
+## 📏 Wikilink Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
 
 ### 👍 Always
 
 - WHEN referencing project documents ALWAYS use wikilinks WITHOUT backticks to reference other relevant project documents.
-  - Example: [[relevant-document]]
+  - Example: [[relevant-document-wl-example]]
 - WHEN creating example wikilinks that don't reference real files ALWAYS end them with "-wl-example".
   - Example: [[filename-wl-example]]
   - Example: ![[embedded-content-wl-example]]
@@ -48,8 +48,8 @@ description: "Rules for using wikilinks and embedded wikilinks in documentation.
 
 #### Regular WikiLink Reference
 ```markdown
-For more details, see [[agent-template]] for the standard structure.
-The [[template-rules]] define formatting standards.
+For more details, see [[agent-template-wl-example]] for the standard structure.
+The [[template-rules-wl-example]] define formatting standards.
 ```
 
 #### Embedded WikiLink (Content Inclusion)
@@ -70,10 +70,10 @@ Additional project-specific steps:
 #### Never Wrap in Backticks
 ```markdown
 # Wrong
-See `[[agent-template]]` for details.
+See `[[agent-template-wl-example]]` for details.
 
 # Right
-See [[agent-template]] for details.
+See [[agent-template-wl-example]] for details.
 ```
 
 #### Never Use Embedded WikiLinks Inline

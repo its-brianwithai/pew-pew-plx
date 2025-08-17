@@ -4,7 +4,6 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### ✨ Features:
-- **Team Creation Workflow**: New `create-team` prompt for structured team setup and organization
 - **Parallel Execution System**: New `run-in-parallel` prompt for coordinating multiple simultaneous tasks
 - **Flutter Team Workflow**: New `flutter-team-workflow` for organizing Flutter development teams and processes
 - **Activity System**: New activity framework for describing reusable actions that actors can perform
@@ -17,6 +16,8 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 - **Pull-Sync-Claude Prompt**: New workflow combining framework updates with Claude sync in one command
 - **Clean Sync with Backup**: New `plx-pull-sync-claude-clean` prompt that backs up current `.pew`, performs pull-sync, and restores on failure
 - **Single-Verb Prompt Routing**: YAML configuration now supports separate routing for single-verb vs verb-subject prompts
+- **Tech Issue Creation**: New `create-tech-issue` prompt for generating technical issue documentation
+- **GPT-5 Prompting Guide**: Added comprehensive GPT-5 prompting guide reference for advanced AI interactions
 
 ### 🛠️ Improvements:
 - **Template Enhancements**: Updated numerous templates with improved structure and WikiLink references across meta, plan, and agent templates

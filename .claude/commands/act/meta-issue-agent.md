@@ -364,13 +364,13 @@ Even if the actual content has bullets, sub-bullets, multiple levels, categories
 </example>
 ```
 
-## 📏 Rules
+## 📏 Wikilink Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
 
 ### 👍 Always
 
 - WHEN referencing project documents ALWAYS use wikilinks WITHOUT backticks to reference other relevant project documents.
-  - Example: [[relevant-document]]
+  - Example: [[relevant-document-wl-example]]
 - WHEN creating example wikilinks that don't reference real files ALWAYS end them with "-wl-example".
   - Example: [[filename-wl-example]]
   - Example: ![[embedded-content-wl-example]]
@@ -410,8 +410,8 @@ Even if the actual content has bullets, sub-bullets, multiple levels, categories
 
 #### Regular WikiLink Reference
 ```markdown
-For more details, see @templates/agents/agent-template.md for the standard structure.
-The @instructions/rules/template-rules.md define formatting standards.
+For more details, see [[agent-template-wl-example]] for the standard structure.
+The [[template-rules-wl-example]] define formatting standards.
 ```
 
 #### Embedded WikiLink (Content Inclusion)
@@ -432,10 +432,10 @@ Additional project-specific steps:
 #### Never Wrap in Backticks
 ```markdown
 # Wrong
-See `@templates/agents/agent-template.md` for details.
+See `[[agent-template-wl-example]]` for details.
 
 # Right
-See @templates/agents/agent-template.md for details.
+See [[agent-template-wl-example]] for details.
 ```
 
 #### Never Use Embedded WikiLinks Inline
@@ -493,13 +493,13 @@ Scope Integrity ensures that agents maintain absolute fidelity to the user's req
 
 This principle ensures that users get exactly what they asked for, following the project's established way of doing things, without unwanted additions or interpretations.
 
-## 📏 Rules
+## 📏 Wikilink Rules
 > 💡 *Specific ALWAYS and NEVER rules that must be followed without exception.*
 
 ### 👍 Always
 
 - WHEN referencing project documents ALWAYS use wikilinks WITHOUT backticks to reference other relevant project documents.
-  - Example: [[relevant-document]]
+  - Example: [[relevant-document-wl-example]]
 - WHEN creating example wikilinks that don't reference real files ALWAYS end them with "-wl-example".
   - Example: [[filename-wl-example]]
   - Example: ![[embedded-content-wl-example]]
@@ -539,8 +539,8 @@ This principle ensures that users get exactly what they asked for, following the
 
 #### Regular WikiLink Reference
 ```markdown
-For more details, see @templates/agents/agent-template.md for the standard structure.
-The @instructions/rules/template-rules.md define formatting standards.
+For more details, see [[agent-template-wl-example]] for the standard structure.
+The [[template-rules-wl-example]] define formatting standards.
 ```
 
 #### Embedded WikiLink (Content Inclusion)
@@ -561,10 +561,10 @@ Additional project-specific steps:
 #### Never Wrap in Backticks
 ```markdown
 # Wrong
-See `@templates/agents/agent-template.md` for details.
+See `[[agent-template-wl-example]]` for details.
 
 # Right
-See @templates/agents/agent-template.md for details.
+See [[agent-template-wl-example]] for details.
 ```
 
 #### Never Use Embedded WikiLinks Inline
@@ -996,7 +996,7 @@ pew-pew-workspace
    - **For existing content** → Execute make workflow (@prompts/make-issue.md)
    - **For updates** → Execute update workflow (@prompts/update-issue.md)
    - Apply domain-specific prompts:
-     - Tech → [[create-tech-issue]], @prompts/make-tech-issue.md, @prompts/update-tech-issue.md
+     - Tech → @prompts/create-tech-issue.md, [[make-tech-issue]], [[update-tech-issue]]
      - Operations → @prompts/create-operations-issue.md, @prompts/make-operations-issue.md, @prompts/update-operations-issue.md
      - Marketing → @prompts/create-marketing-issue.md, @prompts/make-marketing-issue.md, @prompts/update-marketing-issue.md
      - Sales → @prompts/create-sales-issue.md, @prompts/make-sales-issue.md, @prompts/update-sales-issue.md
