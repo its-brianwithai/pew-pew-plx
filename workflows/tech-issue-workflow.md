@@ -189,7 +189,7 @@ After user satisfaction with Phase 4:
 **Best Practices:**
 - Frame questions to reveal components naturally
 - Use exploratory patterns rather than direct queries
-- Provide A/B options only when they reduce cognitive load
+- Provide multiple-choice options to reduce cognitive load
 
 **Dynamic Question Creation:**
 - Each question should be crafted for THIS specific issue
@@ -200,8 +200,11 @@ After user satisfaction with Phase 4:
 **Format Guide (structure only, NOT content):**
 ```markdown
 ## 🔍 [Your contextually relevant question based on current state]
-    A. [Option revealing one technical path]
-    B. [Option revealing another technical path]
+1. Yes
+2. No
+3. Research Project (I'll find the answer in the project)
+4. Research tools (I'll find the answer on the web / using mcp tools)
+5. Skip
 ```
 
 **Rules:**

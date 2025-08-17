@@ -15,7 +15,7 @@ Create a new questions document for the current context and activate questions d
 
 **Goal:** [Clearly state the interpreted goal based on user's request]
 
-Please answer the questions in each section by placing an X in the checkbox for your choice.
+Please answer the questions in each section by providing the number of your choice.
 When you're done with a section, please reply with "done".
 
 ---
@@ -23,13 +23,20 @@ When you're done with a section, please reply with "done".
 ## 🎯 Initial Questions - Iteration 1
 *[Mark complete when done: [ ]]*
 
-[Create comprehensive yes/no questions following these priorities:]
-- **Prefer YES/NO questions** to reduce cognitive load
+[Create comprehensive questions that can be answered with one of the options below, following these priorities:]
+- **Prefer questions answerable with Yes/No** to reduce cognitive load
 - Focus on maximum value in four areas:
   - 🔧 **Improve**: What can be enhanced?
   - ➕ **Add**: What new elements are needed?
   - ➖ **Remove**: What should be eliminated?
   - 🚫 **Exclude**: What should be ruled out?
+
+**Answer options for all questions:**
+1. Yes
+2. No
+3. Research Project (I'll find the answer in the project)
+4. Research tools (I'll find the answer on the web / using mcp tools)
+5. Skip
 
 ---
 
@@ -58,7 +65,7 @@ If you have any additional context or requirements not covered above, please add
 
 <constraints>
 - ALWAYS create only ONE questions document per context
-- ALWAYS use yes/no format when possible
+- ALWAYS use the 5-option format when possible
 - ALWAYS organize by value type (Improve/Add/Remove/Exclude)
 - ALWAYS include space for additional context
 - NEVER create multiple question documents for same context
