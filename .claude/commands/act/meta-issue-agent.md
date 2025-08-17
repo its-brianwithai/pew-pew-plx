@@ -996,7 +996,7 @@ pew-pew-workspace
    - **For existing content** → Execute make workflow (@prompts/make-issue.md)
    - **For updates** → Execute update workflow (@prompts/update-issue.md)
    - Apply domain-specific prompts:
-     - Tech → @prompts/create-tech-issue.md, @prompts/make-tech-issue.md, @prompts/update-tech-issue.md
+     - Tech → [[create-tech-issue]], @prompts/make-tech-issue.md, @prompts/update-tech-issue.md
      - Operations → @prompts/create-operations-issue.md, @prompts/make-operations-issue.md, @prompts/update-operations-issue.md
      - Marketing → @prompts/create-marketing-issue.md, @prompts/make-marketing-issue.md, @prompts/update-marketing-issue.md
      - Sales → @prompts/create-sales-issue.md, @prompts/make-sales-issue.md, @prompts/update-sales-issue.md

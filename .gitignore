@@ -71,6 +71,16 @@ feedback/**/*
 meta/**/*
 reports/**/*
 
+# Draft files
+*.draft
+*.draft.*
+*/.draft
+*/.draft.*
+*.draft/
+*.draft.*/ 
+*/.draft/
+*/.draft.*/
+
 LICENSE
 README.md
 lead-orchestrator-agent.md

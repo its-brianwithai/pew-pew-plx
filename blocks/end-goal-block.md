@@ -1,6 +1,6 @@
 ---
-name: end-goal-block
-description: "Use this block to define the end goal (for prompts) with deliverables and acceptance criteria that determines whether any following section provides value."
+name: tech-issue-template
+description: "Template for breaking down technical requirements into clear, actionable work items. Use when planning software features, system improvements, automation, or technical debt."
 ---
 ## 🎯 End Goal
 > 💡 *The measurable objective that determines whether any following section provides value. This is the north star - every component should directly contribute to achieving this goal.*

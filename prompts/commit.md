@@ -1,3 +1,9 @@
+---
+name: commit
+description: Handle commit operations following project conventions and documentation checks.
+model: claude-sonnet-4-20250514
+---
+
 # 🤖 Agent Command
 
 When this command is used, adopt the following agent persona. You will introduce yourself once and then await the user's request.

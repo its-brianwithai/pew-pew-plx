@@ -1,8 +1,14 @@
+---
+name: commit
+description: Handle commit operations following project conventions and documentation checks.
+model: claude-sonnet-4-20250514
+---
 # Prompt Command
 
 When this command is used, check if any required information is missing. If so, ask the user to provide it. Otherwise, proceed with the request.
 
 ---
+
 
 # 🤖 Agent Command
 

@@ -2,213 +2,152 @@
 name: tech-issue-template
 description: "Template for breaking down technical requirements into clear, actionable work items. Use when planning software features, system improvements, automation, or technical debt."
 ---
-# [Fitting Emoji] Issue: [Feature Name]
+# [Fitting Emoji] Issue: [Descriptive Title]
+> 💡 *[Descriptive subtitle]*
 
-[Brief description of the feature or capability]
+[Brief description of the problems we are going to solve, why we are going to solve them and how we plan to do it.]
 
 ---
 
-## 📝 Initial Requirement
+## 🎯 End Goal
+> 💡 *What do you want to achieve?*
+
+[The single, clear, measurable outcome we want to achieve. Everything that follows must contribute to achieving this goal.]
+
+---
+
+## 📝 Initial Requirements
 *What should the system/user be able to do or be?*
 
-### Requirements
-[List specific capabilities as simple English sentences. Be as specific as possible, break down if needed]
+[Specific capabilities listed as simple English sentences starting with an actor and the verb first high level requirement]
 
-```
-<example>
-NOTE: These are example TYPES only - replace with actual requirements relevant to your specific issue
-1. **User** should be able to [authentication action, data entry action, navigation action]
-2. **System** should [automatic behavior, scheduled task, validation rule]
-3. **Admin** should be able to [management action, configuration change, monitoring task]
-- [More actor-based requirements as needed for the specific issue context]
+- [Actor]
+    - [Verb first high level requirement]
+    - [More high level requirements if needed]
+    - [...]
+
+- [More actors if needed]
+
 - [...]
-</example>
-```
 
 ---
 
-## 🌊 Actor Flow
-*How does this look in terms of sequential events?*
+## 🏗️ Components
+> 💡 *What should exist and what does it do?*
 
-### Event Sequence
-[Create a single list of events with actors using verb-subject pattern]
+[Hierarchical breakdown from initial requirement to high-level components to atomic parts and verb-first lists of what each component should be able to do or be]
 
-```
-<example>
-NOTE: These are example TYPES only - replace with actual events relevant to your specific issue
-1. **User** → initiates → [login process, registration flow, data submission]
-   - Data: [user credentials, form inputs, file uploads]
-2. **System** → validates → [input data, user permissions, business rules]
-   - Data: [validation results, error messages, processed data]
-3. **System** → stores → [user data, transaction records, audit logs]
-   - Data: [database records, file storage, cache entries]
-4. **User** → receives → [confirmation message, result display, next steps]
-   - Data: [success indicators, processed results, navigation options]
-- [More sequential events as needed for the specific flow]
+- [Verb first high level requirement]
+    - [Component]
+        - [Sub-subcomponent]
+            - [Verb capability or state]
+            - [More verb capabilities or states if needed]
+            - [...]
+        - [More sub-subcomponents if needed]
+        - [...]
+
+- [More verb first high level requirements if needed]
+
 - [...]
-</example>
-```
-
-### Flow Diagram
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant S as System
-    participant D as Database
-    
-    U->>S: [Action]
-    S->>D: [Query/Store]
-    D-->>S: [Response]
-    S-->>U: [Result]
-```
 
 ---
+
+## 📝 Properties
+> 💡 *What identifies a component? What can be configured? What can change?*
+
+[The values and configurations that determine a components identity and possible states]
+
+- [Component]
+    - [Property]: [Description of the property]
+    - [More properties if needed]
+    - [...]
+        - [Sub-component]
+            - [Property]: [Description of the property]
+            - [More properties if needed]
+            - [...]
+
+- [More components if needed]
+
+- [...]
+
+# 🛠️ Behaviours
+> 💡 *Which states or events should the component act upon? How should it behave when nothing happens?*
+
+[How a component should act when a state is, or an event happens]
+
+- [Component]
+    - [State or event]
+        - Should [Behaviour]
+        - [More behaviours if needed]
+        - [...]
+            - [Sub-component]
+                - [State or event]
+                    - Should [Behaviour]
+                    - [More behaviours if needed]
+                    - [...]
 
 ## 📦 Deliverables
-*Tangible components to create/update/delete per event*
+> 💡 *Which components should be created together?*
 
-[List what needs to be created, updated, or deleted for each event]
+[Components packaged together as unified testable units]
 
-```
-<example>
-NOTE: These are example TYPES only - replace with actual deliverables relevant to your specific issue
-### Event 1: [User authentication event, data submission event, navigation event]
-- **Create**: [new session object, user record, authentication token]
-- **Update**: [user status, last login timestamp, activity log]
-- **Delete**: [expired sessions, temporary data, old tokens]
+- [Deliverable]
+    - [Component]
+        - [Sub-subcomponent]
+        - [More sub-subcomponents if needed]
+        - [...]
+    - [More components if needed]
+    - [...]
 
-### Event 2: [System processing event, validation event, calculation event]
-- **Create**: [processing result, validation report, calculated values]
-- **Update**: [system state, processing queue, metrics]
+- [More deliverables if needed]
 
-### Event 3: [Data storage event, notification event, completion event]
-- **Create**: [database record, notification entry, completion flag]
-
-[More events and their deliverables as needed for the specific issue]
-[...]
-</example>
-```
-
-### Component Connection Diagram
-```mermaid
-graph LR
-    E1[Event 1] --> C1[Component A]
-    E1 --> C2[Component B]
-    E2[Event 2] --> C2
-    E2 --> C3[Component C]
-    E3[Event 3] --> C3
-    E3 --> C4[Component D]
-```
+- [...]
 
 ---
 
-## ✅ Acceptance Criteria
+## 🚀 Checkpoints
+> 💡 *Which deliverables should be released together? How do we determine their successful completion?*
 
-### What should always go right?
-[List specific conditions that must always work correctly]
+[Chronological breaking points with deliverables and their acceptance criteria that can be worked on in parallel, tested, and potentially released.]
 
-```
-<example>
-NOTE: These are example TYPES only - replace with actual success conditions relevant to your specific issue
-- [ ] [User authentication success conditions, data validation passes, system responses]
-- [ ] [Data persistence guarantees, transaction completions, state consistency]
-- [ ] [Performance requirements, response times, availability metrics]
-- [ ] [More success conditions as needed based on the specific issue context]
-- [ ] [...]
-</example>
-```
+- [Checkpoint]
+    - [Deliverable]
+        - [Acceptance criteria]
+        - [More acceptance criteria if needed]
+        - [...]
+    - [More deliverables if needed]
+    - [...]
 
-### What should never go wrong?
-[List failures that must be prevented]
+- [More checkpoints if needed]
 
-```
-<example>
-NOTE: These are example TYPES only - replace with actual failure conditions relevant to your specific issue
-- [ ] [Security breaches, unauthorized access, data leaks]
-- [ ] [Data corruption, loss of information, inconsistent states]
-- [ ] [System crashes, infinite loops, resource exhaustion]
-- [ ] [More failure conditions as needed based on the specific issue context]
-- [ ] [...]
-</example>
-```
-
-### What should always be?
-[List conditions that must always be true]
-
-```
-<example>
-NOTE: These are example TYPES only - replace with actual invariant conditions relevant to your specific issue
-- [ ] [System availability states, data integrity conditions, security postures]
-- [ ] [Performance baselines, compliance standards, quality metrics]
-- [ ] [User access controls, audit trails, backup states]
-- [ ] [More invariant conditions as needed based on the specific issue context]
-- [ ] [...]
-</example>
-```
-
-### What should never be?
-[List conditions that must always be false]
-
-```
-<example>
-NOTE: These are example TYPES only - replace with actual prohibited conditions relevant to your specific issue
-- [ ] [Invalid states, unauthorized conditions, data inconsistencies]
-- [ ] [Security vulnerabilities, performance degradations, compliance violations]
-- [ ] [Orphaned resources, dangling references, circular dependencies]
-- [ ] [More prohibited conditions as needed based on the specific issue context]
-- [ ] [...]
-</example>
-```
+- [...]
 
 ---
 
-## 🎯 Implementation Checkpoints
-*Break down deliverables into testable, deployable increments*
+## ⏱️ Effort Breakdown & Estimates
+> 💡 *How long will it take?*
 
-### Checkpoint Planning
-[Identify natural breaking points where work can be committed, tested, and potentially released]
+[The ideal and most likely outcome for design, refinement, front-end, back-end and operational work, where QA is calculated as 25% of core work, testing as 15% and and contingency buffer defaults to 10% of total work, but should be increased if there is a high risk of unforeseen problems along the way.]
 
-```
-<example>
-NOTE: These are example checkpoint types - replace with actual checkpoints for your issue
-### Checkpoint 1: [Foundation/MVP]
-**Scope:** [Minimal working implementation]
-**Events:** [Which events from Actor Flow are included]
-**Deliverables:** [Subset of deliverables from this checkpoint]
-**Can ship:** Yes/No
-**Acceptance:**
-- [ ] [Specific testable criteria for this checkpoint]
-- [ ] [System stable at this point]
-- [ ] [Ready for PR/commit]
+### Core Work Estimates
 
-### Checkpoint 2: [Core Feature]
-**Scope:** [Main functionality]
-**Events:** [Additional events included]
-**Deliverables:** [Additional deliverables]
-**Can ship:** Yes/No
-**Acceptance:**
-- [ ] [Specific criteria for this checkpoint]
-- [ ] [Integration with CP1 verified]
-- [ ] [Ready for feedback]
+| Work Type      | Hours       | Reasoning                                                                         |
+|:---------------|:------------|:----------------------------------------------------------------------------------|
+| **Design**     | [ X ]       | [ Explanation of design effort needed, or 0 if none ]                             |
+| **Refinement** | [ X ]       | [ Effort needed for planning, detailing requirements, and refining the approach ] |
+| **Front-end**  | [ X ]       | [ Front-end development tasks (UI implementation, state management, etc.) ]       |
+| **Backend**    | [ X ]       | [ Backend development tasks (API endpoints, database changes, logic, etc.) ]      |
+| **Operations** | [ X ]       | [ DevOps, deployment, configuration tasks ]                                       |
+| **Core Total** | **[ Sum ]** |                                                                                   |
 
-### Checkpoint 3: [Polish/Complete]
-**Scope:** [Edge cases, optimizations, final touches]
-**Events:** [Remaining events]
-**Deliverables:** [Final deliverables]
-**Can ship:** Yes
-**Acceptance:**
-- [ ] [All requirements met]
-- [ ] [Production ready]
-- [ ] [Documentation complete]
-</example>
-```
+### QA, Testing & Delay Margin
 
-### Checkpoint Dependencies
-```mermaid
-graph LR
-    CP1[Checkpoint 1] -->|Required| CP2[Checkpoint 2]
-    CP2 -->|Required| CP3[Checkpoint 3]
-    CP1 -.->|Can PR| PR1[PR/Commit]
-    CP2 -.->|Can PR| PR2[PR/Commit]
-    CP3 -.->|Can PR| PR3[PR/Commit]
-```
+| Work Type        | Hours | Percentage | Reasoning                                                  |
+|:-----------------|:------|:-----------|:-----------------------------------------------------------|
+| **QA**           | [ X ] | **25%**    | [ 25% of core work total for quality assurance ]           |
+| **Testing**      | [ X ] | **15%**    | [ 15% of core work total for testing effort ]              |
+| **Delay Margin** | [ X ] | **10%+**   | [ 10% minimum, increase for high-risk/unknown complexity ] |
+
+
+### Total Estimate
+**Total Hours:** [ Grand Total ]

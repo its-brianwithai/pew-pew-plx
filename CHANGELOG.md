@@ -4,6 +4,9 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### ✨ Features:
+- **Team Creation Workflow**: New `create-team` prompt for structured team setup and organization
+- **Parallel Execution System**: New `run-in-parallel` prompt for coordinating multiple simultaneous tasks
+- **Flutter Team Workflow**: New `flutter-team-workflow` for organizing Flutter development teams and processes
 - **Activity System**: New activity framework for describing reusable actions that actors can perform
   - Added `create-activity` prompt for generating activity documents
   - Added `activity-template` for structured activity documentation
