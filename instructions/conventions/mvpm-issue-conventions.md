@@ -21,48 +21,50 @@ The core principle: **Start with what's most valuable, structure only what enabl
 
 Flexible structure based on parallel work:
 ```
-{company-concept}/{most-valuable-milestone}/{most-valuable-step}.md
+issues/{area}/{AREA-CODE}-{MILESTONE-NR}-{MILESTONE-TITLE}/{AREA-CODE}-{MILESTONE-NR}-{ISSUE-TITLE}-{ISSUE-TYPE}.md
 ```
-Company concepts can be inserted anywhere to enable parallel work.
+Areas enable parallel work - can be departments, teams, or any category where work can proceed independently.
 
 ### Structure Flow Diagram
 
 ```mermaid
 graph TD
-    A[company-concept/] --> B[000-backlog/]
-    A --> C[001-most-valuable-milestone/]
-    C --> D[000-backlog/]
-    C --> E[001-most-valuable-step/]
-    E --> F[000-backlog/]
-    E --> G[CONC-001-description-type.md]
-    E --> H[CONC-002-description-type.md]
-    E --> I[CONC-003-description-type.md]
+    A[issues/] --> B[engineering/]
+    A --> C[marketing/]
+    B --> D[000-backlog/]
+    B --> E[AUTH-001-oauth-integration/]
+    C --> F[000-backlog/]
+    C --> G[MKT-001-campaign-launch/]
+    E --> H[AUTH-001-oauth-integration-story.md]
+    E --> I[AUTH-001-oauth-integration-plan.md]
+    E --> J[AUTH-001-oauth-integration-bug.md]
+    G --> K[MKT-001-campaign-launch-story.md]
     
     style A fill:#37474f,color:#fff
-    style B fill:#b71c1c,color:#fff
+    style B fill:#2e7d32,color:#fff
+    style C fill:#4a148c,color:#fff
     style D fill:#b71c1c,color:#fff
     style F fill:#b71c1c,color:#fff
-    style G fill:#1565c0,color:#fff
     style H fill:#1565c0,color:#fff
     style I fill:#1565c0,color:#fff
+    style J fill:#1565c0,color:#fff
+    style K fill:#1565c0,color:#fff
 ```
 
 ## 📝 Naming Components
 
-- `{company-concept}` - Any concept that can be worked on in parallel (can be inserted anywhere in hierarchy)
+- `{area}` - Top-level category for parallel work (e.g., departments: engineering/marketing/finance, teams: frontend/backend/devops, or any categorization where areas can work in parallel)
+    - Each area folder must contain a `000-backlog` folder
+- `{company-concept}` - Any concept that can be worked on in parallel - subjects, departments, teams (can be inserted anywhere in hierarchy)
 - `{most-valuable-milestone}` - MVM - Format: `{3-digit-number}-{description}` (e.g., 001-user-auth, 002-payment-system)
     - Chronologically ordered (earlier numbers must be considered first)
     - Zero-padded to 3 digits total
-    - Each MVM folder may contain a `000-backlog` folder
-- `{most-valuable-step}` - MVS - Format: `{CONCEPT}-{number}-{description}-{type}.md`
-    - `{CONCEPT}` - Max 4 character identifier (e.g., ESS for essentials, AUTH for authentication)
-    - `{number}` - **Flexible numbering options:**
-        - **Local chronological:** 001, 002, 003 (per MVS folder)
-        - **Milestone-wide:** Continue numbering across entire milestone
-        - **External system ID:** Use GitHub (#123), Jira (PROJ-456), or Linear (ENG-789) issue numbers
-        - **Your choice:** Create a system that works for your workflow
-    - `{description}` - Kebab-case descriptive name  
-    - `{type}` - Document type (issue, story, plan, etc.)
+    - Each area folder must contain a `000-backlog` folder
+- `{most-valuable-step}` - MVS - Format: `{AREA-CODE}-{MILESTONE-NR}-{ISSUE-TITLE}-{ISSUE-TYPE}.md`
+    - `{AREA-CODE}` - Max 4 character identifier (e.g., ESS for essentials, AUTH for authentication)
+    - `{MILESTONE-NR}` - Milestone number from the parent folder
+    - `{ISSUE-TITLE}` - Kebab-case descriptive name
+    - `{ISSUE-TYPE}` - Document type (issue, story, plan, etc.)
     - Each MVS folder may contain a `000-backlog` folder
 
 ### 📌 Important: Same Issue, Multiple Documents
@@ -70,15 +72,15 @@ graph TD
 **The same issue can and should have multiple document types with the SAME number:**
 
 ```
-001-authentication/
-├── AUTH-042-oauth-integration-story.md      # User story document
-├── AUTH-042-oauth-integration-plan.md       # Technical plan document
-├── AUTH-042-oauth-integration-bug.md        # Bug found during implementation
-└── AUTH-042-oauth-integration-pr.md         # Pull request documentation
+issues/engineering/AUTH-001-oauth-integration/
+├── AUTH-001-oauth-integration-story.md      # User story document
+├── AUTH-001-oauth-integration-plan.md       # Technical plan document
+├── AUTH-001-oauth-integration-bug.md        # Bug found during implementation
+└── AUTH-001-oauth-integration-pr.md         # Pull request documentation
 ```
 
 This approach:
-- **Maintains traceability** - All documents for issue #042 are clearly linked
+- **Maintains traceability** - All documents for issue AUTH-001 are clearly linked
 - **Shows evolution** - See how an issue progresses from story → plan → bug → PR
 - **Enables parallel work** - Different team members can work on different document types
 - **Preserves context** - All related work stays together with the same identifier
@@ -191,15 +193,13 @@ Note: Company concepts can be nested or arranged in any order that enables paral
 
 **Tree representation:**
 ```
-{company-concept}/
-├── 000-backlog/                    # Backlog for future milestones
-└── {001-most-valuable-milestone}/
-    ├── 000-backlog/                # Backlog for future steps in this milestone
-    └── {001-most-valuable-step}/
-        ├── 000-backlog/            # Backlog for future MVS files
-        ├── CONC-001-description-type.md
-        ├── CONC-002-description-type.md
-        └── CONC-003-description-type.md
+issues/
+└── {area}/                         # Top-level area (departments, teams, or any parallel category)
+    ├── 000-backlog/                # Required: Backlog for future milestones
+    └── {AREA-CODE-MILESTONE-NR-MILESTONE-TITLE}/
+        ├── {AREA-CODE-MILESTONE-NR-ISSUE-TITLE-story.md}
+        ├── {AREA-CODE-MILESTONE-NR-ISSUE-TITLE-plan.md}
+        └── {AREA-CODE-MILESTONE-NR-ISSUE-TITLE-bug.md}
 ```
 
 ## 🎓 Gradual Complexity Examples

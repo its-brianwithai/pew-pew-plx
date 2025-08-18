@@ -66,11 +66,6 @@ docs/repo/
 .idea/
 .mason
 
-drafts/**/*
-feedback/**/*
-meta/**/*
-reports/**/*
-
 # Draft files
 *.draft
 *.draft.*
@@ -82,5 +77,4 @@ reports/**/*
 */.draft.*/
 
 LICENSE
-README.md
 lead-orchestrator-agent.md
