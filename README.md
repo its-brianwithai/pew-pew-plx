@@ -1,4 +1,4 @@
-# ⚡ Pew Pew 🏗️ Workspace
+# ⚡ Pew Pew 🏗️ Promptspace
 
 [![Version](https://img.shields.io/badge/Version-v0.6.0-green)](https://github.com/its-brianwithai/pew-pew-workspace/releases/tag/v0.6.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
