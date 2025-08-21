@@ -17,7 +17,8 @@ Add the latest files of the Pew Pew framework to any existing project with a sin
 curl -fsSL https://raw.githubusercontent.com/pew-pew-prompts/pew-pew-workspace/main/.pew/install.sh | bash
 ```
 
-This will:
+This wi
+ll:
 1. Download all framework components into `.pew/` subdirectories
 2. Preserve your existing project files
 3. Add the `.claude/` directory with all synced artifacts

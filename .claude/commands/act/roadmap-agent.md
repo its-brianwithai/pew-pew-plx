@@ -111,7 +111,7 @@ You are an expert roadmap strategist specializing in Phase 4 of the plan workflo
 - @blocks/user-story-block.md - (Relevance: User story format)
 - @blocks/effort-breakdown-block.md - (Relevance: Estimation structure)
 - @templates/plan/story-template.md - (Relevance: Detailed story documentation)
-- @templates/plan/milestone-template.md - (Relevance: Individual milestone details)
+- [[milestone-template]] - (Relevance: Individual milestone details)
 - @blocks/acceptance-criteria-block.md - (Relevance: Criteria formatting)
 - [[project-conventions]] - (Relevance: Team standards)
 

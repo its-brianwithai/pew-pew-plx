@@ -24,27 +24,22 @@ Update the existing questions document with additional focused questions about a
 **Why we need clarity:** [Brief explanation of what's unclear or blocking]
 
 ### Focused Questions:
+Please provide the number of your choice for each question.
 
 #### 1. [Specific aspect needing clarity]?
 
-[ ] **Yes** - [What this clarifies]
-[ ] **No** - [Alternative understanding]
-
-#### 2. Do you mean [interpretation A] rather than [interpretation B]?
-
-[ ] **Interpretation A** - [Description]
-[ ] **Interpretation B** - [Description]
+#### 2. Is [interpretation A] the correct interpretation (as opposed to [interpretation B])?
 
 #### 3. Should [specific detail] be included?
 
-[ ] **Yes** - [Impact of inclusion]
-[ ] **No** - [Impact of exclusion]
-
 #### 4. Is [assumption] correct?
 
-[ ] **Yes** - We'll proceed with [consequence]
-[ ] **No** - Please clarify in additional context below
-
+**Answer options for all questions:**
+1. Yes
+2. No
+3. Research Project (I'll find the answer in the project)
+4. Research tools (I'll find the answer on the web / using mcp tools)
+5. Skip
 ---
 </update-template>
 
@@ -60,7 +55,7 @@ Update the existing questions document with additional focused questions about a
 - ALWAYS update the existing questions document, never create a new one
 - ALWAYS explain why the clarification is needed
 - ALWAYS keep questions focused on the specific blocking issue
-- ALWAYS use yes/no format when possible
+- ALWAYS use the 5-option format when possible
 - ALWAYS preserve all previous questions and answers
 - NEVER ask questions already answered in the archive
 </constraints>

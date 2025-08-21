@@ -1,6 +1,6 @@
 ---
-name: tech-issue-template
-description: "Template for breaking down technical requirements into clear, actionable work items. Use when planning software features, system improvements, automation, or technical debt."
+name: epic-milestone-template
+description: "Template for ."
 ---
 # Template Command
 
@@ -58,40 +58,6 @@ When this command is used, use the following template. Acknowledge your understa
 - [...]
 
 ---
-
-## 📝 Properties
-> 💡 *What identifies a component? What can be configured? What can change?*
-
-[The values and configurations that determine a components identity and possible states]
-
-- [Component]
-    - [Property]: [Description of the property]
-    - [More properties if needed]
-    - [...]
-        - [Sub-component]
-            - [Property]: [Description of the property]
-            - [More properties if needed]
-            - [...]
-
-- [More components if needed]
-
-- [...]
-
-# 🛠️ Behaviours
-> 💡 *Which states or events should the component act upon? How should it behave when nothing happens?*
-
-[How a component should act when a state is, or an event happens]
-
-- [Component]
-    - [State or event]
-        - Should [Behaviour]
-        - [More behaviours if needed]
-        - [...]
-            - [Sub-component]
-                - [State or event]
-                    - Should [Behaviour]
-                    - [More behaviours if needed]
-                    - [...]
 
 ## 📦 Deliverables
 > 💡 *Which components should be created together?*
@@ -154,7 +120,6 @@ When this command is used, use the following template. Acknowledge your understa
 | **QA**           | [ X ] | **25%**    | [ 25% of core work total for quality assurance ]           |
 | **Testing**      | [ X ] | **15%**    | [ 15% of core work total for testing effort ]              |
 | **Delay Margin** | [ X ] | **10%+**   | [ 10% minimum, increase for high-risk/unknown complexity ] |
-
 
 ### Total Estimate
 **Total Hours:** [ Grand Total ]
