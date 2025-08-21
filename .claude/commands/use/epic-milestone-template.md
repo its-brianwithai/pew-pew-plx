@@ -16,14 +16,14 @@ When this command is used, use the following template. Acknowledge your understa
 
 ---
 
-## 🎯 End Goal
+## [Fitting Emoji] Checkpoint: [Descriptive Name]
+
+### 🎯 End Goal
 > 💡 *What do you want to achieve?*
 
 [The single, clear, measurable outcome we want to achieve. Everything that follows must contribute to achieving this goal.]
 
----
-
-## 📝 Initial Requirements
+### 📝 Initial Requirements
 *What should the system/user be able to do or be?*
 
 [Specific capabilities listed as simple English sentences starting with an actor and the verb first high level requirement]
@@ -37,9 +37,7 @@ When this command is used, use the following template. Acknowledge your understa
 
 - [...]
 
----
-
-## 📦 Components & Deliverables
+### 📦 Components & Deliverables
 > 💡 *Which components should be created together?*
 
 [Components packaged together as unified testable units]
@@ -58,36 +56,47 @@ When this command is used, use the following template. Acknowledge your understa
 
 ---
 
-## 🚀 MVP Checkpoints
-> 💡 *How do we get there incrementally?*
+## [Fitting Emoji] Checkpoint: [Descriptive Name]
 
-[Chronological breaking points with deliverables and their acceptance criteria that can be worked on in parallel, tested, and potentially released.]
+### 🎯 End Goal
+> 💡 *What do you want to achieve?*
 
-- ✅ [Checkpoint 1: Descriptive Name]
-    - [Deliverable]
-        - [Acceptance criteria]
-        - [More acceptance criteria if needed]
-        - [...]
-    - [More deliverables if needed]
+[The single, clear, measurable outcome we want to achieve. Everything that follows must contribute to achieving this goal.]
+
+### 📝 Initial Requirements
+*What should the system/user be able to do or be?*
+
+[Specific capabilities listed as simple English sentences starting with an actor and the verb first high level requirement]
+
+- [Actor]
+    - [Verb first high level requirement]
+    - [More high level requirements if needed]
     - [...]
 
-- 🚧 [Checkpoint 2: Descriptive Name]
-    - [Deliverable]
-        - [Acceptance criteria]
-        - [More acceptance criteria if needed]
+- [More actors if needed]
+
+- [...]
+
+### 📦 Components & Deliverables
+> 💡 *Which components should be created together?*
+
+[Components packaged together as unified testable units]
+
+- [Deliverable]
+    - [Component]
+        - [Sub-subcomponent]
+        - [More sub-subcomponents if needed]
         - [...]
-    - [More deliverables if needed]
+    - [More components if needed]
     - [...]
 
-- 📋 [Checkpoint 3: Descriptive Name]
-    - [Deliverable]
-        - [Acceptance criteria]
-        - [More acceptance criteria if needed]
-        - [...]
-    - [More deliverables if needed]
-    - [...]
+- [More deliverables if needed]
 
-- 🔮 [More checkpoints if needed]
+- [...]
+
+---
+
+## 🔮 [More checkpoints if needed]
 
 - [...]
 ````````````
