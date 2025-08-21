@@ -4,6 +4,9 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### 🛠️ Improvements:
+- **Enhanced Plan Template System**: Added integrated agent instructions section to plan templates, creating comprehensive self-contained implementation documents
+- **File Reference Conventions**: Updated some templates to use proper `@[relative/path]` format for file references without backticks
+- **Template Organization**: Improved template consistency following project conventions for placeholders, examples, and structure
 - **Enhanced Question Mode System**: Improved question-mode prompts and workflow components for better user interaction and requirement gathering
 - **Pew Prompt Updates**: Refined the ultimate starting point prompt with better questioning capabilities and workflow integration
 

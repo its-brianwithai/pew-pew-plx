@@ -72,27 +72,27 @@ Once the issue type is determined:
 
 ### WHEN request mentions technical implementation
 - Keywords: develop, code, fix, integrate, deploy
-- **Route to**: [[create-tech-issue]]
+- **Route to**: @prompts/create-tech-issue.md
 
 ### WHEN request mentions business processes
 - Keywords: improve, optimize, streamline, standardize
-- **Route to**: [[create-operations-issue]]
+- **Route to**: @prompts/create-operations-issue.md
 
 ### WHEN request mentions customer engagement
 - Keywords: promote, advertise, communicate, brand
-- **Route to**: [[create-marketing-issue]]
+- **Route to**: @prompts/create-marketing-issue.md
 
 ### WHEN request mentions revenue generation
 - Keywords: sell, close, convert, prospect
-- **Route to**: [[create-sales-issue]]
+- **Route to**: @prompts/create-sales-issue.md
 
 ### WHEN request mentions financial management
 - Keywords: budget, spend, save, invest
-- **Route to**: [[create-finance-issue]]
+- **Route to**: @prompts/create-finance-issue.md
 
 ### WHEN request mentions team management
 - Keywords: hire, train, develop, retain
-- **Route to**: [[create-people-issue]]
+- **Route to**: @prompts/create-people-issue.md
 
 ## 🎯 Workflow Execution
 
@@ -103,7 +103,7 @@ Once the issue type is determined:
 4. **Maintain consistency**: Follow the exact template for that type
 
 ### File Locations
-Files are saved following [[mvpm-issue-conventions]]
+Files are saved following @instructions/conventions/mvpm-issue-conventions.md
 - Location determined by project structure (MVMs and MVSs)
 - Format: `{CONCEPT}-{number}-{description}-issue.md`
 - Same format for ALL issue types (tech, operations, marketing, sales, finance, people)
