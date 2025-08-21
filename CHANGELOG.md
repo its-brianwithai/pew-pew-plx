@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to Pew Pew Workspace will be documented in this file.
 
+## [Unreleased]
+
+### ✨ Features:
+- **Universal Refinement Mode**: New `refinement-mode.md` that systematically refines ANY template through strategic questioning
+  - Extracted core methodology from `create-issue.md` for universal application
+  - Integrates the 5 question types from Strategic Question Mode (Simplify, Clarify, Improve, Expand, Reduce)
+  - Works with templates that don't exist yet and unknown template types
+  - Pure methodology focus on HOW to refine, not WHAT to refine
+  - Dynamic question generation based on actual template content and context
+  - Maintains template structure while replacing all placeholders
+
 ## [v0.7.0] - 2025-08-21
 
 ### 🛠️ Improvements:
