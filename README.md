@@ -1,6 +1,6 @@
-# ⚡ Pew Pew Plx 🏗️ AI Workspace
+# ⚡ Pew Pew Workspace 🏗️
 
-[![Version](https://img.shields.io/badge/Version-v0.6.0-green)](https://github.com/its-brianwithai/pew-pew-workspace/releases/tag/v0.6.0)
+[![Version](https://img.shields.io/badge/Version-v0.6.0-green)](https://github.com/pew-pew-prompts/pew-pew-workspace/releases/tag/v0.6.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Brought to you by pewpewprompts.com](https://img.shields.io/badge/Brought%20to%20you%20by-pewpewprompts.com-blue)](https://pewpewprompts.com)
 
@@ -14,7 +14,7 @@
 Add the latest files of the Pew Pew framework to any existing project with a single command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/its-brianwithai/pew-pew-workspace/main/.pew/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/pew-pew-prompts/pew-pew-workspace/main/.pew/install.sh | bash
 ```
 
 This will:
