@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to Pew Pew Workspace will be documented in this file.
 
-## [Unreleased]
+## [v0.7.0] - 2025-08-21
 
 ### 🛠️ Improvements:
 - **Enhanced Plan Template System**: Added integrated agent instructions section to plan templates, creating comprehensive self-contained implementation documents
