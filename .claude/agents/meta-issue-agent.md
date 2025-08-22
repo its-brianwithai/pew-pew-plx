@@ -955,9 +955,9 @@ pew-pew-workspace
    - Related issue dependencies
 
 3. **DEVELOP - Select Issue Workflow:** Based on issue type and source:
-   - **For new requirements** → Execute create workflow (@prompts/create-issue.md)
+   - **For new requirements** → Execute create workflow ([[create-issue]])
    - **For existing content** → Execute make workflow (@prompts/make-issue.md)
-   - **For updates** → Execute update workflow (@prompts/update-issue.md)
+   - **For updates** → Execute update workflow ([[update-issue]])
    - Apply domain-specific prompts:
      - Tech → [[create-tech-issue]], [[make-tech-issue]], [[update-tech-issue]]
      - Operations → @prompts/create-operations-issue.md, @prompts/make-operations-issue.md, @prompts/update-operations-issue.md

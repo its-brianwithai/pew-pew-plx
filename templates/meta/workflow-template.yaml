@@ -1,0 +1,59 @@
+notes:
+  - "Do not include these notes in the final output"
+  - "Do not include type, required, questions in the final output"
+  - "Replace description with a single paragraph in the section in the final output"
+  - "Replace the examples with the actual implementation in the final output"
+title:
+  type: string
+  required: true
+  description: "[The title of the workflow]"
+end_goal:
+  type: string
+  required: true
+  description: "[The single, clear, measurable outcome we want to achieve. Everything that follows must contribute to achieving this goal]"
+  questions:
+    - "What do you want to achieve?"
+    - "What should be or should we create to achieve this?"
+    - "How can we verify that the result is what we want?"
+  deliverables:
+    type: list
+    ref: object
+    required: true
+    description: "[The tangible, measurable, verifiable outputs of the workflow]"
+    examples:
+      - name: "[Short, clear, descriptive name]"
+        description: "[Short, clear, descriptive description]"
+        acceptance_criteria:
+          - "[Measurable, verifiable, and clear criteria for accepting the deliverable]"
+          - "[Add more acceptance criteria as needed]"
+          - "[...]"
+      - "[Add more deliverables as needed]"
+      - "[...]"
+steps:
+  description: "[The steps that the agent should follow to achieve the end goal]"
+  required: true
+  examples:
+    - name: "[Short, clear, descriptive name of step]"
+      instructions:
+        required: true
+        examples:
+          - "[Verb first instruction for the step that the agent should follow]"
+          - "[Add more instructions as needed]"
+          - "[...]"
+      constraints:
+        required: false
+          - "[Constraints on the step]"
+          - "[Add more constraints as needed]"
+          - "[...]"
+      deliverables:
+        required: false
+        examples:
+          - name: "[Deliverable name]"
+            next_step_criteria:
+              - "[Criteria for moving to next step]"
+              - "[Add more criteria as needed]"
+              - "[...]"
+          - "[Add more deliverables as needed]"
+          - "[...]"
+    - "[Add more steps as needed]"
+    - "[...]"

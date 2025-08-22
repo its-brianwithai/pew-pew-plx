@@ -451,7 +451,7 @@ This prompt focuses exclusively on the requirements discovery phase, recognizing
 - **Output**: Requirements document, not issue structure
 
 ## Integration with Issue Creation
-The output from this prompt is designed to feed directly into @prompts/create-issue.md prompt, providing the comprehensive requirements needed for the "Initial Requirement" section.
+The output from this prompt is designed to feed directly into [[create-issue]] prompt, providing the comprehensive requirements needed for the "Initial Requirement" section.
 
 ## Question-Mode Integration
 This prompt heavily leverages question-mode for systematic refinement, using all 5 question types to ensure comprehensive requirement coverage.
