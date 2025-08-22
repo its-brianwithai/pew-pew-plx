@@ -4,6 +4,18 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### ✨ Features:
+- **CRUD Instructions System**: New `/plx:crud/instructions` command for systematic instruction management
+  - Create, read, update, or delete instructions based on conversational context
+  - Intelligent detection of instruction needs from implicit or explicit requests
+  - Proper categorization into correct instruction types (conventions, best-practices, rules, etc.)
+  - Context-aware processing of recent conversation and user feedback
+  - Adherence to project instruction structure and naming conventions
+- **Issue Slicing Workflow**: New `/plx:slice/issue` command and `/start:slice-workflow` for breaking down complex tasks
+  - Break down large issues into developable slices of max 3 story points
+  - Complete project conventions and documentation for each slice
+  - One-commit development approach with comprehensive documentation
+  - Monkey-see-monkey-do implementation guides with exact examples
+  - Fresh agent starting prompts with complete context
 - **Universal Refinement Mode**: New `refinement-mode.md` that systematically refines ANY template through strategic questioning
   - Extracted core methodology from `create-issue.md` for universal application
   - Integrates the 5 question types from Strategic Question Mode (Simplify, Clarify, Improve, Expand, Reduce)

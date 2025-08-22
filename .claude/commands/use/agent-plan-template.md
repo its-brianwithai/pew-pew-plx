@@ -9,7 +9,6 @@ When this command is used, use the following template. Acknowledge your understa
 ---
 
 ````````````
-
 # 🤖 Implementation Agent: [ticket-title]
 > 💡 *Specialized agent instructions for implementing this specific ticket following all project conventions*
 

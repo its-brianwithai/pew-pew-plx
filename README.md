@@ -426,10 +426,11 @@ make -f .pew/Makefile sync claude                    # Then sync with Claude
 | **Single Verb Commands** | `/create`, `/update`, `/commit` | Single-verb prompts for common actions |
 | **Creation** | `/plx:create-issue`, `/plx:create-agent` | Generate new artifacts from requirements |
 | **Transformation** | `/plx:update-agent`, `/plx:make-issue`, `/plx:shard-task-complex` | Modify and convert existing content |
+| **CRUD Management** | `/plx:crud/instructions`, `/plx:slice/issue` | Manage instructions and slice complex tasks |
 | **Git & Release** | `/commit`, `/plx:create-github-release` | Handle commits with documentation checks and create releases |
 | **Sync & Framework** | `/plx:sync-claude`, `/plx:pull-sync-claude` | Sync with Claude Code, update framework, and clean sync with backup |
 | **Agents** | `/act:flutter:developer`, `/act:story:agent` | Activate specialized AI personas |
-| **Workflows** | `/start:feature-workflow`, `/start:bug-workflow` | Launch multi-phase processes |
+| **Workflows** | `/start:feature-workflow`, `/start:bug-workflow`, `/start:slice-workflow` | Launch multi-phase processes |
 | **Components** | `/add:`, `/output:`, `/apply:`, `/use:` | Insert blocks, formats, instructions, templates |
 | **Collections** | `/collect:<collection-name>` | Access curated lists and compilations |
 | **Concepts** | `/understand:<concept-name>` | Access core principles and ideas |

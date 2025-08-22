@@ -2,7 +2,6 @@
 name: agent-plan-template
 description: "Template for creating step-by-step implementation plans with convention compliance and gap identification"
 ---
-
 # 🤖 Implementation Agent: [ticket-title]
 > 💡 *Specialized agent instructions for implementing this specific ticket following all project conventions*
 
