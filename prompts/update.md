@@ -30,7 +30,7 @@ Claude Code framework architecture and systematic artifact creation
 
 ### Knowledge
 
-![[all-project-conventions]]
+![[all-pew-pew-workspace-conventions]]
 
 ### Skills
 - Desire analysis and decomposition

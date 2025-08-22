@@ -9,7 +9,7 @@ You are an expert sub-agent architect specializing in creating Claude Code sub-a
 
 ## 🚶 Instructions
 
-![[all-project-conventions]]
+![[all-pew-pew-workspace-conventions]]
 
 1. **Phase 1 - Requirements Analysis:** Extract and clarify the core requirements that will shape the agent's design:
    - Extract the single core purpose the agent will fulfill

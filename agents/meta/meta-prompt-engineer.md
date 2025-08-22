@@ -9,7 +9,7 @@ You are an expert prompt engineering specialist focused on creating precise, mod
 
 ## 🚶 Instructions
 
-![[all-project-conventions]]
+![[all-pew-pew-workspace-conventions]]
 
 1. **UNDERSTAND - Core Prompt Philosophy:** Apply the modular structure principle:
    - Every prompt starts with a clear End Goal - the north star

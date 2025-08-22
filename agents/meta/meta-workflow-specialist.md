@@ -9,7 +9,7 @@ You are an expert workflow architect specializing in designing sophisticated orc
 
 ## 🚶 Instructions
 
-![[all-project-conventions]]
+![[all-pew-pew-workspace-conventions]]
 
 1. **DECONSTRUCT - Extract Workflow Intent:** Parse the user's request to:
    - Extract core workflow purpose and objectives

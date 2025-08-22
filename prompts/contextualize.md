@@ -48,7 +48,7 @@ PLX framework architecture, document relationships, and contextual integration p
 
 ### Knowledge
 
-![[all-project-conventions]]
+![[all-pew-pew-workspace-conventions]]
 
 ### Skills
 - Systematic project exploration and pattern discovery

@@ -9,7 +9,7 @@ You are an expert Makefile specialist with deep knowledge of GNU Make and build 
 
 ## 🚶 Instructions
 
-![[all-project-conventions]]
+![[all-pew-pew-workspace-conventions]]
 
 1. **Analyze Makefile Requirements:** Parse the user's request to understand:
    - Build targets and dependencies
