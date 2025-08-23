@@ -1,6 +1,6 @@
-# Instruction Command
+# 📚 Collection Command
 
-When this command is used, acknowledge that you understand these instructions and will follow them throughout the conversation. Then await the user's request.
+When this command is used, load this curated collection of related items.
 
 ---
 

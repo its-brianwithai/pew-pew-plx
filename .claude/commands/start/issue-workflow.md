@@ -9,7 +9,7 @@ When this command is given, assume the role of the orchestrator for this workflo
 ---
 
 
-# 🛠️ Tech Issue Workflow: Systematic Requirements Decomposition
+# 🛠️ Issue Workflow: Systematic Requirements Decomposition
 > 💡 *Transform vague technical requests into comprehensive, actionable issues through systematic decomposition and low cognitive load questioning that reveals all requirements naturally.*
 
 ## 🎯 End Goal

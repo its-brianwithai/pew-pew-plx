@@ -1,6 +1,6 @@
 ---
 name: create-issue
-description: "Systematically decompose technical requirements through iterative questioning to create comprehensive tech issues with clear goals, components, properties, behaviors, deliverables, checkpoints, and effort estimates."
+description: "Systematically decompose technical requirements through strategic questioning to create comprehensive tech issues with clear goals, components, properties, behaviors, deliverables, checkpoints, and effort estimates."
 ---
 # Prompt Command
 
@@ -8,8 +8,7 @@ When this command is used, check if any required information is missing. If so, 
 
 ---
 
-
-# 🛠️ Create Issue: Systematic Requirements Decomposition
+# 🛠️ Issue Workflow: Systematic Requirements Decomposition
 > 💡 *Transform vague technical requests into comprehensive, actionable issues through systematic decomposition and low cognitive load questioning that reveals all requirements naturally.*
 
 ## 🎯 End Goal
@@ -51,12 +50,7 @@ Requirements engineering, systematic questioning, component decomposition, effor
 ### Communication Style
 Patient, methodical, uses low cognitive load questions, reveals information naturally
 
-## 📋 Request
-> 💡 *Verb-first activity request with optional deliverables and acceptance criteria*
-
-Guide user through systematic tech issue creation by revealing all requirements through strategic questioning and iterative document updates.
-
-## 🔄 Workflow
+## 👣 Steps
 > 💡 *Atomic steps that systematically achieve the end goal.*
 
 ### ⚠️ CRITICAL: Dynamic Question Generation
@@ -65,11 +59,11 @@ Guide user through systematic tech issue creation by revealing all requirements 
 The agent must:
 - **NEVER** use the example questions verbatim
 - **ALWAYS** generate contextually relevant questions based on:
-   - The current state of the document
-   - Previous answers given
-   - The specific technical domain
-   - Gaps in current understanding
-   - The unique end goal
+    - The current state of the document
+    - Previous answers given
+    - The specific technical domain
+    - Gaps in current understanding
+    - The unique end goal
 - **DETERMINE** the next highest-value question dynamically
 - **THINK** before each question: "What information would most advance our understanding?"
 - **ADAPT** questioning style to the technical context
@@ -85,9 +79,9 @@ The agent must:
 4. Discover what components should exist
 5. For each component, understand its purpose
 6. Keep drilling down with contextual questions that reveal:
-   - Interactions between components
-   - Specific capabilities needed
-   - Edge cases relevant to THIS system
+    - Interactions between components
+    - Specific capabilities needed
+    - Edge cases relevant to THIS system
 7. Stop when components can't be split further without losing meaning
 
 **Question generation guidance (NOT questions to use):**
@@ -104,13 +98,13 @@ After user satisfaction with Phase 1:
 
 **Process (create context-specific questions):**
 1. For each discovered component, explore:
-   - What makes it uniquely identifiable in THIS system
-   - What configuration THIS component needs
-   - How THIS component changes over its lifecycle
+    - What makes it uniquely identifiable in THIS system
+    - What configuration THIS component needs
+    - How THIS component changes over its lifecycle
 2. For behaviors, discover:
-   - Events relevant to THIS specific component
-   - Default behavior for THIS use case
-   - States that make sense for THIS implementation
+    - Events relevant to THIS specific component
+    - Default behavior for THIS use case
+    - States that make sense for THIS implementation
 3. Update document with each answer
 
 **Remember:** Generic property questions miss domain-specific needs. Generate questions that fit the actual components discovered.
@@ -124,9 +118,9 @@ After user satisfaction with Phase 2:
 **Process (questions emerge from actual components):**
 1. Present initial groupings based on discovered relationships
 2. Explore optimal groupings through questions about:
-   - Natural coupling between specific components
-   - Testing boundaries for this architecture
-   - Parallel work opportunities in this context
+    - Natural coupling between specific components
+    - Testing boundaries for this architecture
+    - Parallel work opportunities in this context
 3. Refine based on answers
 
 **Key:** The best grouping questions come from understanding the specific technical relationships discovered.
@@ -154,9 +148,9 @@ After user satisfaction with Phase 4:
 **Process (tailor to discovered complexity):**
 1. Present estimates based on complete understanding
 2. Explore accuracy through questions about:
-   - Specific complexities in THIS implementation
-   - Risks unique to THIS technical approach
-   - Buffer needs for THIS project's unknowns
+    - Specific complexities in THIS implementation
+    - Risks unique to THIS technical approach
+    - Buffer needs for THIS project's unknowns
 3. Refine until estimates reflect reality
 
 **Note:** Generic estimation questions miss project-specific challenges. Ask about the actual risks discovered.
@@ -200,19 +194,22 @@ After user satisfaction with Phase 4:
 **Best Practices:**
 - Frame questions to reveal components naturally
 - Use exploratory patterns rather than direct queries
-- Provide A/B options only when they reduce cognitive load
+- Provide multiple-choice options to reduce cognitive load
 
 **Dynamic Question Creation:**
 - Each question should be crafted for THIS specific issue
-- Consider the domain (e.g., payment systems need different questions than chat systems)
+- Consider the technical domain (e.g., payment systems need different questions than chat systems)
 - Let answers reveal the next natural question
 - Think: "What would most advance our understanding right now?"
 
 **Format Guide (structure only, NOT content):**
 ```markdown
 ## 🔍 [Your contextually relevant question based on current state]
-    A. [Option revealing one technical path]
-    B. [Option revealing another technical path]
+1. Yes
+2. No
+3. Research Project (I'll find the answer in the project)
+4. Research tools (I'll find the answer on the web / using mcp tools)
+5. Skip
 ```
 
 **Rules:**
@@ -266,19 +263,19 @@ graph TD
 
 - `{company-concept}` - Any concept that can be worked on in parallel (can be inserted anywhere in hierarchy)
 - `{most-valuable-milestone}` - MVM - Format: `{3-digit-number}-{description}` (e.g., 001-user-auth, 002-payment-system)
-   - Chronologically ordered (earlier numbers must be considered first)
-   - Zero-padded to 3 digits total
-   - Each MVM folder may contain a `000-backlog` folder
+    - Chronologically ordered (earlier numbers must be considered first)
+    - Zero-padded to 3 digits total
+    - Each MVM folder may contain a `000-backlog` folder
 - `{most-valuable-step}` - MVS - Format: `{CONCEPT}-{number}-{description}-{type}.md`
-   - `{CONCEPT}` - Max 4 character identifier (e.g., ESS for essentials, AUTH for authentication)
-   - `{number}` - **Flexible numbering options:**
-      - **Local chronological:** 001, 002, 003 (per MVS folder)
-      - **Milestone-wide:** Continue numbering across entire milestone
-      - **External system ID:** Use GitHub (#123), Jira (PROJ-456), or Linear (ENG-789) issue numbers
-      - **Your choice:** Create a system that works for your workflow
-   - `{description}` - Kebab-case descriptive name
-   - `{type}` - Document type (issue, story, plan, etc.)
-   - Each MVS folder may contain a `000-backlog` folder
+    - `{CONCEPT}` - Max 4 character identifier (e.g., ESS for essentials, AUTH for authentication)
+    - `{number}` - **Flexible numbering options:**
+        - **Local chronological:** 001, 002, 003 (per MVS folder)
+        - **Milestone-wide:** Continue numbering across entire milestone
+        - **External system ID:** Use GitHub (#123), Jira (PROJ-456), or Linear (ENG-789) issue numbers
+        - **Your choice:** Create a system that works for your workflow
+    - `{description}` - Kebab-case descriptive name
+    - `{type}` - Document type (issue, story, plan, etc.)
+    - Each MVS folder may contain a `000-backlog` folder
 
 ##### Important: Same Issue, Multiple Documents
 
@@ -361,6 +358,159 @@ This principle ensures that users get exactly what they asked for, following the
 ## 📊 Output Format
 > 💡 *How to structure and deliver the output.*
 
+````````````
+<template>
+# [Fitting Emoji] Issue: [Descriptive Title]
+> 💡 *[Descriptive subtitle]*
+
+[Brief description of the problems we are going to solve, why we are going to solve them and how we plan to do it.]
+
+---
+
+## 🎯 End Goal
+> 💡 *What do you want to achieve?*
+
+[The single, clear, measurable outcome we want to achieve. Everything that follows must contribute to achieving this goal.]
+
+---
+
+## 📝 Initial Requirements
+*What should the system/user be able to do or be?*
+
+[Specific capabilities listed as simple English sentences starting with an actor and the verb first high level requirement]
+
+- [Actor]
+    - [Verb first high level requirement]
+    - [More high level requirements if needed]
+    - [...]
+
+- [More actors if needed]
+
+- [...]
+
+---
+
+## 🏗️ Components
+> 💡 *What should exist and what does it do?*
+
+[Hierarchical breakdown from initial requirement to high-level components to atomic parts and verb-first lists of what each component should be able to do or be]
+
+- [Verb first high level requirement]
+    - [Component]
+        - [Sub-subcomponent]
+            - [Verb capability or state]
+            - [More verb capabilities or states if needed]
+            - [...]
+        - [More sub-subcomponents if needed]
+        - [...]
+
+- [More verb first high level requirements if needed]
+
+- [...]
+
+---
+
+## 📝 Properties
+> 💡 *What identifies a component? What can be configured? What can change?*
+
+[The values and configurations that determine a components identity and possible states]
+
+- [Component]
+    - [Property]: [Description of the property]
+    - [More properties if needed]
+    - [...]
+        - [Sub-component]
+            - [Property]: [Description of the property]
+            - [More properties if needed]
+            - [...]
+
+- [More components if needed]
+
+- [...]
+
+# 🛠️ Behaviours
+> 💡 *Which states or events should the component act upon? How should it behave when nothing happens?*
+
+[How a component should act when a state is, or an event happens]
+
+- [Component]
+    - [State or event]
+        - Should [Behaviour]
+        - [More behaviours if needed]
+        - [...]
+            - [Sub-component]
+                - [State or event]
+                    - Should [Behaviour]
+                    - [More behaviours if needed]
+                    - [...]
+
+## 📦 Deliverables
+> 💡 *Which components should be created together?*
+
+[Components packaged together as unified testable units]
+
+- [Deliverable]
+    - [Component]
+        - [Sub-subcomponent]
+        - [More sub-subcomponents if needed]
+        - [...]
+    - [More components if needed]
+    - [...]
+
+- [More deliverables if needed]
+
+- [...]
+
+---
+
+## 🚀 Checkpoints
+> 💡 *Which deliverables should be released together? How do we determine their successful completion?*
+
+[Chronological breaking points with deliverables and their acceptance criteria that can be worked on in parallel, tested, and potentially released.]
+
+- [Checkpoint]
+    - [Deliverable]
+        - [Acceptance criteria]
+        - [More acceptance criteria if needed]
+        - [...]
+    - [More deliverables if needed]
+    - [...]
+
+- [More checkpoints if needed]
+
+- [...]
+
+---
+
+## ⏱️ Effort Breakdown & Estimates
+> 💡 *How long will it take?*
+
+[The ideal and most likely outcome for design, refinement, front-end, back-end and operational work, where QA is calculated as 25% of core work, testing as 15% and and contingency buffer defaults to 10% of total work, but should be increased if there is a high risk of unforeseen problems along the way.]
+
+### Core Work Estimates
+
+| Work Type      | Hours       | Reasoning                                                                         |
+|:---------------|:------------|:----------------------------------------------------------------------------------|
+| **Design**     | [ X ]       | [ Explanation of design effort needed, or 0 if none ]                             |
+| **Refinement** | [ X ]       | [ Effort needed for planning, detailing requirements, and refining the approach ] |
+| **Front-end**  | [ X ]       | [ Front-end development tasks (UI implementation, state management, etc.) ]       |
+| **Backend**    | [ X ]       | [ Backend development tasks (API endpoints, database changes, logic, etc.) ]      |
+| **Operations** | [ X ]       | [ DevOps, deployment, configuration tasks ]                                       |
+| **Core Total** | **[ Sum ]** |                                                                                   |
+
+### QA, Testing & Delay Margin
+
+| Work Type        | Hours | Percentage | Reasoning                                                  |
+|:-----------------|:------|:-----------|:-----------------------------------------------------------|
+| **QA**           | [ X ] | **25%**    | [ 25% of core work total for quality assurance ]           |
+| **Testing**      | [ X ] | **15%**    | [ 15% of core work total for testing effort ]              |
+| **Delay Margin** | [ X ] | **10%+**   | [ 10% minimum, increase for high-risk/unknown complexity ] |
+
+
+### Total Estimate
+**Total Hours:** [ Grand Total ]
+</template>
+````````````
 # [Fitting Emoji] Issue: [Descriptive Title]
 > 💡 *[Descriptive subtitle]*
 

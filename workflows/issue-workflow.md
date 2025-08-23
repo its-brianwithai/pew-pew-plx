@@ -3,7 +3,7 @@ name: tech-issue-workflow
 description: "Systematically decompose technical requirements through iterative questioning to create comprehensive tech issues with clear goals, components, properties, behaviors, deliverables, checkpoints, and effort estimates."
 ---
 
-# 🛠️ Tech Issue Workflow: Systematic Requirements Decomposition
+# 🛠️ Issue Workflow: Systematic Requirements Decomposition
 > 💡 *Transform vague technical requests into comprehensive, actionable issues through systematic decomposition and low cognitive load questioning that reveals all requirements naturally.*
 
 ## 🎯 End Goal
