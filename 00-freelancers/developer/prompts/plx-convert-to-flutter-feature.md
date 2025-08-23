@@ -79,7 +79,7 @@ Very important: when creating the plan, please frame your instructions in a way 
 ```yaml
 relevant_context: <file_map>, <file_contents>, <extra_context>
 doc_type: User Story Ticket / Guide
-doc_location: issues/active/
+doc_location: issues/000-backlog/
 feature_location: new_feature/
 user_requests: Convert the React web application feature I'm showing you into a complete Flutter feature implementation guide. This guide should help integrate the functionality into an existing Flutter project while adapting all visual properties to the target project's design system. {cursor}
 ```

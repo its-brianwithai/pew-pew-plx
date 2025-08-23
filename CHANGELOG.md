@@ -12,6 +12,9 @@ All notable changes to Pew Pew Workspace will be documented in this file.
   - Dynamic question generation based on actual template content and context
   - Maintains template structure while replacing all placeholders
 
+### 🐛 Bug fixes:
+- **MVPM Structure Compliance**: Fixed incorrect "issues/active/" references in freelancer prompts to use proper "issues/000-backlog/" structure following MVPM conventions
+
 ## [v0.7.0] - 2025-08-21
 
 ### 🛠️ Improvements:

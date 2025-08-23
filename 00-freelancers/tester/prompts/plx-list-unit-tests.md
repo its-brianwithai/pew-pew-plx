@@ -9,7 +9,7 @@ Upon confirmation from me that there is no more feedback you may proceed create 
 ```yaml
 relevant_context: <file_map>, <file_contents>, <extra_context>
 doc_type: Core Unit Tests Inventarisation
-doc_location: issues/active/milestone-1-unit-tests.md
+doc_location: issues/000-backlog/milestone-1-unit-tests.md
 user_requests: I want you to only propose **unit tests** that confirm the core functionality of the feature. Do not create tests for edge cases, error flows, integration points, performance, security, or anything else that does not directly confirm just and only the core functionality. the end goal is have a list of suggested core unit tests that we may wnat to create focusing only on core functionality - also include your reasoning and your suggested approach (short pseudo)
 ```
 

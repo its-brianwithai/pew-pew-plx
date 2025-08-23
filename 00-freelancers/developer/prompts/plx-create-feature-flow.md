@@ -38,7 +38,7 @@ Remember:
 persona: Feature Flow Architect
 relevant_context: <file_map>, <file_contents>, <extra_context>
 doc_type: Feature Flow
-doc_location: issues/active/
+doc_location: issues/000-backlog/
 feature_name: 
 user_requests: please create a feature flow
 ```
