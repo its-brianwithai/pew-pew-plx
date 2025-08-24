@@ -1,6 +1,6 @@
 # ⚡ Pew Pew Workspace 🏗️
 
-[![Version](https://img.shields.io/badge/Version-v0.7.0-green)](https://github.com/pew-pew-prompts/pew-pew-workspace/releases/tag/v0.7.0)
+[![Version](https://img.shields.io/badge/Version-v0.8.0-green)](https://github.com/pew-pew-prompts/pew-pew-workspace/releases/tag/v0.8.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Brought to you by pewpewprompts.com](https://img.shields.io/badge/Brought%20to%20you%20by-pewpewprompts.com-blue)](https://pewpewprompts.com)
 
@@ -51,7 +51,7 @@ Customize sync behavior in `.pew/plx.yaml`:
 
 **Local Override:** Create `.pew/plx.local.yaml` to override settings without modifying the main config. This file is gitignored and perfect for personal customizations.
 
-## ✨ What's New in v0.7.0
+## ✨ What's New in v0.8.0
 
 ### 🚀 Raycast Power Prompter Framework
 - **Comprehensive Freelancer Toolkit**: New `00-freelancers/raycast-power-prompter/` directory with:

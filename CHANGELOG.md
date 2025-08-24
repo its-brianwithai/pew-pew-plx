@@ -3,6 +3,8 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 
 ## [Unreleased]
 
+## [v0.8.0] - 2025-01-24
+
 ### ✨ Features:
 - **Raycast Power Prompter Framework**: New comprehensive freelancer toolkit in `00-freelancers/raycast-power-prompter/`
   - Complete prompt engineering system with 20+ reusable blocks for requirements, analytics, components, user stories, etc.
