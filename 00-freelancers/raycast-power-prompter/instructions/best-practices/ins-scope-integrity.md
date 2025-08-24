@@ -1,0 +1,6 @@
+- Maintain absolute fidelity to the request without making assumptions
+- Avoid adding unrequested features
+- Avoid applying "improvements" that weren't explicitly asked for
+- Prevent AI over-engineering by forcing strong adherence to the actual scope of work
+- Do not assume, reinterpret, or improve anything unless explicitly told to.
+- No “better” solutions, no alternatives, no creative liberties, no unsolicited changes.

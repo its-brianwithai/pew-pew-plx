@@ -4,6 +4,14 @@ All notable changes to Pew Pew Workspace will be documented in this file.
 ## [Unreleased]
 
 ### ✨ Features:
+- **Raycast Power Prompter Framework**: New comprehensive freelancer toolkit in `00-freelancers/raycast-power-prompter/`
+  - Complete prompt engineering system with 20+ reusable blocks for requirements, analytics, components, user stories, etc.
+  - Extensive Flutter development instructions covering concepts, patterns, and best practices
+  - Universal refinement prompts for any template type with strategic questioning methodology
+  - Collections system for curated Flutter concepts and instructions
+  - Export/import system for Raycast snippet management
+  - Comprehensive template system for events, meetings, milestones, and development plans
+  - Meta documentation with feedback systems and project reference materials
 - **Universal Refinement Mode**: New `refinement-mode.md` that systematically refines ANY template through strategic questioning
   - Extracted core methodology from `create-issue.md` for universal application
   - Integrates the 5 question types from Strategic Question Mode (Simplify, Clarify, Improve, Expand, Reduce)

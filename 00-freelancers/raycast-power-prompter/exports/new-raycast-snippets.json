@@ -1,0 +1,27 @@
+[
+  {
+    "name": "ins-no-workarounds",
+    "text": "- Do not create workarounds, quick fixes or dirty hacks.\n- Focus on what was asked and make sure it's implemented as intended.\n",
+    "keyword": "ins-no-workarounds;"
+  },
+  {
+    "name": "ins-play-devils-advocate",
+    "text": "- Always play devil’s advocate.\n- Be sceptical and brutally honest in your approach.\n- Reviews your answers before answering and argue why it won’t work.\n",
+    "keyword": "ins-play-devils-advocate;"
+  },
+  {
+    "name": "never-try-different-approach",
+    "text": "- ALWAYS stick to the original plan at all costs, NEVER try a different approach.\n",
+    "keyword": "never-try-different-approach;"
+  },
+  {
+    "name": "relevant-context-block",
+    "text": "## 📚 Relevant Context\n> 💡 *What background information is essential for understanding and completing this work?*\n\n[A curated list of all necessary files, documentation, and background information required to understand the scope and execute the work.]\n\n- [Parent Item]\n  - [Relevant file, url, or context] for [brief explanation of why it's important]: [link or reference]\n  - [More relevant files or context if needed]\n  - [...]\n",
+    "keyword": "relevant-context-block;"
+  },
+  {
+    "name": "ui-ux-specifications-block",
+    "text": "## 🎨 UI/UX Specifications\n> 💡 *How should something look, feel, and behave?*\n\n[Detailed visual and interactive specifications for components, especially where prototypes are insufficient. This includes notes on spacing, animations, and other nuanced UI/UX behaviors.]\n\n- [Parent Item]\n  - [UI/UX Behaviour]\n  - [More UI/UX Behaviours if needed]\n\n- [More items if needed]\n- [...]\n",
+    "keyword": "ui-ux-specifications-block;"
+  }
+]

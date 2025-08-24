@@ -51,27 +51,31 @@ Customize sync behavior in `.pew/plx.yaml`:
 
 **Local Override:** Create `.pew/plx.local.yaml` to override settings without modifying the main config. This file is gitignored and perfect for personal customizations.
 
-## ✨ What's New in v0.6.0
+## ✨ What's New in v0.7.0
 
-### 🚀 Enhanced Modular Architecture
-- **Improved WikiLink System**: Better component referencing with cleaner template integration
-- **Streamlined Template Organization**: Ghost CMS templates and business issue routing
-- **Enhanced Sync Process**: Backticked path correction and improved error handling
+### 🚀 Raycast Power Prompter Framework
+- **Comprehensive Freelancer Toolkit**: New `00-freelancers/raycast-power-prompter/` directory with:
+  - 20+ reusable blocks for requirements, analytics, components, user stories
+  - Extensive Flutter development instructions (concepts, patterns, best practices)
+  - Universal refinement prompts with strategic questioning methodology
+  - Export/import system for Raycast snippet management
+  - Templates for events, meetings, milestones, and development plans
 
-### 📋 New Templates & Components
-- **Business Issue Templates**: Smart routing for operations, marketing, sales, finance, and people issues
-- **Ghost CMS Integration**: Author templates with `ghost_id` field support and tutorial formats
-- **Meta Documentation**: Enhanced context documentation with proper template linking
+### 🛠️ Enhanced Template System
+- **Integrated Agent Instructions**: Plan templates now include comprehensive agent instructions
+- **Universal Refinement Mode**: Systematically refine ANY template through strategic questioning
+- **File Reference Conventions**: Proper `@[relative/path]` format for file references
 
-### 🛠️ Developer Experience Improvements
-- **Template-Linked Agents**: Meta context expert now uses WikiLink template references instead of inline duplication
-- **Better Sync Commands**: Enhanced make commands with watch capabilities
-- **Project Alignment**: Improved documentation and convention adherence
+### ✨ New Features & Improvements
+- **Pew Prompt**: Ultimate starting point for any task in any project
+- **GitHub Release Workflow**: Comprehensive documentation validation and release creation
+- **Activity System**: Reusable actions organized by concept categories
+- **Scope Integrity**: Prevents AI over-engineering by ensuring exact requirement delivery
 
 ### 🔧 Architecture Enhancements
-- **Collections & Concepts**: New component types for curated lists and core principles
-- **Reference Commands**: New `/collect:` and `/understand:` command types
-- **Improved Modularity**: Better separation of concerns with template-driven patterns
+- **Collections System**: Curated lists for Flutter concepts and instructions
+- **Single-Verb Prompt Routing**: YAML configuration for separate routing patterns
+- **Dynamic Project Key Detection**: Automatic detection from commit history
 
 ## 📝 A Good Prompt
 
@@ -818,6 +822,14 @@ The `00-freelancers/` through `07-review-team/` directories contain the previous
 - **Discovery → Context → Requirements → Refinement → Plan → Act → Review**
 - Being extracted into modular components in the current framework
 - Provides proven patterns for comprehensive project lifecycle management
+
+### 00-freelancers/raycast-power-prompter
+The freelancers directory now includes the **Raycast Power Prompter** - a comprehensive prompt engineering toolkit:
+- **Modular Blocks**: 20+ reusable components for building complex documents
+- **Flutter Conventions**: Detailed guides for Flutter development patterns and best practices
+- **Workflow Prompts**: Ready-to-use prompts for common development tasks
+- **Raycast Integration**: Scriptable system for exporting snippets to Raycast format
+- See `00-freelancers/raycast-power-prompter/README.md` for detailed setup instructions
 
 ## 📄 License
 

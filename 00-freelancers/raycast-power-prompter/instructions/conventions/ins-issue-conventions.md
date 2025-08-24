@@ -1,0 +1,11 @@
+- Each project area (e.g., `issues/engineering`, `marketing`) has its own folder inside `issues`.
+- Each area folder has a `000-backlog/` folder where initial issues are saved.
+- Each area folder has `{3-digit-number}-{issue-title}` issue folders (e.g., 001-user-auth).
+- Each issue folder has `{AREA-CODE}-{ISSUE-NR}-{ISSUE-TITLE}-{ISSUE-TYPE}` issue documents.
+   - `{AREA-CODE}` is a 2 to 4 letter uppercase code representing the project area.
+   - Story document example: AUTH-001-oauth-integration-story.md.
+   - Issue document example: AUTH-001-oauth-integration-issue.md.
+   - PR document example: AUTH-001-oauth-integration-pr.md.
+   - [...]
+- All documents related to a specific issue share the same prefix (e.g., AUTH-001-oauth-integration) and belong to the same issue folder.
+- The same issue number can have multiple document types (e.g., story, plan, bug, pr).

@@ -1,0 +1,3 @@
+- @release_notes.json
+- @assets/md/changelog_nl.md
+- @assets/md/changelog_en.md

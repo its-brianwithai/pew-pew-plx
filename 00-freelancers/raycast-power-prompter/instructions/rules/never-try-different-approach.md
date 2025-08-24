@@ -1,0 +1,1 @@
+- ALWAYS stick to the original plan at all costs, NEVER try a different approach.

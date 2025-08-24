@@ -1,0 +1,14 @@
+- {snippet name="flutter-ins-crash-report-analytics.md"}
+- {snippet name="flutter-ins-edge-functions-dtos.md"}
+- {snippet name="flutter-ins-error-handling.md"}
+- {snippet name="flutter-ins-flutter-busy-state.md"}
+- {snippet name="flutter-ins-informer-box.md"}
+- {snippet name="flutter-ins-informer-state.md"}
+- {snippet name="flutter-ins-localization-pattern.md"}
+- {snippet name="flutter-ins-mvvm-architecture.md"}
+- {snippet name="flutter-ins-service-locator.md"}
+- {snippet name="flutter-ins-service-state.md"}
+- {snippet name="flutter-ins-supabase-comms.md"}
+- {snippet name="flutter-ins-supabase-tables.md"}
+- {snippet name="flutter-ins-turbo-response.md"}
+- {snippet name="flutter-ins-utilities.md"}

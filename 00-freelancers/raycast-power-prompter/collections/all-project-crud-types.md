@@ -1,0 +1,15 @@
+- Views, ViewModels, Methods
+- Stateless Widgets, Stateful Widgets, ViewModel Widgets
+- UI States, In Memory States, Local Data States, Remote Data States
+- Routes, Routers
+- Fields, Constants, Enums, DTOs, Models
+- Forms, Form Fields
+- Extensions, Typedefs, Mixins, Abstract Classes
+- Services, APIs, Security Rules, RLS Policies
+- Edge Functions, Cloud Functions, API Calls
+- Analytics
+- Error Handling, Crash Reporting
+- Environment Variables, Configurations
+- Haptic Feedback, Animations, Notifications
+- User facing ARB UI text, User facing ARB messages
+- Themes, Fonts, Colors, Sizes, Assets

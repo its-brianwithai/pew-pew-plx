@@ -1,0 +1,5 @@
+- Apply context rot awareness.
+- Ensure every part of a document directly adds value to the end_goal. Avoid anything that doesn’t.
+- Avoid using adverbs that don’t add value.
+- Avoid repetition of concepts; do not restate them in the negative or duplicate wording.
+- Keep all information lean, relevant, and free of wasted tokens.

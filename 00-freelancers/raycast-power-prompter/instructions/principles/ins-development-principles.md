@@ -1,0 +1,16 @@
+- Build reusable UI components; research existing ones before creating new
+- Keep widgets stateless and use primitive parameters for Storybook/Widgetbook
+- Place state only in services/view models (except for animations)
+- Apply Single Responsibility Principle (small classes, files, methods; one public class per file)
+- Maintain clear separation of concerns: UI, business logic, data
+- Use feature/concept-based folder structure
+- Centralize constants and strings (ARB for user-facing, constants for keys/values)
+- Use enums to represent types/variants
+- Avoid inline comments inside methods; write self-documenting code
+- Prefer reusability and consistency over ad-hoc solutions
+- Follow project conventions and industry best practices
+- Write unit tests only for business logic (no UI/integration tests, no mocks)
+- Keep project warning- and error-free
+- Validate work with tools (MCP, build commands, linting, analysis, Puppeteer, etc.)
+- Consider performance (algorithmic complexity, rendering, memory)
+- Apply security best practices in all features

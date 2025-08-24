@@ -1,0 +1,2 @@
+- Do not create workarounds, quick fixes or dirty hacks.
+- Focus on what was asked and make sure it's implemented as intended.

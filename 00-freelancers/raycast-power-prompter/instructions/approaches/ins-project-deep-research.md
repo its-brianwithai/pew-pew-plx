@@ -1,0 +1,5 @@
+- Think deep and make sure you understand 100% of the entire scope of what is being asked of you.
+- Based on that understanding research this project to understand exactly how to implement what I’ve asked you.
+- Follow 100% of the project’s already existing conventions and examples similar to my request.
+- Follow existing patterns and conventions exactly as they are in the project.
+- Stick to what’s already been established.

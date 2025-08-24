@@ -1,0 +1,1 @@
+- Apply the MVP mindset: focus getting the must-haves that deliver the most value right now, avoid adding or describing anything unnecessary, and keep every step aligned strictly with the main goal. 

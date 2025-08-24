@@ -1,0 +1,1 @@
+- When reading files ALWAYS read the FULL content. NEVER skim or skip parts.

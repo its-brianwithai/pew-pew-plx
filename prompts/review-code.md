@@ -17,8 +17,8 @@ Please review all related code to work that you've done and present a numbered l
 - Your rules regarding lessons learned and/or project context is up to date
 - Ensure performance is taken into account (Big O)
 - Ensure security measures are thought about and put in place where necessary
-- - Only isolated unit tests for business logic WITHOUT mocks or manual testing
-- ANY state should always be inside a service or view model - NEVER use stateful widgets unless necessary for animations
+- Only isolated unit tests for business logic WITHOUT mocks or manual testing
+- ANY state should always be inside a service or view model - NEVER use stateful widgets unless necessary for animations OR temporary user input
 - NEVER create other tests, NEVER test UI, NEVER test integration, NEVER use mocks
 - Ensure project is free of warnings and errors related to your work
 
